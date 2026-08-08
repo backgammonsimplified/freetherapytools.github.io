@@ -10,7 +10,7 @@ _CANONICAL = (
     Path(__file__).parent / "testing" / "build" / "release_ui_static_check.py"
 )
 _SPEC = importlib.util.spec_from_file_location(
-    "_bms_release_ui_static_check", _CANONICAL
+    "_bs_release_ui_static_check", _CANONICAL
 )
 if _SPEC is None or _SPEC.loader is None:
     raise RuntimeError(f"Could not load canonical checker: {_CANONICAL}")

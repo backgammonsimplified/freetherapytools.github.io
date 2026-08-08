@@ -1,4 +1,4 @@
-# Backgammon Made Simple Social Cards — Contract v1.1
+# Backgammon Simplified Social Cards — Contract v1.1
 
 This package implements the frozen contract v1.1 text-only renderer. It uses deterministic local assets and six typography/composition profiles.
 

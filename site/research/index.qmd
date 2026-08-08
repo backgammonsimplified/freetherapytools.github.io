@@ -3,13 +3,13 @@ title: "Research"
 subtitle: "Articles, methods, and project notes"
 description: >
   Research articles, supporting analysis, methods, and project updates from
-  the work behind Backgammon Made Simple.
+  the work behind Backgammon Simplified.
 format:
   html:
     page-layout: article
     toc: false
     title-block-style: plain
-    body-classes: "bms-editorial-page bms-title-eyebrow bms-research-index"
+    body-classes: "bs-editorial-page bs-title-eyebrow bs-research-index"
 listing:
   id: research-posts
   contents: "*.qmd"
@@ -22,48 +22,48 @@ execute:
   enabled: false
 ---
 
-::: {.bms-page-shell}
-::: {.bms-reading-column}
-::: {.bms-editorial-lead}
-Research is where we publish the methods, supporting analysis, project notes, and reproducibility details behind Backgammon Made Simple.
+::: {.bs-page-shell}
+::: {.bs-reading-column}
+::: {.bs-editorial-lead}
+Research is where we publish the methods, supporting analysis, project notes, and reproducibility details behind Backgammon Simplified.
 :::
 :::
 
 ```{=html}
-<section class="bms-research-filter-panel" data-bms-research-filters aria-label="Filter research articles">
+<section class="bs-research-filter-panel" data-bs-research-filters aria-label="Filter research articles">
   <p class="visually-hidden">
     Select a category or tag to filter the articles. Select an active filter again to clear it.
   </p>
 
-  <div class="bms-research-filter-group">
-    <p class="bms-research-filter-label">Categories</p>
-    <div class="bms-research-filter-options" role="group" aria-label="Filter by category">
-      <button type="button" class="bms-research-filter bms-research-filter--category" data-bms-filter-category="Learn" aria-pressed="false">
-        <span>Learn</span><span class="bms-research-filter-count" aria-hidden="true">×0</span>
+  <div class="bs-research-filter-group">
+    <p class="bs-research-filter-label">Categories</p>
+    <div class="bs-research-filter-options" role="group" aria-label="Filter by category">
+      <button type="button" class="bs-research-filter bs-research-filter--category" data-bs-filter-category="Learn" aria-pressed="false">
+        <span>Learn</span><span class="bs-research-filter-count" aria-hidden="true">×0</span>
       </button>
-      <button type="button" class="bms-research-filter bms-research-filter--category" data-bms-filter-category="Position Analyzer" aria-pressed="false">
-        <span>Position Analyzer</span><span class="bms-research-filter-count" aria-hidden="true">×0</span>
+      <button type="button" class="bs-research-filter bs-research-filter--category" data-bs-filter-category="Position Analyzer" aria-pressed="false">
+        <span>Position Analyzer</span><span class="bs-research-filter-count" aria-hidden="true">×0</span>
       </button>
-      <button type="button" class="bms-research-filter bms-research-filter--category" data-bms-filter-category="Match Predictor" aria-pressed="false">
-        <span>Match Predictor</span><span class="bms-research-filter-count" aria-hidden="true">×0</span>
+      <button type="button" class="bs-research-filter bs-research-filter--category" data-bs-filter-category="Match Predictor" aria-pressed="false">
+        <span>Match Predictor</span><span class="bs-research-filter-count" aria-hidden="true">×0</span>
       </button>
-      <button type="button" class="bms-research-filter bms-research-filter--category" data-bms-filter-category="Engine Benchmark" aria-pressed="false">
-        <span>Engine Benchmark</span><span class="bms-research-filter-count" aria-hidden="true">×0</span>
+      <button type="button" class="bs-research-filter bs-research-filter--category" data-bs-filter-category="Engine Benchmark" aria-pressed="false">
+        <span>Engine Benchmark</span><span class="bs-research-filter-count" aria-hidden="true">×0</span>
       </button>
-      <button type="button" class="bms-research-filter bms-research-filter--category" data-bms-filter-category="Research" aria-pressed="false">
-        <span>Research</span><span class="bms-research-filter-count" aria-hidden="true">×0</span>
+      <button type="button" class="bs-research-filter bs-research-filter--category" data-bs-filter-category="Research" aria-pressed="false">
+        <span>Research</span><span class="bs-research-filter-count" aria-hidden="true">×0</span>
       </button>
     </div>
   </div>
 
-  <div class="bms-research-filter-group" data-bms-tag-group>
-    <p class="bms-research-filter-label">Tags</p>
-    <div class="bms-research-filter-options" role="group" aria-label="Filter by tag" data-bms-tag-filters></div>
+  <div class="bs-research-filter-group" data-bs-tag-group>
+    <p class="bs-research-filter-label">Tags</p>
+    <div class="bs-research-filter-options" role="group" aria-label="Filter by tag" data-bs-tag-filters></div>
   </div>
 
-  <div class="bms-research-filter-footer">
-    <p class="bms-research-result-count" aria-live="polite" data-bms-result-count></p>
-    <button type="button" class="bms-research-clear" data-bms-clear-filters hidden>
+  <div class="bs-research-filter-footer">
+    <p class="bs-research-result-count" aria-live="polite" data-bs-result-count></p>
+    <button type="button" class="bs-research-clear" data-bs-clear-filters hidden>
       Clear filters
     </button>
   </div>
@@ -74,12 +74,12 @@ Research is where we publish the methods, supporting analysis, project notes, an
 :::
 
 ```{=html}
-<p class="bms-research-empty" data-bms-empty-state hidden>
+<p class="bs-research-empty" data-bs-empty-state hidden>
   No articles match the selected category and tag.
 </p>
 ```
 :::
 
 ```{=html}
-<script src="../assets/bms-research-index.js" defer></script>
+<script src="../assets/bs-research-index.js" defer></script>
 ```

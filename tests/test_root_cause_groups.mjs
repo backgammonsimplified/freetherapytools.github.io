@@ -6,7 +6,7 @@ import {
 } from "../scripts/testing/quality/browser/root_cause_groups.mjs";
 
 const makeFinding = (overrides) => ({
-  finding_id: "bms-finding-default",
+  finding_id: "bs-finding-default",
   category: "product-defect",
   severity: "major",
   stability: "stable",
@@ -21,19 +21,19 @@ const makeFinding = (overrides) => ({
 
 assert.equal(
   rootCauseRuleForFinding(makeFinding({})).id,
-  "bms-root-continuous-duplicate-ids"
+  "bs-root-continuous-duplicate-ids"
 );
 assert.equal(
   rootCauseRuleForFinding(
     makeFinding({ evidence: "mobile navigation menu opens" })
   ).id,
-  "bms-root-mobile-navigation"
+  "bs-root-mobile-navigation"
 );
 
 const groups = groupFindingsByRootCause([
-  makeFinding({ finding_id: "bms-finding-a", selector: "#TOC" }),
+  makeFinding({ finding_id: "bs-finding-a", selector: "#TOC" }),
   makeFinding({
-    finding_id: "bms-finding-b",
+    finding_id: "bs-finding-b",
     route_or_file: "/research/example.html",
     viewport: { name: "desktop-1440" },
     evidence: "initial IDs are unique: TOC; screenshot: screenshots/research.png"
@@ -42,7 +42,7 @@ const groups = groupFindingsByRootCause([
 
 assert.equal(groups.length, 1);
 assert.deepEqual(groups[0], {
-  root_cause_id: "bms-root-continuous-duplicate-ids",
+  root_cause_id: "bs-root-continuous-duplicate-ids",
   category: "product-defect",
   severity: "major",
   affected_component: "continuous Learn/Research content",
@@ -55,24 +55,24 @@ assert.deepEqual(groups[0], {
     "screenshots/research.png"
   ],
   likely_source_files: [
-    "site/assets/bms-learn-scroll.js",
-    "site/assets/bms-research-scroll.js"
+    "site/assets/bs-learn-scroll.js",
+    "site/assets/bs-research-scroll.js"
   ],
   stability: "stable",
   confidence: "high",
   reproduction: ["Run the browser baseline."],
   recommended_future_task:
     "Correct duplicate IDs without excluding or suppressing appended content.",
-  finding_ids: ["bms-finding-a", "bms-finding-b"]
+  finding_ids: ["bs-finding-a", "bs-finding-b"]
 });
 
 const fallback = groupFindingsByRootCause([
   makeFinding({
-    finding_id: "bms-finding-fallback",
+    finding_id: "bs-finding-fallback",
     evidence: "an uncategorized product check failed"
   })
 ]);
-assert.match(fallback[0].root_cause_id, /^bms-root-[a-f0-9]{12}$/);
+assert.match(fallback[0].root_cause_id, /^bs-root-[a-f0-9]{12}$/);
 assert.equal(fallback[0].confidence, "medium");
 
 console.log("browser root-cause grouping contracts passed");

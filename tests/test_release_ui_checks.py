@@ -28,7 +28,7 @@ def page_html(body: str, *, head: str = "") -> str:
 
 class ReleaseUiStaticCheckTests(unittest.TestCase):
     def setUp(self) -> None:
-        runtime_root = ROOT / "task-work" / "BMS-UI-RELEASE" / "runtime"
+        runtime_root = ROOT / "task-work" / "BS-UI-RELEASE" / "runtime"
         runtime_root.mkdir(parents=True, exist_ok=True)
         self.site_dir = runtime_root / f"site-{uuid.uuid4().hex}"
         self.site_dir.mkdir()

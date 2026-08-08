@@ -1,4 +1,4 @@
-# Backgammon Made Simple testing SOP
+# Backgammon Simplified testing SOP
 
 ## Choose a gate
 

@@ -21,7 +21,7 @@ terms:
   - back-game
   - gammon
   - market-loser
-body-classes: bms-learn-article
+body-classes: bs-learn-article
 ---
 
 This refresher is a bridge into the cube curriculum, not a complete beginner unit.

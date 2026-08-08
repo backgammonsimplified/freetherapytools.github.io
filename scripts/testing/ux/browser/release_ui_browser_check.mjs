@@ -180,16 +180,16 @@ const focusedElementState = (tab) =>
     const tag = active.tagName.toLowerCase();
     const selector = active.id
       ? `#${active.id}`
-      : active.hasAttribute("data-bms-mobile-tools-edge")
-        ? "[data-bms-mobile-tools-edge]"
-        : active.hasAttribute("data-bms-mobile-tools-close")
-          ? "[data-bms-mobile-tools-close]"
+      : active.hasAttribute("data-bs-mobile-tools-edge")
+        ? "[data-bs-mobile-tools-edge]"
+        : active.hasAttribute("data-bs-mobile-tools-close")
+          ? "[data-bs-mobile-tools-close]"
           : active.matches("button.navbar-toggler")
             ? "button.navbar-toggler"
             : `${tag}${active.getAttribute("href") ? `[href='${active.getAttribute("href")}']` : ""}`;
     const identity =
       active.id ||
-      active.getAttribute("data-bms-analysis-choice") ||
+      active.getAttribute("data-bs-analysis-choice") ||
       active.getAttribute("aria-label") ||
       active.textContent.trim().replace(/\s+/g, " ").slice(0, 80) ||
       tag;
@@ -231,7 +231,7 @@ const focusSnapshot = async (tab, { mobile }) => {
   };
   const pageFeatures = await tab.playwright.locator("html").evaluate(() => ({
     mobileDrawerPresent: Boolean(
-      document.querySelector("[data-bms-mobile-tools-edge]")
+      document.querySelector("[data-bs-mobile-tools-edge]")
     ),
     mobileNavigationPresent: Boolean(document.querySelector("button.navbar-toggler")),
     skipLinkPresent: Boolean(
@@ -272,7 +272,7 @@ const focusSnapshot = async (tab, { mobile }) => {
     }
     if (
       mobile &&
-      state.selector === "[data-bms-mobile-tools-edge]" &&
+      state.selector === "[data-bs-mobile-tools-edge]" &&
       !mobileDrawer
     ) {
       await pressFocused("Enter");
@@ -280,11 +280,11 @@ const focusSnapshot = async (tab, { mobile }) => {
       const opened = await tab.playwright.locator("html").evaluate(() => ({
         expanded:
           document
-            .querySelector("[data-bms-mobile-tools-edge]")
+            .querySelector("[data-bs-mobile-tools-edge]")
             ?.getAttribute("aria-expanded") || null,
         drawerVisible: Boolean(
           document
-            .querySelector("[data-bms-mobile-tools-drawer]")
+            .querySelector("[data-bs-mobile-tools-drawer]")
             ?.getClientRects().length
         )
       }));
@@ -367,20 +367,20 @@ export const EXPECTED_CONTINUOUS_APPEND_COUNT = 1;
 export const continuousConfigForPage = (page) => {
   if (page.kind === "learn-lesson") {
     return {
-      markerSelector: ".bms-learn-scroll-lesson-marker",
-      routeAttribute: "data-bms-learn-scroll-lesson-route",
-      sentinelSelector: ".bms-learn-scroll-sentinel",
-      endSelector: "[data-bms-learn-scroll-end]",
-      namespace: "bms-learn-scroll-"
+      markerSelector: ".bs-learn-scroll-lesson-marker",
+      routeAttribute: "data-bs-learn-scroll-lesson-route",
+      sentinelSelector: ".bs-learn-scroll-sentinel",
+      endSelector: "[data-bs-learn-scroll-end]",
+      namespace: "bs-learn-scroll-"
     };
   }
   if (page.kind === "research-article") {
     return {
-      markerSelector: ".bms-research-scroll-marker",
-      routeAttribute: "data-bms-research-scroll-marker",
-      sentinelSelector: ".bms-research-scroll-sentinel",
-      endSelector: ".bms-research-scroll-end",
-      namespace: "bms-research-scroll-"
+      markerSelector: ".bs-research-scroll-marker",
+      routeAttribute: "data-bs-research-scroll-marker",
+      sentinelSelector: ".bs-research-scroll-sentinel",
+      endSelector: ".bs-research-scroll-end",
+      namespace: "bs-research-scroll-"
     };
   }
   return null;
@@ -449,8 +449,8 @@ const continuousStateSnapshot = (tab, config) =>
             available: true,
             loading: sentinel.classList.contains("is-loading"),
             route:
-              sentinel.getAttribute("data-bms-learn-scroll-sentinel") ||
-              sentinel.getAttribute("data-bms-research-scroll-sentinel")
+              sentinel.getAttribute("data-bs-learn-scroll-sentinel") ||
+              sentinel.getAttribute("data-bs-research-scroll-sentinel")
           }
         : { available: false, loading: false, route: null },
       completionSignal: Boolean(
@@ -539,7 +539,7 @@ const interactWithLookup = async (
 ) => {
   if (desktop) {
     const openLookup = await visibleLocator(
-      tab.playwright.locator("[data-bms-term-lookup]")
+      tab.playwright.locator("[data-bs-term-lookup]")
     );
     check(
       Boolean(openLookup),
@@ -556,7 +556,7 @@ const interactWithLookup = async (
   await delay(700);
   const toggle = await visibleLocator(
     tab.playwright.locator(
-      "[data-bms-site-term-toggle], [data-bms-mobile-term-toggle]"
+      "[data-bs-site-term-toggle], [data-bs-mobile-term-toggle]"
     )
   );
   if (!toggle) {
@@ -579,7 +579,7 @@ const interactWithLookup = async (
       `(before=${before}, after=${afterOpen})`
   );
   const close = await visibleLocator(
-    tab.playwright.locator(".bms-term-lookup-close")
+    tab.playwright.locator(".bs-term-lookup-close")
   );
   if (close) {
     await clickInPlace(tab, close);
@@ -589,7 +589,7 @@ const interactWithLookup = async (
 
 const interactWithMobileDrawer = async (tab, check, context) => {
   const edge = await visibleLocator(
-    tab.playwright.locator("[data-bms-mobile-tools-edge]")
+    tab.playwright.locator("[data-bs-mobile-tools-edge]")
   );
   check(Boolean(edge), context, "mobile page-tools edge bar is visible");
   if (!edge) {
@@ -602,7 +602,7 @@ const interactWithMobileDrawer = async (tab, check, context) => {
   );
   await edge.click();
   const drawer = await visibleLocator(
-    tab.playwright.locator("[data-bms-mobile-tools-drawer]")
+    tab.playwright.locator("[data-bs-mobile-tools-drawer]")
   );
   check(Boolean(drawer), context, "mobile page-tools drawer opens");
   if (!drawer) {
@@ -614,11 +614,11 @@ const interactWithMobileDrawer = async (tab, check, context) => {
     "mobile drawer contains table-of-contents links"
   );
   check(
-    (await drawer.locator("[data-bms-term-lookup]").count()) === 1,
+    (await drawer.locator("[data-bs-term-lookup]").count()) === 1,
     context,
     "mobile drawer contains term search beneath the TOC"
   );
-  const close = drawer.locator("[data-bms-mobile-tools-close]");
+  const close = drawer.locator("[data-bs-mobile-tools-close]");
   await close.click();
   check(
     (await edge.getAttribute("aria-expanded")) === "false",
@@ -656,20 +656,20 @@ const interactWithMobileNavigation = async (tab, check, context) => {
 
 const interactWithGlossarySidebar = async (tab, check, context) => {
   const link = await visibleLocator(
-    tab.playwright.locator("main .bms-inline-glossary[data-bms-glossary-slug]")
+    tab.playwright.locator("main .bs-inline-glossary[data-bs-glossary-slug]")
   );
   if (!link) {
     check(false, context, "inline glossary link is available for sidebar flow");
     return;
   }
   await link.click();
-  const sidebar = tab.playwright.locator("[data-bms-glossary-sidebar]");
+  const sidebar = tab.playwright.locator("[data-bs-glossary-sidebar]");
   check(
     (await sidebar.count()) === 1 && (await sidebar.isVisible()),
     context,
     "inline glossary link opens the definition sidebar"
   );
-  const close = sidebar.locator("[data-bms-glossary-sidebar-close]");
+  const close = sidebar.locator("[data-bs-glossary-sidebar-close]");
   if ((await close.count()) === 1) {
     await close.click();
     check(!(await sidebar.isVisible()), context, "glossary definition sidebar closes");
@@ -687,7 +687,7 @@ const interactWithToc = async (
 ) => {
   const toggleState = async () => {
     const toggle = await visibleLocator(
-      tab.playwright.locator("[data-bms-toc-heading-toggle]")
+      tab.playwright.locator("[data-bs-toc-heading-toggle]")
     );
     return toggle
       ? {
@@ -698,7 +698,7 @@ const interactWithToc = async (
   };
   const clickToggle = async () => {
     const toggle = await visibleLocator(
-      tab.playwright.locator("[data-bms-toc-heading-toggle]")
+      tab.playwright.locator("[data-bs-toc-heading-toggle]")
     );
     if (!toggle) {
       return false;
@@ -717,7 +717,7 @@ const interactWithToc = async (
   }
   const lessonTrack = collapseLessonTrack
     ? await visibleLocator(
-        tab.playwright.locator(".bms-lesson-track-content")
+        tab.playwright.locator(".bs-lesson-track-content")
       )
     : null;
   if (collapseLessonTrack) {
@@ -766,7 +766,7 @@ const interactWithToc = async (
 };
 
 const interactWithLearnIndex = async (tab, check, context) => {
-  const filters = tab.playwright.locator("[data-bms-learn-filters]");
+  const filters = tab.playwright.locator("[data-bs-learn-filters]");
   check((await filters.count()) === 1, context, "lesson filters exist");
   if ((await filters.count()) !== 1) {
     return;
@@ -782,8 +782,8 @@ const interactWithLearnIndex = async (tab, check, context) => {
     context,
     "lesson filters expand"
   );
-  const input = filters.locator("[data-bms-learn-search]");
-  const items = tab.playwright.locator("[data-bms-learn-item]");
+  const input = filters.locator("[data-bs-learn-search]");
+  const items = tab.playwright.locator("[data-bs-learn-item]");
   const total = await items.count();
   await input.fill("What the Cube Is Really Asking");
   await delay(80);
@@ -794,7 +794,7 @@ const interactWithLearnIndex = async (tab, check, context) => {
     "lesson search narrows the catalogue"
   );
   const clear = await visibleLocator(
-    filters.locator("[data-bms-learn-clear]")
+    filters.locator("[data-bs-learn-clear]")
   );
   check(Boolean(clear), context, "lesson search exposes its clear control");
   if (clear) {
@@ -809,7 +809,7 @@ const interactWithLearnIndex = async (tab, check, context) => {
 
 const interactWithRichFixture = async (tab, check, context) => {
   const summary = tab.playwright.locator(
-    "details.bms-scroll-fixture-disclosure > summary"
+    "details.bs-scroll-fixture-disclosure > summary"
   );
   check((await summary.count()) === 1, context, "rich disclosure exists");
   if ((await summary.count()) !== 1) {
@@ -817,12 +817,12 @@ const interactWithRichFixture = async (tab, check, context) => {
   }
   await summary.click();
   check(
-    (await tab.playwright.locator(".bms-scroll-fixture-svg").count()) === 2,
+    (await tab.playwright.locator(".bs-scroll-fixture-svg").count()) === 2,
     context,
     "two SVG positions render"
   );
   const choices = tab.playwright.locator(
-    ".bms-scroll-fixture-disclosure .bms-answer-choice"
+    ".bs-scroll-fixture-disclosure .bs-answer-choice"
   );
   check((await choices.count()) === 4, context, "four position choices render");
   const take = tab.playwright.getByRole("button", {
@@ -837,7 +837,7 @@ const interactWithRichFixture = async (tab, check, context) => {
   );
   check(
     (await tab.playwright
-      .locator("#bms-scroll-fixture-follow-up")
+      .locator("#bs-scroll-fixture-follow-up")
       .getAttribute("open")) !== null,
     context,
     "choice opens the nested explanation"
@@ -845,7 +845,7 @@ const interactWithRichFixture = async (tab, check, context) => {
 };
 
 const interactWithLessonAnalysisFixture = async (tab, check, context) => {
-  const fixture = tab.playwright.locator("[data-bms-cube-decision]").nth(0);
+  const fixture = tab.playwright.locator("[data-bs-cube-decision]").nth(0);
   check(
     (await fixture.count()) === 1,
     context,
@@ -855,7 +855,7 @@ const interactWithLessonAnalysisFixture = async (tab, check, context) => {
     return;
   }
   const double = fixture.locator(
-    "button[data-bms-analysis-choice='double']"
+    "button[data-bs-analysis-choice='double']"
   );
   await double.click();
   check(
@@ -864,7 +864,7 @@ const interactWithLessonAnalysisFixture = async (tab, check, context) => {
     "Double records its pressed state"
   );
   const take = fixture.locator(
-    "button[data-bms-analysis-choice='take']"
+    "button[data-bs-analysis-choice='take']"
   );
   check((await take.count()) === 1, context, "Double reveals Pass and Take");
   if ((await take.count()) === 1) {
@@ -878,7 +878,7 @@ const interactWithLessonAnalysisFixture = async (tab, check, context) => {
 };
 
 const interactWithEdgeFixture = async (tab, check, context) => {
-  const fixture = tab.playwright.locator("[data-bms-ui-edge-fixture]");
+  const fixture = tab.playwright.locator("[data-bs-ui-edge-fixture]");
   check((await fixture.count()) === 1, context, "edge fixture renders once");
   if ((await fixture.count()) !== 1) {
     return;
@@ -893,13 +893,13 @@ const interactWithEdgeFixture = async (tab, check, context) => {
     context,
     "long action label remains clickable"
   );
-  const panel = tab.playwright.locator("#bms-ui-edge-response");
+  const panel = tab.playwright.locator("#bs-ui-edge-response");
   check(
     (await panel.getAttribute("open")) !== null,
     context,
     "edge layout panel opens"
   );
-  const region = tab.playwright.locator(".bms-ui-edge-scroll-region");
+  const region = tab.playwright.locator(".bs-ui-edge-scroll-region");
   const regionMetrics = await region.evaluate((element) => ({
     clientWidth: element.clientWidth,
     scrollWidth: element.scrollWidth
@@ -910,22 +910,22 @@ const interactWithEdgeFixture = async (tab, check, context) => {
     "wide table is contained in its own scroll region"
   );
   await tab.playwright
-    .locator('a[href="#bms-ui-edge-anchor"]')
+    .locator('a[href="#bs-ui-edge-anchor"]')
     .click();
   check(
-    (await tab.url()).endsWith("#bms-ui-edge-anchor"),
+    (await tab.url()).endsWith("#bs-ui-edge-anchor"),
     context,
     "fixture anchor navigation works"
   );
 };
 
 const interactWithGlossary = async (tab, check, context) => {
-  const input = tab.playwright.locator("[data-bms-glossary-search]");
+  const input = tab.playwright.locator("[data-bs-glossary-search]");
   check((await input.count()) === 1, context, "glossary search exists");
   if ((await input.count()) !== 1) {
     return;
   }
-  const entries = tab.playwright.locator("[data-bms-glossary-entry]");
+  const entries = tab.playwright.locator("[data-bs-glossary-entry]");
   const total = await entries.count();
   await input.fill("active builder");
   await delay(100);
@@ -936,7 +936,7 @@ const interactWithGlossary = async (tab, check, context) => {
     "glossary search narrows full definitions"
   );
   const clear = await visibleLocator(
-    tab.playwright.locator("[data-bms-glossary-clear]")
+    tab.playwright.locator("[data-bs-glossary-clear]")
   );
   if (clear) {
     await clear.click();
@@ -949,7 +949,7 @@ const interactWithGlossary = async (tab, check, context) => {
     check(false, context, "glossary clear control is missing");
   }
   const trackFilter = tab.playwright.locator(
-    "[data-bms-glossary-filter-track='Doubling Cube']"
+    "[data-bs-glossary-filter-track='Doubling Cube']"
   );
   check((await trackFilter.count()) === 1, context, "glossary track filter exists");
   if ((await trackFilter.count()) === 1) {
@@ -992,7 +992,7 @@ const runPageInteraction = async ({
     } else {
       await interactWithMobileDrawer(tab, check, context);
     }
-    if ((page.required_markers || []).includes("data-bms-cube-decision")) {
+    if ((page.required_markers || []).includes("data-bs-cube-decision")) {
       await interactWithLessonAnalysisFixture(tab, check, context);
     }
     await interactWithGlossarySidebar(tab, check, context);
@@ -1272,7 +1272,7 @@ export async function runReleaseUiChecks({
                 if (requiredMarker.startsWith("data-")) {
                   return Boolean(root.querySelector(`[${requiredMarker}]`));
                 }
-                if (requiredMarker.startsWith("bms-")) {
+                if (requiredMarker.startsWith("bs-")) {
                   return Boolean(
                     root.querySelector(`.${requiredMarker}, #${requiredMarker}`)
                   );
@@ -1285,14 +1285,14 @@ export async function runReleaseUiChecks({
           }
           if (page.kind === "analyzer") {
             check(
-              (await activeTab.playwright.locator("#bms-position-preview-frame").count()) === 1,
+              (await activeTab.playwright.locator("#bs-position-preview-frame").count()) === 1,
               context,
               "analyzer iframe container is present without requiring iframe success"
             );
           }
           if (page.kind === "match-predictor") {
             check(
-              (await activeTab.playwright.locator(".bms-dashboard-frame iframe").count()) === 1,
+              (await activeTab.playwright.locator(".bs-dashboard-frame iframe").count()) === 1,
               context,
               "Match Predictor iframe container is present without requiring iframe success"
             );
@@ -1376,7 +1376,7 @@ export async function runReleaseUiChecks({
               );
               check(
                 focus.mobileDrawer.returned.selector ===
-                  "[data-bms-mobile-tools-edge]",
+                  "[data-bs-mobile-tools-edge]",
                 context,
                 `mobile drawer returns focus after closing: ${focus.mobileDrawer.returned.selector}`
               );
@@ -1465,8 +1465,8 @@ export async function runReleaseUiChecks({
           const continuousPage = Boolean(continuousConfig);
           const markerSelector =
             page.kind === "research-article"
-              ? ".bms-research-scroll-marker"
-              : ".bms-learn-scroll-lesson-marker";
+              ? ".bs-research-scroll-marker"
+              : ".bs-learn-scroll-lesson-marker";
           const markersBeforeScroll = continuousPage
             ? initialContinuousState.markerCount
             : 0;
@@ -1611,7 +1611,7 @@ export async function runReleaseUiChecks({
           phase = "back-to-top control";
           const backToTop = await visibleLocator(
             activeTab.playwright.locator(
-              "[data-bms-site-back-to-top], [data-bms-glossary-back-to-top]"
+              "[data-bs-site-back-to-top], [data-bs-glossary-back-to-top]"
             )
           );
           if (

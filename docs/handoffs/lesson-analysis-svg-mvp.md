@@ -77,7 +77,7 @@ SVGs were copied instead. No Sage or GNU Backgammon analysis was run.
 - Focused lesson/glossary Python tests: 73 passed.
 - Full Python suite: 134 passed. The suite requires an unsandboxed run on this
   Windows host because two glossary tests use `TemporaryDirectory`.
-- Full Quarto build with `BMS_SKIP_SOCIAL_CARDS=1`: passed, 65 pages.
+- Full Quarto build with `BS_SKIP_SOCIAL_CARDS=1`: passed, 65 pages.
 - Rendered glossary check: passed, including 12 canonical glossary anchors and
   34 continuous lessons.
 - Rendered static UI audit: 65 pages, zero findings.

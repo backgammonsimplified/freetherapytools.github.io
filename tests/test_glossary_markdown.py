@@ -69,10 +69,10 @@ class GlossaryPageGenerationTests(unittest.TestCase):
     def test_short_summaries_and_full_definitions_are_visible(self) -> None:
         output = learn_glossary.build_entries_html(self.entries, {}, {})
         self.assertEqual(
-            output.count('class="bms-glossary-definition"'), len(self.entries)
+            output.count('class="bs-glossary-definition"'), len(self.entries)
         )
         self.assertEqual(
-            output.count('class="bms-glossary-short-definition"'),
+            output.count('class="bs-glossary-short-definition"'),
             len(self.entries),
         )
         self.assertIn("Short definition for Ace.", output)
@@ -82,9 +82,9 @@ class GlossaryPageGenerationTests(unittest.TestCase):
         output = learn_glossary.linked_definition_html(self.sample, self.entries)
         self.assertRegex(
             output,
-            r'data-bms-glossary-slug="one-point"[^>]*>ace point</a>',
+            r'data-bs-glossary-slug="one-point"[^>]*>ace point</a>',
         )
-        first_link = re.search(r'data-bms-glossary-slug="([^"]+)"', output)
+        first_link = re.search(r'data-bs-glossary-slug="([^"]+)"', output)
         self.assertIsNotNone(first_link)
         self.assertEqual(first_link.group(1), "one-point")
 
@@ -96,7 +96,7 @@ class GlossaryPageGenerationTests(unittest.TestCase):
             definition="Ace and Single describe this entry.",
         )
         output = learn_glossary.linked_definition_html(entry, [entry])
-        self.assertNotIn("data-bms-definition-link", output)
+        self.assertNotIn("data-bs-definition-link", output)
 
     def test_explicit_inline_mapping_overrides_automatic_matching(self) -> None:
         automatic = public_entry("Special Phrase", "special-phrase")
@@ -109,8 +109,8 @@ class GlossaryPageGenerationTests(unittest.TestCase):
         output = learn_glossary.linked_definition_html(
             sample, [automatic, self.one_point, sample]
         )
-        self.assertIn('data-bms-glossary-slug="one-point"', output)
-        self.assertNotIn('data-bms-glossary-slug="special-phrase"', output)
+        self.assertIn('data-bs-glossary-slug="one-point"', output)
+        self.assertNotIn('data-bs-glossary-slug="special-phrase"', output)
 
     def test_related_terms_are_links_only_when_resolved(self) -> None:
         output = learn_glossary.related_terms_html(self.sample)
@@ -124,15 +124,15 @@ class GlossaryPageGenerationTests(unittest.TestCase):
             json.dumps(["Checker Play", "Cube Action"], ensure_ascii=False),
             quote=True,
         )
-        self.assertIn(f'data-bms-categories="{encoded}"', output)
-        self.assertEqual(output.count("data-bms-card-category="), 2)
+        self.assertIn(f'data-bs-categories="{encoded}"', output)
+        self.assertEqual(output.count("data-bs-card-category="), 2)
 
     def test_glossary_search_payload_includes_names_and_both_definitions(self) -> None:
         output = learn_glossary.build_entries_html([self.one_point], {}, {})
         self.assertIn("Ace-Point", output)
         self.assertIn("The opponent&#x27;s one-point.", output)
         self.assertIn("Full definition for One-Point.", output)
-        self.assertIn("data-bms-alias-names=", output)
+        self.assertIn("data-bs-alias-names=", output)
 
     def test_lookup_contains_canonical_short_and_full_definitions(self) -> None:
         lookup = json.loads(learn_glossary.build_lookup_data(self.entries, {}))

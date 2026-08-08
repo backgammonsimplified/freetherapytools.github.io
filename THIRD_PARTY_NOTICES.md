@@ -25,7 +25,7 @@ The following tools and libraries are build dependencies and are not incorporate
 
 ## Project-owned visual assets
 
-The favicon, logo, app-icon, and generated social-preview assets are project-owned Backgammon Made Simple branding, not third-party material. Their inclusion does not grant trademark rights. See `LICENSE.md` and `docs/ASSET_PROVENANCE.md`.
+The favicon, logo, app-icon, and generated social-preview assets are project-owned Backgammon Simplified branding, not third-party material. Their inclusion does not grant trademark rights. See `LICENSE.md` and `docs/ASSET_PROVENANCE.md`.
 
 ## Other third-party material
 

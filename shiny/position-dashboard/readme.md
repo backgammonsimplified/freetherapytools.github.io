@@ -1,4 +1,4 @@
-# Backgammon Made Simple Position Analyzer
+# Backgammon Simplified Position Analyzer
 
 A small Shiny app for opening and sharing backgammon positions from an XGID.
 
@@ -38,7 +38,7 @@ Stable position links make it possible to open the app directly, embed it in a l
 
 ## Project direction
 
-The Position Analyzer is being developed as a teaching tool for **Backgammon Made Simple**.
+The Position Analyzer is being developed as a teaching tool for **Backgammon Simplified**.
 
 Planned additions include:
 
@@ -64,9 +64,9 @@ For position-rendering problems, include:
 
 Please keep changes focused and preserve the existing XGID and `bglab::ggboard()` rendering path unless a renderer change is intentional.
 
-## Backgammon Made Simple
+## Backgammon Simplified
 
-Backgammon Made Simple is an independent educational project about backgammon decisions, positions, cube play, and analysis.
+Backgammon Simplified is an independent educational project about backgammon decisions, positions, cube play, and analysis.
 
 ```text
 Understand the idea → see it in a position → make a decision → analyze the result
@@ -76,4 +76,4 @@ Understand the idea → see it in a position → make a decision → analyze the
 
 See the repository licence files for the software and content terms.
 
-The **Backgammon Made Simple** name, logo, and brand assets are reserved.
+The **Backgammon Simplified** name, logo, and brand assets are reserved.

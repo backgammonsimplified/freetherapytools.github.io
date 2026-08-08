@@ -145,7 +145,7 @@ def build_projection(fixture_dir: Path) -> dict:
 
     fixture_id = view["position_id"]
     return {
-        "schema_version": "bms-lesson-analysis-fixture-v1",
+        "schema_version": "bs-lesson-analysis-fixture-v1",
         "fixture_status": {
             "kind": "retained-analysis",
             "label": "Retained GNU analysis",

@@ -7,7 +7,7 @@ updated: "2026-07-15"
 categories: [Research]
 tags: [fixture, methodology, engines]
 image: ../assets/logo.svg
-image-alt: "Backgammon Made Simple logo"
+image-alt: "Backgammon Simplified logo"
 bibliography: ../references.bib
 ---
 
@@ -27,11 +27,11 @@ $$n = p \times r$$
 
 ### Citation
 
-The structure follows the same fixture methodology note used elsewhere [@bms-fixture-methodology].
+The structure follows the same fixture methodology note used elsewhere [@bs-fixture-methodology].
 
 ### Component Playground
 
-::: {.bms-card}
+::: {.bs-card}
 #### Copyable source
 
 ```markdown

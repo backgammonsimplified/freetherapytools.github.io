@@ -73,7 +73,7 @@ ASSET_EXTENSIONS = {
 GENERATED_SOURCE_HTML_ALLOWLIST = {
     "site/glossary/_entries.html",
     "site/includes/analyzer-form.html",
-    "site/includes/bms-scripts.html",
+    "site/includes/bs-scripts.html",
     "site/includes/bot-arena-banner.html",
     "site/includes/report-problem.html",
     "site/includes/site-head.html",

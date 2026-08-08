@@ -1,11 +1,11 @@
 ---
 title: "Licensing and Attribution"
-description: "Licences for Backgammon Made Simple code, educational content, data, and third-party materials."
+description: "Licences for Backgammon Simplified code, educational content, data, and third-party materials."
 page-layout: article
 toc: true
 ---
 
-Backgammon Made Simple is an open-source project. Different parts of the project use different licences.
+Backgammon Simplified is an open-source project. Different parts of the project use different licences.
 
 ## Website code and executable materials
 
@@ -19,16 +19,16 @@ When reusing this material, give appropriate credit, link to the licence and sou
 
 Suggested credit:
 
-> Based on material from **Backgammon Made Simple** by Marty Gale and contributors. Source: <https://github.com/backgammon-made-simple/backgammon-made-simple.github.io>. Licensed under **CC BY-SA 4.0**. Changes were made.
+> Based on material from **Backgammon Simplified** by Marty Gale and contributors. Source: <https://github.com/backgammonsimplified/backgammonsimplified.github.io>. Licensed under **CC BY-SA 4.0**. Changes were made.
 
 ## Data and third-party materials
 
-Data releases use the licence stated with each release. Third-party code, fonts, engines, screenshots, quotations, and other materials retain their original licences. See the repository's [third-party notices](https://github.com/backgammon-made-simple/backgammon-made-simple.github.io/blob/master/THIRD_PARTY_NOTICES.md) for details.
+Data releases use the licence stated with each release. Third-party code, fonts, engines, screenshots, quotations, and other materials retain their original licences. See the repository's [third-party notices](https://github.com/backgammonsimplified/backgammonsimplified.github.io/blob/master/THIRD_PARTY_NOTICES.md) for details.
 
 ## Branding and trademark
 
-The software and content licences do not grant trademark rights in the Backgammon Made Simple name, logo, favicon, or other official brand marks. Forks and adaptations should use their own identity and must not imply endorsement or official status.
+The software and content licences do not grant trademark rights in the Backgammon Simplified name, logo, favicon, or other official brand marks. Forks and adaptations should use their own identity and must not imply endorsement or official status.
 
 ## Full terms
 
-The repository [licensing summary](https://github.com/backgammon-made-simple/backgammon-made-simple.github.io/blob/master/LICENSE.md) defines the scope. The unmodified licence texts are stored in the repository's `LICENSES` directory.
+The repository [licensing summary](https://github.com/backgammonsimplified/backgammonsimplified.github.io/blob/master/LICENSE.md) defines the scope. The unmodified licence texts are stored in the repository's `LICENSES` directory.

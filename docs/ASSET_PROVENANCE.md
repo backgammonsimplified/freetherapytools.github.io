@@ -36,7 +36,7 @@ That command uses the existing contract-v1.1 text-only renderer, local Source Sa
 | Generated file | Dimensions | SHA-256 |
 |---|---:|---|
 | `site/assets/social/generated/social-default.png` | 1200×630 | `42444DD0C956F1B5BE2C0492F1BDF04B8DF92E10CC3651171818692199609BC2` |
-| `site/assets/social/generated/github-backgammon-made-simple.png` | 1280×640 | `5BEBE6FD66B12E8F375F5B59A65FBF19EBC9D3A9A436A7ED2263E90DCE1F334C` |
+| `site/assets/social/generated/github-backgammon-simplified.png` | 1280×640 | `5BEBE6FD66B12E8F375F5B59A65FBF19EBC9D3A9A436A7ED2263E90DCE1F334C` |
 
 Generation is deterministic for the pinned Python packages, installed Chromium version, renderer/templates, font files, logo, and metadata recorded in the manifest. The `.render-state.json` file records content hashes used for changed-card builds.
 

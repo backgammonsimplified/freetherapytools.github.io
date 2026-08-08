@@ -1,6 +1,6 @@
 ---
 title: "Updates"
-description: "Dated Backgammon Made Simple lessons, Research articles, studies, benchmark reports, and glossary definitions."
+description: "Dated Backgammon Simplified lessons, Research articles, studies, benchmark reports, and glossary definitions."
 page-layout: article
 toc: false
 sidebar: false
@@ -18,7 +18,7 @@ listing:
   filter-ui: false
   feed:
     type: full
-    title: "Backgammon Made Simple Updates"
+    title: "Backgammon Simplified Updates"
     description: "Dated public lessons, Research articles, studies, benchmark reports, and glossary definitions."
 execute:
   enabled: false

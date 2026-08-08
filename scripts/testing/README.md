@@ -1,6 +1,6 @@
 # Testing
 
-This directory is the single testing surface for Backgammon Made Simple. Tests
+This directory is the single testing surface for Backgammon Simplified. Tests
 remain in `tests/`; source fixtures remain in `fixtures/` and `tests/fixtures/`.
 
 Run from Git Bash, Linux, macOS, or another Bash environment at the repository

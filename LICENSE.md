@@ -60,7 +60,7 @@ You may share and adapt this material, including commercially, provided that you
 2. provide a link to the license;
 3. indicate whether changes were made;
 4. distribute adaptations under CC BY-SA 4.0 or a compatible license;
-5. do not imply endorsement by Backgammon Made Simple.
+5. do not imply endorsement by Backgammon Simplified.
 
 Canonical license and legal code:
 
@@ -68,9 +68,9 @@ Canonical license and legal code:
 
 ### Recommended attribution
 
-> Based on material from **Backgammon Made Simple** by Marty Gale and contributors.  
-> Source: <https://github.com/backgammon-made-simple/backgammon-made-simple.github.io>  
-> Licensed under **CC BY-SA 4.0**.  
+> Based on material from **Backgammon Simplified** by Marty Gale and contributors.
+> Source: <https://github.com/backgammonsimplified/backgammonsimplified.github.io>
+> Licensed under **CC BY-SA 4.0**.
 > Changes were made.
 
 Attribution may be provided in another reasonable form that satisfies the license.
@@ -94,12 +94,12 @@ The AGPL and CC BY-SA licenses do **not** grant trademark rights.
 
 The following are not licensed for use as the identity of a fork, course, service, or derivative project:
 
-- the **Backgammon Made Simple** name as an official project identity;
-- the BMS logo and favicon;
+- the **Backgammon Simplified** name as an official project identity;
+- the BS logo and favicon;
 - distinctive official brand marks and social templates;
 - statements implying official status, affiliation, sponsorship, or endorsement.
 
-Forks and adaptations may accurately state that they are based on Backgammon Made Simple and must preserve required attribution. They should use their own name and visual identity.
+Forks and adaptations may accurately state that they are based on Backgammon Simplified and must preserve required attribution. They should use their own name and visual identity.
 
 In plain language:
 

@@ -11,22 +11,22 @@ format:
     toc-depth: 3
     toc-expand: 2
     title-block-style: plain
-    body-classes: "bms-editorial-page bms-title-eyebrow bms-engine-benchmark-page"
+    body-classes: "bs-editorial-page bs-title-eyebrow bs-engine-benchmark-page"
 ---
 
-::: {.bms-editorial-lead}
+::: {.bs-editorial-lead}
 Sage and GNU played 20 seven-point matches using fixed ply depths and dice files prepared before play.  Guess who won?
 :::
 
 
-::: {.bms-status-panel}
+::: {.bs-status-panel}
 
 #### Skeptical of our approach or results?
 
 As you read, you may think it  was unfair or unscientific, we have a dedicated page for our research method with details.  This article summarizes the findings and briefly talks about the methods.
 
-::: {.bms-button-row}
-[Read research method details](../../research/sage-vs-gnu-additional-details.qmd){.bms-button-primary}
+::: {.bs-button-row}
+[Read research method details](../../research/sage-vs-gnu-additional-details.qmd){.bs-button-primary}
 :::
 :::
 
@@ -63,8 +63,8 @@ The TODO [research page](../../research/sage-vs-gnu-additional-details.qmd#how-s
 
 
 
-::: {.bms-figure-slot role="group" aria-label="Match score and twenty-match tile strip placeholder"}
-[PENDING VALIDATED FIGURE :: MATCH SCORE AND 20-MATCH TILE STRIP]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Match score and twenty-match tile strip placeholder"}
+[PENDING VALIDATED FIGURE :: MATCH SCORE AND 20-MATCH TILE STRIP]{.bs-figure-slot-label}
 
 Show GNU with 13 wins and Sage with 7 wins. Add one chronological tile for each public match identifier. Do not use pair labels or A/B labels.
 :::
@@ -93,8 +93,8 @@ This adjustment is an estimate, not a replacement match score.
 
 </details>
 
-::: {.bms-figure-slot role="group" aria-label="Observed and GNU-adjusted result summary placeholder"}
-[PENDING VALIDATED FIGURE :: WHAT CHANGED AFTER GNU'S ROLL ADJUSTMENT]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Observed and GNU-adjusted result summary placeholder"}
+[PENDING VALIDATED FIGURE :: WHAT CHANGED AFTER GNU'S ROLL ADJUSTMENT]{.bs-figure-slot-label}
 
 Keep the two observed groups separate: the 7 Sage wins all still show Sage ahead; among the 13 GNU wins, 8 still show GNU ahead, 3 become nearly even, and 2 show Sage ahead. Do not combine them under a label such as **winner remained ahead**.
 :::
@@ -105,8 +105,8 @@ expected inputs: public_match_results.csv or authoritative public luck summary
 -->
 
 
-::: {.bms-inline-note}
-[IMPORTANT LIMITATION]{.bms-technical-label}
+::: {.bs-inline-note}
+[IMPORTANT LIMITATION]{.bs-technical-label}
 
 We used GNU 4 ply to review the matches and then a Sage rollout to resolve the arguments.  GNU 4ply will of course favour GNU's lower ply decisions.
 
@@ -131,7 +131,7 @@ We ideally would be able to BGBlitz or XG, and will be future work if we can get
 </details>
 
 
-::: {.bms-status-panel}
+::: {.bs-status-panel}
 
 #### Want to run your own analysis?
 
@@ -139,13 +139,13 @@ Here are the match files, reviewed analysis and data we parsed used for the figu
 
 TODO
 
-::: {.bms-button-row}
+::: {.bs-button-row}
 
-[Read research method details](../../research/sage-vs-gnu-additional-details.qmd){.bms-button-primary}
+[Read research method details](../../research/sage-vs-gnu-additional-details.qmd){.bs-button-primary}
 
-[Read about Engine Benchmark](../index.qmd){.bms-button-outline}
+[Read about Engine Benchmark](../index.qmd){.bs-button-outline}
 
-[Read Github Repo](https://github.com/backgammon-made-simple/backgammon-engine-kit){.bms-button-outline}
+[Read Github Repo](https://github.com/backgammonsimplified/backgammon-engine-kit){.bs-button-outline}
 :::
 :::
 
@@ -189,8 +189,8 @@ $$
 
 </details>
 
-::: {.bms-figure-slot role="group" aria-label="Pooled overall ER comparison placeholder"}
-[PENDING VALIDATED FIGURE :: POOLED OVERALL ER]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Pooled overall ER comparison placeholder"}
+[PENDING VALIDATED FIGURE :: POOLED OVERALL ER]{.bs-figure-slot-label}
 
 Show one directly labelled value for each engine, include a visible zero baseline, and state that lower is better. Equity loss and eligible-decision totals may appear as supporting text.
 :::
@@ -213,8 +213,8 @@ GNU's review found a relatively small difference in checker play and a much larg
 
 This does not prove that every disputed Sage cube decision was wrong. GNU made the judgment, and the separate Sage rollout study examines selected disagreements more deeply.
 
-::: {.bms-figure-slot role="group" aria-label="Checker and cube pooled ER placeholder"}
-[PENDING VALIDATED FIGURE :: CHECKER-PLAY AND CUBE-DECISION ER]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Checker and cube pooled ER placeholder"}
+[PENDING VALIDATED FIGURE :: CHECKER-PLAY AND CUBE-DECISION ER]{.bs-figure-slot-label}
 
 Use separate panels and separate, clearly labelled scales. Show checker play as Sage 0.291 and GNU 0.177, and cube decisions as Sage 9.652 and GNU 0.021. State that lower is better.
 :::
@@ -242,8 +242,8 @@ Both engines were close to 4 ply's preferred move on the great majority of eligi
 
 A checker decision with zero reviewed loss stays in the total and counts as close. Zero-loss decisions may be left out of a separate plot of non-zero mistakes so the visible errors are easier to compare, but they are not removed from these percentages.
 
-::: {.bms-figure-slot role="group" aria-label="Checker decision closeness placeholder"}
-[PENDING VALIDATED FIGURE :: CHECKER DECISIONS CLOSE TO GNU'S PREFERRED MOVE]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Checker decision closeness placeholder"}
+[PENDING VALIDATED FIGURE :: CHECKER DECISIONS CLOSE TO GNU'S PREFERRED MOVE]{.bs-figure-slot-label}
 
 Title the figure **Checker decisions close to GNU's preferred move**. Show the percentages and raw counts, define the 0.010 EMG threshold, and avoid the words **correct**, **incorrect**, and **accuracy**.
 :::
@@ -259,8 +259,8 @@ Cube decisions need a separate calculation. There are far fewer eligible cube de
 
 The final figure uses the same 0.010 equity EMG closeness threshold.
 
-::: {.bms-figure-slot role="group" aria-label="Cube decision closeness placeholder"}
-[PENDING AUDITED FIGURE :: CUBE DECISIONS CLOSE TO GNU'S REVIEW]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Cube decision closeness placeholder"}
+[PENDING AUDITED FIGURE :: CUBE DECISIONS CLOSE TO GNU'S REVIEW]{.bs-figure-slot-label}
 
 Show the share within 0.010 EMG and the share more than 0.010 EMG away, with percentages, raw counts, and the accepted eligible-decision total. State the zero rule in the subtitle or caption.
 :::
@@ -278,14 +278,14 @@ GNU's review found selected cube decisions where Sage's original action differed
 Those positions are being examined with a deeper Sage **rollout**. In a rollout, Sage repeatedly plays forward from the same position to compare how the two actions perform over many continuations.  Stage 1 compares only Sage's original action with GNU's recommendation. A rollout may support GNU, support Sage's original action, or remain too close to call.
 
 
-::: {.bms-status-panel}
-[PENDING AUDITED SAGE ROLLOUT RESULTS]{.bms-status-label}
+::: {.bs-status-panel}
+[PENDING AUDITED SAGE ROLLOUT RESULTS]{.bs-status-label}
 
 The public summary will be added after the audited rollout release is available. It will report completed and valid rollouts, results supporting each action, unresolved results, point-estimate-only results, and exclusions.
 :::
 
-::: {.bms-figure-slot role="group" aria-label="Sage rollout summary placeholder"}
-[PENDING FIGURE :: SELECTED SAGE CUBE ROLLOUT RESULTS]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Sage rollout summary placeholder"}
+[PENDING FIGURE :: SELECTED SAGE CUBE ROLLOUT RESULTS]{.bs-figure-slot-label}
 
 Use only the audited two-action rollout release. Each published result must link to the position, match context, two actions, rollout settings, paired difference, valid uncertainty range when available, and any exclusion reason.
 :::
@@ -352,10 +352,10 @@ GNU's roll estimates suggest that the official 13-7 score may make the contest l
 
 This is evidence about these 20 matches, these engine versions, and these ply depths. It does not establish a permanent ranking between Sage and GNU.
 
-::: {.bms-button-row}
-[Read the research details](../../research/sage-vs-gnu-additional-details.qmd){.bms-button-primary}
+::: {.bs-button-row}
+[Read the research details](../../research/sage-vs-gnu-additional-details.qmd){.bs-button-primary}
 
-[Read about the benchmark tool kit ](../index.qmd){.bms-button-outline}
+[Read about the benchmark tool kit ](../index.qmd){.bs-button-outline}
 
-[View the benchmark repo on Github](https://github.com/backgammon-made-simple/backgammon-engine-benchmark){.bms-button-outline}
+[View the benchmark repo on Github](https://github.com/backgammonsimplified/backgammon-engine-benchmark){.bs-button-outline}
 :::

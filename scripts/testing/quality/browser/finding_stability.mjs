@@ -79,7 +79,7 @@ export const findingIdentity = ({
     selector,
     state
   });
-  return hashId("bms-finding", identity);
+  return hashId("bs-finding", identity);
 };
 
 export const classifyBrowserFinding = ({

@@ -27,7 +27,7 @@ highlighted-terms:
   - 10-in-the-zone
   - active-builder
 level: Foundation
-body-classes: bms-learn-article
+body-classes: bs-learn-article
 page-layout: article
 toc: true
 toc-depth: 2
@@ -35,14 +35,14 @@ execute:
   enabled: false
 ---
 
-::: {.bms-lesson-meta}
+::: {.bs-lesson-meta}
 Concept: Cube decision  
 Prerequisite: You know the rules and basic scoring  
 Status: Scaffold lesson
 :::
 
 ::: {.column-margin}
-::: {.bms-right-rail-card}
+::: {.bs-right-rail-card}
 {{< include ../../includes/analyzer-form.html >}}
 :::
 :::
@@ -55,8 +55,8 @@ You are not only asking whether you are ahead. You are asking whether the game i
 
 The cube turns a position into a decision about risk, reward, and timing.
 
-::: {.bms-callout}
-::: {.bms-callout-title}
+::: {.bs-callout}
+::: {.bs-callout-title}
 Key idea
 :::
 A strong cube decision is not just about who is winning. It is about what can happen before you get another chance to double.
@@ -73,10 +73,10 @@ Take point ~= risk / (risk + reward)
 ## Worked Position
 
 <div
-  class="bms-lesson-analysis-host"
-  data-bms-cube-decision
-  data-bms-fixture-src="/data/lesson-analysis-svg-mvp.json"
-  data-bms-fixture-id="cube-double-take"
+  class="bs-lesson-analysis-host"
+  data-bs-cube-decision
+  data-bs-fixture-src="/data/lesson-analysis-svg-mvp.json"
+  data-bs-fixture-id="cube-double-take"
 ></div>
 
 <details>
@@ -87,10 +87,10 @@ answer. It exists to verify that repeated components receive independent
 controls and IDs.
 
 <div
-  class="bms-lesson-analysis-host"
-  data-bms-cube-decision
-  data-bms-fixture-src="/data/lesson-analysis-svg-mvp.json"
-  data-bms-fixture-id="cube-roll"
+  class="bs-lesson-analysis-host"
+  data-bs-cube-decision
+  data-bs-fixture-src="/data/lesson-analysis-svg-mvp.json"
+  data-bs-fixture-id="cube-roll"
 ></div>
 
 </details>

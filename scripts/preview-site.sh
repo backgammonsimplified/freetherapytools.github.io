@@ -58,7 +58,8 @@ else
 fi
 
 cd "${REPO_ROOT}"
-export BMS_SKIP_SOCIAL_CARDS=1
+export BS_SKIP_SOCIAL_CARDS=1
+export BS_PUBLICATION_MODE=development
 
 if [[ ! -f "site/_site/index.html" ]]; then
   printf 'ERROR: site/_site/index.html does not exist.\n' >&2
@@ -77,7 +78,7 @@ cleanup() {
 
 trap cleanup EXIT
 
-printf 'BMS static preview + render watcher\n'
+printf 'BS static preview + render watcher\n'
 printf 'Repository: %s\n' "${REPO_ROOT}"
 printf 'URL:        http://%s:%s/\n' "${HOST}" "${PORT}"
 printf 'Serving:    existing site/_site output\n'

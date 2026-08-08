@@ -3,8 +3,8 @@
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
-const learn = require("../site/assets/bms-learn.js");
-const glossary = require("../site/assets/bms-glossary.js");
+const learn = require("../site/assets/bs-learn.js");
+const glossary = require("../site/assets/bs-glossary.js");
 
 const lessons = [
   {
@@ -448,18 +448,18 @@ const generatedGlossaryMarkup = fs.readFileSync(
 );
 const generatedGlossaryItems = Array.from(
   generatedGlossaryMarkup.matchAll(
-    /<details class="bms-glossary-entry"[^>]*>/g
+    /<details class="bs-glossary-entry"[^>]*>/g
   ),
   (match) => {
     const tag = match[0];
-    const searchValues = JSON.parse(attributeValue(tag, "data-bms-search"));
-    const categoriesAttribute = attributeValue(tag, "data-bms-categories");
-    const primaryCategory = attributeValue(tag, "data-bms-category");
+    const searchValues = JSON.parse(attributeValue(tag, "data-bs-search"));
+    const categoriesAttribute = attributeValue(tag, "data-bs-categories");
+    const primaryCategory = attributeValue(tag, "data-bs-category");
     return {
-      slug: attributeValue(tag, "data-bms-slug"),
-      aliasSlugs: JSON.parse(attributeValue(tag, "data-bms-aliases")),
+      slug: attributeValue(tag, "data-bs-slug"),
+      aliasSlugs: JSON.parse(attributeValue(tag, "data-bs-aliases")),
       canonical: searchValues[0],
-      aliases: JSON.parse(attributeValue(tag, "data-bms-alias-names")),
+      aliases: JSON.parse(attributeValue(tag, "data-bs-alias-names")),
       categories: categoriesAttribute
         ? JSON.parse(categoriesAttribute)
         : primaryCategory
@@ -736,7 +736,7 @@ assert.equal(
 
 const lookupData = JSON.parse(
   fs.readFileSync(
-    path.join(__dirname, "..", "site", "assets", "bms-glossary-lookup.json"),
+    path.join(__dirname, "..", "site", "assets", "bs-glossary-lookup.json"),
     "utf8"
   )
 );
@@ -804,7 +804,7 @@ assert.deepEqual(
 
 const clearedUrl = new URL(
   glossary.urlWithoutGlossaryQuery(
-    "https://backgammon-made-simple.github.io/glossary/" +
+    "https://backgammonsimplified.github.io/glossary/" +
       "?q=take+point&category=cube%20and%20scoring&track=Doubling%20Cube"
   )
 );
@@ -821,15 +821,15 @@ assert.deepEqual(
 );
 assert.equal(
   glossary.urlWithoutGlossaryFilters(
-    "https://backgammon-made-simple.github.io/glossary/" +
+    "https://backgammonsimplified.github.io/glossary/" +
       "?q=take&category=Cube%20Action&track=Doubling%20Cube#take"
   ),
-  "https://backgammon-made-simple.github.io/glossary/#take",
+  "https://backgammonsimplified.github.io/glossary/#take",
   "related-term navigation clears all incompatible filters"
 );
 
 const currentGlossaryUrl =
-  "https://backgammon-made-simple.github.io/glossary/" +
+  "https://backgammonsimplified.github.io/glossary/" +
   "?q=take-point&category=cube%20and%20scoring&track=Doubling%20Cube";
 const letterUrl = new URL(
   glossary.letterNavigationUrl(currentGlossaryUrl, "#letter-t")
@@ -884,7 +884,7 @@ assert.equal(
 assert.equal(
   new URL(
     glossary.normalizedTermFragmentUrl(
-      "https://backgammon-made-simple.github.io/glossary/" +
+      "https://backgammonsimplified.github.io/glossary/" +
         "?track=Doubling%20Cube#accept-a-double",
       "take"
     )

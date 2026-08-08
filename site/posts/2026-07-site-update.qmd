@@ -1,5 +1,5 @@
 ---
-title: "Welcome to Backgammon Made Simple"
+title: "Welcome to Backgammon Simplified"
 description: "Learn about our plans for this site."
 author: "Marty Gale"
 date: "2026-07-15"
@@ -7,7 +7,7 @@ updated: "2026-07-20"
 categories: [Updates]
 tags: [site, analyzer, navigation]
 image: ../assets/logo.svg
-image-alt: "Backgammon Made Simple logo"
+image-alt: "Backgammon Simplified logo"
 bibliography: ../references.bib
 ---
 
@@ -23,7 +23,7 @@ This is a private update note for the navigation and analyzer shell.
 
 ### Component Playground
 
-::: {.bms-card}
+::: {.bs-card}
 #### Copyable source
 
 ```markdown

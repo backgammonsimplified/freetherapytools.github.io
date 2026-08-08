@@ -264,7 +264,7 @@ def validate_font_coverage(cards: list[Card], fonts: FontFiles) -> None:
     This prevents Chromium from silently substituting a system font for a
     missing title, category, brand, or subtitle glyph.
     """
-    semibold_text = "Backgammon Made Simple" + "".join(
+    semibold_text = "Backgammon Simplified" + "".join(
         card.title + card.category for card in cards
     )
     regular_text = "".join(card.subtitle for card in cards)
@@ -603,11 +603,11 @@ def wait_for_assets(page: Page, remote_requests: list[str]) -> None:
             await Promise.all([
               document.fonts.load(
                 '400 16px "Source Sans 3 Local"',
-                "Backgammon Made Simple"
+                "Backgammon Simplified"
               ),
               document.fonts.load(
                 '600 16px "Source Sans 3 Local"',
-                "Backgammon Made Simple"
+                "Backgammon Simplified"
               )
             ]);
             await document.fonts.ready;
@@ -983,7 +983,7 @@ def clean_orphans(cards: list[Card]) -> None:
 
 def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Validate and render text-only Backgammon Made Simple social cards"
+        description="Validate and render text-only Backgammon Simplified social cards"
     )
 
     commands = parser.add_mutually_exclusive_group()

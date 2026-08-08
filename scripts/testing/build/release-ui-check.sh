@@ -12,7 +12,7 @@ usage() {
 Usage:
   bash scripts/testing/build/release-ui-check.sh [PORT] [--render] [--representative-only]
 
-Runs the repeatable source and rendered-site portion of the BMS UI release
+Runs the repeatable source and rendered-site portion of the BS UI release
 gate. The browser phase uses scripts/testing/ux/browser/
 release_ui_browser_check.mjs and is documented in scripts/testing/ux/.
 
@@ -76,7 +76,7 @@ fi
 
 cd "${REPO_ROOT}"
 
-printf 'BMS UI release checks\n'
+printf 'BS UI release checks\n'
 printf 'Repository: %s\n' "${REPO_ROOT}"
 printf 'Preview:    http://127.0.0.1:%s/\n' "${PORT}"
 printf 'Render:     %s\n\n' "$([[ ${RENDER} -eq 1 ]] && printf yes || printf no)"
@@ -85,8 +85,8 @@ printf '[1/6] Source diff and deterministic fixture validation\n'
 git diff --check
 
 printf '\n[2/6] JavaScript syntax and focused logic tests\n'
-node --check site/assets/bms-learn.js
-node --check site/assets/bms-learn-scroll.js
+node --check site/assets/bs-learn.js
+node --check site/assets/bs-learn-scroll.js
 node --check scripts/testing/ux/browser/release_ui_browser_check.mjs
 node tests/test_learn_filters.js
 node tests/test_continuous_learn.js
@@ -102,7 +102,7 @@ if [[ ${RENDER} -eq 1 ]]; then
     printf 'ERROR: quarto was not found on PATH.\n' >&2
     exit 127
   fi
-  export BMS_SKIP_SOCIAL_CARDS=1
+  export BS_SKIP_SOCIAL_CARDS=1
   quarto render site
 else
   printf 'Skipped. Use --render for the release gate.\n'

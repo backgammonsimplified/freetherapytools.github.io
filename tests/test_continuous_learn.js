@@ -3,31 +3,31 @@
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
-const scroll = require("../site/assets/bms-learn-scroll.js");
-const learn = require("../site/assets/bms-learn.js");
+const scroll = require("../site/assets/bs-learn-scroll.js");
+const learn = require("../site/assets/bs-learn.js");
 const scrollSource = fs.readFileSync(
-  path.join(__dirname, "../site/assets/bms-learn-scroll.js"),
+  path.join(__dirname, "../site/assets/bs-learn-scroll.js"),
   "utf8"
 );
 
 assert.match(
   scrollSource,
-  /querySelector\(\s*"\[data-bms-toc-heading-toggle\]"\s*\)/
+  /querySelector\(\s*"\[data-bs-toc-heading-toggle\]"\s*\)/
 );
 assert.match(scrollSource, /tocLinks\.id = controlledLinksId/);
 assert.match(
   scrollSource,
   /globalToc\.appendChild\(toggleDivider \|\| headingToggle\)/
 );
-assert.match(scrollSource, /data-bms-toc-toggle-divider/);
+assert.match(scrollSource, /data-bs-toc-toggle-divider/);
 assert.doesNotMatch(scrollSource, /tocTitle\.appendChild\(headingToggle\)/);
 assert.match(
   scrollSource,
-  /!document\.body\.classList\.contains\("bms-learn-article"\)/
+  /!document\.body\.classList\.contains\("bs-learn-article"\)/
 );
 assert.match(
   scrollSource,
-  /document\.body\.classList\.contains\("bms-learn-track-index"\)/
+  /document\.body\.classList\.contains\("bs-learn-track-index"\)/
 );
 assert.match(scrollSource, /findPrimaryToc\(document\)/);
 assert.match(scrollSource, /findPrimaryToc\(nextDocument\)/);
@@ -226,11 +226,11 @@ assert.equal(scroll.findPrimaryToc(null), null);
 
 assert.equal(
   scroll.idPrefixForRoute("/learn/cube/what-the-cube-is-asking.html"),
-  "bms-learn-scroll-cube-what-the-cube-is-asking-"
+  "bs-learn-scroll-cube-what-the-cube-is-asking-"
 );
 assert.equal(
   scroll.idPrefixForRoute("/learn/game-plans/"),
-  "bms-learn-scroll-game-plans-"
+  "bs-learn-scroll-game-plans-"
 );
 assert.notEqual(
   scroll.idPrefixForRoute(
@@ -330,7 +330,7 @@ const root = new FakeRoot([
   svgReferences,
   otherPageLink
 ]);
-const prefix = "bms-learn-scroll-example-";
+const prefix = "bs-learn-scroll-example-";
 scroll.rewriteIdReferences(root, prefix);
 assert.equal(panel.id, prefix + "answer-panel");
 assert.equal(label.id, prefix + "choice-label");
@@ -578,7 +578,7 @@ assert.equal(sidebarToggle.clickCount, 1);
 assert.equal(fakeSidebar.scrollTop, 78);
 
 const tocHeadingMap = new Map([
-  ["overview", "bms-learn-scroll-test-overview"]
+  ["overview", "bs-learn-scroll-test-overview"]
 ]);
 const tocLinkElement = new FakeElement({
   id: "toc-overview",
@@ -587,20 +587,20 @@ const tocLinkElement = new FakeElement({
 });
 scroll.rewriteIdReferences(
   new FakeRoot([tocLinkElement]),
-  "bms-learn-scroll-test-",
+  "bs-learn-scroll-test-",
   tocHeadingMap
 );
 assert.equal(
   tocLinkElement.getAttribute("href"),
-  "#bms-learn-scroll-test-overview"
+  "#bs-learn-scroll-test-overview"
 );
 assert.equal(
   tocLinkElement.getAttribute("data-scroll-target"),
-  "#bms-learn-scroll-test-overview"
+  "#bs-learn-scroll-test-overview"
 );
 assert.equal(
   tocLinkElement.id,
-  "bms-learn-scroll-test-toc-overview"
+  "bs-learn-scroll-test-toc-overview"
 );
 
 function fakeTocLink(href, active) {
@@ -713,7 +713,7 @@ const mountedButton = {
 const mountedPrompt = {
   dataset: {},
   querySelectorAll(selector) {
-    return selector === ".bms-answer-choice" ? [mountedButton] : [];
+    return selector === ".bs-answer-choice" ? [mountedButton] : [];
   },
   querySelector() {
     return null;
@@ -728,10 +728,10 @@ const mountedAnalyzer = {
 };
 const mountRoot = {
   querySelectorAll(selector) {
-    if (selector === ".bms-decision-prompt") {
+    if (selector === ".bs-decision-prompt") {
       return [mountedPrompt];
     }
-    if (selector === "details.bms-analyzer-embed") {
+    if (selector === "details.bs-analyzer-embed") {
       return [mountedAnalyzer];
     }
     if (selector === "[id]") {
@@ -744,7 +744,7 @@ learn.mountLesson(mountRoot);
 learn.mountLesson(mountRoot);
 assert.equal(mountedButton.listenerCount, 1);
 assert.equal(mountedAnalyzer.listenerCount, 1);
-assert.equal(mountedPrompt.dataset.bmsAnswerChoicesMounted, "true");
-assert.equal(mountedAnalyzer.dataset.bmsLazyAnalyzerMounted, "true");
+assert.equal(mountedPrompt.dataset.bsAnswerChoicesMounted, "true");
+assert.equal(mountedAnalyzer.dataset.bsLazyAnalyzerMounted, "true");
 
 console.log("continuous Learn helper tests passed");

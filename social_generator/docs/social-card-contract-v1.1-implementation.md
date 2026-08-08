@@ -1,8 +1,8 @@
-# Backgammon Made Simple Social Card Contract
+# Backgammon Simplified Social Card Contract
 
 **Contract version:** 1.1  
 **Status:** Frozen for current implementation  
-**Repository:** `backgammon-made-simple.github.io`
+**Repository:** `backgammonsimplified.github.io`
 
 ## Purpose
 

@@ -45,7 +45,7 @@ $selectedPython = $pythonCandidates | Where-Object { $_.Version -ge [version]'3.
 if (-not $selectedPython) { throw 'Python 3.11+ is required by testing-sop.md; no qualifying py launcher registration was found' }
 $pythonVersion = $selectedPython.Version
 $quartoVersion = (& quarto --version | Select-Object -First 1).Trim()
-if ($quartoVersion -ne '1.10.15') { throw "Quarto 1.10.15 is required by scripts/bms-setup-server-environment.sh; found $quartoVersion" }
+if ($quartoVersion -ne '1.10.15') { throw "Quarto 1.10.15 is required by scripts/bs-setup-server-environment.sh; found $quartoVersion" }
 
 $venv = Join-Path $RepoRoot '.venv'
 $python = Join-Path $venv 'Scripts/python.exe'

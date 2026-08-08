@@ -2,7 +2,7 @@
 
 ```text
 role: Spare Brain
-repository: backgammon-made-simple.github.io
+repository: backgammonsimplified.github.io
 working_path: repository root
 branch: spare-brain
 base_commit: 5cfbed843afbbdf521bb8c521d3a2b4095343ec7

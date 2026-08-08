@@ -20,10 +20,10 @@ FILTER = (
     ROOT
     / "site"
     / "_extensions"
-    / "bms-inline-glossary"
-    / "bms-inline-glossary.lua"
+    / "bs-inline-glossary"
+    / "bs-inline-glossary.lua"
 )
-LOOKUP = ROOT / "site" / "assets" / "bms-glossary-lookup.json"
+LOOKUP = ROOT / "site" / "assets" / "bs-glossary-lookup.json"
 FIXTURES = ROOT / "tests" / "fixtures" / "iteration03"
 
 
@@ -42,7 +42,7 @@ class LessonInlineGlossaryTests(unittest.TestCase):
         lookup_path: Path = LOOKUP,
     ) -> subprocess.CompletedProcess[str]:
         environment = os.environ.copy()
-        environment["BMS_GLOSSARY_LOOKUP"] = str(lookup_path)
+        environment["BS_GLOSSARY_LOOKUP"] = str(lookup_path)
         return subprocess.run(
             [
                 str(PANDOC),
@@ -72,10 +72,10 @@ class LessonInlineGlossaryTests(unittest.TestCase):
     def test_highlighted_fixture_uses_only_first_safe_canonical_occurrences(self) -> None:
         result = self.render(self.highlighted_source())
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual(result.stdout.count('class="bms-inline-glossary"'), 2)
-        self.assertIn('data-bms-glossary-slug="ace">Ace</a>', result.stdout)
+        self.assertEqual(result.stdout.count('class="bs-inline-glossary"'), 2)
+        self.assertIn('data-bs-glossary-slug="ace">Ace</a>', result.stdout)
         self.assertIn(
-            'data-bms-glossary-slug="ahead-in-the-count">Ahead in the Race</a>',
+            'data-bs-glossary-slug="ahead-in-the-count">Ahead in the Race</a>',
             result.stdout,
         )
         self.assertIn('href="/glossary/#ace"', result.stdout)
@@ -89,7 +89,7 @@ class LessonInlineGlossaryTests(unittest.TestCase):
         result = self.render(self.highlighted_source())
         self.assertEqual(result.returncode, 0, result.stderr)
         heading = result.stdout.split("</h1>", 1)[0]
-        self.assertNotIn("bms-inline-glossary", heading)
+        self.assertNotIn("bs-inline-glossary", heading)
         self.assertIn('href="https://example.com/ace"', result.stdout)
         self.assertIn("<code>ahead in the count in inline code</code>", result.stdout)
         self.assertIn("Ace and Ahead in the Race in a fenced code block.", result.stdout)
@@ -99,13 +99,13 @@ class LessonInlineGlossaryTests(unittest.TestCase):
             r'class="fixture-raw">Ace and Ahead in the Race in raw\s+HTML\.</span>',
         )
         self.assertIn('alt="Ace and Ahead in the Race in a caption."', result.stdout)
-        self.assertNotIn("data-bms-glossary-summary", result.stdout)
+        self.assertNotIn("data-bs-glossary-summary", result.stdout)
         self.assertNotIn("short_definition=", result.stdout)
 
     def test_control_lesson_has_no_inline_markup(self) -> None:
         result = self.render(self.control_source())
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertNotIn("bms-inline-glossary", result.stdout)
+        self.assertNotIn("bs-inline-glossary", result.stdout)
         self.assertIn("Ace and Ahead in the Race appear in ordinary prose", result.stdout)
 
     def test_broad_terms_still_drive_all_backlinks(self) -> None:
@@ -222,8 +222,8 @@ Checkpoint is not a match. One Point comes first; point comes second.
         )
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertNotIn('>point</a> is not', result.stdout)
-        first = result.stdout.index('data-bms-glossary-slug="one-point"')
-        second = result.stdout.index('data-bms-glossary-slug="point"')
+        first = result.stdout.index('data-bs-glossary-slug="one-point"')
+        second = result.stdout.index('data-bs-glossary-slug="point"')
         self.assertLess(first, second)
 
     def test_ambiguous_canonical_alias_phrase_fails(self) -> None:
@@ -252,7 +252,7 @@ highlighted-terms: [ace]
         result = self.render(source)
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(result.stdout.count("<a "), 1)
-        self.assertNotIn("bms-inline-glossary", result.stdout)
+        self.assertNotIn("bs-inline-glossary", result.stdout)
         self.assertIn("no safe prose occurrence for ace", result.stderr)
 
     def test_rendering_is_byte_deterministic_and_metadata_order_independent(self) -> None:
@@ -282,7 +282,7 @@ highlighted-terms: [ace]
         )
 
     def test_client_hover_focus_and_slug_only_contract(self) -> None:
-        javascript = (ROOT / "site" / "assets" / "bms-learn.js").read_text(
+        javascript = (ROOT / "site" / "assets" / "bs-learn.js").read_text(
             encoding="utf-8"
         )
         glossary_html = (
@@ -291,7 +291,7 @@ highlighted-terms: [ace]
         self.assertIn("function canonicalShortDefinition(entries, slug)", javascript)
         self.assertIn("entry.short_definition", javascript)
         self.assertIn(
-            '".bms-inline-glossary[data-bms-glossary-slug]"',
+            '".bs-inline-glossary[data-bs-glossary-slug]"',
             javascript,
         )
         self.assertIn('link.addEventListener("mouseenter"', javascript)
@@ -299,25 +299,25 @@ highlighted-terms: [ace]
         self.assertIn('link.addEventListener("blur"', javascript)
         self.assertIn('link.addEventListener("click"', javascript)
         self.assertIn("Click for full definition", javascript)
-        self.assertIn('"bms:open-glossary-term"', javascript)
+        self.assertIn('"bs:open-glossary-term"', javascript)
         self.assertIn("renderLookupResult(result, entry", javascript)
-        self.assertIn("link.dataset.bmsGlossarySlug", javascript)
+        self.assertIn("link.dataset.bsGlossarySlug", javascript)
         self.assertIn("inlineGlossaryTooltipPosition", javascript)
         self.assertIn('window.addEventListener("resize"', javascript)
         self.assertIn('window.addEventListener("scroll"', javascript)
-        self.assertNotIn("dataset.bmsGlossarySummary", javascript)
+        self.assertNotIn("dataset.bsGlossarySummary", javascript)
         self.assertIn(
-            'class="bms-inline-glossary"',
+            'class="bs-inline-glossary"',
             glossary_html,
         )
         self.assertNotIn(
-            'data-bms-glossary-slug="abt" '
-            'data-bms-definition-link="abt">American Backgammon Tour</a>',
+            'data-bs-glossary-slug="abt" '
+            'data-bs-definition-link="abt">American Backgammon Tour</a>',
             glossary_html,
         )
         self.assertIn(
-            'data-bms-glossary-slug="active-builder" '
-            'data-bms-definition-link="active-builder">active builders</a>',
+            'data-bs-glossary-slug="active-builder" '
+            'data-bs-definition-link="active-builder">active builders</a>',
             glossary_html,
         )
 
@@ -348,11 +348,11 @@ highlighted-terms: [ace]
         )
         result = self.render(source_path.read_text(encoding="utf-8"))
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual(result.stdout.count('class="bms-inline-glossary"'), 2)
-        self.assertIn('data-bms-glossary-slug="10-in-the-zone"', result.stdout)
-        self.assertIn('data-bms-glossary-slug="active-builder"', result.stdout)
+        self.assertEqual(result.stdout.count('class="bs-inline-glossary"'), 2)
+        self.assertIn('data-bs-glossary-slug="10-in-the-zone"', result.stdout)
+        self.assertIn('data-bs-glossary-slug="active-builder"', result.stdout)
         self.assertIn("<code>Take point ~= risk / (risk + reward)</code>", result.stdout)
-        self.assertNotIn("data-bms-glossary-summary", result.stdout)
+        self.assertNotIn("data-bs-glossary-summary", result.stdout)
 
     def test_real_lesson_terms_create_relationships_without_extra_highlights(self) -> None:
         lessons = learn_glossary.discover_lessons()
@@ -388,7 +388,7 @@ highlighted-terms: [ace]
 
         result = self.render(selected["path"].read_text(encoding="utf-8"))
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertNotIn('data-bms-glossary-slug="equity"', result.stdout)
+        self.assertNotIn('data-bs-glossary-slug="equity"', result.stdout)
 
     def test_research_highlighted_term_must_be_canonical_and_in_terms(self) -> None:
         base = {

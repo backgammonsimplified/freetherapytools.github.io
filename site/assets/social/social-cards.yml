@@ -4,17 +4,17 @@ cards:
   width: 1200
   height: 630
   output: site/assets/social/generated/social-default.png
-  title: Backgammon Made Simple
+  title: Backgammon Simplified
   subtitle: Learn backgammon through clear explanations and useful tools that show
     why a decision is correct, not just what the right decision is.
   category: ''
   visual: ''
-- slug: github-backgammon-made-simple
+- slug: github-backgammon-simplified
   kind: github
   width: 1280
   height: 640
-  output: site/assets/social/generated/github-backgammon-made-simple.png
-  title: Backgammon Made Simple
+  output: site/assets/social/generated/github-backgammon-simplified.png
+  title: Backgammon Simplified
   subtitle: Question-driven lessons, position analysis and backgammon research.
   category: ''
   visual: ''
@@ -25,6 +25,6 @@ cards:
   output: site/assets/social/generated/social-glossary.png
   title: Backgammon Glossary
   subtitle: A searchable backgammon dictionary of terms and glossary for concepts
-    used throughout Backgammon Made Simple.
+    used throughout Backgammon Simplified.
   category: Learn
   visual: ''

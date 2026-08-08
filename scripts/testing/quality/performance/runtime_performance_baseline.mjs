@@ -224,19 +224,19 @@ const medianMetrics = (samples) => {
 const measureGlossaryInteractions = async ({ tab, baseUrl }) => {
   const measurements = {};
   await tab.goto(new URL("/glossary/", baseUrl).href);
-  const search = tab.playwright.locator("[data-bms-glossary-search]");
+  const search = tab.playwright.locator("[data-bs-glossary-search]");
   if ((await search.count()) === 1) {
     let started = Date.now();
     await search.fill("active builder");
-    await tab.playwright.locator("[data-bms-glossary-result-count]").textContent();
+    await tab.playwright.locator("[data-bs-glossary-result-count]").textContent();
     measurements.glossary_search_ms = Date.now() - started;
     const clear = await visibleLocator(
-      tab.playwright.locator("[data-bms-glossary-clear]")
+      tab.playwright.locator("[data-bs-glossary-clear]")
     );
     if (clear) await clear.click();
   }
   const filter = tab.playwright.locator(
-    "[data-bms-glossary-filter-track='Doubling Cube']"
+    "[data-bs-glossary-filter-track='Doubling Cube']"
   );
   if ((await filter.count()) === 1) {
     const started = Date.now();
@@ -253,13 +253,13 @@ const measureGlossaryInteractions = async ({ tab, baseUrl }) => {
     new URL("/learn/cube/what-the-cube-is-asking.html", baseUrl).href
   );
   const inlineLink = await visibleLocator(
-    tab.playwright.locator("main .bms-inline-glossary[data-bms-glossary-slug]")
+    tab.playwright.locator("main .bs-inline-glossary[data-bs-glossary-slug]")
   );
   if (inlineLink) {
     try {
       started = Date.now();
       await inlineLink.click();
-      const sidebar = tab.playwright.locator("[data-bms-glossary-sidebar]");
+      const sidebar = tab.playwright.locator("[data-bs-glossary-sidebar]");
       await sidebar.waitFor({ state: "visible", timeoutMs: 3000 });
       measurements.glossary_sidebar_ms = Date.now() - started;
     } catch (error) {

@@ -130,7 +130,7 @@ def resolve_public_target(
     if parsed.scheme.casefold() in SKIPPED_SCHEMES or parsed.netloc:
         return None, ""
     absolute = urlsplit(
-        urljoin("https://bms.invalid" + current_route, reference)
+        urljoin("https://bs.invalid" + current_route, reference)
     )
     return route_to_file(site_dir, absolute.path), unquote(absolute.fragment)
 

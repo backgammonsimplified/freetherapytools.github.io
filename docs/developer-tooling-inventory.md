@@ -6,10 +6,10 @@ obsolete; **unresolved** needs investigation.
 
 | Area | Current location | Status | Evidence / destination |
 | --- | --- | --- | --- |
-| Quarto site | `site/_quarto.yml` | active | Website project; invokes `scripts/bms_pre_render.py` and `bms_post_render.py`. |
-| Build/publish | `scripts/bms-build-and-publish.sh` | active | Full render and `gh-pages` publication. |
+| Quarto site | `site/_quarto.yml` | active | Website project; invokes `scripts/bs_pre_render.py` and `bs_post_render.py`. |
+| Build/publish | `scripts/bs-build-and-publish.sh` | active | Full render and `gh-pages` publication. |
 | Preview | `scripts/preview-site.sh` | active | Static server plus Quarto watcher. |
-| Server setup | `scripts/bms-setup-server-environment.sh` | active | Proven Linux setup source for Quarto 1.10.15, local environments, Playwright, and R yaml. |
+| Server setup | `scripts/bs-setup-server-environment.sh` | active | Proven Linux setup source for Quarto 1.10.15, local environments, Playwright, and R yaml. |
 | Build runners | `scripts/testing/build/` | active | Quick/comprehensive gates; legacy wrappers remain in `testing-scripts/`. |
 | Automated tests | `tests/` | active | Python, JS, and browser-helper contract checks. |
 | Fixtures | `fixtures/`, `tests/fixtures/`, site data/assets | active | Inputs and retained analysis contracts; do not move. |
@@ -26,7 +26,7 @@ obsolete; **unresolved** needs investigation.
 | Dependency | Source |
 | --- | --- |
 | Git, Bash, Python, Node | `scripts/testing/TESTING-SOP.md` and build runners |
-| Quarto 1.10.15 | `scripts/bms-setup-server-environment.sh` |
+| Quarto 1.10.15 | `scripts/bs-setup-server-environment.sh` |
 | R / `Rscript` | server setup and benchmark/social scripts |
 | Jinja2 3.1.6, PyYAML 6.0.2, playwright 1.54.0, Pillow 11.3.0, fonttools 4.63.0 | `social_generator/requirements-social.txt` |
 | Playwright Chromium | server setup |

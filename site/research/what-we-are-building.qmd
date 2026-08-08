@@ -1,8 +1,8 @@
 ---
 title: "What We Are Building"
-subtitle: "Backgammon Made Simple project update"
+subtitle: "Backgammon Simplified project update"
 description: >
-  How Backgammon Made Simple connects lessons, position analysis, match
+  How Backgammon Simplified connects lessons, position analysis, match
   prediction, engine comparisons, research, and open-source tools.
 categories:
   - Learn
@@ -22,12 +22,12 @@ format:
     toc-location: right
     toc-depth: 2
     title-block-style: plain
-    body-classes: "bms-editorial-page bms-title-eyebrow bms-research-article"
+    body-classes: "bs-editorial-page bs-title-eyebrow bs-research-article"
 execute:
   enabled: false
 ---
-::: {.bms-editorial-lead}
-Backgammon Made Simple is growing into more than a collection of lessons. We are building a set of connected tools and projects that help players learn, analyze positions, follow interesting matches, and understand how backgammon engines reach their conclusions.
+::: {.bs-editorial-lead}
+Backgammon Simplified is growing into more than a collection of lessons. We are building a set of connected tools and projects that help players learn, analyze positions, follow interesting matches, and understand how backgammon engines reach their conclusions.
 :::
 
 Each part of the site has a different job, but they all support the same goal: make strong backgammon ideas easier to understand and use.

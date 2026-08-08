@@ -35,7 +35,7 @@ class LessonAnalysisFixtureTests(unittest.TestCase):
     def test_fixture_contract_and_explicit_status(self):
         self.assertEqual(
             self.data["schema_version"],
-            "bms-lesson-analysis-fixture-v1",
+            "bs-lesson-analysis-fixture-v1",
         )
         self.assertEqual(self.data["fixture_status"]["kind"], "fixture-only")
         message = self.data["fixture_status"]["message"].casefold()
@@ -101,19 +101,19 @@ class LessonAnalysisFixtureTests(unittest.TestCase):
 
     def test_two_lessons_use_root_relative_fixture_loading(self):
         self.assertIn(
-            'data-bms-fixture-src="/data/lesson-analysis-svg-mvp.json"',
+            'data-bs-fixture-src="/data/lesson-analysis-svg-mvp.json"',
             self.cube_source,
         )
         self.assertIn(
-            'data-bms-fixture-src="/data/checker-sage-gnu-disagreement-001.json"',
+            'data-bs-fixture-src="/data/checker-sage-gnu-disagreement-001.json"',
             self.checker_source,
         )
         self.assertEqual(
-            self.cube_source.count("data-bms-cube-decision"),
+            self.cube_source.count("data-bs-cube-decision"),
             2,
         )
         self.assertEqual(
-            self.checker_source.count("data-bms-checker-decision"),
+            self.checker_source.count("data-bs-checker-decision"),
             1,
         )
         self.assertNotIn("<svg", self.cube_source.casefold())
@@ -122,7 +122,7 @@ class LessonAnalysisFixtureTests(unittest.TestCase):
     def test_qmd_hosts_do_not_hard_code_component_ids(self):
         for source in (self.cube_source, self.checker_source):
             host_blocks = re.findall(
-                r"<div\s+.*?data-bms-(?:cube|checker)-decision.*?</div>",
+                r"<div\s+.*?data-bs-(?:cube|checker)-decision.*?</div>",
                 source,
                 flags=re.DOTALL,
             )
@@ -131,24 +131,24 @@ class LessonAnalysisFixtureTests(unittest.TestCase):
                 self.assertNotRegex(block, r'(?:^|\s)id="')
 
     def test_script_is_loaded_before_continuous_lesson_loader(self):
-        scripts = (SITE / "includes" / "bms-scripts.html").read_text(
+        scripts = (SITE / "includes" / "bs-scripts.html").read_text(
             encoding="utf-8"
         )
-        analysis_index = scripts.index("bms-lesson-analysis.js")
-        scroll_index = scripts.index("bms-learn-scroll.js")
+        analysis_index = scripts.index("bs-lesson-analysis.js")
+        scroll_index = scripts.index("bs-learn-scroll.js")
         self.assertLess(analysis_index, scroll_index)
         implementation = (
-            SITE / "assets" / "bms-lesson-analysis.js"
+            SITE / "assets" / "bs-lesson-analysis.js"
         ).read_text(encoding="utf-8")
-        self.assertIn("window.BMSLearn.mountLesson", implementation)
+        self.assertIn("window.BSLearn.mountLesson", implementation)
         self.assertIn("mount(rootElement)", implementation)
-        self.assertIn("dataset.bmsAnalysisMounted", implementation)
+        self.assertIn("dataset.bsAnalysisMounted", implementation)
 
     def test_svg_reuse_cannot_duplicate_inline_ids(self):
         implementation = (
-            SITE / "assets" / "bms-lesson-analysis.js"
+            SITE / "assets" / "bs-lesson-analysis.js"
         ).read_text(encoding="utf-8")
-        self.assertIn('element("img", "bms-analysis-position-image")', implementation)
+        self.assertIn('element("img", "bs-analysis-position-image")', implementation)
         self.assertIn("img.width = 1200", implementation)
         self.assertIn("img.height = 910", implementation)
         self.assertIn('img.loading = "eager"', implementation)
@@ -170,7 +170,7 @@ class LessonAnalysisFixtureTests(unittest.TestCase):
         self.assertIn('"assets/positions/**"', config)
         self.assertIn("data/lesson-analysis-svg-mvp.json", config)
         self.assertIn("data/checker-sage-gnu-disagreement-001.json", config)
-        self.assertIn("assets/bms-lesson-analysis.css", config)
+        self.assertIn("assets/bs-lesson-analysis.css", config)
         provenance = ASSET_ROOT / "PROVENANCE.txt"
         self.assertTrue(provenance.is_file())
         self.assertFalse((ASSET_ROOT / "PROVENANCE.md").exists())

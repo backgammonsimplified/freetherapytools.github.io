@@ -33,7 +33,7 @@ assert.ok(DEFAULT_MANIFEST.pages.some((page) => page.id === "home"));
 assert.deepEqual(
   DEFAULT_MANIFEST.pages.find((page) => page.id === "cube-lesson")
     .required_markers,
-  ["data-bms-cube-decision"]
+  ["data-bs-cube-decision"]
 );
 assert.equal(
   DEFAULT_MANIFEST.pages.filter(
@@ -88,13 +88,13 @@ assert.ok(
   )
 );
 assert.ok(canonicalHelperSource.includes("checksByContext[context]"));
-assert.ok(!helperSource.includes("[data-bms-lesson-track-toggle]"));
+assert.ok(!helperSource.includes("[data-bs-lesson-track-toggle]"));
 assert.match(
   helperSource,
   /await scrollTo\(tab, 1400\);[\s\S]*await scrollTo\(tab, 900\);/
 );
 assert.ok(
-  helperSource.includes('tab.playwright.locator(".bms-term-lookup-close")')
+  helperSource.includes('tab.playwright.locator(".bs-term-lookup-close")')
 );
 
 console.log("UI release browser helper tests passed");

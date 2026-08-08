@@ -4,16 +4,16 @@ cards:
   width: 1200
   height: 630
   output: site/assets/social/generated/social-default.png
-  title: Backgammon Made Simple
+  title: Backgammon Simplified
   subtitle: Questions players ask. Ideas you can use.
   category: ''
   visual: ''
-- slug: github-backgammon-made-simple
+- slug: github-backgammon-simplified
   kind: github
   width: 1280
   height: 640
-  output: site/assets/social/generated/github-backgammon-made-simple.png
-  title: Backgammon Made Simple
+  output: site/assets/social/generated/github-backgammon-simplified.png
+  title: Backgammon Simplified
   subtitle: Question-driven lessons, position analysis and backgammon research.
   category: ''
   visual: ''

@@ -7,7 +7,7 @@ updated: "2026-07-15"
 categories: [Strategy, Doubling Cube]
 tags: [fixture, cube, example]
 image: ../../assets/logo.svg
-image-alt: "Backgammon Made Simple logo"
+image-alt: "Backgammon Simplified logo"
 bibliography: ../../references.bib
 ---
 
@@ -39,7 +39,7 @@ TODO: add the worksheet download once the artifact is ready.
 TODO: replace this copyable strategy-study fixture example with the real public post.
 :::
 
-::: {.bms-card}
+::: {.bs-card}
 #### Copyable source
 
 ```markdown

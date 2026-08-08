@@ -2,7 +2,7 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
 
-const analysis = require("../site/assets/bms-lesson-analysis.js");
+const analysis = require("../site/assets/bs-lesson-analysis.js");
 
 const root = path.resolve(__dirname, "..");
 const fixtures = JSON.parse(
@@ -134,7 +134,7 @@ const instanceIds = [
   analysis.nextInstanceId("checker", "checker-three-candidates")
 ];
 assert.equal(new Set(instanceIds).size, instanceIds.length);
-assert.match(instanceIds[0], /^bms-analysis-cube-cube-double-take-1$/);
-assert.match(instanceIds[2], /^bms-analysis-checker-checker-three-candidates-3$/);
+assert.match(instanceIds[0], /^bs-analysis-cube-cube-double-take-1$/);
+assert.match(instanceIds[2], /^bs-analysis-checker-checker-three-candidates-3$/);
 
 console.log("lesson analysis fixture logic passed");
