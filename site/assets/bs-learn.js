@@ -2300,6 +2300,14 @@
         const currentScrollY = window.scrollY;
         if (currentScrollY <= 32) {
           autoCollapsePending = true;
+          if (!keepExpandedWhileScrolling && collapsed) {
+            collapsed = false;
+            pageScrollingDown = false;
+            scrollingDown = false;
+            lastScrollY = currentScrollY;
+            update();
+            return;
+          }
         }
         if (Math.abs(currentScrollY - lastScrollY) > 4) {
           pageScrollingDown = currentScrollY > lastScrollY;

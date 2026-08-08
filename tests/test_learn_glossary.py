@@ -1592,6 +1592,9 @@ private code phrase
             "!keepExpandedWhileScrolling &&",
             "sidebarScroller.addEventListener",
             "let autoCollapsePending = window.scrollY <= 32",
+            "if (!keepExpandedWhileScrolling && collapsed)",
+            "collapsed = false",
+            "lastScrollY = currentScrollY",
             "autoCollapsePending &&",
             "collapsed = true",
         ):
@@ -1604,7 +1607,7 @@ private code phrase
         ]
         self.assertEqual(
             left_sidebar_toggle.count("!keepExpandedWhileScrolling &&"),
-            2,
+            3,
         )
         glossary_scroll = javascript[
             javascript.index("    const updateGlossaryLookupForScroll") :
