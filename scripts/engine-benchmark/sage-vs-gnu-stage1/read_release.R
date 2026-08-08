@@ -3,7 +3,7 @@
 # This file is intentionally limited to website-local loading. It does not
 # calculate True ER, aggregate distributions, or implement reusable plots.
 
-find_bms_repository_root <- function(start = getwd()) {
+find_bs_repository_root <- function(start = getwd()) {
   current <- normalizePath(start, winslash = "/", mustWork = TRUE)
 
   repeat {
@@ -23,7 +23,7 @@ find_bms_repository_root <- function(start = getwd()) {
   }
 }
 
-stage1_release_root <- function(repo_root = find_bms_repository_root()) {
+stage1_release_root <- function(repo_root = find_bs_repository_root()) {
   file.path(
     repo_root,
     "site",

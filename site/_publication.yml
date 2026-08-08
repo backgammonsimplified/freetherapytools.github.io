@@ -1,0 +1,24 @@
+website:
+  title: "Backgammon Simplified"
+  site-url: "https://backgammonsimplified.github.io"
+
+bs-publication:
+  schema-id: "https://backgammonsimplified.github.io/schemas/publication-identity-v1"
+  name: "Backgammon Simplified"
+  acronym: "BS"
+  canonical-origin: "https://backgammonsimplified.github.io"
+  indexing:
+    environment-variable: "BS_PUBLICATION_MODE"
+    default-mode: development
+    modes:
+      development:
+        robots-meta: "noindex, follow"
+        robots-txt:
+          - "User-agent: *"
+          - "Disallow: /"
+      production:
+        robots-meta: "index, follow"
+        robots-txt:
+          - "User-agent: *"
+          - "Allow: /"
+          - "Sitemap: https://backgammonsimplified.github.io/sitemap.xml"

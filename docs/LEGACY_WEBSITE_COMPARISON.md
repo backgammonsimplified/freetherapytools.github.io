@@ -1,6 +1,6 @@
 # Legacy Website Comparison — 2026-07-22
 
-The older `backgammon-made-simple` repository was inspected read-only. No files were copied from it.
+The older `backgammon-simplified` repository was inspected read-only. No files were copied from it.
 
 | Old path | Classification | Reason |
 |---|---|---|
@@ -13,7 +13,7 @@ The older `backgammon-made-simple` repository was inspected read-only. No files 
 | `tests/test_analysis_service.py` | Keep only as reference | Exercises fixture engine analysis, explicitly outside this infrastructure task. |
 | `tests/test_analysis_dispatcher.py` | Keep only as reference | Couples to the old dispatcher and fixture analysis service. |
 | `test-results/*.json` | Generated output | One prior test result artifact; not durable source or a current fixture, so it was deliberately not migrated. |
-| `site/assets/bms-*.css` | Replace with newer equivalent | The current website has the accepted, newer theme/component/Learn styles. |
+| `site/assets/bs-*.css` | Replace with newer equivalent | The current website has the accepted, newer theme/component/Learn styles. |
 | `site/assets/logo.svg` | Keep only as reference | Its hash differs from the approved current project logo; it was not reused. |
 | old `site/_quarto.yml` | Obsolete | It predates current navigation, Learn sidebar, asset integration, and accepted licensing. |
 

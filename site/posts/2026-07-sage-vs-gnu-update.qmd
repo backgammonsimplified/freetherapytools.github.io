@@ -7,7 +7,7 @@ updated: "2026-07-15"
 categories: [Research, Updates]
 tags: [sage, gnu, fixture]
 image: ../assets/logo.svg
-image-alt: "Backgammon Made Simple logo"
+image-alt: "Backgammon Simplified logo"
 bibliography: ../references.bib
 ---
 
@@ -23,7 +23,7 @@ This note records fixture progress only. It does not claim one engine is stronge
 
 ### Component Playground
 
-::: {.bms-card}
+::: {.bs-card}
 #### Copyable source
 
 ```markdown

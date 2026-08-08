@@ -8,7 +8,7 @@ import subprocess
 import unittest
 from unittest import mock
 
-from scripts import bms_pre_render
+from scripts import bs_pre_render
 from scripts import glossary_source
 from scripts import learn_glossary
 
@@ -65,33 +65,33 @@ class GlossaryBuildFreshnessTests(unittest.TestCase):
         lookup = json.loads(learn_glossary.build_lookup_data(public_entries, {}))
 
         self.assertEqual(len(public_entries), 13)
-        self.assertEqual(html.count('class="bms-glossary-entry"'), 13)
+        self.assertEqual(html.count('class="bs-glossary-entry"'), 13)
         self.assertEqual(len(lookup["entries"]), 13)
 
     def test_partial_render_runs_the_freshness_check(self) -> None:
         with mock.patch.dict(os.environ, {}, clear=True), mock.patch.object(
-            bms_pre_render, "invalidate_full_build_marker", return_value=False
-        ), mock.patch.object(bms_pre_render, "run") as run:
-            self.assertEqual(bms_pre_render.main(), 0)
+            bs_pre_render, "invalidate_full_build_marker", return_value=False
+        ), mock.patch.object(bs_pre_render, "run") as run:
+            self.assertEqual(bs_pre_render.main(), 0)
 
         run.assert_called_once_with(
             [
-                bms_pre_render.sys.executable,
-                str(bms_pre_render.REPO_ROOT / "scripts" / "learn_glossary.py"),
+                bs_pre_render.sys.executable,
+                str(bs_pre_render.REPO_ROOT / "scripts" / "learn_glossary.py"),
                 "validate",
             ]
         )
 
     def test_partial_render_propagates_a_stale_output_failure(self) -> None:
         with mock.patch.dict(os.environ, {}, clear=True), mock.patch.object(
-            bms_pre_render, "invalidate_full_build_marker", return_value=False
+            bs_pre_render, "invalidate_full_build_marker", return_value=False
         ), mock.patch.object(
-            bms_pre_render,
+            bs_pre_render,
             "run",
             side_effect=subprocess.CalledProcessError(1, ["glossary", "validate"]),
         ):
             with self.assertRaises(subprocess.CalledProcessError):
-                bms_pre_render.main()
+                bs_pre_render.main()
 
 
 if __name__ == "__main__":

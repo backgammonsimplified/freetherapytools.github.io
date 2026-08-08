@@ -16,23 +16,23 @@ format:
     toc-location: right
     toc-depth: 2
     title-block-style: plain
-    body-classes: "bms-editorial-page bms-title-eyebrow bms-research-article"
+    body-classes: "bs-editorial-page bs-title-eyebrow bs-research-article"
 ---
 
-::: {.bms-editorial-lead}
+::: {.bs-editorial-lead}
 This page explains how Stage 1 was run, how the results were calculated, and what the evidence can and cannot show. It is the detailed companion to the main results page.
 :::
 
-::: {.bms-button-row}
-[Back to the main results](../engine-benchmark/sage-vs-gnu-stage1/index.qmd){.bms-button-primary}
+::: {.bs-button-row}
+[Back to the main results](../engine-benchmark/sage-vs-gnu-stage1/index.qmd){.bs-button-primary}
 
-[View the benchmark method](../engine-benchmark/index.qmd){.bms-button-outline}
+[View the benchmark method](../engine-benchmark/index.qmd){.bs-button-outline}
 
-[View the public repository](https://github.com/backgammon-made-simple/backgammon-engine-benchmark){.bms-button-outline}
+[View the public repository](https://github.com/backgammonsimplified/backgammon-engine-benchmark){.bs-button-outline}
 :::
 
-::: {.bms-inline-note}
-[IMPORTANT REVIEWER LIMITATION]{.bms-technical-label}
+::: {.bs-inline-note}
+[IMPORTANT REVIEWER LIMITATION]{.bs-technical-label}
 
 GNU reviewed the decisions made by both engines. Using the same reviewer keeps the scoring consistent, but GNU was also one of the competitors. The error rates, equity losses, roll estimates, and adjusted results on this page are GNU's estimates. They are not neutral proof of perfect play.
 :::
@@ -170,8 +170,8 @@ GNU 2-ply and Sage 3-ply were therefore the least uneven practical pairing for l
 
 </details>
 
-::: {.bms-figure-slot role="group" aria-label="Ply depth comparison placeholder"}
-[PENDING TABLE OR DIAGRAM :: GNU AND SAGE PLY-DEPTH COMPARISON]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Ply depth comparison placeholder"}
+[PENDING TABLE OR DIAGRAM :: GNU AND SAGE PLY-DEPTH COMPARISON]{.bs-figure-slot-label}
 
 Show the comparison above, while keeping the live checker depths, live cube depths, and deeper GNU post-match review clearly separate.
 :::
@@ -186,8 +186,8 @@ figure-id: fig-research-search-depth
 
 GNU won 13 of the 20 matches. Sage won 7.
 
-::: {.bms-figure-slot role="group" aria-label="Match score and tile strip placeholder"}
-[PENDING FIGURE :: MATCH SCORE AND 20-MATCH TILE STRIP]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Match score and tile strip placeholder"}
+[PENDING FIGURE :: MATCH SCORE AND 20-MATCH TILE STRIP]{.bs-figure-slot-label}
 
 Show GNU with 13 wins and Sage with 7 wins. Add one chronological tile for each public match identifier, with no A/B or pair labels.
 :::
@@ -221,8 +221,8 @@ Fifteen GNU wins is the first result on that side to fall below the 0.05 thresho
 
 </details>
 
-::: {.bms-figure-slot role="group" aria-label="Two-sided binomial distribution placeholder"}
-[PENDING FIGURE :: TWO-SIDED BINOMIAL DISTRIBUTION]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Two-sided binomial distribution placeholder"}
+[PENDING FIGURE :: TWO-SIDED BINOMIAL DISTRIBUTION]{.bs-figure-slot-label}
 
 Show GNU win totals from 0 through 20 under a 50% win probability. Mark the observed 13 wins and both tails used for the p-value. Also mark 15 wins as the first GNU total below the 0.05 threshold.
 :::
@@ -273,14 +273,14 @@ The report labels an adjusted result within plus or minus 1 match-winning-chance
 
 </details>
 
-::: {.bms-figure-slot role="group" aria-label="Observed to reviewer-adjusted result placeholder"}
-[PENDING FIGURE :: OBSERVED RESULT TO GNU-ADJUSTED RESULT]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Observed to reviewer-adjusted result placeholder"}
+[PENDING FIGURE :: OBSERVED RESULT TO GNU-ADJUSTED RESULT]{.bs-figure-slot-label}
 
 Show all 20 matches: 7 Sage wins that still show Sage ahead, 8 GNU wins that still show GNU ahead, 3 GNU wins that become nearly even, and 2 GNU wins that show Sage ahead after adjustment. Use only the direct GNU centered adjusted result.
 :::
 
-::: {.bms-figure-slot role="group" aria-label="Match-level rolls and adjusted result table placeholder"}
-[PENDING TABLE :: MATCH-LEVEL ROLLS AND ADJUSTED RESULTS]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Match-level rolls and adjusted result table placeholder"}
+[PENDING TABLE :: MATCH-LEVEL ROLLS AND ADJUSTED RESULTS]{.bs-figure-slot-label}
 
 Include the public match identifier, observed winner, both match ER values, both roll estimates, the net Sage-oriented roll advantage, the direct GNU centered adjusted result, its category, and the source-validation status.
 :::
@@ -300,8 +300,8 @@ After each match, GNU reviewed the checker plays and cube decisions made by both
 
 The same reviewer and review configuration were used for both engines, which keeps the calculation consistent. GNU still remains both competitor and reviewer.
 
-::: {.bms-status-panel}
-[GNU REVIEW CONFIGURATION :: INSERT VERIFIED WORDING]{.bms-status-label}
+::: {.bs-status-panel}
+[GNU REVIEW CONFIGURATION :: INSERT VERIFIED WORDING]{.bs-status-label}
 
 Call the review **GNU 4-ply** only when the audited release verifies the requested and actual checker and cube review depths. Otherwise, describe only the configuration that the evidence verifies.
 :::
@@ -363,8 +363,8 @@ Because there are far fewer eligible cube decisions, one large cube error can af
 
 </details>
 
-::: {.bms-figure-slot role="group" aria-label="Pooled ER inputs placeholder"}
-[PENDING TABLE OR FIGURE :: POOLED ER AND ITS INPUTS]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Pooled ER inputs placeholder"}
+[PENDING TABLE OR FIGURE :: POOLED ER AND ITS INPUTS]{.bs-figure-slot-label}
 
 Show ER first, then the authoritative equity loss and eligible-decision count used to calculate it. Also retain the source-reported total, reconstructed total, rounded display value, and reconciliation status.
 :::
@@ -373,8 +373,8 @@ Show ER first, then the authoritative equity loss and eligible-decision count us
 figure-id: fig-research-pooled-er-inputs
 -->
 
-::: {.bms-figure-slot role="group" aria-label="Checker and cube pooled ER placeholder"}
-[PENDING FIGURE :: CHECKER-PLAY AND CUBE-DECISION ER]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Checker and cube pooled ER placeholder"}
+[PENDING FIGURE :: CHECKER-PLAY AND CUBE-DECISION ER]{.bs-figure-slot-label}
 
 Use separate panels and separate scales for checker play and cube decisions. Label each panel **Lower is better** and include the eligible-decision counts.
 :::
@@ -387,8 +387,8 @@ figure-id: fig-research-component-er
 
 Match-level ER helps show which matches were ordinary and which contained unusually large reviewed losses. It is descriptive. It is not the official combined estimate, and the 20 match values are not treated as independent observations for a significance test.
 
-::: {.bms-figure-slot role="group" aria-label="Match-level checker ER dot plot placeholder"}
-[PENDING FIGURE :: CHECKER-PLAY ER BY MATCH]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Match-level checker ER dot plot placeholder"}
+[PENDING FIGURE :: CHECKER-PLAY ER BY MATCH]{.bs-figure-slot-label}
 
 Plot one point per engine per match. Keep all 20 matches and all zero values. Use slight jitter only when needed to reveal overlap. Provide exact values and match identifiers by hover or a supporting table. Label **Lower is better** and do not add confidence intervals or significance tests.
 :::
@@ -399,8 +399,8 @@ figure-id: fig-research-checker-match-er
 
 Many cube ER values may be exactly zero. Showing them all at one coordinate can look like a single thick line, so the figure must state how many matches each zero represents.
 
-::: {.bms-figure-slot role="group" aria-label="Match-level cube ER dot plot placeholder"}
-[PENDING FIGURE :: CUBE-DECISION ER BY MATCH]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Match-level cube ER dot plot placeholder"}
+[PENDING FIGURE :: CUBE-DECISION ER BY MATCH]{.bs-figure-slot-label}
 
 Keep all exact-zero values, state the number of zero-ER matches for each engine, and show non-zero values clearly. Provide exact values and match identifiers by hover or table. Label **Lower is better**.
 :::
@@ -420,8 +420,8 @@ The report also asks how often each played checker move was within **0.010 EMG**
 
 Zero-loss decisions stay in the denominator and count as within the threshold. These percentages describe closeness to GNU's reviewed choice. They are not objective accuracy rates.
 
-::: {.bms-figure-slot role="group" aria-label="Checker closeness stacked bars placeholder"}
-[PENDING FIGURE :: CHECKER DECISIONS CLOSE TO GNU'S PREFERRED MOVE]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Checker closeness stacked bars placeholder"}
+[PENDING FIGURE :: CHECKER DECISIONS CLOSE TO GNU'S PREFERRED MOVE]{.bs-figure-slot-label}
 
 Show the share and raw count within 0.010 EMG and more than 0.010 EMG away. Do not label the categories correct, incorrect, or accuracy.
 :::
@@ -430,8 +430,8 @@ Show the share and raw count within 0.010 EMG and more than 0.010 EMG away. Do n
 figure-id: fig-research-checker-closeness
 -->
 
-::: {.bms-figure-slot role="group" aria-label="Checker errors above threshold placeholder"}
-[PENDING FIGURE :: CHECKER DECISIONS MORE THAN 0.010 EMG AWAY]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Checker errors above threshold placeholder"}
+[PENDING FIGURE :: CHECKER DECISIONS MORE THAN 0.010 EMG AWAY]{.bs-figure-slot-label}
 
 Plot one point for each eligible checker decision more than 0.010 EMG from GNU's preferred move. Include the equity loss, engine, match and decision identifiers, and the two actions when space permits.
 :::
@@ -448,8 +448,8 @@ The current threshold is an absolute GNU-reviewed loss of 0.010 EMG or less. A v
 
 The final percentage and counts remain pending until the audited cube-opportunity summary is available.
 
-::: {.bms-figure-slot role="group" aria-label="Cube closeness stacked bars placeholder"}
-[PENDING AUDITED FIGURE :: CUBE DECISIONS CLOSE TO GNU'S REVIEW]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Cube closeness stacked bars placeholder"}
+[PENDING AUDITED FIGURE :: CUBE DECISIONS CLOSE TO GNU'S REVIEW]{.bs-figure-slot-label}
 
 Show percentages, raw counts, accepted denominators, the 0.010 EMG threshold, and the zero and missing-value rules for each engine. Do not derive the percentage from positive errors alone unless the audited release explicitly validates that method.
 :::
@@ -459,8 +459,8 @@ figure-id: fig-research-cube-closeness
 required output: authoritative audited cube-closeness summary
 -->
 
-::: {.bms-figure-slot role="group" aria-label="Positive cube errors dot plot placeholder"}
-[PENDING FIGURE :: GNU-SCORED POSITIVE CUBE LOSSES]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Positive cube errors dot plot placeholder"}
+[PENDING FIGURE :: GNU-SCORED POSITIVE CUBE LOSSES]{.bs-figure-slot-label}
 
 Plot one point per positive cube error, with the engine, decision role or error type, equity loss, and public match and decision identifiers. State directly that this is GNU's scoring. This figure shows error size and is not the denominator for the closeness percentage.
 :::
@@ -479,8 +479,8 @@ Stage 1 compares exactly two actions: Sage's original cube action and GNU's reco
 
 No conclusion is made about a third action.
 
-::: {.bms-status-panel}
-[PENDING AUDITED SAGE ROLLOUT RELEASE]{.bms-status-label}
+::: {.bs-status-panel}
+[PENDING AUDITED SAGE ROLLOUT RELEASE]{.bs-status-label}
 
 Do not publish rollout verdicts, counts, or representative positions until the audited rollout release is available. Pending does not mean zero.
 :::
@@ -496,8 +496,8 @@ The interpretation must stay within the selected positions. It must not claim th
 
 </details>
 
-::: {.bms-figure-slot role="group" aria-label="Sage rollout research section placeholder"}
-[PENDING RESEARCH COPY AND FIGURES :: SAGE CUBE ROLLOUTS]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Sage rollout research section placeholder"}
+[PENDING RESEARCH COPY AND FIGURES :: SAGE CUBE ROLLOUTS]{.bs-figure-slot-label}
 
 Replace this block with the audited selection funnel, result summary, per-position evidence, exclusions, and interpretation.
 :::
@@ -522,8 +522,8 @@ The 4-ply review times were much more spread out. Although the average was just 
 
 These runtimes describe the hardware and setup used for this pilot. We ran the live matches one at a time to reduce the risk of errors. We ran several completed-match reviews in parallel, so adding all individual review times does not give the wall-clock time for the whole study.
 
-::: {.bms-figure-slot role="group" aria-label="Runtime distributions placeholder"}
-[PENDING FIGURE :: RUNTIME BY COMPUTATIONAL STAGE]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Runtime distributions placeholder"}
+[PENDING FIGURE :: RUNTIME BY COMPUTATIONAL STAGE]{.bs-figure-slot-label}
 
 Use `public_runtime_jobs.csv` and show separate runtime distributions for live matches, GNU reviews, and Sage rollouts when available. For each stage, report the job count, median, mean when useful, minimum, maximum, machine, and whether the jobs ran one at a time or in parallel.
 :::
@@ -539,8 +539,8 @@ required output: public_runtime_jobs.csv
 
 Every public figure and number should come from the same accepted analytical release. This prevents a page from accidentally mixing tables produced at different stages of the work.
 
-::: {.bms-figure-slot role="group" aria-label="Release manifest placeholder"}
-[PENDING TABLE :: AUDITED RELEASE MANIFEST]{.bms-figure-slot-label}
+::: {.bs-figure-slot role="group" aria-label="Release manifest placeholder"}
+[PENDING TABLE :: AUDITED RELEASE MANIFEST]{.bs-figure-slot-label}
 
 Show the release and schema versions, producing repository and commit, source releases, table names and row counts, file checksums, audit status, and any unresolved issues.
 :::
@@ -564,12 +564,12 @@ The public record should include the source-code commits, engine versions and mo
 
 </details>
 
-::: {.bms-button-row}
-[Public benchmark repository](https://github.com/backgammon-made-simple/backgammon-engine-benchmark){.bms-button-outline}
+::: {.bs-button-row}
+[Public benchmark repository](https://github.com/backgammonsimplified/backgammon-engine-benchmark){.bs-button-outline}
 
-<span class="bms-button-outline" role="link" aria-disabled="true">Audited data release link pending</span>
+<span class="bs-button-outline" role="link" aria-disabled="true">Audited data release link pending</span>
 
-<span class="bms-button-outline" role="link" aria-disabled="true">Evidence archive link pending</span>
+<span class="bs-button-outline" role="link" aria-disabled="true">Evidence archive link pending</span>
 :::
 
 ## Limitations
@@ -600,10 +600,10 @@ This is a reproducible descriptive pilot about these matches and this tested set
 
 ## Related pages
 
-::: {.bms-button-row}
-[Back to the main results](../engine-benchmark/sage-vs-gnu-stage1/index.qmd){.bms-button-primary}
+::: {.bs-button-row}
+[Back to the main results](../engine-benchmark/sage-vs-gnu-stage1/index.qmd){.bs-button-primary}
 
-[View the benchmark method](../engine-benchmark/index.qmd){.bms-button-outline}
+[View the benchmark method](../engine-benchmark/index.qmd){.bs-button-outline}
 
-[View the public repository](https://github.com/backgammon-made-simple/backgammon-engine-benchmark){.bms-button-outline}
+[View the public repository](https://github.com/backgammonsimplified/backgammon-engine-benchmark){.bs-button-outline}
 :::

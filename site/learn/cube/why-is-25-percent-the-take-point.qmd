@@ -26,7 +26,7 @@ terms:
   - volatility
   - equity
 level: Foundation
-body-classes: bms-learn-article
+body-classes: bs-learn-article
 page-layout: article
 toc: true
 toc-depth: 2
@@ -35,7 +35,7 @@ execute:
 ---
 
 
-::: {.bms-lesson-meta}
+::: {.bs-lesson-meta}
 Concept: Taking a double  
 Level: Foundation  
 Prerequisite: Basic doubling-cube rules
@@ -51,7 +51,7 @@ Why could taking still be correct?
 
 ## The position
 
-::: {.bms-position-placeholder}
+::: {.bs-position-placeholder}
 **Position interaction placeholder**
 
 Show the verified board from the receiver's perspective, with the opponent on roll and offering the cube.
@@ -92,7 +92,7 @@ Your opponent is on roll and has approximately a 75% chance to win. You have app
 
 Your opponent doubles. Should you take or pass?
 
-::: {.bms-response-placeholder}
+::: {.bs-response-placeholder}
 **Response placeholder**
 
 Show the learner's Take and Pass buttons, followed by the verified GNU response and action equities.
@@ -111,8 +111,8 @@ Under the simplified assumptions in this lesson, taking and passing have the sam
 
 That is why 25% is called the basic take point.
 
-::: {.bms-callout}
-::: {.bms-callout-title}
+::: {.bs-callout}
+::: {.bs-callout-title}
 Key idea
 :::
 

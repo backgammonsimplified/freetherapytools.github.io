@@ -5,5 +5,5 @@
 // "restoring the TOC rail also restores the lesson track"
 // await scrollTo(tab, 1400);
 // await scrollTo(tab, 900);
-// tab.playwright.locator(".bms-term-lookup-close")
+// tab.playwright.locator(".bs-term-lookup-close")
 export * from "./testing/ux/browser/release_ui_browser_check.mjs";

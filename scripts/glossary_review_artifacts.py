@@ -20,10 +20,10 @@ except ModuleNotFoundError:  # Direct execution sets sys.path to scripts/.
 
 REVIEW_TERMS = {"ABT", "Ace", "Active Builder"}
 INLINE_LINK = re.compile(
-    r'<a class="bms-inline-glossary" '
+    r'<a class="bs-inline-glossary" '
     r'href="/glossary/#(?P<slug>[^"]+)" '
-    r'data-bms-glossary-slug="(?P=slug)" '
-    r'data-bms-definition-link="(?P=slug)">(?P<text>[^<]+)</a>'
+    r'data-bs-glossary-slug="(?P=slug)" '
+    r'data-bs-definition-link="(?P=slug)">(?P<text>[^<]+)</a>'
 )
 
 ValidationError = learn_glossary.ValidationError
@@ -167,28 +167,28 @@ def preview_fragment(
         slug = match.group("slug")
         visible = html.unescape(match.group("text"))
         return (
-            f'<a class="bms-inline-term" href="#{html.escape(slug, quote=True)}" '
-            f'data-bms-definition-link="{html.escape(slug, quote=True)}" '
-            'aria-describedby="bms-inline-tooltip">'
+            f'<a class="bs-inline-term" href="#{html.escape(slug, quote=True)}" '
+            f'data-bs-definition-link="{html.escape(slug, quote=True)}" '
+            'aria-describedby="bs-inline-tooltip">'
             f"{html.escape(visible)}</a>"
         )
 
     fragment = INLINE_LINK.sub(replace_inline_link, entries_html)
     fragment = fragment.replace('href="/glossary/#', 'href="#')
     fragment = fragment.replace(
-        '<button type="button" data-bms-card-category=',
-        '<button type="button" aria-pressed="false" data-bms-card-category=',
+        '<button type="button" data-bs-card-category=',
+        '<button type="button" aria-pressed="false" data-bs-card-category=',
     )
     fragment = fragment.replace(
-        '<details class="bms-glossary-entry"',
-        '<details open class="bms-glossary-entry"',
+        '<details class="bs-glossary-entry"',
+        '<details open class="bs-glossary-entry"',
     )
     return fragment
 
 
 def target_registry_html(lookup: dict[str, object]) -> str:
     lines = [
-        '<section class="bms-target-registry" aria-label="Inline-link target anchors">',
+        '<section class="bs-target-registry" aria-label="Inline-link target anchors">',
         "<h2>Inline-link target anchors</h2>",
         (
             "<p>These local anchors let the offline preview demonstrate the same "
@@ -200,7 +200,7 @@ def target_registry_html(lookup: dict[str, object]) -> str:
         term = str(target["term"])  # type: ignore[index]
         lines.append(
             f'<span id="{html.escape(slug, quote=True)}" '
-            f'class="bms-target-summary" tabindex="-1" '
+            f'class="bs-target-summary" tabindex="-1" '
             f'aria-label="{html.escape(term, quote=True)}"></span>'
         )
     lines.append("</section>")
@@ -243,8 +243,8 @@ body {{
 }}
 main {{ width: min(72rem, calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 5rem; }}
 h1, h2, h3, h4 {{ line-height: 1.2; }}
-.bms-intro {{ max-width: 48rem; color: var(--muted); }}
-.bms-search {{
+.bs-intro {{ max-width: 48rem; color: var(--muted); }}
+.bs-search {{
   position: sticky;
   top: 0;
   z-index: 20;
@@ -257,29 +257,29 @@ h1, h2, h3, h4 {{ line-height: 1.2; }}
   background: color-mix(in srgb, var(--paper) 94%, transparent);
   backdrop-filter: blur(8px);
 }}
-.bms-search label {{ font-weight: 700; }}
-.bms-search input {{
+.bs-search label {{ font-weight: 700; }}
+.bs-search input {{
   width: 100%;
   padding: .75rem .9rem;
   border: 2px solid var(--line);
   border-radius: .5rem;
   font: inherit;
 }}
-.bms-search input:focus {{ outline: 3px solid color-mix(in srgb, var(--focus) 30%, transparent); border-color: var(--focus); }}
-.bms-search-status {{ margin: 0; color: var(--muted); }}
-.bms-glossary-letter-group {{ margin: 1.5rem 0; }}
-.bms-glossary-entry {{
+.bs-search input:focus {{ outline: 3px solid color-mix(in srgb, var(--focus) 30%, transparent); border-color: var(--focus); }}
+.bs-search-status {{ margin: 0; color: var(--muted); }}
+.bs-glossary-letter-group {{ margin: 1.5rem 0; }}
+.bs-glossary-entry {{
   margin: .8rem 0;
   border: 1px solid var(--line);
   border-radius: .75rem;
   background: var(--card);
   box-shadow: 0 8px 24px rgb(40 32 21 / 7%);
 }}
-.bms-glossary-entry > summary {{ cursor: pointer; padding: 1rem 1.15rem; font-size: 1.15rem; font-weight: 800; }}
-.bms-glossary-entry-body {{ padding: 0 1.15rem 1.15rem; }}
-.bms-glossary-short-definition {{ font-size: 1.08rem; font-weight: 650; }}
-.bms-glossary-definition {{ max-width: 68ch; }}
-.bms-glossary-category button {{
+.bs-glossary-entry > summary {{ cursor: pointer; padding: 1rem 1.15rem; font-size: 1.15rem; font-weight: 800; }}
+.bs-glossary-entry-body {{ padding: 0 1.15rem 1.15rem; }}
+.bs-glossary-short-definition {{ font-size: 1.08rem; font-weight: 650; }}
+.bs-glossary-definition {{ max-width: 68ch; }}
+.bs-glossary-category button {{
   margin: .15rem .25rem .15rem 0;
   padding: .25rem .55rem;
   border: 2px solid transparent;
@@ -288,44 +288,44 @@ h1, h2, h3, h4 {{ line-height: 1.2; }}
   background: var(--accent-soft);
   cursor: pointer;
 }}
-.bms-glossary-category button:hover,
-.bms-glossary-category button:focus-visible {{
+.bs-glossary-category button:hover,
+.bs-glossary-category button:focus-visible {{
   border-color: var(--accent);
   outline: none;
 }}
-.bms-glossary-category button[aria-pressed="true"] {{
+.bs-glossary-category button[aria-pressed="true"] {{
   border-color: #5e211a;
   color: white;
   background: var(--accent);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 24%, transparent);
 }}
-.bms-category-filter-status {{
+.bs-category-filter-status {{
   display: flex;
   align-items: center;
   gap: .75rem;
   min-height: 2rem;
 }}
-.bms-category-filter-status button {{
+.bs-category-filter-status button {{
   padding: .3rem .65rem;
   border: 1px solid var(--line);
   border-radius: .4rem;
   background: var(--card);
   cursor: pointer;
 }}
-.bms-glossary-related-terms {{
+.bs-glossary-related-terms {{
   margin-top: 1.25rem;
   padding-top: .75rem;
   border-top: 1px solid var(--line);
 }}
-.bms-inline-term {{
+.bs-inline-term {{
   position: relative;
   color: var(--accent);
   font-weight: 750;
   text-decoration: underline 2px dotted;
   text-underline-offset: .2em;
 }}
-.bms-inline-term:focus {{ outline: 3px solid var(--focus); outline-offset: 3px; border-radius: .15rem; }}
-.bms-inline-tooltip {{
+.bs-inline-term:focus {{ outline: 3px solid var(--focus); outline-offset: 3px; border-radius: .15rem; }}
+.bs-inline-tooltip {{
   position: fixed;
   left: 1rem;
   top: 1rem;
@@ -338,11 +338,11 @@ h1, h2, h3, h4 {{ line-height: 1.2; }}
   box-shadow: 0 8px 28px rgb(0 0 0 / 25%);
   pointer-events: none;
 }}
-.bms-inline-tooltip strong, .bms-inline-tooltip span {{ display: block; }}
-.bms-inline-tooltip strong {{ margin-bottom: .25rem; color: #ffd8cf; }}
-.bms-target-registry {{ margin-top: 3rem; padding-top: 1.5rem; border-top: 3px double var(--line); }}
-.bms-target-summary {{ display: block; height: 1px; scroll-margin-top: 8rem; }}
-.bms-target-summary:target {{ outline: 4px solid #fff1ad; }}
+.bs-inline-tooltip strong, .bs-inline-tooltip span {{ display: block; }}
+.bs-inline-tooltip strong {{ margin-bottom: .25rem; color: #ffd8cf; }}
+.bs-target-registry {{ margin-top: 3rem; padding-top: 1.5rem; border-top: 3px double var(--line); }}
+.bs-target-summary {{ display: block; height: 1px; scroll-margin-top: 8rem; }}
+.bs-target-summary:target {{ outline: 4px solid #fff1ad; }}
 [hidden] {{ display: none !important; }}
 </style>
 </head>
@@ -351,50 +351,50 @@ h1, h2, h3, h4 {{ line-height: 1.2; }}
 <header>
   <p><strong>Iteration 02R artifact</strong></p>
   <h1>Rich-field glossary preview</h1>
-  <p class="bms-intro">A self-contained, offline compatibility preview for Ace,
+  <p class="bs-intro">A self-contained, offline compatibility preview for Ace,
   ABT, and Active Builder. Inline summaries resolve the canonical target slug
   through the generated lookup and read that canonical record's
   <code>short_definition</code>.</p>
 </header>
-<section class="bms-search" aria-label="Glossary search">
-  <label for="bms-search-input">Search canonical terms or AKA values</label>
-  <input id="bms-search-input" type="search"
+<section class="bs-search" aria-label="Glossary search">
+  <label for="bs-search-input">Search canonical terms or AKA values</label>
+  <input id="bs-search-input" type="search"
     placeholder="Try ABT or American Backgammon Tour" autocomplete="off">
-  <p id="bms-search-status" class="bms-search-status" role="status"
+  <p id="bs-search-status" class="bs-search-status" role="status"
     aria-live="polite">{expected_count} results</p>
-  <div class="bms-category-filter-status">
-    <span id="bms-category-status">All categories</span>
-    <button id="bms-clear-category" type="button" hidden>
+  <div class="bs-category-filter-status">
+    <span id="bs-category-status">All categories</span>
+    <button id="bs-clear-category" type="button" hidden>
       Clear category filter
     </button>
   </div>
 </section>
-<div id="bms-entry-list">
+<div id="bs-entry-list">
 {fragment}
 </div>
 {registry}
 </main>
-<div id="bms-inline-tooltip" class="bms-inline-tooltip" role="tooltip" hidden>
-  <strong id="bms-inline-tooltip-term"></strong>
-  <span id="bms-inline-tooltip-summary"></span>
+<div id="bs-inline-tooltip" class="bs-inline-tooltip" role="tooltip" hidden>
+  <strong id="bs-inline-tooltip-term"></strong>
+  <span id="bs-inline-tooltip-summary"></span>
 </div>
-<script id="bms-preview-lookup" type="application/json">
+<script id="bs-preview-lookup" type="application/json">
 {embedded_lookup}</script>
 <script>
 (() => {{
   "use strict";
-  const input = document.getElementById("bms-search-input");
-  const status = document.getElementById("bms-search-status");
-  const categoryStatus = document.getElementById("bms-category-status");
-  const clearCategory = document.getElementById("bms-clear-category");
-  const tooltip = document.getElementById("bms-inline-tooltip");
-  const tooltipTerm = document.getElementById("bms-inline-tooltip-term");
-  const tooltipSummary = document.getElementById("bms-inline-tooltip-summary");
+  const input = document.getElementById("bs-search-input");
+  const status = document.getElementById("bs-search-status");
+  const categoryStatus = document.getElementById("bs-category-status");
+  const clearCategory = document.getElementById("bs-clear-category");
+  const tooltip = document.getElementById("bs-inline-tooltip");
+  const tooltipTerm = document.getElementById("bs-inline-tooltip-term");
+  const tooltipSummary = document.getElementById("bs-inline-tooltip-summary");
   const lookup = JSON.parse(
-    document.getElementById("bms-preview-lookup").textContent
+    document.getElementById("bs-preview-lookup").textContent
   );
-  const entries = [...document.querySelectorAll("[data-bms-glossary-entry]")];
-  const chips = [...document.querySelectorAll("[data-bms-card-category]")];
+  const entries = [...document.querySelectorAll("[data-bs-glossary-entry]")];
+  const chips = [...document.querySelectorAll("[data-bs-card-category]")];
   const normalize = value => value
     .normalize("NFKD")
     .replace(/[\\u0300-\\u036f]/g, "")
@@ -418,7 +418,7 @@ h1, h2, h3, h4 {{ line-height: 1.2; }}
     const matches = new Set(matchingSlugs);
     let visible = 0;
     for (const entry of entries) {{
-      const matchesFilter = matches.has(entry.dataset.bmsSlug);
+      const matchesFilter = matches.has(entry.dataset.bsSlug);
       entry.hidden = !matchesFilter;
       if (matchesFilter) {{
         visible += 1;
@@ -439,11 +439,11 @@ h1, h2, h3, h4 {{ line-height: 1.2; }}
     const matchingSlugs = entries
       .filter(entry => {{
         if (!query) return true;
-        if (exactCanonical) return entry.dataset.bmsSlug === exactCanonical.slug;
-        const values = JSON.parse(entry.dataset.bmsSearch || "[]");
+        if (exactCanonical) return entry.dataset.bsSlug === exactCanonical.slug;
+        const values = JSON.parse(entry.dataset.bsSearch || "[]");
         return values.some(value => normalize(value).includes(query));
       }})
-      .map(entry => entry.dataset.bmsSlug);
+      .map(entry => entry.dataset.bsSlug);
     showEntries(matchingSlugs, Boolean(query));
   }};
   const applyCategory = category => {{
@@ -452,7 +452,7 @@ h1, h2, h3, h4 {{ line-height: 1.2; }}
     for (const chip of chips) {{
       chip.setAttribute(
         "aria-pressed",
-        String(chip.dataset.bmsCardCategory === category)
+        String(chip.dataset.bsCardCategory === category)
       );
     }}
     categoryStatus.textContent = `Category: ${{category}}`;
@@ -460,10 +460,10 @@ h1, h2, h3, h4 {{ line-height: 1.2; }}
     showEntries(matchingSlugs, true);
   }};
   const showInlineSummary = link => {{
-    const target = bySlug.get(link.dataset.bmsDefinitionLink);
+    const target = bySlug.get(link.dataset.bsDefinitionLink);
     if (!target || !target.short_definition) {{
       throw new Error(
-        `Missing canonical short_definition for ${{link.dataset.bmsDefinitionLink}}`
+        `Missing canonical short_definition for ${{link.dataset.bsDefinitionLink}}`
       );
     }}
     tooltipTerm.textContent = target.term;
@@ -479,27 +479,27 @@ h1, h2, h3, h4 {{ line-height: 1.2; }}
     tooltipSummary.textContent = "";
   }};
   document.addEventListener("click", event => {{
-    const chip = event.target.closest("[data-bms-card-category]");
-    if (chip) applyCategory(chip.dataset.bmsCardCategory);
+    const chip = event.target.closest("[data-bs-card-category]");
+    if (chip) applyCategory(chip.dataset.bsCardCategory);
   }});
   document.addEventListener("pointerover", event => {{
-    const link = event.target.closest("[data-bms-definition-link]");
+    const link = event.target.closest("[data-bs-definition-link]");
     if (link) showInlineSummary(link);
   }});
   document.addEventListener("pointerout", event => {{
-    if (event.target.closest("[data-bms-definition-link]")) hideInlineSummary();
+    if (event.target.closest("[data-bs-definition-link]")) hideInlineSummary();
   }});
   document.addEventListener("focusin", event => {{
-    const link = event.target.closest("[data-bms-definition-link]");
+    const link = event.target.closest("[data-bs-definition-link]");
     if (link) showInlineSummary(link);
   }});
   document.addEventListener("focusout", event => {{
-    if (event.target.closest("[data-bms-definition-link]")) hideInlineSummary();
+    if (event.target.closest("[data-bs-definition-link]")) hideInlineSummary();
   }});
   clearCategory.addEventListener("click", () => {{
     input.value = "";
     resetCategorySelection();
-    showEntries(entries.map(entry => entry.dataset.bmsSlug), false);
+    showEntries(entries.map(entry => entry.dataset.bsSlug), false);
   }});
   input.addEventListener("input", updateSearch);
   resetCategorySelection();
@@ -594,7 +594,7 @@ def generate_artifacts(
                 )
 
     entries_html = learn_glossary.build_entries_html(entries, {}, {})
-    if entries_html.count('data-bms-glossary-entry') != 3:
+    if entries_html.count('data-bs-glossary-entry') != 3:
         raise ValidationError("HTML builder did not emit the three review entries")
     if entries_html.count("<h4>See also</h4>") != 3:
         raise ValidationError("HTML builder did not emit separate See also sections")

@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd -- "${SCRIPT_DIR}/../../.." && pwd)"
 cd "${REPO_ROOT}"
 
-printf '\nBMS quick UX automation contracts\n'
+printf '\nBS quick UX automation contracts\n'
 node --check scripts/testing/ux/browser/release_ui_browser_check.mjs
 node --check scripts/testing/ux/browser/lesson_analysis_browser_check.mjs
 node --check scripts/testing/ux/browser/comprehensive_quality_browser_check.mjs

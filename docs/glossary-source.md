@@ -28,7 +28,7 @@ The generated chain is:
 ```text
 glossary/glossary.md
   -> site/data/glossary.json
-  -> site/assets/bms-glossary-lookup.json
+  -> site/assets/bs-glossary-lookup.json
   -> site/glossary/_entries.html
 ```
 

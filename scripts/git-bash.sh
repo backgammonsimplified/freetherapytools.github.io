@@ -59,11 +59,11 @@ if [[ ! -f "site/_site/index.html" ]]; then
   printf 'Start the render watcher first:\n' >&2
   printf '  ./scripts/vs-code.sh\n' >&2
   printf 'Or run the full-build script if available:\n' >&2
-  printf '  ./scripts/bms-full-build.sh\n' >&2
+  printf '  ./scripts/bs-full-build.sh\n' >&2
   exit 1
 fi
 
-printf 'BMS local static server\n'
+printf 'BS local static server\n'
 printf 'Repository: %s\n' "${REPO_ROOT}"
 printf 'Serving:    %s/site/_site\n' "${REPO_ROOT}"
 printf 'URL:        http://%s:%s/\n' "${HOST}" "${PORT}"

@@ -40,7 +40,7 @@ if [[ ! -f "site/_quarto.yml" ]]; then
   exit 1
 fi
 
-printf 'BMS live-render watcher\n'
+printf 'BS live-render watcher\n'
 printf 'Repository: %s\n' "${REPO_ROOT}"
 printf 'Project:    %s/site\n' "${REPO_ROOT}"
 printf 'Serving:    disabled\n'

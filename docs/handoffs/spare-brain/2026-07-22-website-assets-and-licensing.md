@@ -4,7 +4,7 @@
 handoff_id: spare-website-assets-licensing-2026-07-22
 role: Spare Brain
 task_id: stage-2-website-assets-and-licensing
-repository: backgammon-made-simple.github.io
+repository: backgammonsimplified.github.io
 branch: spare-brain
 implementation_commit: 8f6857b
 base_commit: 5cfbed843afbbdf521bb8c521d3a2b4095343ec7
@@ -67,7 +67,7 @@ No Learn curriculum prose or order, benchmark artifacts/results, predictor/analy
 ## Fixtures and generated artifacts
 
 - `social-default.png`: 1200×630, SHA-256 `42444DD0C956F1B5BE2C0492F1BDF04B8DF92E10CC3651171818692199609BC2`;
-- `github-backgammon-made-simple.png`: 1280×640, SHA-256 `5BEBE6FD66B12E8F375F5B59A65FBF19EBC9D3A9A436A7ED2263E90DCE1F334C`;
+- `github-backgammon-simplified.png`: 1280×640, SHA-256 `5BEBE6FD66B12E8F375F5B59A65FBF19EBC9D3A9A436A7ED2263E90DCE1F334C`;
 - screenshots used for visual review were temporary and were not committed;
 - old `test-results` output was deliberately not migrated.
 

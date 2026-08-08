@@ -2,9 +2,9 @@
 
 const assert = require("node:assert/strict");
 
-const CATEGORY_SELECTOR = "[data-bms-filter-category]";
-const TAG_SELECTOR = "[data-bms-filter-tag]";
-const ITEM_SELECTOR = "[data-bms-research-item]";
+const CATEGORY_SELECTOR = "[data-bs-filter-category]";
+const TAG_SELECTOR = "[data-bs-filter-tag]";
+const ITEM_SELECTOR = "[data-bs-research-item]";
 
 function element(dataset) {
   return {
@@ -23,17 +23,17 @@ function element(dataset) {
       return child;
     },
     querySelector: function (selector) {
-      if (selector === ".bms-research-filter-count") {
+      if (selector === ".bs-research-filter-count") {
         return this.children.find(function (child) {
-          return child.className === "bms-research-filter-count";
+          return child.className === "bs-research-filter-count";
         }) || null;
       }
       return null;
     },
     closest: function (selector) {
       if (
-        (selector === CATEGORY_SELECTOR && this.dataset.bmsFilterCategory) ||
-        (selector === TAG_SELECTOR && this.dataset.bmsFilterTag)
+        (selector === CATEGORY_SELECTOR && this.dataset.bsFilterCategory) ||
+        (selector === TAG_SELECTOR && this.dataset.bsFilterTag)
       ) {
         return this;
       }
@@ -43,18 +43,18 @@ function element(dataset) {
 }
 
 const categoryCount = element();
-categoryCount.className = "bms-research-filter-count";
-const categoryButton = element({ bmsFilterCategory: "analysis" });
+categoryCount.className = "bs-research-filter-count";
+const categoryButton = element({ bsFilterCategory: "analysis" });
 categoryButton.appendChild(categoryCount);
 
 const articleElements = [
   element({
-    bmsCategories: '["analysis"]',
-    bmsTags: '["GNU"]'
+    bsCategories: '["analysis"]',
+    bsTags: '["GNU"]'
   }),
   element({
-    bmsCategories: '["history"]',
-    bmsTags: '["Sage"]'
+    bsCategories: '["history"]',
+    bsTags: '["Sage"]'
   })
 ];
 const tagButtons = [];
@@ -68,10 +68,10 @@ const handlers = {};
 const panel = {
   querySelector: function (selector) {
     return {
-      "[data-bms-tag-filters]": tagContainer,
-      "[data-bms-tag-group]": element(),
-      "[data-bms-result-count]": element(),
-      "[data-bms-clear-filters]": element()
+      "[data-bs-tag-filters]": tagContainer,
+      "[data-bs-tag-group]": element(),
+      "[data-bs-result-count]": element(),
+      "[data-bs-clear-filters]": element()
     }[selector] || null;
   },
   querySelectorAll: function (selector) {
@@ -103,9 +103,9 @@ global.document = {
   },
   querySelector: function (selector) {
     return {
-      "[data-bms-research-filters]": panel,
-      "[data-bms-research-list]": list,
-      "[data-bms-empty-state]": element()
+      "[data-bs-research-filters]": panel,
+      "[data-bs-research-list]": list,
+      "[data-bs-empty-state]": element()
     }[selector] || null;
   },
   addEventListener: function (name, callback) {
@@ -115,7 +115,7 @@ global.document = {
   }
 };
 
-require("../site/assets/bms-research-index.js");
+require("../site/assets/bs-research-index.js");
 
 assert.deepEqual(queryCounts, { categories: 1, tags: 1 });
 assert.equal(categoryCount.textContent, "×1");

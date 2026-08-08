@@ -86,7 +86,7 @@ const finding = classifyBrowserFinding({
   viewport: { name: "mobile-390", width: 390, height: 844 },
   screenshot: { path: "screenshots/browser/failure.png" }
 });
-assert.match(finding.finding_id, /^bms-finding-[a-f0-9]{16}$/);
+assert.match(finding.finding_id, /^bs-finding-[a-f0-9]{16}$/);
 assert.equal(finding.stability, "stable");
 assert.equal(finding.component, "learn-index");
 assert.equal(finding.selector, "button");

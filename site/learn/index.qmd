@@ -4,7 +4,7 @@ description: "Clear, position-based lessons for understanding backgammon decisio
 sidebar: learn
 page-layout: full
 bibliography: ../references.bib
-body-classes: bms-learn-index
+body-classes: bs-learn-index
 toc: false
 execute:
   enabled: false

@@ -63,27 +63,27 @@ render_bglab_board <- function(xgid) {
   )
 }
 
-css_path <- file.path(getwd(), "www", "bms-shiny.css")
+css_path <- file.path(getwd(), "www", "bs-shiny.css")
 
 iframe_resize_script <- HTML(
   "
 (function () {
-  const messageType = 'bms-iframe-height';
-  const requestType = 'bms-request-height';
+  const messageType = 'bs-iframe-height';
+  const requestType = 'bs-request-height';
   const sourceName = 'position-dashboard';
 
   let lastHeight = 0;
   let scheduledFrame = null;
 
   if (window.self !== window.top) {
-    document.documentElement.classList.add('bms-embedded');
+    document.documentElement.classList.add('bs-embedded');
   }
 
   function measureHeight() {
     scheduledFrame = null;
 
     const body = document.body;
-    const content = document.querySelector('.bms-preview-shell');
+    const content = document.querySelector('.bs-preview-shell');
 
     const height = content
       ? Math.ceil(content.getBoundingClientRect().bottom + window.scrollY)
@@ -155,18 +155,18 @@ iframe_resize_script <- HTML(
 )
 
 ui <- fluidPage(
-  class = "bms-position-preview-app",
+  class = "bs-position-preview-app",
   tags$head(
     tags$meta(name = "viewport", content = "width=device-width, initial-scale=1"),
     if (file.exists(css_path)) includeCSS(css_path),
     tags$script(iframe_resize_script)
   ),
   div(
-    class = "bms-preview-shell",
+    class = "bs-preview-shell",
     div(
-      class = "bms-preview-controls",
+      class = "bs-preview-controls",
       div(
-        class = "bms-preview-input",
+        class = "bs-preview-input",
         textInput(
           inputId = "position_id",
           label = "Enter XGID:",
@@ -177,7 +177,7 @@ ui <- fluidPage(
       actionButton(
         inputId = "show_position",
         label = "Show Position",
-        class = "bms-preview-button"
+        class = "bs-preview-button"
       )
     ),
     uiOutput("message_panel"),
@@ -234,7 +234,7 @@ server <- function(input, output, session) {
     
     if (!isTRUE(state$ok)) {
       return(div(
-        class = "bms-preview-message bms-preview-message--error",
+        class = "bs-preview-message bs-preview-message--error",
         state$message
       ))
     }
@@ -255,14 +255,14 @@ server <- function(input, output, session) {
     
     if (length(missing_packages) > 0L) {
       return(div(
-        class = "bms-preview-message bms-preview-message--error",
+        class = "bs-preview-message bs-preview-message--error",
         "Board rendering requires: ",
         paste(missing_packages, collapse = ", ")
       ))
     }
     
     div(
-      class = "bms-board-card",
+      class = "bs-board-card",
       tags$h2("Board Preview"),
       plotOutput("board_plot", height = "560px")
     )

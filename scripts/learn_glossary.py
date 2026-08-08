@@ -32,10 +32,10 @@ AUTHORING_TERMS_PATH = REPOSITORY_ROOT / "docs" / "learn-glossary-terms.md"
 GENERATED_ENTRIES_PATH = GLOSSARY_ROOT / "_entries.html"
 GENERATED_LESSON_CATALOGUE_PATH = LEARN_ROOT / "_lesson-catalogue.html"
 GENERATED_NAVIGATION_PATH = SITE_ROOT / "_learn-navigation.yml"
-GENERATED_LOOKUP_DATA_PATH = SITE_ROOT / "assets" / "bms-glossary-lookup.json"
-GENERATED_LEARN_SEQUENCE_PATH = SITE_ROOT / "assets" / "bms-learn-sequence.json"
+GENERATED_LOOKUP_DATA_PATH = SITE_ROOT / "assets" / "bs-glossary-lookup.json"
+GENERATED_LEARN_SEQUENCE_PATH = SITE_ROOT / "assets" / "bs-learn-sequence.json"
 GENERATED_RESEARCH_SEQUENCE_PATH = (
-    SITE_ROOT / "assets" / "bms-research-sequence.json"
+    SITE_ROOT / "assets" / "bs-research-sequence.json"
 )
 LEGACY_GENERATED_ROUTES_PATH = GLOSSARY_ROOT / "_generated-routes.json"
 QUARTO_CONFIG_PATH = SITE_ROOT / "_quarto.yml"
@@ -44,7 +44,7 @@ SAFE_INPUT_SHA256 = "ce10ecccc983ab87b7a43bfb46a04e91b44a00d93ba9ee86765638be991
 EXPECTED_SOURCE_ENTRIES = 805
 EXPECTED_CANONICAL_ENTRIES = 12
 EXPECTED_ALIAS_ENTRIES = 3
-FULL_BUILD_MARKER_NAME = ".bms-full-build.json"
+FULL_BUILD_MARKER_NAME = ".bs-full-build.json"
 FULL_BUILD_MARKER_SCHEMA = 1
 RENDERED_CORE_PATHS = (
     "index.html",
@@ -1322,18 +1322,18 @@ def roman_number(value: int, *, uppercase: bool = True) -> str:
 
 def lesson_filter_button(kind: str, value: str, label: str | None = None) -> str:
     data_attributes = {
-        "difficulty": "data-bms-filter-difficulty",
-        "track": "data-bms-filter-track",
-        "term": "data-bms-filter-term",
+        "difficulty": "data-bs-filter-difficulty",
+        "track": "data-bs-filter-track",
+        "term": "data-bs-filter-term",
     }
     if kind not in data_attributes:
         raise ValidationError(f"Unsupported Learn filter kind {kind!r}")
-    modifier_class = f" bms-learn-filter--{kind}"
+    modifier_class = f" bs-learn-filter--{kind}"
     return (
-        f'<button type="button" class="bms-learn-filter{modifier_class}" '
+        f'<button type="button" class="bs-learn-filter{modifier_class}" '
         f'{data_attributes[kind]}="{html_attr(value)}" aria-pressed="false">'
         f"<span>{html.escape(label or value)}</span>"
-        '<span class="bms-learn-filter-count" aria-hidden="true">&times;0</span>'
+        '<span class="bs-learn-filter-count" aria-hidden="true">&times;0</span>'
         "</button>"
     )
 
@@ -1344,9 +1344,9 @@ def filter_disclosure_html(
     values: list[tuple[str, str]],
 ) -> list[str]:
     lines = [
-        '<details class="bms-learn-filter-disclosure">',
+        '<details class="bs-learn-filter-disclosure">',
         f"<summary>{html.escape(label)}</summary>",
-        f'<div class="bms-learn-filter-options" role="group" '
+        f'<div class="bs-learn-filter-options" role="group" '
         f'aria-label="{html_attr(label)}">',
     ]
     if values:
@@ -1355,7 +1355,7 @@ def filter_disclosure_html(
             for value, display in values
         )
     else:
-        lines.append('<span class="bms-learn-filter-none">No options yet</span>')
+        lines.append('<span class="bs-learn-filter-none">No options yet</span>')
     lines.extend(["</div>", "</details>"])
     return lines
 
@@ -1381,20 +1381,20 @@ def lesson_catalogue_item_html(
     body_search_values = [str(lesson.get("body_search_text") or "")]
     title = str(lesson["title"])
     return [
-        f'<article class="bms-learn-catalogue-item" data-bms-learn-item '
-        f'data-bms-difficulties="{html_attr(json.dumps(difficulties, ensure_ascii=False))}" '
-        f'data-bms-track="{html_attr(lesson["track_id"])}" '
-        f'data-bms-terms="{html_attr(json.dumps(terms, ensure_ascii=False))}" '
-        f'data-bms-search-primary="'
+        f'<article class="bs-learn-catalogue-item" data-bs-learn-item '
+        f'data-bs-difficulties="{html_attr(json.dumps(difficulties, ensure_ascii=False))}" '
+        f'data-bs-track="{html_attr(lesson["track_id"])}" '
+        f'data-bs-terms="{html_attr(json.dumps(terms, ensure_ascii=False))}" '
+        f'data-bs-search-primary="'
         f'{html_attr(json.dumps(primary_search_values, ensure_ascii=False))}" '
-        f'data-bms-search-body="'
+        f'data-bs-search-body="'
         f'{html_attr(json.dumps(body_search_values, ensure_ascii=False))}">',
-        '<div class="bms-learn-catalogue-title-row">',
-        '<details class="bms-learn-catalogue-description">',
-        f'<summary><a class="bms-learn-catalogue-link" '
+        '<div class="bs-learn-catalogue-title-row">',
+        '<details class="bs-learn-catalogue-description">',
+        f'<summary><a class="bs-learn-catalogue-link" '
         f'href="{html_attr(lesson["route"])}">'
         f'{int(lesson["order"])}. {html.escape(title)}</a>'
-        f'<span class="bms-learn-description-arrow" '
+        f'<span class="bs-learn-description-arrow" '
         f'aria-label="Show description for {html_attr(title)}">&#9662;</span>'
         "</summary>",
         f"<p>{html.escape(str(lesson['description']))}</p>",
@@ -1479,16 +1479,16 @@ def build_lesson_catalogue_html(
     mode = "global" if selected_track_id is None else "track"
     lines = [
         GENERATED_MARKER,
-        '<details class="bms-learn-filter-panel" data-bms-learn-filters '
-        f'data-bms-learn-mode="{mode}" aria-label="Search and filter lessons">',
-        '<summary class="bms-learn-filters-summary">'
+        '<details class="bs-learn-filter-panel" data-bs-learn-filters '
+        f'data-bs-learn-mode="{mode}" aria-label="Search and filter lessons">',
+        '<summary class="bs-learn-filters-summary">'
         "Click to search and filter lessons</summary>",
-        '<div class="bms-learn-filter-body">',
-        '<div class="bms-learn-search-group">',
-        '<label for="bms-learn-search">Search lessons</label>',
-        '<input id="bms-learn-search" type="search" '
+        '<div class="bs-learn-filter-body">',
+        '<div class="bs-learn-search-group">',
+        '<label for="bs-learn-search">Search lessons</label>',
+        '<input id="bs-learn-search" type="search" '
         'placeholder="Search lesson titles, tags, and text" '
-        'autocomplete="off" data-bms-learn-search>',
+        'autocomplete="off" data-bs-learn-search>',
         "</div>",
     ]
     lines.extend(
@@ -1518,20 +1518,20 @@ def build_lesson_catalogue_html(
     )
     lines.extend(
         [
-            '<div class="bms-learn-filter-footer">',
-            '<p class="bms-learn-result-count" aria-live="polite" '
-            "data-bms-learn-result-count></p>",
-            '<button type="button" class="bms-learn-clear" '
-            "data-bms-learn-clear hidden>Clear search and filters</button>",
+            '<div class="bs-learn-filter-footer">',
+            '<p class="bs-learn-result-count" aria-live="polite" '
+            "data-bs-learn-result-count></p>",
+            '<button type="button" class="bs-learn-clear" '
+            "data-bs-learn-clear hidden>Clear search and filters</button>",
             "</div>",
             "</div>",
             "</details>",
-            '<div class="bms-learn-section-actions" role="group" '
+            '<div class="bs-learn-section-actions" role="group" '
             'aria-label="Lesson tracks">',
-            '<button type="button" data-bms-learn-collapse-all>Collapse all</button>',
-            '<button type="button" data-bms-learn-expand-all>Expand all</button>',
+            '<button type="button" data-bs-learn-collapse-all>Collapse all</button>',
+            '<button type="button" data-bs-learn-expand-all>Expand all</button>',
             "</div>",
-            '<div class="bms-learn-catalogue" data-bms-learn-list>',
+            '<div class="bs-learn-catalogue" data-bs-learn-list>',
         ]
     )
 
@@ -1543,20 +1543,20 @@ def build_lesson_catalogue_html(
         heading = (
             f'<a href="{html_attr(track["route"])}">{html.escape(track_title)}</a>'
             if selected_track_id is None
-            else '<span class="bms-learn-track-lessons-label">Lessons</span>'
+            else '<span class="bs-learn-track-lessons-label">Lessons</span>'
         )
         lines.extend(
             [
-                f'<details class="bms-learn-catalogue-section" '
-                f'data-bms-learn-group data-bms-track-id="{html_attr(track["id"])}" '
-                f'data-bms-total-lessons="{len(track_lessons)}" open>',
-                '<summary class="bms-learn-catalogue-section-heading">',
-                f'<span class="bms-learn-track-heading">{heading}'
-                f'<span data-bms-learn-group-count>{len(track_lessons)} '
+                f'<details class="bs-learn-catalogue-section" '
+                f'data-bs-learn-group data-bs-track-id="{html_attr(track["id"])}" '
+                f'data-bs-total-lessons="{len(track_lessons)}" open>',
+                '<summary class="bs-learn-catalogue-section-heading">',
+                f'<span class="bs-learn-track-heading">{heading}'
+                f'<span data-bs-learn-group-count>{len(track_lessons)} '
                 f'{"lesson" if len(track_lessons) == 1 else "lessons"}</span>'
                 '</span>',
                 "</summary>",
-                '<div class="bms-learn-catalogue-section-items">',
+                '<div class="bs-learn-catalogue-section-items">',
             ]
         )
         if track_lessons:
@@ -1564,14 +1564,14 @@ def build_lesson_catalogue_html(
                 lines.extend(lesson_catalogue_item_html(lesson, term_names))
         else:
             lines.append(
-                '<p class="bms-learn-track-empty">No lessons published yet.</p>'
+                '<p class="bs-learn-track-empty">No lessons published yet.</p>'
             )
         lines.extend(["</div>", "</details>"])
 
     lines.extend(
         [
             "</div>",
-            '<p class="bms-learn-empty" data-bms-learn-empty hidden>',
+            '<p class="bs-learn-empty" data-bs-learn-empty hidden>',
             "No lessons match this search and filter combination.",
             "</p>",
         ]
@@ -1600,7 +1600,7 @@ def research_links_html(articles: list[dict[str, object]]) -> str:
     for article in articles:
         description = str(article.get("description", "")).strip()
         description_html = (
-            '<span class="bms-glossary-related-description">'
+            '<span class="bs-glossary-related-description">'
             f"{html.escape(description)}</span>"
             if description
             else ""
@@ -1618,11 +1618,11 @@ def related_sections_html(
 ) -> list[str]:
     if not lessons and not research_articles:
         return []
-    lines = ['<div class="bms-glossary-related-groups">']
+    lines = ['<div class="bs-glossary-related-groups">']
     if lessons:
         lines.extend(
             [
-                '<section class="bms-glossary-related bms-glossary-related--lessons">',
+                '<section class="bs-glossary-related bs-glossary-related--lessons">',
                 f"<h4>Learn more ({len(lessons)})</h4>",
                 "<ul>",
                 lesson_links_html(lessons, compact=True),
@@ -1633,7 +1633,7 @@ def related_sections_html(
     if research_articles:
         lines.extend(
             [
-                '<section class="bms-glossary-related bms-glossary-related--research">',
+                '<section class="bs-glossary-related bs-glossary-related--research">',
                 f"<h4>Research ({len(research_articles)})</h4>",
                 "<ul>",
                 research_links_html(research_articles),
@@ -1649,24 +1649,24 @@ def alias_html(aliases: list[dict[str, str]]) -> str:
     if not aliases:
         return ""
     alias_names = ", ".join(
-        f'<span data-bms-alias="{html_attr(alias["slug"])}">'
+        f'<span data-bs-alias="{html_attr(alias["slug"])}">'
         f'{html.escape(alias["term"])}</span>'
         for alias in aliases
     )
-    return f'<p class="bms-glossary-aliases"><strong>Also called:</strong> {alias_names}</p>'
+    return f'<p class="bs-glossary-aliases"><strong>Also called:</strong> {alias_names}</p>'
 
 
 def usage_notes_html(entry: dict[str, object]) -> str:
     notes: list[str] = []
     if entry.get("usage_note"):
         notes.append(
-            '<p class="bms-glossary-usage-note"><strong>Usage note:</strong> '
+            '<p class="bs-glossary-usage-note"><strong>Usage note:</strong> '
             f'{html.escape(str(entry["usage_note"]))}</p>'
         )
     for alias in entry["aliases"]:  # type: ignore[index]
         if alias.get("usage_note"):
             notes.append(
-                '<p class="bms-glossary-usage-note"><strong>'
+                '<p class="bs-glossary-usage-note"><strong>'
                 f'{html.escape(str(alias["term"]))}:</strong> '
                 f'{html.escape(str(alias["usage_note"]))}</p>'
             )
@@ -1683,7 +1683,7 @@ def public_references_html(entry: dict[str, object]) -> str:
     if not references:
         return ""
     lines = [
-        '<section class="bms-glossary-references">',
+        '<section class="bs-glossary-references">',
         "<h4>References</h4>",
         "<ul>",
     ]
@@ -1809,10 +1809,10 @@ def linked_definition_html(
         parts.append(html.escape(definition[cursor:match.start()]))
         visible = match.group(0)
         parts.append(
-            f'<a class="bms-inline-glossary" '
+            f'<a class="bs-inline-glossary" '
             f'href="/glossary/#{html_attr(slug)}" '
-            f'data-bms-glossary-slug="{html_attr(slug)}" '
-            f'data-bms-definition-link="{html_attr(slug)}">'
+            f'data-bs-glossary-slug="{html_attr(slug)}" '
+            f'data-bs-definition-link="{html_attr(slug)}">'
             f"{html.escape(visible)}</a>"
         )
         cursor = match.end()
@@ -1832,7 +1832,7 @@ def full_definition_html(
         if paragraph.strip()
     ]
     body = "\n".join(f"<p>{paragraph}</p>" for paragraph in paragraphs)
-    return f'<div class="bms-glossary-definition">\n{body}\n</div>'
+    return f'<div class="bs-glossary-definition">\n{body}\n</div>'
 
 
 def related_terms_html(entry: dict[str, object]) -> str:
@@ -1840,7 +1840,7 @@ def related_terms_html(entry: dict[str, object]) -> str:
     if not isinstance(raw_terms, list) or not raw_terms:
         return ""
     lines = [
-        '<section class="bms-glossary-related-terms">',
+        '<section class="bs-glossary-related-terms">',
         "<h4>See also</h4>",
         "<ul>",
     ]
@@ -1864,8 +1864,8 @@ def category_html(entry: dict[str, object], categories: list[str]) -> str:
     if "categories" not in entry:
         category = str(entry["category"])
         return (
-            '<p class="bms-glossary-category"><strong>Category:</strong> '
-            f'<button type="button" data-bms-card-category="{html_attr(category)}" '
+            '<p class="bs-glossary-category"><strong>Category:</strong> '
+            f'<button type="button" data-bs-card-category="{html_attr(category)}" '
             'aria-pressed="false">'
             f"{html.escape(display_category(category))}</button></p>"
         )
@@ -1873,13 +1873,13 @@ def category_html(entry: dict[str, object], categories: list[str]) -> str:
         return ""
     label = "Category" if len(categories) == 1 else "Categories"
     buttons = ", ".join(
-        f'<button type="button" data-bms-card-category="{html_attr(category)}" '
+        f'<button type="button" data-bs-card-category="{html_attr(category)}" '
         'aria-pressed="false">'
         f"{html.escape(display_category(category))}</button>"
         for category in categories
     )
     return (
-        f'<p class="bms-glossary-category"><strong>{label}:</strong> '
+        f'<p class="bs-glossary-category"><strong>{label}:</strong> '
         f"{buttons}</p>"
     )
 
@@ -1897,27 +1897,27 @@ def build_entries_html(
     existing_groups = [group for group in group_order if group in groups]
     alphabet_links = " ".join(
         f'<a href="#letter-{html_attr("numbers" if group == "#" else group.lower())}" '
-        f'data-bms-letter-link="{html_attr(group)}">'
+        f'data-bs-letter-link="{html_attr(group)}">'
         f"{html.escape(group)}</a>"
         for group in existing_groups
     )
     lines = [
         GENERATED_MARKER,
-        '<nav class="bms-glossary-alphabet" aria-label="Glossary letters">',
-        '<div class="bms-glossary-alphabet-links">',
+        '<nav class="bs-glossary-alphabet" aria-label="Glossary letters">',
+        '<div class="bs-glossary-alphabet-links">',
         alphabet_links,
         "</div>",
         "</nav>",
-        '<div class="bms-glossary-section-actions" role="group" '
+        '<div class="bs-glossary-section-actions" role="group" '
         'aria-label="Glossary letter sections">',
-        '<button type="button" class="bms-glossary-section-control" '
-        'data-bms-glossary-collapse-all aria-controls="bms-glossary-groups">'
+        '<button type="button" class="bs-glossary-section-control" '
+        'data-bs-glossary-collapse-all aria-controls="bs-glossary-groups">'
         "Collapse all</button>",
-        '<button type="button" class="bms-glossary-section-control" '
-        'data-bms-glossary-expand-all aria-controls="bms-glossary-groups" '
+        '<button type="button" class="bs-glossary-section-control" '
+        'data-bs-glossary-expand-all aria-controls="bs-glossary-groups" '
         "disabled>Expand all</button>",
         "</div>",
-        '<div class="bms-glossary-groups" id="bms-glossary-groups" data-bms-glossary-groups>',
+        '<div class="bs-glossary-groups" id="bs-glossary-groups" data-bs-glossary-groups>',
     ]
 
     for group in existing_groups:
@@ -1925,12 +1925,12 @@ def build_entries_html(
         group_anchor = "numbers" if group == "#" else group.lower()
         lines.extend(
             [
-                f'<details class="bms-glossary-letter-group" data-bms-letter-group open '
-                f'id="letter-{html_attr(group_anchor)}" data-bms-letter="{html_attr(group)}">',
+                f'<details class="bs-glossary-letter-group" data-bs-letter-group open '
+                f'id="letter-{html_attr(group_anchor)}" data-bs-letter="{html_attr(group)}">',
                 f"<summary><span>{html.escape(group)}</span>"
-                f'<span class="bms-glossary-letter-count">{len(group_entries)} terms</span>'
+                f'<span class="bs-glossary-letter-count">{len(group_entries)} terms</span>'
                 "</summary>",
-                '<div class="bms-glossary-letter-entries">',
+                '<div class="bs-glossary-letter-entries">',
             ]
         )
         for entry in group_entries:
@@ -1964,30 +1964,30 @@ def build_entries_html(
             category_attributes = ""
             if categories:
                 category_attributes = (
-                    f'data-bms-category="{html_attr(categories[0])}" '
+                    f'data-bs-category="{html_attr(categories[0])}" '
                 )
             if "categories" in entry:
                 category_attributes += (
-                    f'data-bms-categories="'
+                    f'data-bs-categories="'
                     f'{html_attr(json.dumps(categories, ensure_ascii=False))}" '
                 )
             lines.extend(
                 [
-                    f'<details class="bms-glossary-entry" id="{html_attr(slug)}" '
-                    f'data-bms-glossary-entry data-bms-slug="{html_attr(slug)}" '
-                    f'data-bms-letter="{html_attr(group)}" '
+                    f'<details class="bs-glossary-entry" id="{html_attr(slug)}" '
+                    f'data-bs-glossary-entry data-bs-slug="{html_attr(slug)}" '
+                    f'data-bs-letter="{html_attr(group)}" '
                     f"{category_attributes}"
-                    f'data-bms-tracks="{html_attr(json.dumps(tracks, ensure_ascii=False))}" '
-                    f'data-bms-aliases="{html_attr(json.dumps(alias_slugs, ensure_ascii=False))}" '
-                    f'data-bms-redirects="{html_attr(json.dumps(entry.get("redirect_slugs", []), ensure_ascii=False))}" '
-                    f'data-bms-alias-names="{html_attr(json.dumps(alias_names, ensure_ascii=False))}" '
-                    f'data-bms-search="{html_attr(json.dumps(search_values, ensure_ascii=False))}">',
-                    '<summary class="bms-glossary-entry-summary">'
-                    f'<span class="bms-glossary-term-name">'
+                    f'data-bs-tracks="{html_attr(json.dumps(tracks, ensure_ascii=False))}" '
+                    f'data-bs-aliases="{html_attr(json.dumps(alias_slugs, ensure_ascii=False))}" '
+                    f'data-bs-redirects="{html_attr(json.dumps(entry.get("redirect_slugs", []), ensure_ascii=False))}" '
+                    f'data-bs-alias-names="{html_attr(json.dumps(alias_names, ensure_ascii=False))}" '
+                    f'data-bs-search="{html_attr(json.dumps(search_values, ensure_ascii=False))}">',
+                    '<summary class="bs-glossary-entry-summary">'
+                    f'<span class="bs-glossary-term-name">'
                     f'{html.escape(str(entry["term"]))}</span></summary>',
-                    '<div class="bms-glossary-entry-body">',
+                    '<div class="bs-glossary-entry-body">',
                     alias_html(entry["aliases"]),  # type: ignore[arg-type]
-                    '<p class="bms-glossary-short-definition">'
+                    '<p class="bs-glossary-short-definition">'
                     f'{html.escape(str(entry.get("short_definition") or entry["definition"]))}'
                     "</p>",
                     full_definition_html(entry, entries),
@@ -2231,7 +2231,7 @@ def validate_generated() -> dict[str, int]:
     canonical_slugs = {str(entry["slug"]) for entry in entries}
     entries_html = GENERATED_ENTRIES_PATH.read_text(encoding="utf-8")
     canonical_anchors = re.findall(
-        r'<details class="bms-glossary-entry" id="([^"]+)"',
+        r'<details class="bs-glossary-entry" id="([^"]+)"',
         entries_html,
     )
     if len(canonical_anchors) != len(entries) or set(canonical_anchors) != canonical_slugs:
@@ -2239,7 +2239,7 @@ def validate_generated() -> dict[str, int]:
     if len(canonical_anchors) != len(set(canonical_anchors)):
         raise ValidationError("Duplicate canonical glossary anchors")
     entry_tags = re.findall(
-        r'<details class="bms-glossary-entry"[^>]*>',
+        r'<details class="bs-glossary-entry"[^>]*>',
         entries_html,
     )
     if any(
@@ -2248,9 +2248,9 @@ def validate_generated() -> dict[str, int]:
     ):
         raise ValidationError("Canonical term disclosures must begin collapsed")
     alias_count = sum(len(entry["aliases"]) for entry in entries)
-    if entries_html.count('data-bms-alias="') != alias_count:
+    if entries_html.count('data-bs-alias="') != alias_count:
         raise ValidationError("Generated alias count does not match public data")
-    if entries_html.count('class="bms-glossary-definition"') != len(entries):
+    if entries_html.count('class="bs-glossary-definition"') != len(entries):
         raise ValidationError("Every canonical entry must include its full definition")
     old_term_links = [
         slug
@@ -2278,25 +2278,25 @@ def validate_generated() -> dict[str, int]:
 
     catalogue_html = GENERATED_LESSON_CATALOGUE_PATH.read_text(encoding="utf-8")
     catalogue_items = re.findall(
-        r'<article class="bms-learn-catalogue-item"[^>]*>',
+        r'<article class="bs-learn-catalogue-item"[^>]*>',
         catalogue_html,
     )
     if len(catalogue_items) != len(lessons):
         raise ValidationError("Generated Learn catalogue has the wrong lesson count")
     if any(" open" in tag for tag in re.findall(
-        r'<details class="bms-learn-catalogue-description"[^>]*>',
+        r'<details class="bs-learn-catalogue-description"[^>]*>',
         catalogue_html,
     )):
         raise ValidationError("Lesson descriptions must begin collapsed")
     expected_routes = {str(lesson["route"]) for lesson in lessons}
     catalogue_routes = set(re.findall(
-        r'<a class="bms-learn-catalogue-link" href="([^"]+)">',
+        r'<a class="bs-learn-catalogue-link" href="([^"]+)">',
         catalogue_html,
     ))
     if catalogue_routes != expected_routes:
         raise ValidationError("Generated Learn catalogue routes do not match lessons")
     catalogue_group_tags = re.findall(
-        r'<details class="bms-learn-catalogue-section"[^>]*>',
+        r'<details class="bs-learn-catalogue-section"[^>]*>',
         catalogue_html,
     )
     if len(catalogue_group_tags) != len(curriculum) or any(
@@ -2308,8 +2308,8 @@ def validate_generated() -> dict[str, int]:
     for required in (
         "Difficulty Filter",
         "Learning Track Filter",
-        "data-bms-learn-collapse-all",
-        "data-bms-learn-expand-all",
+        "data-bs-learn-collapse-all",
+        "data-bs-learn-expand-all",
     ):
         if required not in catalogue_html:
             raise ValidationError(
@@ -2324,27 +2324,27 @@ def validate_generated() -> dict[str, int]:
         track_html = (track_path.parent / "_lesson-index.html").read_text(
             encoding="utf-8"
         )
-        if track_html.count("data-bms-learn-item") != len(track_lessons):
+        if track_html.count("data-bs-learn-item") != len(track_lessons):
             raise ValidationError(
                 f"Generated track index {track['id']} has the wrong lesson count"
             )
         for required in (
-            'data-bms-learn-mode="track"',
+            'data-bs-learn-mode="track"',
             "Difficulty Filter",
             "Term Filter",
-            "data-bms-learn-collapse-all",
-            "data-bms-learn-expand-all",
+            "data-bs-learn-collapse-all",
+            "data-bs-learn-expand-all",
         ):
             if required not in track_html:
                 raise ValidationError(
                     f"Generated track index {track['id']} is missing {required}"
                 )
-        if "data-bms-filter-track" in track_html:
+        if "data-bs-filter-track" in track_html:
             raise ValidationError(
                 f"Generated track index {track['id']} contains a track filter"
             )
         track_group_tags = re.findall(
-            r'<details class="bms-learn-catalogue-section"[^>]*>',
+            r'<details class="bs-learn-catalogue-section"[^>]*>',
             track_html,
         )
         if len(track_group_tags) != 1 or " open" not in track_group_tags[0]:
@@ -2352,7 +2352,7 @@ def validate_generated() -> dict[str, int]:
                 f"Generated track index {track['id']} must begin expanded"
             )
         track_description_tags = re.findall(
-            r'<details class="bms-learn-catalogue-description"[^>]*>',
+            r'<details class="bs-learn-catalogue-description"[^>]*>',
             track_html,
         )
         if len(track_description_tags) != len(track_lessons) or any(
@@ -2502,8 +2502,8 @@ def check_rendered(output_root: Path) -> dict[str, int]:
         encoding="utf-8", errors="replace"
     )
     for required_redirect_part in (
-        '<meta name="robots" content="noindex">',
-        '<link rel="canonical" href="https://backgammon-made-simple.github.io/glossary/">',
+        '<meta name="robots" content="noindex, follow">',
+        '<link rel="canonical" href="https://backgammonsimplified.github.io/glossary/">',
         '<meta http-equiv="refresh" content="0; url=/glossary/">',
         'window.location.replace("/glossary/" + window.location.search + window.location.hash)',
     ):
@@ -2528,7 +2528,7 @@ def check_rendered(output_root: Path) -> dict[str, int]:
     assert_no_forbidden_text(glossary_html, "rendered single-page glossary")
 
     canonical_anchors = re.findall(
-        r'<details class="bms-glossary-entry" id="([^"]+)"',
+        r'<details class="bs-glossary-entry" id="([^"]+)"',
         glossary_html,
     )
     if len(canonical_anchors) != len(entries) or set(canonical_anchors) != canonical_slugs:
@@ -2537,7 +2537,7 @@ def check_rendered(output_root: Path) -> dict[str, int]:
         raise ValidationError("Rendered glossary contains duplicate canonical anchors")
 
     entry_tags = re.findall(
-        r'<details class="bms-glossary-entry"[^>]*>',
+        r'<details class="bs-glossary-entry"[^>]*>',
         glossary_html,
     )
     if any(
@@ -2545,9 +2545,9 @@ def check_rendered(output_root: Path) -> dict[str, int]:
         for tag in entry_tags
     ):
         raise ValidationError("Rendered term disclosures do not begin collapsed")
-    if glossary_html.count('class="bms-glossary-definition"') != len(entries):
+    if glossary_html.count('class="bs-glossary-definition"') != len(entries):
         raise ValidationError("Rendered glossary is missing full definitions")
-    if glossary_html.count('data-bms-alias="') != alias_count:
+    if glossary_html.count('data-bs-alias="') != alias_count:
         raise ValidationError("Rendered glossary alias count is incorrect")
     if any(f"/glossary/{slug}/" in glossary_html for slug in canonical_slugs):
         raise ValidationError("Rendered glossary still links to standalone term routes")
@@ -2556,8 +2556,8 @@ def check_rendered(output_root: Path) -> dict[str, int]:
     lessons = discover_lessons()
     curriculum = build_curriculum(tracks, lessons)
     expected_sequence = build_learn_sequence(curriculum)
-    rendered_sequence_path = output_root / "assets" / "bms-learn-sequence.json"
-    rendered_scroll_path = output_root / "assets" / "bms-learn-scroll.js"
+    rendered_sequence_path = output_root / "assets" / "bs-learn-sequence.json"
+    rendered_scroll_path = output_root / "assets" / "bs-learn-scroll.js"
     if not rendered_sequence_path.is_file():
         raise ValidationError("Rendered Learn sequence asset is missing")
     if not rendered_scroll_path.is_file():
@@ -2570,10 +2570,10 @@ def check_rendered(output_root: Path) -> dict[str, int]:
     research_articles = discover_research_articles()
     expected_research_sequence = build_research_sequence(research_articles)
     rendered_research_sequence_path = (
-        output_root / "assets" / "bms-research-sequence.json"
+        output_root / "assets" / "bs-research-sequence.json"
     )
     rendered_research_scroll_path = (
-        output_root / "assets" / "bms-research-scroll.js"
+        output_root / "assets" / "bs-research-scroll.js"
     )
     if not rendered_research_sequence_path.is_file():
         raise ValidationError("Rendered Research sequence asset is missing")
@@ -2594,7 +2594,7 @@ def check_rendered(output_root: Path) -> dict[str, int]:
             encoding="utf-8",
             errors="replace",
         )
-        if "bms-research-scroll.js" not in article_html:
+        if "bs-research-scroll.js" not in article_html:
             raise ValidationError(
                 f"Rendered Research article lacks shared script: {route}"
             )
@@ -2620,11 +2620,11 @@ def check_rendered(output_root: Path) -> dict[str, int]:
             raise ValidationError(
                 f"Rendered continuous Learn lesson lacks verified content: {route}"
             )
-        if "bms-learn-scroll.js" not in lesson_html:
+        if "bs-learn-scroll.js" not in lesson_html:
             raise ValidationError(
                 f"Rendered continuous Learn lesson lacks shared script: {route}"
             )
-        if "bms-cube-scroll.js" in lesson_html:
+        if "bs-cube-scroll.js" in lesson_html:
             raise ValidationError(
                 f"Rendered continuous Learn lesson loads obsolete cube script: {route}"
             )
@@ -2652,17 +2652,17 @@ def check_rendered(output_root: Path) -> dict[str, int]:
         rendered_lesson_count += 1
     learn_index = output_root / "learn" / "index.html"
     learn_html = learn_index.read_text(encoding="utf-8", errors="replace")
-    if learn_html.count("data-bms-learn-item") != len(lessons):
+    if learn_html.count("data-bs-learn-item") != len(lessons):
         raise ValidationError("Rendered Learn catalogue has the wrong lesson count")
     for required in (
-        "data-bms-learn-search",
-        "data-bms-filter-difficulty",
-        "data-bms-filter-track",
-        "data-bms-learn-group",
-        "data-bms-learn-clear",
-        "data-bms-learn-empty",
-        "data-bms-learn-collapse-all",
-        "data-bms-learn-expand-all",
+        "data-bs-learn-search",
+        "data-bs-filter-difficulty",
+        "data-bs-filter-track",
+        "data-bs-learn-group",
+        "data-bs-learn-clear",
+        "data-bs-learn-empty",
+        "data-bs-learn-collapse-all",
+        "data-bs-learn-expand-all",
     ):
         if required not in learn_html:
             raise ValidationError(f"Rendered Learn catalogue is missing {required}")
@@ -2672,7 +2672,7 @@ def check_rendered(output_root: Path) -> dict[str, int]:
             html.unescape(href),
         )
         for href in re.findall(
-            r'<a class="bms-learn-catalogue-link" href="([^"]+)">',
+            r'<a class="bs-learn-catalogue-link" href="([^"]+)">',
             learn_html,
         )
     }
@@ -2682,7 +2682,7 @@ def check_rendered(output_root: Path) -> dict[str, int]:
             "Rendered Learn catalogue routes do not match lesson routes"
         )
     description_tags = re.findall(
-        r'<details class="bms-learn-catalogue-description"[^>]*>',
+        r'<details class="bs-learn-catalogue-description"[^>]*>',
         learn_html,
     )
     if len(description_tags) != len(lessons) or any(
@@ -2692,7 +2692,7 @@ def check_rendered(output_root: Path) -> dict[str, int]:
             "Rendered Learn lesson descriptions must all begin collapsed"
         )
     catalogue_group_tags = re.findall(
-        r'<details class="bms-learn-catalogue-section"[^>]*>',
+        r'<details class="bs-learn-catalogue-section"[^>]*>',
         learn_html,
     )
     if len(catalogue_group_tags) != len(curriculum) or any(
@@ -2704,10 +2704,10 @@ def check_rendered(output_root: Path) -> dict[str, int]:
     for track in curriculum:
         track_title = str(track["title"])
         rendered_heading = re.compile(
-            r'<span class="bms-learn-track-heading">\s*'
+            r'<span class="bs-learn-track-heading">\s*'
             r'<a\b[^>]*>'
             + re.escape(html.escape(track_title))
-            + r'</a>\s*<span\b[^>]*data-bms-learn-group-count[^>]*>'
+            + r'</a>\s*<span\b[^>]*data-bs-learn-group-count[^>]*>'
             + re.escape(
                 f'{len(track["lessons"])} '
                 f'{"lesson" if len(track["lessons"]) == 1 else "lessons"}'
@@ -2725,14 +2725,14 @@ def check_rendered(output_root: Path) -> dict[str, int]:
         )
 
     letter_tags = re.findall(
-        r'<details class="bms-glossary-letter-group"[^>]*>',
+        r'<details class="bs-glossary-letter-group"[^>]*>',
         glossary_html,
     )
     if not letter_tags or any(" open" not in tag for tag in letter_tags):
         raise ValidationError("Rendered glossary letter sections must begin expanded")
     if (
-        glossary_html.count("data-bms-glossary-collapse-all") != 1
-        or glossary_html.count("data-bms-glossary-expand-all") != 1
+        glossary_html.count("data-bs-glossary-collapse-all") != 1
+        or glossary_html.count("data-bs-glossary-expand-all") != 1
     ):
         raise ValidationError("Rendered glossary is missing the two letter controls")
 
@@ -2745,7 +2745,7 @@ def check_rendered(output_root: Path) -> dict[str, int]:
         if "/glossary/" in location
     ]
     expected_glossary_location = (
-        "https://backgammon-made-simple.github.io/glossary/"
+        "https://backgammonsimplified.github.io/glossary/"
     )
     if glossary_locations != [expected_glossary_location]:
         raise ValidationError(
@@ -2754,12 +2754,12 @@ def check_rendered(output_root: Path) -> dict[str, int]:
 
     canonical = (
         '<link rel="canonical" '
-        'href="https://backgammon-made-simple.github.io/glossary/">'
+        'href="https://backgammonsimplified.github.io/glossary/">'
     )
     if canonical not in glossary_html:
         raise ValidationError("Rendered glossary is missing its one canonical URL")
     shared_image = (
-        "https://backgammon-made-simple.github.io/"
+        "https://backgammonsimplified.github.io/"
         "assets/social/generated/social-glossary.png"
     )
     if shared_image not in glossary_html:
@@ -2783,7 +2783,7 @@ def check_rendered(output_root: Path) -> dict[str, int]:
         page_html = path.read_text(encoding="utf-8", errors="replace")
         if 'id="TOC"' not in page_html or 'data-toc-expanded="99"' not in page_html:
             raise ValidationError(f"Rendered {label} is missing native expanded TOC")
-        if "bms-research-toc-toggle" in page_html:
+        if "bs-research-toc-toggle" in page_html:
             raise ValidationError(f"Rendered {label} contains a competing TOC initializer")
 
     for track in curriculum:
@@ -2797,33 +2797,33 @@ def check_rendered(output_root: Path) -> dict[str, int]:
         track_lessons = track["lessons"]
         if not isinstance(track_lessons, list):
             raise ValidationError(f"Track {track['id']} has invalid lessons")
-        if track_html.count("data-bms-learn-item") != len(track_lessons):
+        if track_html.count("data-bs-learn-item") != len(track_lessons):
             raise ValidationError(
                 f"Rendered track index {track['id']} has the wrong lesson count"
             )
         for required in (
-            'data-bms-learn-mode="track"',
+            'data-bs-learn-mode="track"',
             "Difficulty Filter",
             "Term Filter",
-            "data-bms-learn-collapse-all",
-            "data-bms-learn-expand-all",
-            "data-bms-learn-clear",
-            "data-bms-learn-empty",
+            "data-bs-learn-collapse-all",
+            "data-bs-learn-expand-all",
+            "data-bs-learn-clear",
+            "data-bs-learn-empty",
         ):
             if required not in track_html:
                 raise ValidationError(
                     f"Rendered track index {track['id']} is missing {required}"
                 )
-        if "data-bms-filter-track" in track_html:
+        if "data-bs-filter-track" in track_html:
             raise ValidationError(
                 f"Rendered track index {track['id']} contains a track filter"
             )
-        if "data-bms-term-lookup" in track_html:
+        if "data-bs-term-lookup" in track_html:
             raise ValidationError(
                 f"Rendered track index {track['id']} contains the term lookup"
             )
         track_group_tags = re.findall(
-            r'<details class="bms-learn-catalogue-section"[^>]*>',
+            r'<details class="bs-learn-catalogue-section"[^>]*>',
             track_html,
         )
         if len(track_group_tags) != 1 or " open" not in track_group_tags[0]:
@@ -2831,7 +2831,7 @@ def check_rendered(output_root: Path) -> dict[str, int]:
                 f"Rendered track index {track['id']} must begin expanded"
             )
         track_description_tags = re.findall(
-            r'<details class="bms-learn-catalogue-description"[^>]*>',
+            r'<details class="bs-learn-catalogue-description"[^>]*>',
             track_html,
         )
         if len(track_description_tags) != len(track_lessons) or any(
@@ -2861,7 +2861,7 @@ def check_rendered(output_root: Path) -> dict[str, int]:
         for item in feed_items
     ]
     expected_feed_links = [
-        "https://backgammon-made-simple.github.io" + str(publication["route"])
+        "https://backgammonsimplified.github.io" + str(publication["route"])
         for publication in discover_update_publications()
     ]
     if feed_links != expected_feed_links:

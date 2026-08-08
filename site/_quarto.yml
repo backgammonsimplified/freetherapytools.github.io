@@ -2,17 +2,17 @@ project:
   type: website
   output-dir: _site
   pre-render:
-  - python ../scripts/bms_pre_render.py
+  - python ../scripts/bs_pre_render.py
   post-render:
-  - python ../scripts/bms_post_render.py
+  - python ../scripts/bs_post_render.py
   resources:
     - assets/logo.svg
     - "assets/icons/**"
     - "assets/social/generated/*.png"
-    - assets/bms-glossary.js
-    - assets/bms-glossary-lookup.json
-    - assets/bms-learn-sequence.json
-    - assets/bms-research-sequence.json
+    - assets/bs-glossary.js
+    - assets/bs-glossary-lookup.json
+    - assets/bs-learn-sequence.json
+    - assets/bs-research-sequence.json
     - "assets/positions/**"
     - data/lesson-analysis-svg-mvp.json
     - data/checker-sage-gnu-disagreement-001.json
@@ -25,15 +25,14 @@ project:
     - "engine-benchmark/**/checksums.sha256"
 
 filters:
-  - bms-link-policy
+  - bs-link-policy
 
 metadata-files:
+  - _publication.yml
   - _learn-navigation.yml
 
 website:
-  title: "Backgammon Made Simple"
   description: "Learn the ideas behind strong backgammon decisions, one concept and one position at a time."
-  site-url: "https://backgammon-made-simple.github.io"
   search:
     location: navbar
     type: overlay
@@ -44,7 +43,7 @@ website:
     card-style: summary_large_image
   navbar:
     logo: assets/logo.svg
-    logo-alt: "Backgammon Made Simple"
+    logo-alt: "Backgammon Simplified"
     collapse-below: xl
     left:
       - text: Learn
@@ -63,7 +62,7 @@ website:
         text: About
   page-footer:
     left: |
-      Copyright 2026 Marty Gale - Backgammon Made Simple
+      Copyright 2026 Marty Gale - Backgammon Simplified
     center:
       - text: "Code: AGPL-3.0-only · Educational content: CC BY-SA 4.0 · Licensing"
         href: /licensing.html
@@ -73,14 +72,14 @@ website:
 
 format:
   html:
-    theme: [cosmo, assets/bms-theme.scss]
+    theme: [cosmo, assets/bs-theme.scss]
     css:
-      - assets/bms-shared.css
-      - assets/bms-components.css
-      - assets/bms-learn.css
-      - assets/bms-lesson-analysis.css
+      - assets/bs-shared.css
+      - assets/bs-components.css
+      - assets/bs-learn.css
+      - assets/bs-lesson-analysis.css
     include-after-body:
-      - includes/bms-scripts.html
+      - includes/bs-scripts.html
     include-in-header:
       - includes/site-head.html
     toc: true

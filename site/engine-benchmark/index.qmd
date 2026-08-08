@@ -11,10 +11,10 @@ format:
     toc-depth: 2
     toc-expand: 2
     title-block-style: plain
-    body-classes: "bms-editorial-page bms-title-eyebrow bms-engine-benchmark-page"
+    body-classes: "bs-editorial-page bs-title-eyebrow bs-engine-benchmark-page"
 ---
 
-::: {.bms-editorial-lead}
+::: {.bs-editorial-lead}
 The Backgammon Engine Benchmark lets engines play under controlled conditions, then publishes the results and the evidence behind them.
 :::
 
@@ -24,37 +24,37 @@ Before you have backgammon engines fight each other, you must record the plan, s
 
 The code and instructions to run your own tests is available in the public repository below, while the website has the stories of the battles we conducted and what it means for backgammon players like yourself.
 
-::: {.bms-button-row}
-[Read Sage vs GNU 20 Match Pilot Results](sage-vs-gnu-stage1/index.qmd){.bms-button-primary}
-[Read the more details of the Pilot](../research/sage-vs-gnu-additional-details.qmd){.bms-button-outline}
+::: {.bs-button-row}
+[Read Sage vs GNU 20 Match Pilot Results](sage-vs-gnu-stage1/index.qmd){.bs-button-primary}
+[Read the more details of the Pilot](../research/sage-vs-gnu-additional-details.qmd){.bs-button-outline}
 :::
 
 
 ## How the benchmark works
 
-::::::: {.bms-process aria-label="Benchmark workflow"}
-::: {.bms-process-step}
-<span class="bms-process-number">01</span>
+::::::: {.bs-process aria-label="Benchmark workflow"}
+::: {.bs-process-step}
+<span class="bs-process-number">01</span>
 <strong>Choose the engines, rules, and settings</strong>
 :::
 
-::: {.bms-process-step}
-<span class="bms-process-number">02</span>
+::: {.bs-process-step}
+<span class="bs-process-number">02</span>
 <strong>Publish the plan before play begins</strong>
 :::
 
-::: {.bms-process-step}
-<span class="bms-process-number">04</span>
+::: {.bs-process-step}
+<span class="bs-process-number">04</span>
 <strong>Set Dice File then Play</strong>
 :::
 
-::: {.bms-process-step}
-<span class="bms-process-number">05</span>
+::: {.bs-process-step}
+<span class="bs-process-number">05</span>
 <strong>Review the matches and find disagreements</strong>
 :::
 
-::: {.bms-process-step}
-<span class="bms-process-number">06</span>
+::: {.bs-process-step}
+<span class="bs-process-number">06</span>
 <strong>Check and publish the evidence</strong>
 :::
 :::::::
@@ -85,7 +85,7 @@ Ply depth tells us how many decision layers an engine looks ahead. Different eng
 
 The goal is not to make the engines internally identical. That is impossible. The goal is to avoid an obvious mismatch in ply depth while keeping the live matches practical to run.
 
-[Read the more details of ply settings for the Pilot](../research/sage-vs-gnu-additional-details.qmd#why-these-ply-depths-were-chosen){.bms-button-outline}
+[Read the more details of ply settings for the Pilot](../research/sage-vs-gnu-additional-details.qmd#why-these-ply-depths-were-chosen){.bs-button-outline}
 
 ## How are the results judged?
 

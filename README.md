@@ -1,8 +1,8 @@
-# Backgammon Made Simple
+# Backgammon Simplified
 
 **Questions players ask. Ideas you can use.**
 
-Backgammon Made Simple is a free, open-source, question-driven learning project built around real positions, engine evidence, and practical mental models players can use at the board.
+Backgammon Simplified is a free, open-source, question-driven learning project built around real positions, engine evidence, and practical mental models players can use at the board.
 
 This repository contains the public website and its website-specific analysis services.
 
@@ -21,7 +21,7 @@ authoring conventions, local preview commands, and route map.
 - Direct worker access and support for an external bridge
 - Static assets, build tooling, validation, and deployment configuration
 
-Reusable engine models and wrappers belong in [`backgammon-engine-kit`](https://github.com/backgammon-made-simple/backgammon-engine-kit). Scientific engine-versus-engine studies belong in [`backgammon-engine-benchmarks`](https://github.com/backgammon-made-simple/backgammon-engine-benchmarks).
+Reusable engine models and wrappers belong in [`backgammon-engine-kit`](https://github.com/backgammonsimplified/backgammon-engine-kit). Scientific engine-versus-engine studies belong in [`backgammon-engine-benchmarks`](https://github.com/backgammonsimplified/backgammon-engine-benchmarks).
 
 ## Product structure
 
@@ -38,7 +38,7 @@ Question → position → decision → explanation → mental model
 
 ## Project values
 
-Backgammon Made Simple is a passion project and a public record of the long process of learning to understand the game more deeply.
+Backgammon Simplified is a passion project and a public record of the long process of learning to understand the game more deeply.
 
 Use it. Study it. Improve it. Adapt it. Even build a business with it—but credit the project and keep covered improvements open.
 
@@ -103,7 +103,7 @@ The analyzer and other network-facing software are licensed under AGPL-3.0-only.
 
 The official project source is:
 
-<https://github.com/backgammon-made-simple/backgammon-made-simple.github.io>
+<https://github.com/backgammonsimplified/backgammonsimplified.github.io>
 
 ## Contributing
 
@@ -125,7 +125,7 @@ This is a mixed-license repository:
 
 - **Software:** AGPL-3.0-only
 - **Educational content:** CC BY-SA 4.0
-- **BMS name, logo, and distinctive official branding:** no trademark rights granted
+- **BS name, logo, and distinctive official branding:** no trademark rights granted
 - **Third-party material:** remains under its original license
 
 See [`LICENSE.md`](LICENSE.md) for details.

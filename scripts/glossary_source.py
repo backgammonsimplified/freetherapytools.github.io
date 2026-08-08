@@ -23,7 +23,7 @@ GLOSSARY_SOURCE_PATH = learn_glossary.REPOSITORY_ROOT / "glossary" / "glossary.j
 CONFIRMED_SOURCE_PATH = GLOSSARY_SOURCE_PATH
 PRODUCTION_SOURCE_PATH = learn_glossary.PUBLIC_DATA_PATH
 LEGACY_MARKDOWN_PATH = learn_glossary.REPOSITORY_ROOT / "glossary" / "glossary_old.md"
-DOCUMENT_TITLE = "# BMS glossary"
+DOCUMENT_TITLE = "# BS glossary"
 ENTRY_HEADING = re.compile(r"^# ([^\r\n]+)$")
 SECTION_HEADING = re.compile(r"^## ([^\r\n]+)$")
 STATUS_FIELD = re.compile(r"^\*\*Status:\*\*\s+(.+?)\s*$")
@@ -806,16 +806,16 @@ def validate_current_build_compatibility(
     return {
         "alias_entries": sum(len(entry["aliases"]) for entry in entries),
         "canonical_entries": len(entries),
-        "definition_links": entries_html.count("data-bms-definition-link="),
+        "definition_links": entries_html.count("data-bs-definition-link="),
         "lookup_entries": len(lookup_entries),
         "page_full_definitions": entries_html.count(
-            'class="bms-glossary-definition"'
+            'class="bs-glossary-definition"'
         ),
         "page_related_term_groups": entries_html.count(
-            'class="bms-glossary-related-terms"'
+            'class="bs-glossary-related-terms"'
         ),
         "page_short_definitions": entries_html.count(
-            'class="bms-glossary-short-definition"'
+            'class="bs-glossary-short-definition"'
         ),
     }
 

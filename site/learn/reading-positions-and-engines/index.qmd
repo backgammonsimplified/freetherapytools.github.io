@@ -18,7 +18,7 @@ terms:
   - backgammon
   - own-the-cube
   - match-play
-body-classes: bms-learn-article
+body-classes: bs-learn-article
 ---
 
 Engine analysis is useful when it helps you understand a decision, not when it becomes a substitute for reading the position.
@@ -39,8 +39,8 @@ Close results deserve humility. A tiny equity difference may be a practical tie,
 
 Use the analyzer to test one changed feature at a time. Ask what moved the decision: race, timing, threats, cube ownership, gammons, or match score.
 
-::: {.bms-callout}
-::: {.bms-callout-title}
+::: {.bs-callout}
+::: {.bs-callout-title}
 Teaching rule
 :::
 Engine evidence should explain transferable ideas. It should not present every numerical output as a permanent truth.

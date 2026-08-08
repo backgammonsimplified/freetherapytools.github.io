@@ -2,80 +2,80 @@ import { createHash } from "node:crypto";
 
 const GROUP_RULES = [
   {
-    id: "bms-root-mobile-navigation",
+    id: "bs-root-mobile-navigation",
     pattern: /mobile navigation/i,
     component: "global mobile navigation",
-    source: ["site/assets/bms-site-tools.js", "site/assets/bms.css"],
+    source: ["site/assets/bs-site-tools.js", "site/assets/bs.css"],
     task: "Investigate mobile-navigation initialization and keyboard behavior."
   },
   {
-    id: "bms-root-continuous-duplicate-ids",
+    id: "bs-root-continuous-duplicate-ids",
     pattern: /duplicate IDs|IDs are unique/i,
     component: "continuous Learn/Research content",
-    source: ["site/assets/bms-learn-scroll.js", "site/assets/bms-research-scroll.js"],
+    source: ["site/assets/bs-learn-scroll.js", "site/assets/bs-research-scroll.js"],
     task: "Correct duplicate IDs without excluding or suppressing appended content."
   },
   {
-    id: "bms-root-glossary-sidebar",
+    id: "bs-root-glossary-sidebar",
     pattern: /glossary.*sidebar|inline glossary/i,
     component: "glossary definition sidebar",
-    source: ["site/assets/bms-glossary.js", "site/assets/bms-site-tools.js"],
+    source: ["site/assets/bs-glossary.js", "site/assets/bs-site-tools.js"],
     task: "Restore the glossary sidebar flow and its focus lifecycle."
   },
   {
-    id: "bms-root-term-lookup",
+    id: "bs-root-term-lookup",
     pattern: /term lookup/i,
     component: "term lookup",
-    source: ["site/assets/bms-site-tools.js"],
+    source: ["site/assets/bs-site-tools.js"],
     task: "Make desktop and mobile term lookup availability consistent."
   },
   {
-    id: "bms-root-fixed-sticky-overlap",
+    id: "bs-root-fixed-sticky-overlap",
     pattern: /fixed or sticky|cover controls or headings/i,
     component: "fixed and sticky layout",
-    source: ["site/assets/bms.css"],
+    source: ["site/assets/bs.css"],
     task: "Resolve fixed or sticky overlap at the affected breakpoints."
   },
   {
-    id: "bms-root-heading-hierarchy",
+    id: "bs-root-heading-hierarchy",
     pattern: /heading levels|visible H1/i,
     component: "document heading hierarchy",
     source: ["site/**/*.qmd", "site/_quarto.yml"],
     task: "Correct heading hierarchy in the affected rendered routes."
   },
   {
-    id: "bms-root-updates-initialization",
+    id: "bs-root-updates-initialization",
     pattern: /updates.*(?:TypeError|ReferenceError|Uncaught)|(?:TypeError|ReferenceError|Uncaught).*updates/i,
     component: "Updates initialization",
-    source: ["site/assets/bms-updates.js"],
+    source: ["site/assets/bs-updates.js"],
     task: "Investigate the Updates initialization error."
   },
   {
-    id: "bms-root-back-to-top",
+    id: "bs-root-back-to-top",
     pattern: /back-to-top/i,
     component: "back-to-top interaction",
-    source: ["site/assets/bms-site-tools.js"],
+    source: ["site/assets/bs-site-tools.js"],
     task: "Correct back-to-top activation and final scroll position."
   },
   {
-    id: "bms-root-clipped-controls",
+    id: "bs-root-clipped-controls",
     pattern: /horizontally clipped/i,
     component: "responsive control layout",
-    source: ["site/assets/bms.css"],
+    source: ["site/assets/bs.css"],
     task: "Correct clipped controls at the affected viewport widths."
   },
   {
-    id: "bms-root-glossary-filtering",
+    id: "bs-root-glossary-filtering",
     pattern: /glossary.*(?:filter|search)|(?:filter|search).*glossary/i,
     component: "glossary filtering",
-    source: ["site/assets/bms-glossary.js"],
+    source: ["site/assets/bs-glossary.js"],
     task: "Align glossary filtering results with the documented interaction contract."
   },
   {
-    id: "bms-root-keyboard-focus",
+    id: "bs-root-keyboard-focus",
     pattern: /keyboard|focus|skip link/i,
     component: "keyboard focus",
-    source: ["site/assets/bms.css", "site/assets/bms-site-tools.js"],
+    source: ["site/assets/bs.css", "site/assets/bs-site-tools.js"],
     task: "Investigate focus order, indicators, traps, and interaction return focus."
   }
 ];
@@ -85,7 +85,7 @@ const fallbackRule = (finding) => {
     .replace(/; screenshot: .+$/i, "")
     .replace(/: .+$/, "")}`;
   return {
-    id: `bms-root-${createHash("sha256").update(label).digest("hex").slice(0, 12)}`,
+    id: `bs-root-${createHash("sha256").update(label).digest("hex").slice(0, 12)}`,
     component: finding.component || "browser baseline",
     source: [],
     task: "Review this evidence group and create a scoped product or infrastructure task.",

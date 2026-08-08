@@ -50,7 +50,7 @@ sidebar: learn
 learn-track-index: doubling-cube
 learn-track-order: 2
 page-layout: full
-body-classes: "bms-learn-article bms-learn-track-index"
+body-classes: "bs-learn-article bs-learn-track-index"
 toc: false
 term-lookup: false
 lesson-taxonomy: false
@@ -103,7 +103,7 @@ tags:
 terms:
   - take-point
   - equity
-body-classes: bms-learn-article
+body-classes: bs-learn-article
 ---
 ```
 
@@ -204,6 +204,6 @@ Do not edit `_site/`, rendered HTML output, or other generated artifacts. Use th
 
 ## References
 
-This guide uses fixture citation examples only, consistent with the private playground approach [@bms-fixture-methodology].
+This guide uses fixture citation examples only, consistent with the private playground approach [@bs-fixture-methodology].
 :::::
 

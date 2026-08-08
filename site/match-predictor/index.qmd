@@ -6,20 +6,20 @@ bibliography: ../references.bib
 term-lookup: false
 format:
   html:
-    body-classes: "bms-match-predictor-page"
+    body-classes: "bs-match-predictor-page"
 ---
 
 <style>
-.bms-match-predictor {
+.bs-match-predictor {
   width: 100%;
   min-width: 0;
 }
 
-.bms-match-predictor__intro {
+.bs-match-predictor__intro {
   max-width: 72rem;
 }
 
-.bms-dashboard-actions {
+.bs-dashboard-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -27,17 +27,17 @@ format:
   margin: 1rem 0;
 }
 
-.bms-dashboard-link:focus-visible {
+.bs-dashboard-link:focus-visible {
   outline: 3px solid currentColor;
   outline-offset: 3px;
 }
 
-.bms-dashboard-note {
+.bs-dashboard-note {
   margin: 0;
   font-size: 0.95rem;
 }
 
-.bms-dashboard-frame {
+.bs-dashboard-frame {
   width: 100%;
   max-width: 100%;
   min-width: 0;
@@ -48,7 +48,7 @@ format:
   background: #fff;
 }
 
-.bms-dashboard-frame iframe {
+.bs-dashboard-frame iframe {
   display: block;
   width: 100%;
   max-width: 100%;
@@ -56,27 +56,27 @@ format:
   border: 0;
 }
 
-.bms-coming-soon {
+.bs-coming-soon {
   max-width: 72rem;
   margin-top: 2rem;
 }
 
 @media (max-width: 767.98px) {
-  .bms-dashboard-frame iframe {
+  .bs-dashboard-frame iframe {
     height: 900px;
   }
 }
 </style>
 
-::::::::::::::::::::::::: bms-page-shell
+::::::::::::::::::::::::: bs-page-shell
 
-::::: {.bms-match-predictor}
+::::: {.bs-match-predictor}
 
 
-::: {.bms-coming-soon}
+::: {.bs-coming-soon}
 ## Coming soon
 
-A future Backgammon Made Simple Match Predictor is planned to add:
+A future Backgammon Simplified Match Predictor is planned to add:
 
 - ER versus ER match predictions;
 - OpenGammon profile comparisons;
@@ -93,7 +93,7 @@ The application may take a moment to start, particularly after a period of inact
 
 ::::
 
-<div class="bms-dashboard-frame">
+<div class="bs-dashboard-frame">
   <iframe
     src="https://martygale.shinyapps.io/open-gammon-skill-analytics/"
     title="OpenGammon Skill Analytics dashboard"

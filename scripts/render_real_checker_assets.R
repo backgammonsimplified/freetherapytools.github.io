@@ -130,6 +130,9 @@ save_svg <- function(plot, path) {
 position <- arrangement_to_position(position_document)
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
+# External backgammonboard compatibility contract: its public preset registry
+# supports only "default" and "bms". Keep this exact literal until that package
+# publishes a BS-named preset; do not infer or introduce an alias here.
 starting <- ggboard(
   position,
   colors = board_colors("bms"),

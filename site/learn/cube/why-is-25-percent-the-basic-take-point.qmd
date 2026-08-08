@@ -26,7 +26,7 @@ terms:
   - volatility
   - equity
 level: Foundation
-body-classes: bms-learn-article
+body-classes: bs-learn-article
 page-layout: article
 toc: true
 toc-depth: 2
@@ -34,7 +34,7 @@ execute:
   enabled: false
 ---
 
-::: {.bms-lesson-meta}
+::: {.bs-lesson-meta}
 Concept: Taking a double  
 Level: Foundation  
 Prerequisite: Basic doubling-cube rules
@@ -43,7 +43,7 @@ Prerequisite: Basic doubling-cube rules
 
 ## This lesson also answers
 
-::: {.bms-related-questions}
+::: {.bs-related-questions}
 - Why should I take when I am more likely to lose?
 - Why is losing two points sometimes better than passing for one?
 - Is exactly 25% a take or a pass?
@@ -51,7 +51,7 @@ Prerequisite: Basic doubling-cube rules
 - What assumptions are hidden inside the 25% rule?
 :::
 
-::: {.bms-lesson-preamble}
+::: {.bs-lesson-preamble}
 - The opponent has doubled the cube from 1 to 2.
 - Why raise the stakes if losing is still the most likely result.
 - This lesson compares taking with passing and explains why the simplified boundary is 25%.
@@ -64,22 +64,22 @@ This checker interaction uses a retained GNU 4-ply review. Select a candidate
 to compare its resulting board, equity, equity loss, and winning probabilities.
 
 <div
-  class="bms-lesson-analysis-host"
-  data-bms-checker-decision
-  data-bms-fixture-src="/data/checker-sage-gnu-disagreement-001.json"
-  data-bms-fixture-id="checker-sage-gnu-disagreement-001"
+  class="bs-lesson-analysis-host"
+  data-bs-checker-decision
+  data-bs-fixture-src="/data/checker-sage-gnu-disagreement-001.json"
+  data-bs-fixture-id="checker-sage-gnu-disagreement-001"
 ></div>
 
-<details class="bms-analyzer-embed">
+<details class="bs-analyzer-embed">
 <summary>Explore this position in the analyzer</summary>
 
-<div class="bms-analyzer-frame bms-analyzer-placeholder" role="status">
+<div class="bs-analyzer-frame bs-analyzer-placeholder" role="status">
 <p><strong>XGID: TBD</strong></p>
 <p>TODO: Add the verified lesson XGID before creating the lazy-loaded iframe and position-specific direct link.</p>
 </div>
 
-<p class="bms-analyzer-fallback">
-<a href="https://backgammon-made-simple.shinyapps.io/position-dashboard/">Open the analyzer and enter an XGID</a>
+<p class="bs-analyzer-fallback">
+<a href="https://backgammon-simplified.shinyapps.io/position-dashboard/">Open the analyzer and enter an XGID</a>
 </p>
 </details>
 
@@ -92,8 +92,8 @@ to compare its resulting board, equity, equity loss, and winning probabilities.
 - Taking is not the same as predicting a win.
 - VERIFY: decide how the exact boundary should be described after notation is accepted.
 
-::: {.bms-callout}
-::: {.bms-callout-title}
+::: {.bs-callout}
+::: {.bs-callout-title}
 Key idea
 :::
 
@@ -131,7 +131,7 @@ A take is not a prediction that you will win. It is a comparison between continu
 - Explain the logic in words before displaying the final formula.
 
 ::: {.column-margin}
-::: {.bms-margin-definition}
+::: {.bs-margin-definition}
 **Decision boundary**
 
 The point where the two available choices have equal value. The technical term **take point** becomes useful after this comparison is understood.
@@ -140,7 +140,7 @@ The point where the two available choices have equal value. The technical term *
 
 ## What the simplified model leaves out
 
-::: {.bms-assumption-box}
+::: {.bs-assumption-box}
 - Gammons and backgammons.
 - Ownership of the cube after taking.
 - Future redoubles.
@@ -152,7 +152,7 @@ The point where the two available choices have equal value. The technical term *
 Each omitted feature matters because it can change what winning, losing, or owning the next cube decision is worth.
 
 ::: {.column-margin}
-::: {.bms-related-note}
+::: {.bs-related-note}
 **Related planned lesson**
 
 Why Is the Take Point Not Always 25%?

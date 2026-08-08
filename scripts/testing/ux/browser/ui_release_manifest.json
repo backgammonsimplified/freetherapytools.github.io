@@ -46,49 +46,49 @@
       "name": "Homepage",
       "route": "/",
       "kind": "home",
-      "required_markers": ["Backgammon Made Simple"]
+      "required_markers": ["Backgammon Simplified"]
     },
     {
       "id": "learn-index",
       "name": "Learn index",
       "route": "/learn/",
       "kind": "learn-index",
-      "required_markers": ["data-bms-learn-filters", "data-bms-learn-list"]
+      "required_markers": ["data-bs-learn-filters", "data-bs-learn-list"]
     },
     {
       "id": "cube-index",
       "name": "Cube track index",
       "route": "/learn/cube/",
       "kind": "learn-index",
-      "required_markers": ["data-bms-learn-filters", "data-bms-learn-list"]
+      "required_markers": ["data-bs-learn-filters", "data-bs-learn-list"]
     },
     {
       "id": "cube-lesson",
       "name": "Cube lesson",
       "route": "/learn/cube/what-the-cube-is-asking.html",
       "kind": "learn-lesson",
-      "required_markers": ["data-bms-cube-decision"]
+      "required_markers": ["data-bs-cube-decision"]
     },
     {
       "id": "take-point-lesson",
       "name": "Take-point lesson",
       "route": "/learn/cube/why-is-25-percent-the-basic-take-point.html",
       "kind": "learn-lesson",
-      "required_markers": ["data-bms-checker-decision"]
+      "required_markers": ["data-bs-checker-decision"]
     },
     {
       "id": "research-index",
       "name": "Research index",
       "route": "/research/",
       "kind": "research-index",
-      "required_markers": ["data-bms-research-list"]
+      "required_markers": ["data-bs-research-list"]
     },
     {
       "id": "research-article",
       "name": "Research continuous article",
       "route": "/research/sage-vs-gnu-additional-details.html",
       "kind": "research-article",
-      "required_markers": ["bms-research-article"]
+      "required_markers": ["bs-research-article"]
     },
     {
       "id": "engine-benchmark",
@@ -109,21 +109,21 @@
       "name": "Analyzer landing page",
       "route": "/analyze/",
       "kind": "analyzer",
-      "required_markers": ["bms-position-preview-frame"]
+      "required_markers": ["bs-position-preview-frame"]
     },
     {
       "id": "match-predictor",
       "name": "Match Predictor",
       "route": "/match-predictor/",
       "kind": "match-predictor",
-      "required_markers": ["bms-dashboard-frame"]
+      "required_markers": ["bs-dashboard-frame"]
     },
     {
       "id": "glossary",
       "name": "Glossary",
       "route": "/glossary/",
       "kind": "glossary",
-      "required_markers": ["data-bms-glossary-filters", "data-bms-glossary-entry"]
+      "required_markers": ["data-bs-glossary-filters", "data-bs-glossary-entry"]
     },
     {
       "id": "about",

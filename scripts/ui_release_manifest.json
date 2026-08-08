@@ -18,42 +18,42 @@
       "name": "Homepage",
       "route": "/",
       "kind": "home",
-      "required_markers": ["Backgammon Made Simple"]
+      "required_markers": ["Backgammon Simplified"]
     },
     {
       "id": "learn-index",
       "name": "Learn index",
       "route": "/learn/",
       "kind": "learn-index",
-      "required_markers": ["data-bms-learn-filters", "data-bms-learn-list"]
+      "required_markers": ["data-bs-learn-filters", "data-bs-learn-list"]
     },
     {
       "id": "cube-index",
       "name": "Cube track index",
       "route": "/learn/cube/",
       "kind": "learn-index",
-      "required_markers": ["data-bms-learn-filters", "data-bms-learn-list"]
+      "required_markers": ["data-bs-learn-filters", "data-bs-learn-list"]
     },
     {
       "id": "cube-lesson",
       "name": "Cube lesson",
       "route": "/learn/cube/what-the-cube-is-asking.html",
       "kind": "learn-lesson",
-      "required_markers": ["data-bms-cube-decision"]
+      "required_markers": ["data-bs-cube-decision"]
     },
     {
       "id": "research-article",
       "name": "Research continuous article",
       "route": "/research/sage-vs-gnu-additional-details.html",
       "kind": "research-article",
-      "required_markers": ["bms-research-article"]
+      "required_markers": ["bs-research-article"]
     },
     {
       "id": "glossary",
       "name": "Glossary",
       "route": "/glossary/",
       "kind": "glossary",
-      "required_markers": ["data-bms-glossary-filters", "data-bms-glossary-entry"]
+      "required_markers": ["data-bs-glossary-filters", "data-bs-glossary-entry"]
     },
     {
       "id": "analyze",

@@ -29,7 +29,7 @@ already cached or installed.
 - `social_generator/requirements-social.txt`: Jinja2, PyYAML, playwright,
   Pillow, and fonttools (pinned).
 - `social_generator/requirements-social.R`: R `yaml`.
-- `scripts/bms-setup-server-environment.sh`: Quarto 1.10.15 and Playwright
+- `scripts/bs-setup-server-environment.sh`: Quarto 1.10.15 and Playwright
   Chromium, plus the established local-environment layout.
 
 If verification reports a missing system tool, install that tool outside the

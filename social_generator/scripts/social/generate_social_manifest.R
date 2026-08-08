@@ -103,7 +103,7 @@ cards <- list(
     as_text(home$description, "description", home_path)
   ),
   make_card(
-    "github-backgammon-made-simple",
+    "github-backgammon-simplified",
     "github",
     as_text(home$title, "title", home_path),
     "Question-driven lessons, position analysis and backgammon research."

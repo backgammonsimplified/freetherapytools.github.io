@@ -1,0 +1,14 @@
+legacy-dispositions:
+  schema-id: "https://backgammonsimplified.github.io/schemas/legacy-dispositions-v1"
+  canonical-origin: "https://backgammonsimplified.github.io"
+  hosts:
+    - origin: "https://backgammon-made-simple.github.io"
+      disposition: legacy
+      canonical: false
+  routes:
+    - source: "/learn/glossary/"
+      target: "/glossary/"
+      disposition: redirect
+      mechanism: static-client-redirect
+      canonical: false
+      indexing: "noindex, follow"

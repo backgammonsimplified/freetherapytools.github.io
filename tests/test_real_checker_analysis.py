@@ -103,9 +103,9 @@ class RealCheckerAnalysisTests(unittest.TestCase):
 
     def test_lesson_loads_real_projection_and_browser_does_not_apply_moves(self):
         source = LESSON.read_text(encoding="utf-8")
-        self.assertIn('data-bms-fixture-src="/data/checker-sage-gnu-disagreement-001.json"', source)
-        self.assertIn('data-bms-fixture-id="checker-sage-gnu-disagreement-001"', source)
-        browser = (ROOT / "site" / "assets" / "bms-lesson-analysis.js").read_text(encoding="utf-8")
+        self.assertIn('data-bs-fixture-src="/data/checker-sage-gnu-disagreement-001.json"', source)
+        self.assertIn('data-bs-fixture-id="checker-sage-gnu-disagreement-001"', source)
+        browser = (ROOT / "site" / "assets" / "bs-lesson-analysis.js").read_text(encoding="utf-8")
         self.assertNotIn("board_moves", browser)
         self.assertNotIn("apply_board_moves", browser)
         self.assertIn("position.image.src = assetUrl", browser)

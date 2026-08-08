@@ -43,11 +43,11 @@ assert.equal(DEFAULT_MANIFEST.baseline_screenshot_viewport_names.length, 2);
 assert.equal(DEFAULT_MANIFEST.failure_screenshot_limit, 30);
 assert.equal(EXPECTED_CONTINUOUS_APPEND_COUNT, 1);
 assert.deepEqual(continuousConfigForPage({ kind: "learn-lesson" }), {
-  markerSelector: ".bms-learn-scroll-lesson-marker",
-  routeAttribute: "data-bms-learn-scroll-lesson-route",
-  sentinelSelector: ".bms-learn-scroll-sentinel",
-  endSelector: "[data-bms-learn-scroll-end]",
-  namespace: "bms-learn-scroll-"
+  markerSelector: ".bs-learn-scroll-lesson-marker",
+  routeAttribute: "data-bs-learn-scroll-lesson-route",
+  sentinelSelector: ".bs-learn-scroll-sentinel",
+  endSelector: "[data-bs-learn-scroll-end]",
+  namespace: "bs-learn-scroll-"
 });
 assert.equal(continuousConfigForPage({ kind: "ordinary" }), null);
 

@@ -19,23 +19,23 @@ assert SPEC and SPEC.loader
 learn_glossary = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(learn_glossary)
 
-PRE_RENDER_PATH = ROOT / "scripts" / "bms_pre_render.py"
+PRE_RENDER_PATH = ROOT / "scripts" / "bs_pre_render.py"
 PRE_RENDER_SPEC = importlib.util.spec_from_file_location(
-    "bms_pre_render",
+    "bs_pre_render",
     PRE_RENDER_PATH,
 )
 assert PRE_RENDER_SPEC and PRE_RENDER_SPEC.loader
-bms_pre_render = importlib.util.module_from_spec(PRE_RENDER_SPEC)
-PRE_RENDER_SPEC.loader.exec_module(bms_pre_render)
+bs_pre_render = importlib.util.module_from_spec(PRE_RENDER_SPEC)
+PRE_RENDER_SPEC.loader.exec_module(bs_pre_render)
 
-POST_RENDER_PATH = ROOT / "scripts" / "bms_post_render.py"
+POST_RENDER_PATH = ROOT / "scripts" / "bs_post_render.py"
 POST_RENDER_SPEC = importlib.util.spec_from_file_location(
-    "bms_post_render",
+    "bs_post_render",
     POST_RENDER_PATH,
 )
 assert POST_RENDER_SPEC and POST_RENDER_SPEC.loader
-bms_post_render = importlib.util.module_from_spec(POST_RENDER_SPEC)
-POST_RENDER_SPEC.loader.exec_module(bms_post_render)
+bs_post_render = importlib.util.module_from_spec(POST_RENDER_SPEC)
+POST_RENDER_SPEC.loader.exec_module(bs_post_render)
 
 
 @contextmanager
@@ -192,15 +192,15 @@ private code phrase
                 {str(entry["slug"]): str(entry["term"]) for entry in self.entries},
             )
         )
-        self.assertIn("data-bms-search-primary=", markup)
-        self.assertIn("data-bms-search-body=", markup)
+        self.assertIn("data-bs-search-primary=", markup)
+        self.assertIn("data-bs-search-body=", markup)
         self.assertIn(str(lesson["title"]), markup)
         self.assertIn(str(lesson["description"]), markup)
         self.assertIn("Doubling Cube", markup)
         self.assertIn("worked position", markup.casefold())
         self.assertNotIn(":::", markup)
         self.assertNotIn("{ }", markup)
-        self.assertNotIn("data-bms-search=", markup)
+        self.assertNotIn("data-bs-search=", markup)
 
     def test_research_sequence_is_sorted_and_linked(self) -> None:
         sequence = learn_glossary.build_research_sequence(
@@ -252,18 +252,18 @@ private code phrase
     def test_single_page_has_unique_canonical_anchors_and_collapsed_terms(self) -> None:
         canonical = {str(entry["slug"]) for entry in self.entries}
         anchors = re.findall(
-            r'<details class="bms-glossary-entry" id="([^"]+)"',
+            r'<details class="bs-glossary-entry" id="([^"]+)"',
             self.entries_html,
         )
         self.assertEqual(len(anchors), 12)
         self.assertEqual(len(set(anchors)), 12)
         self.assertEqual(set(anchors), canonical)
         self.assertEqual(
-            self.entries_html.count('class="bms-glossary-entry-summary"'),
+            self.entries_html.count('class="bs-glossary-entry-summary"'),
             12,
         )
         entry_tags = re.findall(
-            r'<details class="bms-glossary-entry"[^>]*>',
+            r'<details class="bs-glossary-entry"[^>]*>',
             self.entries_html,
         )
         self.assertEqual(len(entry_tags), 12)
@@ -295,9 +295,9 @@ private code phrase
             "abt",
         )
         self.assertNotIn("ahead-in-the-race", canonical)
-        self.assertEqual(self.entries_html.count('data-bms-alias="'), 3)
+        self.assertEqual(self.entries_html.count('data-bs-alias="'), 3)
         self.assertIn(
-            'data-bms-aliases="[&quot;ahead-in-the-race&quot;]"',
+            'data-bs-aliases="[&quot;ahead-in-the-race&quot;]"',
             self.entries_html,
         )
         self.assertNotIn('id="ahead-in-the-race"', self.entries_html)
@@ -305,11 +305,11 @@ private code phrase
 
     def test_full_definitions_usage_and_related_links_are_initial_html(self) -> None:
         self.assertEqual(
-            self.entries_html.count('class="bms-glossary-definition"'),
+            self.entries_html.count('class="bs-glossary-definition"'),
             12,
         )
         self.assertEqual(
-            self.entries_html.count('class="bms-glossary-short-definition"'),
+            self.entries_html.count('class="bs-glossary-short-definition"'),
             12,
         )
         zone = next(
@@ -321,15 +321,15 @@ private code phrase
             zone["definition"],
         )
         self.assertIn(
-            'data-bms-glossary-slug="active-builder" '
-            'data-bms-definition-link="active-builder">active builders</a>',
+            'data-bs-glossary-slug="active-builder" '
+            'data-bs-definition-link="active-builder">active builders</a>',
             self.entries_html,
         )
         self.assertNotIn('target="_blank"', self.entries_html)
-        self.assertNotIn("bms-learn-card-taxonomy", self.entries_html)
-        self.assertNotIn("bms-research-post-taxonomy", self.entries_html)
+        self.assertNotIn("bs-learn-card-taxonomy", self.entries_html)
+        self.assertNotIn("bs-research-post-taxonomy", self.entries_html)
         self.assertNotIn("Link to this term", self.entries_html)
-        self.assertNotIn("bms-glossary-anchor", self.entries_html)
+        self.assertNotIn("bs-glossary-anchor", self.entries_html)
         self.assertEqual(
             sum(len(value) for value in self.related_lessons.values()),
             sum(
@@ -356,10 +356,10 @@ private code phrase
         )
         for forbidden in (
             "canonical-url:",
-            "bms-glossary-term-navigation",
+            "bs-glossary-term-navigation",
             'rel="prev"',
             'rel="next"',
-            "bms-glossary-term-card",
+            "bs-glossary-term-card",
         ):
             self.assertNotIn(forbidden, self.entries_html)
 
@@ -378,7 +378,7 @@ private code phrase
         self.assertIn("sidebar: false", source)
         self.assertNotIn("sidebar: learn", source)
         self.assertIn(
-            'canonical-url: "https://backgammon-made-simple.github.io/glossary/"',
+            'canonical-url: "https://backgammonsimplified.github.io/glossary/"',
             source,
         )
         self.assertEqual(source.count("social-card-slug: glossary"), 1)
@@ -409,22 +409,22 @@ private code phrase
 
     def test_letter_sections_open_and_term_disclosures_do_not(self) -> None:
         letter_tags = re.findall(
-            r'<details class="bms-glossary-letter-group"[^>]*>',
+            r'<details class="bs-glossary-letter-group"[^>]*>',
             self.entries_html,
         )
         self.assertGreater(len(letter_tags), 0)
         self.assertTrue(all(" open" in tag for tag in letter_tags))
         self.assertEqual(
-            self.entries_html.count("data-bms-glossary-collapse-all"),
+            self.entries_html.count("data-bs-glossary-collapse-all"),
             1,
         )
         self.assertEqual(
-            self.entries_html.count("data-bms-glossary-expand-all"),
+            self.entries_html.count("data-bs-glossary-expand-all"),
             1,
         )
         self.assertRegex(
             self.entries_html,
-            r"data-bms-glossary-expand-all[^>]*disabled",
+            r"data-bs-glossary-expand-all[^>]*disabled",
         )
         self.assertIn('href="#letter-a"', self.entries_html)
         self.assertIn('id="letter-a"', self.entries_html)
@@ -432,7 +432,7 @@ private code phrase
 
     def test_fragment_search_and_letter_behavior_are_wired(self) -> None:
         javascript = (
-            learn_glossary.SITE_ROOT / "assets" / "bms-glossary.js"
+            learn_glossary.SITE_ROOT / "assets" / "bs-glossary.js"
         ).read_text(encoding="utf-8")
         for required in (
             "function canonicalSlugForFragment",
@@ -458,17 +458,17 @@ private code phrase
         term_lookup = (
             learn_glossary.SITE_ROOT
             / "_extensions"
-            / "bms-term-lookup"
-            / "bms-term-lookup.lua"
+            / "bs-term-lookup"
+            / "bs-term-lookup.lua"
         ).read_text(encoding="utf-8")
         self.assertRegex(
             term_lookup,
             r'<form action="/glossary/" method="get" '
-            r"data-bms-term-lookup-form",
+            r"data-bs-term-lookup-form",
         )
         self.assertRegex(term_lookup, r'<input[^>]*name="q"')
         self.assertIn(
-            'aria-controls="bms-term-lookup-panel" aria-expanded="true"',
+            'aria-controls="bs-term-lookup-panel" aria-expanded="true"',
             term_lookup,
         )
         self.assertNotIn(
@@ -481,8 +481,8 @@ private code phrase
         link_policy = (
             learn_glossary.SITE_ROOT
             / "_extensions"
-            / "bms-link-policy"
-            / "bms-link-policy.lua"
+            / "bs-link-policy"
+            / "bs-link-policy.lua"
         ).read_text(encoding="utf-8")
         self.assertIn("function Link(link)", link_policy)
         self.assertIn("link.attributes.target = nil", link_policy)
@@ -534,35 +534,35 @@ private code phrase
             encoding="utf-8"
         )
         self.assertIn(
-            "](https://backgammon-made-simple.shinyapps.io/",
+            "](https://backgammon-simplified.shinyapps.io/",
             analyze,
         )
-        self.assertIn("bms-analyze-page", analyze)
+        self.assertIn("bs-analyze-page", analyze)
         self.assertIn("term-lookup: false", analyze)
 
         match_predictor = (
             learn_glossary.SITE_ROOT / "match-predictor" / "index.qmd"
         ).read_text(encoding="utf-8")
         self.assertIn("term-lookup: false", match_predictor)
-        self.assertIn("bms-match-predictor-page", match_predictor)
+        self.assertIn("bs-match-predictor-page", match_predictor)
 
         engine_benchmark = (
             learn_glossary.SITE_ROOT / "engine-benchmark" / "index.qmd"
         ).read_text(encoding="utf-8")
-        self.assertIn("bms-engine-benchmark-page", engine_benchmark)
+        self.assertIn("bs-engine-benchmark-page", engine_benchmark)
         engine_stage = (
             learn_glossary.SITE_ROOT
             / "engine-benchmark"
             / "sage-vs-gnu-stage1"
             / "index.qmd"
         ).read_text(encoding="utf-8")
-        self.assertIn("bms-engine-benchmark-page", engine_stage)
+        self.assertIn("bs-engine-benchmark-page", engine_stage)
 
         research_index = (
             learn_glossary.SITE_ROOT / "research" / "index.qmd"
         ).read_text(encoding="utf-8")
-        self.assertIn("bms-research-index", research_index)
-        self.assertNotIn("bms-research-article", research_index)
+        self.assertIn("bs-research-index", research_index)
+        self.assertNotIn("bs-research-article", research_index)
         self.assertNotIn("term-lookup: false", research_index)
         for research_article in (
             "what-we-are-building.qmd",
@@ -571,13 +571,13 @@ private code phrase
             article_source = (
                 learn_glossary.SITE_ROOT / "research" / research_article
             ).read_text(encoding="utf-8")
-            self.assertIn("bms-research-article", article_source)
+            self.assertIn("bs-research-article", article_source)
 
         link_policy = (
             learn_glossary.SITE_ROOT
             / "_extensions"
-            / "bms-link-policy"
-            / "bms-link-policy.lua"
+            / "bs-link-policy"
+            / "bs-link-policy.lua"
         ).read_text(encoding="utf-8")
         self.assertIn("link.attributes.target = nil", link_policy)
         self.assertNotIn("link.attributes.download =", link_policy)
@@ -643,11 +643,11 @@ private code phrase
             generated.index(str(self.cube_lessons[0]["title"]))
             < generated.index(str(self.cube_lessons[1]["title"]))
         )
-        self.assertNotIn("data-bms-filter-track", generated)
+        self.assertNotIn("data-bs-filter-track", generated)
         self.assertEqual(
             set(
                 re.findall(
-                    r'data-bms-filter-term="([^"]+)"',
+                    r'data-bs-filter-term="([^"]+)"',
                     generated,
                 )
             ),
@@ -877,20 +877,20 @@ private code phrase
         extension = (
             learn_glossary.SITE_ROOT
             / "_extensions"
-            / "bms-research-taxonomy"
-            / "bms-research-taxonomy.lua"
+            / "bs-research-taxonomy"
+            / "bs-research-taxonomy.lua"
         ).read_text(encoding="utf-8")
         for forbidden in (
             "initializeResearchToc",
             "setResearchTocExpanded",
-            "bms-research-toc-toggle",
+            "bs-research-toc-toggle",
             'classList.toggle("collapse"',
         ):
             self.assertNotIn(forbidden, extension)
         for required in (
             "initializeResearchTaxonomyToggle",
-            "bms-post-taxonomy-toggle",
-            "bms-post-taxonomy--collapsed",
+            "bs-post-taxonomy-toggle",
+            "bs-post-taxonomy--collapsed",
             "Hide article categories and tags",
             "Show article categories and tags",
             'toggle.textContent = collapsed ? "\\u25be" : "\\u25b4"',
@@ -947,9 +947,9 @@ private code phrase
             )
             self.assertTrue(resolved.is_file(), resolved)
         self.assertNotRegex(source, r"[A-Za-z]:\\")
-        self.assertIn("data-bms-cube-decision", source)
+        self.assertIn("data-bs-cube-decision", source)
         self.assertIn(
-            'data-bms-fixture-src="/data/lesson-analysis-svg-mvp.json"',
+            'data-bs-fixture-src="/data/lesson-analysis-svg-mvp.json"',
             source,
         )
         self.assertIn("[Back to the cube overview](index.qmd)", source)
@@ -1009,26 +1009,26 @@ private code phrase
                 encoding="utf-8"
             )
         )
-        self.assertEqual(catalogue.count("data-bms-learn-item"), len(self.lessons))
+        self.assertEqual(catalogue.count("data-bs-learn-item"), len(self.lessons))
         self.assertEqual(
-            catalogue.count('class="bms-learn-catalogue-description"'),
+            catalogue.count('class="bs-learn-catalogue-description"'),
             len(self.lessons),
         )
         self.assertNotRegex(
             catalogue,
-            r'<details class="bms-learn-catalogue-description"[^>]*\sopen',
+            r'<details class="bs-learn-catalogue-description"[^>]*\sopen',
         )
         self.assertEqual(
             catalogue.count(
-                '<details class="bms-learn-catalogue-section" '
-                "data-bms-learn-group"
+                '<details class="bs-learn-catalogue-section" '
+                "data-bs-learn-group"
             ),
             3,
         )
-        self.assertNotIn("bms-learn-track-number", catalogue)
+        self.assertNotIn("bs-learn-track-number", catalogue)
         self.assertEqual(
             re.findall(
-                r'<a class="bms-learn-catalogue-link"[^>]*>(\d+)\. ',
+                r'<a class="bs-learn-catalogue-link"[^>]*>(\d+)\. ',
                 catalogue,
             ),
             [
@@ -1037,23 +1037,23 @@ private code phrase
                 for index in range(1, len(section["lessons"]) + 1)
             ],
         )
-        self.assertNotIn("bms-learn-catalogue-tag", catalogue)
+        self.assertNotIn("bs-learn-catalogue-tag", catalogue)
         self.assertNotIn(">Description<", catalogue)
         self.assertIn("Difficulty Filter", catalogue)
         self.assertIn("Learning Track Filter", catalogue)
         self.assertIn("Term Filter", catalogue)
         self.assertIn(
-            '<summary class="bms-learn-filters-summary">'
+            '<summary class="bs-learn-filters-summary">'
             "Click to search and filter lessons</summary>",
             catalogue,
         )
         self.assertNotRegex(
             catalogue,
-            r'<details class="bms-learn-filter-panel"[^>]*\sopen',
+            r'<details class="bs-learn-filter-panel"[^>]*\sopen',
         )
-        self.assertIn("data-bms-filter-term", catalogue)
-        self.assertEqual(catalogue.count("data-bms-learn-collapse-all"), 1)
-        self.assertEqual(catalogue.count("data-bms-learn-expand-all"), 1)
+        self.assertIn("data-bs-filter-term", catalogue)
+        self.assertEqual(catalogue.count("data-bs-learn-collapse-all"), 1)
+        self.assertEqual(catalogue.count("data-bs-learn-expand-all"), 1)
         for lesson in self.lessons:
             self.assertIn(
                 f'href="{lesson["route"]}">'
@@ -1092,7 +1092,7 @@ private code phrase
             generated_track = (
                 track["path"].parent / "_lesson-index.html"
             ).read_text(encoding="utf-8")
-            self.assertIn('data-bms-learn-mode="track"', generated_track)
+            self.assertIn('data-bs-learn-mode="track"', generated_track)
             self.assertIn("Click to search and filter lessons", generated_track)
             self.assertIn("Term Filter", generated_track)
             self.assertNotIn("Learning Track Filter", generated_track)
@@ -1105,7 +1105,7 @@ private code phrase
             learn_glossary.SITE_ROOT / "_quarto.yml",
             learn_glossary.SITE_ROOT / "404.qmd",
             learn_glossary.LEARN_ROOT / "index.qmd",
-            ROOT / "scripts" / "bms_post_render.py",
+            ROOT / "scripts" / "bs_post_render.py",
         ]
         for path in public_sources:
             self.assertNotIn(
@@ -1116,8 +1116,8 @@ private code phrase
         taxonomy_filter = (
             learn_glossary.SITE_ROOT
             / "_extensions"
-            / "bms-learn-taxonomy"
-            / "bms-learn-taxonomy.lua"
+            / "bs-learn-taxonomy"
+            / "bs-learn-taxonomy.lua"
         ).read_text(encoding="utf-8")
         self.assertIn('href="/learn/?track=', taxonomy_filter)
 
@@ -1133,10 +1133,10 @@ private code phrase
             encoding="utf-8"
         )
         difficulty_buttons = set(
-            re.findall(r'data-bms-filter-difficulty="([^"]+)"', generated)
+            re.findall(r'data-bs-filter-difficulty="([^"]+)"', generated)
         )
         term_buttons = set(
-            re.findall(r'data-bms-filter-term="([^"]+)"', generated)
+            re.findall(r'data-bs-filter-term="([^"]+)"', generated)
         )
         cube_curriculum_lessons = [
             lesson
@@ -1156,7 +1156,7 @@ private code phrase
         }
         self.assertEqual(difficulty_buttons, expected_difficulties)
         self.assertEqual(term_buttons, expected_terms)
-        self.assertNotIn("data-bms-filter-track", generated)
+        self.assertNotIn("data-bs-filter-track", generated)
         self.assertEqual(
             generated.count('aria-pressed="false"'),
             len(difficulty_buttons) + len(term_buttons),
@@ -1165,8 +1165,8 @@ private code phrase
         taxonomy_filter = (
             learn_glossary.SITE_ROOT
             / "_extensions"
-            / "bms-learn-taxonomy"
-            / "bms-learn-taxonomy.lua"
+            / "bs-learn-taxonomy"
+            / "bs-learn-taxonomy.lua"
         ).read_text(encoding="utf-8")
         self.assertIn('doc.meta["lesson-taxonomy"]', taxonomy_filter)
         self.assertIn('doc.meta["learn-track"]', taxonomy_filter)
@@ -1186,17 +1186,17 @@ private code phrase
         self,
     ) -> None:
         css = (
-            learn_glossary.SITE_ROOT / "assets" / "bms-learn.css"
+            learn_glossary.SITE_ROOT / "assets" / "bs-learn.css"
         ).read_text(encoding="utf-8")
         self.assertFalse(
             (learn_glossary.LEARN_ROOT / "_lesson-listing.ejs.md").exists()
         )
         self.assertEqual(learn_glossary.roman_number(1), "I")
         self.assertEqual(learn_glossary.roman_number(3), "III")
-        self.assertNotIn(".bms-learn-track-number", css)
-        self.assertNotIn(".bms-learn-lesson-number", css)
+        self.assertNotIn(".bs-learn-track-number", css)
+        self.assertNotIn(".bs-learn-lesson-number", css)
         self.assertNotIn(
-            ".bms-learn-catalogue-item + .bms-learn-catalogue-item",
+            ".bs-learn-catalogue-item + .bs-learn-catalogue-item",
             css,
         )
         for lesson in self.cube_lessons:
@@ -1250,48 +1250,48 @@ private code phrase
         )
         self.assertNotIn("Backgammon Glossary", learn_navigation)
         self.assertNotIn("glossary/index.qmd", learn_navigation)
-        self.assertIn("assets/bms-glossary-lookup.json", config)
-        self.assertIn("assets/bms-research-sequence.json", config)
+        self.assertIn("assets/bs-glossary-lookup.json", config)
+        self.assertIn("assets/bs-research-sequence.json", config)
         scripts_include = (
-            learn_glossary.SITE_ROOT / "includes" / "bms-scripts.html"
+            learn_glossary.SITE_ROOT / "includes" / "bs-scripts.html"
         ).read_text(encoding="utf-8")
-        self.assertIn("assets/bms-research-scroll.js", scripts_include)
+        self.assertIn("assets/bs-research-scroll.js", scripts_include)
 
         javascript = (
-            learn_glossary.SITE_ROOT / "assets" / "bms-learn.js"
+            learn_glossary.SITE_ROOT / "assets" / "bs-learn.js"
         ).read_text(encoding="utf-8")
         for required in (
             "initializeMobileLessonBar",
             "initializeLearnLeftSidebarToggle",
-            "bms-learn-left-sidebar-toggle",
+            "bs-learn-left-sidebar-toggle",
             "Hide Learn table of contents",
             "Show Learn table of contents",
             "isMobileDrawerSwipe",
-            "bms-mobile-tools-drawer",
-            "bms-mobile-tools-edge",
+            "bs-mobile-tools-drawer",
+            "bs-mobile-tools-edge",
             "Open table of contents and term search",
             'links.removeAttribute("id")',
             r"\u2190 Expand Lesson Index",
             r"Look Up a Term \u2192",
-            "data-bms-site-back-to-top",
-            "data-bms-toc-toggle",
-            "data-bms-margin-sidebar-toggle",
-            "bms-site-tools--sidebar",
-            "bms-site-tools--editorial-dock",
-            "bms-site-tools--floating",
-            'aria-controls="bms-term-lookup-panel"',
+            "data-bs-site-back-to-top",
+            "data-bs-toc-toggle",
+            "data-bs-margin-sidebar-toggle",
+            "bs-site-tools--sidebar",
+            "bs-site-tools--editorial-dock",
+            "bs-site-tools--floating",
+            'aria-controls="bs-term-lookup-panel"',
             'aria-controls="quarto-margin-sidebar"',
             "Collapse term lookup",
             "Collapse TOC",
             "Expand TOC",
             "Collapse all right sidebar content",
             "Expand all right sidebar content",
-            "bms-toc-collapsed",
-            "bms-margin-sidebar-collapsed",
+            "bs-toc-collapsed",
+            "bs-margin-sidebar-collapsed",
             "marginSidebar.appendChild(tools)",
             "const mountTocHeadingToggle = function",
             "const bindTocHeadingToggle = function",
-            "toggle.dataset.bmsTocToggleBound",
+            "toggle.dataset.bsTocToggleBound",
             "const boundTocHeadingToggles = new WeakSet()",
             "tocCloneObserver = new MutationObserver",
             "const tocCandidates = Array.from(document.querySelectorAll(\"#TOC\"));",
@@ -1302,23 +1302,23 @@ private code phrase
             "isSamePageTocHref",
             "tocObserver = new MutationObserver",
             "inEditorialDock",
-            "bms-research-index",
+            "bs-research-index",
             "desktopCollapsed",
             "tocCollapsed",
             "marginSidebarCollapsed",
             "const preservePagePosition = function",
             "window.setTimeout(restore, 180)",
-            "/assets/bms-glossary-lookup.json",
+            "/assets/bs-glossary-lookup.json",
             "renderLookupResult",
             "related_lessons",
             "Go to glossary entry",
             "isMainSiteIndex",
             "lookupDisabled",
-            'document.body.classList.contains("bms-learn-index")',
-            'document.body.classList.contains("bms-learn-track-index")',
-            'document.body.classList.contains("bms-analyze-page")',
-            'document.body.classList.contains("bms-match-predictor-page")',
-            'document.body.classList.contains(\n      "bms-glossary-index"',
+            'document.body.classList.contains("bs-learn-index")',
+            'document.body.classList.contains("bs-learn-track-index")',
+            'document.body.classList.contains("bs-analyze-page")',
+            'document.body.classList.contains("bs-match-predictor-page")',
+            'document.body.classList.contains(\n      "bs-glossary-index"',
             "(!glossarySearch || glossaryIndexPage)",
             "if (glossarySearch && !lookup)",
             "const updateGlossaryLookupForScroll = function",
@@ -1339,63 +1339,63 @@ private code phrase
         self.assertIn('aria-label="Open term lookup"', javascript)
 
         css = (
-            learn_glossary.SITE_ROOT / "assets" / "bms-learn.css"
+            learn_glossary.SITE_ROOT / "assets" / "bs-learn.css"
         ).read_text(encoding="utf-8")
         catalogue_section_css = re.search(
-            r"\.bms-learn-catalogue-section \{([^}]*)\}",
+            r"\.bs-learn-catalogue-section \{([^}]*)\}",
             css,
         )
         self.assertIsNotNone(catalogue_section_css)
         self.assertNotIn("border-top:", catalogue_section_css.group(1))
         self.assertNotIn("border-bottom:", catalogue_section_css.group(1))
         self.assertIn(
-            ".bms-learn-filter[aria-pressed=\"true\"]:hover",
+            ".bs-learn-filter[aria-pressed=\"true\"]:hover",
             css,
         )
-        self.assertIn("color: var(--bms-ivory)", css)
+        self.assertIn("color: var(--bs-ivory)", css)
         self.assertIn(
-            ".bms-site-tools--floating .bms-term-lookup-close",
+            ".bs-site-tools--floating .bs-term-lookup-close",
             css,
         )
         self.assertIn("position: absolute", css)
         self.assertIn("top: 0.75rem", css)
         self.assertIn("right: 0", css)
         self.assertIn(
-            "body:is(.bms-learn-index, .bms-learn-track-index)"
-            " .bms-learn-clear",
+            "body:is(.bs-learn-index, .bs-learn-track-index)"
+            " .bs-learn-clear",
             css,
         )
         self.assertRegex(
             css,
-            r"body:is\(\.bms-learn-index, \.bms-learn-track-index\)"
-            r"\s+\.bms-learn-filter-disclosure \{\s+border-top: 0;",
+            r"body:is\(\.bs-learn-index, \.bs-learn-track-index\)"
+            r"\s+\.bs-learn-filter-disclosure \{\s+border-top: 0;",
         )
         self.assertRegex(
             css,
-            r"\.bms-learn-filters-summary \{[^}]*"
+            r"\.bs-learn-filters-summary \{[^}]*"
             r"padding: 0\.35rem 0\.55rem;",
         )
         self.assertRegex(
             css,
-            r"\.bms-learn-catalogue-link \{[^}]*"
-            r"color: var\(--bms-text\);[^}]*"
+            r"\.bs-learn-catalogue-link \{[^}]*"
+            r"color: var\(--bs-text\);[^}]*"
             r"font-size: 1rem;[^}]*"
             r"font-weight: 400;[^}]*"
             r"line-height: 1\.15;",
         )
         self.assertRegex(
             css,
-            r"\.bms-learn-track-heading \[data-bms-learn-group-count\] "
+            r"\.bs-learn-track-heading \[data-bs-learn-group-count\] "
             r"\{[^}]*margin-left: 0\.35rem;",
         )
         self.assertRegex(
             css,
-            r"body\.bms-glossary-index \.bms-site-tools--floating "
+            r"body\.bs-glossary-index \.bs-site-tools--floating "
             r"\{[^}]*top: 5rem;[^}]*bottom: auto;",
         )
         self.assertRegex(
             css,
-            r"\.bms-learn-catalogue-title-row \{[^}]*"
+            r"\.bs-learn-catalogue-title-row \{[^}]*"
             r"grid-template-columns: minmax\(0, 1fr\);",
         )
         self.assertNotIn(
@@ -1404,77 +1404,77 @@ private code phrase
         )
         self.assertRegex(
             css,
-            r"body:is\(\.bms-learn-index, \.bms-learn-article\)"
+            r"body:is\(\.bs-learn-index, \.bs-learn-article\)"
             r"\s+#quarto-sidebar\s+\.sidebar-link \{[^}]*"
             r"line-height: 1\.15;",
         )
         self.assertRegex(
             css,
-            r"body\.bms-learn-article #quarto-margin-sidebar \{[^}]*"
+            r"body\.bs-learn-article #quarto-margin-sidebar \{[^}]*"
             r"width: clamp\(10rem, 16vw, 18rem\);[^}]*"
             r"min-width: clamp\(10rem, 16vw, 18rem\);",
         )
         self.assertRegex(
             css,
-            r"body\.bms-engine-benchmark-page #quarto-margin-sidebar \{[^}]*"
+            r"body\.bs-engine-benchmark-page #quarto-margin-sidebar \{[^}]*"
             r"width: clamp\(10rem, 16vw, 18rem\);[^}]*"
             r"min-width: clamp\(10rem, 16vw, 18rem\);",
         )
         self.assertRegex(
             css,
-            r"\.bms-site-tools--editorial-dock \{[^}]*"
+            r"\.bs-site-tools--editorial-dock \{[^}]*"
             r"padding-top: 0;[^}]*border-top: 0;",
         )
         self.assertRegex(
             css,
-            r"\.bms-site-tools--sidebar \.bms-term-lookup-reveal \{[^}]*"
+            r"\.bs-site-tools--sidebar \.bs-term-lookup-reveal \{[^}]*"
             r"width: auto;[^}]*"
-            r"background: var\(--bms-page-background\);[^}]*"
-            r"color: var\(--bms-text-muted\);[^}]*"
+            r"background: var\(--bs-page-background\);[^}]*"
+            r"color: var\(--bs-text-muted\);[^}]*"
             r"white-space: nowrap;",
         )
         self.assertRegex(
             css,
-            r"body\.bms-glossary-index\s+"
-            r"\.bms-site-tools--floating\s+"
-            r"\.bms-term-lookup-reveal \{[^}]*"
+            r"body\.bs-glossary-index\s+"
+            r"\.bs-site-tools--floating\s+"
+            r"\.bs-term-lookup-reveal \{[^}]*"
             r"width: auto;[^}]*"
             r"padding-inline: 0\.45rem;[^}]*"
-            r"background: var\(--bms-page-background\);[^}]*"
-            r"color: var\(--bms-text-muted\);[^}]*"
+            r"background: var\(--bs-page-background\);[^}]*"
+            r"color: var\(--bs-text-muted\);[^}]*"
             r"font-size: 0\.72rem;[^}]*"
             r"font-weight: 500;[^}]*"
             r"white-space: nowrap;",
         )
         self.assertRegex(
             css,
-            r"\.bms-site-tools > \.bms-term-lookup-reveal \{[^}]*"
+            r"\.bs-site-tools > \.bs-term-lookup-reveal \{[^}]*"
             r"width: 1\.45rem;[^}]*min-height: 1\.45rem;[^}]*"
             r"padding: 0;",
         )
         self.assertRegex(
             css,
-            r"\.bms-site-tools > \.bms-site-back-to-top \{[^}]*"
+            r"\.bs-site-tools > \.bs-site-back-to-top \{[^}]*"
             r"min-width: 8\.5rem;",
         )
         self.assertRegex(
             css,
-            r"\.bms-site-tools--sidebar \.bms-site-back-to-top \{[^}]*"
+            r"\.bs-site-tools--sidebar \.bs-site-back-to-top \{[^}]*"
             r"align-self: flex-end;[^}]*width: auto;[^}]*"
             r"min-width: 0;[^}]*min-height: 1\.45rem;[^}]*"
-            r"color: var\(--bms-text-muted\);[^}]*"
+            r"color: var\(--bs-text-muted\);[^}]*"
             r"font-size: 0\.72rem;[^}]*font-weight: 500;",
         )
         self.assertRegex(
             css,
-            r"body\.bms-analyze-page \.bms-site-tools--floating,[^}]*"
+            r"body\.bs-analyze-page \.bs-site-tools--floating,[^}]*"
             r"left: calc\(50% \+ 26\.625rem\);",
         )
         self.assertRegex(
             css,
-            r"\.bms-term-lookup-controls button \{[^}]*"
-            r"background: var\(--bms-surface\);[^}]*"
-            r"color: var\(--bms-link\);",
+            r"\.bs-term-lookup-controls button \{[^}]*"
+            r"background: var\(--bs-surface\);[^}]*"
+            r"color: var\(--bs-link\);",
         )
         for required in (
             "#quarto-margin-sidebar > *",
@@ -1482,37 +1482,37 @@ private code phrase
             "#quarto-margin-sidebar #TOC[data-toc-expanded] ul.collapse",
             "#quarto-toc-toggle",
             "display: none !important",
-            "#quarto-margin-sidebar .bms-site-tools",
-            ".bms-site-tools--sidebar .bms-term-lookup-reveal",
-            ".bms-site-tools--sidebar .bms-toc-toggle",
-            ".bms-site-tools--sidebar .bms-margin-sidebar-toggle",
-            ".bms-site-tools--sidebar .bms-site-back-to-top",
-            "#quarto-margin-sidebar.bms-margin-sidebar-collapsed",
-            "#quarto-margin-sidebar.bms-toc-collapsed:not(.bms-refined-right-rail) #TOC",
-            "> :not(.bms-margin-sidebar-toggle)",
-            ".bms-site-tools--floating",
-            ".bms-site-tools--editorial-dock",
-            ".bms-term-lookup--floating",
+            "#quarto-margin-sidebar .bs-site-tools",
+            ".bs-site-tools--sidebar .bs-term-lookup-reveal",
+            ".bs-site-tools--sidebar .bs-toc-toggle",
+            ".bs-site-tools--sidebar .bs-margin-sidebar-toggle",
+            ".bs-site-tools--sidebar .bs-site-back-to-top",
+            "#quarto-margin-sidebar.bs-margin-sidebar-collapsed",
+            "#quarto-margin-sidebar.bs-toc-collapsed:not(.bs-refined-right-rail) #TOC",
+            "> :not(.bs-margin-sidebar-toggle)",
+            ".bs-site-tools--floating",
+            ".bs-site-tools--editorial-dock",
+            ".bs-term-lookup--floating",
             "z-index: 1060",
         ):
             self.assertIn(required, css)
 
     def test_mobile_brand_wraps_and_has_a_narrow_screen_fallback(self) -> None:
         css = (
-            learn_glossary.SITE_ROOT / "assets" / "bms-shared.css"
+            learn_glossary.SITE_ROOT / "assets" / "bs-shared.css"
         ).read_text(encoding="utf-8")
         for required in (
             ".navbar-brand-container > .navbar-brand-logo",
             "white-space: normal",
             ".quarto-secondary-nav .quarto-page-breadcrumbs",
             "@media (max-width: 350px)",
-            'content: "BMS"',
+            'content: "BS"',
         ):
             self.assertIn(required, css)
 
     def test_desktop_site_scale_is_125_percent_without_changing_mobile(self) -> None:
         css = (
-            learn_glossary.SITE_ROOT / "assets" / "bms-shared.css"
+            learn_glossary.SITE_ROOT / "assets" / "bs-shared.css"
         ).read_text(encoding="utf-8")
         self.assertRegex(
             css,
@@ -1525,24 +1525,24 @@ private code phrase
         self,
     ) -> None:
         javascript = (
-            learn_glossary.SITE_ROOT / "assets" / "bms-learn.js"
+            learn_glossary.SITE_ROOT / "assets" / "bs-learn.js"
         ).read_text(encoding="utf-8")
         for required in (
             "refinedRightRailPage",
             "engineBenchmarkPage",
             '? "Expand TOC"',
             ': "Collapse TOC"',
-            "bms-research-article",
-            "bms-lesson-track-content",
-            'querySelectorAll("[data-bms-lesson-track-nav]")',
+            "bs-research-article",
+            "bs-lesson-track-content",
+            'querySelectorAll("[data-bs-lesson-track-nav]")',
             "trackContent.hidden = tocCollapsed",
             "preservePagePosition(function ()",
-            "bms-toc-heading-toggle",
+            "bs-toc-heading-toggle",
             'tocHeadingToggle.setAttribute("aria-controls", tocLinks.id)',
             "const visiblyCollapsed =",
             'clickedToggle.getAttribute("aria-expanded") === "false"',
             '"Table of Contents \\u25be"',
-            "bms-toc-toggle-divider",
+            "bs-toc-toggle-divider",
             "placeTocHeadingToggleBeforeLinks",
             "toc.insertBefore(divider, tocLinks)",
             "updateLookupForScroll",
@@ -1550,16 +1550,16 @@ private code phrase
             "updateRightRailForScroll",
             "rightRailScrollCollapsed = currentScrollY > lastRightRailScrollY",
             "suppressRightRailAutoCollapse",
-            '"bms-refined-right-rail-scroll-collapsed"',
+            '"bs-refined-right-rail-scroll-collapsed"',
             "lastRightRailScrollY = window.scrollY",
             "positionRefinedRightTools",
             "placeRefinedBackToTop",
-            '"--bms-refined-tools-left"',
-            '"--bms-refined-tools-width"',
-            '"--bms-refined-tools-top"',
+            '"--bs-refined-tools-left"',
+            '"--bs-refined-tools-width"',
+            '"--bs-refined-tools-top"',
             "sidebarBounds.width * 3",
-            '"--bms-refined-tools-right"',
-            'backToTop.classList.toggle("bms-refined-back-to-top", refined)',
+            '"--bs-refined-tools-right"',
+            'backToTop.classList.toggle("bs-refined-back-to-top", refined)',
             "document.body.appendChild(backToTop)",
             "marginSidebar.getBoundingClientRect()",
             "document.documentElement.clientWidth",
@@ -1574,11 +1574,11 @@ private code phrase
             "preservePinned",
         ):
             self.assertNotIn(removed, javascript)
-        self.assertNotIn("data.bmsLessonTrackToggle", javascript)
+        self.assertNotIn("data.bsLessonTrackToggle", javascript)
         for required in (
             '<span aria-hidden="true">&larr;</span> Term Search',
             'toggle.textContent = active ? "\\u2192 Show Lessons" : "\\u2190 Hide"',
-            '"bms-learn-left-sidebar-toggle--nav-hidden"',
+            '"bs-learn-left-sidebar-toggle--nav-hidden"',
             'pageHeader.classList.contains("headroom--unpinned")',
             "pageScrollingDown = currentScrollY > lastScrollY",
             'attributeFilter: ["class"]',
@@ -1592,19 +1592,22 @@ private code phrase
             "!keepExpandedWhileScrolling &&",
             "sidebarScroller.addEventListener",
             "let autoCollapsePending = window.scrollY <= 32",
+            "if (!keepExpandedWhileScrolling && collapsed)",
+            "collapsed = false",
+            "lastScrollY = currentScrollY",
             "autoCollapsePending &&",
             "collapsed = true",
         ):
             self.assertIn(required, javascript)
         self.assertNotIn("initializeDistractionFreeMode", javascript)
-        self.assertNotIn("bms-distraction-free", javascript)
+        self.assertNotIn("bs-distraction-free", javascript)
         left_sidebar_toggle = javascript[
             javascript.index("  function initializeLearnLeftSidebarToggle") :
             javascript.index("  function findIdWithinRoot")
         ]
         self.assertEqual(
             left_sidebar_toggle.count("!keepExpandedWhileScrolling &&"),
-            2,
+            3,
         )
         glossary_scroll = javascript[
             javascript.index("    const updateGlossaryLookupForScroll") :
@@ -1614,32 +1617,32 @@ private code phrase
         self.assertNotIn("open({ focusInput: false });", glossary_scroll)
 
         css = (
-            learn_glossary.SITE_ROOT / "assets" / "bms-learn.css"
+            learn_glossary.SITE_ROOT / "assets" / "bs-learn.css"
         ).read_text(encoding="utf-8")
         for required in (
-            "body.bms-learn-article:not(.bms-learn-track-index)",
+            "body.bs-learn-article:not(.bs-learn-track-index)",
             "width: clamp(10rem, 16vw, 18rem)",
             "font-size: 0.78rem",
-            ".bms-lesson-track-collapsed",
-            ".bms-refined-right-rail.bms-toc-collapsed",
-            ".bms-refined-right-rail-scroll-collapsed",
-            "#TOC\n    > :not(.bms-toc-toggle-divider)",
-            "> .bms-lesson-track-nav",
-            ".bms-research-article",
-            ".bms-toc-toggle-divider",
-            ".bms-toc-heading-toggle",
-            '.bms-toc-heading-toggle[aria-expanded="false"]',
-            ":is(.bms-toc-toggle, .bms-margin-sidebar-toggle)",
-            ".bms-term-lookup-close",
-            ".bms-term-lookup-browse",
-            "background: var(--bms-page-background)",
-            "outline: 2px solid var(--bms-link-hover)",
+            ".bs-lesson-track-collapsed",
+            ".bs-refined-right-rail.bs-toc-collapsed",
+            ".bs-refined-right-rail-scroll-collapsed",
+            "#TOC\n    > :not(.bs-toc-toggle-divider)",
+            "> .bs-lesson-track-nav",
+            ".bs-research-article",
+            ".bs-toc-toggle-divider",
+            ".bs-toc-heading-toggle",
+            '.bs-toc-heading-toggle[aria-expanded="false"]',
+            ":is(.bs-toc-toggle, .bs-margin-sidebar-toggle)",
+            ".bs-term-lookup-close",
+            ".bs-term-lookup-browse",
+            "background: var(--bs-page-background)",
+            "outline: 2px solid var(--bs-link-hover)",
             "@media (min-width: 992px)",
         ):
             self.assertIn(required, css)
         refined_lookup_heading = re.search(
-            r"\.bms-term-lookup-heading \{([^}]*)\}",
-            css[css.index("body:is(\n      .bms-research-article") :],
+            r"\.bs-term-lookup-heading \{([^}]*)\}",
+            css[css.index("body:is(\n      .bs-research-article") :],
         )
         self.assertIsNotNone(refined_lookup_heading)
         self.assertIn(
@@ -1647,34 +1650,34 @@ private code phrase
             refined_lookup_heading.group(1),
         )
         self.assertIn("top: 0.9rem", css)
-        self.assertGreaterEqual(css.count(".bms-engine-benchmark-page"), 18)
+        self.assertGreaterEqual(css.count(".bs-engine-benchmark-page"), 18)
         self.assertRegex(
             css,
-            r"body\.bms-engine-benchmark-page\s+"
-            r"\.bms-toc-heading-toggle\[aria-expanded\] "
+            r"body\.bs-engine-benchmark-page\s+"
+            r"\.bs-toc-heading-toggle\[aria-expanded\] "
             r"\{[^}]*width: auto;[^}]*"
             r"white-space: nowrap;",
         )
         self.assertRegex(
             css,
-            r"\.bms-site-tools--sidebar \{[^}]*"
+            r"\.bs-site-tools--sidebar \{[^}]*"
             r"padding-top: 0\.15rem;[^}]*border-top: 0;",
         )
         self.assertIn(
-            ".bms-refined-right-rail-scroll-collapsed\n"
-            "    > :not(#TOC):not(.bms-site-tools)",
+            ".bs-refined-right-rail-scroll-collapsed\n"
+            "    > :not(#TOC):not(.bs-site-tools)",
             css,
         )
         self.assertNotIn(
-            ".bms-refined-right-rail-scroll-collapsed\n"
-            "    .bms-term-lookup",
+            ".bs-refined-right-rail-scroll-collapsed\n"
+            "    .bs-term-lookup",
             css,
         )
-        self.assertNotIn(".bms-lesson-track-toggle", css)
-        self.assertNotIn(".bms-distraction-free-toggle", css)
+        self.assertNotIn(".bs-lesson-track-toggle", css)
+        self.assertNotIn(".bs-distraction-free-toggle", css)
         self.assertRegex(
             css,
-            r"\.bms-toc-toggle-divider \{[^}]*"
+            r"\.bs-toc-toggle-divider \{[^}]*"
             r"margin: 0\.3rem 0 0\.15rem;[^}]*\}",
         )
         self.assertIn(
@@ -1683,44 +1686,44 @@ private code phrase
         )
         self.assertRegex(
             css,
-            r"\.bms-term-lookup-close \{[^}]*"
+            r"\.bs-term-lookup-close \{[^}]*"
             r"display: inline-flex;[^}]*"
             r"width: 1\.35rem;[^}]*"
             r"padding: 0;",
         )
         self.assertRegex(
             css,
-            r"\.bms-site-tools--sidebar \{[^}]*"
+            r"\.bs-site-tools--sidebar \{[^}]*"
             r"position: fixed;[^}]*"
-            r"top: var\(--bms-refined-tools-top, 8rem\);[^}]*"
-            r"left: var\(--bms-refined-tools-left, auto\);[^}]*"
-            r"width: var\(--bms-refined-tools-width,[^}]*"
+            r"top: var\(--bs-refined-tools-top, 8rem\);[^}]*"
+            r"left: var\(--bs-refined-tools-left, auto\);[^}]*"
+            r"width: var\(--bs-refined-tools-width,[^}]*"
             r"align-items: flex-end;",
         )
         self.assertRegex(
             css,
-            r"\.bms-site-tools--sidebar\s+"
-            r"\.bms-term-lookup \{[^}]*"
+            r"\.bs-site-tools--sidebar\s+"
+            r"\.bs-term-lookup \{[^}]*"
             r"position: static;[^}]*"
             r"width: 50%;[^}]*"
             r"align-self: flex-end;",
         )
         self.assertRegex(
             css,
-            r"\.bms-learn-left-sidebar-toggle--nav-hidden,[^}]*"
+            r"\.bs-learn-left-sidebar-toggle--nav-hidden,[^}]*"
             r"#quarto-header\.headroom--unpinned[^}]*"
             r"top: 0\.5rem;",
         )
         self.assertRegex(
             css,
-            r"\.bms-term-lookup-reveal \{[^}]*"
+            r"\.bs-term-lookup-reveal \{[^}]*"
             r"align-self: flex-end;",
         )
         self.assertRegex(
             css,
-            r"button\.bms-refined-back-to-top \{[^}]*"
+            r"button\.bs-refined-back-to-top \{[^}]*"
             r"position: fixed;[^}]*"
-            r"right: var\(--bms-refined-tools-right, 0\.75rem\);[^}]*"
+            r"right: var\(--bs-refined-tools-right, 0\.75rem\);[^}]*"
             r"bottom: 1rem;",
         )
 
@@ -1733,15 +1736,15 @@ private code phrase
         analyze = (
             learn_glossary.SITE_ROOT / "analyze" / "index.qmd"
         ).read_text(encoding="utf-8")
-        self.assertNotIn("bms-learn-article", learn_home)
-        self.assertIn("bms-learn-track-index", cube_landing)
-        self.assertNotIn("bms-research-article", analyze)
+        self.assertNotIn("bs-learn-article", learn_home)
+        self.assertIn("bs-learn-track-index", cube_landing)
+        self.assertNotIn("bs-research-article", analyze)
 
     def test_mobile_articles_use_a_swipeable_left_page_tools_drawer(
         self,
     ) -> None:
         javascript = (
-            learn_glossary.SITE_ROOT / "assets" / "bms-learn.js"
+            learn_glossary.SITE_ROOT / "assets" / "bs-learn.js"
         ).read_text(encoding="utf-8")
         self.assertIn("input.focus({ preventScroll: true });", javascript)
         self.assertIn(
@@ -1750,29 +1753,29 @@ private code phrase
         )
 
         css = (
-            learn_glossary.SITE_ROOT / "assets" / "bms-learn.css"
+            learn_glossary.SITE_ROOT / "assets" / "bs-learn.css"
         ).read_text(encoding="utf-8")
         for required in (
             "@media (max-width: 991.98px)",
-            ".bms-mobile-tools-edge",
+            ".bs-mobile-tools-edge",
             "left: 0;",
             "width: 0.42rem;",
-            ".bms-mobile-tools-drawer",
+            ".bs-mobile-tools-drawer",
             "transform: translateX(-102%);",
-            ".bms-mobile-tools-drawer--open",
-            ".bms-mobile-tools-toc",
-            ".bms-mobile-tools-drawer .bms-term-lookup",
-            "[data-bms-site-term-toggle]",
+            ".bs-mobile-tools-drawer--open",
+            ".bs-mobile-tools-toc",
+            ".bs-mobile-tools-drawer .bs-term-lookup",
+            "[data-bs-site-term-toggle]",
             "display: none !important;",
-            ".bms-mobile-term-toggle {\n    display: none;",
-            "color: var(--bms-text-muted);",
+            ".bs-mobile-term-toggle {\n    display: none;",
+            "color: var(--bs-text-muted);",
         ):
             self.assertIn(required, css)
-        self.assertNotIn("@keyframes bms-term-lookup-slide-in", css)
+        self.assertNotIn("@keyframes bs-term-lookup-slide-in", css)
 
     def test_lookup_result_uses_full_definition(self) -> None:
         javascript = (
-            learn_glossary.SITE_ROOT / "assets" / "bms-learn.js"
+            learn_glossary.SITE_ROOT / "assets" / "bs-learn.js"
         ).read_text(encoding="utf-8")
         lookup_renderer = javascript[
             javascript.index("  function renderLookupResult(") :
@@ -1789,14 +1792,14 @@ private code phrase
 
     def test_lookup_related_terms_replace_the_sidebar_result(self) -> None:
         javascript = (
-            learn_glossary.SITE_ROOT / "assets" / "bms-learn.js"
+            learn_glossary.SITE_ROOT / "assets" / "bs-learn.js"
         ).read_text(encoding="utf-8")
         lookup_renderer = javascript[
             javascript.index("  function renderLookupResult(") :
             javascript.index("  function initializeTermLookup()")
         ]
         self.assertIn(
-            'button.dataset.bmsTermLookupRelated = related.slug;',
+            'button.dataset.bsTermLookupRelated = related.slug;',
             lookup_renderer,
         )
         self.assertIn('button.type = "button";', lookup_renderer)
@@ -1806,7 +1809,7 @@ private code phrase
         )
         self.assertNotIn("new Set(items.map", lookup_renderer)
         self.assertIn(
-            'event.target.closest("[data-bms-term-lookup-related]")',
+            'event.target.closest("[data-bs-term-lookup-related]")',
             javascript,
         )
         self.assertIn("detail: { slug: slug, focusResult: true }", javascript)
@@ -1817,7 +1820,7 @@ private code phrase
         )
         open_by_slug = javascript[
             javascript.index(
-                'document.addEventListener("bms:open-glossary-term"'
+                'document.addEventListener("bs:open-glossary-term"'
             ) :
             javascript.index(
                 'const legacyBackToTop = document.querySelector('
@@ -1829,21 +1832,21 @@ private code phrase
 
     def test_glossary_related_terms_use_the_page_term_lookup(self) -> None:
         javascript = (
-            learn_glossary.SITE_ROOT / "assets" / "bms-glossary.js"
+            learn_glossary.SITE_ROOT / "assets" / "bs-glossary.js"
         ).read_text(encoding="utf-8")
         self.assertIn(
             "detail: { slug: canonicalSlug, focusResult: true }",
             javascript,
         )
         self.assertIn(
-            '"[data-bms-term-lookup-form]"',
+            '"[data-bs-term-lookup-form]"',
             javascript,
         )
         self.assertIn("if (slug && !pageTermLookup)", javascript)
 
     def test_learn_client_initialization_is_idempotent(self) -> None:
         javascript = (
-            learn_glossary.SITE_ROOT / "assets" / "bms-learn.js"
+            learn_glossary.SITE_ROOT / "assets" / "bs-learn.js"
         ).read_text(encoding="utf-8")
         initializer = javascript[
             javascript.index(
@@ -1852,23 +1855,23 @@ private code phrase
             javascript.index("      initializeLearnFilters();")
         ]
         self.assertIn(
-            'document.documentElement.dataset.bmsLearnInitialized === "true"',
+            'document.documentElement.dataset.bsLearnInitialized === "true"',
             initializer,
         )
         self.assertIn(
-            'document.documentElement.dataset.bmsLearnInitialized = "true";',
+            'document.documentElement.dataset.bsLearnInitialized = "true";',
             initializer,
         )
         self.assertEqual(
             javascript.count(
-                'document.documentElement.dataset.bmsLearnInitialized = "true";'
+                'document.documentElement.dataset.bsLearnInitialized = "true";'
             ),
             1,
         )
 
     def test_update_toc_null_guard_contract(self) -> None:
         javascript = (
-            learn_glossary.SITE_ROOT / "assets" / "bms-learn.js"
+            learn_glossary.SITE_ROOT / "assets" / "bs-learn.js"
         ).read_text(encoding="utf-8")
         update_toc = javascript[
             javascript.index("    const updateToc = function () {") :
@@ -1901,27 +1904,27 @@ private code phrase
 
     def test_lesson_right_rail_card_joins_sidebar_stack_contract(self) -> None:
         javascript = (
-            learn_glossary.SITE_ROOT / "assets" / "bms-learn.js"
+            learn_glossary.SITE_ROOT / "assets" / "bs-learn.js"
         ).read_text(encoding="utf-8")
         placement = javascript[
             javascript.index("  function placeLessonRightRailCards() {") :
             javascript.index("  function isMainSiteIndex() {")
         ]
         for required in (
-            'document.body.classList.contains("bms-learn-article")',
-            '!document.body.classList.contains("bms-learn-track-index")',
-            '".column-margin .bms-right-rail-card"',
+            'document.body.classList.contains("bs-learn-article")',
+            '!document.body.classList.contains("bs-learn-track-index")',
+            '".column-margin .bs-right-rail-card"',
             'document.getElementById("quarto-margin-sidebar")',
             'window.matchMedia("(min-width: 992px)")',
             'margin: card.closest(".column-margin")',
             "sidebar.appendChild(placement.card);",
             "placement.margin.hidden = true;",
             "placement.margin.hidden = false;",
-            'placement.card.classList.add("bms-right-rail-card--stacked")',
-            'placement.card.classList.remove("bms-right-rail-card--stacked")',
+            'placement.card.classList.add("bs-right-rail-card--stacked")',
+            'placement.card.classList.remove("bs-right-rail-card--stacked")',
         ):
             self.assertIn(required, placement)
-        self.assertNotIn("bms-research-article", placement)
+        self.assertNotIn("bs-research-article", placement)
         self.assertNotIn("position", placement)
         self.assertLess(
             javascript.index("      placeLessonTrackLinks();"),
@@ -1929,13 +1932,13 @@ private code phrase
         )
 
         css = (
-            learn_glossary.SITE_ROOT / "assets" / "bms-learn.css"
+            learn_glossary.SITE_ROOT / "assets" / "bs-learn.css"
         ).read_text(encoding="utf-8")
         self.assertRegex(
             css,
-            r"body\.bms-learn-article:not\(\.bms-learn-track-index\)"
+            r"body\.bs-learn-article:not\(\.bs-learn-track-index\)"
             r"\s+#quarto-margin-sidebar"
-            r"\s+> \.bms-right-rail-card--stacked \{[^}]*"
+            r"\s+> \.bs-right-rail-card--stacked \{[^}]*"
             r"width: 100%;[^}]*"
             r"margin: 1rem 0 0;[^}]*"
             r"box-sizing: border-box;",
@@ -1976,13 +1979,13 @@ private code phrase
         source = (learn_glossary.GLOSSARY_ROOT / "index.qmd").read_text(
             encoding="utf-8"
         )
-        clean_url = "https://backgammon-made-simple.github.io/glossary/"
+        clean_url = "https://backgammonsimplified.github.io/glossary/"
         self.assertIn(f'canonical-url: "{clean_url}"', source)
         self.assertNotIn("/glossary/index.html", source)
         generator = MODULE_PATH.read_text(encoding="utf-8")
         self.assertIn(f'"{clean_url}"', generator)
         self.assertNotIn(
-            '"https://backgammon-made-simple.github.io/glossary/index.html"',
+            '"https://backgammonsimplified.github.io/glossary/index.html"',
             generator,
         )
 
@@ -1997,7 +2000,7 @@ private code phrase
             "published: true",
             'sort: "date desc"',
             "feed:",
-            'title: "Backgammon Made Simple Updates"',
+            'title: "Backgammon Simplified Updates"',
         ):
             self.assertIn(required, source)
         self.assertNotIn("../posts/", source)
@@ -2049,19 +2052,19 @@ private code phrase
         )
         self.assertRegex(
             config,
-            r"pre-render:\s*\n\s*-\s+python ../scripts/bms_pre_render\.py",
+            r"pre-render:\s*\n\s*-\s+python ../scripts/bs_pre_render\.py",
         )
 
         with mock.patch.dict(os.environ, {}, clear=True):
             with (
                 mock.patch.object(
-                    bms_pre_render,
+                    bs_pre_render,
                     "invalidate_full_build_marker",
                     return_value=False,
                 ),
-                mock.patch.object(bms_pre_render, "run") as run,
+                mock.patch.object(bs_pre_render, "run") as run,
             ):
-                self.assertEqual(bms_pre_render.main(), 0)
+                self.assertEqual(bs_pre_render.main(), 0)
                 run.assert_called_once()
                 command = run.call_args.args[0]
                 self.assertIn("learn_glossary.py", " ".join(command))
@@ -2070,18 +2073,18 @@ private code phrase
         with mock.patch.dict(os.environ, {}, clear=True):
             with (
                 mock.patch.object(
-                    bms_pre_render,
+                    bs_pre_render,
                     "invalidate_full_build_marker",
                     return_value=False,
                 ),
                 mock.patch.object(
-                    bms_pre_render,
+                    bs_pre_render,
                     "run",
                     side_effect=RuntimeError("Generated files are stale"),
                 ),
             ):
                 with self.assertRaisesRegex(RuntimeError, "Generated files are stale"):
-                    bms_pre_render.main()
+                    bs_pre_render.main()
 
         with mock.patch.dict(
             os.environ,
@@ -2090,13 +2093,13 @@ private code phrase
         ):
             with (
                 mock.patch.object(
-                    bms_pre_render,
+                    bs_pre_render,
                     "invalidate_full_build_marker",
                     return_value=False,
                 ),
-                mock.patch.object(bms_pre_render, "run") as run,
+                mock.patch.object(bs_pre_render, "run") as run,
             ):
-                self.assertEqual(bms_pre_render.main(), 0)
+                self.assertEqual(bs_pre_render.main(), 0)
                 self.assertEqual(run.call_count, 2)
                 commands = [call.args[0] for call in run.call_args_list]
                 self.assertIn("learn_glossary.py", " ".join(commands[0]))
@@ -2107,19 +2110,19 @@ private code phrase
             os.environ,
             {
                 "QUARTO_PROJECT_RENDER_ALL": "1",
-                "BMS_SKIP_SOCIAL_CARDS": "1",
+                "BS_SKIP_SOCIAL_CARDS": "1",
             },
             clear=True,
         ):
             with (
                 mock.patch.object(
-                    bms_pre_render,
+                    bs_pre_render,
                     "invalidate_full_build_marker",
                     return_value=False,
                 ),
-                mock.patch.object(bms_pre_render, "run") as run,
+                mock.patch.object(bs_pre_render, "run") as run,
             ):
-                self.assertEqual(bms_pre_render.main(), 0)
+                self.assertEqual(bs_pre_render.main(), 0)
                 self.assertEqual(run.call_count, 1)
                 self.assertIn(
                     "learn_glossary.py",
@@ -2130,7 +2133,7 @@ private code phrase
             learn_glossary.REPOSITORY_ROOT / "scripts" / "preview-site.sh"
         ).read_text(encoding="utf-8")
         for required in (
-            "BMS_SKIP_SOCIAL_CARDS=1",
+            "BS_SKIP_SOCIAL_CARDS=1",
             'PORT="${1:-8765}"',
             'kill -0 "${STATIC_SERVER_PID}"',
             '-m http.server "${PORT}"',
@@ -2144,9 +2147,9 @@ private code phrase
             self.assertIn(required, preview_script)
 
         with writable_test_directory() as runtime:
-            marker = runtime / ".bms-full-build.json"
+            marker = runtime / ".bs-full-build.json"
             marker.write_text("stale", encoding="utf-8")
-            self.assertTrue(bms_pre_render.invalidate_full_build_marker(marker))
+            self.assertTrue(bs_pre_render.invalidate_full_build_marker(marker))
             self.assertFalse(marker.exists())
 
     def test_same_tab_policy_preserves_download_mailto_and_tel_destinations(
@@ -2155,8 +2158,8 @@ private code phrase
         link_policy = (
             learn_glossary.SITE_ROOT
             / "_extensions"
-            / "bms-link-policy"
-            / "bms-link-policy.lua"
+            / "bs-link-policy"
+            / "bs-link-policy.lua"
         ).read_text(encoding="utf-8")
         self.assertNotIn("link.target =", link_policy)
         self.assertNotIn("link.attributes.download =", link_policy)
@@ -2175,11 +2178,11 @@ private code phrase
         )
         self.assertRegex(
             config,
-            r"post-render:\s*\n\s*-\s+python ../scripts/bms_post_render\.py",
+            r"post-render:\s*\n\s*-\s+python ../scripts/bs_post_render\.py",
         )
-        unrelated = "https://backgammon-made-simple.github.io/research/index.html"
-        dirty = bms_post_render.GLOSSARY_INDEX_URL
-        clean = bms_post_render.GLOSSARY_CANONICAL_URL
+        unrelated = "https://backgammonsimplified.github.io/research/index.html"
+        dirty = bs_post_render.GLOSSARY_INDEX_URL
+        clean = bs_post_render.GLOSSARY_CANONICAL_URL
         source = (
             '<?xml version="1.0" encoding="UTF-8"?>\n'
             "<urlset>\n"
@@ -2187,7 +2190,7 @@ private code phrase
             f"  <url><loc>{dirty}</loc></url>\n"
             "</urlset>\n"
         )
-        normalized, changed = bms_post_render.normalized_glossary_sitemap_text(
+        normalized, changed = bs_post_render.normalized_glossary_sitemap_text(
             source
         )
         self.assertTrue(changed)
@@ -2195,7 +2198,7 @@ private code phrase
         self.assertNotIn(f"<loc>{dirty}</loc>", normalized)
         self.assertIn(f"<loc>{unrelated}</loc>", normalized)
         current, changed_again = (
-            bms_post_render.normalized_glossary_sitemap_text(normalized)
+            bs_post_render.normalized_glossary_sitemap_text(normalized)
         )
         self.assertFalse(changed_again)
         self.assertEqual(current, normalized)
@@ -2205,7 +2208,7 @@ private code phrase
             f"  <url><loc>{dirty}</loc><lastmod>new</lastmod></url>\n</urlset>",
         )
         repaired, repaired_changed = (
-            bms_post_render.normalized_glossary_sitemap_text(incremental)
+            bs_post_render.normalized_glossary_sitemap_text(incremental)
         )
         self.assertTrue(repaired_changed)
         self.assertEqual(repaired.count(f"<loc>{clean}</loc>"), 1)
@@ -2220,7 +2223,7 @@ private code phrase
             '<a href="/.\\research/">Research</a>'
             '<a href="/unrelated/">Unrelated</a>'
         )
-        normalized_404, changed = bms_post_render.normalized_404_text(dirty_404)
+        normalized_404, changed = bs_post_render.normalized_404_text(dirty_404)
         self.assertTrue(changed)
         for route in learn_glossary.NOT_FOUND_ROUTES:
             self.assertIn(f'href="{route}"', normalized_404)
@@ -2231,7 +2234,7 @@ private code phrase
             '<footer><a href="..\\..\\updates/index.xml">RSS</a></footer>'
         )
         normalized_footer, footer_changed = (
-            bms_post_render.normalized_footer_rss_text(dirty_footer)
+            bs_post_render.normalized_footer_rss_text(dirty_footer)
         )
         self.assertTrue(footer_changed)
         self.assertIn(
@@ -2244,11 +2247,11 @@ private code phrase
         )
 
     def test_post_render_preserves_legacy_glossary_queries_and_fragments(self) -> None:
-        redirect = bms_post_render.legacy_glossary_redirect_text()
-        self.assertIn('<meta name="robots" content="noindex">', redirect)
+        redirect = bs_post_render.legacy_glossary_redirect_text()
+        self.assertIn('<meta name="robots" content="noindex, follow">', redirect)
         self.assertIn(
             '<link rel="canonical" '
-            'href="https://backgammon-made-simple.github.io/glossary/">',
+            'href="https://backgammonsimplified.github.io/glossary/">',
             redirect,
         )
         self.assertIn('content="0; url=/glossary/"', redirect)
@@ -2261,29 +2264,29 @@ private code phrase
         base_feed = """<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Backgammon Made Simple Updates</title>
+    <title>Backgammon Simplified Updates</title>
     <item>
       <title>Newer lesson</title>
-      <link>https://backgammon-made-simple.github.io/learn/newer.html</link>
+      <link>https://backgammonsimplified.github.io/learn/newer.html</link>
       <pubDate>Fri, 31 Jul 2026 00:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
 """
-        records = bms_post_render.glossary_feed_records(self.data)
+        records = bs_post_render.glossary_feed_records(self.data)
         self.assertEqual(len(records), 12)
-        updated, changed = bms_post_render.augmented_updates_feed_text(
+        updated, changed = bs_post_render.augmented_updates_feed_text(
             base_feed,
             records,
         )
         self.assertTrue(changed)
         updated_again, changed_again = (
-            bms_post_render.augmented_updates_feed_text(updated, records)
+            bs_post_render.augmented_updates_feed_text(updated, records)
         )
         self.assertFalse(changed_again)
         self.assertEqual(updated_again, updated)
 
-        root = bms_post_render.ElementTree.fromstring(updated)
+        root = bs_post_render.ElementTree.fromstring(updated)
         items = root.findall("./channel/item")
         self.assertEqual(len(items), 13)
         self.assertEqual(items[0].findtext("title"), "Newer lesson")
@@ -2300,7 +2303,7 @@ private code phrase
         )
         self.assertEqual(
             zone.findtext("link"),
-            "https://backgammon-made-simple.github.io/glossary/"
+            "https://backgammonsimplified.github.io/glossary/"
             "#10-in-the-zone",
         )
         self.assertIn(
@@ -2312,7 +2315,7 @@ private code phrase
             "Thu, 30 Jul 2026 00:00:00 GMT",
         )
         encoded = zone.findtext(
-            f"{{{bms_post_render.RSS_NAMESPACES['content']}}}encoded",
+            f"{{{bs_post_render.RSS_NAMESPACES['content']}}}encoded",
             "",
         )
         self.assertIn("<p>The zone is your side of the board", encoded)
@@ -2328,7 +2331,7 @@ private code phrase
                 learn_glossary.validate_full_build_output(output_root)
 
             marker = output_root / learn_glossary.FULL_BUILD_MARKER_NAME
-            bms_post_render.write_full_build_marker(marker)
+            bs_post_render.write_full_build_marker(marker)
             with self.assertRaisesRegex(
                 learn_glossary.ValidationError,
                 "site output is incomplete",

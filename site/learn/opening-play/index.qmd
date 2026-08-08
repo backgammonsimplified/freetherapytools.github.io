@@ -5,7 +5,7 @@ sidebar: learn
 learn-track-index: opening-play
 learn-track-order: 3
 page-layout: full
-body-classes: "bms-learn-article bms-learn-track-index"
+body-classes: "bs-learn-article bs-learn-track-index"
 toc: false
 term-lookup: false
 lesson-taxonomy: false

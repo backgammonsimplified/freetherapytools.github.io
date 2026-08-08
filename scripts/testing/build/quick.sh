@@ -25,16 +25,16 @@ done
 
 cd "${REPO_ROOT}"
 
-printf 'BMS quick build gate\n'
+printf 'BS quick build gate\n'
 printf 'Repository: %s\n\n' "${REPO_ROOT}"
 
 printf '[1/5] Diff and deterministic fixture checks\n'
 git diff --check
 
 printf '\n[2/5] JavaScript syntax\n'
-node --check site/assets/bms-learn.js
-node --check site/assets/bms-learn-scroll.js
-node --check site/assets/bms-lesson-analysis.js
+node --check site/assets/bs-learn.js
+node --check site/assets/bs-learn-scroll.js
+node --check site/assets/bs-lesson-analysis.js
 node --check scripts/testing/ux/browser/release_ui_browser_check.mjs
 node --check scripts/testing/ux/browser/lesson_analysis_browser_check.mjs
 node --check scripts/testing/ux/browser/comprehensive_quality_browser_check.mjs
@@ -58,6 +58,7 @@ printf '\n[4/5] Focused Python contracts\n'
   tests.test_release_ui_checks \
   tests.test_lesson_analysis \
   tests.test_real_checker_analysis \
+  tests.test_publication_identity \
   tests.test_static_inventory \
   tests.test_quality_reports \
   -v

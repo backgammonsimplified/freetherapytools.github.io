@@ -11,8 +11,8 @@ Run in PowerShell. Replace the four expected values with the exact values in
 the task handoff.
 
 ```powershell
-$WebsiteRepo = 'C:\Users\andre\Documents\backgammon-made-simple.github.io'
-$TaskRepo = 'C:\Users\andre\Documents\task-management'
+$WebsiteRepo = 'C:\path\to\backgammonsimplified.github.io'
+$TaskRepo = 'C:\path\to\task-management'
 $TaskOutput = Join-Path $TaskRepo 'milestones\developer-tooling\codex-prompts\s016\visual-review'
 $ExpectedWebsiteBranch = '<website branch from handoff>'
 $ExpectedWebsiteCommit = '<website commit from handoff>'
@@ -47,7 +47,7 @@ and runs the static and rendered-site checks. Do not run Quarto renders
 concurrently.
 
 ```bash
-cd /c/Users/andre/Documents/backgammon-made-simple.github.io
+cd /c/path/to/backgammonsimplified.github.io
 .venv/Scripts/python.exe tests/test_release_ui_checks.py
 node tests/test_release_ui_browser_check.mjs
 bash scripts/testing/quick.sh
@@ -69,7 +69,7 @@ completed evidence, not an automatic pass.
 Run this in a dedicated Git Bash terminal and leave it running during capture:
 
 ```bash
-cd /c/Users/andre/Documents/backgammon-made-simple.github.io
+cd /c/path/to/backgammonsimplified.github.io
 bash scripts/preview-site.sh 8765
 ```
 

@@ -12,7 +12,8 @@ fi
 
 git switch master
 git pull --ff-only origin master
-BMS_NO_PREVIEW=1 bash scripts/windows-clean-build-and-test.sh
+BS_PUBLICATION_MODE=production BS_NO_PREVIEW=1 \
+  bash scripts/windows-clean-build-and-test.sh
 
 if [[ -n "$(git status --porcelain --untracked-files=no)" ]]; then
   printf 'ERROR: The build changed tracked files; review them before release.\n' >&2

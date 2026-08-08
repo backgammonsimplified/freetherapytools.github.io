@@ -14,10 +14,10 @@ const delay = (milliseconds) =>
 const componentSnapshot = (tab) =>
   tab.playwright.locator("html").evaluate(() => {
     const ids = Array.from(
-      document.querySelectorAll(".bms-lesson-analysis [id]")
+      document.querySelectorAll(".bs-lesson-analysis [id]")
     ).map((element) => element.id);
     return {
-      componentErrors: document.querySelectorAll(".bms-analysis-error").length,
+      componentErrors: document.querySelectorAll(".bs-analysis-error").length,
       duplicateComponentIds: Array.from(
         new Set(ids.filter((id, index) => ids.indexOf(id) !== index))
       ),
@@ -91,26 +91,26 @@ export async function runLessonAnalysisBrowserChecks({
       );
       try {
         const hosts = cubeTab.playwright.locator(
-          "[data-bms-cube-decision]"
+          "[data-bs-cube-decision]"
         );
         const first = hosts.nth(0);
         const second = hosts.nth(1);
         check((await hosts.count()) === 2, cubeContext, "two cube hosts mount");
         const initial = await cubeTab.playwright.locator("html").evaluate(() => {
           const instances = Array.from(
-            document.querySelectorAll("[data-bms-analysis-instance]")
+            document.querySelectorAll("[data-bs-analysis-instance]")
           );
           const starts = instances.map(
             (item) => item.querySelector("img")?.getAttribute("src") || ""
           );
           return {
             distinctInstances: new Set(
-              instances.map((item) => item.dataset.bmsAnalysisInstance)
+              instances.map((item) => item.dataset.bsAnalysisInstance)
             ).size,
             primaryImageLoaded: Boolean(
-              instances[0]?.querySelector(".bms-analysis-position-image")
+              instances[0]?.querySelector(".bs-analysis-position-image")
                 ?.complete &&
-                instances[0]?.querySelector(".bms-analysis-position-image")
+                instances[0]?.querySelector(".bs-analysis-position-image")
                   ?.naturalWidth > 0
             ),
             starts
@@ -138,12 +138,12 @@ export async function runLessonAnalysisBrowserChecks({
         );
 
         const rollButton = first.locator(
-          "button[data-bms-analysis-choice='roll']"
+          "button[data-bs-analysis-choice='roll']"
         );
         await rollButton.press("ENTER");
         const rollFocused = await first.evaluate(
           () =>
-            document.activeElement?.dataset.bmsAnalysisChoice === "roll"
+            document.activeElement?.dataset.bsAnalysisChoice === "roll"
         );
         check(
           rollFocused,
@@ -157,12 +157,12 @@ export async function runLessonAnalysisBrowserChecks({
         const beforeRoll = await first.evaluate(() => window.scrollY);
         await rollButton.click();
         const roll = await first.evaluate((element) => ({
-          answerOpen: element.querySelector(".bms-analysis-answer")?.open,
+          answerOpen: element.querySelector(".bs-analysis-answer")?.open,
           nested: element.querySelectorAll(
-            ".bms-analysis-disclosure--nested"
+            ".bs-analysis-disclosure--nested"
           ).length,
           summary: element
-            .querySelector(".bms-analysis-answer > summary")
+            .querySelector(".bs-analysis-answer > summary")
             ?.textContent.trim(),
           scrollY: window.scrollY
         }));
@@ -183,12 +183,12 @@ export async function runLessonAnalysisBrowserChecks({
         );
 
         await first
-          .locator("button[data-bms-analysis-choice='double']")
+          .locator("button[data-bs-analysis-choice='double']")
           .click();
         const double = await first.evaluate((element) => ({
-          responder: Boolean(element.querySelector(".bms-analysis-responder")),
+          responder: Boolean(element.querySelector(".bs-analysis-responder")),
           responderImage: element
-            .querySelector(".bms-analysis-responder img")
+            .querySelector(".bs-analysis-responder img")
             ?.getAttribute("src")
         }));
         check(double.responder, cubeContext, "Double reveals responder choice");
@@ -199,21 +199,21 @@ export async function runLessonAnalysisBrowserChecks({
         );
 
         await first
-          .locator("button[data-bms-analysis-choice='pass']")
+          .locator("button[data-bs-analysis-choice='pass']")
           .click();
         check(
           (await first
-            .locator(".bms-analysis-answer--response > summary")
+            .locator(".bs-analysis-answer--response > summary")
             .textContent()).trim() === "Pass: review the fixture answer",
           cubeContext,
           "Pass reveals response analysis"
         );
         await first
-          .locator("button[data-bms-analysis-choice='take']")
+          .locator("button[data-bs-analysis-choice='take']")
           .click();
         check(
           (await first
-            .locator(".bms-analysis-answer--response > summary")
+            .locator(".bs-analysis-answer--response > summary")
             .textContent()).trim() === "Take: fixture answer",
           cubeContext,
           "Take reveals the accepted response"
@@ -223,20 +223,20 @@ export async function runLessonAnalysisBrowserChecks({
           .getByText("Open the component-isolation fixture", { exact: true })
           .click();
         await second
-          .locator("button[data-bms-analysis-choice='roll']")
+          .locator("button[data-bs-analysis-choice='roll']")
           .click();
         const isolated = await cubeTab.playwright
           .locator("html")
           .evaluate(() => {
             const hosts = document.querySelectorAll(
-              "[data-bms-cube-decision]"
+              "[data-bs-cube-decision]"
             );
             return {
               firstTake: hosts[0]
-                .querySelector("button[data-bms-analysis-choice='take']")
+                .querySelector("button[data-bs-analysis-choice='take']")
                 ?.getAttribute("aria-pressed"),
               secondRoll: hosts[1]
-                .querySelector("button[data-bms-analysis-choice='roll']")
+                .querySelector("button[data-bs-analysis-choice='roll']")
                 ?.getAttribute("aria-pressed")
             };
           });
@@ -248,7 +248,7 @@ export async function runLessonAnalysisBrowserChecks({
         await scrollAndRestore(cubeTab);
         check(
           (await first
-            .locator("button[data-bms-analysis-choice='take']")
+            .locator("button[data-bs-analysis-choice='take']")
             .getAttribute("aria-pressed")) === "true",
           cubeContext,
           "cube state survives scrolling"
@@ -284,10 +284,10 @@ export async function runLessonAnalysisBrowserChecks({
       );
       try {
         const host = checkerTab.playwright.locator(
-          "[data-bms-checker-decision]"
+          "[data-bs-checker-decision]"
         );
         const startingSource = await host
-          .locator(".bms-analysis-position-image")
+          .locator(".bs-analysis-position-image")
           .getAttribute("src");
         check(
           startingSource?.endsWith("/starting.svg"),
@@ -302,20 +302,20 @@ export async function runLessonAnalysisBrowserChecks({
         for (const candidateId of Object.keys(candidateAssets)) {
           await host
             .locator(
-              `button[data-bms-analysis-choice='${candidateId}']`
+              `button[data-bs-analysis-choice='${candidateId}']`
             )
             .click();
           const selected = await host.evaluate((element, selectedId) => ({
             image: element
-              .querySelector(".bms-analysis-position-image")
+              .querySelector(".bs-analysis-position-image")
               ?.getAttribute("src"),
             pressed: element
               .querySelector(
-                `button[data-bms-analysis-choice='${selectedId}']`
+                `button[data-bs-analysis-choice='${selectedId}']`
               )
               ?.getAttribute("aria-pressed"),
             status: element
-              .querySelector(".bms-analysis-choice-status")
+              .querySelector(".bs-analysis-choice-status")
               ?.textContent.trim()
           }), candidateId);
           check(
@@ -328,7 +328,7 @@ export async function runLessonAnalysisBrowserChecks({
         }
         const missing = await host.evaluate((element) => ({
           explanation: element
-            .querySelector(".bms-analysis-explanation")
+            .querySelector(".bs-analysis-explanation")
             ?.textContent.trim(),
           identities: {
             positionId: element.querySelector("article")?.dataset.positionId,
@@ -347,7 +347,7 @@ export async function runLessonAnalysisBrowserChecks({
         await scrollAndRestore(checkerTab);
         check(
           (await host
-            .locator("button[data-bms-analysis-choice='candidate-3']")
+            .locator("button[data-bs-analysis-choice='candidate-3']")
             .getAttribute("aria-pressed")) === "true",
           checkerContext,
           "checker selection survives scrolling"

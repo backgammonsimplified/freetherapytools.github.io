@@ -59,8 +59,9 @@ for command_name in git node quarto; do
 done
 
 cd "${REPO_ROOT}"
+export BS_PUBLICATION_MODE="${BS_PUBLICATION_MODE:-development}"
 
-printf 'BMS comprehensive build gate\n'
+printf 'BS comprehensive build gate\n'
 printf 'Repository:   %s\n' "${REPO_ROOT}"
 printf 'Social cards: %s\n\n' "$([[ ${WITH_SOCIAL_CARDS} -eq 1 ]] && printf yes || printf no)"
 
@@ -72,9 +73,9 @@ printf '\n[2/6] Complete Python suite\n'
 
 printf '\n[3/6] Full Quarto build\n'
 if [[ ${WITH_SOCIAL_CARDS} -eq 1 ]]; then
-  unset BMS_SKIP_SOCIAL_CARDS || true
+  unset BS_SKIP_SOCIAL_CARDS || true
 else
-  export BMS_SKIP_SOCIAL_CARDS=1
+  export BS_SKIP_SOCIAL_CARDS=1
 fi
 quarto render site
 
