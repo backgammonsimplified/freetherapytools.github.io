@@ -1,7 +1,7 @@
 ---
 title: "Page closed out"
 description: "You rolled... but there was nowhere to land."
-page-layout: article
+page-layout: full
 toc: false
 sidebar: false
 search: false
@@ -10,15 +10,37 @@ execute:
   enabled: false
 ---
 
-The page you're looking for doesn't exist, has moved, or suspiciously bounced off the board.
+::: {.bs-404-shell}
+::: {.bs-404-card}
+::: {.bs-404-visual aria-hidden="true"}
+<div class="bs-404-code">404</div>
+<div class="bs-404-checkers">
+  <span></span><span></span><span></span><span></span>
+</div>
+<div class="bs-404-bar"></div>
+:::
+
+::: {.bs-404-copy}
+<p class="bs-404-eyebrow">ERROR 404 · CLOSED OUT</p>
+
+<h1 class="bs-404-title">Page closed out</h1>
+
+<p class="bs-404-lead">You rolled... but there was nowhere to land.</p>
+
+The page you're looking for doesn't exist, has moved, or suspiciously bounced off the board. Try one of these reliable points instead.
 
 ::: {.bs-404-links aria-label="Helpful destinations"}
 
-- [Home](/)
-- [Learn](/learn/)
-- [Backgammon Glossary](/glossary/)
-- [Research](/research/)
+- [Home](/) — return to the board
+- [Learn](/learn/) — build your game
+- [Backgammon Glossary](/glossary/) — find a definition
+- [Research](/research/) — explore the evidence
 
 :::
 
+::: {.bs-404-actions}
 [Look Up a Term](/glossary/){.bs-button-outline}
+:::
+:::
+:::
+:::

@@ -841,6 +841,19 @@ private code phrase
         self.assertIn("toc: false", content)
         self.assertIn("sidebar: false", content)
         self.assertIn("search: false", content)
+        self.assertIn("page-layout: full", content)
+        self.assertIn("bs-404-card", content)
+        self.assertIn("bs-404-visual", content)
+        shared_css = (
+            learn_glossary.SITE_ROOT / "assets" / "bs-shared.css"
+        ).read_text(encoding="utf-8")
+        for selector in (
+            "body.bs-not-found",
+            ".bs-404-card",
+            ".bs-404-visual",
+            ".bs-404-links",
+        ):
+            self.assertIn(selector, shared_css)
         self.assertNotRegex(
             content,
             r"(?i)(http-equiv\s*=\s*[\"']?refresh|window\.location|"
@@ -1707,7 +1720,7 @@ private code phrase
             r"\.bs-site-tools--sidebar\s+"
             r"\.bs-term-lookup \{[^}]*"
             r"position: static;[^}]*"
-            r"width: 50%;[^}]*"
+            r"width: calc\(100% / 3\);[^}]*"
             r"align-self: flex-end;",
         )
         self.assertRegex(
