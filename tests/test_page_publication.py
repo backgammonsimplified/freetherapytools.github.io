@@ -53,6 +53,17 @@ class PagePublicationTests(unittest.TestCase):
             "noindex, follow",
         )
 
+    def test_fixture_routes_are_not_publishable_outputs(self) -> None:
+        fixture = pp.resolve_route_policy(
+            self.policy,
+            "/posts/2026-07-site-update.html",
+        )
+        status = fixture["status_config"]
+        self.assertEqual(fixture["status"], "fixture")
+        self.assertIs(status["indexable"], False)
+        self.assertIs(status["sitemap"], False)
+        self.assertIs(status["rss"], False)
+
     def test_rendered_identity_and_breadcrumbs_share_one_url(self) -> None:
         source = """<!doctype html><html><head>
 <meta name="description" content="A clear lesson">
