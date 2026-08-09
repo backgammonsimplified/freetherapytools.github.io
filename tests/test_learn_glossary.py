@@ -1788,6 +1788,28 @@ private code phrase
             self.assertIn(required, css)
         self.assertNotIn("@keyframes bs-term-lookup-slide-in", css)
 
+    def test_research_index_small_mobile_term_toggle_is_suppressed(self) -> None:
+        css = (
+            learn_glossary.SITE_ROOT / "assets" / "bs-learn.css"
+        ).read_text(encoding="utf-8")
+        suppression_rule = re.search(
+            r"@media \(max-width:\s*390\.98px\)\s*\{\s*"
+            r"body\.bs-research-index \.bs-site-tools "
+            r"\[data-bs-site-term-toggle\]\s*\{"
+            r"\s*display:\s*none;\s*"
+            r"\}\s*\}",
+            css,
+            re.MULTILINE,
+        )
+
+        self.assertIsNotNone(suppression_rule)
+        self.assertIn(
+            "const inEditorialDock = function () {",
+            (
+                learn_glossary.SITE_ROOT / "assets" / "bs-learn.js"
+            ).read_text(encoding="utf-8"),
+        )
+
     def test_lookup_result_uses_full_definition(self) -> None:
         javascript = (
             learn_glossary.SITE_ROOT / "assets" / "bs-learn.js"

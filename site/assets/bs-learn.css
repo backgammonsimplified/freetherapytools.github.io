@@ -1471,6 +1471,12 @@ body:is(.bs-learn-index, .bs-learn-article)
   box-shadow: 0 8px 28px rgb(17 24 47 / 18%);
 }
 
+@media (max-width: 390.98px) {
+  body.bs-research-index .bs-site-tools [data-bs-site-term-toggle] {
+    display: none;
+  }
+}
+
 @media (min-width: 992px) {
   .bs-site-tools--floating .bs-term-lookup-close {
     position: absolute;
