@@ -22,3 +22,111 @@ bs-publication:
           - "User-agent: *"
           - "Allow: /"
           - "Sitemap: https://backgammonsimplified.github.io/sitemap.xml"
+  pages:
+    default:
+      type: page
+      status: published
+    types:
+      page:
+        schema-type: WebPage
+      learn-index:
+        schema-type: CollectionPage
+      learn-lesson:
+        schema-type: Article
+      research-index:
+        schema-type: CollectionPage
+      research-article:
+        schema-type: Article
+      engine-benchmark-index:
+        schema-type: CollectionPage
+      benchmark-report:
+        schema-type: Report
+    statuses:
+      published:
+        indexable: true
+        sitemap: true
+        rss: true
+      preliminary:
+        indexable: false
+        sitemap: false
+        rss: false
+      draft:
+        indexable: false
+        sitemap: false
+        rss: false
+      fixture:
+        indexable: false
+        sitemap: false
+        rss: false
+      error:
+        indexable: false
+        sitemap: false
+        rss: false
+      legacy:
+        indexable: false
+        sitemap: false
+        rss: false
+    routes:
+      /learn/index.html:
+        source: site/learn/index.qmd
+        type: learn-index
+        status: published
+        parents:
+          - label: Home
+            route: /
+      /learn/cube/why-is-25-percent-the-take-point.html:
+        source: site/learn/cube/why-is-25-percent-the-take-point.qmd
+        type: learn-lesson
+        status: published
+        parents:
+          - label: Home
+            route: /
+          - label: Learn
+            route: /learn/index.html
+        related:
+          - /learn/index.html
+      /research/index.html:
+        source: site/research/index.qmd
+        type: research-index
+        status: published
+        parents:
+          - label: Home
+            route: /
+      /engine-benchmark/index.html:
+        source: site/engine-benchmark/index.qmd
+        type: engine-benchmark-index
+        status: published
+        parents:
+          - label: Home
+            route: /
+        related:
+          - /engine-benchmark/sage-vs-gnu-stage1/index.html
+      /engine-benchmark/sage-vs-gnu-stage1/index.html:
+        source: site/engine-benchmark/sage-vs-gnu-stage1/index.qmd
+        type: benchmark-report
+        status: preliminary
+        parents:
+          - label: Home
+            route: /
+          - label: Engine Benchmark
+            route: /engine-benchmark/index.html
+        related:
+          - /research/sage-vs-gnu-additional-details.html
+      /research/sage-vs-gnu-additional-details.html:
+        source: site/research/sage-vs-gnu-additional-details.qmd
+        type: research-article
+        status: preliminary
+        parents:
+          - label: Home
+            route: /
+          - label: Research
+            route: /research/index.html
+        related:
+          - /engine-benchmark/sage-vs-gnu-stage1/index.html
+  research:
+    categories:
+      - Learn
+      - Position Analyzer
+      - Match Predictor
+      - Engine Benchmark
+      - Research
