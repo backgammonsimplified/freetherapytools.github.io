@@ -13,4 +13,4 @@ Write-Host 'Install these system tools using their official installers; this scr
   'R (Rscript)'
 ) | ForEach-Object { Write-Host " - $_" }
 
-Write-Host 'Then run: bash scripts/setup/setup.sh'
+Write-Host 'Then run from Git Bash: bash scripts/setup/windows-dev.sh'

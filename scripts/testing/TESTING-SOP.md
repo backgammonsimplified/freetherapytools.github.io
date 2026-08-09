@@ -24,6 +24,11 @@ The quick entrypoint runs the focused build gate and UX helper contracts. The
 comprehensive entrypoint adds all Python tests, a full Quarto render, glossary
 and HTML audits, checker contracts, and the comprehensive UX handoff.
 
+Prepare a Windows checkout once with `bash scripts/setup/windows-dev.sh`.
+Build runners invoke the non-mutating environment preflight before their work;
+`--with-social-cards` additionally checks the declared R packages before
+Quarto starts.
+
 `PASS` applies only to the named automated layer. Live-browser and human work
 must remain `NOT RUN` until actually completed; it is never implied by a build
 result. Follow [ux/UX-TESTING-SOP.md](ux/UX-TESTING-SOP.md) for those phases.

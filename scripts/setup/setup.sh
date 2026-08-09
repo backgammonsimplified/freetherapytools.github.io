@@ -10,6 +10,8 @@ require_file() {
 
 require_file "${REPO_ROOT}/social_generator/requirements-social.txt"
 require_file "${REPO_ROOT}/social_generator/requirements-social.R"
+require_file "${REPO_ROOT}/scripts/setup/install-r-dependencies.R"
+require_file "${REPO_ROOT}/scripts/setup/preflight.py"
 require_file "${REPO_ROOT}/site/_quarto.yml"
 
 case "$(uname -s)" in

@@ -4,24 +4,11 @@ set -Eeuo pipefail
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd -- "${SCRIPT_DIR}/../../.." && pwd)"
 
-if [[ -x "${REPO_ROOT}/.venv/Scripts/python.exe" ]] &&
-  "${REPO_ROOT}/.venv/Scripts/python.exe" -c 'import sys' >/dev/null 2>&1; then
-  PYTHON_COMMAND=("${REPO_ROOT}/.venv/Scripts/python.exe")
-elif command -v py >/dev/null 2>&1; then
-  PYTHON_COMMAND=(py)
-elif command -v python >/dev/null 2>&1; then
-  PYTHON_COMMAND=(python)
-else
-  printf 'ERROR: Neither py nor python was found on PATH.\n' >&2
-  exit 127
+bash "${REPO_ROOT}/scripts/setup/preflight.sh" --quick
+PYTHON_COMMAND=("${REPO_ROOT}/.venv/Scripts/python.exe")
+if [[ ! -x "${PYTHON_COMMAND[0]}" ]]; then
+  PYTHON_COMMAND=("${REPO_ROOT}/.venv/bin/python")
 fi
-
-for command_name in git node; do
-  if ! command -v "${command_name}" >/dev/null 2>&1; then
-    printf 'ERROR: %s was not found on PATH.\n' "${command_name}" >&2
-    exit 127
-  fi
-done
 
 cd "${REPO_ROOT}"
 
@@ -59,6 +46,7 @@ printf '\n[4/5] Focused Python contracts\n'
   tests.test_lesson_analysis \
   tests.test_real_checker_analysis \
   tests.test_publication_identity \
+  tests.test_environment_setup \
   tests.test_static_inventory \
   tests.test_quality_reports \
   -v

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -17,24 +18,38 @@ INTEGRATION_VALIDATOR = (
 )
 
 
-def run(command: list[str]) -> None:
+def run(command: list[str], *, environment: dict[str, str] | None = None) -> None:
     print("+", " ".join(command), flush=True)
-    subprocess.run(command, cwd=ROOT, check=True)
+    subprocess.run(command, cwd=ROOT, env=environment, check=True)
 
 
 def find_rscript() -> str | None:
-    configured = os.environ.get("RSCRIPT")
-    if configured and Path(configured).is_file():
-        return configured
+    for variable in ("RSCRIPT_BIN", "RSCRIPT"):
+        configured = os.environ.get(variable)
+        if configured and Path(configured).is_file():
+            return str(Path(configured).resolve())
 
     discovered = shutil.which("Rscript")
     if discovered:
         return discovered
 
     if os.name == "nt":
+        local_app_data = Path(os.environ.get("LOCALAPPDATA", ""))
         program_files = Path(os.environ.get("ProgramFiles", r"C:\Program Files"))
+        candidates: list[Path] = []
+        for directory in (
+            local_app_data / "Programs" / "R",
+            program_files / "R",
+        ):
+            try:
+                candidates.extend(directory.glob("R-*/bin/Rscript.exe"))
+            except OSError:
+                continue
         candidates = sorted(
-            (program_files / "R").glob("R-*/bin/Rscript.exe"),
+            candidates,
+            key=lambda path: tuple(
+                int(part) for part in re.findall(r"\d+", path.parent.parent.name)
+            ),
             reverse=True,
         )
         if candidates:
@@ -63,9 +78,14 @@ def main() -> int:
         )
         return 1
 
-    run([rscript, str(MANIFEST_GENERATOR)])
+    r_environment = os.environ.copy()
+    repository_r_library = ROOT / ".r-library"
+    if repository_r_library.is_dir():
+        r_environment["R_LIBS_USER"] = str(repository_r_library.resolve())
+
+    run([rscript, str(MANIFEST_GENERATOR)], environment=r_environment)
     run([sys.executable, str(RENDERER), "--validate-only"])
-    run([rscript, str(INTEGRATION_VALIDATOR)])
+    run([rscript, str(INTEGRATION_VALIDATOR)], environment=r_environment)
     run(
         [
             sys.executable,
