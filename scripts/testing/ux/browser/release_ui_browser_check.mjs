@@ -609,14 +609,14 @@ const interactWithMobileDrawer = async (tab, check, context) => {
     return;
   }
   check(
-    (await drawer.locator("a[href]").count()) >= 1,
+    (await countVisible(drawer.locator("a[href]"))) >= 1,
     context,
-    "mobile drawer contains table-of-contents links"
+    "mobile drawer contains visible table-of-contents links"
   );
   check(
-    (await drawer.locator("[data-bs-term-lookup]").count()) === 1,
+    (await drawer.locator("[data-bs-term-lookup]").count()) === 0,
     context,
-    "mobile drawer contains term search beneath the TOC"
+    "mobile drawer omits the compact term search"
   );
   const close = drawer.locator("[data-bs-mobile-tools-close]");
   await close.click();

@@ -1284,10 +1284,9 @@ private code phrase
             "isMobileDrawerSwipe",
             "bs-mobile-tools-drawer",
             "bs-mobile-tools-edge",
-            "Open table of contents and term search",
+            "Open table of contents",
             'links.removeAttribute("id")',
             r"\u2190 Expand Lesson Index",
-            r"Look Up a Term \u2192",
             "data-bs-site-back-to-top",
             "data-bs-toc-toggle",
             "data-bs-margin-sidebar-toggle",
@@ -1774,7 +1773,7 @@ private code phrase
         self.assertIn("bs-learn-track-index", cube_landing)
         self.assertNotIn("bs-research-article", analyze)
 
-    def test_mobile_articles_use_a_swipeable_left_page_tools_drawer(
+    def test_mobile_articles_use_a_toc_only_swipeable_left_drawer(
         self,
     ) -> None:
         javascript = (
@@ -1785,6 +1784,20 @@ private code phrase
             "if (input && focusInput && desktopQuery.matches)",
             javascript,
         )
+        self.assertIn('window.matchMedia("(min-width: 992px)")', javascript)
+        self.assertIn("const hideLookupOnMobile = function () {", javascript)
+        self.assertIn(
+            'list.classList.remove("collapse", "collapsing", "show")',
+            javascript,
+        )
+        self.assertIn("lookup.hidden = true;", javascript)
+        self.assertIn("termToggle.hidden = true;", javascript)
+        self.assertIn(
+            'mobileDrawer.setAttribute("aria-label", "Page contents")',
+            javascript,
+        )
+        self.assertNotIn("data-bs-mobile-tools-lookup", javascript)
+        self.assertNotIn("bs-mobile-term-toggle", javascript)
 
         css = (
             learn_glossary.SITE_ROOT / "assets" / "bs-learn.css"
@@ -1798,27 +1811,28 @@ private code phrase
             "transform: translateX(-102%);",
             ".bs-mobile-tools-drawer--open",
             ".bs-mobile-tools-toc",
-            ".bs-mobile-tools-drawer .bs-term-lookup",
+            ".bs-site-tools .bs-term-lookup",
+            ".bs-site-tools [data-bs-site-term-toggle]",
             "[data-bs-site-term-toggle]",
             "display: none !important;",
-            ".bs-mobile-term-toggle {\n    display: none;",
             "color: var(--bs-text-muted);",
         ):
             self.assertIn(required, css)
+        self.assertNotIn(".bs-mobile-tools-drawer .bs-term-lookup", css)
+        self.assertNotIn(".bs-mobile-term-toggle", css)
         self.assertNotIn("@keyframes bs-term-lookup-slide-in", css)
 
-    def test_research_index_small_mobile_term_toggle_is_suppressed(self) -> None:
+    def test_all_mobile_term_lookup_surfaces_are_suppressed(self) -> None:
         css = (
             learn_glossary.SITE_ROOT / "assets" / "bs-learn.css"
         ).read_text(encoding="utf-8")
         suppression_rule = re.search(
-            r"@media \(max-width:\s*390\.98px\)\s*\{\s*"
-            r"body\.bs-research-index \.bs-site-tools "
-            r"\[data-bs-site-term-toggle\]\s*\{"
-            r"\s*display:\s*none;\s*"
-            r"\}\s*\}",
+            r"@media \(max-width:\s*991\.98px\).*?"
+            r"\.bs-site-tools \.bs-term-lookup,\s*"
+            r"\.bs-site-tools \[data-bs-site-term-toggle\]\s*\{"
+            r"\s*display:\s*none !important;\s*\}",
             css,
-            re.MULTILINE,
+            re.DOTALL,
         )
 
         self.assertIsNotNone(suppression_rule)
