@@ -12,7 +12,7 @@ tags:
 terms:
   - equity
   - rollout
-  - error-rate
+  - performance-rating
   - game-winning-chances
   - gammon
   - backgammon

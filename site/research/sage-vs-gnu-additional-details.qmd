@@ -6,7 +6,7 @@ description: >
   Methods, results, and evidence for the Sage versus GNU Stage 1 backgammon engine benchmark.
 terms:
   - equity
-  - error-rate
+  - performance-rating
   - rollout
 
 format:

@@ -1,16 +1,14 @@
-# Unified glossary production source
+# Canonical glossary production source
 
-`glossary/glossary.md` is the only production editorial source. It contains
-every published canonical entry, including both `Confirmed` and
-`Legacy unconfirmed` entries. Aliases live inside their canonical entry.
+`glossary/glossary.json` is the only production editorial source. It contains
+published canonical entries and keeps aliases inside their canonical entry.
+The historical Markdown glossary, staged queue, comprehensive vocabulary list,
+and Markdown contract are not present in the current accepted architecture and
+are not production inputs.
 
-The other permanent workflow files have non-production roles:
-
-- `glossary/staged-terms.md` is the review queue;
-- `glossary/comprehensive-list-of-terms.md` is the raw vocabulary inbox;
-- `glossary/contracts/glossary-contract.md` is the authoritative contract.
-
-Production generation does not read those three files.
+Historical glossary material must be reconciled semantically into the JSON
+contract. Preserve the current `bs-*` project namespace and do not treat old
+Markdown structure as authoritative.
 
 ## Generation
 
@@ -26,7 +24,7 @@ python scripts\learn_glossary.py validate
 The generated chain is:
 
 ```text
-glossary/glossary.md
+glossary/glossary.json
   -> site/data/glossary.json
   -> site/assets/bs-glossary-lookup.json
   -> site/glossary/_entries.html
@@ -36,16 +34,16 @@ Generated files are deterministic and must not be edited manually.
 
 ## Public and editorial fields
 
-The parser supports the exact entry shape in
-`glossary/contracts/glossary-contract.md`, including status, slug, optional
-Added date, AKA aliases, short and full definitions, explicit Inline terms,
-Related words, Categories, Learning tracks, and optional Usage note, Alias
-notes, and Editorial notes.
+The validator in `scripts/glossary_source.py` defines the authoritative field
+order and allowed values. The source includes canonical slugs, aliases,
+optional compatibility redirect slugs, short and long definitions, categories,
+learning tracks, related canonical slugs, explicit inline-term mappings,
+publication dates, optional public usage notes or editorial notes, and
+references.
 
-Status, Alias notes, and Editorial notes stay editorial and are not emitted.
-Usage notes are public. `date_added` is emitted only when Added exists; only
-dated entries enter the Updates feed, so retained legacy entries do not receive
-invented publication dates.
+All current source entries are published. `added` becomes public `date_added`,
+and dated entries enter the Updates feed. Do not invent publication dates for
+material that has not been approved for publication.
 
 The public compatibility field `category` is emitted only when categories are
 non-empty and equals `categories[0]`.
@@ -54,13 +52,9 @@ non-empty and equals `categories[0]`.
 
 Generation validates canonical and alias uniqueness after deterministic
 Unicode, case, whitespace, apostrophe, punctuation, and hyphen normalization.
-It also validates slugs, definitions, controlled categories, repeated
-categories, learning tracks, inline mappings, and canonical targets.
-
-The supplied migration document has 71 valid category lists written before the
-global display-order rule. Their editorial order remains untouched in Markdown;
-generated JSON canonicalizes all categories to the contract order. Unknown and
-repeated categories still fail.
+It also validates source ordering, field ordering, slugs, definitions,
+controlled and deterministically ordered categories, learning tracks, inline
+mappings, and canonical targets.
 
 Search data includes canonical names, aliases, short definitions, and full
 definitions. Alias matches resolve to their canonical entry. Hover and keyboard
@@ -89,15 +83,9 @@ and aliases, prefers the longest phrase, and marks only the first safe prose
 occurrence. The filter excludes headings, links, code, math, raw HTML, captions,
 metadata, and navigation.
 
-## Isolated review subsets
+## Editorial candidates
 
-The parser can still produce a non-production review file:
-
-```powershell
-python scripts\glossary_source.py generate-subset `
-  --input C:\path\to\review-subset.md `
-  --output C:\path\to\review-subset.json
-```
-
-The command refuses to overwrite `site/data/glossary.json` and is not part of
-the production build.
+The current repository has no production or tracked staged-candidate source.
+Keep unresolved candidates unpublished until their canonical wording, aliases,
+definition, category, and relationship decisions are approved. A historical
+staged candidate is not authority to add a published JSON entry.

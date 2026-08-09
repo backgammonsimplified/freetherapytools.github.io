@@ -84,23 +84,25 @@ class LearnGlossaryTests(unittest.TestCase):
         )
 
     def test_public_safe_counts_and_forbidden_guards(self) -> None:
-        self.assertEqual(len(self.data["entries"]), 12)
-        self.assertEqual(len(self.entries), 12)
+        self.assertEqual(len(self.data["entries"]), 37)
+        self.assertEqual(len(self.entries), 37)
         self.assertEqual(
             sum(len(entry["aliases"]) for entry in self.entries),
-            3,
+            29,
         )
-        self.assertEqual(12 + 3, 15)
-        self.assertTrue(
-            all(
-                entry["date_added"] == "2026-07-30"
-                for entry in self.entries
-                if "date_added" in entry
-            )
+        self.assertEqual(37 + 29, 66)
+        self.assertEqual(
+            {
+                date: sum(
+                    entry.get("date_added") == date for entry in self.entries
+                )
+                for date in ("2026-07-30", "2026-07-31")
+            },
+            {"2026-07-30": 12, "2026-07-31": 25},
         )
         self.assertEqual(
             sum("date_added" in entry for entry in self.entries),
-            12,
+            37,
         )
         learn_glossary.assert_no_forbidden_keys(self.data)
         learn_glossary.assert_no_forbidden_text(
@@ -257,18 +259,18 @@ private code phrase
             r'<details class="bs-glossary-entry" id="([^"]+)"',
             self.entries_html,
         )
-        self.assertEqual(len(anchors), 12)
-        self.assertEqual(len(set(anchors)), 12)
+        self.assertEqual(len(anchors), 37)
+        self.assertEqual(len(set(anchors)), 37)
         self.assertEqual(set(anchors), canonical)
         self.assertEqual(
             self.entries_html.count('class="bs-glossary-entry-summary"'),
-            12,
+            37,
         )
         entry_tags = re.findall(
             r'<details class="bs-glossary-entry"[^>]*>',
             self.entries_html,
         )
-        self.assertEqual(len(entry_tags), 12)
+        self.assertEqual(len(entry_tags), 37)
         self.assertTrue(
             all(
                 re.search(
@@ -287,7 +289,7 @@ private code phrase
             for entry in self.entries
             for alias in entry["aliases"]
         }
-        self.assertEqual(len(alias_to_canonical), 3)
+        self.assertEqual(len(alias_to_canonical), 29)
         self.assertEqual(
             alias_to_canonical["ahead-in-the-race"],
             "ahead-in-the-count",
@@ -296,8 +298,11 @@ private code phrase
             alias_to_canonical["american-backgammon-tour"],
             "abt",
         )
+        self.assertEqual(alias_to_canonical["error-rate"], "performance-rating")
+        self.assertEqual(alias_to_canonical["time-delay"], "simple-delay")
+        self.assertEqual(alias_to_canonical["zone-of-attack"], "attack-zone")
         self.assertNotIn("ahead-in-the-race", canonical)
-        self.assertEqual(self.entries_html.count('data-bs-alias="'), 3)
+        self.assertEqual(self.entries_html.count('data-bs-alias="'), 29)
         self.assertIn(
             'data-bs-aliases="[&quot;ahead-in-the-race&quot;]"',
             self.entries_html,
@@ -308,11 +313,11 @@ private code phrase
     def test_full_definitions_usage_and_related_links_are_initial_html(self) -> None:
         self.assertEqual(
             self.entries_html.count('class="bs-glossary-definition"'),
-            12,
+            37,
         )
         self.assertEqual(
             self.entries_html.count('class="bs-glossary-short-definition"'),
-            12,
+            37,
         )
         zone = next(
             entry for entry in self.entries
@@ -934,7 +939,7 @@ private code phrase
         ):
             self.assertIn(required, guide)
         self.assertIn("there are no standalone term routes", terms)
-        self.assertEqual(terms.count("/glossary/#"), 12)
+        self.assertEqual(terms.count("/glossary/#"), 37)
 
     def test_moved_analyzer_include_and_all_cube_includes_resolve(self) -> None:
         include_copies = list(
@@ -1232,10 +1237,10 @@ private code phrase
             )
         )
         entries = lookup["entries"]
-        self.assertEqual(len(entries), 12)
+        self.assertEqual(len(entries), 37)
         self.assertEqual(
             sum(len(entry["aliases"]) for entry in entries),
-            3,
+            29,
         )
         self.assertEqual(
             sum(len(entry["related_lessons"]) for entry in entries),
@@ -2075,7 +2080,7 @@ private code phrase
             self.assertIn(required, source)
         self.assertNotIn("../posts/", source)
         self.assertNotIn("../templates/", source)
-        self.assertEqual(len(self.update_publications), 12)
+        self.assertEqual(len(self.update_publications), 37)
         self.assertTrue(
             all(
                 publication["publication_type"] == "Glossary"
@@ -2084,7 +2089,7 @@ private code phrase
         )
         self.assertEqual(
             {publication["date"] for publication in self.update_publications},
-            {"2026-07-30"},
+            {"2026-07-30", "2026-07-31"},
         )
         self.assertIn(
             "/glossary/#10-in-the-zone",
@@ -2344,7 +2349,7 @@ private code phrase
 </rss>
 """
         records = bs_post_render.glossary_feed_records(self.data)
-        self.assertEqual(len(records), 12)
+        self.assertEqual(len(records), 37)
         updated, changed = bs_post_render.augmented_updates_feed_text(
             base_feed,
             records,
@@ -2358,14 +2363,21 @@ private code phrase
 
         root = bs_post_render.ElementTree.fromstring(updated)
         items = root.findall("./channel/item")
-        self.assertEqual(len(items), 13)
-        self.assertEqual(items[0].findtext("title"), "Newer lesson")
+        self.assertEqual(len(items), 38)
+        self.assertEqual(
+            items[0].findtext("title"),
+            "Glossary: Adjusted Pip Count",
+        )
+        self.assertIn(
+            "Newer lesson",
+            {item.findtext("title") for item in items},
+        )
         glossary_items = [
             item
             for item in items
             if item.findtext("category") == "Glossary"
         ]
-        self.assertEqual(len(glossary_items), 12)
+        self.assertEqual(len(glossary_items), 37)
         zone = next(
             item
             for item in glossary_items
@@ -2490,9 +2502,9 @@ private code phrase
     def test_validation_reports_single_page_counts(self) -> None:
         result = learn_glossary.validate_generated()
         self.assertEqual(result["source_entries"], 805)
-        self.assertEqual(result["canonical_entries"], 12)
-        self.assertEqual(result["alias_entries"], 3)
-        self.assertEqual(result["canonical_anchors"], 12)
+        self.assertEqual(result["canonical_entries"], 37)
+        self.assertEqual(result["alias_entries"], 29)
+        self.assertEqual(result["canonical_anchors"], 37)
         self.assertEqual(result["standalone_term_pages"], 0)
         self.assertEqual(result["generated_files"], 10)
         self.assertEqual(result["continuous_lessons"], len(self.lessons))
@@ -2500,7 +2512,7 @@ private code phrase
         self.assertEqual(result["learn_tracks"], 3)
         self.assertEqual(result["lessons"], len(self.lessons))
         self.assertEqual(result["cube_lessons"], len(self.cube_lessons))
-        self.assertEqual(result["updates_publications"], 12)
+        self.assertEqual(result["updates_publications"], 37)
         self.assertEqual(
             result["related_lesson_links"],
             sum(len(value) for value in self.related_lessons.values()),

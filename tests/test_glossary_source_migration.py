@@ -28,11 +28,11 @@ class CanonicalGlossaryJsonTests(unittest.TestCase):
         self.assertNotIn("staged", implementation)
 
     def test_only_published_entries_are_projected(self) -> None:
-        self.assertEqual(len(self.entries), 12)
-        self.assertEqual(self.report["canonical_entries"], 12)
-        self.assertEqual(self.report["published_entries"], 12)
-        self.assertEqual(self.report["aliases"], 3)
-        self.assertEqual(len(self.data["entries"]), 12)
+        self.assertEqual(len(self.entries), 37)
+        self.assertEqual(self.report["canonical_entries"], 37)
+        self.assertEqual(self.report["published_entries"], 37)
+        self.assertEqual(self.report["aliases"], 29)
+        self.assertEqual(len(self.data["entries"]), 37)
         self.assertEqual(
             {entry["slug"] for entry in self.data["entries"]},
             set(self.entries),
@@ -60,8 +60,25 @@ class CanonicalGlossaryJsonTests(unittest.TestCase):
         }["10-in-the-zone"]
         related = {item["term"]: item for item in generated["related_terms"]}
         self.assertEqual(related["Active Builder"]["slug"], "active-builder")
-        self.assertNotIn("slug", related["Attack Zone"])
+        self.assertEqual(related["Attack Zone"]["slug"], "attack-zone")
+        self.assertNotIn("slug", related["Home Board"])
         self.assertGreater(self.report["unresolved_related_terms"], 0)
+
+    def test_july_31_entries_only_link_to_published_canonicals(self) -> None:
+        published = set(self.entries)
+        for slug, entry in self.entries.items():
+            if entry["added"] != "2026-07-31":
+                continue
+            self.assertLessEqual(
+                set(entry["related_terms"]),
+                published,
+                slug,
+            )
+
+    def test_historical_canonical_merges_are_aliases(self) -> None:
+        self.assertIn("Error Rate", self.entries["performance-rating"]["aliases"])
+        self.assertIn("Time Delay", self.entries["simple-delay"]["aliases"])
+        self.assertIn("Zone of Attack", self.entries["attack-zone"]["aliases"])
 
     def test_duplicate_raw_json_keys_fail_before_normal_parsing(self) -> None:
         with self.assertRaisesRegex(source.ValidationError, "Duplicate raw JSON key"):

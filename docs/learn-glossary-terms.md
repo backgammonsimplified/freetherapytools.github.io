@@ -16,5 +16,30 @@ Use only these canonical slugs in Learn and Research `terms` metadata. Every ter
 | Action Play | `action-play` | `/glossary/#action-play` |
 | Action Position | `action-position` | `/glossary/#action-position` |
 | Active Builder | `active-builder` | `/glossary/#active-builder` |
+| Adjusted Pip Count | `adjusted-pip-count` | `/glossary/#adjusted-pip-count` |
 | Advanced Anchor | `advanced-anchor` | `/glossary/#advanced-anchor` |
+| Advanced Level | `advanced-level` | `/glossary/#advanced-level` |
 | Ahead in the Count | `ahead-in-the-count` | `/glossary/#ahead-in-the-count` |
+| Ammunition | `ammunition` | `/glossary/#ammunition` |
+| Analog Clock | `analog-clock` | `/glossary/#analog-clock` |
+| Anchor Game | `anchor-game` | `/glossary/#anchor-game` |
+| Annotated Match | `annotated-match` | `/glossary/#annotated-match` |
+| Annotation | `annotation` | `/glossary/#annotation` |
+| Anti-Joker | `anti-joker` | `/glossary/#anti-joker` |
+| Army | `army` | `/glossary/#army` |
+| Around the Corner | `around-the-corner` | `/glossary/#around-the-corner` |
+| Asset | `asset` | `/glossary/#asset` |
+| Attack | `attack` | `/glossary/#attack` |
+| Attack Zone | `attack-zone` | `/glossary/#attack-zone` |
+| Attacking Game | `attacking-game` | `/glossary/#attacking-game` |
+| Automatic Doubles | `automatic-doubles` | `/glossary/#automatic-doubles` |
+| Awkward Number | `awkward-number` | `/glossary/#awkward-number` |
+| Awkward Position | `awkward-position` | `/glossary/#awkward-position` |
+| Back Game | `back-game` | `/glossary/#back-game` |
+| BMAB | `bmab` | `/glossary/#bmab` |
+| Fischer Increment | `fischer-increment` | `/glossary/#fischer-increment` |
+| Performance Rating | `performance-rating` | `/glossary/#performance-rating` |
+| Reserve Time | `reserve-time` | `/glossary/#reserve-time` |
+| Simple Delay | `simple-delay` | `/glossary/#simple-delay` |
+| UBC | `ubc` | `/glossary/#ubc` |
+| Winner's Curse | `winners-curse` | `/glossary/#winners-curse` |
