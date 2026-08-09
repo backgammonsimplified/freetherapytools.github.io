@@ -7,6 +7,16 @@ bs-publication:
   name: "Backgammon Simplified"
   acronym: "BS"
   canonical-origin: "https://backgammonsimplified.github.io"
+  authored-content:
+    author:
+      schema-type: Person
+      name: "Marty Gale"
+      url: "https://backgammonsimplified.github.io/about.html"
+    publisher:
+      schema-type: Organization
+      name: "Backgammon Simplified"
+      url: "https://backgammonsimplified.github.io/"
+    modified-date-field: date-modified
   indexing:
     environment-variable: "BS_PUBLICATION_MODE"
     default-mode: development
@@ -15,9 +25,9 @@ bs-publication:
         robots-meta: "noindex, follow"
         robots-txt:
           - "User-agent: *"
-          - "Disallow: /"
+          - "Allow: /"
       production:
-        robots-meta: "index, follow"
+        robots-meta: "index, follow, max-image-preview:large"
         robots-txt:
           - "User-agent: *"
           - "Allow: /"
@@ -36,18 +46,27 @@ bs-publication:
       learn-lesson:
         schema-type: Article
         updates-feed: true
+        social-card:
+          kind: article
+          category: Learn
       research-index:
         schema-type: CollectionPage
         updates-feed: false
       research-article:
         schema-type: Article
         updates-feed: true
+        social-card:
+          kind: article
+          category: Research
       engine-benchmark-index:
         schema-type: CollectionPage
         updates-feed: false
       benchmark-report:
         schema-type: Report
         updates-feed: true
+        social-card:
+          kind: benchmark
+          category: Sage vs GNU
     statuses:
       published:
         indexable: true

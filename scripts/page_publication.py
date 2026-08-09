@@ -57,6 +57,26 @@ OG_URL_CONTENT_PATTERN = re.compile(
     r'<meta\b[^>]*\bproperty=["\']og:url["\'][^>]*\bcontent=["\']([^"\']+)["\'][^>]*>',
     flags=re.IGNORECASE,
 )
+OG_TYPE_PATTERN = re.compile(
+    r'<meta\b[^>]*\bproperty=["\']og:type["\'][^>]*>\s*',
+    flags=re.IGNORECASE,
+)
+OG_IMAGE_PATTERN = re.compile(
+    r'<meta\b[^>]*\bproperty=["\']og:image["\'][^>]*>\s*',
+    flags=re.IGNORECASE,
+)
+TWITTER_IMAGE_PATTERN = re.compile(
+    r'<meta\b[^>]*\bname=["\']twitter:image["\'][^>]*>\s*',
+    flags=re.IGNORECASE,
+)
+ARTICLE_PUBLISHED_PATTERN = re.compile(
+    r'<meta\b[^>]*\bproperty=["\']article:published_time["\'][^>]*>\s*',
+    flags=re.IGNORECASE,
+)
+ARTICLE_MODIFIED_PATTERN = re.compile(
+    r'<meta\b[^>]*\bproperty=["\']article:modified_time["\'][^>]*>\s*',
+    flags=re.IGNORECASE,
+)
 DESCRIPTION_PATTERN = re.compile(
     r'<meta\b[^>]*\bname=["\']description["\'][^>]*\bcontent=["\']([^"\']*)["\'][^>]*>',
     flags=re.IGNORECASE,
@@ -79,6 +99,10 @@ BREADCRUMB_PATTERN = re.compile(
 )
 BREADCRUMB_STYLE_PATTERN = re.compile(
     r'<style\s+id=["\']bs-publication-breadcrumb-styles["\'][^>]*>.*?</style>\s*',
+    flags=re.IGNORECASE | re.DOTALL,
+)
+UPDATED_DATE_PATTERN = re.compile(
+    r'<p\s+class=["\']bs-publication-updated["\'][^>]*>.*?</p>\s*',
     flags=re.IGNORECASE | re.DOTALL,
 )
 RELATED_META_PATTERN = re.compile(
@@ -134,6 +158,12 @@ def load_page_policy(path: Path = PUBLICATION_PATH) -> dict[str, object]:
     types = dict(_mapping(pages.get("types"), "bs-publication.pages.types"))
     statuses = dict(_mapping(pages.get("statuses"), "bs-publication.pages.statuses"))
     routes = dict(_mapping(pages.get("routes"), "bs-publication.pages.routes"))
+    authored = dict(
+        _mapping(
+            publication.get("authored-content"),
+            "bs-publication.authored-content",
+        )
+    )
     research = _mapping(publication.get("research"), "bs-publication.research")
     categories = research.get("categories")
     if not isinstance(categories, list) or not categories:
@@ -143,6 +173,7 @@ def load_page_policy(path: Path = PUBLICATION_PATH) -> dict[str, object]:
         "types": types,
         "statuses": statuses,
         "routes": routes,
+        "authored_content": authored,
         "research_categories": [
             _nonempty_string(value, f"research category {index}")
             for index, value in enumerate(categories)
@@ -207,11 +238,74 @@ def source_front_matter(path: Path) -> dict[str, object]:
     return dict(_mapping(metadata, f"front matter for {path}"))
 
 
+def source_iso_date(
+    metadata: Mapping[str, object], field: str, source: str
+) -> str | None:
+    value = metadata.get(field)
+    if value is None:
+        return None
+    if type(value) is date:
+        return value.isoformat()
+    if isinstance(value, str):
+        candidate = value.strip()
+        try:
+            return date.fromisoformat(candidate).isoformat()
+        except ValueError as error:
+            raise RuntimeError(
+                f"Authored page {source} has invalid ISO {field}: {value!r}"
+            ) from error
+    raise RuntimeError(
+        f"Authored page {source} {field} must be an ISO 8601 date"
+    )
+
+
+def social_card_slug(source: str, metadata: Mapping[str, object]) -> str:
+    explicit = next(
+        (
+            metadata.get(field)
+            for field in (
+                "social-card-slug",
+                "social_card_slug",
+                "social-slug",
+                "social_slug",
+                "slug",
+            )
+            if metadata.get(field) is not None
+        ),
+        None,
+    )
+    if explicit is not None:
+        slug = _nonempty_string(explicit, f"social-card slug for {source}")
+    else:
+        path = Path(source)
+        slug = path.parent.name if path.name == "index.qmd" else path.stem
+    if re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug) is None:
+        raise RuntimeError(f"Invalid social-card slug for {source}: {slug!r}")
+    return slug
+
+
+def authored_social_image_path(
+    route_config: Mapping[str, object], metadata: Mapping[str, object]
+) -> str | None:
+    type_config = _mapping(route_config.get("type_config"), "resolved page type")
+    social = type_config.get("social-card")
+    if social is None:
+        return None
+    _mapping(social, "authored social-card configuration")
+    source = _nonempty_string(route_config.get("source"), "authored page source")
+    return (
+        "/assets/social/generated/social-"
+        + social_card_slug(source, metadata)
+        + ".png"
+    )
+
+
 def validate_authored_publication_metadata(
     metadata: Mapping[str, object],
     source: str,
     type_config: Mapping[str, object],
     status: str,
+    authored_content: Mapping[str, object],
 ) -> None:
     published = metadata.get("published")
     if published is not None and not isinstance(published, bool):
@@ -230,18 +324,40 @@ def validate_authored_publication_metadata(
         raise RuntimeError(
             "Published authored page must explicitly set published: true: " + source
         )
-    if published is not True:
+    if not updates_feed:
         return
 
-    raw_date = metadata.get("date")
-    if isinstance(raw_date, str):
-        try:
-            date.fromisoformat(raw_date.strip())
-        except ValueError as error:
-            raise RuntimeError(
-                f"Published authored page {source} has invalid ISO date: {raw_date!r}"
-            ) from error
-    elif not isinstance(raw_date, date):
+    author = _mapping(
+        authored_content.get("author"), "authored-content.author"
+    )
+    expected_author = _nonempty_string(
+        author.get("name"), "authored-content.author.name"
+    )
+    if metadata.get("author") != expected_author:
+        raise RuntimeError(
+            f"Authored page {source} must set author: {expected_author}"
+        )
+
+    published_date = source_iso_date(metadata, "date", source)
+    modified_field = _nonempty_string(
+        authored_content.get("modified-date-field"),
+        "authored-content.modified-date-field",
+    )
+    modified_date = source_iso_date(metadata, modified_field, source)
+    if modified_date is not None and published_date is None:
+        raise RuntimeError(
+            f"Authored page {source} cannot set {modified_field} without date"
+        )
+    if (
+        published_date is not None
+        and modified_date is not None
+        and modified_date < published_date
+    ):
+        raise RuntimeError(
+            f"Authored page {source} {modified_field} cannot be earlier than date"
+        )
+
+    if published is True and published_date is None:
         raise RuntimeError(
             f"Published authored page {source} requires a real ISO publication date"
         )
@@ -256,7 +372,38 @@ def validate_page_policy(
     statuses = _mapping(policy.get("statuses"), "page policy statuses")
     default = _mapping(policy.get("default"), "page policy default")
     routes = _mapping(policy.get("routes"), "page policy routes")
+    authored_content = _mapping(
+        policy.get("authored_content"), "page policy authored_content"
+    )
     categories = policy.get("research_categories")
+
+    for identity_name, expected_type in (
+        ("author", "Person"),
+        ("publisher", "Organization"),
+    ):
+        identity = _mapping(
+            authored_content.get(identity_name),
+            f"authored-content.{identity_name}",
+        )
+        if identity.get("schema-type") != expected_type:
+            raise RuntimeError(
+                f"authored-content.{identity_name}.schema-type must be {expected_type}"
+            )
+        _nonempty_string(
+            identity.get("name"), f"authored-content.{identity_name}.name"
+        )
+        url = _nonempty_string(
+            identity.get("url"), f"authored-content.{identity_name}.url"
+        )
+        parsed_url = urlparse(url)
+        if parsed_url.scheme != "https" or not parsed_url.netloc:
+            raise RuntimeError(
+                f"authored-content.{identity_name}.url must be an absolute HTTPS URL"
+            )
+    if authored_content.get("modified-date-field") != "date-modified":
+        raise RuntimeError(
+            "authored-content.modified-date-field must be date-modified"
+        )
 
     default_type = _nonempty_string(default.get("type"), "page policy default.type")
     default_status = _nonempty_string(
@@ -275,6 +422,20 @@ def validate_page_policy(
         if not isinstance(config.get("updates-feed"), bool):
             raise RuntimeError(
                 f"page type {type_name}.updates-feed must be boolean"
+            )
+        social = config.get("social-card")
+        if config.get("updates-feed") is True:
+            social = _mapping(social, f"page type {type_name}.social-card")
+            _nonempty_string(
+                social.get("kind"), f"page type {type_name}.social-card.kind"
+            )
+            _nonempty_string(
+                social.get("category"),
+                f"page type {type_name}.social-card.category",
+            )
+        elif social is not None:
+            raise RuntimeError(
+                f"Landing page type {type_name} cannot define authored social-card"
             )
 
     for status_name, raw_config in statuses.items():
@@ -353,6 +514,7 @@ def validate_page_policy(
                     source,
                     type_config,
                     status,
+                    authored_content,
                 )
                 if status == "published":
                     markers = unfinished_markers(
@@ -404,6 +566,9 @@ def resolve_route_policy(
     )
     default["status_config"] = dict(
         _mapping(statuses.get(status), f"publication status {status}")
+    )
+    default["authored_content"] = dict(
+        _mapping(policy.get("authored_content"), "page policy authored_content")
     )
     return default
 
@@ -469,6 +634,85 @@ def rendered_description(text: str) -> str | None:
     return value or None
 
 
+def authored_page_fields(
+    route_config: Mapping[str, object],
+    source_metadata: Mapping[str, object],
+    canonical_origin: str,
+) -> dict[str, object]:
+    type_config = _mapping(route_config.get("type_config"), "resolved page type")
+    if type_config.get("updates-feed") is not True:
+        return {}
+    authored = _mapping(
+        route_config.get("authored_content"), "resolved authored content"
+    )
+    author = _mapping(authored.get("author"), "authored-content.author")
+    publisher = _mapping(
+        authored.get("publisher"), "authored-content.publisher"
+    )
+    source = _nonempty_string(route_config.get("source"), "authored page source")
+    fields: dict[str, object] = {
+        "author": {
+            "@type": _nonempty_string(
+                author.get("schema-type"), "authored-content.author.schema-type"
+            ),
+            "name": _nonempty_string(
+                author.get("name"), "authored-content.author.name"
+            ),
+            "url": _nonempty_string(
+                author.get("url"), "authored-content.author.url"
+            ),
+        },
+        "publisher": {
+            "@type": _nonempty_string(
+                publisher.get("schema-type"),
+                "authored-content.publisher.schema-type",
+            ),
+            "name": _nonempty_string(
+                publisher.get("name"), "authored-content.publisher.name"
+            ),
+            "url": _nonempty_string(
+                publisher.get("url"), "authored-content.publisher.url"
+            ),
+        },
+    }
+    image_path = authored_social_image_path(route_config, source_metadata)
+    if image_path is not None:
+        fields["image"] = canonical_origin.rstrip("/") + image_path
+
+    if route_config.get("status") == "published" and source_metadata.get(
+        "published"
+    ) is True:
+        published_date = source_iso_date(source_metadata, "date", source)
+        if published_date is None:
+            raise RuntimeError(
+                f"Published authored page {source} requires a real ISO publication date"
+            )
+        modified_field = _nonempty_string(
+            authored.get("modified-date-field"),
+            "authored-content.modified-date-field",
+        )
+        fields["datePublished"] = published_date
+        fields["dateModified"] = (
+            source_iso_date(source_metadata, modified_field, source)
+            or published_date
+        )
+    return fields
+
+
+def updated_date_html(fields: Mapping[str, object]) -> str:
+    published = fields.get("datePublished")
+    modified = fields.get("dateModified")
+    if not isinstance(published, str) or not isinstance(modified, str):
+        return ""
+    if published == modified:
+        return ""
+    escaped = html.escape(modified, quote=True)
+    return (
+        '<p class="bs-publication-updated">Updated '
+        f'<time datetime="{escaped}">{html.escape(modified)}</time></p>\n'
+    )
+
+
 def breadcrumb_records(
     route_config: Mapping[str, object],
     title: str,
@@ -526,6 +770,7 @@ def page_json_ld(
     canonical_origin: str,
     site_name: str,
     breadcrumbs: list[dict[str, object]],
+    source_metadata: Mapping[str, object] | None = None,
 ) -> str:
     page_url = canonical_url(route, canonical_origin)
     page: dict[str, object] = {
@@ -544,6 +789,12 @@ def page_json_ld(
     }
     if description:
         page["description"] = description
+    authored_fields = authored_page_fields(
+        route_config, source_metadata or {}, canonical_origin
+    )
+    if authored_fields:
+        page["headline"] = title
+        page.update(authored_fields)
     graph: list[dict[str, object]] = [page]
     if breadcrumbs:
         breadcrumb_id = page_url + "#breadcrumb"
@@ -578,6 +829,7 @@ def enriched_html_text(
     route: str,
     canonical_origin: str,
     site_name: str,
+    source_metadata: Mapping[str, object] | None = None,
 ) -> tuple[str, bool]:
     canonical = canonical_url(route, canonical_origin)
     title = rendered_title(text)
@@ -585,20 +837,54 @@ def enriched_html_text(
     breadcrumbs = breadcrumb_records(
         route_config, title, route, canonical_origin
     )
+    authored_fields = authored_page_fields(
+        route_config, source_metadata or {}, canonical_origin
+    )
 
     updated = ROBOTS_META_PATTERN.sub("", text)
     updated = CANONICAL_LINK_PATTERN.sub("", updated)
     updated = OG_URL_PATTERN.sub("", updated)
+    updated = ARTICLE_PUBLISHED_PATTERN.sub("", updated)
+    updated = ARTICLE_MODIFIED_PATTERN.sub("", updated)
     updated = JSON_LD_PATTERN.sub("", updated)
     updated = BREADCRUMB_PATTERN.sub("", updated)
     updated = BREADCRUMB_STYLE_PATTERN.sub("", updated)
+    updated = UPDATED_DATE_PATTERN.sub("", updated)
     updated = RELATED_META_PATTERN.sub("", updated)
+    if authored_fields:
+        updated = OG_TYPE_PATTERN.sub("", updated)
+        updated = OG_IMAGE_PATTERN.sub("", updated)
+        updated = TWITTER_IMAGE_PATTERN.sub("", updated)
 
     head = (
         f'<meta name="robots" content="{html.escape(robots_meta, quote=True)}">\n'
         f'<link rel="canonical" href="{html.escape(canonical, quote=True)}">\n'
         f'<meta property="og:url" content="{html.escape(canonical, quote=True)}">\n'
     )
+    if authored_fields:
+        image_url = _nonempty_string(
+            authored_fields.get("image"), "authored social-card image"
+        )
+        escaped_image = html.escape(image_url, quote=True)
+        head += (
+            '<meta property="og:type" content="article">\n'
+            f'<meta property="og:image" content="{escaped_image}">\n'
+            f'<meta name="twitter:image" content="{escaped_image}">\n'
+        )
+        published_date = authored_fields.get("datePublished")
+        modified_date = authored_fields.get("dateModified")
+        if isinstance(published_date, str):
+            head += (
+                '<meta property="article:published_time" content="'
+                + html.escape(published_date, quote=True)
+                + '">\n'
+            )
+        if isinstance(modified_date, str):
+            head += (
+                '<meta property="article:modified_time" content="'
+                + html.escape(modified_date, quote=True)
+                + '">\n'
+            )
     related = route_config.get("related", [])
     if isinstance(related, list) and related:
         related_json = json.dumps(related, separators=(",", ":"))
@@ -617,6 +903,7 @@ def enriched_html_text(
         canonical_origin,
         site_name,
         breadcrumbs,
+        source_metadata,
     )
 
     if "</head>" not in updated.lower():
@@ -655,6 +942,17 @@ def enriched_html_text(
             )
         if count != 1:
             raise RuntimeError("Could not insert visible page breadcrumbs")
+    update_notice = updated_date_html(authored_fields)
+    if update_notice:
+        updated, count = re.subn(
+            r"</header>",
+            update_notice + "</header>",
+            updated,
+            count=1,
+            flags=re.IGNORECASE,
+        )
+        if count != 1:
+            raise RuntimeError("Could not insert visible authored update date")
     return updated, updated != text
 
 
@@ -849,6 +1147,10 @@ def apply_page_publication(
         route = route_for_rendered_path(path, output_root)
         route_config = resolve_route_policy(policy, route)
         robots_meta = page_robots_meta(mode, mode_config, route_config)
+        source_metadata: dict[str, object] = {}
+        source = route_config.get("source")
+        if isinstance(source, str) and source.strip():
+            source_metadata = source_front_matter(REPO_ROOT / source)
         current = path.read_text(encoding="utf-8")
         updated, changed = enriched_html_text(
             current,
@@ -857,6 +1159,7 @@ def apply_page_publication(
             route,
             canonical_origin,
             site_name,
+            source_metadata,
         )
         if changed:
             path.write_text(updated, encoding="utf-8", newline="\n")

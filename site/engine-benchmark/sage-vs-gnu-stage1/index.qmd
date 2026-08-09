@@ -1,5 +1,6 @@
 ---
 title: "Sage vs GNU: Stage 1"
+author: "Marty Gale"
 subtitle: "What happened across 20 seven-point matches?"
 description: "Results from 20 seven-point matches between Sage and GNU, including match wins, 4ply review, luck estimates, and selected Sage rollouts."
 format:

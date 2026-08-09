@@ -648,6 +648,12 @@ body.bs-editorial-page .bs-editorial-lead p {
   }
 }
 
+.bs-publication-updated {
+  margin: 0.45rem 0 0;
+  color: var(--bs-text-muted);
+  font-size: 0.84rem;
+}
+
 /* Branded 404 page */
 
 body.bs-not-found {

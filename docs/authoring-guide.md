@@ -183,6 +183,103 @@ a line containing only `TODO`, and `[PENDING ...]` markers while ignoring fenced
 examples, HTML comments, and ordinary prose that merely discusses words such as
 “todo” or “pending.” Do not replace preliminary scientific markers with guesses.
 
+## Authored Page SEO And Social Contract
+
+`site/_publication.yml` is also the authoritative authored-page registry. Its
+controlled page types map Learn lessons and Research articles to Schema.org
+`Article`, and benchmark reports to `Report`. Those three types automatically
+receive the public author, publisher, structured-data, and social-card behavior;
+landing and index page types do not receive article-only fields.
+
+Use this source front matter shape for a normal authored page:
+
+```yaml
+---
+title: "<Real page title>"
+author: "Marty Gale"
+description: >
+  <Factual description of the actual page content.>
+# Add these only when the page is genuinely ready to publish:
+# published: true
+# date: "<YYYY-MM-DD>"
+# date-modified: "<YYYY-MM-DD>"
+---
+```
+
+The matching route entry supplies the authored page type and publication state:
+
+```yaml
+/learn/example.html:
+  source: site/learn/example.qmd
+  type: learn-lesson       # or research-article / benchmark-report
+  status: draft            # change to published only with real approval
+```
+
+`author` is the visible Quarto byline and must be exactly `Marty Gale`. Rendered
+JSON-LD maps it to a `Person` whose canonical URL is
+`https://backgammonsimplified.github.io/about.html`. Authored pages also receive
+the controlled `Backgammon Simplified` `Organization` publisher. Do not add
+external profiles or organization facts that are not established on the site.
+
+`date` is the author-controlled publication date and must be an ISO 8601 calendar
+date. `date-modified` is the one controlled field for a later material update.
+Never infer either value from Git history, filesystem timestamps, rendering, or
+deployment. `date-modified` cannot precede `date`; when it is omitted on a newly
+published page, structured data uses the publication date for both values. When
+it is later, the rendered title area includes an understandable update date.
+Draft and preliminary examples do not receive fabricated structured-data dates.
+
+To publish an authored page, all three controls must agree:
+
+- source front matter has `published: true`;
+- source front matter has a real `date`;
+- the registered route has `status: published`.
+
+Only then can the page become indexable, sitemap-eligible, and RSS-eligible.
+Preliminary, draft, fixture, error, and legacy routes remain `noindex, follow`
+and excluded from sitemap/RSS eligibility.
+
+### Automatic authored social cards
+
+Do not add a generated filename, dimensions, canonical host, card kind, or pill
+label to normal authored front matter. The page type in `_publication.yml`
+automatically drives the existing social-card generator:
+
+| Authored page type | Card kind | Visible pill |
+|---|---|---|
+| `learn-lesson` | `article` | `Learn Article` |
+| `research-article` | `article` | `Research Article` |
+| `benchmark-report` | `benchmark` | `Benchmark Report` |
+
+The card title comes from `title`. Its subtitle comes from `description`. Use
+`social-title` or `social-subtitle` only when a deliberate social-only wording
+override is necessary; do not invent promotional copy. `social-card-slug` is an
+exceptional collision/route override, not routine authoring metadata.
+
+The supported generator writes a 1200 x 630 PNG under
+`site/assets/social/generated/`. The page-aware publication pass maps the same
+canonical generated image URL to `og:image`, Twitter image metadata, and the
+authored `Article`/`Report` JSON-LD `image`. Pages without a page-specific card
+continue using `social-default.png` as the site fallback. Authored pages also use
+`og:type=article`; real publication/modification dates feed the matching article
+social metadata.
+
+Run the focused and full validation before asking to publish:
+
+```powershell
+python -m unittest discover -s tests -p "test_publication*.py" -v
+python social_generator/scripts/social/run_social_pipeline.py --all
+```
+
+```bash
+bash scripts/testing/quick.sh
+bash scripts/testing/build/comprehensive.sh --with-social-cards
+BS_PUBLICATION_MODE=production bash scripts/testing/build/comprehensive.sh --with-social-cards
+```
+
+Do not add fake dates, evidence, findings, or conclusions to make draft or
+preliminary pages pass publication checks.
+
 ## Recently Added
 
 The homepage `Recently Added` section is hand-curated. Update it when a new lesson, post, or status page should be surfaced.

@@ -72,6 +72,11 @@ ALLOWED_CATEGORIES = {
     "Open Source",
 }
 
+AUTHORED_PILL_LABELS = {
+    ("article", "Learn"): "Learn Article",
+    ("article", "Research"): "Research Article",
+}
+
 DIMENSIONS = {
     "default": (1200, 630),
     "section": (1200, 630),
@@ -127,6 +132,14 @@ class Card:
     @property
     def output_path(self) -> Path:
         return (ROOT / PurePosixPath(self.output)).resolve(strict=False)
+
+    @property
+    def pill_label(self) -> str:
+        if self.kind == "benchmark":
+            return "Benchmark Report"
+        return AUTHORED_PILL_LABELS.get(
+            (self.kind, self.category), self.category
+        )
 
 
 @dataclass(frozen=True)
@@ -265,7 +278,7 @@ def validate_font_coverage(cards: list[Card], fonts: FontFiles) -> None:
     missing title, category, brand, or subtitle glyph.
     """
     semibold_text = "Backgammon Simplified" + "".join(
-        card.title + card.category for card in cards
+        card.title + card.pill_label for card in cards
     )
     regular_text = "".join(card.subtitle for card in cards)
 

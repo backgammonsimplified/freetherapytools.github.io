@@ -36,6 +36,7 @@ manifest_path <- file.path(
 
 site_root <- file.path(repo_root, "site")
 quarto_path <- file.path(repo_root, "site", "_quarto.yml")
+publication_path <- file.path(site_root, "_publication.yml")
 
 failures <- character()
 add_failure <- function(message) {
@@ -52,6 +53,35 @@ as_scalar_character <- function(value) {
   if (is.null(value) || length(value) == 0) return(NULL)
   if (is.character(value) && length(value) == 1) return(value)
   NULL
+}
+
+authored_social_cards <- function() {
+  publication <- yaml::read_yaml(publication_path)
+  pages <- publication[["bs-publication"]][["pages"]]
+  types <- pages[["types"]]
+  routes <- pages[["routes"]]
+  records <- list()
+  for (route in names(routes)) {
+    route_config <- routes[[route]]
+    source <- as_scalar_character(route_config[["source"]])
+    type_name <- as_scalar_character(route_config[["type"]])
+    if (is.null(source) || is.null(type_name)) next
+    social <- types[[type_name]][["social-card"]]
+    if (is.null(social)) next
+    kind <- as_scalar_character(social[["kind"]])
+    category <- as_scalar_character(social[["category"]])
+    if (is.null(kind) || is.null(category)) {
+      stop(
+        sprintf("Incomplete authored social-card configuration for %s.", type_name),
+        call. = FALSE
+      )
+    }
+    records[[gsub("\\\\", "/", source)]] <- list(
+      kind = kind,
+      category = category
+    )
+  }
+  records
 }
 
 normalise_public_path <- function(path) {
@@ -123,7 +153,8 @@ metadata_value <- function(metadata, keys) {
   NULL
 }
 
-page_is_eligible <- function(metadata) {
+page_is_eligible <- function(metadata, automatic = FALSE) {
+  if (automatic) return(TRUE)
   if (is_false(metadata_value(metadata, c("social-card", "social_card")))) {
     return(FALSE)
   }
@@ -216,6 +247,7 @@ card_kinds <- vapply(cards, function(card) card[["kind"]], character(1))
 card_outputs <- vapply(cards, function(card) card[["output"]], character(1))
 
 card_by_slug <- setNames(cards, card_slugs)
+authored_cards <- authored_social_cards()
 
 qmd_files <- list.files(
   site_root,
@@ -237,16 +269,32 @@ for (path in qmd_files) {
   metadata <- read_front_matter(path)
 
   relative_to_site <- substring(path, nchar(site_root) + 2)
-  if (relative_to_site != "index.qmd" && !page_is_eligible(metadata)) next
+  relative_path <- paste0("site/", relative_to_site)
+  automatic <- authored_cards[[relative_path]]
+  if (
+    !is.null(automatic) &&
+      is_false(metadata_value(metadata, c("social-card", "social_card")))
+  ) {
+    add_failure(
+      sprintf(
+        "Registered authored page %s cannot disable its social card.",
+        relative_path
+      )
+    )
+  }
+  if (
+    relative_to_site != "index.qmd" &&
+      !page_is_eligible(metadata, !is.null(automatic))
+  ) next
 
   slug <- infer_page_slug(path, metadata)
-  relative_path <- substring(path, nchar(repo_root) + 2)
+  repository_path <- substring(path, nchar(repo_root) + 2)
 
   if (!grepl("^[a-z0-9]+(?:-[a-z0-9]+)*$", slug, perl = TRUE)) {
     add_failure(
       sprintf(
         "%s resolves to invalid social-card slug '%s'.",
-        relative_path,
+        repository_path,
         slug
       )
     )
@@ -266,7 +314,7 @@ for (path in qmd_files) {
     add_failure(
       sprintf(
         "Eligible page %s has no card record for slug '%s'.",
-        relative_path,
+        repository_path,
         slug
       )
     )
@@ -275,11 +323,34 @@ for (path in qmd_files) {
 
   card <- card_by_slug[[slug]]
 
+  if (!is.null(automatic)) {
+    if (!identical(card[["kind"]], automatic[["kind"]])) {
+      add_failure(
+        sprintf(
+          "Authored page %s uses card kind '%s'; expected '%s'.",
+          repository_path,
+          card[["kind"]],
+          automatic[["kind"]]
+        )
+      )
+    }
+    if (!identical(card[["category"]], automatic[["category"]])) {
+      add_failure(
+        sprintf(
+          "Authored page %s uses card category '%s'; expected '%s'.",
+          repository_path,
+          card[["category"]],
+          automatic[["category"]]
+        )
+      )
+    }
+  }
+
   if (identical(card[["kind"]], "github")) {
     add_failure(
       sprintf(
         "Eligible page %s maps to GitHub-only card '%s'.",
-        relative_path,
+        repository_path,
         slug
       )
     )
@@ -303,21 +374,21 @@ for (path in qmd_files) {
       }
     }
   } else {
-    if (is.null(page_image)) {
+    if (is.null(page_image) && is.null(automatic)) {
       add_failure(
         sprintf(
           "Eligible page %s is missing image metadata; expected '%s'.",
-          relative_path,
+          repository_path,
           expected_image
         )
       )
-    } else {
+    } else if (!is.null(page_image)) {
       actual_image <- normalise_public_path(page_image)
       if (!identical(actual_image, expected_image)) {
         add_failure(
           sprintf(
             "Page %s uses image '%s'; expected '%s'.",
-            relative_path,
+            repository_path,
             actual_image,
             expected_image
           )
@@ -326,7 +397,7 @@ for (path in qmd_files) {
     }
   }
 
-  eligible_pages[[slug]] <- relative_path
+  eligible_pages[[slug]] <- repository_path
 }
 
 page_card_indices <- which(

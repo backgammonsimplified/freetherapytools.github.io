@@ -25,6 +25,7 @@ if (!requireNamespace("yaml", quietly = TRUE)) {
 
 site_root <- file.path(repo_root, "site")
 manifest_path <- file.path(site_root, "assets", "social", "social-cards.yml")
+publication_path <- file.path(site_root, "_publication.yml")
 
 `%||%` <- function(x, y) {
   if (is.null(x) || length(x) == 0) y else x
@@ -61,6 +62,44 @@ is_true <- function(value) {
   )
 }
 
+is_false <- function(value) {
+  identical(value, FALSE) || (
+    is.character(value) && length(value) == 1 &&
+      tolower(trimws(value)) %in% c("false", "no", "0")
+  )
+}
+
+authored_social_cards <- function() {
+  publication <- yaml::read_yaml(publication_path)
+  pages <- publication[["bs-publication"]][["pages"]]
+  types <- pages[["types"]]
+  routes <- pages[["routes"]]
+  cards <- list()
+  for (route in names(routes)) {
+    route_config <- routes[[route]]
+    source <- route_config[["source"]]
+    type_name <- route_config[["type"]]
+    if (is.null(source) || is.null(type_name)) next
+    type_config <- types[[type_name]]
+    social <- type_config[["social-card"]]
+    if (is.null(social)) next
+    source <- as_text(source, "publication route source", publication_path)
+    cards[[gsub("\\\\", "/", source)]] <- list(
+      kind = as_text(
+        social[["kind"]],
+        sprintf("%s social-card kind", type_name),
+        publication_path
+      ),
+      category = as_text(
+        social[["category"]],
+        sprintf("%s social-card category", type_name),
+        publication_path
+      )
+    )
+  }
+  cards
+}
+
 page_slug <- function(path, metadata) {
   explicit <- metadata[["social-card-slug"]] %||%
     metadata[["social_card_slug"]] %||%
@@ -94,6 +133,7 @@ make_card <- function(slug, kind, title, subtitle, category = "") {
 
 home_path <- file.path(site_root, "index.qmd")
 home <- read_front_matter(home_path)
+authored_cards <- authored_social_cards()
 
 cards <- list(
   make_card(
@@ -117,15 +157,40 @@ for (path in qmd_files) {
   if (identical(path, normalizePath(home_path, winslash = "/", mustWork = TRUE))) next
 
   metadata <- read_front_matter(path)
-  if (!is_true(metadata[["social-card"]] %||% metadata[["social_card"]])) next
-
-  kind <- as_text(metadata[["social-card-kind"]] %||% metadata[["social_card_kind"]], "social-card-kind", path)
-  category <- as_text(
-    metadata[["social-card-category"]] %||% metadata[["social_card_category"]] %||% "",
-    "social-card-category",
-    path,
-    allow_blank = TRUE
+  source_key <- paste0(
+    "site/",
+    substring(path, nchar(normalizePath(site_root, winslash = "/")) + 2)
   )
+  automatic <- authored_cards[[source_key]]
+  explicit <- is_true(metadata[["social-card"]] %||% metadata[["social_card"]])
+  if (is.null(automatic) && !explicit) next
+  if (!is.null(automatic) && is_false(metadata[["social-card"]] %||% metadata[["social_card"]])) {
+    stop(
+      sprintf("Registered authored page cannot disable its social card: %s.", path),
+      call. = FALSE
+    )
+  }
+
+  if (!is.null(automatic)) {
+    kind <- automatic[["kind"]]
+    category <- automatic[["category"]]
+    explicit_kind <- metadata[["social-card-kind"]] %||% metadata[["social_card_kind"]]
+    explicit_category <- metadata[["social-card-category"]] %||% metadata[["social_card_category"]]
+    if (!is.null(explicit_kind) && !identical(as_text(explicit_kind, "social-card-kind", path), kind)) {
+      stop(sprintf("Authored social-card kind conflicts with _publication.yml in %s.", path), call. = FALSE)
+    }
+    if (!is.null(explicit_category) && !identical(as_text(explicit_category, "social-card-category", path), category)) {
+      stop(sprintf("Authored social-card category conflicts with _publication.yml in %s.", path), call. = FALSE)
+    }
+  } else {
+    kind <- as_text(metadata[["social-card-kind"]] %||% metadata[["social_card_kind"]], "social-card-kind", path)
+    category <- as_text(
+      metadata[["social-card-category"]] %||% metadata[["social_card_category"]] %||% "",
+      "social-card-category",
+      path,
+      allow_blank = TRUE
+    )
+  }
   cards[[length(cards) + 1L]] <- make_card(
     page_slug(path, metadata),
     kind,

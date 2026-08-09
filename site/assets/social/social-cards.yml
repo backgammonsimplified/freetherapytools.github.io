@@ -18,6 +18,16 @@ cards:
   subtitle: Question-driven lessons, position analysis and backgammon research.
   category: ''
   visual: ''
+- slug: sage-vs-gnu-stage1
+  kind: benchmark
+  width: 1200
+  height: 630
+  output: site/assets/social/generated/social-sage-vs-gnu-stage1.png
+  title: 'Sage vs GNU: Stage 1'
+  subtitle: Results from 20 seven-point matches between Sage and GNU, including match
+    wins, 4ply review, luck estimates, and selected Sage rollouts.
+  category: Sage vs GNU
+  visual: ''
 - slug: glossary
   kind: section
   width: 1200
@@ -27,4 +37,24 @@ cards:
   subtitle: A searchable backgammon dictionary of terms and glossary for concepts
     used throughout Backgammon Simplified.
   category: Learn
+  visual: ''
+- slug: why-is-25-percent-the-take-point
+  kind: article
+  width: 1200
+  height: 630
+  output: site/assets/social/generated/social-why-is-25-percent-the-take-point.png
+  title: Why Is 25% the Basic Take Point When a Double Is Offered?
+  subtitle: |
+    Why a 25% winning chance can still justify taking a double, and where the basic model stops.
+  category: Learn
+  visual: ''
+- slug: sage-vs-gnu-additional-details
+  kind: article
+  width: 1200
+  height: 630
+  output: site/assets/social/generated/social-sage-vs-gnu-additional-details.png
+  title: 'Sage vs GNU: Additional Details'
+  subtitle: |
+    Methods, results, and evidence for the Sage versus GNU Stage 1 backgammon engine benchmark.
+  category: Research
   visual: ''
