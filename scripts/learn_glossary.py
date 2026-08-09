@@ -2435,6 +2435,15 @@ def validate_rendered_404(not_found_html: str) -> None:
             raise ValidationError(
                 f"Rendered 404 links are malformed: missing clean link {route}"
             )
+    for marker in (
+        'class="bs-404-shell"',
+        'class="bs-404-card"',
+        'class="bs-404-visual"',
+    ):
+        if marker not in not_found_html:
+            raise ValidationError(
+                f"Rendered 404 is malformed: missing rich presentation marker {marker}"
+            )
     if re.search(
         r'(http-equiv=["\']refresh|window\.location|location\.replace)',
         not_found_html,

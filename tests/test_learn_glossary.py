@@ -1536,6 +1536,25 @@ private code phrase
             r"font-size: 21\.25px;",
         )
 
+    def test_editorial_breadcrumbs_reduce_the_title_offset(self) -> None:
+        css = (
+            learn_glossary.SITE_ROOT / "assets" / "bs-shared.css"
+        ).read_text(encoding="utf-8")
+        self.assertRegex(
+            css,
+            r":is\(\s+body\.bs-engine-benchmark-page,\s+"
+            r"body\.bs-research-index,\s+body\.bs-research-article\s+"
+            r"\) #title-block-header \{[^}]*"
+            r"padding-top: clamp\(0\.75rem, 1\.5vw, 1\.25rem\);",
+        )
+        self.assertRegex(
+            css,
+            r"@media \(max-width: 767px\)[\s\S]*"
+            r":is\(\s+body\.bs-engine-benchmark-page,\s+"
+            r"body\.bs-research-index,\s+body\.bs-research-article\s+"
+            r"\) #title-block-header \{[^}]*padding-top: 0\.75rem;",
+        )
+
     def test_lesson_and_research_article_desktop_right_rail_contract(
         self,
     ) -> None:
@@ -2389,6 +2408,8 @@ private code phrase
 
             not_found = output_root / "404.html"
             not_found.write_text(
+                '<div class="bs-404-shell"><div class="bs-404-card">'
+                '<div class="bs-404-visual"></div></div></div>'
                 "Page closed out suspiciously bounced off the board "
                 + " ".join(
                     f'<a href="{route}">{route}</a>'
@@ -2413,10 +2434,14 @@ private code phrase
     def test_rendered_404_and_footer_diagnostics_are_specific(self) -> None:
         with self.assertRaisesRegex(
             learn_glossary.ValidationError,
-            "404 links are malformed",
+            "rich presentation marker",
         ):
             learn_glossary.validate_rendered_404(
-                "Page closed out suspiciously bounced off the board"
+                "Page closed out suspiciously bounced off the board "
+                + " ".join(
+                    f'<a href="{route}">{route}</a>'
+                    for route in learn_glossary.NOT_FOUND_ROUTES
+                )
             )
 
         with writable_test_directory() as output_root:
