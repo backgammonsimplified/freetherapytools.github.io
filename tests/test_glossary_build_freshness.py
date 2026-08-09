@@ -64,9 +64,9 @@ class GlossaryBuildFreshnessTests(unittest.TestCase):
         html = learn_glossary.build_entries_html(public_entries, {}, {})
         lookup = json.loads(learn_glossary.build_lookup_data(public_entries, {}))
 
-        self.assertEqual(len(public_entries), 13)
-        self.assertEqual(html.count('class="bs-glossary-entry"'), 13)
-        self.assertEqual(len(lookup["entries"]), 13)
+        self.assertEqual(len(public_entries), 38)
+        self.assertEqual(html.count('class="bs-glossary-entry"'), 38)
+        self.assertEqual(len(lookup["entries"]), 38)
 
     def test_partial_render_runs_the_freshness_check(self) -> None:
         with mock.patch.dict(os.environ, {}, clear=True), mock.patch.object(

@@ -523,7 +523,7 @@ assert.equal(
 );
 assert.equal(
   generatedGlossaryItems.length,
-  12,
+  37,
   "the JavaScript integration fixture uses every canonical entry"
 );
 assert.equal(
@@ -531,7 +531,7 @@ assert.equal(
     (count, item) => count + item.aliasSlugs.length,
     0
   ),
-  3,
+  29,
   "the JavaScript integration fixture uses every canonical alias"
 );
 
@@ -539,6 +539,9 @@ assert.equal(
   ["10 in the zone", "10 in the Zone"],
   ["Ten in the Zone", "10 in the Zone"],
   ["American Backgammon Tour", "ABT"],
+  ["Error Rate", "Performance Rating"],
+  ["Time Delay", "Simple Delay"],
+  ["Zone of Attack", "Attack Zone"],
   ["Ahead in the Race", "Ahead in the Count"]
 ].forEach(([query, expectedCanonical]) => {
   const matchingItems = generatedGlossaryItems.filter((item) =>
@@ -740,13 +743,13 @@ const lookupData = JSON.parse(
     "utf8"
   )
 );
-assert.equal(lookupData.entries.length, 12);
+assert.equal(lookupData.entries.length, 37);
 assert.equal(
   lookupData.entries.reduce(
     (total, entry) => total + entry.aliases.length,
     0
   ),
-  3
+  29
 );
 assert.equal(
   learn.bestLookupEntry(lookupData.entries, "Ahead in the Race").term,
