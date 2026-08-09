@@ -123,6 +123,26 @@ bs-publication:
             route: /research/index.html
         related:
           - /engine-benchmark/sage-vs-gnu-stage1/index.html
+      /posts/2026-07-cube-basics/index.html:
+        source: site/posts/2026-07-cube-basics/index.qmd
+        type: page
+        status: fixture
+      /posts/2026-07-opening-play-article.html:
+        source: site/posts/2026-07-opening-play-article.qmd
+        type: page
+        status: fixture
+      /posts/2026-07-research-methodology.html:
+        source: site/posts/2026-07-research-methodology.qmd
+        type: page
+        status: fixture
+      /posts/2026-07-sage-vs-gnu-update.html:
+        source: site/posts/2026-07-sage-vs-gnu-update.qmd
+        type: page
+        status: fixture
+      /posts/2026-07-site-update.html:
+        source: site/posts/2026-07-site-update.qmd
+        type: page
+        status: fixture
   research:
     categories:
       - Learn
