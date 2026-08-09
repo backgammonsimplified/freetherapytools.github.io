@@ -11,6 +11,8 @@ from contextlib import contextmanager
 from pathlib import Path
 from unittest import mock
 
+from scripts import page_publication
+
 
 ROOT = Path(__file__).resolve().parents[1]
 MODULE_PATH = ROOT / "scripts" / "learn_glossary.py"
@@ -2331,7 +2333,7 @@ private code phrase
                 learn_glossary.validate_full_build_output(output_root)
 
             marker = output_root / learn_glossary.FULL_BUILD_MARKER_NAME
-            bs_post_render.write_full_build_marker(marker)
+            page_publication.write_full_build_marker(marker)
             with self.assertRaisesRegex(
                 learn_glossary.ValidationError,
                 "site output is incomplete",

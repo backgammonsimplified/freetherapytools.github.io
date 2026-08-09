@@ -161,6 +161,28 @@ set `published: true`. The feed sorts those sources in reverse chronological
 order. Do not mark landings, drafts, hidden or planned pages, or private fixture
 posts as published feed items.
 
+The controlled route entry in `site/_publication.yml` must also have
+`status: published`. Source validation rejects either half of a contradictory
+combination: `published: true` on a preliminary, draft, or fixture route, or a
+feed-eligible article/report marked `status: published` without the explicit
+source switch and date. Landing pages use the controlled `published` route
+status for indexing but never set `published: true`, because they are not dated
+Updates items.
+
+## Page Publication Status
+
+`site/_publication.yml` is the fail-closed registry for canonical routes, page
+types, indexing, sitemap eligibility, breadcrumbs, and related-content hooks.
+Unregistered routes resolve to `draft` and remain non-indexable. Use only the
+controlled statuses `published`, `preliminary`, `draft`, `fixture`, `error`,
+and `legacy`.
+
+Before changing an authored article or report to `published`, remove explicit
+unresolved author markers. The publication gate recognizes line-level `TODO:`,
+a line containing only `TODO`, and `[PENDING ...]` markers while ignoring fenced
+examples, HTML comments, and ordinary prose that merely discusses words such as
+“todo” or “pending.” Do not replace preliminary scientific markers with guesses.
+
 ## Recently Added
 
 The homepage `Recently Added` section is hand-curated. Update it when a new lesson, post, or status page should be surfaced.

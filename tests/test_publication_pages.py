@@ -1,7 +1,12 @@
 from __future__ import annotations
 
 import copy
+import json
+import os
+import tempfile
 import unittest
+from pathlib import Path
+from unittest import mock
 
 from scripts import page_publication as pp
 
@@ -64,6 +69,18 @@ class PagePublicationTests(unittest.TestCase):
         self.assertIs(status["sitemap"], False)
         self.assertIs(status["rss"], False)
 
+    def test_unregistered_routes_fail_closed_as_draft(self) -> None:
+        unresolved = pp.resolve_route_policy(self.policy, "/unregistered.html")
+        self.assertEqual(unresolved["status"], "draft")
+        self.assertEqual(
+            pp.page_robots_meta(
+                "production",
+                {"robots-meta": "index, follow"},
+                unresolved,
+            ),
+            "noindex, follow",
+        )
+
     def test_rendered_identity_and_breadcrumbs_share_one_url(self) -> None:
         source = """<!doctype html><html><head>
 <meta name="description" content="A clear lesson">
@@ -111,23 +128,28 @@ class PagePublicationTests(unittest.TestCase):
         self.assertNotIn("sage-vs-gnu-stage1", updated)
 
     def test_rss_excludes_preliminary_and_uses_stable_authored_guid(self) -> None:
+        policy = copy.deepcopy(self.policy)
+        authored_route = "/learn/cube/why-is-25-percent-the-take-point.html"
+        policy["routes"][authored_route]["status"] = "published"
         source = """<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel>
-<item><title>Learn</title><link>https://backgammonsimplified.github.io/learn/index.html</link><guid>https://backgammonsimplified.github.io/learn/index.html</guid></item>
+<item><title>Learn</title><link>https://backgammonsimplified.github.io/learn/cube/why-is-25-percent-the-take-point.html</link><guid>https://backgammonsimplified.github.io/learn/cube/why-is-25-percent-the-take-point.html</guid></item>
+<item><title>Landing</title><link>https://backgammonsimplified.github.io/learn/index.html</link><guid>landing</guid></item>
 <item><title>Preliminary</title><link>https://backgammonsimplified.github.io/engine-benchmark/sage-vs-gnu-stage1/index.html</link><guid>old</guid></item>
 <item><title>Glossary</title><link>https://backgammonsimplified.github.io/glossary/#take</link><guid isPermaLink="true">https://backgammonsimplified.github.io/glossary/#take</guid></item>
 </channel></rss>"""
         updated, changed, removed, stabilized = pp.filtered_updates_feed_text(
             source,
-            self.policy,
+            policy,
             "https://backgammonsimplified.github.io",
         )
 
         self.assertTrue(changed)
-        self.assertEqual(removed, 1)
+        self.assertEqual(removed, 2)
         self.assertEqual(stabilized, 1)
         self.assertIn(
-            "urn:backgammonsimplified:route:/learn/index.html",
+            "urn:backgammonsimplified:route:"
+            "/learn/cube/why-is-25-percent-the-take-point.html",
             updated,
         )
         self.assertIn(
@@ -137,26 +159,131 @@ class PagePublicationTests(unittest.TestCase):
         self.assertNotIn("sage-vs-gnu-stage1", updated)
 
     def test_unfinished_markers_ignore_comments_and_code(self) -> None:
-        source = """Normal prose.
+        source = """Normal prose discussing a TODO list and work that is pending.
 <!-- TODO private note -->
-```
-TODO example
+````markdown
+TODO: example
 [PENDING EXAMPLE]
-```
-TODO visible work
+````
+TODO is also an ordinary subject when it has no marker colon.
+- TODO: visible work
 [PENDING FIGURE :: real]
 """
         self.assertEqual(
             pp.unfinished_markers(source),
-            ["[PENDING FIGURE :: real]", "TODO"],
+            ["TODO", "[PENDING FIGURE :: real]"],
         )
 
     def test_published_source_with_author_marker_is_rejected(self) -> None:
-        invalid = copy.deepcopy(self.policy)
-        route = "/engine-benchmark/sage-vs-gnu-stage1/index.html"
-        invalid["routes"][route]["status"] = "published"
-        with self.assertRaisesRegex(RuntimeError, "unresolved author marker"):
-            pp.validate_page_policy(invalid)
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "article.qmd"
+            source.write_text(
+                "---\ntitle: Test\npublished: true\ndate: 2026-08-08\n---\n"
+                "TODO: finish this page\n",
+                encoding="utf-8",
+            )
+            invalid = copy.deepcopy(self.policy)
+            invalid["routes"] = {
+                "/article.html": {
+                    "source": "article.qmd",
+                    "type": "research-article",
+                    "status": "published",
+                }
+            }
+            with self.assertRaisesRegex(RuntimeError, "unresolved author marker"):
+                pp.validate_page_policy(
+                    invalid,
+                    repo_root=root,
+                    research_source_path=None,
+                )
+
+    def test_authored_published_switch_and_route_status_must_agree(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "article.qmd"
+            policy = copy.deepcopy(self.policy)
+            policy["routes"] = {
+                "/article.html": {
+                    "source": "article.qmd",
+                    "type": "research-article",
+                    "status": "published",
+                }
+            }
+
+            source.write_text("---\ntitle: Test\n---\nComplete.\n", encoding="utf-8")
+            with self.assertRaisesRegex(RuntimeError, "published: true"):
+                pp.validate_page_policy(
+                    policy, repo_root=root, research_source_path=None
+                )
+
+            source.write_text(
+                "---\ntitle: Test\npublished: true\n---\nComplete.\n",
+                encoding="utf-8",
+            )
+            with self.assertRaisesRegex(RuntimeError, "publication date"):
+                pp.validate_page_policy(
+                    policy, repo_root=root, research_source_path=None
+                )
+
+            source.write_text(
+                "---\ntitle: Test\npublished: true\ndate: 2026-08-08\n---\n"
+                "Complete.\n",
+                encoding="utf-8",
+            )
+            pp.validate_page_policy(
+                policy, repo_root=root, research_source_path=None
+            )
+
+            policy["routes"]["/article.html"]["status"] = "preliminary"
+            with self.assertRaisesRegex(RuntimeError, "route status is preliminary"):
+                pp.validate_page_policy(
+                    policy, repo_root=root, research_source_path=None
+                )
+
+    def test_final_publication_pass_owns_full_build_marker(self) -> None:
+        quarto = pp.yaml.safe_load(
+            (pp.REPO_ROOT / "site" / "_quarto.yml").read_text(encoding="utf-8")
+        )
+        self.assertEqual(
+            quarto["project"]["post-render"][-1],
+            "python ../scripts/page_publication.py apply",
+        )
+
+        with tempfile.TemporaryDirectory() as directory:
+            marker = Path(directory) / ".bs-full-build.json"
+            marker.write_text("stale", encoding="utf-8")
+            with (
+                mock.patch.object(pp, "FULL_BUILD_MARKER", marker),
+                mock.patch.dict(os.environ, {"QUARTO_PROJECT_RENDER_ALL": "1"}),
+                mock.patch.object(
+                    pp,
+                    "apply_page_publication",
+                    side_effect=RuntimeError("final pass failed"),
+                ),
+            ):
+                with self.assertRaisesRegex(RuntimeError, "final pass failed"):
+                    pp.main(["page_publication.py", "apply"])
+            self.assertFalse(marker.exists())
+
+            results = {
+                "changed_pages": 0,
+                "validated_pages": 1,
+                "sitemap_removed": 0,
+                "rss_removed": 0,
+                "rss_stabilized": 0,
+                "categories_written": 0,
+            }
+            with (
+                mock.patch.object(pp, "FULL_BUILD_MARKER", marker),
+                mock.patch.dict(os.environ, {"QUARTO_PROJECT_RENDER_ALL": "1"}),
+                mock.patch.object(pp, "apply_page_publication", return_value=results),
+            ):
+                self.assertEqual(pp.main(["page_publication.py", "apply"]), 0)
+            self.assertEqual(
+                json.loads(marker.read_text(encoding="utf-8")),
+                {"complete_full_build": True, "schema": 1},
+            )
 
     def test_404_remains_noindex_in_production(self) -> None:
         config = pp.resolve_route_policy(self.policy, "/404.html")

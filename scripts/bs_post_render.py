@@ -33,11 +33,9 @@ OUTPUT_ROOT = REPO_ROOT / "site" / "_site"
 SITEMAP_PATH = OUTPUT_ROOT / "sitemap.xml"
 ROBOTS_PATH = OUTPUT_ROOT / "robots.txt"
 NOT_FOUND_PATH = OUTPUT_ROOT / "404.html"
-FULL_BUILD_MARKER = OUTPUT_ROOT / ".bs-full-build.json"
 UPDATES_FEED_PATH = OUTPUT_ROOT / "updates" / "index.xml"
 GLOSSARY_DATA_PATH = REPO_ROOT / "site" / "data" / "glossary.json"
 LEGACY_GLOSSARY_PATH = OUTPUT_ROOT / "learn" / "glossary" / "index.html"
-FULL_BUILD_MARKER_SCHEMA = 1
 GLOSSARY_INDEX_URL = CANONICAL_ORIGIN + "/glossary/index.html"
 NOT_FOUND_ROUTE_MAP = {
     "/.": "/",
@@ -512,19 +510,6 @@ def validate_sitemap_origin(
     return len(locations)
 
 
-def write_full_build_marker(path: Path = FULL_BUILD_MARKER) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    payload = {
-        "schema": FULL_BUILD_MARKER_SCHEMA,
-        "complete_full_build": True,
-    }
-    path.write_text(
-        json.dumps(payload, indent=2, sort_keys=True) + "\n",
-        encoding="utf-8",
-        newline="\n",
-    )
-
-
 def main() -> int:
     mode, mode_config = publication_mode(PUBLICATION)
     print(f"Applying {mode} publication indexing.")
@@ -556,11 +541,10 @@ def main() -> int:
         sitemap_count = validate_sitemap_origin()
         print(f"Validated {sitemap_count} canonical sitemap locations.")
 
-    if os.getenv("QUARTO_PROJECT_RENDER_ALL") == "1":
-        write_full_build_marker()
-        print(f"Recorded complete full build: {FULL_BUILD_MARKER}")
-    else:
-        print("Partial render: no full-build completion marker recorded.")
+    print(
+        "Publication indexing pass complete; "
+        "final page-aware pass records build completion."
+    )
     return 0
 
 

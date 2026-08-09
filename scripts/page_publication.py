@@ -2,9 +2,11 @@ from __future__ import annotations
 
 import html
 import json
+import os
 import re
 import sys
 from collections.abc import Mapping
+from datetime import date
 from pathlib import Path
 from urllib.parse import urlparse
 from xml.etree import ElementTree
@@ -32,6 +34,8 @@ SITEMAP_PATH = OUTPUT_ROOT / "sitemap.xml"
 UPDATES_FEED_PATH = OUTPUT_ROOT / "updates" / "index.xml"
 RESEARCH_SOURCE_PATH = REPO_ROOT / "site" / "research" / "index.qmd"
 RESEARCH_CATEGORIES_PATH = OUTPUT_ROOT / "assets" / "bs-research-categories.json"
+FULL_BUILD_MARKER = OUTPUT_ROOT / ".bs-full-build.json"
+FULL_BUILD_MARKER_SCHEMA = 1
 
 ROBOTS_META_PATTERN = re.compile(
     r'<meta\b[^>]*\bname=["\']robots["\'][^>]*>\s*',
@@ -84,10 +88,11 @@ RELATED_META_PATTERN = re.compile(
 RESEARCH_CATEGORY_PATTERN = re.compile(
     r'data-bs-filter-category=["\']([^"\']+)["\']'
 )
-FENCED_CODE_PATTERN = re.compile(r"(?ms)^```.*?^```\s*$|^~~~.*?^~~~\s*$")
 HTML_COMMENT_PATTERN = re.compile(r"<!--.*?-->", flags=re.DOTALL)
-PENDING_MARKER_PATTERN = re.compile(r"\[PENDING(?:[^\]]*)\]")
-TODO_MARKER_PATTERN = re.compile(r"\bTODO\b")
+UNFINISHED_MARKER_PATTERN = re.compile(
+    r"(?im)^[ \t]*(?:(?:[-*+] |\d+[.)] ))?"
+    r"(?P<marker>TODO(?=\s*(?::|$))|\[PENDING[^\]\r\n]*\])"
+)
 
 BREADCRUMB_STYLE = """<style id="bs-publication-breadcrumb-styles">
 .bs-publication-breadcrumbs{margin:.25rem 0 1rem;font-size:.82rem;color:var(--bs-text-muted,#68625a)}
@@ -146,18 +151,100 @@ def load_page_policy(path: Path = PUBLICATION_PATH) -> dict[str, object]:
 
 
 def strip_nonvisible_source(text: str) -> str:
-    without_fences = FENCED_CODE_PATTERN.sub("", text)
-    return HTML_COMMENT_PATTERN.sub("", without_fences)
+    """Remove comments and fenced examples before checking author markers."""
+    without_comments = HTML_COMMENT_PATTERN.sub("", text)
+    visible_lines: list[str] = []
+    fence_character: str | None = None
+    fence_length = 0
+    for line in without_comments.splitlines(keepends=True):
+        fence = re.match(r"^[ \t]{0,3}(`{3,}|~{3,})", line)
+        if fence_character is None:
+            if fence is not None:
+                token = fence.group(1)
+                fence_character = token[0]
+                fence_length = len(token)
+                continue
+            visible_lines.append(line)
+            continue
+        if fence is not None:
+            token = fence.group(1)
+            if token[0] == fence_character and len(token) >= fence_length:
+                fence_character = None
+                fence_length = 0
+        continue
+    return "".join(visible_lines)
 
 
 def unfinished_markers(text: str) -> list[str]:
     visible = strip_nonvisible_source(text)
-    markers: list[str] = []
-    markers.extend(
-        match.group(0) for match in PENDING_MARKER_PATTERN.finditer(visible)
-    )
-    markers.extend(match.group(0) for match in TODO_MARKER_PATTERN.finditer(visible))
-    return markers
+    return [
+        match.group("marker") for match in UNFINISHED_MARKER_PATTERN.finditer(visible)
+    ]
+
+
+def source_front_matter(path: Path) -> dict[str, object]:
+    try:
+        lines = path.read_text(encoding="utf-8").splitlines()
+    except OSError as error:
+        raise RuntimeError(f"Could not read publication source: {path}") from error
+    if not lines or lines[0].strip() != "---":
+        raise RuntimeError(f"Publication source has no YAML front matter: {path}")
+    try:
+        closing = next(
+            index
+            for index, line in enumerate(lines[1:], start=1)
+            if line.strip() == "---"
+        )
+        metadata = yaml.safe_load("\n".join(lines[1:closing]))
+    except StopIteration as error:
+        raise RuntimeError(
+            f"Publication source has unterminated YAML front matter: {path}"
+        ) from error
+    except yaml.YAMLError as error:
+        raise RuntimeError(
+            f"Publication source has invalid YAML front matter: {path}"
+        ) from error
+    return dict(_mapping(metadata, f"front matter for {path}"))
+
+
+def validate_authored_publication_metadata(
+    metadata: Mapping[str, object],
+    source: str,
+    type_config: Mapping[str, object],
+    status: str,
+) -> None:
+    published = metadata.get("published")
+    if published is not None and not isinstance(published, bool):
+        raise RuntimeError(f"Publication source {source} published must be boolean")
+
+    updates_feed = type_config.get("updates-feed") is True
+    if published is True and not updates_feed:
+        raise RuntimeError(
+            f"Landing/non-authored page {source} cannot set published: true"
+        )
+    if published is True and status != "published":
+        raise RuntimeError(
+            f"Publication source {source} sets published: true but route status is {status}"
+        )
+    if updates_feed and status == "published" and published is not True:
+        raise RuntimeError(
+            "Published authored page must explicitly set published: true: " + source
+        )
+    if published is not True:
+        return
+
+    raw_date = metadata.get("date")
+    if isinstance(raw_date, str):
+        try:
+            date.fromisoformat(raw_date.strip())
+        except ValueError as error:
+            raise RuntimeError(
+                f"Published authored page {source} has invalid ISO date: {raw_date!r}"
+            ) from error
+    elif not isinstance(raw_date, date):
+        raise RuntimeError(
+            f"Published authored page {source} requires a real ISO publication date"
+        )
 
 
 def validate_page_policy(
@@ -185,6 +272,10 @@ def validate_page_policy(
         _nonempty_string(
             config.get("schema-type"), f"page type {type_name}.schema-type"
         )
+        if not isinstance(config.get("updates-feed"), bool):
+            raise RuntimeError(
+                f"page type {type_name}.updates-feed must be boolean"
+            )
 
     for status_name, raw_config in statuses.items():
         config = _mapping(raw_config, f"publication status {status_name}")
@@ -255,6 +346,14 @@ def validate_page_policy(
                     raise RuntimeError(
                         f"Publication source is missing for {route}: {source}"
                     )
+                metadata = source_front_matter(source_path)
+                type_config = _mapping(types.get(page_type), f"page type {page_type}")
+                validate_authored_publication_metadata(
+                    metadata,
+                    source,
+                    type_config,
+                    status,
+                )
                 if status == "published":
                     markers = unfinished_markers(
                         source_path.read_text(encoding="utf-8")
@@ -297,10 +396,11 @@ def resolve_route_policy(
     types = _mapping(policy.get("types"), "page policy types")
     statuses = _mapping(policy.get("statuses"), "page policy statuses")
     default["schema_type"] = _nonempty_string(
-        _mapping(types.get(page_type), f"page type {page_type}").get(
-            "schema-type"
-        ),
+        _mapping(types.get(page_type), f"page type {page_type}").get("schema-type"),
         f"page type {page_type}.schema-type",
+    )
+    default["type_config"] = dict(
+        _mapping(types.get(page_type), f"page type {page_type}")
     )
     default["status_config"] = dict(
         _mapping(statuses.get(status), f"publication status {status}")
@@ -638,7 +738,11 @@ def filtered_updates_feed_text(
         status_config = _mapping(
             route_config.get("status_config"), "resolved status"
         )
-        if status_config.get("rss") is not True:
+        type_config = _mapping(route_config.get("type_config"), "resolved page type")
+        if (
+            status_config.get("rss") is not True
+            or type_config.get("updates-feed") is not True
+        ):
             channel.remove(item)
             removed += 1
             continue
@@ -674,6 +778,26 @@ def write_research_categories(
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content, encoding="utf-8", newline="\n")
     return True
+
+
+def invalidate_full_build_marker(path: Path = FULL_BUILD_MARKER) -> bool:
+    if not path.exists():
+        return False
+    path.unlink()
+    return True
+
+
+def write_full_build_marker(path: Path = FULL_BUILD_MARKER) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "schema": FULL_BUILD_MARKER_SCHEMA,
+        "complete_full_build": True,
+    }
+    path.write_text(
+        json.dumps(payload, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
 
 
 def validate_rendered_identity(text: str, canonical: str) -> None:
@@ -778,6 +902,9 @@ def apply_page_publication(
 def main(argv: list[str] | None = None) -> int:
     argv = sys.argv if argv is None else argv
     command = argv[1] if len(argv) > 1 else "apply"
+    full_build = os.getenv("QUARTO_PROJECT_RENDER_ALL") == "1"
+    if full_build and invalidate_full_build_marker(FULL_BUILD_MARKER):
+        print("Invalidated the previous full-build completion marker.")
     policy = load_page_policy()
     validate_page_policy(policy)
 
@@ -804,6 +931,11 @@ def main(argv: list[str] | None = None) -> int:
         f"{results['rss_removed']} RSS item(s) removed, "
         f"{results['rss_stabilized']} RSS GUID(s) stabilized."
     )
+    if full_build:
+        write_full_build_marker(FULL_BUILD_MARKER)
+        print(f"Recorded complete full build: {FULL_BUILD_MARKER}")
+    else:
+        print("Partial render: no full-build completion marker recorded.")
     return 0
 
 

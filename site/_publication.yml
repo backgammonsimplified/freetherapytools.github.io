@@ -25,22 +25,29 @@ bs-publication:
   pages:
     default:
       type: page
-      status: published
+      status: draft
     types:
       page:
         schema-type: WebPage
+        updates-feed: false
       learn-index:
         schema-type: CollectionPage
+        updates-feed: false
       learn-lesson:
         schema-type: Article
+        updates-feed: true
       research-index:
         schema-type: CollectionPage
+        updates-feed: false
       research-article:
         schema-type: Article
+        updates-feed: true
       engine-benchmark-index:
         schema-type: CollectionPage
+        updates-feed: false
       benchmark-report:
         schema-type: Report
+        updates-feed: true
     statuses:
       published:
         indexable: true
@@ -67,6 +74,34 @@ bs-publication:
         sitemap: false
         rss: false
     routes:
+      /:
+        source: site/index.qmd
+        type: page
+        status: published
+      /about.html:
+        source: site/about.qmd
+        type: page
+        status: published
+      /analyze/index.html:
+        source: site/analyze/index.qmd
+        type: page
+        status: published
+      /glossary/:
+        source: site/glossary/index.qmd
+        type: page
+        status: published
+      /licensing.html:
+        source: site/licensing.qmd
+        type: page
+        status: published
+      /match-predictor/index.html:
+        source: site/match-predictor/index.qmd
+        type: page
+        status: published
+      /updates/index.html:
+        source: site/updates/index.qmd
+        type: page
+        status: published
       /learn/index.html:
         source: site/learn/index.qmd
         type: learn-index
@@ -77,7 +112,7 @@ bs-publication:
       /learn/cube/why-is-25-percent-the-take-point.html:
         source: site/learn/cube/why-is-25-percent-the-take-point.qmd
         type: learn-lesson
-        status: published
+        status: draft
         parents:
           - label: Home
             route: /
