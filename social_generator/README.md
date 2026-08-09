@@ -91,10 +91,12 @@ python -m playwright install chromium
 
 ## R installation
 
-The repository integration validator needs the R package `yaml`:
+The repository integration validator needs the R package declared in
+`requirements-social.R`. Install it into the repository library through the
+supported setup command:
 
 ```bash
-Rscript social_generator/requirements-social.R
+bash scripts/setup/windows-dev.sh
 ```
 
 ## QMD metadata convention
