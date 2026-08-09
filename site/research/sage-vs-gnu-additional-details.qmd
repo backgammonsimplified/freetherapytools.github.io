@@ -1,5 +1,6 @@
 ---
 title: "Sage vs GNU: Additional Details"
+author: "Marty Gale"
 subtitle: "How Stage 1 was run, checked, and interpreted"
 description: >
   Methods, results, and evidence for the Sage versus GNU Stage 1 backgammon engine benchmark.

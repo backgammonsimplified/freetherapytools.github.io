@@ -3,8 +3,10 @@ project:
   output-dir: _site
   pre-render:
   - python ../scripts/bs_pre_render.py
+  - python ../scripts/page_publication.py validate-source
   post-render:
   - python ../scripts/bs_post_render.py
+  - python ../scripts/page_publication.py apply
   resources:
     - assets/logo.svg
     - "assets/icons/**"

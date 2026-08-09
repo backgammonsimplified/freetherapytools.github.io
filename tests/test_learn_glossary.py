@@ -11,6 +11,8 @@ from contextlib import contextmanager
 from pathlib import Path
 from unittest import mock
 
+from scripts import page_publication
+
 
 ROOT = Path(__file__).resolve().parents[1]
 MODULE_PATH = ROOT / "scripts" / "learn_glossary.py"
@@ -839,6 +841,19 @@ private code phrase
         self.assertIn("toc: false", content)
         self.assertIn("sidebar: false", content)
         self.assertIn("search: false", content)
+        self.assertIn("page-layout: full", content)
+        self.assertIn("bs-404-card", content)
+        self.assertIn("bs-404-visual", content)
+        shared_css = (
+            learn_glossary.SITE_ROOT / "assets" / "bs-shared.css"
+        ).read_text(encoding="utf-8")
+        for selector in (
+            "body.bs-not-found",
+            ".bs-404-card",
+            ".bs-404-visual",
+            ".bs-404-links",
+        ):
+            self.assertIn(selector, shared_css)
         self.assertNotRegex(
             content,
             r"(?i)(http-equiv\s*=\s*[\"']?refresh|window\.location|"
@@ -1269,10 +1284,9 @@ private code phrase
             "isMobileDrawerSwipe",
             "bs-mobile-tools-drawer",
             "bs-mobile-tools-edge",
-            "Open table of contents and term search",
+            "Open table of contents",
             'links.removeAttribute("id")',
             r"\u2190 Expand Lesson Index",
-            r"Look Up a Term \u2192",
             "data-bs-site-back-to-top",
             "data-bs-toc-toggle",
             "data-bs-margin-sidebar-toggle",
@@ -1521,6 +1535,25 @@ private code phrase
             r"font-size: 21\.25px;",
         )
 
+    def test_editorial_breadcrumbs_reduce_the_title_offset(self) -> None:
+        css = (
+            learn_glossary.SITE_ROOT / "assets" / "bs-shared.css"
+        ).read_text(encoding="utf-8")
+        self.assertRegex(
+            css,
+            r":is\(\s+body\.bs-engine-benchmark-page,\s+"
+            r"body\.bs-research-index,\s+body\.bs-research-article\s+"
+            r"\) #title-block-header \{[^}]*"
+            r"padding-top: clamp\(0\.75rem, 1\.5vw, 1\.25rem\);",
+        )
+        self.assertRegex(
+            css,
+            r"@media \(max-width: 767px\)[\s\S]*"
+            r":is\(\s+body\.bs-engine-benchmark-page,\s+"
+            r"body\.bs-research-index,\s+body\.bs-research-article\s+"
+            r"\) #title-block-header \{[^}]*padding-top: 0\.75rem;",
+        )
+
     def test_lesson_and_research_article_desktop_right_rail_contract(
         self,
     ) -> None:
@@ -1705,7 +1738,7 @@ private code phrase
             r"\.bs-site-tools--sidebar\s+"
             r"\.bs-term-lookup \{[^}]*"
             r"position: static;[^}]*"
-            r"width: 50%;[^}]*"
+            r"width: calc\(100% / 3\);[^}]*"
             r"align-self: flex-end;",
         )
         self.assertRegex(
@@ -1740,7 +1773,7 @@ private code phrase
         self.assertIn("bs-learn-track-index", cube_landing)
         self.assertNotIn("bs-research-article", analyze)
 
-    def test_mobile_articles_use_a_swipeable_left_page_tools_drawer(
+    def test_mobile_articles_use_a_toc_only_swipeable_left_drawer(
         self,
     ) -> None:
         javascript = (
@@ -1751,6 +1784,20 @@ private code phrase
             "if (input && focusInput && desktopQuery.matches)",
             javascript,
         )
+        self.assertIn('window.matchMedia("(min-width: 992px)")', javascript)
+        self.assertIn("const hideLookupOnMobile = function () {", javascript)
+        self.assertIn(
+            'list.classList.remove("collapse", "collapsing", "show")',
+            javascript,
+        )
+        self.assertIn("lookup.hidden = true;", javascript)
+        self.assertIn("termToggle.hidden = true;", javascript)
+        self.assertIn(
+            'mobileDrawer.setAttribute("aria-label", "Page contents")',
+            javascript,
+        )
+        self.assertNotIn("data-bs-mobile-tools-lookup", javascript)
+        self.assertNotIn("bs-mobile-term-toggle", javascript)
 
         css = (
             learn_glossary.SITE_ROOT / "assets" / "bs-learn.css"
@@ -1764,14 +1811,37 @@ private code phrase
             "transform: translateX(-102%);",
             ".bs-mobile-tools-drawer--open",
             ".bs-mobile-tools-toc",
-            ".bs-mobile-tools-drawer .bs-term-lookup",
+            ".bs-site-tools .bs-term-lookup",
+            ".bs-site-tools [data-bs-site-term-toggle]",
             "[data-bs-site-term-toggle]",
             "display: none !important;",
-            ".bs-mobile-term-toggle {\n    display: none;",
             "color: var(--bs-text-muted);",
         ):
             self.assertIn(required, css)
+        self.assertNotIn(".bs-mobile-tools-drawer .bs-term-lookup", css)
+        self.assertNotIn(".bs-mobile-term-toggle", css)
         self.assertNotIn("@keyframes bs-term-lookup-slide-in", css)
+
+    def test_all_mobile_term_lookup_surfaces_are_suppressed(self) -> None:
+        css = (
+            learn_glossary.SITE_ROOT / "assets" / "bs-learn.css"
+        ).read_text(encoding="utf-8")
+        suppression_rule = re.search(
+            r"@media \(max-width:\s*991\.98px\).*?"
+            r"\.bs-site-tools \.bs-term-lookup,\s*"
+            r"\.bs-site-tools \[data-bs-site-term-toggle\]\s*\{"
+            r"\s*display:\s*none !important;\s*\}",
+            css,
+            re.DOTALL,
+        )
+
+        self.assertIsNotNone(suppression_rule)
+        self.assertIn(
+            "const inEditorialDock = function () {",
+            (
+                learn_glossary.SITE_ROOT / "assets" / "bs-learn.js"
+            ).read_text(encoding="utf-8"),
+        )
 
     def test_lookup_result_uses_full_definition(self) -> None:
         javascript = (
@@ -2331,7 +2401,7 @@ private code phrase
                 learn_glossary.validate_full_build_output(output_root)
 
             marker = output_root / learn_glossary.FULL_BUILD_MARKER_NAME
-            bs_post_render.write_full_build_marker(marker)
+            page_publication.write_full_build_marker(marker)
             with self.assertRaisesRegex(
                 learn_glossary.ValidationError,
                 "site output is incomplete",
@@ -2352,6 +2422,8 @@ private code phrase
 
             not_found = output_root / "404.html"
             not_found.write_text(
+                '<div class="bs-404-shell"><div class="bs-404-card">'
+                '<div class="bs-404-visual"></div></div></div>'
                 "Page closed out suspiciously bounced off the board "
                 + " ".join(
                     f'<a href="{route}">{route}</a>'
@@ -2376,10 +2448,14 @@ private code phrase
     def test_rendered_404_and_footer_diagnostics_are_specific(self) -> None:
         with self.assertRaisesRegex(
             learn_glossary.ValidationError,
-            "404 links are malformed",
+            "rich presentation marker",
         ):
             learn_glossary.validate_rendered_404(
-                "Page closed out suspiciously bounced off the board"
+                "Page closed out suspiciously bounced off the board "
+                + " ".join(
+                    f'<a href="{route}">{route}</a>'
+                    for route in learn_glossary.NOT_FOUND_ROUTES
+                )
             )
 
         with writable_test_directory() as output_root:

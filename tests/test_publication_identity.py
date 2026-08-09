@@ -44,15 +44,19 @@ class PublicationIdentityTests(unittest.TestCase):
         self.assertEqual(development["robots-meta"], "noindex, follow")
         self.assertEqual(
             bs_post_render.robots_text(development),
-            "User-agent: *\nDisallow: /\n",
+            "User-agent: *\nAllow: /\n",
         )
+        self.assertNotIn("Disallow:", bs_post_render.robots_text(development))
 
         mode, production = publication_mode(
             self.publication,
             {"BS_PUBLICATION_MODE": "production"},
         )
         self.assertEqual(mode, "production")
-        self.assertEqual(production["robots-meta"], "index, follow")
+        self.assertEqual(
+            production["robots-meta"],
+            "index, follow, max-image-preview:large",
+        )
         self.assertIn("Allow: /", bs_post_render.robots_text(production))
         self.assertIn(
             "Sitemap: https://backgammonsimplified.github.io/sitemap.xml",

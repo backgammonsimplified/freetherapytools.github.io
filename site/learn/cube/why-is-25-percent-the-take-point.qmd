@@ -1,10 +1,14 @@
 ---
 title: "Why Is 25% the Basic Take Point When a Double Is Offered?"
+author: "Marty Gale"
 description: >
   Learn why a backgammon player can correctly take a double with only
   a 25% chance to win in a simplified money game, how taking compares
   with passing, and why gammons, cube ownership, future redoubles, and
   match score can move the real take point away from 25%.
+social-subtitle: >
+  Why a 25% winning chance can still justify taking a double, and where
+  the basic model stops.
 sidebar: learn
 learn-track: doubling-cube
 learn-order: 3
