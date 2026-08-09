@@ -95,8 +95,10 @@ printf 'Installing the Playwright Chromium revision required by this environment
 
 if [[ -f social_generator/requirements-social.R ]]; then
     printf 'Installing R dependencies into %s...\n' "$R_LIBRARY_DIR"
-    R_LIBS_USER="$R_LIBRARY_DIR" Rscript --vanilla -e \
-        'options(repos = c(CRAN = "https://cloud.r-project.org")); source("social_generator/requirements-social.R")'
+    R_LIBS_USER="$R_LIBRARY_DIR" Rscript --vanilla \
+        scripts/setup/install-r-dependencies.R \
+        "$R_LIBRARY_DIR" \
+        social_generator/requirements-social.R
 else
     printf 'Missing social_generator/requirements-social.R\n' >&2
     exit 1
@@ -114,9 +116,12 @@ export NUMEXPR_NUM_THREADS="1"
 EOF_ENV
 chmod 600 "$ENV_FILE"
 
-printf 'Verifying R yaml...\n'
-R_LIBS_USER="$R_LIBRARY_DIR" Rscript --vanilla -e \
-    'stopifnot(requireNamespace("yaml", quietly = TRUE)); cat("yaml ", as.character(packageVersion("yaml")), "\n", sep = "")'
+printf 'Verifying repository environment...\n'
+PATH="$VENV_DIR/bin:$HOME/opt/quarto-$QUARTO_VERSION/bin:$PATH" \
+R_LIBS_USER="$R_LIBRARY_DIR" \
+QUARTO_BIN="$QUARTO_BIN" \
+    "$VENV_DIR/bin/python" scripts/setup/preflight.py \
+    --repo-root "$REPO_ROOT" --with-social-cards
 
 printf 'Verifying Playwright Chromium...\n'
 "$VENV_DIR/bin/python" -c \

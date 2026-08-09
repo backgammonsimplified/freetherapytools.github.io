@@ -67,6 +67,18 @@ This project is under active development. Interfaces, routes, analysis formats, 
 
 ## Local development
 
+On Windows, prepare a fresh checkout from Git Bash with:
+
+```bash
+bash scripts/setup/windows-dev.sh
+```
+
+This installs repository-managed Python, Playwright, and R dependencies into
+local environments. Git, Git Bash, Python 3.11+, Node.js, Quarto 1.10.15, and
+R/Rscript remain system prerequisites. See
+[`scripts/setup/SETUP-SOP.md`](scripts/setup/SETUP-SOP.md) for the concise setup
+and recovery procedure.
+
 The canonical website build is:
 
 ```powershell
@@ -85,7 +97,9 @@ With the rendered `_site` directory served locally, run the metadata and keyboar
 python social_generator/scripts/social/check_rendered_site.py <local-preview-url>
 ```
 
-Install its pinned Python dependencies from `social_generator/requirements-social.txt`, install Chromium with `python -m playwright install chromium`, and install the R `yaml` package listed in `social_generator/requirements-social.R`.
+The setup command installs the pinned Python dependencies from
+`social_generator/requirements-social.txt`, Playwright Chromium, and the R
+packages declared in `social_generator/requirements-social.R`.
 
 A typical development workflow also requires:
 

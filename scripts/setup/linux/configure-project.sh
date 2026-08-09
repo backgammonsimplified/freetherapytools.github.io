@@ -17,5 +17,9 @@ if [[ ! -x .venv/bin/python ]]; then python3 -m venv .venv; fi
 .venv/bin/python -m pip check
 .venv/bin/python -m playwright install chromium
 mkdir -p .r-library
-R_LIBS_USER="$REPO_ROOT/.r-library" Rscript --vanilla -e 'source("social_generator/requirements-social.R"); stopifnot(requireNamespace("yaml", quietly = TRUE))'
+R_LIBS_USER="$REPO_ROOT/.r-library" Rscript --vanilla \
+  scripts/setup/install-r-dependencies.R \
+  "$REPO_ROOT/.r-library" \
+  social_generator/requirements-social.R
+.venv/bin/python scripts/setup/preflight.py --repo-root "$REPO_ROOT" --with-social-cards
 printf 'Project configuration completed.\n'
