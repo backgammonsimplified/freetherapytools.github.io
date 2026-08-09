@@ -4,6 +4,7 @@
   const CATEGORY_SELECTOR = "[data-bs-filter-category]";
   const TAG_SELECTOR = "[data-bs-filter-tag]";
   const ITEM_SELECTOR = "[data-bs-research-item]";
+  const CATEGORY_REGISTRY_URL = "/assets/bs-research-categories.json";
 
   function parseList(value) {
     if (!value) {
@@ -18,15 +19,19 @@
     }
   }
 
-  function createTagButton(tag) {
+  function createFilterButton(value, kind) {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = "bs-research-filter bs-research-filter--tag";
-    button.dataset.bsFilterTag = tag;
+    button.className = "bs-research-filter bs-research-filter--" + kind;
+    if (kind === "category") {
+      button.dataset.bsFilterCategory = value;
+    } else {
+      button.dataset.bsFilterTag = value;
+    }
     button.setAttribute("aria-pressed", "false");
 
     const label = document.createElement("span");
-    label.textContent = tag;
+    label.textContent = value;
 
     const count = document.createElement("span");
     count.className = "bs-research-filter-count";
@@ -37,13 +42,45 @@
     return button;
   }
 
-  function initializeResearchFilters() {
+  async function applyCategoryRegistry(panel) {
+    const container = panel.querySelector(
+      ".bs-research-filter-group:not([data-bs-tag-group]) .bs-research-filter-options"
+    );
+    if (!container) {
+      return;
+    }
+
+    try {
+      const response = await fetch(CATEGORY_REGISTRY_URL, { cache: "no-store" });
+      if (!response.ok) {
+        throw new Error("Research category registry request failed");
+      }
+      const payload = await response.json();
+      const categories = Array.isArray(payload.categories)
+        ? payload.categories.map(String).filter(Boolean)
+        : [];
+      if (categories.length === 0) {
+        throw new Error("Research category registry is empty");
+      }
+      container.replaceChildren(
+        ...categories.map(function (category) {
+          return createFilterButton(category, "category");
+        })
+      );
+    } catch (_error) {
+      // Keep the validated source buttons as a no-network fallback.
+    }
+  }
+
+  async function initializeResearchFilters() {
     const panel = document.querySelector("[data-bs-research-filters]");
     const list = document.querySelector("[data-bs-research-list]");
 
     if (!panel || !list) {
       return;
     }
+
+    await applyCategoryRegistry(panel);
 
     const items = Array.from(list.querySelectorAll(ITEM_SELECTOR)).map(function (element) {
       return {
@@ -69,7 +106,7 @@
 
     if (tagContainer) {
       allTags.forEach(function (tag) {
-        tagContainer.appendChild(createTagButton(tag));
+        tagContainer.appendChild(createFilterButton(tag, "tag"));
       });
     }
 
@@ -204,5 +241,7 @@
     applyFilters();
   }
 
-  document.addEventListener("DOMContentLoaded", initializeResearchFilters);
+  document.addEventListener("DOMContentLoaded", function () {
+    void initializeResearchFilters();
+  });
 })();
