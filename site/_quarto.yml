@@ -2,9 +2,11 @@ project:
   type: website
   output-dir: _site
   pre-render:
+  - python ../scripts/page_publication.py validate-source
   - python ../scripts/bs_pre_render.py
   post-render:
   - python ../scripts/bs_post_render.py
+  - python ../scripts/page_publication.py apply
   resources:
     - assets/logo.svg
     - "assets/icons/**"
