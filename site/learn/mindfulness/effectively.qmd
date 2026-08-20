@@ -1,0 +1,25 @@
+---
+title: "Effectively"
+description: "Choose actions that work for the present situation and your goals."
+sidebar: mindfulness
+learn-track: mindfulness
+learn-order: 7
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - how-skills
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Effectively is the third HOW skill. Focus on what works instead of becoming stuck on how the situation should be, who is right, or whether it is fair.
+
+## Effectively {#effectively}
+
+Keep your goals and the facts of the situation in view, then choose the response most likely to help.

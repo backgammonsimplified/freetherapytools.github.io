@@ -91,6 +91,23 @@ const manifest = {
   ]
 };
 
+assert.equal(
+  scroll.manifestRoute("/learn/cube/tipp.html"),
+  "/assets/bs-learn-sequence.json"
+);
+assert.equal(
+  scroll.manifestRoute("/learn/cbt-anxiety/thought-records.html"),
+  "/assets/bs-cbt-sequence.json"
+);
+assert.equal(
+  scroll.manifestRoute("/learn/mindfulness/what-skills.html"),
+  "/assets/bs-mindfulness-sequence.json"
+);
+assert.equal(
+  scroll.manifestRoute("/learn/other-resources/community-resources.html"),
+  "/assets/bs-review-sequence.json"
+);
+
 assert.equal(scroll.normalizeRoute("/learn/first"), "/learn/first/");
 assert.equal(scroll.normalizeRoute("/learn/first/index.html"), "/learn/first/");
 assert.equal(scroll.normalizeRoute("/learn/middle.html/"), "/learn/middle.html");

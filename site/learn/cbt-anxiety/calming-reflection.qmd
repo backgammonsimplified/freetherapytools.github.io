@@ -1,9 +1,9 @@
 ---
-title: "Box Breathing, Gratitude, and Positive Self-Talk"
+title: "Review: Calming and Reflection Tools"
 description: "Practise brief calming and reflection tools that can support wider skills work."
-sidebar: learn
-learn-track: cbt-anxiety
-learn-order: 8
+sidebar: review
+learn-track: other-resources
+learn-order: 7
 categories:
   - Beginner
 tags:
@@ -18,9 +18,10 @@ execute:
   enabled: false
 ---
 
+This mixed supplementary page remains reachable while its eventual DBT, CBT, or mindfulness placement is reviewed.
+
 ## Box Breathing {#box-breathing}
 
 ## Gratitude Journaling {#gratitude-journaling}
 
 ## Positive Self-Talk {#positive-self-talk}
-

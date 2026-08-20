@@ -1,0 +1,77 @@
+{
+  "lessons": [
+    {
+      "lesson_order": 1,
+      "next_route": "/learn/cbt-anxiety/thinking-traps.html",
+      "next_starts_new_track": false,
+      "previous_route": null,
+      "route": "/learn/cbt-anxiety/introduction-to-cbt.html",
+      "sequence_index": 0,
+      "title": "Introduction to CBT",
+      "track_id": "cbt-anxiety",
+      "track_order": 7,
+      "track_title": "CBT Skills"
+    },
+    {
+      "lesson_order": 2,
+      "next_route": "/learn/cbt-anxiety/thought-records.html",
+      "next_starts_new_track": false,
+      "previous_route": "/learn/cbt-anxiety/introduction-to-cbt.html",
+      "route": "/learn/cbt-anxiety/thinking-traps.html",
+      "sequence_index": 1,
+      "title": "Thinking Traps",
+      "track_id": "cbt-anxiety",
+      "track_order": 7,
+      "track_title": "CBT Skills"
+    },
+    {
+      "lesson_order": 3,
+      "next_route": "/learn/cbt-anxiety/thought-records-part-2.html",
+      "next_starts_new_track": false,
+      "previous_route": "/learn/cbt-anxiety/thinking-traps.html",
+      "route": "/learn/cbt-anxiety/thought-records.html",
+      "sequence_index": 2,
+      "title": "Thought Records Part 1",
+      "track_id": "cbt-anxiety",
+      "track_order": 7,
+      "track_title": "CBT Skills"
+    },
+    {
+      "lesson_order": 4,
+      "next_route": "/learn/cbt-anxiety/understanding-worry.html",
+      "next_starts_new_track": false,
+      "previous_route": "/learn/cbt-anxiety/thought-records.html",
+      "route": "/learn/cbt-anxiety/thought-records-part-2.html",
+      "sequence_index": 3,
+      "title": "Thought Records Part 2",
+      "track_id": "cbt-anxiety",
+      "track_order": 7,
+      "track_title": "CBT Skills"
+    },
+    {
+      "lesson_order": 5,
+      "next_route": "/learn/cbt-anxiety/safety-behaviours-exposure.html",
+      "next_starts_new_track": false,
+      "previous_route": "/learn/cbt-anxiety/thought-records-part-2.html",
+      "route": "/learn/cbt-anxiety/understanding-worry.html",
+      "sequence_index": 4,
+      "title": "Understanding Worry",
+      "track_id": "cbt-anxiety",
+      "track_order": 7,
+      "track_title": "CBT Skills"
+    },
+    {
+      "lesson_order": 6,
+      "next_route": null,
+      "next_starts_new_track": false,
+      "previous_route": "/learn/cbt-anxiety/understanding-worry.html",
+      "route": "/learn/cbt-anxiety/safety-behaviours-exposure.html",
+      "sequence_index": 5,
+      "title": "Safety Behaviours & Exposure",
+      "track_id": "cbt-anxiety",
+      "track_order": 7,
+      "track_title": "CBT Skills"
+    }
+  ],
+  "schema_version": 1
+}

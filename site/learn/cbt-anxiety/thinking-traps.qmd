@@ -1,7 +1,7 @@
 ---
 title: "Thinking Traps"
 description: "Identify common patterns such as catastrophizing, filtering, mind-reading, and all-or-nothing thinking."
-sidebar: learn
+sidebar: cbt
 learn-track: cbt-anxiety
 learn-order: 2
 categories:

@@ -1,7 +1,7 @@
 ---
 title: "Crisis and Safety Resources"
 description: "Review crisis contacts, suicide-safety ideas, and behaviour-chain prompts."
-sidebar: learn
+sidebar: review
 learn-track: other-resources
 learn-order: 4
 categories:

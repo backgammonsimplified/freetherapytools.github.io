@@ -14,6 +14,9 @@ project:
     - assets/bs-glossary.js
     - assets/bs-glossary-lookup.json
     - assets/bs-learn-sequence.json
+    - assets/bs-cbt-sequence.json
+    - assets/bs-mindfulness-sequence.json
+    - assets/bs-review-sequence.json
     - assets/bs-research-sequence.json
     - "assets/positions/**"
     - data/lesson-analysis-svg-mvp.json
@@ -34,7 +37,7 @@ metadata-files:
   - _learn-navigation.yml
 
 website:
-  description: "Learn the ideas behind strong backgammon decisions, one concept and one position at a time."
+  description: "A practical curriculum of DBT, CBT, and mindfulness skills."
   search:
     location: navbar
     type: overlay
@@ -45,32 +48,31 @@ website:
     card-style: summary_large_image
   navbar:
     logo: assets/logo.svg
-    logo-alt: "Backgammon Simplified"
+    logo-alt: "Therapy Skill Kit"
     collapse-below: xl
     left:
+      - text: Skill Finder
+        href: skill-finder/index.qmd
       - text: DBT Skills
         href: learn/index.qmd
-      - href: analyze/index.qmd
-        text: Analyze
-      - href: match-predictor/index.qmd
-        text: Match Predictor
-      - href: engine-benchmark/sage-vs-gnu-stage1/index.qmd
-        text: Sage vs GNU
-      - href: research/index.qmd
-        text: Research
+      - text: CBT Skills
+        href: cbt-skills/index.qmd
+      - text: Mindfulness
+        href: mindfulness/index.qmd
+    right:
       - href: glossary/index.qmd
         text: Glossary
       - href: about.qmd
         text: About
   page-footer:
     left: |
-      Copyright 2026 Marty Gale - Backgammon Simplified
+      Therapy Skill Kit
     center:
       - text: "Code: AGPL-3.0-only · Educational content: CC BY-SA 4.0 · Licensing"
         href: /licensing.html
     right:
-      - text: RSS
-        href: /updates/index.xml
+      - text: Curriculum review
+        href: /review/
 
 format:
   html:

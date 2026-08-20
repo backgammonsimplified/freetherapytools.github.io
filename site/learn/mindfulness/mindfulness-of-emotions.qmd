@@ -1,9 +1,9 @@
 ---
 title: "Mindfulness of Emotions"
 description: "Observe emotions as changing experiences without immediately acting on them."
-sidebar: learn
+sidebar: mindfulness
 learn-track: mindfulness
-learn-order: 6
+learn-order: 9
 categories:
   - Beginner
 tags:
@@ -19,4 +19,3 @@ execute:
 ---
 
 Notice the emotion, body sensations, thoughts, and urges while allowing the experience to change over time.
-

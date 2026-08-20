@@ -38,7 +38,7 @@ assert.deepEqual(
     [320, 568]
   ]
 );
-assert.equal(DEFAULT_MANIFEST.baseline_screenshot_route_ids.length, 6);
+assert.equal(DEFAULT_MANIFEST.baseline_screenshot_route_ids.length, 8);
 assert.equal(DEFAULT_MANIFEST.baseline_screenshot_viewport_names.length, 2);
 assert.equal(DEFAULT_MANIFEST.failure_screenshot_limit, 30);
 assert.equal(EXPECTED_CONTINUOUS_APPEND_COUNT, 1);
@@ -54,9 +54,11 @@ assert.equal(continuousConfigForPage({ kind: "ordinary" }), null);
 const requiredPageIds = [
   "home",
   "learn-index",
-  "cube-index",
+  "distress-tolerance-index",
   "cube-lesson",
-  "take-point-lesson",
+  "cbt-index",
+  "cbt-lesson",
+  "mindfulness-index",
   "research-index",
   "research-article",
   "engine-benchmark",

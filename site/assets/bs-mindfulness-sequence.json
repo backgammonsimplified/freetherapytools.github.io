@@ -1,0 +1,149 @@
+{
+  "lessons": [
+    {
+      "lesson_order": 1,
+      "next_route": "/learn/mindfulness/what-skills.html",
+      "next_starts_new_track": false,
+      "previous_route": null,
+      "route": "/learn/mindfulness/mindfulness-foundations.html",
+      "sequence_index": 0,
+      "title": "Introduction and States of Mind",
+      "track_id": "mindfulness",
+      "track_order": 6,
+      "track_title": "Mindfulness"
+    },
+    {
+      "lesson_order": 2,
+      "next_route": "/learn/mindfulness/describe.html",
+      "next_starts_new_track": false,
+      "previous_route": "/learn/mindfulness/mindfulness-foundations.html",
+      "route": "/learn/mindfulness/what-skills.html",
+      "sequence_index": 1,
+      "title": "Observe",
+      "track_id": "mindfulness",
+      "track_order": 6,
+      "track_title": "Mindfulness"
+    },
+    {
+      "lesson_order": 3,
+      "next_route": "/learn/mindfulness/participate.html",
+      "next_starts_new_track": false,
+      "previous_route": "/learn/mindfulness/what-skills.html",
+      "route": "/learn/mindfulness/describe.html",
+      "sequence_index": 2,
+      "title": "Describe",
+      "track_id": "mindfulness",
+      "track_order": 6,
+      "track_title": "Mindfulness"
+    },
+    {
+      "lesson_order": 4,
+      "next_route": "/learn/mindfulness/how-skills.html",
+      "next_starts_new_track": false,
+      "previous_route": "/learn/mindfulness/describe.html",
+      "route": "/learn/mindfulness/participate.html",
+      "sequence_index": 3,
+      "title": "Participate",
+      "track_id": "mindfulness",
+      "track_order": 6,
+      "track_title": "Mindfulness"
+    },
+    {
+      "lesson_order": 5,
+      "next_route": "/learn/mindfulness/one-mindfully.html",
+      "next_starts_new_track": false,
+      "previous_route": "/learn/mindfulness/participate.html",
+      "route": "/learn/mindfulness/how-skills.html",
+      "sequence_index": 4,
+      "title": "Non-Judgmentally",
+      "track_id": "mindfulness",
+      "track_order": 6,
+      "track_title": "Mindfulness"
+    },
+    {
+      "lesson_order": 6,
+      "next_route": "/learn/mindfulness/effectively.html",
+      "next_starts_new_track": false,
+      "previous_route": "/learn/mindfulness/how-skills.html",
+      "route": "/learn/mindfulness/one-mindfully.html",
+      "sequence_index": 5,
+      "title": "One-Mindfully",
+      "track_id": "mindfulness",
+      "track_order": 6,
+      "track_title": "Mindfulness"
+    },
+    {
+      "lesson_order": 7,
+      "next_route": "/learn/mindfulness/loving-kindness-self-compassion.html",
+      "next_starts_new_track": false,
+      "previous_route": "/learn/mindfulness/one-mindfully.html",
+      "route": "/learn/mindfulness/effectively.html",
+      "sequence_index": 6,
+      "title": "Effectively",
+      "track_id": "mindfulness",
+      "track_order": 6,
+      "track_title": "Mindfulness"
+    },
+    {
+      "lesson_order": 8,
+      "next_route": "/learn/mindfulness/mindfulness-of-emotions.html",
+      "next_starts_new_track": false,
+      "previous_route": "/learn/mindfulness/effectively.html",
+      "route": "/learn/mindfulness/loving-kindness-self-compassion.html",
+      "sequence_index": 7,
+      "title": "Self-Compassion and Loving Kindness",
+      "track_id": "mindfulness",
+      "track_order": 6,
+      "track_title": "Mindfulness"
+    },
+    {
+      "lesson_order": 9,
+      "next_route": "/learn/mindfulness/mindfulness-of-thoughts.html",
+      "next_starts_new_track": false,
+      "previous_route": "/learn/mindfulness/loving-kindness-self-compassion.html",
+      "route": "/learn/mindfulness/mindfulness-of-emotions.html",
+      "sequence_index": 8,
+      "title": "Mindfulness of Emotions",
+      "track_id": "mindfulness",
+      "track_order": 6,
+      "track_title": "Mindfulness"
+    },
+    {
+      "lesson_order": 10,
+      "next_route": "/learn/mindfulness/grounding.html",
+      "next_starts_new_track": false,
+      "previous_route": "/learn/mindfulness/mindfulness-of-emotions.html",
+      "route": "/learn/mindfulness/mindfulness-of-thoughts.html",
+      "sequence_index": 9,
+      "title": "Mindfulness of Thoughts",
+      "track_id": "mindfulness",
+      "track_order": 6,
+      "track_title": "Mindfulness"
+    },
+    {
+      "lesson_order": 11,
+      "next_route": "/learn/mindfulness/being-mind-doing-mind.html",
+      "next_starts_new_track": false,
+      "previous_route": "/learn/mindfulness/mindfulness-of-thoughts.html",
+      "route": "/learn/mindfulness/grounding.html",
+      "sequence_index": 10,
+      "title": "Grounding",
+      "track_id": "mindfulness",
+      "track_order": 6,
+      "track_title": "Mindfulness"
+    },
+    {
+      "lesson_order": 12,
+      "next_route": null,
+      "next_starts_new_track": false,
+      "previous_route": "/learn/mindfulness/grounding.html",
+      "route": "/learn/mindfulness/being-mind-doing-mind.html",
+      "sequence_index": 11,
+      "title": "Being Mind and Doing Mind",
+      "track_id": "mindfulness",
+      "track_order": 6,
+      "track_title": "Mindfulness"
+    }
+  ],
+  "schema_version": 1
+}

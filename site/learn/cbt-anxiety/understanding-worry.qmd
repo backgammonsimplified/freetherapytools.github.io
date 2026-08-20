@@ -1,9 +1,9 @@
 ---
 title: "Understanding Worry"
 description: "Distinguish worry from problem solving and notice beliefs that keep worry going."
-sidebar: learn
+sidebar: cbt
 learn-track: cbt-anxiety
-learn-order: 4
+learn-order: 5
 categories:
   - Beginner
 tags:
@@ -19,6 +19,18 @@ execute:
 ---
 
 Worry can feel protective while also increasing avoidance and uncertainty. Understanding its function helps you choose a response.
+
+## Five Factor Model {#five-factor-model}
+
+Map the situation, thoughts, emotions, body sensations, and actions to see how the parts influence one another.
+
+## Worry Tree {#worry-tree}
+
+Separate worries you can act on from hypothetical worries that call for attention-shifting or acceptance.
+
+## Worry Time {#worry-time}
+
+Note worries when they arise and return to them during a planned, limited period so they take up less of the day.
 
 ## Handouts and Worksheets {#handouts-and-worksheets}
 

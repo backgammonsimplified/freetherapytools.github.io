@@ -1,9 +1,9 @@
 ---
 title: "Grounding"
 description: "Reconnect with the present through sensory and orientation practices."
-sidebar: learn
+sidebar: mindfulness
 learn-track: mindfulness
-learn-order: 8
+learn-order: 11
 categories:
   - Beginner
 tags:

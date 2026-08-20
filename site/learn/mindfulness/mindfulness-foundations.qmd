@@ -1,7 +1,7 @@
 ---
-title: "Recognizing States of Mind and Wise Mind"
+title: "Introduction and States of Mind"
 description: "Recognize emotion mind, reasonable mind, and Wise Mind."
-sidebar: learn
+sidebar: mindfulness
 learn-track: mindfulness
 learn-order: 1
 categories:

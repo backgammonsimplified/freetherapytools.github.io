@@ -1,9 +1,9 @@
 ---
-title: "Worry Time"
+title: "Review: Worry Time"
 description: "Set a deliberate time for worry so it takes up less of the day."
-sidebar: learn
-learn-track: cbt-anxiety
-learn-order: 7
+sidebar: review
+learn-track: other-resources
+learn-order: 6
 categories:
   - Beginner
 tags:
@@ -18,5 +18,4 @@ execute:
   enabled: false
 ---
 
-Worry time means noting worries when they arise and returning to them during a planned, limited period.
-
+This earlier supplementary page is preserved for review. Its core content is now integrated into Understanding Worry.

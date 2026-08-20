@@ -1,0 +1,13 @@
+---
+title: "Skill Finder"
+description: "A future guided way to find a therapy skill for the situation you are facing."
+sidebar: false
+page-layout: article
+toc: false
+execute:
+  enabled: false
+---
+
+Skill Finder is being prepared. It will help you describe what is happening and then deep-link to a relevant DBT, CBT, or mindfulness skill.
+
+For now, browse [DBT Skills](/learn/), [CBT Skills](/cbt-skills/), or [Mindfulness](/mindfulness/) directly.

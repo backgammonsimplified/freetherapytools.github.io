@@ -1,9 +1,9 @@
 ---
-title: "Challenging Negative Thoughts"
+title: "Review: Challenging Negative Thoughts"
 description: "Question an unhelpful thought with evidence, alternatives, and a more balanced view."
-sidebar: learn
-learn-track: cbt-anxiety
-learn-order: 6
+sidebar: review
+learn-track: other-resources
+learn-order: 5
 categories:
   - Beginner
 tags:
@@ -18,5 +18,4 @@ execute:
   enabled: false
 ---
 
-The goal is not forced positivity. It is a fairer thought that fits the evidence and supports effective action.
-
+This earlier supplementary page is preserved for review. Its core content is now integrated into Thought Records Part 2.

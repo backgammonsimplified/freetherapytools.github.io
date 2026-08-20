@@ -1,0 +1,55 @@
+# Provisional curriculum metadata transcribed only from clearly identifiable cover pages.
+- section_title: "CBT Skills"
+  binder_page_id: binder-p0021
+  objectives:
+    - "Learn to identify and change unhelpful thought patterns."
+    - "Take control of interpretations when managing situations in your environment."
+    - "Develop an action plan to manage unhelpful thought patterns."
+  listed_lessons:
+    - order: 1
+      title: "Introduction to CBT"
+    - order: 2
+      title: "Thinking Traps"
+    - order: 3
+      title: "Thought Records Part 1"
+    - order: 4
+      title: "Thought Records Part 2"
+    - order: 5
+      title: "Understanding Worry"
+    - order: 6
+      title: "Safety Behaviours & Exposure"
+- section_title: "Emotion Regulation"
+  binder_page_id: binder-p0050
+  objectives:
+    - "Understand and name your own emotions."
+    - "Decrease the frequency of unwanted emotions."
+    - "Decrease emotional vulnerability."
+    - "Decrease emotional suffering."
+  listed_lessons:
+    - order: 1
+      title: "What emotions do for you"
+    - order: 2
+      title: "Emotions"
+    - order: 3
+      title: "Check the Facts"
+    - order: 4
+      title: "Opposite Action & Problem Solving"
+    - order: 5
+      title: "Accumulating Positive Emotions"
+    - order: 6
+      title: "Building Mastery & Cope Ahead"
+- section_title: "Goal Setting"
+  binder_page_id: binder-p0144
+  objectives:
+    - "Set and achieve meaningful goals."
+    - "Engage in behavioural activation."
+    - "Through mastering and practicing skills, work towards developing a life worth living."
+  listed_lessons:
+    - order: 1
+      title: "Goal Setting Guidelines"
+    - order: 2
+      title: "Skills & Strengths List"
+    - order: 3
+      title: "Weekly Goal Worksheets"
+    - order: 4
+      title: "Weekly Home Practice Trackers"

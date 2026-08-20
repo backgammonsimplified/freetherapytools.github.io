@@ -1,0 +1,25 @@
+---
+title: "Describe"
+description: "Put words to observed facts, sensations, thoughts, and emotions without adding assumptions."
+sidebar: mindfulness
+learn-track: mindfulness
+learn-order: 3
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - what-skills
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Describe is the second WHAT skill. Use clear words for what you directly notice, separating observations from interpretations.
+
+## Describe {#describe}
+
+Name sensations, emotions, thoughts, and events in simple language. When an interpretation appears, label it as a thought rather than a fact.

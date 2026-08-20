@@ -11,5 +11,13 @@ term-lookup: false
 lesson-taxonomy: false
 ---
 
-{{< include _lesson-index.html >}}
+## Objectives {#objectives}
 
+1. Understand and name your own emotions.
+2. Decrease the frequency of unwanted emotions.
+3. Decrease emotional vulnerability.
+4. Decrease emotional suffering.
+
+These objectives and the binder lesson outline are recorded from [binder-p0050](emotion-regulation-overview.qmd#binder-p0050).
+
+{{< include _lesson-index.html >}}

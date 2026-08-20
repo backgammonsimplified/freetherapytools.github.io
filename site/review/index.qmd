@@ -1,0 +1,15 @@
+---
+title: "Curriculum Review"
+description: "A temporary, reachable holding area for provisional binder placements and supplementary material."
+sidebar: review
+page-layout: full
+bibliography: ../references.bib
+body-classes: bs-learn-index
+toc: false
+execute:
+  enabled: false
+---
+
+This non-primary section preserves resources whose placement is uncertain because the current binder scan is reversed, double-sided, or possibly duplicated. Nothing here has been discarded; items will be reconsidered when the improved scan is available.
+
+{{< include _lesson-catalogue.html >}}

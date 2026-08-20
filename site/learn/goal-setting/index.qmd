@@ -11,5 +11,12 @@ term-lookup: false
 lesson-taxonomy: false
 ---
 
-{{< include _lesson-index.html >}}
+## Objectives {#objectives}
 
+1. Set and achieve meaningful goals.
+2. Engage in behavioural activation.
+3. Through mastering and practicing skills, work towards developing a life worth living.
+
+These objectives and the binder lesson outline are recorded from [binder-p0144](goal-setting-guidelines.qmd#binder-p0144).
+
+{{< include _lesson-index.html >}}

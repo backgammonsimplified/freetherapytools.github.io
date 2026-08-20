@@ -2,11 +2,11 @@
 website:
   sidebar:
     - id: learn
-      title: "Learn"
+      title: "DBT Skills"
       style: docked
       collapse-level: 2
       contents:
-        - text: "Learn Home"
+        - text: "DBT Skills Home"
           href: learn/index.qmd
         - section: "Daily Goal Setting and Tracking"
           href: learn/goal-setting/index.qmd
@@ -93,46 +93,69 @@ website:
               href: learn/emotion-regulation/abc-please.qmd
             - text: "8. Positive Emotions, Build Mastery, and Cope Ahead"
               href: learn/emotion-regulation/positive-emotions-mastery-cope-ahead.qmd
-        - section: "Mindfulness"
-          href: learn/mindfulness/index.qmd
-          contents:
-            - text: "1. Recognizing States of Mind and Wise Mind"
-              href: learn/mindfulness/mindfulness-foundations.qmd
-            - text: "2. WHAT Skills"
-              href: learn/mindfulness/what-skills.qmd
-            - text: "3. HOW Skills"
-              href: learn/mindfulness/how-skills.qmd
-            - text: "4. Loving Kindness and Self-Compassion"
-              href: learn/mindfulness/loving-kindness-self-compassion.qmd
-            - text: "5. Being Mind and Doing Mind"
-              href: learn/mindfulness/being-mind-doing-mind.qmd
-            - text: "6. Mindfulness of Emotions"
-              href: learn/mindfulness/mindfulness-of-emotions.qmd
-            - text: "7. Mindfulness of Thoughts"
-              href: learn/mindfulness/mindfulness-of-thoughts.qmd
-            - text: "8. Grounding"
-              href: learn/mindfulness/grounding.qmd
-        - section: "CBT and Managing Anxiety"
+    - id: cbt
+      title: "CBT Skills"
+      style: docked
+      collapse-level: 2
+      contents:
+        - text: "CBT Skills Home"
+          href: cbt-skills/index.qmd
+        - section: "CBT Skills"
           href: learn/cbt-anxiety/index.qmd
           contents:
             - text: "1. Introduction to CBT"
               href: learn/cbt-anxiety/introduction-to-cbt.qmd
             - text: "2. Thinking Traps"
               href: learn/cbt-anxiety/thinking-traps.qmd
-            - text: "3. Thought Records"
+            - text: "3. Thought Records Part 1"
               href: learn/cbt-anxiety/thought-records.qmd
-            - text: "4. Understanding Worry"
+            - text: "4. Thought Records Part 2"
+              href: learn/cbt-anxiety/thought-records-part-2.qmd
+            - text: "5. Understanding Worry"
               href: learn/cbt-anxiety/understanding-worry.qmd
-            - text: "5. Safety Behaviours and Exposure"
+            - text: "6. Safety Behaviours & Exposure"
               href: learn/cbt-anxiety/safety-behaviours-exposure.qmd
-            - text: "6. Challenging Negative Thoughts"
-              href: learn/cbt-anxiety/challenging-negative-thoughts.qmd
-            - text: "7. Worry Time"
-              href: learn/cbt-anxiety/worry-time.qmd
-            - text: "8. Box Breathing, Gratitude, and Positive Self-Talk"
-              href: learn/cbt-anxiety/calming-reflection.qmd
-            - text: "9. Five Factor Model and Worry Tree"
-              href: learn/cbt-anxiety/five-factor-worry-tree.qmd
+    - id: mindfulness
+      title: "Mindfulness"
+      style: docked
+      collapse-level: 2
+      contents:
+        - text: "Mindfulness Home"
+          href: mindfulness/index.qmd
+        - section: "Mindfulness"
+          href: learn/mindfulness/index.qmd
+          contents:
+            - text: "1. Introduction and States of Mind"
+              href: learn/mindfulness/mindfulness-foundations.qmd
+            - text: "2. Observe"
+              href: learn/mindfulness/what-skills.qmd
+            - text: "3. Describe"
+              href: learn/mindfulness/describe.qmd
+            - text: "4. Participate"
+              href: learn/mindfulness/participate.qmd
+            - text: "5. Non-Judgmentally"
+              href: learn/mindfulness/how-skills.qmd
+            - text: "6. One-Mindfully"
+              href: learn/mindfulness/one-mindfully.qmd
+            - text: "7. Effectively"
+              href: learn/mindfulness/effectively.qmd
+            - text: "8. Self-Compassion and Loving Kindness"
+              href: learn/mindfulness/loving-kindness-self-compassion.qmd
+            - text: "9. Mindfulness of Emotions"
+              href: learn/mindfulness/mindfulness-of-emotions.qmd
+            - text: "10. Mindfulness of Thoughts"
+              href: learn/mindfulness/mindfulness-of-thoughts.qmd
+            - text: "11. Grounding"
+              href: learn/mindfulness/grounding.qmd
+            - text: "12. Being Mind and Doing Mind"
+              href: learn/mindfulness/being-mind-doing-mind.qmd
+    - id: review
+      title: "Curriculum Review"
+      style: docked
+      collapse-level: 2
+      contents:
+        - text: "Review Home"
+          href: review/index.qmd
         - section: "Other Skills / Resources"
           href: learn/other-resources/index.qmd
           contents:
@@ -144,3 +167,13 @@ website:
               href: learn/other-resources/skills-use-guideline.qmd
             - text: "4. Crisis and Safety Resources"
               href: learn/other-resources/crisis-and-safety-resources.qmd
+            - text: "5. Review: Challenging Negative Thoughts"
+              href: learn/cbt-anxiety/challenging-negative-thoughts.qmd
+            - text: "6. Review: Worry Time"
+              href: learn/cbt-anxiety/worry-time.qmd
+            - text: "7. Review: Calming and Reflection Tools"
+              href: learn/cbt-anxiety/calming-reflection.qmd
+            - text: "8. Review: Five Factor Model and Worry Tree"
+              href: learn/cbt-anxiety/five-factor-worry-tree.qmd
+            - text: "9. Review: WHAT Skills Placement"
+              href: learn/other-resources/mindfulness-placement-review.qmd

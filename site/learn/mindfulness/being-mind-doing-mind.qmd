@@ -1,9 +1,9 @@
 ---
 title: "Being Mind and Doing Mind"
 description: "Balance goal-directed action with receptive awareness."
-sidebar: learn
+sidebar: mindfulness
 learn-track: mindfulness
-learn-order: 5
+learn-order: 12
 categories:
   - Beginner
 tags:

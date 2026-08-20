@@ -1,7 +1,19 @@
 (function () {
   "use strict";
 
-  const MANIFEST_ROUTE = "/assets/bs-learn-sequence.json";
+  function manifestRoute(pathname) {
+    const route = String(pathname || "").replace(/\\/g, "/");
+    if (route.startsWith("/learn/cbt-anxiety/") || route.startsWith("/cbt-skills/")) {
+      return "/assets/bs-cbt-sequence.json";
+    }
+    if (route.startsWith("/learn/mindfulness/") || route.startsWith("/mindfulness/")) {
+      return "/assets/bs-mindfulness-sequence.json";
+    }
+    if (route.startsWith("/learn/other-resources/") || route.startsWith("/review/")) {
+      return "/assets/bs-review-sequence.json";
+    }
+    return "/assets/bs-learn-sequence.json";
+  }
   let bootstrapToc = null;
   const ID_TOKEN_ATTRIBUTES = [
     "for",
@@ -664,7 +676,7 @@
       return;
     }
 
-    fetch(MANIFEST_ROUTE, { credentials: "same-origin" })
+    fetch(manifestRoute(window.location.pathname), { credentials: "same-origin" })
       .then(function (response) {
         if (!response.ok) {
           throw new Error("Learn sequence failed to load");
@@ -1023,6 +1035,7 @@
     idPrefixForRoute: idPrefixForRoute,
     isFinalLesson: isFinalLesson,
     laterLessonRoutes: laterLessonRoutes,
+    manifestRoute: manifestRoute,
     nextLesson: nextLesson,
     normalizeRoute: normalizeRoute,
     readingLineForViewport: readingLineForViewport,

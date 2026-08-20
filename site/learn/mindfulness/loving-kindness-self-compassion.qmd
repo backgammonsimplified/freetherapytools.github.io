@@ -1,9 +1,9 @@
 ---
-title: "Loving Kindness and Self-Compassion"
+title: "Self-Compassion and Loving Kindness"
 description: "Practise warmth, kindness, and a more supportive response to suffering."
-sidebar: learn
+sidebar: mindfulness
 learn-track: mindfulness
-learn-order: 4
+learn-order: 8
 categories:
   - Beginner
 tags:

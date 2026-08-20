@@ -1,0 +1,33 @@
+---
+title: "Review: WHAT Skills Placement"
+description: "Preserve a mixed WHAT-skills binder page until the improved scan clarifies placement."
+sidebar: review
+learn-track: other-resources
+learn-order: 9
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - what-skills
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+This page discusses when to observe, describe, and participate. It remains in the temporary review area rather than being forced into one of the three individual lessons.
+
+## Review-Needed Binder Resource {#review-needed-binder-resource}
+
+### WHAT Skills - binder-p0102 {#binder-p0102}
+
+binder-p0102
+
+<!-- binder-resource: binder-p0102 -->
+
+[![Preview of WHAT Skills (binder-p0102)](../../assets/binder/binder-p0102.jpg){.img-fluid fig-alt="Preview of WHAT Skills (binder-p0102)"}](../../assets/binder/binder-p0102.jpg)
+
+[Open full page](../../assets/binder/binder-p0102.jpg)

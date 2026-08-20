@@ -1,7 +1,7 @@
 ---
 title: "Community Resources"
 description: "Find community, employment, family, peer, and mental-health supports listed in the binder."
-sidebar: learn
+sidebar: review
 learn-track: other-resources
 learn-order: 1
 categories:

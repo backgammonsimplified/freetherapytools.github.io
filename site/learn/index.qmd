@@ -1,6 +1,6 @@
 ---
 title: "DBT Skills"
-description: "A binder-led catalogue of DBT, mindfulness, wellness, CBT, and anxiety-management skills."
+description: "A binder-led catalogue containing only the five DBT-oriented curriculum tracks."
 sidebar: learn
 page-layout: full
 bibliography: ../references.bib

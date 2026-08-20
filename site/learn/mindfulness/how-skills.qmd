@@ -1,9 +1,9 @@
 ---
-title: "HOW Skills"
-description: "Practise how to bring attention to the present moment."
-sidebar: learn
+title: "Non-Judgmentally"
+description: "Notice and describe experience without adding evaluations of good or bad."
+sidebar: mindfulness
 learn-track: mindfulness
-learn-order: 3
+learn-order: 5
 categories:
   - Beginner
 tags:
@@ -18,62 +18,18 @@ execute:
   enabled: false
 ---
 
-The HOW skills shape the quality of mindful attention.
+Non-judgmentally is the first HOW skill. Notice evaluations when they arise and return to facts, consequences, preferences, and values.
 
 ## Non-Judgmentally {#non-judgmentally}
 
-## One-Mindfully {#one-mindfully}
-
-## Effectively {#effectively}
-
 ## Handouts and Worksheets {#handouts-and-worksheets}
 
-### HOW Skills - binder-p0099 {#binder-p0099}
+### Non-Judgmentally - binder-p0099 {#binder-p0099}
 
 binder-p0099
 
 <!-- binder-resource: binder-p0099 -->
 
-[![Preview of HOW Skills (binder-p0099)](../../assets/binder/binder-p0099.jpg){.img-fluid fig-alt="Preview of HOW Skills (binder-p0099)"}](../../assets/binder/binder-p0099.jpg)
+[![Preview of Non-Judgmentally (binder-p0099)](../../assets/binder/binder-p0099.jpg){.img-fluid fig-alt="Preview of Non-Judgmentally (binder-p0099)"}](../../assets/binder/binder-p0099.jpg)
 
 [Open full page](../../assets/binder/binder-p0099.jpg)
-
-### HOW Skills - binder-p0100 {#binder-p0100}
-
-binder-p0100
-
-<!-- binder-resource: binder-p0100 -->
-
-[![Preview of HOW Skills (binder-p0100)](../../assets/binder/binder-p0100.jpg){.img-fluid fig-alt="Preview of HOW Skills (binder-p0100)"}](../../assets/binder/binder-p0100.jpg)
-
-[Open full page](../../assets/binder/binder-p0100.jpg)
-
-### HOW Skills - binder-p0101 {#binder-p0101}
-
-binder-p0101
-
-<!-- binder-resource: binder-p0101 -->
-
-[![Preview of HOW Skills (binder-p0101)](../../assets/binder/binder-p0101.jpg){.img-fluid fig-alt="Preview of HOW Skills (binder-p0101)"}](../../assets/binder/binder-p0101.jpg)
-
-[Open full page](../../assets/binder/binder-p0101.jpg)
-
-### HOW Skills - binder-p0102 {#binder-p0102}
-
-binder-p0102
-
-<!-- binder-resource: binder-p0102 -->
-
-[![Preview of HOW Skills (binder-p0102)](../../assets/binder/binder-p0102.jpg){.img-fluid fig-alt="Preview of HOW Skills (binder-p0102)"}](../../assets/binder/binder-p0102.jpg)
-
-[Open full page](../../assets/binder/binder-p0102.jpg)
-
-### HOW Skills - binder-p0103 {#binder-p0103}
-
-binder-p0103
-
-<!-- binder-resource: binder-p0103 -->
-
-[![Preview of HOW Skills (binder-p0103)](../../assets/binder/binder-p0103.jpg){.img-fluid fig-alt="Preview of HOW Skills (binder-p0103)"}](../../assets/binder/binder-p0103.jpg)
-
-[Open full page](../../assets/binder/binder-p0103.jpg)

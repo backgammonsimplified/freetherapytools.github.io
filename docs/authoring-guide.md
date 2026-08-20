@@ -9,7 +9,10 @@ This private guide explains where the site lives, how the navigation is wired, a
 | Area | Path | Notes |
 |---|---|---|
 | Homepage | `site/index.qmd` | Public landing page and homepage playground |
-| Learn | `site/learn/index.qmd` | Curriculum landing page and lesson patterns |
+| DBT Skills | `site/learn/index.qmd` | Five-track DBT curriculum landing page |
+| CBT Skills | `site/cbt-skills/index.qmd` | Six-lesson CBT curriculum landing page |
+| Mindfulness | `site/mindfulness/index.qmd` | Twelve-lesson mindfulness curriculum landing page |
+| Curriculum review | `site/review/index.qmd` | Temporary non-primary holding area |
 | Glossary | `site/glossary/index.qmd` | One searchable page containing every canonical term |
 | Custom 404 | `site/404.qmd` | Root not-found page and recovery links |
 | Analyze | `site/analyze/index.qmd` | Static analyzer entry page and Shiny companion |
@@ -23,22 +26,24 @@ This private guide explains where the site lives, how the navigation is wired, a
 
 Edit `site/_quarto.yml` to change the navbar. The current public navigation is:
 
-`Learn | Analyze | Sage vs GNU | Blog | About | Search`
+`Skill Finder | DBT Skills | CBT Skills | Mindfulness`
 
-`Practice` and `Positions` stay out of the Phase 1 navbar. The old `Articles` label is replaced by `Blog`.
+Glossary and About remain secondary navigation items. Home is available through the logo.
 
 ## Learn Sidebar
 
-The Learn sidebar is generated into `site/_learn-navigation.yml`. Do not edit
-that file or add a second manual Learn sidebar to `site/_quarto.yml`.
-Track-index and lesson front matter define the hierarchy and order.
+The DBT, CBT, Mindfulness, and curriculum-review sidebars are generated into
+`site/_learn-navigation.yml`. Do not edit that file or duplicate those
+sidebars manually in `site/_quarto.yml`. Track-index and lesson front matter
+define the hierarchy and order; the generator assigns each track to its public
+section and creates a separate continuous-scroll manifest for each section.
 
 ## Learn Catalogue
 
-The Learn index, each track index, and the Learn sidebar are three generated
-views of the same curriculum metadata. The Learn index provides search,
-difficulty filters, and track focus. Each track index provides search,
-difficulty filters, and term filters.
+The section indexes, each track index, and the four sidebars are generated
+views of the same curriculum metadata. The DBT index provides search,
+difficulty filters, and track focus. Single-track CBT, Mindfulness, and review
+indexes provide the matching lesson catalogue without a track filter.
 
 A track index declares a stable ID and its top-level order:
 

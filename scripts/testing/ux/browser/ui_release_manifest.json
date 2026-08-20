@@ -4,6 +4,8 @@
     "home",
     "learn-index",
     "cube-lesson",
+    "cbt-index",
+    "cbt-lesson",
     "research-article",
     "glossary",
     "analyze"
@@ -46,35 +48,49 @@
       "name": "Homepage",
       "route": "/",
       "kind": "home",
-      "required_markers": ["Backgammon Simplified"]
+      "required_markers": ["Therapy Skill Kit"]
     },
     {
       "id": "learn-index",
-      "name": "Learn index",
+      "name": "DBT Skills index",
       "route": "/learn/",
       "kind": "learn-index",
       "required_markers": ["data-bs-learn-filters", "data-bs-learn-list"]
     },
     {
-      "id": "cube-index",
-      "name": "Cube track index",
+      "id": "distress-tolerance-index",
+      "name": "Distress Tolerance track index",
       "route": "/learn/cube/",
       "kind": "learn-index",
       "required_markers": ["data-bs-learn-filters", "data-bs-learn-list"]
     },
     {
       "id": "cube-lesson",
-      "name": "Cube lesson",
-      "route": "/learn/cube/what-the-cube-is-asking.html",
+      "name": "DBT lesson",
+      "route": "/learn/cube/tipp.html",
       "kind": "learn-lesson",
-      "required_markers": ["data-bs-cube-decision"]
+      "required_markers": ["bs-learn-article"]
     },
     {
-      "id": "take-point-lesson",
-      "name": "Take-point lesson",
-      "route": "/learn/cube/why-is-25-percent-the-basic-take-point.html",
+      "id": "cbt-index",
+      "name": "CBT Skills index",
+      "route": "/cbt-skills/",
+      "kind": "learn-index",
+      "required_markers": ["data-bs-learn-filters", "data-bs-learn-list", "Objectives"]
+    },
+    {
+      "id": "cbt-lesson",
+      "name": "CBT lesson",
+      "route": "/learn/cbt-anxiety/thought-records.html",
       "kind": "learn-lesson",
-      "required_markers": ["data-bs-checker-decision"]
+      "required_markers": ["bs-learn-article", "binder-p0019"]
+    },
+    {
+      "id": "mindfulness-index",
+      "name": "Mindfulness index",
+      "route": "/mindfulness/",
+      "kind": "learn-index",
+      "required_markers": ["data-bs-learn-filters", "data-bs-learn-list"]
     },
     {
       "id": "research-index",

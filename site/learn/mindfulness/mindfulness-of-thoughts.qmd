@@ -1,9 +1,9 @@
 ---
 title: "Mindfulness of Thoughts"
 description: "Notice thoughts as mental events rather than commands or facts."
-sidebar: learn
+sidebar: mindfulness
 learn-track: mindfulness
-learn-order: 7
+learn-order: 10
 categories:
   - Beginner
 tags:
@@ -19,4 +19,3 @@ execute:
 ---
 
 Mindfulness of thoughts creates space between having a thought and deciding how to respond.
-

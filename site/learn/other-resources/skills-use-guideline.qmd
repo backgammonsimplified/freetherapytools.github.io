@@ -1,7 +1,7 @@
 ---
 title: "Skills Use Guideline"
 description: "Use emotional intensity and state of mind to choose a skill family."
-sidebar: learn
+sidebar: review
 learn-track: other-resources
 learn-order: 3
 categories:

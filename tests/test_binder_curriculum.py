@@ -10,6 +10,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 MAPPING = ROOT / "data" / "binder-curriculum.yml"
+COVERS = ROOT / "data" / "binder-section-covers.yml"
 RESOURCE_ROOT = ROOT / "site" / "assets" / "binder"
 LEARN_ROOT = ROOT / "site" / "learn"
 
@@ -20,7 +21,7 @@ TRACK_DIRECTORIES = {
     "Wellness": "wellness",
     "Emotion Regulation": "emotion-regulation",
     "Mindfulness": "mindfulness",
-    "CBT and Managing Anxiety": "cbt-anxiety",
+    "CBT Skills": "cbt-anxiety",
     "Other Skills / Resources": "other-resources",
 }
 
@@ -29,6 +30,7 @@ class BinderCurriculumTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.records = yaml.safe_load(MAPPING.read_text(encoding="utf-8"))
+        cls.covers = yaml.safe_load(COVERS.read_text(encoding="utf-8"))
 
     def test_all_physical_page_ids_are_present_once(self) -> None:
         expected = [f"binder-p{page:04d}" for page in range(1, 153)]
@@ -88,6 +90,20 @@ class BinderCurriculumTests(unittest.TestCase):
             self.assertIn(f"{{#{identifier}}}", source)
             self.assertIn(f"../../assets/binder/{identifier}.jpg", source)
             self.assertEqual(source.count(f"binder-resource: {identifier}"), 1)
+
+    def test_identified_cover_pages_record_objectives_and_order(self) -> None:
+        self.assertEqual(
+            [cover["binder_page_id"] for cover in self.covers],
+            ["binder-p0021", "binder-p0050", "binder-p0144"],
+        )
+        known_ids = {record["id"] for record in self.records}
+        for cover in self.covers:
+            self.assertIn(cover["binder_page_id"], known_ids)
+            self.assertTrue(cover["objectives"])
+            self.assertEqual(
+                [lesson["order"] for lesson in cover["listed_lessons"]],
+                list(range(1, len(cover["listed_lessons"]) + 1)),
+            )
 
 
 if __name__ == "__main__":

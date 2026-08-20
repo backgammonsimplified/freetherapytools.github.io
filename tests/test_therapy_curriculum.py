@@ -13,11 +13,10 @@ LEARN_ROOT = ROOT / "site" / "learn"
 
 
 class TherapyCurriculumTests(unittest.TestCase):
-    def test_tracks_and_sequences_are_contiguous(self) -> None:
+    def test_tracks_and_section_sequences_are_contiguous(self) -> None:
         tracks = learn_glossary.discover_tracks()
         lessons = learn_glossary.discover_lessons()
         curriculum = learn_glossary.build_curriculum(tracks, lessons)
-        sequence = learn_glossary.build_learn_sequence(curriculum)
 
         self.assertEqual(
             [track["title"] for track in curriculum],
@@ -28,17 +27,25 @@ class TherapyCurriculumTests(unittest.TestCase):
                 "Wellness",
                 "Emotion Regulation",
                 "Mindfulness",
-                "CBT and Managing Anxiety",
+                "CBT Skills",
                 "Other Skills / Resources",
             ],
         )
-        self.assertEqual(len(lessons), 56)
-        self.assertEqual(
-            [lesson["sequence_index"] for lesson in sequence["lessons"]],
-            list(range(56)),
+        self.assertEqual(len(lessons), 62)
+        expected_counts = {"dbt": 35, "cbt": 6, "mindfulness": 12, "review": 9}
+        for section_id, expected_count in expected_counts.items():
+            section = learn_glossary.curriculum_for_section(curriculum, section_id)
+            sequence = learn_glossary.build_learn_sequence(section)
+            self.assertEqual(len(sequence["lessons"]), expected_count)
+            self.assertEqual(
+                [lesson["sequence_index"] for lesson in sequence["lessons"]],
+                list(range(expected_count)),
+            )
+        dbt_sequence = learn_glossary.build_learn_sequence(
+            learn_glossary.curriculum_for_section(curriculum, "dbt")
         )
         self.assertTrue(
-            any(lesson["next_starts_new_track"] for lesson in sequence["lessons"])
+            any(lesson["next_starts_new_track"] for lesson in dbt_sequence["lessons"])
         )
 
     def test_multipart_skill_anchors_are_authored_as_visible_headings(self) -> None:
@@ -98,12 +105,12 @@ class TherapyCurriculumTests(unittest.TestCase):
                 "balanced-sleep",
                 "exercise",
             ],
-            "mindfulness/what-skills.qmd": ["observe", "describe", "participate"],
-            "mindfulness/how-skills.qmd": [
-                "non-judgmentally",
-                "one-mindfully",
-                "effectively",
-            ],
+            "mindfulness/what-skills.qmd": ["observe"],
+            "mindfulness/describe.qmd": ["describe"],
+            "mindfulness/participate.qmd": ["participate"],
+            "mindfulness/how-skills.qmd": ["non-judgmentally"],
+            "mindfulness/one-mindfully.qmd": ["one-mindfully"],
+            "mindfulness/effectively.qmd": ["effectively"],
         }
         for relative, anchors in expected.items():
             source = (LEARN_ROOT / relative).read_text(encoding="utf-8")
@@ -118,12 +125,58 @@ class TherapyCurriculumTests(unittest.TestCase):
         )
         self.assertIn('section: "Distress Tolerance"', navigation)
         self.assertIn('text: "2. TIPP"', navigation)
+        self.assertIn('id: cbt', navigation)
+        self.assertIn('id: mindfulness', navigation)
+        expected = {
+            "bs-learn-sequence.json": 35,
+            "bs-cbt-sequence.json": 6,
+            "bs-mindfulness-sequence.json": 12,
+            "bs-review-sequence.json": 9,
+        }
+        for filename, count in expected.items():
+            sequence = yaml.safe_load(
+                (ROOT / "site" / "assets" / filename).read_text(encoding="utf-8")
+            )
+            self.assertEqual(len(sequence["lessons"]), count)
+
+    def test_cbt_index_uses_binder_objectives_and_exact_lesson_order(self) -> None:
+        source = (ROOT / "site" / "cbt-skills" / "index.qmd").read_text(
+            encoding="utf-8"
+        )
+        for objective in (
+            "Learn to identify and change unhelpful thought patterns.",
+            "Take control of interpretations when managing situations in your environment.",
+            "Develop an action plan to manage unhelpful thought patterns.",
+        ):
+            self.assertIn(objective, source)
         sequence = yaml.safe_load(
-            (ROOT / "site" / "assets" / "bs-learn-sequence.json").read_text(
+            (ROOT / "site" / "assets" / "bs-cbt-sequence.json").read_text(
                 encoding="utf-8"
             )
         )
-        self.assertEqual(len(sequence["lessons"]), 56)
+        self.assertEqual(
+            [lesson["title"] for lesson in sequence["lessons"]],
+            [
+                "Introduction to CBT",
+                "Thinking Traps",
+                "Thought Records Part 1",
+                "Thought Records Part 2",
+                "Understanding Worry",
+                "Safety Behaviours & Exposure",
+            ],
+        )
+
+    def test_primary_navigation_matches_therapy_sections(self) -> None:
+        config = yaml.safe_load((ROOT / "site" / "_quarto.yml").read_text(encoding="utf-8"))
+        left = config["website"]["navbar"]["left"]
+        self.assertEqual(
+            [item["text"] for item in left],
+            ["Skill Finder", "DBT Skills", "CBT Skills", "Mindfulness"],
+        )
+        self.assertEqual(
+            [item["text"] for item in config["website"]["navbar"]["right"]],
+            ["Glossary", "About"],
+        )
 
 
 if __name__ == "__main__":

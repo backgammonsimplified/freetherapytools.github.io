@@ -1,9 +1,9 @@
 ---
-title: "Safety Behaviours and Exposure"
+title: "Safety Behaviours & Exposure"
 description: "Identify avoidance and safety behaviours that maintain anxiety."
-sidebar: learn
+sidebar: cbt
 learn-track: cbt-anxiety
-learn-order: 5
+learn-order: 6
 categories:
   - Beginner
 tags:

@@ -34,7 +34,7 @@
 - id: binder-p0005
   pdf_page: 5
   provisional_title: "Safety Behaviours and Exposure"
-  track: "CBT and Managing Anxiety"
+  track: "CBT Skills"
   lesson: safety-behaviours-exposure
   order: 1
   review_needed: false
@@ -42,7 +42,7 @@
 - id: binder-p0006
   pdf_page: 6
   provisional_title: "Safety Behaviours and Exposure"
-  track: "CBT and Managing Anxiety"
+  track: "CBT Skills"
   lesson: safety-behaviours-exposure
   order: 2
   review_needed: false
@@ -50,7 +50,7 @@
 - id: binder-p0007
   pdf_page: 7
   provisional_title: "Safety Behaviours and Exposure"
-  track: "CBT and Managing Anxiety"
+  track: "CBT Skills"
   lesson: safety-behaviours-exposure
   order: 3
   review_needed: false
@@ -58,7 +58,7 @@
 - id: binder-p0008
   pdf_page: 8
   provisional_title: "Safety Behaviours and Exposure"
-  track: "CBT and Managing Anxiety"
+  track: "CBT Skills"
   lesson: safety-behaviours-exposure
   order: 4
   review_needed: false
@@ -66,7 +66,7 @@
 - id: binder-p0009
   pdf_page: 9
   provisional_title: "Understanding Worry"
-  track: "CBT and Managing Anxiety"
+  track: "CBT Skills"
   lesson: understanding-worry
   order: 1
   review_needed: false
@@ -74,7 +74,7 @@
 - id: binder-p0010
   pdf_page: 10
   provisional_title: "Understanding Worry"
-  track: "CBT and Managing Anxiety"
+  track: "CBT Skills"
   lesson: understanding-worry
   order: 2
   review_needed: false
@@ -82,47 +82,47 @@
 - id: binder-p0011
   pdf_page: 11
   provisional_title: "Thought Records"
-  track: "CBT and Managing Anxiety"
-  lesson: thought-records
+  track: "CBT Skills"
+  lesson: thought-records-part-2
   order: 1
   review_needed: false
   notes: ""
 - id: binder-p0012
   pdf_page: 12
   provisional_title: "Thought Records"
-  track: "CBT and Managing Anxiety"
-  lesson: thought-records
+  track: "CBT Skills"
+  lesson: thought-records-part-2
   order: 2
   review_needed: false
   notes: ""
 - id: binder-p0013
   pdf_page: 13
   provisional_title: "Thought Records"
-  track: "CBT and Managing Anxiety"
-  lesson: thought-records
+  track: "CBT Skills"
+  lesson: thought-records-part-2
   order: 3
   review_needed: false
   notes: ""
 - id: binder-p0014
   pdf_page: 14
   provisional_title: "Thought Records"
-  track: "CBT and Managing Anxiety"
-  lesson: thought-records
+  track: "CBT Skills"
+  lesson: thought-records-part-2
   order: 4
   review_needed: false
   notes: ""
 - id: binder-p0015
   pdf_page: 15
   provisional_title: "Thought Records"
-  track: "CBT and Managing Anxiety"
-  lesson: thought-records
+  track: "CBT Skills"
+  lesson: thought-records-part-2
   order: 5
   review_needed: false
   notes: ""
 - id: binder-p0016
   pdf_page: 16
   provisional_title: "Thinking Traps"
-  track: "CBT and Managing Anxiety"
+  track: "CBT Skills"
   lesson: thinking-traps
   order: 1
   review_needed: false
@@ -130,7 +130,7 @@
 - id: binder-p0017
   pdf_page: 17
   provisional_title: "Thinking Traps"
-  track: "CBT and Managing Anxiety"
+  track: "CBT Skills"
   lesson: thinking-traps
   order: 2
   review_needed: false
@@ -138,7 +138,7 @@
 - id: binder-p0018
   pdf_page: 18
   provisional_title: "Thinking Traps"
-  track: "CBT and Managing Anxiety"
+  track: "CBT Skills"
   lesson: thinking-traps
   order: 3
   review_needed: false
@@ -146,15 +146,15 @@
 - id: binder-p0019
   pdf_page: 19
   provisional_title: "Thought Records"
-  track: "CBT and Managing Anxiety"
+  track: "CBT Skills"
   lesson: thought-records
-  order: 6
+  order: 1
   review_needed: false
   notes: ""
 - id: binder-p0020
   pdf_page: 20
   provisional_title: "Thinking Traps"
-  track: "CBT and Managing Anxiety"
+  track: "CBT Skills"
   lesson: thinking-traps
   order: 4
   review_needed: false
@@ -162,7 +162,7 @@
 - id: binder-p0021
   pdf_page: 21
   provisional_title: "Introduction to CBT"
-  track: "CBT and Managing Anxiety"
+  track: "CBT Skills"
   lesson: introduction-to-cbt
   order: 1
   review_needed: false
@@ -170,7 +170,7 @@
 - id: binder-p0022
   pdf_page: 22
   provisional_title: "Introduction to CBT"
-  track: "CBT and Managing Anxiety"
+  track: "CBT Skills"
   lesson: introduction-to-cbt
   order: 2
   review_needed: false
@@ -785,7 +785,7 @@
   notes: ""
 - id: binder-p0099
   pdf_page: 99
-  provisional_title: "HOW Skills"
+  provisional_title: "Non-Judgmentally"
   track: "Mindfulness"
   lesson: how-skills
   order: 1
@@ -793,66 +793,66 @@
   notes: ""
 - id: binder-p0100
   pdf_page: 100
-  provisional_title: "HOW Skills"
+  provisional_title: "One-Mindfully"
   track: "Mindfulness"
-  lesson: how-skills
-  order: 2
+  lesson: one-mindfully
+  order: 1
   review_needed: false
   notes: ""
 - id: binder-p0101
   pdf_page: 101
-  provisional_title: "HOW Skills"
+  provisional_title: "One-Mindfully"
   track: "Mindfulness"
-  lesson: how-skills
-  order: 3
+  lesson: one-mindfully
+  order: 2
   review_needed: false
   notes: ""
 - id: binder-p0102
   pdf_page: 102
-  provisional_title: "HOW Skills"
-  track: "Mindfulness"
-  lesson: how-skills
-  order: 4
-  review_needed: false
-  notes: ""
+  provisional_title: "WHAT Skills Placement Review"
+  track: "Other Skills / Resources"
+  lesson: mindfulness-placement-review
+  order: 1
+  review_needed: true
+  notes: "Mixed Observe, Describe, and Participate content; review after improved scan."
 - id: binder-p0103
   pdf_page: 103
-  provisional_title: "HOW Skills"
+  provisional_title: "Participate / Flow"
   track: "Mindfulness"
-  lesson: how-skills
-  order: 5
+  lesson: participate
+  order: 1
   review_needed: false
   notes: ""
 - id: binder-p0104
   pdf_page: 104
-  provisional_title: "WHAT Skills"
+  provisional_title: "Participate"
+  track: "Mindfulness"
+  lesson: participate
+  order: 2
+  review_needed: false
+  notes: ""
+- id: binder-p0105
+  pdf_page: 105
+  provisional_title: "Observe"
   track: "Mindfulness"
   lesson: what-skills
   order: 1
   review_needed: false
   notes: ""
-- id: binder-p0105
-  pdf_page: 105
-  provisional_title: "WHAT Skills"
+- id: binder-p0106
+  pdf_page: 106
+  provisional_title: "Observe"
   track: "Mindfulness"
   lesson: what-skills
   order: 2
   review_needed: false
   notes: ""
-- id: binder-p0106
-  pdf_page: 106
-  provisional_title: "WHAT Skills"
+- id: binder-p0107
+  pdf_page: 107
+  provisional_title: "Observe"
   track: "Mindfulness"
   lesson: what-skills
   order: 3
-  review_needed: false
-  notes: ""
-- id: binder-p0107
-  pdf_page: 107
-  provisional_title: "WHAT Skills"
-  track: "Mindfulness"
-  lesson: what-skills
-  order: 4
   review_needed: false
   notes: ""
 - id: binder-p0108

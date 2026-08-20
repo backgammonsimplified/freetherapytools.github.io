@@ -1,7 +1,7 @@
 ---
-title: "CBT and Managing Anxiety"
-description: "Binder-led cbt and managing anxiety lessons and resources."
-sidebar: learn
+title: "CBT Skills"
+description: "The six binder-authorized CBT curriculum lessons."
+sidebar: cbt
 learn-track-index: cbt-anxiety
 learn-track-order: 7
 page-layout: full
@@ -12,4 +12,3 @@ lesson-taxonomy: false
 ---
 
 {{< include _lesson-index.html >}}
-

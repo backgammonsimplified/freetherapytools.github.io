@@ -1,0 +1,47 @@
+---
+title: "Participate"
+description: "Enter fully into the activity of the present moment with awareness."
+sidebar: mindfulness
+learn-track: mindfulness
+learn-order: 4
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - what-skills
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Participate is the third WHAT skill. Bring yourself fully into what you are doing instead of standing outside the experience and judging each step.
+
+## Participate {#participate}
+
+Practise joining the moment with attention, adjusting when observation or description is needed, and then returning to full participation.
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### Participate - binder-p0103 {#binder-p0103}
+
+binder-p0103
+
+<!-- binder-resource: binder-p0103 -->
+
+[![Preview of Participate (binder-p0103)](../../assets/binder/binder-p0103.jpg){.img-fluid fig-alt="Preview of Participate (binder-p0103)"}](../../assets/binder/binder-p0103.jpg)
+
+[Open full page](../../assets/binder/binder-p0103.jpg)
+
+### Participate - binder-p0104 {#binder-p0104}
+
+binder-p0104
+
+<!-- binder-resource: binder-p0104 -->
+
+[![Preview of Participate (binder-p0104)](../../assets/binder/binder-p0104.jpg){.img-fluid fig-alt="Preview of Participate (binder-p0104)"}](../../assets/binder/binder-p0104.jpg)
+
+[Open full page](../../assets/binder/binder-p0104.jpg)

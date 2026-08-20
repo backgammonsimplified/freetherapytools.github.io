@@ -33,7 +33,7 @@ assert.ok(DEFAULT_MANIFEST.pages.some((page) => page.id === "home"));
 assert.deepEqual(
   DEFAULT_MANIFEST.pages.find((page) => page.id === "cube-lesson")
     .required_markers,
-  ["data-bs-cube-decision"]
+  ["bs-learn-article"]
 );
 assert.equal(
   DEFAULT_MANIFEST.pages.filter(

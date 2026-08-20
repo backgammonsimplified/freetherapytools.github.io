@@ -1,7 +1,7 @@
 ---
 title: "Creative Practice"
 description: "Use creativity as a possible route to relaxation, flexibility, and connection."
-sidebar: learn
+sidebar: review
 learn-track: other-resources
 learn-order: 2
 categories:

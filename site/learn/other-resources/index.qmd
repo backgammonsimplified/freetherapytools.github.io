@@ -1,7 +1,7 @@
 ---
 title: "Other Skills / Resources"
 description: "Binder-led other skills / resources lessons and resources."
-sidebar: learn
+sidebar: review
 learn-track-index: other-resources
 learn-track-order: 8
 page-layout: full
@@ -12,4 +12,3 @@ lesson-taxonomy: false
 ---
 
 {{< include _lesson-index.html >}}
-

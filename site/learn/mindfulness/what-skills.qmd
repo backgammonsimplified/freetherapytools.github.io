@@ -1,7 +1,7 @@
 ---
-title: "WHAT Skills"
-description: "Practise what to do when being mindful."
-sidebar: learn
+title: "Observe"
+description: "Notice present experience without immediately trying to change it."
+sidebar: mindfulness
 learn-track: mindfulness
 learn-order: 2
 categories:
@@ -18,52 +18,38 @@ execute:
   enabled: false
 ---
 
-The WHAT skills direct attention to present experience.
+Observe is the first WHAT skill: intentionally notice sensations, thoughts, emotions, and events as they arise.
 
 ## Observe {#observe}
 
-## Describe {#describe}
-
-## Participate {#participate}
-
 ## Handouts and Worksheets {#handouts-and-worksheets}
 
-### WHAT Skills - binder-p0104 {#binder-p0104}
-
-binder-p0104
-
-<!-- binder-resource: binder-p0104 -->
-
-[![Preview of WHAT Skills (binder-p0104)](../../assets/binder/binder-p0104.jpg){.img-fluid fig-alt="Preview of WHAT Skills (binder-p0104)"}](../../assets/binder/binder-p0104.jpg)
-
-[Open full page](../../assets/binder/binder-p0104.jpg)
-
-### WHAT Skills - binder-p0105 {#binder-p0105}
+### Observe - binder-p0105 {#binder-p0105}
 
 binder-p0105
 
 <!-- binder-resource: binder-p0105 -->
 
-[![Preview of WHAT Skills (binder-p0105)](../../assets/binder/binder-p0105.jpg){.img-fluid fig-alt="Preview of WHAT Skills (binder-p0105)"}](../../assets/binder/binder-p0105.jpg)
+[![Preview of Observe (binder-p0105)](../../assets/binder/binder-p0105.jpg){.img-fluid fig-alt="Preview of Observe (binder-p0105)"}](../../assets/binder/binder-p0105.jpg)
 
 [Open full page](../../assets/binder/binder-p0105.jpg)
 
-### WHAT Skills - binder-p0106 {#binder-p0106}
+### Observe - binder-p0106 {#binder-p0106}
 
 binder-p0106
 
 <!-- binder-resource: binder-p0106 -->
 
-[![Preview of WHAT Skills (binder-p0106)](../../assets/binder/binder-p0106.jpg){.img-fluid fig-alt="Preview of WHAT Skills (binder-p0106)"}](../../assets/binder/binder-p0106.jpg)
+[![Preview of Observe (binder-p0106)](../../assets/binder/binder-p0106.jpg){.img-fluid fig-alt="Preview of Observe (binder-p0106)"}](../../assets/binder/binder-p0106.jpg)
 
 [Open full page](../../assets/binder/binder-p0106.jpg)
 
-### WHAT Skills - binder-p0107 {#binder-p0107}
+### Observe - binder-p0107 {#binder-p0107}
 
 binder-p0107
 
 <!-- binder-resource: binder-p0107 -->
 
-[![Preview of WHAT Skills (binder-p0107)](../../assets/binder/binder-p0107.jpg){.img-fluid fig-alt="Preview of WHAT Skills (binder-p0107)"}](../../assets/binder/binder-p0107.jpg)
+[![Preview of Observe (binder-p0107)](../../assets/binder/binder-p0107.jpg){.img-fluid fig-alt="Preview of Observe (binder-p0107)"}](../../assets/binder/binder-p0107.jpg)
 
 [Open full page](../../assets/binder/binder-p0107.jpg)

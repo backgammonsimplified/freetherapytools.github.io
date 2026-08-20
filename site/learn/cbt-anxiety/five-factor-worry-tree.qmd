@@ -1,9 +1,9 @@
 ---
-title: "Five Factor Model and Worry Tree"
+title: "Review: Five Factor Model and Worry Tree"
 description: "Map a problem across five factors and decide whether action or acceptance fits."
-sidebar: learn
-learn-track: cbt-anxiety
-learn-order: 9
+sidebar: review
+learn-track: other-resources
+learn-order: 8
 categories:
   - Beginner
 tags:
@@ -18,7 +18,8 @@ execute:
   enabled: false
 ---
 
+This earlier supplementary page is preserved for review. Its core content is now integrated into Understanding Worry.
+
 ## Five Factor Model {#five-factor-model}
 
 ## Worry Tree {#worry-tree}
-
