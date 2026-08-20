@@ -1,0 +1,15 @@
+---
+title: "Daily Goal Setting and Tracking"
+description: "Binder-led daily goal setting and tracking lessons and resources."
+sidebar: learn
+learn-track-index: goal-setting
+learn-track-order: 1
+page-layout: full
+body-classes: "bs-learn-article bs-learn-track-index"
+toc: false
+term-lookup: false
+lesson-taxonomy: false
+---
+
+{{< include _lesson-index.html >}}
+

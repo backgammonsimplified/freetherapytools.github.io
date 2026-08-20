@@ -1,0 +1,51 @@
+---
+title: "FAST"
+description: "Protect self-respect while asking, refusing, or negotiating."
+sidebar: learn
+learn-track: interpersonal-effectiveness
+learn-order: 5
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - fast
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+FAST helps you remain fair and aligned with your values.
+
+## Fair {#fair}
+
+## No Unnecessary Apologies {#no-unnecessary-apologies}
+
+## Stick to Values {#stick-to-values}
+
+## Truthful {#truthful}
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### FAST - binder-p0071 {#binder-p0071}
+
+binder-p0071
+
+<!-- binder-resource: binder-p0071 -->
+
+[![Preview of FAST (binder-p0071)](../../assets/binder/binder-p0071.jpg){.img-fluid fig-alt="Preview of FAST (binder-p0071)"}](../../assets/binder/binder-p0071.jpg)
+
+[Open full page](../../assets/binder/binder-p0071.jpg)
+
+### FAST - binder-p0072 {#binder-p0072}
+
+binder-p0072
+
+<!-- binder-resource: binder-p0072 -->
+
+[![Preview of FAST (binder-p0072)](../../assets/binder/binder-p0072.jpg){.img-fluid fig-alt="Preview of FAST (binder-p0072)"}](../../assets/binder/binder-p0072.jpg)
+
+[Open full page](../../assets/binder/binder-p0072.jpg)

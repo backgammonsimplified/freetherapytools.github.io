@@ -1,0 +1,15 @@
+---
+title: "Interpersonal Effectiveness"
+description: "Binder-led interpersonal effectiveness lessons and resources."
+sidebar: learn
+learn-track-index: interpersonal-effectiveness
+learn-track-order: 3
+page-layout: full
+body-classes: "bs-learn-article bs-learn-track-index"
+toc: false
+term-lookup: false
+lesson-taxonomy: false
+---
+
+{{< include _lesson-index.html >}}
+

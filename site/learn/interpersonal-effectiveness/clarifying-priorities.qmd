@@ -1,0 +1,63 @@
+---
+title: "Clarifying Priorities"
+description: "Balance objectives, the relationship, and self-respect in an interaction."
+sidebar: learn
+learn-track: interpersonal-effectiveness
+learn-order: 2
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - priorities
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Before acting, decide which goal matters most: getting an objective, preserving the relationship, or protecting self-respect.
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### Objectives and Clarifying Priorities - binder-p0079 {#binder-p0079}
+
+binder-p0079
+
+<!-- binder-resource: binder-p0079 -->
+
+[![Preview of Objectives and Clarifying Priorities (binder-p0079)](../../assets/binder/binder-p0079.jpg){.img-fluid fig-alt="Preview of Objectives and Clarifying Priorities (binder-p0079)"}](../../assets/binder/binder-p0079.jpg)
+
+[Open full page](../../assets/binder/binder-p0079.jpg)
+
+### Objectives and Clarifying Priorities - binder-p0080 {#binder-p0080}
+
+binder-p0080
+
+<!-- binder-resource: binder-p0080 -->
+
+[![Preview of Objectives and Clarifying Priorities (binder-p0080)](../../assets/binder/binder-p0080.jpg){.img-fluid fig-alt="Preview of Objectives and Clarifying Priorities (binder-p0080)"}](../../assets/binder/binder-p0080.jpg)
+
+[Open full page](../../assets/binder/binder-p0080.jpg)
+
+### Objectives and Clarifying Priorities - binder-p0081 {#binder-p0081}
+
+binder-p0081
+
+<!-- binder-resource: binder-p0081 -->
+
+[![Preview of Objectives and Clarifying Priorities (binder-p0081)](../../assets/binder/binder-p0081.jpg){.img-fluid fig-alt="Preview of Objectives and Clarifying Priorities (binder-p0081)"}](../../assets/binder/binder-p0081.jpg)
+
+[Open full page](../../assets/binder/binder-p0081.jpg)
+
+### Objectives and Clarifying Priorities - binder-p0082 {#binder-p0082}
+
+binder-p0082
+
+<!-- binder-resource: binder-p0082 -->
+
+[![Preview of Objectives and Clarifying Priorities (binder-p0082)](../../assets/binder/binder-p0082.jpg){.img-fluid fig-alt="Preview of Objectives and Clarifying Priorities (binder-p0082)"}](../../assets/binder/binder-p0082.jpg)
+
+[Open full page](../../assets/binder/binder-p0082.jpg)

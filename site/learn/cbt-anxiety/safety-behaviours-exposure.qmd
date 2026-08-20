@@ -1,0 +1,63 @@
+---
+title: "Safety Behaviours and Exposure"
+description: "Identify avoidance and safety behaviours that maintain anxiety."
+sidebar: learn
+learn-track: cbt-anxiety
+learn-order: 5
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - exposure
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Exposure involves approaching feared situations gradually while reducing behaviours that prevent new learning.
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### Safety Behaviours and Exposure - binder-p0005 {#binder-p0005}
+
+binder-p0005
+
+<!-- binder-resource: binder-p0005 -->
+
+[![Preview of Safety Behaviours and Exposure (binder-p0005)](../../assets/binder/binder-p0005.jpg){.img-fluid fig-alt="Preview of Safety Behaviours and Exposure (binder-p0005)"}](../../assets/binder/binder-p0005.jpg)
+
+[Open full page](../../assets/binder/binder-p0005.jpg)
+
+### Safety Behaviours and Exposure - binder-p0006 {#binder-p0006}
+
+binder-p0006
+
+<!-- binder-resource: binder-p0006 -->
+
+[![Preview of Safety Behaviours and Exposure (binder-p0006)](../../assets/binder/binder-p0006.jpg){.img-fluid fig-alt="Preview of Safety Behaviours and Exposure (binder-p0006)"}](../../assets/binder/binder-p0006.jpg)
+
+[Open full page](../../assets/binder/binder-p0006.jpg)
+
+### Safety Behaviours and Exposure - binder-p0007 {#binder-p0007}
+
+binder-p0007
+
+<!-- binder-resource: binder-p0007 -->
+
+[![Preview of Safety Behaviours and Exposure (binder-p0007)](../../assets/binder/binder-p0007.jpg){.img-fluid fig-alt="Preview of Safety Behaviours and Exposure (binder-p0007)"}](../../assets/binder/binder-p0007.jpg)
+
+[Open full page](../../assets/binder/binder-p0007.jpg)
+
+### Safety Behaviours and Exposure - binder-p0008 {#binder-p0008}
+
+binder-p0008
+
+<!-- binder-resource: binder-p0008 -->
+
+[![Preview of Safety Behaviours and Exposure (binder-p0008)](../../assets/binder/binder-p0008.jpg){.img-fluid fig-alt="Preview of Safety Behaviours and Exposure (binder-p0008)"}](../../assets/binder/binder-p0008.jpg)
+
+[Open full page](../../assets/binder/binder-p0008.jpg)

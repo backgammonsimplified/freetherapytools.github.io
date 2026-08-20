@@ -1,0 +1,54 @@
+---
+title: "Self-Soothe with the 5 Senses"
+description: "Use sensory experiences to care for yourself during distress."
+sidebar: learn
+learn-track: doubling-cube
+learn-order: 3
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - self-soothe
+body-classes: bs-learn-article
+lesson-taxonomy: false
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Self-soothing means intentionally choosing comforting experiences through your senses.
+
+## Vision {#vision}
+
+## Hearing {#hearing}
+
+## Taste {#taste}
+
+## Smell {#smell}
+
+## Touch {#touch}
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### Self-Soothe with the 5 Senses - binder-p0124 {#binder-p0124}
+
+binder-p0124
+
+<!-- binder-resource: binder-p0124 -->
+
+[![Preview of Self-Soothe with the 5 Senses (binder-p0124)](../../assets/binder/binder-p0124.jpg){.img-fluid fig-alt="Preview of Self-Soothe with the 5 Senses (binder-p0124)"}](../../assets/binder/binder-p0124.jpg)
+
+[Open full page](../../assets/binder/binder-p0124.jpg)
+
+### Self-Soothe with the 5 Senses - binder-p0125 {#binder-p0125}
+
+binder-p0125
+
+<!-- binder-resource: binder-p0125 -->
+
+[![Preview of Self-Soothe with the 5 Senses (binder-p0125)](../../assets/binder/binder-p0125.jpg){.img-fluid fig-alt="Preview of Self-Soothe with the 5 Senses (binder-p0125)"}](../../assets/binder/binder-p0125.jpg)
+
+[Open full page](../../assets/binder/binder-p0125.jpg)

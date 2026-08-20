@@ -1,0 +1,30 @@
+---
+title: "TIPP"
+description: "Use body-based strategies to reduce very high emotional arousal."
+sidebar: learn
+learn-track: doubling-cube
+learn-order: 2
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - tipp
+body-classes: bs-learn-article
+lesson-taxonomy: false
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+TIPP skills can help bring intense arousal down enough to choose the next effective step.
+
+## Temperature {#temperature}
+
+## Intense Exercise {#intense-exercise}
+
+## Progressive Muscle Relaxation {#progressive-muscle-relaxation}
+
+## Paced Breathing {#paced-breathing}

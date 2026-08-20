@@ -1,0 +1,36 @@
+---
+title: "Daily Tracking"
+description: "Track mood, food, sleep, medication, exercise, hygiene, and substance use without judgment."
+sidebar: learn
+learn-track: goal-setting
+learn-order: 4
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - tracking
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Tracking is information gathering, not a grade. Record what happened so patterns become easier to see.
+
+## Mood Tracking {#mood-tracking}
+
+## Food Tracking {#food-tracking}
+
+## Sleep Tracking {#sleep-tracking}
+
+## Medication Tracking {#medication-tracking}
+
+## Exercise Tracking {#exercise-tracking}
+
+## Hygiene {#hygiene}
+
+## Substance Use Tracking {#substance-use-tracking}
+

@@ -1,0 +1,79 @@
+---
+title: "HOW Skills"
+description: "Practise how to bring attention to the present moment."
+sidebar: learn
+learn-track: mindfulness
+learn-order: 3
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - how-skills
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+The HOW skills shape the quality of mindful attention.
+
+## Non-Judgmentally {#non-judgmentally}
+
+## One-Mindfully {#one-mindfully}
+
+## Effectively {#effectively}
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### HOW Skills - binder-p0099 {#binder-p0099}
+
+binder-p0099
+
+<!-- binder-resource: binder-p0099 -->
+
+[![Preview of HOW Skills (binder-p0099)](../../assets/binder/binder-p0099.jpg){.img-fluid fig-alt="Preview of HOW Skills (binder-p0099)"}](../../assets/binder/binder-p0099.jpg)
+
+[Open full page](../../assets/binder/binder-p0099.jpg)
+
+### HOW Skills - binder-p0100 {#binder-p0100}
+
+binder-p0100
+
+<!-- binder-resource: binder-p0100 -->
+
+[![Preview of HOW Skills (binder-p0100)](../../assets/binder/binder-p0100.jpg){.img-fluid fig-alt="Preview of HOW Skills (binder-p0100)"}](../../assets/binder/binder-p0100.jpg)
+
+[Open full page](../../assets/binder/binder-p0100.jpg)
+
+### HOW Skills - binder-p0101 {#binder-p0101}
+
+binder-p0101
+
+<!-- binder-resource: binder-p0101 -->
+
+[![Preview of HOW Skills (binder-p0101)](../../assets/binder/binder-p0101.jpg){.img-fluid fig-alt="Preview of HOW Skills (binder-p0101)"}](../../assets/binder/binder-p0101.jpg)
+
+[Open full page](../../assets/binder/binder-p0101.jpg)
+
+### HOW Skills - binder-p0102 {#binder-p0102}
+
+binder-p0102
+
+<!-- binder-resource: binder-p0102 -->
+
+[![Preview of HOW Skills (binder-p0102)](../../assets/binder/binder-p0102.jpg){.img-fluid fig-alt="Preview of HOW Skills (binder-p0102)"}](../../assets/binder/binder-p0102.jpg)
+
+[Open full page](../../assets/binder/binder-p0102.jpg)
+
+### HOW Skills - binder-p0103 {#binder-p0103}
+
+binder-p0103
+
+<!-- binder-resource: binder-p0103 -->
+
+[![Preview of HOW Skills (binder-p0103)](../../assets/binder/binder-p0103.jpg){.img-fluid fig-alt="Preview of HOW Skills (binder-p0103)"}](../../assets/binder/binder-p0103.jpg)
+
+[Open full page](../../assets/binder/binder-p0103.jpg)

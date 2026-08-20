@@ -1,0 +1,43 @@
+---
+title: "Saying No and Choosing Intensity"
+description: "Match the intensity of a request or refusal to the situation."
+sidebar: learn
+learn-track: interpersonal-effectiveness
+learn-order: 7
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - saying-no
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Effective refusal is clear, proportionate, and attentive to both priorities and safety.
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### Saying No / Intensity Material - binder-p0074 {#binder-p0074}
+
+binder-p0074
+
+<!-- binder-resource: binder-p0074 -->
+
+[![Preview of Saying No / Intensity Material (binder-p0074)](../../assets/binder/binder-p0074.jpg){.img-fluid fig-alt="Preview of Saying No / Intensity Material (binder-p0074)"}](../../assets/binder/binder-p0074.jpg)
+
+[Open full page](../../assets/binder/binder-p0074.jpg)
+
+### How to Ask and Say No - binder-p0083 {#binder-p0083}
+
+binder-p0083
+
+<!-- binder-resource: binder-p0083 -->
+
+[![Preview of How to Ask and Say No (binder-p0083)](../../assets/binder/binder-p0083.jpg){.img-fluid fig-alt="Preview of How to Ask and Say No (binder-p0083)"}](../../assets/binder/binder-p0083.jpg)
+
+[Open full page](../../assets/binder/binder-p0083.jpg)

@@ -1,0 +1,15 @@
+---
+title: "Mindfulness"
+description: "Binder-led mindfulness lessons and resources."
+sidebar: learn
+learn-track-index: mindfulness
+learn-track-order: 6
+page-layout: full
+body-classes: "bs-learn-article bs-learn-track-index"
+toc: false
+term-lookup: false
+lesson-taxonomy: false
+---
+
+{{< include _lesson-index.html >}}
+

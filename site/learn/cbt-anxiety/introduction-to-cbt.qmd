@@ -1,0 +1,43 @@
+---
+title: "Introduction to CBT"
+description: "Understand links among situations, thoughts, emotions, body sensations, and actions."
+sidebar: learn
+learn-track: cbt-anxiety
+learn-order: 1
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - cbt
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+CBT skills examine patterns and test more balanced, useful ways of understanding and responding.
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### Introduction to CBT - binder-p0021 {#binder-p0021}
+
+binder-p0021
+
+<!-- binder-resource: binder-p0021 -->
+
+[![Preview of Introduction to CBT (binder-p0021)](../../assets/binder/binder-p0021.jpg){.img-fluid fig-alt="Preview of Introduction to CBT (binder-p0021)"}](../../assets/binder/binder-p0021.jpg)
+
+[Open full page](../../assets/binder/binder-p0021.jpg)
+
+### Introduction to CBT - binder-p0022 {#binder-p0022}
+
+binder-p0022
+
+<!-- binder-resource: binder-p0022 -->
+
+[![Preview of Introduction to CBT (binder-p0022)](../../assets/binder/binder-p0022.jpg){.img-fluid fig-alt="Preview of Introduction to CBT (binder-p0022)"}](../../assets/binder/binder-p0022.jpg)
+
+[Open full page](../../assets/binder/binder-p0022.jpg)

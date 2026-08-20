@@ -1,0 +1,63 @@
+---
+title: "Thinking Traps"
+description: "Identify common patterns such as catastrophizing, filtering, mind-reading, and all-or-nothing thinking."
+sidebar: learn
+learn-track: cbt-anxiety
+learn-order: 2
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - thinking-traps
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Thinking traps are habits of interpretation. Naming one creates an opportunity to check it.
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### Thinking Traps - binder-p0016 {#binder-p0016}
+
+binder-p0016
+
+<!-- binder-resource: binder-p0016 -->
+
+[![Preview of Thinking Traps (binder-p0016)](../../assets/binder/binder-p0016.jpg){.img-fluid fig-alt="Preview of Thinking Traps (binder-p0016)"}](../../assets/binder/binder-p0016.jpg)
+
+[Open full page](../../assets/binder/binder-p0016.jpg)
+
+### Thinking Traps - binder-p0017 {#binder-p0017}
+
+binder-p0017
+
+<!-- binder-resource: binder-p0017 -->
+
+[![Preview of Thinking Traps (binder-p0017)](../../assets/binder/binder-p0017.jpg){.img-fluid fig-alt="Preview of Thinking Traps (binder-p0017)"}](../../assets/binder/binder-p0017.jpg)
+
+[Open full page](../../assets/binder/binder-p0017.jpg)
+
+### Thinking Traps - binder-p0018 {#binder-p0018}
+
+binder-p0018
+
+<!-- binder-resource: binder-p0018 -->
+
+[![Preview of Thinking Traps (binder-p0018)](../../assets/binder/binder-p0018.jpg){.img-fluid fig-alt="Preview of Thinking Traps (binder-p0018)"}](../../assets/binder/binder-p0018.jpg)
+
+[Open full page](../../assets/binder/binder-p0018.jpg)
+
+### Thinking Traps - binder-p0020 {#binder-p0020}
+
+binder-p0020
+
+<!-- binder-resource: binder-p0020 -->
+
+[![Preview of Thinking Traps (binder-p0020)](../../assets/binder/binder-p0020.jpg){.img-fluid fig-alt="Preview of Thinking Traps (binder-p0020)"}](../../assets/binder/binder-p0020.jpg)
+
+[Open full page](../../assets/binder/binder-p0020.jpg)

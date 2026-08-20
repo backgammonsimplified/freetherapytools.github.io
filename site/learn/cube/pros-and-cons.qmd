@@ -1,0 +1,44 @@
+---
+title: "Pros and Cons"
+description: "Compare the short- and long-term effects of acting on or resisting an urge."
+sidebar: learn
+learn-track: doubling-cube
+learn-order: 6
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - pros-cons
+body-classes: bs-learn-article
+lesson-taxonomy: false
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+A pros-and-cons grid slows urgent decisions down and brings longer-term consequences back into view.
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### Pros and Cons - binder-p0120 {#binder-p0120}
+
+binder-p0120
+
+<!-- binder-resource: binder-p0120 -->
+
+[![Preview of Pros and Cons (binder-p0120)](../../assets/binder/binder-p0120.jpg){.img-fluid fig-alt="Preview of Pros and Cons (binder-p0120)"}](../../assets/binder/binder-p0120.jpg)
+
+[Open full page](../../assets/binder/binder-p0120.jpg)
+
+### Pros and Cons - binder-p0121 {#binder-p0121}
+
+binder-p0121
+
+<!-- binder-resource: binder-p0121 -->
+
+[![Preview of Pros and Cons (binder-p0121)](../../assets/binder/binder-p0121.jpg){.img-fluid fig-alt="Preview of Pros and Cons (binder-p0121)"}](../../assets/binder/binder-p0121.jpg)
+
+[Open full page](../../assets/binder/binder-p0121.jpg)

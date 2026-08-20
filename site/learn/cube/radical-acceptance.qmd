@@ -1,0 +1,44 @@
+---
+title: "Radical Acceptance"
+description: "Practice acknowledging reality as it is while still choosing what comes next."
+sidebar: learn
+learn-track: doubling-cube
+learn-order: 7
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - radical-acceptance
+body-classes: bs-learn-article
+lesson-taxonomy: false
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Radical acceptance is recognizing reality without approval, passivity, or giving up.
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### Radical Acceptance - binder-p0114 {#binder-p0114}
+
+binder-p0114
+
+<!-- binder-resource: binder-p0114 -->
+
+[![Preview of Radical Acceptance (binder-p0114)](../../assets/binder/binder-p0114.jpg){.img-fluid fig-alt="Preview of Radical Acceptance (binder-p0114)"}](../../assets/binder/binder-p0114.jpg)
+
+[Open full page](../../assets/binder/binder-p0114.jpg)
+
+### Factors That Interfere with Radical Acceptance - binder-p0117 {#binder-p0117}
+
+binder-p0117
+
+<!-- binder-resource: binder-p0117 -->
+
+[![Preview of Factors That Interfere with Radical Acceptance (binder-p0117)](../../assets/binder/binder-p0117.jpg){.img-fluid fig-alt="Preview of Factors That Interfere with Radical Acceptance (binder-p0117)"}](../../assets/binder/binder-p0117.jpg)
+
+[Open full page](../../assets/binder/binder-p0117.jpg)

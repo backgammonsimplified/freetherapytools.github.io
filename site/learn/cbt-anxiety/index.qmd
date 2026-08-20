@@ -1,0 +1,15 @@
+---
+title: "CBT and Managing Anxiety"
+description: "Binder-led cbt and managing anxiety lessons and resources."
+sidebar: learn
+learn-track-index: cbt-anxiety
+learn-track-order: 7
+page-layout: full
+body-classes: "bs-learn-article bs-learn-track-index"
+toc: false
+term-lookup: false
+lesson-taxonomy: false
+---
+
+{{< include _lesson-index.html >}}
+

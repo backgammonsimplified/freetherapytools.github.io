@@ -1,0 +1,22 @@
+---
+title: "Challenging Negative Thoughts"
+description: "Question an unhelpful thought with evidence, alternatives, and a more balanced view."
+sidebar: learn
+learn-track: cbt-anxiety
+learn-order: 6
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - balanced-thoughts
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+The goal is not forced positivity. It is a fairer thought that fits the evidence and supports effective action.
+

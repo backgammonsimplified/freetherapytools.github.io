@@ -1,0 +1,43 @@
+---
+title: "Understanding Worry"
+description: "Distinguish worry from problem solving and notice beliefs that keep worry going."
+sidebar: learn
+learn-track: cbt-anxiety
+learn-order: 4
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - worry
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Worry can feel protective while also increasing avoidance and uncertainty. Understanding its function helps you choose a response.
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### Understanding Worry - binder-p0009 {#binder-p0009}
+
+binder-p0009
+
+<!-- binder-resource: binder-p0009 -->
+
+[![Preview of Understanding Worry (binder-p0009)](../../assets/binder/binder-p0009.jpg){.img-fluid fig-alt="Preview of Understanding Worry (binder-p0009)"}](../../assets/binder/binder-p0009.jpg)
+
+[Open full page](../../assets/binder/binder-p0009.jpg)
+
+### Understanding Worry - binder-p0010 {#binder-p0010}
+
+binder-p0010
+
+<!-- binder-resource: binder-p0010 -->
+
+[![Preview of Understanding Worry (binder-p0010)](../../assets/binder/binder-p0010.jpg){.img-fluid fig-alt="Preview of Understanding Worry (binder-p0010)"}](../../assets/binder/binder-p0010.jpg)
+
+[Open full page](../../assets/binder/binder-p0010.jpg)

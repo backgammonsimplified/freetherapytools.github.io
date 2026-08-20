@@ -523,7 +523,7 @@ assert.equal(
 );
 assert.equal(
   generatedGlossaryItems.length,
-  37,
+  38,
   "the JavaScript integration fixture uses every canonical entry"
 );
 assert.equal(
@@ -743,7 +743,7 @@ const lookupData = JSON.parse(
     "utf8"
   )
 );
-assert.equal(lookupData.entries.length, 37);
+assert.equal(lookupData.entries.length, 38);
 assert.equal(
   lookupData.entries.reduce(
     (total, entry) => total + entry.aliases.length,

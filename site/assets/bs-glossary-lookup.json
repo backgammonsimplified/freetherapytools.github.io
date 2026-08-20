@@ -23,12 +23,7 @@
       "learning_tracks": [],
       "redirect_slugs": [],
       "references": [],
-      "related_lessons": [
-        {
-          "route": "/learn/cube/what-the-cube-is-asking.html",
-          "title": "What the Cube Is Really Asking"
-        }
-      ],
+      "related_lessons": [],
       "related_terms": [
         {
           "slug": "attack-zone",
@@ -398,12 +393,7 @@
       "learning_tracks": [],
       "redirect_slugs": [],
       "references": [],
-      "related_lessons": [
-        {
-          "route": "/learn/cube/what-the-cube-is-asking.html",
-          "title": "What the Cube Is Really Asking"
-        }
-      ],
+      "related_lessons": [],
       "related_terms": [
         {
           "term": "Builder"
@@ -470,12 +460,7 @@
       "learning_tracks": [],
       "redirect_slugs": [],
       "references": [],
-      "related_lessons": [
-        {
-          "route": "/learn/game-plans/",
-          "title": "The Main Game Plans"
-        }
-      ],
+      "related_lessons": [],
       "related_terms": [
         {
           "term": "Anchor"
@@ -1006,12 +991,7 @@
       "learning_tracks": [],
       "redirect_slugs": [],
       "references": [],
-      "related_lessons": [
-        {
-          "route": "/learn/game-plans/",
-          "title": "The Main Game Plans"
-        }
-      ],
+      "related_lessons": [],
       "related_terms": [],
       "short_definition": "A back game is a strategy based on holding two or more points deep in your opponent's home board while waiting for a late opportunity to hit.",
       "slug": "back-game",
@@ -1111,12 +1091,7 @@
       "learning_tracks": [],
       "redirect_slugs": [],
       "references": [],
-      "related_lessons": [
-        {
-          "route": "/learn/reading-positions-and-engines/",
-          "title": "Reading Positions and Engine Analysis"
-        }
-      ],
+      "related_lessons": [],
       "related_terms": [
         {
           "slug": "annotation",
@@ -1280,6 +1255,28 @@
       "short_definition": "Winner's Curse is the tendency for favourable rolls that help a player win to also create more difficult decisions, making the winner's match PR look worse than usual.",
       "slug": "winners-curse",
       "term": "Winner's Curse"
+    },
+    {
+      "alias_slugs": [],
+      "aliases": [],
+      "categories": [
+        "Analysis & Probability"
+      ],
+      "definition": "Wise Mind is a DBT concept for the integrated perspective that draws on both emotional experience and reasonable thinking. It supports noticing what is true, what matters, and what an effective next step may be.",
+      "definition_links": [],
+      "learning_tracks": [],
+      "redirect_slugs": [],
+      "references": [],
+      "related_lessons": [
+        {
+          "route": "/learn/mindfulness/mindfulness-foundations.html",
+          "title": "Recognizing States of Mind and Wise Mind"
+        }
+      ],
+      "related_terms": [],
+      "short_definition": "Wise Mind is the integrated perspective that draws on both emotion and reason.",
+      "slug": "wise-mind",
+      "term": "Wise Mind"
     }
   ]
 }

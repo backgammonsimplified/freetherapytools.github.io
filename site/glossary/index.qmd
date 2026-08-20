@@ -1,6 +1,6 @@
 ---
-title: "Backgammon Glossary"
-description: "A searchable backgammon dictionary of terms and glossary for concepts used throughout Backgammon Simplified."
+title: "Therapy Skills Glossary"
+description: "A searchable glossary for concepts used throughout Therapy Skill Kit."
 sidebar: false
 page-layout: article
 body-classes: bs-glossary-index
@@ -23,7 +23,7 @@ execute:
 <section class="bs-glossary-filter-panel" data-bs-glossary-filters aria-label="Search and filter the glossary">
   <div class="bs-glossary-search-group">
     <label for="bs-glossary-search">Search terms and aliases</label>
-    <input id="bs-glossary-search" type="search" autocomplete="off" spellcheck="false" placeholder="Try “take point” or an alias" data-bs-glossary-search>
+    <input id="bs-glossary-search" type="search" autocomplete="off" spellcheck="false" placeholder="Try “Wise Mind” or an alias" data-bs-glossary-search>
   </div>
 
   <details class="bs-glossary-filter-disclosure" data-bs-glossary-category-disclosure>

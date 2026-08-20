@@ -1,0 +1,73 @@
+---
+title: "Observing and Describing Emotions"
+description: "Name prompting events, interpretations, body changes, urges, actions, and aftereffects."
+sidebar: learn
+learn-track: emotion-regulation
+learn-order: 3
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - describe-emotions
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Detailed observation separates the parts of an emotional response and makes patterns easier to understand.
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### Observing and Describing Emotions - binder-p0043 {#binder-p0043}
+
+binder-p0043
+
+<!-- binder-resource: binder-p0043 -->
+
+[![Preview of Observing and Describing Emotions (binder-p0043)](../../assets/binder/binder-p0043.jpg){.img-fluid fig-alt="Preview of Observing and Describing Emotions (binder-p0043)"}](../../assets/binder/binder-p0043.jpg)
+
+[Open full page](../../assets/binder/binder-p0043.jpg)
+
+### Observing and Describing Emotions - binder-p0044 {#binder-p0044}
+
+binder-p0044
+
+<!-- binder-resource: binder-p0044 -->
+
+[![Preview of Observing and Describing Emotions (binder-p0044)](../../assets/binder/binder-p0044.jpg){.img-fluid fig-alt="Preview of Observing and Describing Emotions (binder-p0044)"}](../../assets/binder/binder-p0044.jpg)
+
+[Open full page](../../assets/binder/binder-p0044.jpg)
+
+### Observing and Describing Emotions - binder-p0045 {#binder-p0045}
+
+binder-p0045
+
+<!-- binder-resource: binder-p0045 -->
+
+[![Preview of Observing and Describing Emotions (binder-p0045)](../../assets/binder/binder-p0045.jpg){.img-fluid fig-alt="Preview of Observing and Describing Emotions (binder-p0045)"}](../../assets/binder/binder-p0045.jpg)
+
+[Open full page](../../assets/binder/binder-p0045.jpg)
+
+### Observing and Describing Emotions - binder-p0046 {#binder-p0046}
+
+binder-p0046
+
+<!-- binder-resource: binder-p0046 -->
+
+[![Preview of Observing and Describing Emotions (binder-p0046)](../../assets/binder/binder-p0046.jpg){.img-fluid fig-alt="Preview of Observing and Describing Emotions (binder-p0046)"}](../../assets/binder/binder-p0046.jpg)
+
+[Open full page](../../assets/binder/binder-p0046.jpg)
+
+### Feelings Wheel - binder-p0142 {#binder-p0142}
+
+binder-p0142
+
+<!-- binder-resource: binder-p0142 -->
+
+[![Preview of Feelings Wheel (binder-p0142)](../../assets/binder/binder-p0142.jpg){.img-fluid fig-alt="Preview of Feelings Wheel (binder-p0142)"}](../../assets/binder/binder-p0142.jpg)
+
+[Open full page](../../assets/binder/binder-p0142.jpg)

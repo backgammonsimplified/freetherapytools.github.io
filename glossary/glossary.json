@@ -869,5 +869,22 @@
     "added": "2026-07-31",
     "updated": "2026-07-31",
     "references": []
+  },
+  "wise-mind": {
+    "term": "Wise Mind",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Wise Mind is the integrated perspective that draws on both emotion and reason.",
+    "long_definition": "Wise Mind is a DBT concept for the integrated perspective that draws on both emotional experience and reasonable thinking. It supports noticing what is true, what matters, and what an effective next step may be.",
+    "categories": [
+      "Analysis & Probability"
+    ],
+    "tracks": [],
+    "related_terms": [],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-08-19",
+    "updated": "2026-08-19",
+    "references": []
   }
 }

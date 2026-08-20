@@ -1,0 +1,83 @@
+---
+title: "Thought Records"
+description: "Use a structured record to examine evidence and develop a balanced thought."
+sidebar: learn
+learn-track: cbt-anxiety
+learn-order: 3
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - thought-record
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Thought records slow a difficult moment down into situation, emotion, automatic thought, evidence, and balanced response.
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### Thought Records - binder-p0011 {#binder-p0011}
+
+binder-p0011
+
+<!-- binder-resource: binder-p0011 -->
+
+[![Preview of Thought Records (binder-p0011)](../../assets/binder/binder-p0011.jpg){.img-fluid fig-alt="Preview of Thought Records (binder-p0011)"}](../../assets/binder/binder-p0011.jpg)
+
+[Open full page](../../assets/binder/binder-p0011.jpg)
+
+### Thought Records - binder-p0012 {#binder-p0012}
+
+binder-p0012
+
+<!-- binder-resource: binder-p0012 -->
+
+[![Preview of Thought Records (binder-p0012)](../../assets/binder/binder-p0012.jpg){.img-fluid fig-alt="Preview of Thought Records (binder-p0012)"}](../../assets/binder/binder-p0012.jpg)
+
+[Open full page](../../assets/binder/binder-p0012.jpg)
+
+### Thought Records - binder-p0013 {#binder-p0013}
+
+binder-p0013
+
+<!-- binder-resource: binder-p0013 -->
+
+[![Preview of Thought Records (binder-p0013)](../../assets/binder/binder-p0013.jpg){.img-fluid fig-alt="Preview of Thought Records (binder-p0013)"}](../../assets/binder/binder-p0013.jpg)
+
+[Open full page](../../assets/binder/binder-p0013.jpg)
+
+### Thought Records - binder-p0014 {#binder-p0014}
+
+binder-p0014
+
+<!-- binder-resource: binder-p0014 -->
+
+[![Preview of Thought Records (binder-p0014)](../../assets/binder/binder-p0014.jpg){.img-fluid fig-alt="Preview of Thought Records (binder-p0014)"}](../../assets/binder/binder-p0014.jpg)
+
+[Open full page](../../assets/binder/binder-p0014.jpg)
+
+### Thought Records - binder-p0015 {#binder-p0015}
+
+binder-p0015
+
+<!-- binder-resource: binder-p0015 -->
+
+[![Preview of Thought Records (binder-p0015)](../../assets/binder/binder-p0015.jpg){.img-fluid fig-alt="Preview of Thought Records (binder-p0015)"}](../../assets/binder/binder-p0015.jpg)
+
+[Open full page](../../assets/binder/binder-p0015.jpg)
+
+### Thought Records - binder-p0019 {#binder-p0019}
+
+binder-p0019
+
+<!-- binder-resource: binder-p0019 -->
+
+[![Preview of Thought Records (binder-p0019)](../../assets/binder/binder-p0019.jpg){.img-fluid fig-alt="Preview of Thought Records (binder-p0019)"}](../../assets/binder/binder-p0019.jpg)
+
+[Open full page](../../assets/binder/binder-p0019.jpg)

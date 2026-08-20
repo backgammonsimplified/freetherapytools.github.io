@@ -28,11 +28,11 @@ class CanonicalGlossaryJsonTests(unittest.TestCase):
         self.assertNotIn("staged", implementation)
 
     def test_only_published_entries_are_projected(self) -> None:
-        self.assertEqual(len(self.entries), 37)
-        self.assertEqual(self.report["canonical_entries"], 37)
-        self.assertEqual(self.report["published_entries"], 37)
+        self.assertEqual(len(self.entries), 38)
+        self.assertEqual(self.report["canonical_entries"], 38)
+        self.assertEqual(self.report["published_entries"], 38)
         self.assertEqual(self.report["aliases"], 29)
-        self.assertEqual(len(self.data["entries"]), 37)
+        self.assertEqual(len(self.data["entries"]), 38)
         self.assertEqual(
             {entry["slug"] for entry in self.data["entries"]},
             set(self.entries),

@@ -1299,6 +1299,23 @@
       "short_definition": "Winner's Curse is the tendency for favourable rolls that help a player win to also create more difficult decisions, making the winner's match PR look worse than usual.",
       "slug": "winners-curse",
       "term": "Winner's Curse"
+    },
+    {
+      "aliases": [],
+      "categories": [
+        "Analysis & Probability"
+      ],
+      "category": "Analysis & Probability",
+      "date_added": "2026-08-19",
+      "definition": "Wise Mind is a DBT concept for the integrated perspective that draws on both emotional experience and reasonable thinking. It supports noticing what is true, what matters, and what an effective next step may be.",
+      "definition_links": [],
+      "learning_tracks": [],
+      "redirect_slugs": [],
+      "references": [],
+      "related_terms": [],
+      "short_definition": "Wise Mind is the integrated perspective that draws on both emotion and reason.",
+      "slug": "wise-mind",
+      "term": "Wise Mind"
     }
   ],
   "schema_version": "1.0"

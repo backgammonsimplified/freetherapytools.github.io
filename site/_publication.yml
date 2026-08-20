@@ -128,17 +128,6 @@ bs-publication:
         parents:
           - label: Home
             route: /
-      /learn/cube/why-is-25-percent-the-take-point.html:
-        source: site/learn/cube/why-is-25-percent-the-take-point.qmd
-        type: learn-lesson
-        status: draft
-        parents:
-          - label: Home
-            route: /
-          - label: Learn
-            route: /learn/index.html
-        related:
-          - /learn/index.html
       /research/index.html:
         source: site/research/index.qmd
         type: research-index

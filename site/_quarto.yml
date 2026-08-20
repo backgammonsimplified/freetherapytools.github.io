@@ -48,7 +48,7 @@ website:
     logo-alt: "Backgammon Simplified"
     collapse-below: xl
     left:
-      - text: Learn
+      - text: DBT Skills
         href: learn/index.qmd
       - href: analyze/index.qmd
         text: Analyze

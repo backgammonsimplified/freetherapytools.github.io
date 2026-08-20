@@ -1,0 +1,22 @@
+---
+title: "Mindfulness of Thoughts"
+description: "Notice thoughts as mental events rather than commands or facts."
+sidebar: learn
+learn-track: mindfulness
+learn-order: 7
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - mindfulness-thoughts
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Mindfulness of thoughts creates space between having a thought and deciding how to respond.
+

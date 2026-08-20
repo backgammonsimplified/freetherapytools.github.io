@@ -1,6 +1,6 @@
 ---
-title: "The Doubling Cube"
-description: "A question-led learning path for understanding cube decisions."
+title: "Distress Tolerance"
+description: "Binder-led distress tolerance lessons and resources."
 sidebar: learn
 learn-track-index: doubling-cube
 learn-track-order: 2

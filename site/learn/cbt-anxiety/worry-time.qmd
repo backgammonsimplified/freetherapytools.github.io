@@ -1,0 +1,22 @@
+---
+title: "Worry Time"
+description: "Set a deliberate time for worry so it takes up less of the day."
+sidebar: learn
+learn-track: cbt-anxiety
+learn-order: 7
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - worry-time
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Worry time means noting worries when they arise and returning to them during a planned, limited period.
+

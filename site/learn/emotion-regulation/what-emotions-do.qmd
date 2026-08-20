@@ -1,0 +1,73 @@
+---
+title: "What Emotions Do for You"
+description: "Learn how emotions communicate, motivate action, and provide information."
+sidebar: learn
+learn-track: emotion-regulation
+learn-order: 2
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - emotion-functions
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Emotions have functions. Understanding them can reduce confusion and support more deliberate action.
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### What Emotions Do for You - binder-p0047 {#binder-p0047}
+
+binder-p0047
+
+<!-- binder-resource: binder-p0047 -->
+
+[![Preview of What Emotions Do for You (binder-p0047)](../../assets/binder/binder-p0047.jpg){.img-fluid fig-alt="Preview of What Emotions Do for You (binder-p0047)"}](../../assets/binder/binder-p0047.jpg)
+
+[Open full page](../../assets/binder/binder-p0047.jpg)
+
+### What Emotions Do for You - binder-p0048 {#binder-p0048}
+
+binder-p0048
+
+<!-- binder-resource: binder-p0048 -->
+
+[![Preview of What Emotions Do for You (binder-p0048)](../../assets/binder/binder-p0048.jpg){.img-fluid fig-alt="Preview of What Emotions Do for You (binder-p0048)"}](../../assets/binder/binder-p0048.jpg)
+
+[Open full page](../../assets/binder/binder-p0048.jpg)
+
+### What Emotions Do for You - binder-p0049 {#binder-p0049}
+
+binder-p0049
+
+<!-- binder-resource: binder-p0049 -->
+
+[![Preview of What Emotions Do for You (binder-p0049)](../../assets/binder/binder-p0049.jpg){.img-fluid fig-alt="Preview of What Emotions Do for You (binder-p0049)"}](../../assets/binder/binder-p0049.jpg)
+
+[Open full page](../../assets/binder/binder-p0049.jpg)
+
+### What Emotions Do for You - binder-p0051 {#binder-p0051}
+
+binder-p0051
+
+<!-- binder-resource: binder-p0051 -->
+
+[![Preview of What Emotions Do for You (binder-p0051)](../../assets/binder/binder-p0051.jpg){.img-fluid fig-alt="Preview of What Emotions Do for You (binder-p0051)"}](../../assets/binder/binder-p0051.jpg)
+
+[Open full page](../../assets/binder/binder-p0051.jpg)
+
+### What Emotions Do for You - binder-p0052 {#binder-p0052}
+
+binder-p0052
+
+<!-- binder-resource: binder-p0052 -->
+
+[![Preview of What Emotions Do for You (binder-p0052)](../../assets/binder/binder-p0052.jpg){.img-fluid fig-alt="Preview of What Emotions Do for You (binder-p0052)"}](../../assets/binder/binder-p0052.jpg)
+
+[Open full page](../../assets/binder/binder-p0052.jpg)

@@ -1,0 +1,24 @@
+---
+title: "Five Factor Model and Worry Tree"
+description: "Map a problem across five factors and decide whether action or acceptance fits."
+sidebar: learn
+learn-track: cbt-anxiety
+learn-order: 9
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - five-factor-model
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+## Five Factor Model {#five-factor-model}
+
+## Worry Tree {#worry-tree}
+

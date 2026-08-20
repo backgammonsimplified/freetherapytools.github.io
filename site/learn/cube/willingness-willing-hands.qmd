@@ -1,0 +1,50 @@
+---
+title: "Willingness, Willing Hands, and Half-Smiling"
+description: "Use posture and willingness practices to reduce fighting with reality."
+sidebar: learn
+learn-track: doubling-cube
+learn-order: 8
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - willingness
+body-classes: bs-learn-article
+lesson-taxonomy: false
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Willingness is doing what the situation calls for, with awareness and without adding avoidable resistance.
+
+## Willingness {#willingness}
+
+## Willing Hands {#willing-hands}
+
+## Half-Smiling {#half-smiling}
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### Half-Smiling and Willing Hands - binder-p0115 {#binder-p0115}
+
+binder-p0115
+
+<!-- binder-resource: binder-p0115 -->
+
+[![Preview of Half-Smiling and Willing Hands (binder-p0115)](../../assets/binder/binder-p0115.jpg){.img-fluid fig-alt="Preview of Half-Smiling and Willing Hands (binder-p0115)"}](../../assets/binder/binder-p0115.jpg)
+
+[Open full page](../../assets/binder/binder-p0115.jpg)
+
+### Half-Smiling and Willing Hands - binder-p0116 {#binder-p0116}
+
+binder-p0116
+
+<!-- binder-resource: binder-p0116 -->
+
+[![Preview of Half-Smiling and Willing Hands (binder-p0116)](../../assets/binder/binder-p0116.jpg){.img-fluid fig-alt="Preview of Half-Smiling and Willing Hands (binder-p0116)"}](../../assets/binder/binder-p0116.jpg)
+
+[Open full page](../../assets/binder/binder-p0116.jpg)

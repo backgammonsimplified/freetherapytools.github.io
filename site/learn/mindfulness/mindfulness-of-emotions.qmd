@@ -1,0 +1,22 @@
+---
+title: "Mindfulness of Emotions"
+description: "Observe emotions as changing experiences without immediately acting on them."
+sidebar: learn
+learn-track: mindfulness
+learn-order: 6
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - mindfulness-emotions
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Notice the emotion, body sensations, thoughts, and urges while allowing the experience to change over time.
+

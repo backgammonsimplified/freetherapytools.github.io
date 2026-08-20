@@ -1,0 +1,33 @@
+---
+title: "Maladaptive Coping Behaviours"
+description: "Notice coping strategies that help briefly but create longer-term costs."
+sidebar: learn
+learn-track: wellness
+learn-order: 5
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - coping
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+The aim is to understand the function of a coping behaviour and build safer alternatives.
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### Maladaptive Coping Behaviours - binder-p0061 {#binder-p0061}
+
+binder-p0061
+
+<!-- binder-resource: binder-p0061 -->
+
+[![Preview of Maladaptive Coping Behaviours (binder-p0061)](../../assets/binder/binder-p0061.jpg){.img-fluid fig-alt="Preview of Maladaptive Coping Behaviours (binder-p0061)"}](../../assets/binder/binder-p0061.jpg)
+
+[Open full page](../../assets/binder/binder-p0061.jpg)

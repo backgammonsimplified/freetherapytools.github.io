@@ -1,0 +1,58 @@
+---
+title: "IMPROVE the Moment"
+description: "Make a painful moment more workable when the situation cannot immediately change."
+sidebar: learn
+learn-track: doubling-cube
+learn-order: 5
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - improve
+body-classes: bs-learn-article
+lesson-taxonomy: false
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+IMPROVE collects ways to support yourself while moving through distress.
+
+## Imagery {#imagery}
+
+## Meaning {#meaning}
+
+## Prayer {#prayer}
+
+## Relaxation {#relaxation}
+
+## One Thing in the Moment {#one-thing-in-the-moment}
+
+## Vacation {#vacation}
+
+## Self-Encouragement {#self-encouragement}
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### IMPROVE the Moment - binder-p0118 {#binder-p0118}
+
+binder-p0118
+
+<!-- binder-resource: binder-p0118 -->
+
+[![Preview of IMPROVE the Moment (binder-p0118)](../../assets/binder/binder-p0118.jpg){.img-fluid fig-alt="Preview of IMPROVE the Moment (binder-p0118)"}](../../assets/binder/binder-p0118.jpg)
+
+[Open full page](../../assets/binder/binder-p0118.jpg)
+
+### IMPROVE the Moment - binder-p0119 {#binder-p0119}
+
+binder-p0119
+
+<!-- binder-resource: binder-p0119 -->
+
+[![Preview of IMPROVE the Moment (binder-p0119)](../../assets/binder/binder-p0119.jpg){.img-fluid fig-alt="Preview of IMPROVE the Moment (binder-p0119)"}](../../assets/binder/binder-p0119.jpg)
+
+[Open full page](../../assets/binder/binder-p0119.jpg)

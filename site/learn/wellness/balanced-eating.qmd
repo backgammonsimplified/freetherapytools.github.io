@@ -1,0 +1,43 @@
+---
+title: "Balanced Eating"
+description: "Use regular, flexible nourishment to support physical and emotional stability."
+sidebar: learn
+learn-track: wellness
+learn-order: 6
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - balanced-eating
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Balanced eating is body care, not perfection. Use the planning tools in a way that fits your needs and clinical guidance.
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### Weekly Meal Plan - binder-p0055 {#binder-p0055}
+
+binder-p0055
+
+<!-- binder-resource: binder-p0055 -->
+
+[![Preview of Weekly Meal Plan (binder-p0055)](../../assets/binder/binder-p0055.jpg){.img-fluid fig-alt="Preview of Weekly Meal Plan (binder-p0055)"}](../../assets/binder/binder-p0055.jpg)
+
+[Open full page](../../assets/binder/binder-p0055.jpg)
+
+### Balanced Eating - binder-p0058 {#binder-p0058}
+
+binder-p0058
+
+<!-- binder-resource: binder-p0058 -->
+
+[![Preview of Balanced Eating (binder-p0058)](../../assets/binder/binder-p0058.jpg){.img-fluid fig-alt="Preview of Balanced Eating (binder-p0058)"}](../../assets/binder/binder-p0058.jpg)
+
+[Open full page](../../assets/binder/binder-p0058.jpg)

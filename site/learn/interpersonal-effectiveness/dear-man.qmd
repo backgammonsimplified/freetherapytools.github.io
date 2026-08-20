@@ -1,0 +1,47 @@
+---
+title: "DEAR MAN"
+description: "Plan a clear, effective request or boundary."
+sidebar: learn
+learn-track: interpersonal-effectiveness
+learn-order: 3
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - dear-man
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+DEAR MAN helps organize what to say and how to stay focused.
+
+## Describe {#describe}
+
+## Express {#express}
+
+## Assert {#assert}
+
+## Reinforce {#reinforce}
+
+## Mindful {#mindful}
+
+## Appear Confident {#appear-confident}
+
+## Negotiate {#negotiate}
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### DEAR MAN / FAST Practice - binder-p0073 {#binder-p0073}
+
+binder-p0073
+
+<!-- binder-resource: binder-p0073 -->
+
+[![Preview of DEAR MAN / FAST Practice (binder-p0073)](../../assets/binder/binder-p0073.jpg){.img-fluid fig-alt="Preview of DEAR MAN / FAST Practice (binder-p0073)"}](../../assets/binder/binder-p0073.jpg)
+
+[Open full page](../../assets/binder/binder-p0073.jpg)

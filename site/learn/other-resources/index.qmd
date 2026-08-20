@@ -1,0 +1,15 @@
+---
+title: "Other Skills / Resources"
+description: "Binder-led other skills / resources lessons and resources."
+sidebar: learn
+learn-track-index: other-resources
+learn-track-order: 8
+page-layout: full
+body-classes: "bs-learn-article bs-learn-track-index"
+toc: false
+term-lookup: false
+lesson-taxonomy: false
+---
+
+{{< include _lesson-index.html >}}
+

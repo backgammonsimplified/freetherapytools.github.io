@@ -1,0 +1,53 @@
+---
+title: "Creative Practice"
+description: "Use creativity as a possible route to relaxation, flexibility, and connection."
+sidebar: learn
+learn-track: other-resources
+learn-order: 2
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - creativity
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Creative practice can provide a gentle way to focus attention and make room for enjoyment.
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### Creative Practice - binder-p0023 {#binder-p0023}
+
+binder-p0023
+
+<!-- binder-resource: binder-p0023 -->
+
+[![Preview of Creative Practice (binder-p0023)](../../assets/binder/binder-p0023.jpg){.img-fluid fig-alt="Preview of Creative Practice (binder-p0023)"}](../../assets/binder/binder-p0023.jpg)
+
+[Open full page](../../assets/binder/binder-p0023.jpg)
+
+### Creative Practice - binder-p0024 {#binder-p0024}
+
+binder-p0024
+
+<!-- binder-resource: binder-p0024 -->
+
+[![Preview of Creative Practice (binder-p0024)](../../assets/binder/binder-p0024.jpg){.img-fluid fig-alt="Preview of Creative Practice (binder-p0024)"}](../../assets/binder/binder-p0024.jpg)
+
+[Open full page](../../assets/binder/binder-p0024.jpg)
+
+### Creative Practice - binder-p0025 {#binder-p0025}
+
+binder-p0025
+
+<!-- binder-resource: binder-p0025 -->
+
+[![Preview of Creative Practice (binder-p0025)](../../assets/binder/binder-p0025.jpg){.img-fluid fig-alt="Preview of Creative Practice (binder-p0025)"}](../../assets/binder/binder-p0025.jpg)
+
+[Open full page](../../assets/binder/binder-p0025.jpg)

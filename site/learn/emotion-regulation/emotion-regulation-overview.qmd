@@ -1,0 +1,43 @@
+---
+title: "Objectives and Overview"
+description: "Understand the main goals and sequence of emotion regulation skills."
+sidebar: learn
+learn-track: emotion-regulation
+learn-order: 1
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - emotion-regulation
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Emotion regulation begins with understanding emotions, checking facts, and reducing vulnerability before choosing a response.
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### Emotion Regulation Objectives and Overview - binder-p0050 {#binder-p0050}
+
+binder-p0050
+
+<!-- binder-resource: binder-p0050 -->
+
+[![Preview of Emotion Regulation Objectives and Overview (binder-p0050)](../../assets/binder/binder-p0050.jpg){.img-fluid fig-alt="Preview of Emotion Regulation Objectives and Overview (binder-p0050)"}](../../assets/binder/binder-p0050.jpg)
+
+[Open full page](../../assets/binder/binder-p0050.jpg)
+
+### Emotion Regulation Goals - binder-p0053 {#binder-p0053}
+
+binder-p0053
+
+<!-- binder-resource: binder-p0053 -->
+
+[![Preview of Emotion Regulation Goals (binder-p0053)](../../assets/binder/binder-p0053.jpg){.img-fluid fig-alt="Preview of Emotion Regulation Goals (binder-p0053)"}](../../assets/binder/binder-p0053.jpg)
+
+[Open full page](../../assets/binder/binder-p0053.jpg)

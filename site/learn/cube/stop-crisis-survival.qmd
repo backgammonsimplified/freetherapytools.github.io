@@ -1,0 +1,60 @@
+---
+title: "STOP and Crisis Survival"
+description: "Pause, step back, observe, and proceed mindfully during a crisis."
+sidebar: learn
+learn-track: doubling-cube
+learn-order: 1
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - stop
+body-classes: bs-learn-article
+lesson-taxonomy: false
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Distress tolerance skills help you survive intense moments without making the situation worse.
+
+## STOP {#stop}
+
+Stop. Take a step back. Observe what is happening inside and around you. Proceed mindfully.
+
+## When to Use Crisis Survival Skills {#crisis-survival}
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### STOP and Crisis Survival - binder-p0129 {#binder-p0129}
+
+binder-p0129
+
+<!-- binder-resource: binder-p0129 -->
+
+[![Preview of STOP and Crisis Survival (binder-p0129)](../../assets/binder/binder-p0129.jpg){.img-fluid fig-alt="Preview of STOP and Crisis Survival (binder-p0129)"}](../../assets/binder/binder-p0129.jpg)
+
+[Open full page](../../assets/binder/binder-p0129.jpg)
+
+### STOP and Crisis Survival - binder-p0130 {#binder-p0130}
+
+binder-p0130
+
+<!-- binder-resource: binder-p0130 -->
+
+[![Preview of STOP and Crisis Survival (binder-p0130)](../../assets/binder/binder-p0130.jpg){.img-fluid fig-alt="Preview of STOP and Crisis Survival (binder-p0130)"}](../../assets/binder/binder-p0130.jpg)
+
+[Open full page](../../assets/binder/binder-p0130.jpg)
+
+### STOP and Crisis Survival - binder-p0131 {#binder-p0131}
+
+binder-p0131
+
+<!-- binder-resource: binder-p0131 -->
+
+[![Preview of STOP and Crisis Survival (binder-p0131)](../../assets/binder/binder-p0131.jpg){.img-fluid fig-alt="Preview of STOP and Crisis Survival (binder-p0131)"}](../../assets/binder/binder-p0131.jpg)
+
+[Open full page](../../assets/binder/binder-p0131.jpg)

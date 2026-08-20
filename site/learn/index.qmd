@@ -1,6 +1,6 @@
 ---
-title: "Learn"
-description: "Clear, position-based lessons for understanding backgammon decisions, from beginner foundations to advanced play."
+title: "DBT Skills"
+description: "A binder-led catalogue of DBT, mindfulness, wellness, CBT, and anxiety-management skills."
 sidebar: learn
 page-layout: full
 bibliography: ../references.bib

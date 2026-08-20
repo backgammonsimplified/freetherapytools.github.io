@@ -33,19 +33,8 @@ cards:
   width: 1200
   height: 630
   output: site/assets/social/generated/social-glossary.png
-  title: Backgammon Glossary
-  subtitle: A searchable backgammon dictionary of terms and glossary for concepts
-    used throughout Backgammon Simplified.
-  category: Learn
-  visual: ''
-- slug: why-is-25-percent-the-take-point
-  kind: article
-  width: 1200
-  height: 630
-  output: site/assets/social/generated/social-why-is-25-percent-the-take-point.png
-  title: Why Is 25% the Basic Take Point When a Double Is Offered?
-  subtitle: |
-    Why a 25% winning chance can still justify taking a double, and where the basic model stops.
+  title: Therapy Skills Glossary
+  subtitle: A searchable glossary for concepts used throughout Therapy Skill Kit.
   category: Learn
   visual: ''
 - slug: sage-vs-gnu-additional-details

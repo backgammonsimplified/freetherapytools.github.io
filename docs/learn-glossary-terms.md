@@ -43,3 +43,4 @@ Use only these canonical slugs in Learn and Research `terms` metadata. Every ter
 | Simple Delay | `simple-delay` | `/glossary/#simple-delay` |
 | UBC | `ubc` | `/glossary/#ubc` |
 | Winner's Curse | `winners-curse` | `/glossary/#winners-curse` |
+| Wise Mind | `wise-mind` | `/glossary/#wise-mind` |

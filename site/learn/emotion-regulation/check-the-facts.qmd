@@ -1,0 +1,43 @@
+---
+title: "Check the Facts"
+description: "Compare interpretations and emotional intensity with what is observable."
+sidebar: learn
+learn-track: emotion-regulation
+learn-order: 4
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - check-the-facts
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Check the Facts asks whether an emotion, its intensity, and its duration fit the available evidence.
+
+## Handouts and Worksheets {#handouts-and-worksheets}
+
+### Check the Facts - binder-p0039 {#binder-p0039}
+
+binder-p0039
+
+<!-- binder-resource: binder-p0039 -->
+
+[![Preview of Check the Facts (binder-p0039)](../../assets/binder/binder-p0039.jpg){.img-fluid fig-alt="Preview of Check the Facts (binder-p0039)"}](../../assets/binder/binder-p0039.jpg)
+
+[Open full page](../../assets/binder/binder-p0039.jpg)
+
+### Check the Facts - binder-p0040 {#binder-p0040}
+
+binder-p0040
+
+<!-- binder-resource: binder-p0040 -->
+
+[![Preview of Check the Facts (binder-p0040)](../../assets/binder/binder-p0040.jpg){.img-fluid fig-alt="Preview of Check the Facts (binder-p0040)"}](../../assets/binder/binder-p0040.jpg)
+
+[Open full page](../../assets/binder/binder-p0040.jpg)
