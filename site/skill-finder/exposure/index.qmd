@@ -1,0 +1,13 @@
+---
+title: "Exposure Ladder"
+description: "Plan graded practice steps for objectively safe situations while noticing safety behaviours."
+sidebar: false
+page-layout: full
+toc: false
+---
+
+Only add steps that are objectively safe and appropriate. This planner is not guidance to approach danger, ignore health needs, or violate consent or legal boundaries.
+
+::: {#exposure-app .skill-app data-practice-app="exposure"}
+Loading Exposure Ladder…
+:::

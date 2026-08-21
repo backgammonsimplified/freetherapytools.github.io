@@ -1,0 +1,13 @@
+---
+title: "Missing Links"
+description: "Explore what got in the way when an intended effective behaviour did not happen."
+sidebar: false
+page-layout: full
+toc: false
+---
+
+Missing Links is for an effective behaviour you intended but did not do. To understand an ineffective behaviour that did occur, use the [Behaviour Chain Builder](/skill-finder/behaviour-chain/).
+
+::: {#missing-links-app .skill-app data-practice-app="missing-links"}
+Loading Missing Links…
+:::

@@ -1,0 +1,13 @@
+---
+title: "SMART Goal Builder"
+description: "Build a specific, measurable, achievable, relevant or realistic, time-oriented goal."
+sidebar: false
+page-layout: full
+toc: false
+---
+
+Use the terminology that best fits your current Goal Setting material: relevant and realistic both invite a Wise Mind check about meaning and feasibility.
+
+::: {#goal-builder-app .skill-app data-practice-app="goal-builder"}
+Loading SMART Goal Builder…
+:::

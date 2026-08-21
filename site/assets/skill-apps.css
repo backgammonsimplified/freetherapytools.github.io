@@ -101,6 +101,7 @@
 .skill-app input[type="text"],
 .skill-app input[type="search"],
 .skill-app input[type="date"],
+.skill-app input[type="datetime-local"],
 .skill-app input[type="number"],
 .skill-app textarea,
 .skill-app select {
@@ -342,6 +343,41 @@
 
 .pleasant-event-list button { height: auto; text-align: left; }
 .skill-app-plan { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #d8cec2; }
+
+.skill-app-chain-view {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0;
+  list-style: none;
+  counter-reset: chain;
+}
+
+.skill-app-chain-view li {
+  position: relative;
+  flex: 1 1 12rem;
+  min-width: 0;
+  padding: 0.8rem;
+  border: 1px solid #d8cec2;
+  border-radius: 0.55rem;
+  counter-increment: chain;
+}
+
+.skill-app-chain-view li::before {
+  content: counter(chain) ".";
+  margin-right: 0.4rem;
+  font-weight: 700;
+}
+
+.skill-app-chain-view li:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -1.2rem;
+  top: 50%;
+  font-weight: 700;
+}
+
+.skill-app-chain-view span { display: block; margin-top: 0.35rem; overflow-wrap: anywhere; }
 
 @media (max-width: 520px) {
   .skill-app-progress {

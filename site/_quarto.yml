@@ -14,6 +14,7 @@ project:
     - assets/bs-glossary.js
     - assets/skill-apps.js
     - assets/skill-finder-apps.js
+    - assets/skill-practice-apps.js
     - "data/skill-apps/**"
     - assets/bs-glossary-lookup.json
     - assets/bs-learn-scroll.js

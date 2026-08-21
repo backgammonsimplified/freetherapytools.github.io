@@ -1,0 +1,13 @@
+---
+title: "DEAR MAN Builder"
+description: "Organize your own request or boundary into DEAR MAN, with optional GIVE and FAST prompts."
+sidebar: false
+page-layout: full
+toc: false
+---
+
+This tool organizes only the words you enter. Aim for clarity and respect; it does not generate pressure tactics or manipulative wording.
+
+::: {#dear-man-app .skill-app data-practice-app="dear-man"}
+Loading DEAR MAN Builder…
+:::

@@ -66,6 +66,62 @@ Separate an actionable problem from a hypothetical worry and make a grounded pla
 :::
 :::
 
+### Actions & Patterns
+
+::: {.skill-app-hub-grid}
+::: {.skill-app-hub-card}
+#### Behaviour Chain Builder
+
+Map vulnerabilities, the prompting event, chain links, consequences, and possible solutions.
+
+[Open Behaviour Chain Builder](/skill-finder/behaviour-chain/)
+:::
+
+::: {.skill-app-hub-card}
+#### Missing Links
+
+Explore why an intended effective behaviour did not happen.
+
+[Open Missing Links](/skill-finder/missing-links/)
+:::
+
+::: {.skill-app-hub-card}
+#### Exposure Ladder
+
+Arrange objectively safe practice steps from easier to harder.
+
+[Open Exposure Ladder](/skill-finder/exposure/)
+:::
+
+::: {.skill-app-hub-card}
+#### Behavioural Activation
+
+Make one small action more specific and easier to start.
+
+[Open Behavioural Activation](/skill-finder/behavioural-activation/)
+:::
+:::
+
+### Relationships
+
+::: {.skill-app-hub-grid}
+::: {.skill-app-hub-card}
+#### DEAR MAN Builder
+
+Organize your own words into DEAR MAN, with optional GIVE and FAST prompts.
+
+[Open DEAR MAN Builder](/skill-finder/dear-man/)
+:::
+
+::: {.skill-app-hub-card}
+#### Ask or Say No Planner
+
+Think through priorities, intensity, and troubleshooting without an automatic score.
+
+[Open Ask or Say No Planner](/skill-finder/ask-or-say-no/)
+:::
+:::
+
 ### Goals & Values
 
 ::: {.skill-app-hub-grid}
@@ -75,6 +131,14 @@ Separate an actionable problem from a hypothetical worry and make a grounded pla
 Discover, sort, narrow, assess, and act on values using the workbook process.
 
 [Open Values & Valued Action](/skill-finder/values/)
+:::
+
+::: {.skill-app-hub-card}
+#### SMART Goal Builder
+
+Turn a direction into a specific, measurable, achievable, relevant/realistic, time-oriented next step.
+
+[Open SMART Goal Builder](/skill-finder/goal-builder/)
 :::
 :::
 

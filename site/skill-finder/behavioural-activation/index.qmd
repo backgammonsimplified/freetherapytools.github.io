@@ -1,0 +1,13 @@
+---
+title: "Behavioural Activation Planner"
+description: "Choose and schedule one small action connected with pleasure, mastery, self-care, or values."
+sidebar: false
+page-layout: full
+toc: false
+---
+
+Start smaller than you think you need to. The purpose is to support movement, not to demand a particular mood.
+
+::: {#behavioural-activation-app .skill-app data-practice-app="behavioural-activation"}
+Loading Behavioural Activation Planner…
+:::
