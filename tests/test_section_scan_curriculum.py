@@ -74,7 +74,11 @@ class SectionScanCurriculumTests(unittest.TestCase):
             / f"{row['id']}.jpg"
             for row in published
         }
-        actual_assets = set((SITE / "resources").rglob("*.jpg"))
+        actual_assets = {
+            path
+            for path in (SITE / "resources").rglob("*.jpg")
+            if "clean" not in path.relative_to(SITE / "resources").parts
+        }
         self.assertEqual(actual_assets, expected_assets)
 
         landscape_derivatives = {

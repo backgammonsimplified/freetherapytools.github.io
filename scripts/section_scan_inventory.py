@@ -16,6 +16,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
 INVENTORY = ROOT / "data" / "source-inventory.csv"
+BOOK_MATCHES = ROOT / "data" / "book-matches.csv"
 
 
 @dataclass(frozen=True)
@@ -550,23 +551,43 @@ def strip_old_resource_blocks() -> None:
             qmd.write_text(pattern.sub("\n", source).rstrip() + "\n", encoding="utf-8", newline="\n")
 
 
-def resource_markdown(record: dict[str, object], qmd: Path) -> str:
+def load_book_matches() -> dict[str, dict[str, str]]:
+    if not BOOK_MATCHES.is_file():
+        return {}
+    with BOOK_MATCHES.open(encoding="utf-8-sig") as handle:
+        return {row["source_id"]: row for row in csv.DictReader(handle)}
+
+
+def resource_markdown(
+    record: dict[str, object], qmd: Path, book_matches: dict[str, dict[str, str]]
+) -> str:
     identifier = str(record["id"])
     slug = identifier.rsplit("-p", 1)[0]
     asset = SITE / "resources" / slug / f"{identifier}.jpg"
     relative = Path("/") / asset.relative_to(SITE)
     href = relative.as_posix()
     title = str(record["resource_title"])
-    return (
+    block = (
         "::: {.bs-practice-resource}\n"
         f"**{title}**\n\n"
         f"[![{title}]({href}){{.img-fluid fig-alt=\"{title}\"}}]({href})\n\n"
         f"[Download / View Handout]({href})\n"
-        ":::"
     )
+    match = book_matches.get(identifier)
+    if match and match.get("confidence") == "high" and match.get("clean_asset"):
+        clean_pdf = match["clean_asset"]
+        clean_preview = clean_pdf.removesuffix(".pdf") + ".jpg"
+        block += (
+            "\n**Clean Printable Copy**\n\n"
+            f"[![Clean Printable Copy: {title}]({clean_preview})"
+            f"{{.img-fluid fig-alt=\"Clean Printable Copy: {title}\"}}]({clean_pdf})\n\n"
+            f"[Open Clean Printable Copy]({clean_pdf})\n"
+        )
+    return block + ":::"
 
 
 def attach_resources(records: list[dict[str, object]]) -> None:
+    book_matches = load_book_matches()
     by_lesson: dict[str, list[dict[str, object]]] = {key: [] for key in LESSON_FILES}
     for record in records:
         if record["publish"] == "true":
@@ -590,7 +611,7 @@ def attach_resources(records: list[dict[str, object]]) -> None:
             heading = heading_for_kind[kind]
             anchor = heading.lower().replace(" & ", "-").replace(" ", "-")
             blocks.append(f"## {heading} {{#{anchor}}}")
-            blocks.extend(resource_markdown(record, qmd) for record in matching)
+            blocks.extend(resource_markdown(record, qmd, book_matches) for record in matching)
         blocks.append("<!-- section-scan-resources:end -->")
         qmd.write_text(source + "\n\n" + "\n\n".join(blocks) + "\n", encoding="utf-8", newline="\n")
 
@@ -599,6 +620,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--rendered-root", type=Path)
     parser.add_argument("--attach", action="store_true", help="Copy rendered pages and update lesson resource blocks.")
+    parser.add_argument("--refresh-resource-blocks", action="store_true", help="Update lesson resource blocks without recopying section-scan assets.")
     args = parser.parse_args()
     records = build_records()
     write_inventory(records)
@@ -607,6 +629,8 @@ def main() -> int:
             parser.error("--attach requires --rendered-root")
         strip_old_resource_blocks()
         copy_assets(records, args.rendered_root.resolve())
+        attach_resources(records)
+    elif args.refresh_resource_blocks:
         attach_resources(records)
     published = sum(record["publish"] == "true" for record in records)
     structural = sum(record["page_type"] in {"section-cover", "session-divider"} for record in records)

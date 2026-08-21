@@ -34,6 +34,12 @@ A behaviour chain traces prompting events, vulnerabilities, links, consequences,
 [![Analyzing Behaviour](/resources/wellness/wellness-p023.jpg){.img-fluid fig-alt="Analyzing Behaviour"}](/resources/wellness/wellness-p023.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p023.jpg)
+
+**Clean Printable Copy**
+
+[![Clean Printable Copy: Analyzing Behaviour](/resources/clean/general/general-handout-6-overview-analyzing-behavior-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Analyzing Behaviour"}](/resources/clean/general/general-handout-6-overview-analyzing-behavior-clean.pdf)
+
+[Open Clean Printable Copy](/resources/clean/general/general-handout-6-overview-analyzing-behavior-clean.pdf)
 :::
 
 ## Practice Materials {#practice-materials}
@@ -76,6 +82,12 @@ A behaviour chain traces prompting events, vulnerabilities, links, consequences,
 [![Missing-Links Analysis](/resources/wellness/wellness-p032.jpg){.img-fluid fig-alt="Missing-Links Analysis"}](/resources/wellness/wellness-p032.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p032.jpg)
+
+**Clean Printable Copy**
+
+[![Clean Printable Copy: Missing-Links Analysis](/resources/clean/general/general-worksheet-3-missing-links-analysis-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Missing-Links Analysis"}](/resources/clean/general/general-worksheet-3-missing-links-analysis-clean.pdf)
+
+[Open Clean Printable Copy](/resources/clean/general/general-worksheet-3-missing-links-analysis-clean.pdf)
 :::
 
 ## Reference Materials {#reference-materials}
