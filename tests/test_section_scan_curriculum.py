@@ -115,6 +115,7 @@ class SectionScanCurriculumTests(unittest.TestCase):
                 "goal-setting": [
                     "Goal Setting Guidelines",
                     "Skills & Strengths List",
+                    "Values & Valued Action",
                     "Weekly Goal Worksheets",
                     "Weekly Home Practice Trackers",
                 ],

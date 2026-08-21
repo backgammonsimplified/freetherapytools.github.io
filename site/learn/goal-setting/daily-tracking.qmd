@@ -3,7 +3,7 @@ title: "Weekly Home Practice Trackers"
 description: "Track practice, mood, routines, and patterns across the week."
 sidebar: learn
 learn-track: goal-setting
-learn-order: 4
+learn-order: 5
 categories:
   - Beginner
 tags:

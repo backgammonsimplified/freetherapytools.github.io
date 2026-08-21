@@ -1,0 +1,98 @@
+---
+title: "Values & Valued Action"
+description: "Clarify what matters and translate valued directions into small, repeatable actions."
+sidebar: learn
+learn-track: goal-setting
+learn-order: 3
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - values
+  - goals
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+Values are ongoing directions for how you want to live and behave. Goals are concrete outcomes or milestones that can move you in those directions. You can complete a goal; a value continues to guide what comes next.
+
+[Open the interactive Values & Valued Action tool](/skill-finder/values/){.btn .btn-primary}
+
+## Values vs. Goals {#values-vs-goals}
+
+Think of a value as a direction on a compass. Connection can be an ongoing direction; inviting a friend to dinner this week is a goal you can complete while moving in that direction. After reaching one goal, you can choose another destination that follows the same value.
+
+Some words, such as wealth, status, popularity, success, or winning, are closer to outcomes or priorities. A useful follow-up is: *If this matters to me, how do I want to behave while pursuing it?*
+
+## Values Clarification Questions {#clarification-questions}
+
+- What people, areas of life, or purposes matter most to me?
+- What qualities do I most want to bring to relationships, work, and daily life?
+- What do I want to stand for or contribute?
+- When time, energy, and money are limited, what deserves a meaningful share?
+
+## Master Values Dictionary {#master-values-dictionary}
+
+The workbook's Master Values Dictionary offers working definitions to help you discover language that resonates. These definitions are prompts, not tests. You can change the wording or add a value when the list does not fit.
+
+The interactive tool includes all 257 workbook definitions with search, selection, and custom-value support.
+
+## Sorting Values Into Life Domains {#life-domains}
+
+Values can matter in more than one area. Sort selected values into any domains where they help describe how you want to participate:
+
+1. Close Relationships, Family & Caregiving
+2. Friendship & Social Connection
+3. Work, Education & Contribution
+4. Health, Self-Care & Vitality
+5. Personal Growth, Character & Autonomy
+6. Leisure, Creativity & Adventure
+7. Community, Service & Environment
+8. Spirituality, Meaning & Inner Life
+9. Home, Resources, Security & Lifestyle
+
+## Grouping Values Into Core Families {#core-value-families}
+
+Look for related selections that point in a similar direction. For example, warmth, care, and compassion might belong to one family for you. Choose the representative word that best captures your meaning. Around five to ten core values is a useful aim, not a rule.
+
+## Assessing Alignment {#assessing-alignment}
+
+For each value and life domain, consider:
+
+- **Importance (1-10):** How much does this direction matter?
+- **Current alignment (1-10):** How consistently have recent actions followed it?
+- **Desired alignment (1-10):** What is a realistic target for the next one to three months?
+- **Gap:** Desired alignment minus current alignment.
+
+A larger gap is information, not an instruction. Importance, readiness, responsibilities, safety, and available energy all matter when choosing where to work.
+
+## Focus Areas and Value-Aligned Goals {#focus-and-action}
+
+Choose up to three focus areas. For each one, describe why it matters, a longer-term direction, short-term actions, what a ten-percent improvement might look like, the smallest useful next step, when and where you will take it, and who or what could support you.
+
+## Willingness, Barriers, and Effective Response {#barriers-and-willingness}
+
+A value-aligned goal can still bring fear, shame, boredom, uncertainty, frustration, grief, fatigue, or an urge to avoid. Ask what is getting in the way:
+
+- Use [Problem Solving](/learn/emotion-regulation/opposite-action.html#problem-solving) for practical barriers.
+- Consider [Opposite Action](/learn/emotion-regulation/opposite-action.html#opposite-action) when an emotion-driven urge pulls away from what matters and acting opposite is safe and effective.
+- Use [Radical Acceptance and Willingness](/learn/cube/radical-acceptance.html#willingness) when fighting reality is adding suffering.
+- Make the step more specific with [SMART Goals](/learn/goal-setting/goal-setting-guidelines.html#smart-goals).
+- Use [Behavioural Activation](/learn/wellness/behavioral-activation.html) when a small scheduled action can help restore movement.
+
+## Personal Mission Statement {#mission-statement}
+
+Use your own selections and language:
+
+> I want to live as someone who **[core qualities]**, by **[repeatable actions]**, in service of **[people, purpose, or contribution]**.
+
+The statement is a working snapshot. Revise it as your understanding changes.
+
+## Weekly Values Review {#weekly-review}
+
+Review where actions aligned, where they drifted, which value received too little attention, what discomfort you made room for, what to continue, what to change, and the smallest value-aligned action for the coming week. Choose the next review date before finishing.

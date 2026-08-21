@@ -12,6 +12,7 @@ project:
     - "assets/icons/**"
     - "assets/social/generated/*.png"
     - assets/bs-glossary.js
+    - assets/skill-apps.js
     - assets/bs-glossary-lookup.json
     - assets/bs-learn-scroll.js
     - assets/bs-learn-sequence.json
@@ -80,6 +81,7 @@ format:
       - assets/bs-components.css
       - assets/bs-learn.css
       - assets/bs-lesson-analysis.css
+      - assets/skill-apps.css
     include-after-body:
       - includes/bs-scripts.html
     include-in-header:

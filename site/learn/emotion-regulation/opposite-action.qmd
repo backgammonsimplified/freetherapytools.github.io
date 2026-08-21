@@ -18,6 +18,8 @@ execute:
   enabled: false
 ---
 
+## Opposite Action {#opposite-action}
+
 Opposite Action works best when the emotion does not fit the facts or acting on it would be ineffective.
 
 ## Problem Solving {#problem-solving}

@@ -15,9 +15,11 @@ website:
               href: learn/goal-setting/goal-setting-guidelines.qmd
             - text: "2. Skills & Strengths List"
               href: learn/goal-setting/strengths.qmd
-            - text: "3. Weekly Goal Worksheets"
+            - text: "3. Values & Valued Action"
+              href: learn/goal-setting/values-valued-action.qmd
+            - text: "4. Weekly Goal Worksheets"
               href: learn/goal-setting/weekly-goals-home-practice.qmd
-            - text: "4. Weekly Home Practice Trackers"
+            - text: "5. Weekly Home Practice Trackers"
               href: learn/goal-setting/daily-tracking.qmd
         - section: "Distress Tolerance"
           href: learn/cube/index.qmd

@@ -1,6 +1,6 @@
 ---
 title: "Goal Setting & Tracking"
-description: "Set meaningful goals, recognize strengths, and use weekly practice tools."
+description: "Set meaningful goals, clarify values, recognize strengths, and use weekly practice tools."
 sidebar: learn
 learn-track-index: goal-setting
 learn-track-order: 1
