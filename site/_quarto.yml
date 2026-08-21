@@ -13,6 +13,8 @@ project:
     - "assets/social/generated/*.png"
     - assets/bs-glossary.js
     - assets/skill-apps.js
+    - assets/skill-finder-apps.js
+    - "data/skill-apps/**"
     - assets/bs-glossary-lookup.json
     - assets/bs-learn-scroll.js
     - assets/bs-learn-sequence.json

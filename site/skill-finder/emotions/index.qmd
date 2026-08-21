@@ -1,0 +1,17 @@
+---
+title: "Emotion Explorer"
+description: "Explore emotion words, body sensations, action urges, and aftereffects without assigning a diagnosis."
+sidebar: false
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+Emotions can carry information, but no list can decide what you feel. Use the wheel or the accessible list to explore what fits your own experience.
+
+::: {#emotion-explorer-app .skill-app data-skill-app="emotions"}
+Loading Emotion Explorer…
+:::
+
+[Back to all Skill Finder tools](/skill-finder/)

@@ -1,0 +1,17 @@
+---
+title: "Worry Tree"
+description: "Sort a worry into an actionable plan or a present-focused response."
+sidebar: false
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+This is a reflection and planning tool. It cannot promise to remove worry, but it can help clarify whether there is an action to take.
+
+::: {#worry-tree-app .skill-app data-skill-app="worry-tree"}
+Loading Worry Tree…
+:::
+
+[Back to all Skill Finder tools](/skill-finder/)

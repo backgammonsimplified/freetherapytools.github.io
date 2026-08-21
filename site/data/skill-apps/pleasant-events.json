@@ -1,0 +1,1222 @@
+{
+  "source": "Emotion Regulation Handout 16",
+  "events": [
+    {
+      "id": 1,
+      "title": "Working on my car",
+      "tags": []
+    },
+    {
+      "id": 2,
+      "title": "Planning a career",
+      "tags": []
+    },
+    {
+      "id": 3,
+      "title": "Getting out of (paying down) debt",
+      "tags": []
+    },
+    {
+      "id": 4,
+      "title": "Collecting things (baseball cards, coins, stamps, rocks, shells, etc.)",
+      "tags": []
+    },
+    {
+      "id": 5,
+      "title": "Going on vacation",
+      "tags": []
+    },
+    {
+      "id": 6,
+      "title": "Thinking how it will be when I finish school",
+      "tags": []
+    },
+    {
+      "id": 7,
+      "title": "Recycling old items",
+      "tags": []
+    },
+    {
+      "id": 8,
+      "title": "Going on a date",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Relaxing",
+      "tags": []
+    },
+    {
+      "id": 10,
+      "title": "Going to or watching a movie",
+      "tags": []
+    },
+    {
+      "id": 11,
+      "title": "Jogging, walking",
+      "tags": [
+        "outdoors"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Thinking, “I have done a full day’s work”",
+      "tags": []
+    },
+    {
+      "id": 13,
+      "title": "Listening to music",
+      "tags": []
+    },
+    {
+      "id": 14,
+      "title": "Thinking about past parties",
+      "tags": []
+    },
+    {
+      "id": 15,
+      "title": "Buying household gadgets",
+      "tags": []
+    },
+    {
+      "id": 16,
+      "title": "Lying in the sun",
+      "tags": []
+    },
+    {
+      "id": 17,
+      "title": "Planning a career change",
+      "tags": []
+    },
+    {
+      "id": 18,
+      "title": "Laughing",
+      "tags": []
+    },
+    {
+      "id": 19,
+      "title": "Thinking about past trips",
+      "tags": []
+    },
+    {
+      "id": 20,
+      "title": "Listening to other people",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 21,
+      "title": "Reading magazines or newspapers",
+      "tags": [
+        "low energy"
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Engaging in hobbies (stamp collecting, model building, etc.)",
+      "tags": []
+    },
+    {
+      "id": 23,
+      "title": "Spending an evening with good friends",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Planning a day’s activities",
+      "tags": []
+    },
+    {
+      "id": 25,
+      "title": "Meeting new people",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 26,
+      "title": "Remembering beautiful scenery",
+      "tags": []
+    },
+    {
+      "id": 27,
+      "title": "Saving money",
+      "tags": []
+    },
+    {
+      "id": 28,
+      "title": "Going home from work",
+      "tags": []
+    },
+    {
+      "id": 29,
+      "title": "Eating",
+      "tags": []
+    },
+    {
+      "id": 30,
+      "title": "Practicing karate, judo, yoga",
+      "tags": []
+    },
+    {
+      "id": 31,
+      "title": "Thinking about retirement",
+      "tags": []
+    },
+    {
+      "id": 32,
+      "title": "Repairing things around the house",
+      "tags": []
+    },
+    {
+      "id": 33,
+      "title": "Working on machinery (cars, boats, etc.)",
+      "tags": []
+    },
+    {
+      "id": 34,
+      "title": "Remembering the words and deeds of loving people",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 35,
+      "title": "Wearing shocking clothes",
+      "tags": []
+    },
+    {
+      "id": 36,
+      "title": "Having quiet evenings",
+      "tags": [
+        "low energy"
+      ]
+    },
+    {
+      "id": 37,
+      "title": "Taking care of my plants",
+      "tags": []
+    },
+    {
+      "id": 38,
+      "title": "Buying, selling stock",
+      "tags": []
+    },
+    {
+      "id": 39,
+      "title": "Going swimming",
+      "tags": []
+    },
+    {
+      "id": 40,
+      "title": "Doodling",
+      "tags": [
+        "low energy"
+      ]
+    },
+    {
+      "id": 41,
+      "title": "Exercising",
+      "tags": []
+    },
+    {
+      "id": 42,
+      "title": "Collecting old things",
+      "tags": []
+    },
+    {
+      "id": 43,
+      "title": "Going to a party",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 44,
+      "title": "Thinking about buying things",
+      "tags": []
+    },
+    {
+      "id": 45,
+      "title": "Playing golf",
+      "tags": []
+    },
+    {
+      "id": 46,
+      "title": "Playing soccer",
+      "tags": []
+    },
+    {
+      "id": 47,
+      "title": "Flying kites",
+      "tags": []
+    },
+    {
+      "id": 48,
+      "title": "Having discussions with friends",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 49,
+      "title": "Having family get- togethers",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 50,
+      "title": "Riding a bike or motorbike",
+      "tags": []
+    },
+    {
+      "id": 51,
+      "title": "Running track",
+      "tags": []
+    },
+    {
+      "id": 52,
+      "title": "Going camping",
+      "tags": [
+        "outdoors"
+      ]
+    },
+    {
+      "id": 53,
+      "title": "Singing around the house",
+      "tags": []
+    },
+    {
+      "id": 54,
+      "title": "Arranging flowers",
+      "tags": []
+    },
+    {
+      "id": 55,
+      "title": "Practicing religion (going to church, group praying, etc.)",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 56,
+      "title": "Organizing tools",
+      "tags": []
+    },
+    {
+      "id": 57,
+      "title": "Going to the beach",
+      "tags": [
+        "outdoors"
+      ]
+    },
+    {
+      "id": 58,
+      "title": "Thinking, “I’m an OK person”",
+      "tags": []
+    },
+    {
+      "id": 59,
+      "title": "Having a day with nothing to do",
+      "tags": []
+    },
+    {
+      "id": 60,
+      "title": "Going to class reunions",
+      "tags": []
+    },
+    {
+      "id": 61,
+      "title": "Going skating, skateboarding, rollerblading",
+      "tags": []
+    },
+    {
+      "id": 62,
+      "title": "Going sailing or motorboating",
+      "tags": []
+    },
+    {
+      "id": 63,
+      "title": "Traveling or going on vacations",
+      "tags": []
+    },
+    {
+      "id": 64,
+      "title": "Painting",
+      "tags": []
+    },
+    {
+      "id": 65,
+      "title": "Doing something spontaneously",
+      "tags": []
+    },
+    {
+      "id": 66,
+      "title": "Doing needlepoint, crewel, etc.",
+      "tags": []
+    },
+    {
+      "id": 67,
+      "title": "Sleeping",
+      "tags": []
+    },
+    {
+      "id": 68,
+      "title": "Driving",
+      "tags": []
+    },
+    {
+      "id": 69,
+      "title": "Entertaining, giving parties",
+      "tags": []
+    },
+    {
+      "id": 70,
+      "title": "Going to clubs (garden clubs, Parents without Partners, etc.)",
+      "tags": [
+        "outdoors"
+      ]
+    },
+    {
+      "id": 71,
+      "title": "Thinking about getting married",
+      "tags": []
+    },
+    {
+      "id": 72,
+      "title": "Going hunting",
+      "tags": []
+    },
+    {
+      "id": 73,
+      "title": "Singing with groups",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 74,
+      "title": "Flirting",
+      "tags": []
+    },
+    {
+      "id": 75,
+      "title": "Playing musical instruments",
+      "tags": []
+    },
+    {
+      "id": 76,
+      "title": "Doing arts and crafts",
+      "tags": []
+    },
+    {
+      "id": 77,
+      "title": "Making a gift for someone",
+      "tags": []
+    },
+    {
+      "id": 78,
+      "title": "Buying/downloading music",
+      "tags": []
+    },
+    {
+      "id": 79,
+      "title": "Watching boxing, wrestling",
+      "tags": []
+    },
+    {
+      "id": 80,
+      "title": "Planning parties",
+      "tags": []
+    },
+    {
+      "id": 81,
+      "title": "Cooking",
+      "tags": []
+    },
+    {
+      "id": 82,
+      "title": "Going hiking",
+      "tags": [
+        "outdoors"
+      ]
+    },
+    {
+      "id": 83,
+      "title": "Writing (books, poems, articles)",
+      "tags": [
+        "low energy"
+      ]
+    },
+    {
+      "id": 84,
+      "title": "Sewing",
+      "tags": []
+    },
+    {
+      "id": 85,
+      "title": "Buying clothes",
+      "tags": []
+    },
+    {
+      "id": 86,
+      "title": "Going out to dinner",
+      "tags": []
+    },
+    {
+      "id": 87,
+      "title": "Working",
+      "tags": []
+    },
+    {
+      "id": 88,
+      "title": "Discussing books; going to a book club",
+      "tags": []
+    },
+    {
+      "id": 89,
+      "title": "Sightseeing",
+      "tags": []
+    },
+    {
+      "id": 90,
+      "title": "Getting a manicure/pedicure or facial",
+      "tags": []
+    },
+    {
+      "id": 91,
+      "title": "Going to the beauty parlor",
+      "tags": []
+    },
+    {
+      "id": 92,
+      "title": "Early morning coffee and newspaper",
+      "tags": []
+    },
+    {
+      "id": 93,
+      "title": "Playing tennis",
+      "tags": []
+    },
+    {
+      "id": 94,
+      "title": "Kissing",
+      "tags": []
+    },
+    {
+      "id": 95,
+      "title": "Watching my children (play)",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 96,
+      "title": "Thinking, “I have a lot more going for me than most people”",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 97,
+      "title": "Going to plays and concerts",
+      "tags": []
+    },
+    {
+      "id": 98,
+      "title": "Daydreaming",
+      "tags": []
+    },
+    {
+      "id": 99,
+      "title": "Planning to go (back) to school",
+      "tags": []
+    },
+    {
+      "id": 100,
+      "title": "Thinking about sex",
+      "tags": []
+    },
+    {
+      "id": 101,
+      "title": "Going for a drive",
+      "tags": []
+    },
+    {
+      "id": 102,
+      "title": "Refinishing furniture",
+      "tags": []
+    },
+    {
+      "id": 103,
+      "title": "Watching TV",
+      "tags": []
+    },
+    {
+      "id": 104,
+      "title": "Making lists of tasks",
+      "tags": []
+    },
+    {
+      "id": 105,
+      "title": "Walking in the woods (or at the waterfront)",
+      "tags": [
+        "outdoors"
+      ]
+    },
+    {
+      "id": 106,
+      "title": "Buying gifts",
+      "tags": []
+    },
+    {
+      "id": 107,
+      "title": "Completing a task",
+      "tags": []
+    },
+    {
+      "id": 108,
+      "title": "Going to a spectator sport (auto racing, horse racing)",
+      "tags": []
+    },
+    {
+      "id": 109,
+      "title": "Teaching",
+      "tags": []
+    },
+    {
+      "id": 110,
+      "title": "Photography",
+      "tags": []
+    },
+    {
+      "id": 111,
+      "title": "Going fishing",
+      "tags": []
+    },
+    {
+      "id": 112,
+      "title": "Thinking about pleasant events",
+      "tags": []
+    },
+    {
+      "id": 113,
+      "title": "Staying on a diet",
+      "tags": []
+    },
+    {
+      "id": 114,
+      "title": "Playing with animals",
+      "tags": []
+    },
+    {
+      "id": 115,
+      "title": "Flying a plane",
+      "tags": []
+    },
+    {
+      "id": 116,
+      "title": "Reading fiction",
+      "tags": [
+        "low energy"
+      ]
+    },
+    {
+      "id": 117,
+      "title": "Acting",
+      "tags": []
+    },
+    {
+      "id": 118,
+      "title": "Being alone",
+      "tags": [
+        "low energy"
+      ]
+    },
+    {
+      "id": 119,
+      "title": "Writing diary entries or letters",
+      "tags": [
+        "low energy"
+      ]
+    },
+    {
+      "id": 120,
+      "title": "Cleaning",
+      "tags": []
+    },
+    {
+      "id": 121,
+      "title": "Reading nonfiction",
+      "tags": [
+        "low energy"
+      ]
+    },
+    {
+      "id": 122,
+      "title": "Taking children places",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 123,
+      "title": "Dancing",
+      "tags": []
+    },
+    {
+      "id": 124,
+      "title": "Weightlifting",
+      "tags": []
+    },
+    {
+      "id": 125,
+      "title": "Going on a picnic",
+      "tags": []
+    },
+    {
+      "id": 126,
+      "title": "Thinking, “I did that pretty well,” after doing something",
+      "tags": []
+    },
+    {
+      "id": 127,
+      "title": "Meditating, yoga",
+      "tags": [
+        "low energy"
+      ]
+    },
+    {
+      "id": 128,
+      "title": "Having lunch with a friend",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 129,
+      "title": "Going to the mountains",
+      "tags": []
+    },
+    {
+      "id": 130,
+      "title": "Playing hockey",
+      "tags": []
+    },
+    {
+      "id": 131,
+      "title": "Working with clay or pottery",
+      "tags": []
+    },
+    {
+      "id": 132,
+      "title": "Glass blowing",
+      "tags": []
+    },
+    {
+      "id": 133,
+      "title": "Going skiing",
+      "tags": []
+    },
+    {
+      "id": 134,
+      "title": "Dressing up",
+      "tags": []
+    },
+    {
+      "id": 135,
+      "title": "Reflecting on how I’ve improved",
+      "tags": []
+    },
+    {
+      "id": 136,
+      "title": "Buying small things for myself (perfume, golf balls, etc.)",
+      "tags": []
+    },
+    {
+      "id": 137,
+      "title": "Talking on the phone",
+      "tags": []
+    },
+    {
+      "id": 138,
+      "title": "Going to museums",
+      "tags": []
+    },
+    {
+      "id": 139,
+      "title": "Thinking religious thoughts",
+      "tags": []
+    },
+    {
+      "id": 140,
+      "title": "Lighting candles",
+      "tags": []
+    },
+    {
+      "id": 141,
+      "title": "White-water canoeing/rafting",
+      "tags": []
+    },
+    {
+      "id": 142,
+      "title": "Going bowling",
+      "tags": []
+    },
+    {
+      "id": 143,
+      "title": "Doing woodworking",
+      "tags": []
+    },
+    {
+      "id": 144,
+      "title": "Fantasizing about the future",
+      "tags": []
+    },
+    {
+      "id": 145,
+      "title": "Taking ballet/tap- dancing classes",
+      "tags": []
+    },
+    {
+      "id": 146,
+      "title": "Debating",
+      "tags": []
+    },
+    {
+      "id": 147,
+      "title": "Sitting in a sidewalk café",
+      "tags": [
+        "outdoors"
+      ]
+    },
+    {
+      "id": 148,
+      "title": "Having an aquarium",
+      "tags": []
+    },
+    {
+      "id": 149,
+      "title": "Participating in “living history” events",
+      "tags": []
+    },
+    {
+      "id": 150,
+      "title": "Knitting",
+      "tags": []
+    },
+    {
+      "id": 151,
+      "title": "Doing crossword puzzles",
+      "tags": [
+        "low energy"
+      ]
+    },
+    {
+      "id": 152,
+      "title": "Shooting pool",
+      "tags": []
+    },
+    {
+      "id": 153,
+      "title": "Getting a massage",
+      "tags": []
+    },
+    {
+      "id": 154,
+      "title": "Saying, “I love you”",
+      "tags": []
+    },
+    {
+      "id": 155,
+      "title": "Playing catch, taking batting practice",
+      "tags": []
+    },
+    {
+      "id": 156,
+      "title": "Shooting baskets",
+      "tags": []
+    },
+    {
+      "id": 157,
+      "title": "Seeing and/or showing photos",
+      "tags": []
+    },
+    {
+      "id": 158,
+      "title": "Thinking about my good qualities",
+      "tags": []
+    },
+    {
+      "id": 159,
+      "title": "Solving riddles mentally",
+      "tags": []
+    },
+    {
+      "id": 160,
+      "title": "Having a political discussion",
+      "tags": []
+    },
+    {
+      "id": 161,
+      "title": "Buying books",
+      "tags": []
+    },
+    {
+      "id": 162,
+      "title": "Taking a sauna or a steam bath",
+      "tags": []
+    },
+    {
+      "id": 163,
+      "title": "Checking out garage sales",
+      "tags": []
+    },
+    {
+      "id": 164,
+      "title": "Thinking about having a family",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 165,
+      "title": "Thinking about happy moments in my childhood",
+      "tags": []
+    },
+    {
+      "id": 166,
+      "title": "Splurging",
+      "tags": []
+    },
+    {
+      "id": 167,
+      "title": "Going horseback riding",
+      "tags": []
+    },
+    {
+      "id": 168,
+      "title": "Doing something new",
+      "tags": []
+    },
+    {
+      "id": 169,
+      "title": "Working on jigsaw puzzles",
+      "tags": [
+        "low energy"
+      ]
+    },
+    {
+      "id": 170,
+      "title": "Playing cards",
+      "tags": []
+    },
+    {
+      "id": 171,
+      "title": "Thinking, “I’m a person who can cope”",
+      "tags": []
+    },
+    {
+      "id": 172,
+      "title": "Taking a nap",
+      "tags": []
+    },
+    {
+      "id": 173,
+      "title": "Figuring out my favorite scent",
+      "tags": []
+    },
+    {
+      "id": 174,
+      "title": "Making a card and giving it to someone I care about",
+      "tags": []
+    },
+    {
+      "id": 175,
+      "title": "Instant-messaging/texting someone",
+      "tags": []
+    },
+    {
+      "id": 176,
+      "title": "Playing a board game (e.g., Monopoly, Life, Clue, Sorry)",
+      "tags": []
+    },
+    {
+      "id": 177,
+      "title": "Putting on my favorite piece of clothing",
+      "tags": []
+    },
+    {
+      "id": 178,
+      "title": "Making a smoothie and drinking it slowly",
+      "tags": []
+    },
+    {
+      "id": 179,
+      "title": "Putting on makeup",
+      "tags": []
+    },
+    {
+      "id": 180,
+      "title": "Thinking about a friend’s good qualities",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 181,
+      "title": "Completing something I feel great about",
+      "tags": []
+    },
+    {
+      "id": 182,
+      "title": "Surprising someone with a favor",
+      "tags": []
+    },
+    {
+      "id": 183,
+      "title": "Surfing the Internet",
+      "tags": []
+    },
+    {
+      "id": 184,
+      "title": "Playing video games",
+      "tags": []
+    },
+    {
+      "id": 185,
+      "title": "E-mailing friends",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 186,
+      "title": "Going walking or sledding in a snowfall",
+      "tags": [
+        "outdoors"
+      ]
+    },
+    {
+      "id": 187,
+      "title": "Getting a haircut",
+      "tags": []
+    },
+    {
+      "id": 188,
+      "title": "Installing new software",
+      "tags": []
+    },
+    {
+      "id": 189,
+      "title": "Buying a CD or music on iTunes",
+      "tags": []
+    },
+    {
+      "id": 190,
+      "title": "Watching sports on TV",
+      "tags": []
+    },
+    {
+      "id": 191,
+      "title": "Taking care of my pets",
+      "tags": []
+    },
+    {
+      "id": 192,
+      "title": "Doing volunteer service",
+      "tags": []
+    },
+    {
+      "id": 193,
+      "title": "Watching stand-up comedy on YouTube",
+      "tags": []
+    },
+    {
+      "id": 194,
+      "title": "Working in my garden",
+      "tags": [
+        "outdoors"
+      ]
+    },
+    {
+      "id": 195,
+      "title": "Participating in a public performance (e.g., a flash mob)",
+      "tags": []
+    },
+    {
+      "id": 196,
+      "title": "Blogging",
+      "tags": []
+    },
+    {
+      "id": 197,
+      "title": "Fighting for a cause",
+      "tags": []
+    },
+    {
+      "id": 198,
+      "title": "Conducting experiments",
+      "tags": []
+    },
+    {
+      "id": 199,
+      "title": "Expressing my love to someone",
+      "tags": []
+    },
+    {
+      "id": 200,
+      "title": "Going on field trips, nature walks, exploring (hiking away from known routes, spelunking)",
+      "tags": [
+        "outdoors"
+      ]
+    },
+    {
+      "id": 201,
+      "title": "Gathering natural objects (wild foods or fruit, driftwood)",
+      "tags": []
+    },
+    {
+      "id": 202,
+      "title": "Going downtown or to a shopping mall",
+      "tags": []
+    },
+    {
+      "id": 203,
+      "title": "Going to a fair, carnival, circus, zoo, or amusement park",
+      "tags": []
+    },
+    {
+      "id": 204,
+      "title": "Going to the library",
+      "tags": []
+    },
+    {
+      "id": 205,
+      "title": "Joining or forming a band",
+      "tags": []
+    },
+    {
+      "id": 206,
+      "title": "Learning to do something new",
+      "tags": []
+    },
+    {
+      "id": 207,
+      "title": "Listening to the sounds of nature",
+      "tags": [
+        "outdoors"
+      ]
+    },
+    {
+      "id": 208,
+      "title": "Looking at the moon or stars",
+      "tags": [
+        "outdoors"
+      ]
+    },
+    {
+      "id": 209,
+      "title": "Outdoor work (cutting or chopping wood, farm work)",
+      "tags": [
+        "outdoors"
+      ]
+    },
+    {
+      "id": 210,
+      "title": "Playing organized sports (baseball, softball, football, Frisbee, handball, paddleball, squash, soccer, tennis, volleyball, etc.)",
+      "tags": []
+    },
+    {
+      "id": 211,
+      "title": "Playing in the sand, a stream, the grass; kicking leaves, pebbles, etc.",
+      "tags": []
+    },
+    {
+      "id": 212,
+      "title": "Protesting social, political, or environmental conditions",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 213,
+      "title": "Reading cartoons or comics",
+      "tags": [
+        "low energy"
+      ]
+    },
+    {
+      "id": 214,
+      "title": "Reading sacred works",
+      "tags": [
+        "low energy"
+      ]
+    },
+    {
+      "id": 215,
+      "title": "Rearranging or redecorating my room or the house",
+      "tags": []
+    },
+    {
+      "id": 216,
+      "title": "Selling or trading something",
+      "tags": []
+    },
+    {
+      "id": 217,
+      "title": "Snowmobiling or riding a dune buggy/ ATV",
+      "tags": []
+    },
+    {
+      "id": 218,
+      "title": "Social networking",
+      "tags": [
+        "with others"
+      ]
+    },
+    {
+      "id": 219,
+      "title": "Soaking in the bathtub",
+      "tags": []
+    },
+    {
+      "id": 220,
+      "title": "Learning or speaking a foreign language",
+      "tags": []
+    },
+    {
+      "id": 221,
+      "title": "Talking on the phone",
+      "tags": []
+    },
+    {
+      "id": 222,
+      "title": "Composing or arranging songs or music",
+      "tags": []
+    },
+    {
+      "id": 223,
+      "title": "Thrift store shopping",
+      "tags": []
+    },
+    {
+      "id": 224,
+      "title": "Using computers",
+      "tags": []
+    },
+    {
+      "id": 225,
+      "title": "Visiting people who are sick, shut in, or in trouble",
+      "tags": [
+        "with others"
+      ]
+    }
+  ]
+}

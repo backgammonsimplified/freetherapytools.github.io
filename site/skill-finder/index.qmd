@@ -1,6 +1,6 @@
 ---
 title: "Skill Finder"
-description: "General skills, quick references, and practice resources while guided recommendations are in development."
+description: "Private, browser-based tools for choosing and practicing therapy skills, plus general reference materials."
 sidebar: false
 page-layout: article
 toc: false
@@ -8,9 +8,77 @@ execute:
   enabled: false
 ---
 
-Personalized recommendations are coming later. For now, this page offers general skills, quick references, and practice resources that are useful across the curriculum.
+Use these private, browser-based tools to explore a skill, organize what you notice, or plan a next step. Your reflections stay on this device; no therapy answers are sent to a server.
 
 You can also browse [DBT Skills](/learn/), [CBT Skills](/cbt-skills/), or [Mindfulness](/mindfulness/) directly.
+
+## Interactive Tools {#interactive-tools}
+
+### Find a Skill
+
+::: {.skill-app-hub-grid}
+::: {.skill-app-hub-card}
+#### Skill Thermometer
+
+Choose the state that feels closest right now and see skills that may fit.
+
+[Open Skill Thermometer](/skill-finder/thermometer/)
+:::
+:::
+
+### Emotions
+
+::: {.skill-app-hub-grid}
+::: {.skill-app-hub-card}
+#### Emotion Explorer
+
+Notice emotion words, body sensations, urges, and what happened next.
+
+[Open Emotion Explorer](/skill-finder/emotions/)
+:::
+
+::: {.skill-app-hub-card}
+#### Change an Emotion
+
+Work through whether Check the Facts, Problem Solving, Opposite Action, or mindful observation may fit.
+
+[Open Change an Emotion](/skill-finder/change-emotion/)
+:::
+
+::: {.skill-app-hub-card}
+#### Pleasant Event Planner
+
+Browse the curriculum's Pleasant Events List and make one idea easier to follow through on.
+
+[Open Pleasant Event Planner](/skill-finder/pleasant-event/)
+:::
+:::
+
+### Thoughts & Worry
+
+::: {.skill-app-hub-grid}
+::: {.skill-app-hub-card}
+#### Worry Tree
+
+Separate an actionable problem from a hypothetical worry and make a grounded plan.
+
+[Open Worry Tree](/skill-finder/worry-tree/)
+:::
+:::
+
+### Goals & Values
+
+::: {.skill-app-hub-grid}
+::: {.skill-app-hub-card}
+#### Values & Valued Action
+
+Discover, sort, narrow, assess, and act on values using the workbook process.
+
+[Open Values & Valued Action](/skill-finder/values/)
+:::
+:::
+
+## General Skills & Quick Reference {#general-skills}
 
 <!-- section-scan-resources:start -->
 

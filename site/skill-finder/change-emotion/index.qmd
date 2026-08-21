@@ -1,0 +1,17 @@
+---
+title: "Change an Emotion"
+description: "Use the Emotion Regulation decision process to consider Check the Facts, Problem Solving, Opposite Action, or mindful observation."
+sidebar: false
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+This tool follows the curriculum's decision process. It supports reflection; it does not decide whether an emotion is valid or tell you what you must do.
+
+::: {#change-emotion-app .skill-app data-skill-app="change-emotion"}
+Loading Change an Emotion…
+:::
+
+[Back to all Skill Finder tools](/skill-finder/)

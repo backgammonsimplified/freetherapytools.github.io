@@ -1,0 +1,37 @@
+{
+  "id": "change-emotion",
+  "title": "Change an Emotion",
+  "start": "emotion",
+  "nodes": [
+    {"id": "emotion", "type": "question", "control": "choice", "prompt": "Which broad emotion family are you considering?", "field": "emotion", "dynamic_choices": "emotions", "next": "fits-facts"},
+    {"id": "fits-facts", "type": "question", "control": "yesno", "prompt": "Does the emotion fit the facts?", "choices": [
+      {"label": "Yes", "value": "yes", "next": "intensity"},
+      {"label": "No or not sure", "value": "no", "next": "effective-no-fit"}
+    ]},
+    {"id": "intensity", "type": "question", "control": "yesno", "prompt": "Does the intensity and duration fit the facts?", "choices": [
+      {"label": "Yes", "value": "yes", "next": "effective-fit"},
+      {"label": "No or not sure", "value": "no", "next": "effective-no-fit"}
+    ]},
+    {"id": "effective-fit", "type": "question", "control": "yesno", "prompt": "Would acting on the emotion or action urge be effective? Check Wise Mind.", "choices": [
+      {"label": "Yes", "value": "yes", "next": "mindful-act"},
+      {"label": "No", "value": "no", "next": "problem-solving"}
+    ]},
+    {"id": "effective-no-fit", "type": "question", "control": "yesno", "prompt": "Would acting on the emotion or action urge be effective? Check Wise Mind.", "choices": [
+      {"label": "Yes", "value": "yes", "next": "reconsider"},
+      {"label": "No", "value": "no", "next": "opposite-action"}
+    ]},
+    {"id": "mindful-act", "type": "result", "title": "Be mindful of the current emotion", "body": "If you choose to act on the emotion, do so deliberately and accept the consequences gracefully.", "links": [
+      {"label": "Mindfulness of Current Emotions", "href": "/learn/emotion-regulation/observing-describing-emotions.html", "kind": "learn"}
+    ]},
+    {"id": "problem-solving", "type": "result", "title": "Consider Problem Solving", "body": "Define the problem, check the facts, set a realistic goal, brainstorm, choose a likely solution, act, and evaluate.", "links": [
+      {"label": "Learn Problem Solving", "href": "/learn/emotion-regulation/opposite-action.html#problem-solving", "kind": "learn"}
+    ]},
+    {"id": "opposite-action", "type": "result", "title": "Consider Opposite Action", "dynamic_result": "opposite-action", "links": [
+      {"label": "Learn Opposite Action", "href": "/learn/emotion-regulation/opposite-action.html#opposite-action", "kind": "learn"}
+    ]},
+    {"id": "reconsider", "type": "result", "title": "Pause and reconsider", "body": "Consider changing thoughts to fit the facts, or reconsider Opposite Action. Effectiveness and context still matter.", "links": [
+      {"label": "Check the Facts", "href": "/learn/emotion-regulation/check-the-facts.html", "kind": "learn"},
+      {"label": "Learn Opposite Action", "href": "/learn/emotion-regulation/opposite-action.html#opposite-action", "kind": "learn"}
+    ]}
+  ]
+}

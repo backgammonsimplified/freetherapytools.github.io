@@ -1,0 +1,29 @@
+{
+  "id": "worry-tree",
+  "title": "Worry Tree",
+  "start": "worry",
+  "nodes": [
+    {"id": "worry", "type": "question", "control": "text", "prompt": "What am I worrying about?", "field": "worry", "next": "actionable"},
+    {"id": "actionable", "type": "question", "control": "yesno", "prompt": "Can I do something about this?", "choices": [
+      {"label": "Yes — it is a current, actionable problem", "next": "action"},
+      {"label": "No — it is hypothetical or outside my control", "next": "hypothetical"}
+    ]},
+    {"id": "action", "type": "question", "control": "text", "prompt": "What could I do?", "field": "action", "next": "when"},
+    {"id": "when", "type": "question", "control": "choice", "prompt": "When could I do it?", "field": "timing", "choices": [
+      {"label": "Now", "value": "now", "next": "how"},
+      {"label": "Later — I will schedule it", "value": "later", "next": "schedule"}
+    ]},
+    {"id": "schedule", "type": "question", "control": "text", "prompt": "Choose a realistic time or cue.", "field": "schedule", "next": "how"},
+    {"id": "how", "type": "question", "control": "text", "prompt": "How will I take the first step?", "field": "how", "next": "plan-result"},
+    {"id": "plan-result", "type": "result", "title": "Record the plan, then return attention to the present", "summary_fields": ["worry", "action", "timing", "schedule", "how"], "links": [
+      {"label": "Learn Problem Solving", "href": "/learn/emotion-regulation/opposite-action.html#problem-solving", "kind": "learn"},
+      {"label": "Explore Mindfulness", "href": "/mindfulness/", "kind": "learn"}
+    ]},
+    {"id": "hypothetical", "type": "information", "title": "Acknowledge the worry", "body": "Name this as a hypothetical worry or something outside your current control. If useful, set it aside for a chosen worry period, then gently return attention to what is happening now.", "next": "hypothetical-result"},
+    {"id": "hypothetical-result", "type": "result", "title": "Return attention to the present", "links": [
+      {"label": "Explore Grounding and Mindfulness", "href": "/mindfulness/", "kind": "learn"},
+      {"label": "Choose a Distress Skill", "href": "/skill-finder/thermometer/", "kind": "app"},
+      {"label": "Learn About Worry", "href": "/learn/cbt-anxiety/understanding-worry.html", "kind": "learn"}
+    ]}
+  ]
+}

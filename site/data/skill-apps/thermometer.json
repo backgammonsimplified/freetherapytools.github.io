@@ -1,0 +1,50 @@
+{
+  "source": "General Handouts — Emotional Overload & Emotional Numbness Skills Guide",
+  "zones": [
+    {
+      "id": "overload",
+      "name": "Emotional overload",
+      "description": "Feelings or urges are very intense, and it may be hard to access Wise Mind.",
+      "skills": [
+        {"name": "TIPP", "href": "/learn/cube/tipp.html"},
+        {"name": "ACCEPTS", "href": "/learn/cube/self-soothe.html#wise-mind-accepts"},
+        {"name": "Self-Soothe", "href": "/learn/cube/self-soothe.html#self-soothing-five-senses"},
+        {"name": "STOP", "href": "/learn/cube/stop-crisis-survival.html#stop"},
+        {"name": "IMPROVE", "href": "/learn/cube/improve.html"},
+        {"name": "Opposite Action", "href": "/skill-finder/change-emotion/"}
+      ]
+    },
+    {
+      "id": "distressed-wise-mind",
+      "name": "Distressed but in Wise Mind",
+      "description": "Distress is present, and there is enough steadiness to reflect and choose deliberately.",
+      "skills": [
+        {"name": "Pros & Cons", "href": "/learn/cube/pros-and-cons.html"},
+        {"name": "Problem Solving", "href": "/learn/emotion-regulation/opposite-action.html#problem-solving"},
+        {"name": "Check the Facts", "href": "/learn/emotion-regulation/check-the-facts.html"},
+        {"name": "Cope Ahead", "href": "/learn/emotion-regulation/positive-emotions-mastery-cope-ahead.html#cope-ahead"}
+      ]
+    },
+    {
+      "id": "wise-mind",
+      "name": "Wise Mind",
+      "description": "There is room to notice the whole situation and choose a skill intentionally.",
+      "skills": [
+        {"name": "Interpersonal Effectiveness", "href": "/learn/interpersonal-effectiveness/"},
+        {"name": "Mindfulness of Emotions", "href": "/learn/emotion-regulation/observing-describing-emotions.html"},
+        {"name": "Radical Acceptance", "href": "/learn/cube/radical-acceptance.html"},
+        {"name": "Pleasant Activities", "href": "/skill-finder/pleasant-event/"}
+      ]
+    },
+    {
+      "id": "numbness",
+      "name": "Emotional numbness",
+      "description": "You feel disconnected, shut down, flat, or far away from emotion.",
+      "skills": [
+        {"name": "Build Mastery", "href": "/learn/emotion-regulation/positive-emotions-mastery-cope-ahead.html#build-mastery"},
+        {"name": "PLEASE", "href": "/learn/wellness/sleep.html#please-body-care"},
+        {"name": "Grounding", "href": "/mindfulness/"}
+      ]
+    }
+  ]
+}
