@@ -28,54 +28,76 @@ Ask what evidence supports the thought, what evidence does not support it, and w
 
 Develop an alternative that acknowledges the difficulty without treating the original hot thought as the only possible interpretation.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### Thought Records Part 2 - binder-p0011 {#binder-p0011}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0011
+::: {.bs-practice-resource}
+**Thought Record Part 2: Challenging the Hot Thought**
 
-<!-- binder-resource: binder-p0011 -->
+[![Thought Record Part 2: Challenging the Hot Thought](/resources/cbt-skills/cbt-skills-p027.jpg){.img-fluid fig-alt="Thought Record Part 2: Challenging the Hot Thought"}](/resources/cbt-skills/cbt-skills-p027.jpg)
 
-[![Preview of Thought Records Part 2 (binder-p0011)](../../assets/binder/binder-p0011.jpg){.img-fluid fig-alt="Preview of Thought Records Part 2 (binder-p0011)"}](../../assets/binder/binder-p0011.jpg)
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p027.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0011.jpg)
+::: {.bs-practice-resource}
+**Looking for Evidence**
 
-### Thought Records Part 2 - binder-p0012 {#binder-p0012}
+[![Looking for Evidence](/resources/cbt-skills/cbt-skills-p028.jpg){.img-fluid fig-alt="Looking for Evidence"}](/resources/cbt-skills/cbt-skills-p028.jpg)
 
-binder-p0012
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p028.jpg)
+:::
 
-<!-- binder-resource: binder-p0012 -->
+::: {.bs-practice-resource}
+**Creating Balanced Alternatives**
 
-[![Preview of Thought Records Part 2 (binder-p0012)](../../assets/binder/binder-p0012.jpg){.img-fluid fig-alt="Preview of Thought Records Part 2 (binder-p0012)"}](../../assets/binder/binder-p0012.jpg)
+[![Creating Balanced Alternatives](/resources/cbt-skills/cbt-skills-p029.jpg){.img-fluid fig-alt="Creating Balanced Alternatives"}](/resources/cbt-skills/cbt-skills-p029.jpg)
 
-[Open full page](../../assets/binder/binder-p0012.jpg)
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p029.jpg)
+:::
 
-### Thought Records Part 2 - binder-p0013 {#binder-p0013}
+::: {.bs-practice-resource}
+**Best Friend Technique and Re-Rating**
 
-binder-p0013
+[![Best Friend Technique and Re-Rating](/resources/cbt-skills/cbt-skills-p030.jpg){.img-fluid fig-alt="Best Friend Technique and Re-Rating"}](/resources/cbt-skills/cbt-skills-p030.jpg)
 
-<!-- binder-resource: binder-p0013 -->
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p030.jpg)
+:::
 
-[![Preview of Thought Records Part 2 (binder-p0013)](../../assets/binder/binder-p0013.jpg){.img-fluid fig-alt="Preview of Thought Records Part 2 (binder-p0013)"}](../../assets/binder/binder-p0013.jpg)
+## Practice Materials {#practice-materials}
 
-[Open full page](../../assets/binder/binder-p0013.jpg)
+::: {.bs-practice-resource}
+**Blank Thought Record**
 
-### Thought Records Part 2 - binder-p0014 {#binder-p0014}
+[![Blank Thought Record](/resources/cbt-skills/cbt-skills-p034.jpg){.img-fluid fig-alt="Blank Thought Record"}](/resources/cbt-skills/cbt-skills-p034.jpg)
 
-binder-p0014
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p034.jpg)
+:::
 
-<!-- binder-resource: binder-p0014 -->
+## Reference Materials {#reference-materials}
 
-[![Preview of Thought Records Part 2 (binder-p0014)](../../assets/binder/binder-p0014.jpg){.img-fluid fig-alt="Preview of Thought Records Part 2 (binder-p0014)"}](../../assets/binder/binder-p0014.jpg)
+::: {.bs-practice-resource}
+**Thoughts About Thought Records**
 
-[Open full page](../../assets/binder/binder-p0014.jpg)
+[![Thoughts About Thought Records](/resources/cbt-skills/cbt-skills-p031.jpg){.img-fluid fig-alt="Thoughts About Thought Records"}](/resources/cbt-skills/cbt-skills-p031.jpg)
 
-### Thought Records Part 2 - binder-p0015 {#binder-p0015}
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p031.jpg)
+:::
 
-binder-p0015
+::: {.bs-practice-resource}
+**Completed Thought Record Example 1**
 
-<!-- binder-resource: binder-p0015 -->
+[![Completed Thought Record Example 1](/resources/cbt-skills/cbt-skills-p032.jpg){.img-fluid fig-alt="Completed Thought Record Example 1"}](/resources/cbt-skills/cbt-skills-p032.jpg)
 
-[![Preview of Thought Records Part 2 (binder-p0015)](../../assets/binder/binder-p0015.jpg){.img-fluid fig-alt="Preview of Thought Records Part 2 (binder-p0015)"}](../../assets/binder/binder-p0015.jpg)
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p032.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0015.jpg)
+::: {.bs-practice-resource}
+**Completed Thought Record Example 2**
+
+[![Completed Thought Record Example 2](/resources/cbt-skills/cbt-skills-p033.jpg){.img-fluid fig-alt="Completed Thought Record Example 2"}](/resources/cbt-skills/cbt-skills-p033.jpg)
+
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p033.jpg)
+:::
+
+<!-- section-scan-resources:end -->

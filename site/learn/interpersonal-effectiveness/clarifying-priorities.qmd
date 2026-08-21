@@ -1,5 +1,5 @@
 ---
-title: "Clarifying Priorities"
+title: "Clarifying Priorities & Myths"
 description: "Balance objectives, the relationship, and self-respect in an interaction."
 sidebar: learn
 learn-track: interpersonal-effectiveness
@@ -20,44 +20,66 @@ execute:
 
 Before acting, decide which goal matters most: getting an objective, preserving the relationship, or protecting self-respect.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### Objectives and Clarifying Priorities - binder-p0079 {#binder-p0079}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0079
+::: {.bs-practice-resource}
+**Factors in the Way of Interpersonal Effectiveness**
 
-<!-- binder-resource: binder-p0079 -->
+[![Factors in the Way of Interpersonal Effectiveness](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p009.jpg){.img-fluid fig-alt="Factors in the Way of Interpersonal Effectiveness"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p009.jpg)
 
-[![Preview of Objectives and Clarifying Priorities (binder-p0079)](../../assets/binder/binder-p0079.jpg){.img-fluid fig-alt="Preview of Objectives and Clarifying Priorities (binder-p0079)"}](../../assets/binder/binder-p0079.jpg)
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p009.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0079.jpg)
+::: {.bs-practice-resource}
+**Myths in the Way of Interpersonal Effectiveness**
 
-### Objectives and Clarifying Priorities - binder-p0080 {#binder-p0080}
+[![Myths in the Way of Interpersonal Effectiveness](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p010.jpg){.img-fluid fig-alt="Myths in the Way of Interpersonal Effectiveness"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p010.jpg)
 
-binder-p0080
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p010.jpg)
+:::
 
-<!-- binder-resource: binder-p0080 -->
+::: {.bs-practice-resource}
+**Obtaining Objectives Skillfully**
 
-[![Preview of Objectives and Clarifying Priorities (binder-p0080)](../../assets/binder/binder-p0080.jpg){.img-fluid fig-alt="Preview of Objectives and Clarifying Priorities (binder-p0080)"}](../../assets/binder/binder-p0080.jpg)
+[![Obtaining Objectives Skillfully](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p013.jpg){.img-fluid fig-alt="Obtaining Objectives Skillfully"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p013.jpg)
 
-[Open full page](../../assets/binder/binder-p0080.jpg)
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p013.jpg)
+:::
 
-### Objectives and Clarifying Priorities - binder-p0081 {#binder-p0081}
+::: {.bs-practice-resource}
+**Clarifying Goals in Interpersonal Situations**
 
-binder-p0081
+[![Clarifying Goals in Interpersonal Situations](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p014.jpg){.img-fluid fig-alt="Clarifying Goals in Interpersonal Situations"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p014.jpg)
 
-<!-- binder-resource: binder-p0081 -->
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p014.jpg)
+:::
 
-[![Preview of Objectives and Clarifying Priorities (binder-p0081)](../../assets/binder/binder-p0081.jpg){.img-fluid fig-alt="Preview of Objectives and Clarifying Priorities (binder-p0081)"}](../../assets/binder/binder-p0081.jpg)
+## Practice Materials {#practice-materials}
 
-[Open full page](../../assets/binder/binder-p0081.jpg)
+::: {.bs-practice-resource}
+**Challenging Myths: Objectives Effectiveness**
 
-### Objectives and Clarifying Priorities - binder-p0082 {#binder-p0082}
+[![Challenging Myths: Objectives Effectiveness](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p011.jpg){.img-fluid fig-alt="Challenging Myths: Objectives Effectiveness"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p011.jpg)
 
-binder-p0082
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p011.jpg)
+:::
 
-<!-- binder-resource: binder-p0082 -->
+::: {.bs-practice-resource}
+**Challenging Myths: Relationship and Self-Respect**
 
-[![Preview of Objectives and Clarifying Priorities (binder-p0082)](../../assets/binder/binder-p0082.jpg){.img-fluid fig-alt="Preview of Objectives and Clarifying Priorities (binder-p0082)"}](../../assets/binder/binder-p0082.jpg)
+[![Challenging Myths: Relationship and Self-Respect](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p012.jpg){.img-fluid fig-alt="Challenging Myths: Relationship and Self-Respect"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p012.jpg)
 
-[Open full page](../../assets/binder/binder-p0082.jpg)
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p012.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Clarifying Priorities in Interpersonal Situations**
+
+[![Clarifying Priorities in Interpersonal Situations](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p015.jpg){.img-fluid fig-alt="Clarifying Priorities in Interpersonal Situations"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p015.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p015.jpg)
+:::
+
+<!-- section-scan-resources:end -->

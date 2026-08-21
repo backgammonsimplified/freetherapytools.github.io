@@ -1,6 +1,6 @@
 ---
-title: "Weekly Goals and Home Practice"
-description: "Use weekly sheets to connect goals, skills practice, mood, energy, and strengths."
+title: "Weekly Goal Worksheets"
+description: "Translate priorities into goals and review progress across the week."
 sidebar: learn
 learn-track: goal-setting
 learn-order: 3
@@ -28,104 +28,24 @@ Choose one small, meaningful target for each day.
 
 Record the skill you practised and the strength you used.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### Weekly Goals and Home Practice - binder-p0132 {#binder-p0132}
+## Practice Materials {#practice-materials}
 
-binder-p0132
+::: {.bs-practice-resource}
+**Daily Goal Worksheet: Monday to Wednesday**
 
-<!-- binder-resource: binder-p0132 -->
+[![Daily Goal Worksheet: Monday to Wednesday](/resources/goal-setting/goal-setting-p005.jpg){.img-fluid fig-alt="Daily Goal Worksheet: Monday to Wednesday"}](/resources/goal-setting/goal-setting-p005.jpg)
 
-[![Preview of Weekly Goals and Home Practice (binder-p0132)](../../assets/binder/binder-p0132.jpg){.img-fluid fig-alt="Preview of Weekly Goals and Home Practice (binder-p0132)"}](../../assets/binder/binder-p0132.jpg)
+[Download / View Handout](/resources/goal-setting/goal-setting-p005.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0132.jpg)
+::: {.bs-practice-resource}
+**Daily Goal Worksheet: Thursday to Sunday**
 
-### Weekly Goals and Home Practice - binder-p0133 {#binder-p0133}
+[![Daily Goal Worksheet: Thursday to Sunday](/resources/goal-setting/goal-setting-p006.jpg){.img-fluid fig-alt="Daily Goal Worksheet: Thursday to Sunday"}](/resources/goal-setting/goal-setting-p006.jpg)
 
-binder-p0133
+[Download / View Handout](/resources/goal-setting/goal-setting-p006.jpg)
+:::
 
-<!-- binder-resource: binder-p0133 -->
-
-[![Preview of Weekly Goals and Home Practice (binder-p0133)](../../assets/binder/binder-p0133.jpg){.img-fluid fig-alt="Preview of Weekly Goals and Home Practice (binder-p0133)"}](../../assets/binder/binder-p0133.jpg)
-
-[Open full page](../../assets/binder/binder-p0133.jpg)
-
-### Weekly Goals and Home Practice - binder-p0134 {#binder-p0134}
-
-binder-p0134
-
-<!-- binder-resource: binder-p0134 -->
-
-[![Preview of Weekly Goals and Home Practice (binder-p0134)](../../assets/binder/binder-p0134.jpg){.img-fluid fig-alt="Preview of Weekly Goals and Home Practice (binder-p0134)"}](../../assets/binder/binder-p0134.jpg)
-
-[Open full page](../../assets/binder/binder-p0134.jpg)
-
-### Weekly Goals and Home Practice - binder-p0135 {#binder-p0135}
-
-binder-p0135
-
-<!-- binder-resource: binder-p0135 -->
-
-[![Preview of Weekly Goals and Home Practice (binder-p0135)](../../assets/binder/binder-p0135.jpg){.img-fluid fig-alt="Preview of Weekly Goals and Home Practice (binder-p0135)"}](../../assets/binder/binder-p0135.jpg)
-
-[Open full page](../../assets/binder/binder-p0135.jpg)
-
-### Weekly Goals and Home Practice - binder-p0136 {#binder-p0136}
-
-binder-p0136
-
-<!-- binder-resource: binder-p0136 -->
-
-[![Preview of Weekly Goals and Home Practice (binder-p0136)](../../assets/binder/binder-p0136.jpg){.img-fluid fig-alt="Preview of Weekly Goals and Home Practice (binder-p0136)"}](../../assets/binder/binder-p0136.jpg)
-
-[Open full page](../../assets/binder/binder-p0136.jpg)
-
-### Weekly Goals and Home Practice - binder-p0137 {#binder-p0137}
-
-binder-p0137
-
-<!-- binder-resource: binder-p0137 -->
-
-[![Preview of Weekly Goals and Home Practice (binder-p0137)](../../assets/binder/binder-p0137.jpg){.img-fluid fig-alt="Preview of Weekly Goals and Home Practice (binder-p0137)"}](../../assets/binder/binder-p0137.jpg)
-
-[Open full page](../../assets/binder/binder-p0137.jpg)
-
-### Weekly Goals and Home Practice - binder-p0138 {#binder-p0138}
-
-binder-p0138
-
-<!-- binder-resource: binder-p0138 -->
-
-[![Preview of Weekly Goals and Home Practice (binder-p0138)](../../assets/binder/binder-p0138.jpg){.img-fluid fig-alt="Preview of Weekly Goals and Home Practice (binder-p0138)"}](../../assets/binder/binder-p0138.jpg)
-
-[Open full page](../../assets/binder/binder-p0138.jpg)
-
-### Weekly Goals and Home Practice - binder-p0139 {#binder-p0139}
-
-binder-p0139
-
-<!-- binder-resource: binder-p0139 -->
-
-[![Preview of Weekly Goals and Home Practice (binder-p0139)](../../assets/binder/binder-p0139.jpg){.img-fluid fig-alt="Preview of Weekly Goals and Home Practice (binder-p0139)"}](../../assets/binder/binder-p0139.jpg)
-
-[Open full page](../../assets/binder/binder-p0139.jpg)
-
-### Weekly Goals and Home Practice - binder-p0140 {#binder-p0140}
-
-binder-p0140
-
-<!-- binder-resource: binder-p0140 -->
-
-[![Preview of Weekly Goals and Home Practice (binder-p0140)](../../assets/binder/binder-p0140.jpg){.img-fluid fig-alt="Preview of Weekly Goals and Home Practice (binder-p0140)"}](../../assets/binder/binder-p0140.jpg)
-
-[Open full page](../../assets/binder/binder-p0140.jpg)
-
-### Weekly Goals and Home Practice - binder-p0141 {#binder-p0141}
-
-binder-p0141
-
-<!-- binder-resource: binder-p0141 -->
-
-[![Preview of Weekly Goals and Home Practice (binder-p0141)](../../assets/binder/binder-p0141.jpg){.img-fluid fig-alt="Preview of Weekly Goals and Home Practice (binder-p0141)"}](../../assets/binder/binder-p0141.jpg)
-
-[Open full page](../../assets/binder/binder-p0141.jpg)
+<!-- section-scan-resources:end -->

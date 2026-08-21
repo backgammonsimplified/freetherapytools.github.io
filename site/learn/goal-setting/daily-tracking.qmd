@@ -1,6 +1,6 @@
 ---
-title: "Daily Tracking"
-description: "Track mood, food, sleep, medication, exercise, hygiene, and substance use without judgment."
+title: "Weekly Home Practice Trackers"
+description: "Track practice, mood, routines, and patterns across the week."
 sidebar: learn
 learn-track: goal-setting
 learn-order: 4
@@ -34,3 +34,48 @@ Tracking is information gathering, not a grade. Record what happened so patterns
 
 ## Substance Use Tracking {#substance-use-tracking}
 
+<!-- section-scan-resources:start -->
+
+## Practice Materials {#practice-materials}
+
+::: {.bs-practice-resource}
+**Weekly Home Practice Tracker**
+
+[![Weekly Home Practice Tracker](/resources/goal-setting/goal-setting-p007.jpg){.img-fluid fig-alt="Weekly Home Practice Tracker"}](/resources/goal-setting/goal-setting-p007.jpg)
+
+[Download / View Handout](/resources/goal-setting/goal-setting-p007.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Weekly Food Diary**
+
+[![Weekly Food Diary](/resources/goal-setting/goal-setting-p008.jpg){.img-fluid fig-alt="Weekly Food Diary"}](/resources/goal-setting/goal-setting-p008.jpg)
+
+[Download / View Handout](/resources/goal-setting/goal-setting-p008.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Monthly Habit Tracker**
+
+[![Monthly Habit Tracker](/resources/goal-setting/goal-setting-p010.jpg){.img-fluid fig-alt="Monthly Habit Tracker"}](/resources/goal-setting/goal-setting-p010.jpg)
+
+[Download / View Handout](/resources/goal-setting/goal-setting-p010.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Daily Mood Tracker**
+
+[![Daily Mood Tracker](/resources/goal-setting/goal-setting-p033.jpg){.img-fluid fig-alt="Daily Mood Tracker"}](/resources/goal-setting/goal-setting-p033.jpg)
+
+[Download / View Handout](/resources/goal-setting/goal-setting-p033.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Skills and Wellness Diary Card**
+
+[![Skills and Wellness Diary Card](/resources/goal-setting/goal-setting-p034.jpg){.img-fluid fig-alt="Skills and Wellness Diary Card"}](/resources/goal-setting/goal-setting-p034.jpg)
+
+[Download / View Handout](/resources/goal-setting/goal-setting-p034.jpg)
+:::
+
+<!-- section-scan-resources:end -->

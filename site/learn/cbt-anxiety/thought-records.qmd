@@ -20,14 +20,60 @@ execute:
 
 Part 1 slows a difficult moment down so you can identify the situation, emotion, automatic thought, and initial response.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### Thought Records Part 1 - binder-p0019 {#binder-p0019}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0019
+::: {.bs-practice-resource}
+**How to Get Out of a Thinking Trap**
 
-<!-- binder-resource: binder-p0019 -->
+[![How to Get Out of a Thinking Trap](/resources/cbt-skills/cbt-skills-p021.jpg){.img-fluid fig-alt="How to Get Out of a Thinking Trap"}](/resources/cbt-skills/cbt-skills-p021.jpg)
 
-[![Preview of Thought Records Part 1 (binder-p0019)](../../assets/binder/binder-p0019.jpg){.img-fluid fig-alt="Preview of Thought Records Part 1 (binder-p0019)"}](../../assets/binder/binder-p0019.jpg)
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p021.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0019.jpg)
+::: {.bs-practice-resource}
+**Thought Record Part 1**
+
+[![Thought Record Part 1](/resources/cbt-skills/cbt-skills-p024.jpg){.img-fluid fig-alt="Thought Record Part 1"}](/resources/cbt-skills/cbt-skills-p024.jpg)
+
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p024.jpg)
+:::
+
+## Practice Materials {#practice-materials}
+
+::: {.bs-practice-resource}
+**Challenging Negative Thinking Practice**
+
+[![Challenging Negative Thinking Practice](/resources/cbt-skills/cbt-skills-p023.jpg){.img-fluid fig-alt="Challenging Negative Thinking Practice"}](/resources/cbt-skills/cbt-skills-p023.jpg)
+
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p023.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Identifying Automatic Thoughts**
+
+[![Identifying Automatic Thoughts](/resources/cbt-skills/cbt-skills-p025.jpg){.img-fluid fig-alt="Identifying Automatic Thoughts"}](/resources/cbt-skills/cbt-skills-p025.jpg)
+
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p025.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**The Farmer and His Horse**
+
+[![The Farmer and His Horse](/resources/cbt-skills/cbt-skills-p020.jpg){.img-fluid fig-alt="The Farmer and His Horse"}](/resources/cbt-skills/cbt-skills-p020.jpg)
+
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p020.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Challenge Negative Thinking**
+
+[![Challenge Negative Thinking](/resources/cbt-skills/cbt-skills-p022.jpg){.img-fluid fig-alt="Challenge Negative Thinking"}](/resources/cbt-skills/cbt-skills-p022.jpg)
+
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p022.jpg)
+:::
+
+<!-- section-scan-resources:end -->

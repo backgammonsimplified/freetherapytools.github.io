@@ -1,6 +1,6 @@
 ---
 title: "CBT Skills"
-description: "Learn to identify and change unhelpful thought patterns through six binder-led CBT lessons."
+description: "Learn to identify and change unhelpful thought patterns through six CBT lessons."
 sidebar: cbt
 page-layout: full
 bibliography: ../references.bib
@@ -17,7 +17,5 @@ CBT skills help you notice links among situations, interpretations, emotions, bo
 1. Learn to identify and change unhelpful thought patterns.
 2. Take control of interpretations when managing situations in your environment.
 3. Develop an action plan to manage unhelpful thought patterns.
-
-These objectives and the lesson order below come from the CBT Skills curriculum cover, [binder-p0021](/learn/cbt-anxiety/introduction-to-cbt.html#binder-p0021).
 
 {{< include _lesson-catalogue.html >}}

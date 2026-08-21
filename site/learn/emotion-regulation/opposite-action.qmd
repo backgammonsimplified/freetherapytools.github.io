@@ -1,9 +1,9 @@
 ---
-title: "Opposite Action"
-description: "Change an unjustified or ineffective emotion by acting opposite to its urge."
+title: "Opposite Action & Problem Solving"
+description: "Choose opposite action or solve a changeable problem after checking the facts."
 sidebar: learn
 learn-track: emotion-regulation
-learn-order: 5
+learn-order: 4
 categories:
   - Beginner
 tags:
@@ -20,64 +20,178 @@ execute:
 
 Opposite Action works best when the emotion does not fit the facts or acting on it would be ineffective.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+## Problem Solving {#problem-solving}
 
-### Opposite Action - binder-p0033 {#binder-p0033}
+Use problem solving when the facts support the emotion and a practical change is possible.
 
-binder-p0033
+<!-- section-scan-resources:start -->
 
-<!-- binder-resource: binder-p0033 -->
+## Handouts & Worksheets {#handouts-worksheets}
 
-[![Preview of Opposite Action (binder-p0033)](../../assets/binder/binder-p0033.jpg){.img-fluid fig-alt="Preview of Opposite Action (binder-p0033)"}](../../assets/binder/binder-p0033.jpg)
+::: {.bs-practice-resource}
+**Opposite Action and Problem Solving**
 
-[Open full page](../../assets/binder/binder-p0033.jpg)
+[![Opposite Action and Problem Solving](/resources/emotion-regulation/emotion-regulation-p037.jpg){.img-fluid fig-alt="Opposite Action and Problem Solving"}](/resources/emotion-regulation/emotion-regulation-p037.jpg)
 
-### Opposite Action - binder-p0034 {#binder-p0034}
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p037.jpg)
+:::
 
-binder-p0034
+::: {.bs-practice-resource}
+**Opposite Action**
 
-<!-- binder-resource: binder-p0034 -->
+[![Opposite Action](/resources/emotion-regulation/emotion-regulation-p038.jpg){.img-fluid fig-alt="Opposite Action"}](/resources/emotion-regulation/emotion-regulation-p038.jpg)
 
-[![Preview of Opposite Action (binder-p0034)](../../assets/binder/binder-p0034.jpg){.img-fluid fig-alt="Preview of Opposite Action (binder-p0034)"}](../../assets/binder/binder-p0034.jpg)
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p038.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0034.jpg)
+::: {.bs-practice-resource}
+**Problem Solving**
 
-### Opposite Action - binder-p0035 {#binder-p0035}
+[![Problem Solving](/resources/emotion-regulation/emotion-regulation-p039.jpg){.img-fluid fig-alt="Problem Solving"}](/resources/emotion-regulation/emotion-regulation-p039.jpg)
 
-binder-p0035
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p039.jpg)
+:::
 
-<!-- binder-resource: binder-p0035 -->
+::: {.bs-practice-resource}
+**Reviewing Opposite Action and Problem Solving, Part 1**
 
-[![Preview of Opposite Action (binder-p0035)](../../assets/binder/binder-p0035.jpg){.img-fluid fig-alt="Preview of Opposite Action (binder-p0035)"}](../../assets/binder/binder-p0035.jpg)
+[![Reviewing Opposite Action and Problem Solving, Part 1](/resources/emotion-regulation/emotion-regulation-p040.jpg){.img-fluid fig-alt="Reviewing Opposite Action and Problem Solving, Part 1"}](/resources/emotion-regulation/emotion-regulation-p040.jpg)
 
-[Open full page](../../assets/binder/binder-p0035.jpg)
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p040.jpg)
+:::
 
-### Opposite Action - binder-p0036 {#binder-p0036}
+::: {.bs-practice-resource}
+**Reviewing Opposite Action and Problem Solving, Part 2**
 
-binder-p0036
+[![Reviewing Opposite Action and Problem Solving, Part 2](/resources/emotion-regulation/emotion-regulation-p041.jpg){.img-fluid fig-alt="Reviewing Opposite Action and Problem Solving, Part 2"}](/resources/emotion-regulation/emotion-regulation-p041.jpg)
 
-<!-- binder-resource: binder-p0036 -->
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p041.jpg)
+:::
 
-[![Preview of Opposite Action (binder-p0036)](../../assets/binder/binder-p0036.jpg){.img-fluid fig-alt="Preview of Opposite Action (binder-p0036)"}](../../assets/binder/binder-p0036.jpg)
+::: {.bs-practice-resource}
+**Reviewing Opposite Action and Problem Solving, Part 3**
 
-[Open full page](../../assets/binder/binder-p0036.jpg)
+[![Reviewing Opposite Action and Problem Solving, Part 3](/resources/emotion-regulation/emotion-regulation-p042.jpg){.img-fluid fig-alt="Reviewing Opposite Action and Problem Solving, Part 3"}](/resources/emotion-regulation/emotion-regulation-p042.jpg)
 
-### Opposite Action - binder-p0037 {#binder-p0037}
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p042.jpg)
+:::
 
-binder-p0037
+::: {.bs-practice-resource}
+**Opposite Action for Fear**
 
-<!-- binder-resource: binder-p0037 -->
+[![Opposite Action for Fear](/resources/emotion-regulation/emotion-regulation-p044.jpg){.img-fluid fig-alt="Opposite Action for Fear"}](/resources/emotion-regulation/emotion-regulation-p044.jpg)
 
-[![Preview of Opposite Action (binder-p0037)](../../assets/binder/binder-p0037.jpg){.img-fluid fig-alt="Preview of Opposite Action (binder-p0037)"}](../../assets/binder/binder-p0037.jpg)
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p044.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0037.jpg)
+::: {.bs-practice-resource}
+**Opposite Action for Anger**
 
-### Opposite Action - binder-p0038 {#binder-p0038}
+[![Opposite Action for Anger](/resources/emotion-regulation/emotion-regulation-p045.jpg){.img-fluid fig-alt="Opposite Action for Anger"}](/resources/emotion-regulation/emotion-regulation-p045.jpg)
 
-binder-p0038
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p045.jpg)
+:::
 
-<!-- binder-resource: binder-p0038 -->
+::: {.bs-practice-resource}
+**Opposite Action for Disgust**
 
-[![Preview of Opposite Action (binder-p0038)](../../assets/binder/binder-p0038.jpg){.img-fluid fig-alt="Preview of Opposite Action (binder-p0038)"}](../../assets/binder/binder-p0038.jpg)
+[![Opposite Action for Disgust](/resources/emotion-regulation/emotion-regulation-p046.jpg){.img-fluid fig-alt="Opposite Action for Disgust"}](/resources/emotion-regulation/emotion-regulation-p046.jpg)
 
-[Open full page](../../assets/binder/binder-p0038.jpg)
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p046.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Opposite Action for Envy**
+
+[![Opposite Action for Envy](/resources/emotion-regulation/emotion-regulation-p047.jpg){.img-fluid fig-alt="Opposite Action for Envy"}](/resources/emotion-regulation/emotion-regulation-p047.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p047.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Opposite Action for Jealousy**
+
+[![Opposite Action for Jealousy](/resources/emotion-regulation/emotion-regulation-p048.jpg){.img-fluid fig-alt="Opposite Action for Jealousy"}](/resources/emotion-regulation/emotion-regulation-p048.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p048.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Opposite Action for Love**
+
+[![Opposite Action for Love](/resources/emotion-regulation/emotion-regulation-p049.jpg){.img-fluid fig-alt="Opposite Action for Love"}](/resources/emotion-regulation/emotion-regulation-p049.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p049.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Opposite Action for Sadness**
+
+[![Opposite Action for Sadness](/resources/emotion-regulation/emotion-regulation-p050.jpg){.img-fluid fig-alt="Opposite Action for Sadness"}](/resources/emotion-regulation/emotion-regulation-p050.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p050.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Opposite Action for Shame**
+
+[![Opposite Action for Shame](/resources/emotion-regulation/emotion-regulation-p051.jpg){.img-fluid fig-alt="Opposite Action for Shame"}](/resources/emotion-regulation/emotion-regulation-p051.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p051.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Opposite Action for Guilt**
+
+[![Opposite Action for Guilt](/resources/emotion-regulation/emotion-regulation-p052.jpg){.img-fluid fig-alt="Opposite Action for Guilt"}](/resources/emotion-regulation/emotion-regulation-p052.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p052.jpg)
+:::
+
+## Practice Materials {#practice-materials}
+
+::: {.bs-practice-resource}
+**Choosing Problem Solving or Opposite Action**
+
+[![Choosing Problem Solving or Opposite Action](/resources/emotion-regulation/emotion-regulation-p036.jpg){.img-fluid fig-alt="Choosing Problem Solving or Opposite Action"}](/resources/emotion-regulation/emotion-regulation-p036.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p036.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Problem Solving Worksheet, Part 1**
+
+[![Problem Solving Worksheet, Part 1](/resources/emotion-regulation/emotion-regulation-p054.jpg){.img-fluid fig-alt="Problem Solving Worksheet, Part 1"}](/resources/emotion-regulation/emotion-regulation-p054.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p054.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Problem Solving Worksheet, Part 2**
+
+[![Problem Solving Worksheet, Part 2](/resources/emotion-regulation/emotion-regulation-p055.jpg){.img-fluid fig-alt="Problem Solving Worksheet, Part 2"}](/resources/emotion-regulation/emotion-regulation-p055.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p055.jpg)
+:::
+
+## Exercises {#exercises}
+
+::: {.bs-practice-resource}
+**Opposite Action to Change Emotions**
+
+[![Opposite Action to Change Emotions](/resources/emotion-regulation/emotion-regulation-p053.jpg){.img-fluid fig-alt="Opposite Action to Change Emotions"}](/resources/emotion-regulation/emotion-regulation-p053.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p053.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**Opposite Action Elevator Example**
+
+[![Opposite Action Elevator Example](/resources/emotion-regulation/emotion-regulation-p043.jpg){.img-fluid fig-alt="Opposite Action Elevator Example"}](/resources/emotion-regulation/emotion-regulation-p043.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p043.jpg)
+:::
+
+<!-- section-scan-resources:end -->

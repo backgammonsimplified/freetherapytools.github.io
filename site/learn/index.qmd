@@ -1,6 +1,6 @@
 ---
 title: "DBT Skills"
-description: "A binder-led catalogue containing only the five DBT-oriented curriculum tracks."
+description: "Five DBT-oriented curriculum tracks with lessons and practice materials."
 sidebar: learn
 page-layout: full
 bibliography: ../references.bib

@@ -676,7 +676,10 @@
       return;
     }
 
-    fetch(manifestRoute(window.location.pathname), { credentials: "same-origin" })
+    fetch(manifestRoute(window.location.pathname), {
+      cache: "no-store",
+      credentials: "same-origin"
+    })
       .then(function (response) {
         if (!response.ok) {
           throw new Error("Learn sequence failed to load");

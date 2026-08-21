@@ -1,9 +1,9 @@
 ---
-title: "Pros and Cons"
+title: "Pros & Cons"
 description: "Compare the short- and long-term effects of acting on or resisting an urge."
 sidebar: learn
 learn-track: doubling-cube
-learn-order: 6
+learn-order: 5
 categories:
   - Beginner
 tags:
@@ -21,24 +21,46 @@ execute:
 
 A pros-and-cons grid slows urgent decisions down and brings longer-term consequences back into view.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### Pros and Cons - binder-p0120 {#binder-p0120}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0120
+::: {.bs-practice-resource}
+**Pros and Cons**
 
-<!-- binder-resource: binder-p0120 -->
+[![Pros and Cons](/resources/distress-tolerance/distress-tolerance-p030.jpg){.img-fluid fig-alt="Pros and Cons"}](/resources/distress-tolerance/distress-tolerance-p030.jpg)
 
-[![Preview of Pros and Cons (binder-p0120)](../../assets/binder/binder-p0120.jpg){.img-fluid fig-alt="Preview of Pros and Cons (binder-p0120)"}](../../assets/binder/binder-p0120.jpg)
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p030.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0120.jpg)
+## Practice Materials {#practice-materials}
 
-### Pros and Cons - binder-p0121 {#binder-p0121}
+::: {.bs-practice-resource}
+**Pros and Cons of Acting on Crisis Urges**
 
-binder-p0121
+[![Pros and Cons of Acting on Crisis Urges](/resources/distress-tolerance/distress-tolerance-p032.jpg){.img-fluid fig-alt="Pros and Cons of Acting on Crisis Urges"}](/resources/distress-tolerance/distress-tolerance-p032.jpg)
 
-<!-- binder-resource: binder-p0121 -->
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p032.jpg)
+:::
 
-[![Preview of Pros and Cons (binder-p0121)](../../assets/binder/binder-p0121.jpg){.img-fluid fig-alt="Preview of Pros and Cons (binder-p0121)"}](../../assets/binder/binder-p0121.jpg)
+## Exercises {#exercises}
 
-[Open full page](../../assets/binder/binder-p0121.jpg)
+::: {.bs-practice-resource}
+**Pros and Cons Practice**
+
+[![Pros and Cons Practice](/resources/distress-tolerance/distress-tolerance-p033.jpg){.img-fluid fig-alt="Pros and Cons Practice"}](/resources/distress-tolerance/distress-tolerance-p033.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p033.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**Pros and Cons: How To**
+
+[![Pros and Cons: How To](/resources/distress-tolerance/distress-tolerance-p031.jpg){.img-fluid fig-alt="Pros and Cons: How To"}](/resources/distress-tolerance/distress-tolerance-p031.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p031.jpg)
+:::
+
+<!-- section-scan-resources:end -->

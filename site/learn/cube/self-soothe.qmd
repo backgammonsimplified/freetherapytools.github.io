@@ -1,6 +1,6 @@
 ---
-title: "Self-Soothe with the 5 Senses"
-description: "Use sensory experiences to care for yourself during distress."
+title: "Distraction & Self-Soothing"
+description: "Use ACCEPTS and the five senses to get through distress without making it worse."
 sidebar: learn
 learn-track: doubling-cube
 learn-order: 3
@@ -19,36 +19,92 @@ execute:
   enabled: false
 ---
 
-Self-soothing means intentionally choosing comforting experiences through your senses.
+Distraction and self-soothing can help you get through a crisis until you can respond more effectively.
 
-## Vision {#vision}
+## Wise Mind ACCEPTS {#wise-mind-accepts}
 
-## Hearing {#hearing}
+### Activities {#activities}
 
-## Taste {#taste}
+### Contributing {#contributing}
 
-## Smell {#smell}
+### Comparisons {#comparisons}
 
-## Touch {#touch}
+### Emotions / Opposite Emotion {#opposite-emotion}
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+### Pushing Away {#pushing-away}
 
-### Self-Soothe with the 5 Senses - binder-p0124 {#binder-p0124}
+### Thoughts {#thoughts}
 
-binder-p0124
+### Sensations {#sensations}
 
-<!-- binder-resource: binder-p0124 -->
+## Self-Soothing with the Five Senses {#self-soothing-five-senses}
 
-[![Preview of Self-Soothe with the 5 Senses (binder-p0124)](../../assets/binder/binder-p0124.jpg){.img-fluid fig-alt="Preview of Self-Soothe with the 5 Senses (binder-p0124)"}](../../assets/binder/binder-p0124.jpg)
+### Vision {#vision}
 
-[Open full page](../../assets/binder/binder-p0124.jpg)
+### Hearing {#hearing}
 
-### Self-Soothe with the 5 Senses - binder-p0125 {#binder-p0125}
+### Taste {#taste}
 
-binder-p0125
+### Smell {#smell}
 
-<!-- binder-resource: binder-p0125 -->
+### Touch {#touch}
 
-[![Preview of Self-Soothe with the 5 Senses (binder-p0125)](../../assets/binder/binder-p0125.jpg){.img-fluid fig-alt="Preview of Self-Soothe with the 5 Senses (binder-p0125)"}](../../assets/binder/binder-p0125.jpg)
+<!-- section-scan-resources:start -->
 
-[Open full page](../../assets/binder/binder-p0125.jpg)
+## Handouts & Worksheets {#handouts-worksheets}
+
+::: {.bs-practice-resource}
+**Distracting with Wise Mind ACCEPTS**
+
+[![Distracting with Wise Mind ACCEPTS](/resources/distress-tolerance/distress-tolerance-p018.jpg){.img-fluid fig-alt="Distracting with Wise Mind ACCEPTS"}](/resources/distress-tolerance/distress-tolerance-p018.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p018.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Self-Soothing**
+
+[![Self-Soothing](/resources/distress-tolerance/distress-tolerance-p020.jpg){.img-fluid fig-alt="Self-Soothing"}](/resources/distress-tolerance/distress-tolerance-p020.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p020.jpg)
+:::
+
+## Practice Materials {#practice-materials}
+
+::: {.bs-practice-resource}
+**Distracting with Wise Mind ACCEPTS**
+
+[![Distracting with Wise Mind ACCEPTS](/resources/distress-tolerance/distress-tolerance-p022.jpg){.img-fluid fig-alt="Distracting with Wise Mind ACCEPTS"}](/resources/distress-tolerance/distress-tolerance-p022.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p022.jpg)
+:::
+
+## Exercises {#exercises}
+
+::: {.bs-practice-resource}
+**Self-Soothing Practice**
+
+[![Self-Soothing Practice](/resources/distress-tolerance/distress-tolerance-p021.jpg){.img-fluid fig-alt="Self-Soothing Practice"}](/resources/distress-tolerance/distress-tolerance-p021.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p021.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Creating a Self-Soothing Kit**
+
+[![Creating a Self-Soothing Kit](/resources/distress-tolerance/distress-tolerance-p023.jpg){.img-fluid fig-alt="Creating a Self-Soothing Kit"}](/resources/distress-tolerance/distress-tolerance-p023.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p023.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**Wise Mind ACCEPTS Overview**
+
+[![Wise Mind ACCEPTS Overview](/resources/distress-tolerance/distress-tolerance-p019.jpg){.img-fluid fig-alt="Wise Mind ACCEPTS Overview"}](/resources/distress-tolerance/distress-tolerance-p019.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p019.jpg)
+:::
+
+<!-- section-scan-resources:end -->

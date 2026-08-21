@@ -1,5 +1,5 @@
 ---
-title: "Goal Setting Guidelines and SMART Goals"
+title: "Goal Setting Guidelines"
 description: "Set meaningful goals and turn them into specific, measurable steps."
 sidebar: learn
 learn-track: goal-setting
@@ -28,24 +28,34 @@ Choose goals that matter to you, are realistic for your current circumstances, a
 
 A SMART goal is specific, measurable, achievable, relevant, and time-bound.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### Goal Setting Guidelines - binder-p0144 {#binder-p0144}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0144
+::: {.bs-practice-resource}
+**Goal Setting Guidelines**
 
-<!-- binder-resource: binder-p0144 -->
+[![Goal Setting Guidelines](/resources/goal-setting/goal-setting-p003.jpg){.img-fluid fig-alt="Goal Setting Guidelines"}](/resources/goal-setting/goal-setting-p003.jpg)
 
-[![Preview of Goal Setting Guidelines (binder-p0144)](../../assets/binder/binder-p0144.jpg){.img-fluid fig-alt="Preview of Goal Setting Guidelines (binder-p0144)"}](../../assets/binder/binder-p0144.jpg)
+[Download / View Handout](/resources/goal-setting/goal-setting-p003.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0144.jpg)
+::: {.bs-practice-resource}
+**SMART Goal Setting**
 
-### Goal Setting Guidelines - binder-p0145 {#binder-p0145}
+[![SMART Goal Setting](/resources/goal-setting/goal-setting-p004.jpg){.img-fluid fig-alt="SMART Goal Setting"}](/resources/goal-setting/goal-setting-p004.jpg)
 
-binder-p0145
+[Download / View Handout](/resources/goal-setting/goal-setting-p004.jpg)
+:::
 
-<!-- binder-resource: binder-p0145 -->
+## Practice Materials {#practice-materials}
 
-[![Preview of Goal Setting Guidelines (binder-p0145)](../../assets/binder/binder-p0145.jpg){.img-fluid fig-alt="Preview of Goal Setting Guidelines (binder-p0145)"}](../../assets/binder/binder-p0145.jpg)
+::: {.bs-practice-resource}
+**Case Map**
 
-[Open full page](../../assets/binder/binder-p0145.jpg)
+[![Case Map](/resources/goal-setting/goal-setting-p002.jpg){.img-fluid fig-alt="Case Map"}](/resources/goal-setting/goal-setting-p002.jpg)
+
+[Download / View Handout](/resources/goal-setting/goal-setting-p002.jpg)
+:::
+
+<!-- section-scan-resources:end -->

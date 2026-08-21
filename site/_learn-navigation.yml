@@ -8,90 +8,76 @@ website:
       contents:
         - text: "DBT Skills Home"
           href: learn/index.qmd
-        - section: "Daily Goal Setting and Tracking"
+        - section: "Goal Setting & Tracking"
           href: learn/goal-setting/index.qmd
           contents:
-            - text: "1. Goal Setting Guidelines and SMART Goals"
+            - text: "1. Goal Setting Guidelines"
               href: learn/goal-setting/goal-setting-guidelines.qmd
-            - text: "2. Strengths"
+            - text: "2. Skills & Strengths List"
               href: learn/goal-setting/strengths.qmd
-            - text: "3. Weekly Goals and Home Practice"
+            - text: "3. Weekly Goal Worksheets"
               href: learn/goal-setting/weekly-goals-home-practice.qmd
-            - text: "4. Daily Tracking"
+            - text: "4. Weekly Home Practice Trackers"
               href: learn/goal-setting/daily-tracking.qmd
         - section: "Distress Tolerance"
           href: learn/cube/index.qmd
           contents:
-            - text: "1. STOP and Crisis Survival"
+            - text: "1. Introduction & STOP"
               href: learn/cube/stop-crisis-survival.qmd
             - text: "2. TIPP"
               href: learn/cube/tipp.qmd
-            - text: "3. Self-Soothe with the 5 Senses"
+            - text: "3. Distraction & Self-Soothing"
               href: learn/cube/self-soothe.qmd
-            - text: "4. Wise Mind ACCEPTS / Distraction"
-              href: learn/cube/accepts.qmd
-            - text: "5. IMPROVE the Moment"
+            - text: "4. IMPROVE"
               href: learn/cube/improve.qmd
-            - text: "6. Pros and Cons"
+            - text: "5. Pros & Cons"
               href: learn/cube/pros-and-cons.qmd
-            - text: "7. Radical Acceptance"
+            - text: "6. Radical Acceptance"
               href: learn/cube/radical-acceptance.qmd
-            - text: "8. Willingness, Willing Hands, and Half-Smiling"
-              href: learn/cube/willingness-willing-hands.qmd
-            - text: "9. Window of Tolerance"
-              href: learn/cube/window-of-tolerance.qmd
         - section: "Interpersonal Effectiveness"
           href: learn/interpersonal-effectiveness/index.qmd
           contents:
             - text: "1. Boundaries"
               href: learn/interpersonal-effectiveness/boundaries.qmd
-            - text: "2. Clarifying Priorities"
+            - text: "2. Clarifying Priorities & Myths"
               href: learn/interpersonal-effectiveness/clarifying-priorities.qmd
             - text: "3. DEAR MAN"
               href: learn/interpersonal-effectiveness/dear-man.qmd
-            - text: "4. GIVE"
+            - text: "4. DEAR + GIVE"
               href: learn/interpersonal-effectiveness/give.qmd
-            - text: "5. FAST"
+            - text: "5. DEAR + FAST"
               href: learn/interpersonal-effectiveness/fast.qmd
-            - text: "6. Walking the Middle Path"
-              href: learn/interpersonal-effectiveness/walking-the-middle-path.qmd
-            - text: "7. Saying No and Choosing Intensity"
+            - text: "6. How to Ask & Say No & Troubleshooting"
               href: learn/interpersonal-effectiveness/saying-no.qmd
         - section: "Wellness"
           href: learn/wellness/index.qmd
           contents:
-            - text: "1. Wellness and PLEASE Body Care"
-              href: learn/wellness/wellness-overview.qmd
-            - text: "2. Sleep"
+            - text: "1. Sleep"
               href: learn/wellness/sleep.qmd
-            - text: "3. Behavioral Activation"
+            - text: "2. Behaviour Activation"
               href: learn/wellness/behavioral-activation.qmd
-            - text: "4. Behaviour Chain Analysis and Missing Links"
+            - text: "3. Behaviour Chain Analysis and Missing Links"
               href: learn/wellness/behavior-chain-missing-links.qmd
-            - text: "5. Maladaptive Coping Behaviours"
+            - text: "4. Addictions"
               href: learn/wellness/maladaptive-coping.qmd
-            - text: "6. Balanced Eating"
+            - text: "5. Balanced Eating"
               href: learn/wellness/balanced-eating.qmd
-            - text: "7. Medication and Doctor Visits"
+            - text: "6. Medication & Doctor's Visits"
               href: learn/wellness/medication-doctor-visits.qmd
         - section: "Emotion Regulation"
           href: learn/emotion-regulation/index.qmd
           contents:
-            - text: "1. Objectives and Overview"
-              href: learn/emotion-regulation/emotion-regulation-overview.qmd
-            - text: "2. What Emotions Do for You"
+            - text: "1. What Emotions Do for You"
               href: learn/emotion-regulation/what-emotions-do.qmd
-            - text: "3. Observing and Describing Emotions"
+            - text: "2. Emotions"
               href: learn/emotion-regulation/observing-describing-emotions.qmd
-            - text: "4. Check the Facts"
+            - text: "3. Check the Facts"
               href: learn/emotion-regulation/check-the-facts.qmd
-            - text: "5. Opposite Action"
+            - text: "4. Opposite Action & Problem Solving"
               href: learn/emotion-regulation/opposite-action.qmd
-            - text: "6. Problem Solving"
-              href: learn/emotion-regulation/problem-solving.qmd
-            - text: "7. ABC PLEASE"
+            - text: "5. Accumulating Positive Emotions"
               href: learn/emotion-regulation/abc-please.qmd
-            - text: "8. Positive Emotions, Build Mastery, and Cope Ahead"
+            - text: "6. Building Mastery & Cope Ahead"
               href: learn/emotion-regulation/positive-emotions-mastery-cope-ahead.qmd
     - id: cbt
       title: "CBT Skills"
@@ -149,31 +135,3 @@ website:
               href: learn/mindfulness/grounding.qmd
             - text: "12. Being Mind and Doing Mind"
               href: learn/mindfulness/being-mind-doing-mind.qmd
-    - id: review
-      title: "Curriculum Review"
-      style: docked
-      collapse-level: 2
-      contents:
-        - text: "Review Home"
-          href: review/index.qmd
-        - section: "Other Skills / Resources"
-          href: learn/other-resources/index.qmd
-          contents:
-            - text: "1. Community Resources"
-              href: learn/other-resources/community-resources.qmd
-            - text: "2. Creative Practice"
-              href: learn/other-resources/creative-practice.qmd
-            - text: "3. Skills Use Guideline"
-              href: learn/other-resources/skills-use-guideline.qmd
-            - text: "4. Crisis and Safety Resources"
-              href: learn/other-resources/crisis-and-safety-resources.qmd
-            - text: "5. Review: Challenging Negative Thoughts"
-              href: learn/cbt-anxiety/challenging-negative-thoughts.qmd
-            - text: "6. Review: Worry Time"
-              href: learn/cbt-anxiety/worry-time.qmd
-            - text: "7. Review: Calming and Reflection Tools"
-              href: learn/cbt-anxiety/calming-reflection.qmd
-            - text: "8. Review: Five Factor Model and Worry Tree"
-              href: learn/cbt-anxiety/five-factor-worry-tree.qmd
-            - text: "9. Review: WHAT Skills Placement"
-              href: learn/other-resources/mindfulness-placement-review.qmd

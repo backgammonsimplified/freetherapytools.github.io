@@ -42,8 +42,6 @@ GENERATED_MINDFULNESS_CATALOGUE_PATH = (
 GENERATED_MINDFULNESS_SEQUENCE_PATH = (
     SITE_ROOT / "assets" / "bs-mindfulness-sequence.json"
 )
-GENERATED_REVIEW_CATALOGUE_PATH = SITE_ROOT / "review" / "_lesson-catalogue.html"
-GENERATED_REVIEW_SEQUENCE_PATH = SITE_ROOT / "assets" / "bs-review-sequence.json"
 GENERATED_RESEARCH_SEQUENCE_PATH = (
     SITE_ROOT / "assets" / "bs-research-sequence.json"
 )
@@ -122,13 +120,6 @@ LEARN_SECTIONS = {
         "home_text": "Mindfulness Home",
         "home_source": "mindfulness/index.qmd",
         "track_ids": ("mindfulness",),
-    },
-    "review": {
-        "sidebar_id": "review",
-        "title": "Curriculum Review",
-        "home_text": "Review Home",
-        "home_source": "review/index.qmd",
-        "track_ids": ("other-resources",),
     },
 }
 GLOSSARY_CATEGORIES = (
@@ -2160,7 +2151,6 @@ def generated_outputs(
     dbt_curriculum = curriculum_for_section(curriculum, "dbt")
     cbt_curriculum = curriculum_for_section(curriculum, "cbt")
     mindfulness_curriculum = curriculum_for_section(curriculum, "mindfulness")
-    review_curriculum = curriculum_for_section(curriculum, "review")
     outputs = {
         GENERATED_LESSON_CATALOGUE_PATH: build_lesson_catalogue_html(
             entries, dbt_curriculum
@@ -2170,9 +2160,6 @@ def generated_outputs(
         ),
         GENERATED_MINDFULNESS_CATALOGUE_PATH: build_lesson_catalogue_html(
             entries, mindfulness_curriculum, selected_track_id="mindfulness"
-        ),
-        GENERATED_REVIEW_CATALOGUE_PATH: build_lesson_catalogue_html(
-            entries, review_curriculum, selected_track_id="other-resources"
         ),
         GENERATED_NAVIGATION_PATH: build_navigation_yaml(curriculum),
         GENERATED_ENTRIES_PATH: build_entries_html(
@@ -2189,9 +2176,6 @@ def generated_outputs(
         ),
         GENERATED_MINDFULNESS_SEQUENCE_PATH: json_text(
             build_learn_sequence(mindfulness_curriculum)
-        ),
-        GENERATED_REVIEW_SEQUENCE_PATH: json_text(
-            build_learn_sequence(review_curriculum)
         ),
         GENERATED_RESEARCH_SEQUENCE_PATH: json_text(
             build_research_sequence(research_articles)

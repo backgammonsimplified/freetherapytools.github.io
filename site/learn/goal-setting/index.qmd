@@ -1,6 +1,6 @@
 ---
-title: "Daily Goal Setting and Tracking"
-description: "Binder-led daily goal setting and tracking lessons and resources."
+title: "Goal Setting & Tracking"
+description: "Set meaningful goals, recognize strengths, and use weekly practice tools."
 sidebar: learn
 learn-track-index: goal-setting
 learn-track-order: 1
@@ -16,7 +16,5 @@ lesson-taxonomy: false
 1. Set and achieve meaningful goals.
 2. Engage in behavioural activation.
 3. Through mastering and practicing skills, work towards developing a life worth living.
-
-These objectives and the binder lesson outline are recorded from [binder-p0144](goal-setting-guidelines.qmd#binder-p0144).
 
 {{< include _lesson-index.html >}}

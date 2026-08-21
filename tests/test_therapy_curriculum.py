@@ -21,18 +21,17 @@ class TherapyCurriculumTests(unittest.TestCase):
         self.assertEqual(
             [track["title"] for track in curriculum],
             [
-                "Daily Goal Setting and Tracking",
+                "Goal Setting & Tracking",
                 "Distress Tolerance",
                 "Interpersonal Effectiveness",
                 "Wellness",
                 "Emotion Regulation",
                 "Mindfulness",
                 "CBT Skills",
-                "Other Skills / Resources",
             ],
         )
-        self.assertEqual(len(lessons), 62)
-        expected_counts = {"dbt": 35, "cbt": 6, "mindfulness": 12, "review": 9}
+        self.assertEqual(len(lessons), 46)
+        expected_counts = {"dbt": 28, "cbt": 6, "mindfulness": 12}
         for section_id, expected_count in expected_counts.items():
             section = learn_glossary.curriculum_for_section(curriculum, section_id)
             sequence = learn_glossary.build_learn_sequence(section)
@@ -56,7 +55,7 @@ class TherapyCurriculumTests(unittest.TestCase):
                 "progressive-muscle-relaxation",
                 "paced-breathing",
             ],
-            "cube/accepts.qmd": [
+            "cube/self-soothe.qmd": [
                 "activities",
                 "contributing",
                 "comparisons",
@@ -64,6 +63,11 @@ class TherapyCurriculumTests(unittest.TestCase):
                 "pushing-away",
                 "thoughts",
                 "sensations",
+                "vision",
+                "hearing",
+                "taste",
+                "smell",
+                "touch",
             ],
             "cube/improve.qmd": [
                 "imagery",
@@ -73,6 +77,12 @@ class TherapyCurriculumTests(unittest.TestCase):
                 "one-thing-in-the-moment",
                 "vacation",
                 "self-encouragement",
+            ],
+            "cube/radical-acceptance.qmd": [
+                "turning-the-mind",
+                "willingness",
+                "willing-hands",
+                "half-smiling",
             ],
             "interpersonal-effectiveness/dear-man.qmd": [
                 "describe",
@@ -128,10 +138,9 @@ class TherapyCurriculumTests(unittest.TestCase):
         self.assertIn('id: cbt', navigation)
         self.assertIn('id: mindfulness', navigation)
         expected = {
-            "bs-learn-sequence.json": 35,
+            "bs-learn-sequence.json": 28,
             "bs-cbt-sequence.json": 6,
             "bs-mindfulness-sequence.json": 12,
-            "bs-review-sequence.json": 9,
         }
         for filename, count in expected.items():
             sequence = yaml.safe_load(
@@ -139,7 +148,7 @@ class TherapyCurriculumTests(unittest.TestCase):
             )
             self.assertEqual(len(sequence["lessons"]), count)
 
-    def test_cbt_index_uses_binder_objectives_and_exact_lesson_order(self) -> None:
+    def test_cbt_index_uses_source_objectives_and_exact_lesson_order(self) -> None:
         source = (ROOT / "site" / "cbt-skills" / "index.qmd").read_text(
             encoding="utf-8"
         )

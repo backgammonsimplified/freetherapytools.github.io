@@ -1,9 +1,9 @@
 ---
-title: "Medication and Doctor Visits"
+title: "Medication & Doctor's Visits"
 description: "Prepare for appointments and track medication information clearly."
 sidebar: learn
 learn-track: wellness
-learn-order: 7
+learn-order: 6
 categories:
   - Beginner
 tags:
@@ -20,34 +20,102 @@ execute:
 
 These tools support accurate communication with prescribers and other health-care providers.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### My Current Medications - binder-p0054 {#binder-p0054}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0054
+::: {.bs-practice-resource}
+**Tips for Managing Appointments**
 
-<!-- binder-resource: binder-p0054 -->
+[![Tips for Managing Appointments](/resources/wellness/wellness-p053.jpg){.img-fluid fig-alt="Tips for Managing Appointments"}](/resources/wellness/wellness-p053.jpg)
 
-[![Preview of My Current Medications (binder-p0054)](../../assets/binder/binder-p0054.jpg){.img-fluid fig-alt="Preview of My Current Medications (binder-p0054)"}](../../assets/binder/binder-p0054.jpg)
+[Download / View Handout](/resources/wellness/wellness-p053.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0054.jpg)
+::: {.bs-practice-resource}
+**Myths About Psychiatric Medication, Part 1**
 
-### Medication and Doctor Visits - binder-p0056 {#binder-p0056}
+[![Myths About Psychiatric Medication, Part 1](/resources/wellness/wellness-p055.jpg){.img-fluid fig-alt="Myths About Psychiatric Medication, Part 1"}](/resources/wellness/wellness-p055.jpg)
 
-binder-p0056
+[Download / View Handout](/resources/wellness/wellness-p055.jpg)
+:::
 
-<!-- binder-resource: binder-p0056 -->
+::: {.bs-practice-resource}
+**Myths About Psychiatric Medication, Part 2**
 
-[![Preview of Medication and Doctor Visits (binder-p0056)](../../assets/binder/binder-p0056.jpg){.img-fluid fig-alt="Preview of Medication and Doctor Visits (binder-p0056)"}](../../assets/binder/binder-p0056.jpg)
+[![Myths About Psychiatric Medication, Part 2](/resources/wellness/wellness-p056.jpg){.img-fluid fig-alt="Myths About Psychiatric Medication, Part 2"}](/resources/wellness/wellness-p056.jpg)
 
-[Open full page](../../assets/binder/binder-p0056.jpg)
+[Download / View Handout](/resources/wellness/wellness-p056.jpg)
+:::
 
-### Medication and Doctor Visits - binder-p0057 {#binder-p0057}
+## Practice Materials {#practice-materials}
 
-binder-p0057
+::: {.bs-practice-resource}
+**Questions for Your Doctor and Appointment Reminder**
 
-<!-- binder-resource: binder-p0057 -->
+[![Questions for Your Doctor and Appointment Reminder](/resources/wellness/wellness-p054.jpg){.img-fluid fig-alt="Questions for Your Doctor and Appointment Reminder"}](/resources/wellness/wellness-p054.jpg)
 
-[![Preview of Medication and Doctor Visits (binder-p0057)](../../assets/binder/binder-p0057.jpg){.img-fluid fig-alt="Preview of Medication and Doctor Visits (binder-p0057)"}](../../assets/binder/binder-p0057.jpg)
+[Download / View Handout](/resources/wellness/wellness-p054.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0057.jpg)
+::: {.bs-practice-resource}
+**My Current Medications**
+
+[![My Current Medications](/resources/wellness/wellness-p060.jpg){.img-fluid fig-alt="My Current Medications"}](/resources/wellness/wellness-p060.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p060.jpg)
+:::
+
+::: {.bs-practice-resource}
+**My Current Medications: Extended**
+
+[![My Current Medications: Extended](/resources/wellness/wellness-p061.jpg){.img-fluid fig-alt="My Current Medications: Extended"}](/resources/wellness/wellness-p061.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p061.jpg)
+:::
+
+## Exercises {#exercises}
+
+::: {.bs-practice-resource}
+**Doctor Appointment Barriers**
+
+[![Doctor Appointment Barriers](/resources/wellness/wellness-p052.jpg){.img-fluid fig-alt="Doctor Appointment Barriers"}](/resources/wellness/wellness-p052.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p052.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**Medication Reminder Tools**
+
+[![Medication Reminder Tools](/resources/wellness/wellness-p057.jpg){.img-fluid fig-alt="Medication Reminder Tools"}](/resources/wellness/wellness-p057.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p057.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Medication Organizers**
+
+[![Medication Organizers](/resources/wellness/wellness-p058.jpg){.img-fluid fig-alt="Medication Organizers"}](/resources/wellness/wellness-p058.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p058.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Alarms and Medication Dispensers**
+
+[![Alarms and Medication Dispensers](/resources/wellness/wellness-p059.jpg){.img-fluid fig-alt="Alarms and Medication Dispensers"}](/resources/wellness/wellness-p059.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p059.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Health Care Connect**
+
+[![Health Care Connect](/resources/wellness/wellness-p062.jpg){.img-fluid fig-alt="Health Care Connect"}](/resources/wellness/wellness-p062.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p062.jpg)
+:::
+
+<!-- section-scan-resources:end -->

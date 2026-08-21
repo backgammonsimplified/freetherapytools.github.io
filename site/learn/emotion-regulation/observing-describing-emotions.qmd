@@ -1,9 +1,9 @@
 ---
-title: "Observing and Describing Emotions"
+title: "Emotions"
 description: "Name prompting events, interpretations, body changes, urges, actions, and aftereffects."
 sidebar: learn
 learn-track: emotion-regulation
-learn-order: 3
+learn-order: 2
 categories:
   - Beginner
 tags:
@@ -20,54 +20,144 @@ execute:
 
 Detailed observation separates the parts of an emotional response and makes patterns easier to understand.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+For a cross-curriculum skills-selection reference, use the [Emotional Overload & Emotional Numbness Skills Guide](/resources/general/general-p004.jpg), which also remains available in [Skill Finder](/skill-finder/).
 
-### Observing and Describing Emotions - binder-p0043 {#binder-p0043}
+<!-- section-scan-resources:start -->
 
-binder-p0043
+## Handouts & Worksheets {#handouts-worksheets}
 
-<!-- binder-resource: binder-p0043 -->
+::: {.bs-practice-resource}
+**Ways to Describe Emotions: Anger**
 
-[![Preview of Observing and Describing Emotions (binder-p0043)](../../assets/binder/binder-p0043.jpg){.img-fluid fig-alt="Preview of Observing and Describing Emotions (binder-p0043)"}](../../assets/binder/binder-p0043.jpg)
+[![Ways to Describe Emotions: Anger](/resources/emotion-regulation/emotion-regulation-p014.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Anger"}](/resources/emotion-regulation/emotion-regulation-p014.jpg)
 
-[Open full page](../../assets/binder/binder-p0043.jpg)
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p014.jpg)
+:::
 
-### Observing and Describing Emotions - binder-p0044 {#binder-p0044}
+::: {.bs-practice-resource}
+**Ways to Describe Emotions: Disgust**
 
-binder-p0044
+[![Ways to Describe Emotions: Disgust](/resources/emotion-regulation/emotion-regulation-p015.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Disgust"}](/resources/emotion-regulation/emotion-regulation-p015.jpg)
 
-<!-- binder-resource: binder-p0044 -->
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p015.jpg)
+:::
 
-[![Preview of Observing and Describing Emotions (binder-p0044)](../../assets/binder/binder-p0044.jpg){.img-fluid fig-alt="Preview of Observing and Describing Emotions (binder-p0044)"}](../../assets/binder/binder-p0044.jpg)
+::: {.bs-practice-resource}
+**Ways to Describe Emotions: Envy**
 
-[Open full page](../../assets/binder/binder-p0044.jpg)
+[![Ways to Describe Emotions: Envy](/resources/emotion-regulation/emotion-regulation-p016.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Envy"}](/resources/emotion-regulation/emotion-regulation-p016.jpg)
 
-### Observing and Describing Emotions - binder-p0045 {#binder-p0045}
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p016.jpg)
+:::
 
-binder-p0045
+::: {.bs-practice-resource}
+**Ways to Describe Emotions: Fear**
 
-<!-- binder-resource: binder-p0045 -->
+[![Ways to Describe Emotions: Fear](/resources/emotion-regulation/emotion-regulation-p017.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Fear"}](/resources/emotion-regulation/emotion-regulation-p017.jpg)
 
-[![Preview of Observing and Describing Emotions (binder-p0045)](../../assets/binder/binder-p0045.jpg){.img-fluid fig-alt="Preview of Observing and Describing Emotions (binder-p0045)"}](../../assets/binder/binder-p0045.jpg)
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p017.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0045.jpg)
+::: {.bs-practice-resource}
+**Ways to Describe Emotions: Happiness**
 
-### Observing and Describing Emotions - binder-p0046 {#binder-p0046}
+[![Ways to Describe Emotions: Happiness](/resources/emotion-regulation/emotion-regulation-p018.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Happiness"}](/resources/emotion-regulation/emotion-regulation-p018.jpg)
 
-binder-p0046
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p018.jpg)
+:::
 
-<!-- binder-resource: binder-p0046 -->
+::: {.bs-practice-resource}
+**Ways to Describe Emotions: Jealousy**
 
-[![Preview of Observing and Describing Emotions (binder-p0046)](../../assets/binder/binder-p0046.jpg){.img-fluid fig-alt="Preview of Observing and Describing Emotions (binder-p0046)"}](../../assets/binder/binder-p0046.jpg)
+[![Ways to Describe Emotions: Jealousy](/resources/emotion-regulation/emotion-regulation-p019.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Jealousy"}](/resources/emotion-regulation/emotion-regulation-p019.jpg)
 
-[Open full page](../../assets/binder/binder-p0046.jpg)
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p019.jpg)
+:::
 
-### Feelings Wheel - binder-p0142 {#binder-p0142}
+::: {.bs-practice-resource}
+**Ways to Describe Emotions: Love**
 
-binder-p0142
+[![Ways to Describe Emotions: Love](/resources/emotion-regulation/emotion-regulation-p020.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Love"}](/resources/emotion-regulation/emotion-regulation-p020.jpg)
 
-<!-- binder-resource: binder-p0142 -->
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p020.jpg)
+:::
 
-[![Preview of Feelings Wheel (binder-p0142)](../../assets/binder/binder-p0142.jpg){.img-fluid fig-alt="Preview of Feelings Wheel (binder-p0142)"}](../../assets/binder/binder-p0142.jpg)
+::: {.bs-practice-resource}
+**Ways to Describe Emotions: Sadness**
 
-[Open full page](../../assets/binder/binder-p0142.jpg)
+[![Ways to Describe Emotions: Sadness](/resources/emotion-regulation/emotion-regulation-p021.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Sadness"}](/resources/emotion-regulation/emotion-regulation-p021.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p021.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Ways to Describe Emotions: Shame**
+
+[![Ways to Describe Emotions: Shame](/resources/emotion-regulation/emotion-regulation-p022.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Shame"}](/resources/emotion-regulation/emotion-regulation-p022.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p022.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Ways to Describe Emotions: Guilt**
+
+[![Ways to Describe Emotions: Guilt](/resources/emotion-regulation/emotion-regulation-p023.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Guilt"}](/resources/emotion-regulation/emotion-regulation-p023.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p023.jpg)
+:::
+
+## Practice Materials {#practice-materials}
+
+::: {.bs-practice-resource}
+**Understanding and Naming Your Emotions**
+
+[![Understanding and Naming Your Emotions](/resources/emotion-regulation/emotion-regulation-p024.jpg){.img-fluid fig-alt="Understanding and Naming Your Emotions"}](/resources/emotion-regulation/emotion-regulation-p024.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p024.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Observing and Describing Emotions**
+
+[![Observing and Describing Emotions](/resources/emotion-regulation/emotion-regulation-p025.jpg){.img-fluid fig-alt="Observing and Describing Emotions"}](/resources/emotion-regulation/emotion-regulation-p025.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p025.jpg)
+:::
+
+## Exercises {#exercises}
+
+::: {.bs-practice-resource}
+**Learning About Emotions**
+
+[![Learning About Emotions](/resources/emotion-regulation/emotion-regulation-p011.jpg){.img-fluid fig-alt="Learning About Emotions"}](/resources/emotion-regulation/emotion-regulation-p011.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p011.jpg)
+:::
+
+::: {.bs-practice-resource}
+**The Tangled Ball of Emotions**
+
+[![The Tangled Ball of Emotions](/resources/emotion-regulation/emotion-regulation-p026.jpg){.img-fluid fig-alt="The Tangled Ball of Emotions"}](/resources/emotion-regulation/emotion-regulation-p026.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p026.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Where Do I Feel Emotions?**
+
+[![Where Do I Feel Emotions?](/resources/emotion-regulation/emotion-regulation-p027.jpg){.img-fluid fig-alt="Where Do I Feel Emotions?"}](/resources/emotion-regulation/emotion-regulation-p027.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p027.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**Model for Describing Emotions**
+
+[![Model for Describing Emotions](/resources/emotion-regulation/emotion-regulation-p012.jpg){.img-fluid fig-alt="Model for Describing Emotions"}](/resources/emotion-regulation/emotion-regulation-p012.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p012.jpg)
+:::
+
+<!-- section-scan-resources:end -->

@@ -3,7 +3,7 @@ title: "Radical Acceptance"
 description: "Practice acknowledging reality as it is while still choosing what comes next."
 sidebar: learn
 learn-track: doubling-cube
-learn-order: 7
+learn-order: 6
 categories:
   - Beginner
 tags:
@@ -21,24 +21,146 @@ execute:
 
 Radical acceptance is recognizing reality without approval, passivity, or giving up.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+## Turning the Mind {#turning-the-mind}
 
-### Radical Acceptance - binder-p0114 {#binder-p0114}
+Turning the mind is the repeated choice to move from rejection toward acceptance.
 
-binder-p0114
+## Willingness {#willingness}
 
-<!-- binder-resource: binder-p0114 -->
+Willingness means doing what the situation calls for without adding avoidable resistance.
 
-[![Preview of Radical Acceptance (binder-p0114)](../../assets/binder/binder-p0114.jpg){.img-fluid fig-alt="Preview of Radical Acceptance (binder-p0114)"}](../../assets/binder/binder-p0114.jpg)
+## Willing Hands {#willing-hands}
 
-[Open full page](../../assets/binder/binder-p0114.jpg)
+## Half-Smiling {#half-smiling}
 
-### Factors That Interfere with Radical Acceptance - binder-p0117 {#binder-p0117}
+<!-- section-scan-resources:start -->
 
-binder-p0117
+## Handouts & Worksheets {#handouts-worksheets}
 
-<!-- binder-resource: binder-p0117 -->
+::: {.bs-practice-resource}
+**Turning the Mind**
 
-[![Preview of Factors That Interfere with Radical Acceptance (binder-p0117)](../../assets/binder/binder-p0117.jpg){.img-fluid fig-alt="Preview of Factors That Interfere with Radical Acceptance (binder-p0117)"}](../../assets/binder/binder-p0117.jpg)
+[![Turning the Mind](/resources/distress-tolerance/distress-tolerance-p005.jpg){.img-fluid fig-alt="Turning the Mind"}](/resources/distress-tolerance/distress-tolerance-p005.jpg)
 
-[Open full page](../../assets/binder/binder-p0117.jpg)
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p005.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Willingness**
+
+[![Willingness](/resources/distress-tolerance/distress-tolerance-p006.jpg){.img-fluid fig-alt="Willingness"}](/resources/distress-tolerance/distress-tolerance-p006.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p006.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Radical Acceptance**
+
+[![Radical Acceptance](/resources/distress-tolerance/distress-tolerance-p037.jpg){.img-fluid fig-alt="Radical Acceptance"}](/resources/distress-tolerance/distress-tolerance-p037.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p037.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Radical Acceptance: Factors That Interfere**
+
+[![Radical Acceptance: Factors That Interfere](/resources/distress-tolerance/distress-tolerance-p038.jpg){.img-fluid fig-alt="Radical Acceptance: Factors That Interfere"}](/resources/distress-tolerance/distress-tolerance-p038.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p038.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Practicing Radical Acceptance Step by Step**
+
+[![Practicing Radical Acceptance Step by Step](/resources/distress-tolerance/distress-tolerance-p040.jpg){.img-fluid fig-alt="Practicing Radical Acceptance Step by Step"}](/resources/distress-tolerance/distress-tolerance-p040.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p040.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Half-Smiling and Willing Hands**
+
+[![Half-Smiling and Willing Hands](/resources/distress-tolerance/distress-tolerance-p041.jpg){.img-fluid fig-alt="Half-Smiling and Willing Hands"}](/resources/distress-tolerance/distress-tolerance-p041.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p041.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Practicing Half-Smiling and Willing Hands, Part 1**
+
+[![Practicing Half-Smiling and Willing Hands, Part 1](/resources/distress-tolerance/distress-tolerance-p047.jpg){.img-fluid fig-alt="Practicing Half-Smiling and Willing Hands, Part 1"}](/resources/distress-tolerance/distress-tolerance-p047.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p047.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Practicing Half-Smiling and Willing Hands, Part 2**
+
+[![Practicing Half-Smiling and Willing Hands, Part 2](/resources/distress-tolerance/distress-tolerance-p048.jpg){.img-fluid fig-alt="Practicing Half-Smiling and Willing Hands, Part 2"}](/resources/distress-tolerance/distress-tolerance-p048.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p048.jpg)
+:::
+
+## Practice Materials {#practice-materials}
+
+::: {.bs-practice-resource}
+**Turning the Mind, Willingness, and Willfulness**
+
+[![Turning the Mind, Willingness, and Willfulness](/resources/distress-tolerance/distress-tolerance-p008.jpg){.img-fluid fig-alt="Turning the Mind, Willingness, and Willfulness"}](/resources/distress-tolerance/distress-tolerance-p008.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p008.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Radical Acceptance Practice**
+
+[![Radical Acceptance Practice](/resources/distress-tolerance/distress-tolerance-p046.jpg){.img-fluid fig-alt="Radical Acceptance Practice"}](/resources/distress-tolerance/distress-tolerance-p046.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p046.jpg)
+:::
+
+## Exercises {#exercises}
+
+::: {.bs-practice-resource}
+**Developing the Skill of Radical Acceptance**
+
+[![Developing the Skill of Radical Acceptance](/resources/distress-tolerance/distress-tolerance-p036.jpg){.img-fluid fig-alt="Developing the Skill of Radical Acceptance"}](/resources/distress-tolerance/distress-tolerance-p036.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p036.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**Dandelions**
+
+[![Dandelions](/resources/distress-tolerance/distress-tolerance-p035.jpg){.img-fluid fig-alt="Dandelions"}](/resources/distress-tolerance/distress-tolerance-p035.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p035.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Radical Acceptance Quick Reference**
+
+[![Radical Acceptance Quick Reference](/resources/distress-tolerance/distress-tolerance-p039.jpg){.img-fluid fig-alt="Radical Acceptance Quick Reference"}](/resources/distress-tolerance/distress-tolerance-p039.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p039.jpg)
+:::
+
+::: {.bs-practice-resource}
+**How to Solve a Problem**
+
+[![How to Solve a Problem](/resources/distress-tolerance/distress-tolerance-p043.jpg){.img-fluid fig-alt="How to Solve a Problem"}](/resources/distress-tolerance/distress-tolerance-p043.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p043.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Three Parts of Radical Acceptance**
+
+[![Three Parts of Radical Acceptance](/resources/distress-tolerance/distress-tolerance-p044.jpg){.img-fluid fig-alt="Three Parts of Radical Acceptance"}](/resources/distress-tolerance/distress-tolerance-p044.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p044.jpg)
+:::
+
+<!-- section-scan-resources:end -->

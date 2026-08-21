@@ -1,6 +1,6 @@
 ---
 title: "Mindfulness"
-description: "Binder-led mindfulness lessons and resources."
+description: "Twelve authored lessons for awareness, participation, compassion, grounding, and states of mind."
 sidebar: mindfulness
 learn-track-index: mindfulness
 learn-track-order: 6

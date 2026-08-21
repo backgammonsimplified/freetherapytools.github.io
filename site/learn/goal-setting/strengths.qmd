@@ -1,5 +1,5 @@
 ---
-title: "Strengths"
+title: "Skills & Strengths List"
 description: "Identify personal strengths that can support goals, coping, and recovery."
 sidebar: learn
 learn-track: goal-setting
@@ -44,14 +44,8 @@ Strengths are qualities and practices you can draw on while working toward chang
 - Asking for Help
 - Medication Adherence
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+The shared [Skills & Strengths List](/resources/general/general-p002.jpg) brings the curriculum's skills and strengths together in one quick reference.
 
-### Skills and Strengths List - binder-p0143 {#binder-p0143}
+<!-- section-scan-resources:start -->
 
-binder-p0143
-
-<!-- binder-resource: binder-p0143 -->
-
-[![Preview of Skills and Strengths List (binder-p0143)](../../assets/binder/binder-p0143.jpg){.img-fluid fig-alt="Preview of Skills and Strengths List (binder-p0143)"}](../../assets/binder/binder-p0143.jpg)
-
-[Open full page](../../assets/binder/binder-p0143.jpg)
+<!-- section-scan-resources:end -->

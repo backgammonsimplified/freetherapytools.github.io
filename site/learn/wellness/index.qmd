@@ -1,6 +1,6 @@
 ---
 title: "Wellness"
-description: "Binder-led wellness lessons and resources."
+description: "Six lessons for healthy routines, reducing vulnerabilities, and practical self-care."
 sidebar: learn
 learn-track-index: wellness
 learn-track-order: 4
@@ -11,5 +11,9 @@ term-lookup: false
 lesson-taxonomy: false
 ---
 
-{{< include _lesson-index.html >}}
+## Objectives {#objectives}
 
+1. The act of practising healthy habits on a daily and consistent basis to attain better physical and mental health outcomes.
+2. Address vulnerabilities that impact emotion mind.
+
+{{< include _lesson-index.html >}}

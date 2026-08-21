@@ -1,9 +1,9 @@
 ---
-title: "Positive Emotions, Build Mastery, and Cope Ahead"
-description: "Create positive experiences, practise competence, and rehearse difficult situations."
+title: "Building Mastery & Cope Ahead"
+description: "Practise competence and rehearse effective responses to difficult situations."
 sidebar: learn
 learn-track: emotion-regulation
-learn-order: 8
+learn-order: 6
 categories:
   - Beginner
 tags:
@@ -26,64 +26,78 @@ These practices strengthen resilience over time.
 
 ## Cope Ahead {#cope-ahead}
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### Positive Emotions, Build Mastery, and Cope Ahead - binder-p0026 {#binder-p0026}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0026
+::: {.bs-practice-resource}
+**Building Mastery**
 
-<!-- binder-resource: binder-p0026 -->
+[![Building Mastery](/resources/emotion-regulation/emotion-regulation-p071.jpg){.img-fluid fig-alt="Building Mastery"}](/resources/emotion-regulation/emotion-regulation-p071.jpg)
 
-[![Preview of Positive Emotions, Build Mastery, and Cope Ahead (binder-p0026)](../../assets/binder/binder-p0026.jpg){.img-fluid fig-alt="Preview of Positive Emotions, Build Mastery, and Cope Ahead (binder-p0026)"}](../../assets/binder/binder-p0026.jpg)
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p071.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0026.jpg)
+::: {.bs-practice-resource}
+**Changing Emotional Responses with Cope Ahead**
 
-### Positive Emotions, Build Mastery, and Cope Ahead - binder-p0027 {#binder-p0027}
+[![Changing Emotional Responses with Cope Ahead](/resources/emotion-regulation/emotion-regulation-p072.jpg){.img-fluid fig-alt="Changing Emotional Responses with Cope Ahead"}](/resources/emotion-regulation/emotion-regulation-p072.jpg)
 
-binder-p0027
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p072.jpg)
+:::
 
-<!-- binder-resource: binder-p0027 -->
+::: {.bs-practice-resource}
+**How to Cope Ahead**
 
-[![Preview of Positive Emotions, Build Mastery, and Cope Ahead (binder-p0027)](../../assets/binder/binder-p0027.jpg){.img-fluid fig-alt="Preview of Positive Emotions, Build Mastery, and Cope Ahead (binder-p0027)"}](../../assets/binder/binder-p0027.jpg)
+[![How to Cope Ahead](/resources/emotion-regulation/emotion-regulation-p073.jpg){.img-fluid fig-alt="How to Cope Ahead"}](/resources/emotion-regulation/emotion-regulation-p073.jpg)
 
-[Open full page](../../assets/binder/binder-p0027.jpg)
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p073.jpg)
+:::
 
-### Positive Emotions, Build Mastery, and Cope Ahead - binder-p0028 {#binder-p0028}
+## Practice Materials {#practice-materials}
 
-binder-p0028
+::: {.bs-practice-resource}
+**Cope Ahead Worksheet**
 
-<!-- binder-resource: binder-p0028 -->
+[![Cope Ahead Worksheet](/resources/emotion-regulation/emotion-regulation-p076.jpg){.img-fluid fig-alt="Cope Ahead Worksheet"}](/resources/emotion-regulation/emotion-regulation-p076.jpg)
 
-[![Preview of Positive Emotions, Build Mastery, and Cope Ahead (binder-p0028)](../../assets/binder/binder-p0028.jpg){.img-fluid fig-alt="Preview of Positive Emotions, Build Mastery, and Cope Ahead (binder-p0028)"}](../../assets/binder/binder-p0028.jpg)
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p076.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0028.jpg)
+## Exercises {#exercises}
 
-### Positive Emotions, Build Mastery, and Cope Ahead - binder-p0029 {#binder-p0029}
+::: {.bs-practice-resource}
+**Mastery Mind Map**
 
-binder-p0029
+[![Mastery Mind Map](/resources/emotion-regulation/emotion-regulation-p075.jpg){.img-fluid fig-alt="Mastery Mind Map"}](/resources/emotion-regulation/emotion-regulation-p075.jpg)
 
-<!-- binder-resource: binder-p0029 -->
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p075.jpg)
+:::
 
-[![Preview of Positive Emotions, Build Mastery, and Cope Ahead (binder-p0029)](../../assets/binder/binder-p0029.jpg){.img-fluid fig-alt="Preview of Positive Emotions, Build Mastery, and Cope Ahead (binder-p0029)"}](../../assets/binder/binder-p0029.jpg)
+::: {.bs-practice-resource}
+**Cope Ahead for the Holidays, Part 1**
 
-[Open full page](../../assets/binder/binder-p0029.jpg)
+[![Cope Ahead for the Holidays, Part 1](/resources/emotion-regulation/emotion-regulation-p077.jpg){.img-fluid fig-alt="Cope Ahead for the Holidays, Part 1"}](/resources/emotion-regulation/emotion-regulation-p077.jpg)
 
-### Positive Emotions, Build Mastery, and Cope Ahead - binder-p0030 {#binder-p0030}
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p077.jpg)
+:::
 
-binder-p0030
+::: {.bs-practice-resource}
+**Cope Ahead for the Holidays, Part 2**
 
-<!-- binder-resource: binder-p0030 -->
+[![Cope Ahead for the Holidays, Part 2](/resources/emotion-regulation/emotion-regulation-p078.jpg){.img-fluid fig-alt="Cope Ahead for the Holidays, Part 2"}](/resources/emotion-regulation/emotion-regulation-p078.jpg)
 
-[![Preview of Positive Emotions, Build Mastery, and Cope Ahead (binder-p0030)](../../assets/binder/binder-p0030.jpg){.img-fluid fig-alt="Preview of Positive Emotions, Build Mastery, and Cope Ahead (binder-p0030)"}](../../assets/binder/binder-p0030.jpg)
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p078.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0030.jpg)
+## Reference Materials {#reference-materials}
 
-### Positive Emotions, Build Mastery, and Cope Ahead - binder-p0032 {#binder-p0032}
+::: {.bs-practice-resource}
+**Mind Mapping and Mastery**
 
-binder-p0032
+[![Mind Mapping and Mastery](/resources/emotion-regulation/emotion-regulation-p074.jpg){.img-fluid fig-alt="Mind Mapping and Mastery"}](/resources/emotion-regulation/emotion-regulation-p074.jpg)
 
-<!-- binder-resource: binder-p0032 -->
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p074.jpg)
+:::
 
-[![Preview of Positive Emotions, Build Mastery, and Cope Ahead (binder-p0032)](../../assets/binder/binder-p0032.jpg){.img-fluid fig-alt="Preview of Positive Emotions, Build Mastery, and Cope Ahead (binder-p0032)"}](../../assets/binder/binder-p0032.jpg)
-
-[Open full page](../../assets/binder/binder-p0032.jpg)
+<!-- section-scan-resources:end -->

@@ -20,44 +20,68 @@ execute:
 
 Thinking traps are habits of interpretation. Naming one creates an opportunity to check it.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### Thinking Traps - binder-p0016 {#binder-p0016}
+## Practice Materials {#practice-materials}
 
-binder-p0016
+::: {.bs-practice-resource}
+**Testing Your Thoughts: Side One**
 
-<!-- binder-resource: binder-p0016 -->
+[![Testing Your Thoughts: Side One](/resources/cbt-skills/cbt-skills-p013.jpg){.img-fluid fig-alt="Testing Your Thoughts: Side One"}](/resources/cbt-skills/cbt-skills-p013.jpg)
 
-[![Preview of Thinking Traps (binder-p0016)](../../assets/binder/binder-p0016.jpg){.img-fluid fig-alt="Preview of Thinking Traps (binder-p0016)"}](../../assets/binder/binder-p0016.jpg)
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p013.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0016.jpg)
+::: {.bs-practice-resource}
+**Testing Your Thoughts: Side Two**
 
-### Thinking Traps - binder-p0017 {#binder-p0017}
+[![Testing Your Thoughts: Side Two](/resources/cbt-skills/cbt-skills-p015.jpg){.img-fluid fig-alt="Testing Your Thoughts: Side Two"}](/resources/cbt-skills/cbt-skills-p015.jpg)
 
-binder-p0017
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p015.jpg)
+:::
 
-<!-- binder-resource: binder-p0017 -->
+::: {.bs-practice-resource}
+**Identifying Thinking Traps, Part 1**
 
-[![Preview of Thinking Traps (binder-p0017)](../../assets/binder/binder-p0017.jpg){.img-fluid fig-alt="Preview of Thinking Traps (binder-p0017)"}](../../assets/binder/binder-p0017.jpg)
+[![Identifying Thinking Traps, Part 1](/resources/cbt-skills/cbt-skills-p017.jpg){.img-fluid fig-alt="Identifying Thinking Traps, Part 1"}](/resources/cbt-skills/cbt-skills-p017.jpg)
 
-[Open full page](../../assets/binder/binder-p0017.jpg)
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p017.jpg)
+:::
 
-### Thinking Traps - binder-p0018 {#binder-p0018}
+::: {.bs-practice-resource}
+**Identifying Thinking Traps, Part 2**
 
-binder-p0018
+[![Identifying Thinking Traps, Part 2](/resources/cbt-skills/cbt-skills-p018.jpg){.img-fluid fig-alt="Identifying Thinking Traps, Part 2"}](/resources/cbt-skills/cbt-skills-p018.jpg)
 
-<!-- binder-resource: binder-p0018 -->
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p018.jpg)
+:::
 
-[![Preview of Thinking Traps (binder-p0018)](../../assets/binder/binder-p0018.jpg){.img-fluid fig-alt="Preview of Thinking Traps (binder-p0018)"}](../../assets/binder/binder-p0018.jpg)
+## Exercises {#exercises}
 
-[Open full page](../../assets/binder/binder-p0018.jpg)
+::: {.bs-practice-resource}
+**Find the Thinking Traps**
 
-### Thinking Traps - binder-p0020 {#binder-p0020}
+[![Find the Thinking Traps](/resources/cbt-skills/cbt-skills-p016.jpg){.img-fluid fig-alt="Find the Thinking Traps"}](/resources/cbt-skills/cbt-skills-p016.jpg)
 
-binder-p0020
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p016.jpg)
+:::
 
-<!-- binder-resource: binder-p0020 -->
+## Reference Materials {#reference-materials}
 
-[![Preview of Thinking Traps (binder-p0020)](../../assets/binder/binder-p0020.jpg){.img-fluid fig-alt="Preview of Thinking Traps (binder-p0020)"}](../../assets/binder/binder-p0020.jpg)
+::: {.bs-practice-resource}
+**Thinking Traps Overview**
 
-[Open full page](../../assets/binder/binder-p0020.jpg)
+[![Thinking Traps Overview](/resources/cbt-skills/cbt-skills-p012.jpg){.img-fluid fig-alt="Thinking Traps Overview"}](/resources/cbt-skills/cbt-skills-p012.jpg)
+
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p012.jpg)
+:::
+
+::: {.bs-practice-resource}
+**What Are Core Beliefs?**
+
+[![What Are Core Beliefs?](/resources/cbt-skills/cbt-skills-p014.jpg){.img-fluid fig-alt="What Are Core Beliefs?"}](/resources/cbt-skills/cbt-skills-p014.jpg)
+
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p014.jpg)
+:::
+
+<!-- section-scan-resources:end -->

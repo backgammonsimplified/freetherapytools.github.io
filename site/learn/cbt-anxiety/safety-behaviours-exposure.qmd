@@ -20,44 +20,76 @@ execute:
 
 Exposure involves approaching feared situations gradually while reducing behaviours that prevent new learning.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### Safety Behaviours and Exposure - binder-p0005 {#binder-p0005}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0005
+::: {.bs-practice-resource}
+**What Are Safety Behaviours?**
 
-<!-- binder-resource: binder-p0005 -->
+[![What Are Safety Behaviours?](/resources/cbt-skills/cbt-skills-p048.jpg){.img-fluid fig-alt="What Are Safety Behaviours?"}](/resources/cbt-skills/cbt-skills-p048.jpg)
 
-[![Preview of Safety Behaviours and Exposure (binder-p0005)](../../assets/binder/binder-p0005.jpg){.img-fluid fig-alt="Preview of Safety Behaviours and Exposure (binder-p0005)"}](../../assets/binder/binder-p0005.jpg)
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p048.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0005.jpg)
+::: {.bs-practice-resource}
+**Situational Exposure**
 
-### Safety Behaviours and Exposure - binder-p0006 {#binder-p0006}
+[![Situational Exposure](/resources/cbt-skills/cbt-skills-p050.jpg){.img-fluid fig-alt="Situational Exposure"}](/resources/cbt-skills/cbt-skills-p050.jpg)
 
-binder-p0006
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p050.jpg)
+:::
 
-<!-- binder-resource: binder-p0006 -->
+## Practice Materials {#practice-materials}
 
-[![Preview of Safety Behaviours and Exposure (binder-p0006)](../../assets/binder/binder-p0006.jpg){.img-fluid fig-alt="Preview of Safety Behaviours and Exposure (binder-p0006)"}](../../assets/binder/binder-p0006.jpg)
+::: {.bs-practice-resource}
+**Avoidance Worksheet**
 
-[Open full page](../../assets/binder/binder-p0006.jpg)
+[![Avoidance Worksheet](/resources/cbt-skills/cbt-skills-p047.jpg){.img-fluid fig-alt="Avoidance Worksheet"}](/resources/cbt-skills/cbt-skills-p047.jpg)
 
-### Safety Behaviours and Exposure - binder-p0007 {#binder-p0007}
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p047.jpg)
+:::
 
-binder-p0007
+::: {.bs-practice-resource}
+**Safety Behaviour Checklist**
 
-<!-- binder-resource: binder-p0007 -->
+[![Safety Behaviour Checklist](/resources/cbt-skills/cbt-skills-p049.jpg){.img-fluid fig-alt="Safety Behaviour Checklist"}](/resources/cbt-skills/cbt-skills-p049.jpg)
 
-[![Preview of Safety Behaviours and Exposure (binder-p0007)](../../assets/binder/binder-p0007.jpg){.img-fluid fig-alt="Preview of Safety Behaviours and Exposure (binder-p0007)"}](../../assets/binder/binder-p0007.jpg)
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p049.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0007.jpg)
+::: {.bs-practice-resource}
+**Developing Exposure Hierarchies**
 
-### Safety Behaviours and Exposure - binder-p0008 {#binder-p0008}
+[![Developing Exposure Hierarchies](/resources/cbt-skills/cbt-skills-p053.jpg){.img-fluid fig-alt="Developing Exposure Hierarchies"}](/resources/cbt-skills/cbt-skills-p053.jpg)
 
-binder-p0008
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p053.jpg)
+:::
 
-<!-- binder-resource: binder-p0008 -->
+::: {.bs-practice-resource}
+**Exposure Hierarchy Worksheet**
 
-[![Preview of Safety Behaviours and Exposure (binder-p0008)](../../assets/binder/binder-p0008.jpg){.img-fluid fig-alt="Preview of Safety Behaviours and Exposure (binder-p0008)"}](../../assets/binder/binder-p0008.jpg)
+[![Exposure Hierarchy Worksheet](/resources/cbt-skills/cbt-skills-p054.jpg){.img-fluid fig-alt="Exposure Hierarchy Worksheet"}](/resources/cbt-skills/cbt-skills-p054.jpg)
 
-[Open full page](../../assets/binder/binder-p0008.jpg)
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p054.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**Examples of Fear Ladders**
+
+[![Examples of Fear Ladders](/resources/cbt-skills/cbt-skills-p051.jpg){.img-fluid fig-alt="Examples of Fear Ladders"}](/resources/cbt-skills/cbt-skills-p051.jpg)
+
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p051.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Ideas for Challenging Different Fears**
+
+[![Ideas for Challenging Different Fears](/resources/cbt-skills/cbt-skills-p052.jpg){.img-fluid fig-alt="Ideas for Challenging Different Fears"}](/resources/cbt-skills/cbt-skills-p052.jpg)
+
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p052.jpg)
+:::
+
+<!-- section-scan-resources:end -->

@@ -3,7 +3,7 @@ title: "Balanced Eating"
 description: "Use regular, flexible nourishment to support physical and emotional stability."
 sidebar: learn
 learn-track: wellness
-learn-order: 6
+learn-order: 5
 categories:
   - Beginner
 tags:
@@ -20,24 +20,76 @@ execute:
 
 Balanced eating is body care, not perfection. Use the planning tools in a way that fits your needs and clinical guidance.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### Weekly Meal Plan - binder-p0055 {#binder-p0055}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0055
+::: {.bs-practice-resource}
+**Seven Tips for Balanced Eating, Part 1**
 
-<!-- binder-resource: binder-p0055 -->
+[![Seven Tips for Balanced Eating, Part 1](/resources/wellness/wellness-p043.jpg){.img-fluid fig-alt="Seven Tips for Balanced Eating, Part 1"}](/resources/wellness/wellness-p043.jpg)
 
-[![Preview of Weekly Meal Plan (binder-p0055)](../../assets/binder/binder-p0055.jpg){.img-fluid fig-alt="Preview of Weekly Meal Plan (binder-p0055)"}](../../assets/binder/binder-p0055.jpg)
+[Download / View Handout](/resources/wellness/wellness-p043.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0055.jpg)
+::: {.bs-practice-resource}
+**Seven Tips for Balanced Eating, Part 2**
 
-### Balanced Eating - binder-p0058 {#binder-p0058}
+[![Seven Tips for Balanced Eating, Part 2](/resources/wellness/wellness-p044.jpg){.img-fluid fig-alt="Seven Tips for Balanced Eating, Part 2"}](/resources/wellness/wellness-p044.jpg)
 
-binder-p0058
+[Download / View Handout](/resources/wellness/wellness-p044.jpg)
+:::
 
-<!-- binder-resource: binder-p0058 -->
+## Practice Materials {#practice-materials}
 
-[![Preview of Balanced Eating (binder-p0058)](../../assets/binder/binder-p0058.jpg){.img-fluid fig-alt="Preview of Balanced Eating (binder-p0058)"}](../../assets/binder/binder-p0058.jpg)
+::: {.bs-practice-resource}
+**Weekly Food Journal**
 
-[Open full page](../../assets/binder/binder-p0058.jpg)
+[![Weekly Food Journal](/resources/wellness/wellness-p049.jpg){.img-fluid fig-alt="Weekly Food Journal"}](/resources/wellness/wellness-p049.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p049.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Weekly Meal Plan**
+
+[![Weekly Meal Plan](/resources/wellness/wellness-p050.jpg){.img-fluid fig-alt="Weekly Meal Plan"}](/resources/wellness/wellness-p050.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p050.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**Eating Well on a Budget**
+
+[![Eating Well on a Budget](/resources/wellness/wellness-p045.jpg){.img-fluid fig-alt="Eating Well on a Budget"}](/resources/wellness/wellness-p045.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p045.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Canada's Food Guide: Eat Well, Live Well**
+
+[![Canada's Food Guide: Eat Well, Live Well](/resources/wellness/wellness-p046.jpg){.img-fluid fig-alt="Canada's Food Guide: Eat Well, Live Well"}](/resources/wellness/wellness-p046.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p046.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Healthy Eating Is More Than the Foods You Eat**
+
+[![Healthy Eating Is More Than the Foods You Eat](/resources/wellness/wellness-p047.jpg){.img-fluid fig-alt="Healthy Eating Is More Than the Foods You Eat"}](/resources/wellness/wellness-p047.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p047.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Estimating Portion Sizes**
+
+[![Estimating Portion Sizes](/resources/wellness/wellness-p048.jpg){.img-fluid fig-alt="Estimating Portion Sizes"}](/resources/wellness/wellness-p048.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p048.jpg)
+:::
+
+<!-- section-scan-resources:end -->

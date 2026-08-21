@@ -20,34 +20,54 @@ execute:
 
 Boundaries clarify what you are responsible for, what you will accept, and how you will respond.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### Boundaries - binder-p0084 {#binder-p0084}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0084
+::: {.bs-practice-resource}
+**Understanding Boundaries**
 
-<!-- binder-resource: binder-p0084 -->
+[![Understanding Boundaries](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p003.jpg){.img-fluid fig-alt="Understanding Boundaries"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p003.jpg)
 
-[![Preview of Boundaries (binder-p0084)](../../assets/binder/binder-p0084.jpg){.img-fluid fig-alt="Preview of Boundaries (binder-p0084)"}](../../assets/binder/binder-p0084.jpg)
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p003.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0084.jpg)
+## Practice Materials {#practice-materials}
 
-### Boundaries - binder-p0085 {#binder-p0085}
+::: {.bs-practice-resource}
+**Identifying Your Boundaries**
 
-binder-p0085
+[![Identifying Your Boundaries](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p004.jpg){.img-fluid fig-alt="Identifying Your Boundaries"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p004.jpg)
 
-<!-- binder-resource: binder-p0085 -->
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p004.jpg)
+:::
 
-[![Preview of Boundaries (binder-p0085)](../../assets/binder/binder-p0085.jpg){.img-fluid fig-alt="Preview of Boundaries (binder-p0085)"}](../../assets/binder/binder-p0085.jpg)
+## Exercises {#exercises}
 
-[Open full page](../../assets/binder/binder-p0085.jpg)
+::: {.bs-practice-resource}
+**Identifying My Personal Boundaries**
 
-### Boundaries - binder-p0086 {#binder-p0086}
+[![Identifying My Personal Boundaries](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p006.jpg){.img-fluid fig-alt="Identifying My Personal Boundaries"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p006.jpg)
 
-binder-p0086
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p006.jpg)
+:::
 
-<!-- binder-resource: binder-p0086 -->
+::: {.bs-practice-resource}
+**Understanding My Boundaries**
 
-[![Preview of Boundaries (binder-p0086)](../../assets/binder/binder-p0086.jpg){.img-fluid fig-alt="Preview of Boundaries (binder-p0086)"}](../../assets/binder/binder-p0086.jpg)
+[![Understanding My Boundaries](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p007.jpg){.img-fluid fig-alt="Understanding My Boundaries"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p007.jpg)
 
-[Open full page](../../assets/binder/binder-p0086.jpg)
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p007.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**Characteristics of Healthy Relationships**
+
+[![Characteristics of Healthy Relationships](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p005.jpg){.img-fluid fig-alt="Characteristics of Healthy Relationships"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p005.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p005.jpg)
+:::
+
+<!-- section-scan-resources:end -->

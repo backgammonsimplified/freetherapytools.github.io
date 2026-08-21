@@ -3,7 +3,7 @@ title: "Behaviour Chain Analysis and Missing Links"
 description: "Understand what led to a behaviour and where a different response could be inserted."
 sidebar: learn
 learn-track: wellness
-learn-order: 4
+learn-order: 3
 categories:
   - Beginner
 tags:
@@ -24,74 +24,92 @@ A behaviour chain traces prompting events, vulnerabilities, links, consequences,
 
 ## Missing-Links Analysis {#missing-links-analysis}
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### Behaviour Chain Analysis - binder-p0059 {#binder-p0059}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0059
+::: {.bs-practice-resource}
+**Analyzing Behaviour**
 
-<!-- binder-resource: binder-p0059 -->
+[![Analyzing Behaviour](/resources/wellness/wellness-p023.jpg){.img-fluid fig-alt="Analyzing Behaviour"}](/resources/wellness/wellness-p023.jpg)
 
-[![Preview of Behaviour Chain Analysis (binder-p0059)](../../assets/binder/binder-p0059.jpg){.img-fluid fig-alt="Preview of Behaviour Chain Analysis (binder-p0059)"}](../../assets/binder/binder-p0059.jpg)
+[Download / View Handout](/resources/wellness/wellness-p023.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0059.jpg)
+## Practice Materials {#practice-materials}
 
-### Missing-Links Analysis - binder-p0060 {#binder-p0060}
+::: {.bs-practice-resource}
+**Behaviour Chain Analysis Worksheet, Part 1**
 
-binder-p0060
+[![Behaviour Chain Analysis Worksheet, Part 1](/resources/wellness/wellness-p028.jpg){.img-fluid fig-alt="Behaviour Chain Analysis Worksheet, Part 1"}](/resources/wellness/wellness-p028.jpg)
 
-<!-- binder-resource: binder-p0060 -->
+[Download / View Handout](/resources/wellness/wellness-p028.jpg)
+:::
 
-[![Preview of Missing-Links Analysis (binder-p0060)](../../assets/binder/binder-p0060.jpg){.img-fluid fig-alt="Preview of Missing-Links Analysis (binder-p0060)"}](../../assets/binder/binder-p0060.jpg)
+::: {.bs-practice-resource}
+**Behaviour Chain Analysis Worksheet, Part 2**
 
-[Open full page](../../assets/binder/binder-p0060.jpg)
+[![Behaviour Chain Analysis Worksheet, Part 2](/resources/wellness/wellness-p029.jpg){.img-fluid fig-alt="Behaviour Chain Analysis Worksheet, Part 2"}](/resources/wellness/wellness-p029.jpg)
 
-### Behaviour Chain Analysis and Missing Links - binder-p0063 {#binder-p0063}
+[Download / View Handout](/resources/wellness/wellness-p029.jpg)
+:::
 
-binder-p0063
+::: {.bs-practice-resource}
+**Behaviour Chain Analysis Worksheet, Part 3**
 
-<!-- binder-resource: binder-p0063 -->
+[![Behaviour Chain Analysis Worksheet, Part 3](/resources/wellness/wellness-p030.jpg){.img-fluid fig-alt="Behaviour Chain Analysis Worksheet, Part 3"}](/resources/wellness/wellness-p030.jpg)
 
-[![Preview of Behaviour Chain Analysis and Missing Links (binder-p0063)](../../assets/binder/binder-p0063.jpg){.img-fluid fig-alt="Preview of Behaviour Chain Analysis and Missing Links (binder-p0063)"}](../../assets/binder/binder-p0063.jpg)
+[Download / View Handout](/resources/wellness/wellness-p030.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0063.jpg)
+::: {.bs-practice-resource}
+**Behaviour Chain Analysis Map**
 
-### Behaviour Chain Analysis and Missing Links - binder-p0064 {#binder-p0064}
+[![Behaviour Chain Analysis Map](/resources/wellness/wellness-p031.jpg){.img-fluid fig-alt="Behaviour Chain Analysis Map"}](/resources/wellness/wellness-p031.jpg)
 
-binder-p0064
+[Download / View Handout](/resources/wellness/wellness-p031.jpg)
+:::
 
-<!-- binder-resource: binder-p0064 -->
+::: {.bs-practice-resource}
+**Missing-Links Analysis**
 
-[![Preview of Behaviour Chain Analysis and Missing Links (binder-p0064)](../../assets/binder/binder-p0064.jpg){.img-fluid fig-alt="Preview of Behaviour Chain Analysis and Missing Links (binder-p0064)"}](../../assets/binder/binder-p0064.jpg)
+[![Missing-Links Analysis](/resources/wellness/wellness-p032.jpg){.img-fluid fig-alt="Missing-Links Analysis"}](/resources/wellness/wellness-p032.jpg)
 
-[Open full page](../../assets/binder/binder-p0064.jpg)
+[Download / View Handout](/resources/wellness/wellness-p032.jpg)
+:::
 
-### Behaviour Chain and Solution Analysis - binder-p0150 {#binder-p0150}
+## Reference Materials {#reference-materials}
 
-binder-p0150
+::: {.bs-practice-resource}
+**The Behaviour Chain Analysis**
 
-<!-- binder-resource: binder-p0150 -->
+[![The Behaviour Chain Analysis](/resources/wellness/wellness-p024.jpg){.img-fluid fig-alt="The Behaviour Chain Analysis"}](/resources/wellness/wellness-p024.jpg)
 
-[![Preview of Behaviour Chain and Solution Analysis (binder-p0150)](../../assets/binder/binder-p0150.jpg){.img-fluid fig-alt="Preview of Behaviour Chain and Solution Analysis (binder-p0150)"}](../../assets/binder/binder-p0150.jpg)
+[Download / View Handout](/resources/wellness/wellness-p024.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0150.jpg)
+::: {.bs-practice-resource}
+**Behaviour Chain Analysis Example, Part 1**
 
-### Behaviour Chain and Solution Analysis - binder-p0151 {#binder-p0151}
+[![Behaviour Chain Analysis Example, Part 1](/resources/wellness/wellness-p025.jpg){.img-fluid fig-alt="Behaviour Chain Analysis Example, Part 1"}](/resources/wellness/wellness-p025.jpg)
 
-binder-p0151
+[Download / View Handout](/resources/wellness/wellness-p025.jpg)
+:::
 
-<!-- binder-resource: binder-p0151 -->
+::: {.bs-practice-resource}
+**Behaviour Chain Analysis Example, Part 2**
 
-[![Preview of Behaviour Chain and Solution Analysis (binder-p0151)](../../assets/binder/binder-p0151.jpg){.img-fluid fig-alt="Preview of Behaviour Chain and Solution Analysis (binder-p0151)"}](../../assets/binder/binder-p0151.jpg)
+[![Behaviour Chain Analysis Example, Part 2](/resources/wellness/wellness-p026.jpg){.img-fluid fig-alt="Behaviour Chain Analysis Example, Part 2"}](/resources/wellness/wellness-p026.jpg)
 
-[Open full page](../../assets/binder/binder-p0151.jpg)
+[Download / View Handout](/resources/wellness/wellness-p026.jpg)
+:::
 
-### Behaviour Chain and Solution Analysis - binder-p0152 {#binder-p0152}
+::: {.bs-practice-resource}
+**Behaviour Chain Analysis Example, Part 3**
 
-binder-p0152
+[![Behaviour Chain Analysis Example, Part 3](/resources/wellness/wellness-p027.jpg){.img-fluid fig-alt="Behaviour Chain Analysis Example, Part 3"}](/resources/wellness/wellness-p027.jpg)
 
-<!-- binder-resource: binder-p0152 -->
+[Download / View Handout](/resources/wellness/wellness-p027.jpg)
+:::
 
-[![Preview of Behaviour Chain and Solution Analysis (binder-p0152)](../../assets/binder/binder-p0152.jpg){.img-fluid fig-alt="Preview of Behaviour Chain and Solution Analysis (binder-p0152)"}](../../assets/binder/binder-p0152.jpg)
-
-[Open full page](../../assets/binder/binder-p0152.jpg)
+<!-- section-scan-resources:end -->

@@ -1,6 +1,6 @@
 ---
 title: "Interpersonal Effectiveness"
-description: "Binder-led interpersonal effectiveness lessons and resources."
+description: "Six lessons for asking effectively, strengthening relationships, and keeping self-respect."
 sidebar: learn
 learn-track-index: interpersonal-effectiveness
 learn-track-order: 3
@@ -11,5 +11,22 @@ term-lookup: false
 lesson-taxonomy: false
 ---
 
-{{< include _lesson-index.html >}}
+## Objectives {#objectives}
 
+1. Be skillful in getting what you want and need from others.
+   - Get others to do things you would like them to do.
+   - Get others to take your opinions seriously.
+   - Say no to unwanted requests effectively.
+2. Build relationships and end destructive ones.
+   - Strengthen current relationships.
+   - Do not let hurts and problems build up.
+   - Use relationship skills to head off problems.
+   - Repair relationships when needed.
+   - Resolve conflicts before they get overwhelming.
+   - Find and build new relationships.
+   - End hopeless relationships.
+3. Walk the middle path.
+   - Create and maintain balance in relationships.
+   - Balance acceptance and change in relationships.
+
+{{< include _lesson-index.html >}}

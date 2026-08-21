@@ -1,6 +1,6 @@
 ---
 title: "Skill Finder"
-description: "A future guided way to find a therapy skill for the situation you are facing."
+description: "General skills, quick references, and practice resources while guided recommendations are in development."
 sidebar: false
 page-layout: article
 toc: false
@@ -8,6 +8,54 @@ execute:
   enabled: false
 ---
 
-Skill Finder is being prepared. It will help you describe what is happening and then deep-link to a relevant DBT, CBT, or mindfulness skill.
+Personalized recommendations are coming later. For now, this page offers general skills, quick references, and practice resources that are useful across the curriculum.
 
-For now, browse [DBT Skills](/learn/), [CBT Skills](/cbt-skills/), or [Mindfulness](/mindfulness/) directly.
+You can also browse [DBT Skills](/learn/), [CBT Skills](/cbt-skills/), or [Mindfulness](/mindfulness/) directly.
+
+<!-- section-scan-resources:start -->
+
+## Handouts & Worksheets {#handouts-worksheets}
+
+::: {.bs-practice-resource}
+**Dialectics: Acceptance and Change**
+
+[![Dialectics: Acceptance and Change](/resources/general/general-p006.jpg){.img-fluid fig-alt="Dialectics: Acceptance and Change"}](/resources/general/general-p006.jpg)
+
+[Download / View Handout](/resources/general/general-p006.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**Skills & Strengths List**
+
+[![Skills & Strengths List](/resources/general/general-p002.jpg){.img-fluid fig-alt="Skills & Strengths List"}](/resources/general/general-p002.jpg)
+
+[Download / View Handout](/resources/general/general-p002.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Skills Overview**
+
+[![Skills Overview](/resources/general/general-p003.jpg){.img-fluid fig-alt="Skills Overview"}](/resources/general/general-p003.jpg)
+
+[Download / View Handout](/resources/general/general-p003.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Emotional Overload & Emotional Numbness Skills Guide**
+
+[![Emotional Overload & Emotional Numbness Skills Guide](/resources/general/general-p004.jpg){.img-fluid fig-alt="Emotional Overload & Emotional Numbness Skills Guide"}](/resources/general/general-p004.jpg)
+
+[Download / View Handout](/resources/general/general-p004.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Skills Use Guideline**
+
+[![Skills Use Guideline](/resources/general/general-p005.jpg){.img-fluid fig-alt="Skills Use Guideline"}](/resources/general/general-p005.jpg)
+
+[Download / View Handout](/resources/general/general-p005.jpg)
+:::
+
+<!-- section-scan-resources:end -->

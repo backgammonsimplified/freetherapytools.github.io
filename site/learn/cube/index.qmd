@@ -1,6 +1,6 @@
 ---
 title: "Distress Tolerance"
-description: "Binder-led distress tolerance lessons and resources."
+description: "Six lessons for surviving crises, accepting reality, and reducing impulsive responses."
 sidebar: learn
 learn-track-index: doubling-cube
 learn-track-order: 2
@@ -10,5 +10,11 @@ toc: false
 term-lookup: false
 lesson-taxonomy: false
 ---
+
+## Objectives {#objectives}
+
+1. Survive crisis situations without making them worse.
+2. Accept reality by replacing suffering and being stuck with ordinary pain and the possibility of moving forward.
+3. Become free of having to satisfy the demands of your own desires, urges, and intense emotions.
 
 {{< include _lesson-index.html >}}

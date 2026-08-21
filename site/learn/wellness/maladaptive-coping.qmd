@@ -1,9 +1,9 @@
 ---
-title: "Maladaptive Coping Behaviours"
-description: "Notice coping strategies that help briefly but create longer-term costs."
+title: "Addictions"
+description: "Understand change, reduce harm, and notice coping patterns that create longer-term costs."
 sidebar: learn
 learn-track: wellness
-learn-order: 5
+learn-order: 4
 categories:
   - Beginner
 tags:
@@ -20,14 +20,76 @@ execute:
 
 The aim is to understand the function of a coping behaviour and build safer alternatives.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### Maladaptive Coping Behaviours - binder-p0061 {#binder-p0061}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0061
+::: {.bs-practice-resource}
+**Stages of Change**
 
-<!-- binder-resource: binder-p0061 -->
+[![Stages of Change](/resources/wellness/wellness-p036.jpg){.img-fluid fig-alt="Stages of Change"}](/resources/wellness/wellness-p036.jpg)
 
-[![Preview of Maladaptive Coping Behaviours (binder-p0061)](../../assets/binder/binder-p0061.jpg){.img-fluid fig-alt="Preview of Maladaptive Coping Behaviours (binder-p0061)"}](../../assets/binder/binder-p0061.jpg)
+[Download / View Handout](/resources/wellness/wellness-p036.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0061.jpg)
+## Practice Materials {#practice-materials}
+
+::: {.bs-practice-resource}
+**Stages of Change Worksheet, Part 1**
+
+[![Stages of Change Worksheet, Part 1](/resources/wellness/wellness-p037.jpg){.img-fluid fig-alt="Stages of Change Worksheet, Part 1"}](/resources/wellness/wellness-p037.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p037.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Stages of Change Worksheet, Part 2**
+
+[![Stages of Change Worksheet, Part 2](/resources/wellness/wellness-p038.jpg){.img-fluid fig-alt="Stages of Change Worksheet, Part 2"}](/resources/wellness/wellness-p038.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p038.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Stages of Change Worksheet, Part 3**
+
+[![Stages of Change Worksheet, Part 3](/resources/wellness/wellness-p039.jpg){.img-fluid fig-alt="Stages of Change Worksheet, Part 3"}](/resources/wellness/wellness-p039.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p039.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**Effects of Substance Use**
+
+[![Effects of Substance Use](/resources/wellness/wellness-p034.jpg){.img-fluid fig-alt="Effects of Substance Use"}](/resources/wellness/wellness-p034.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p034.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Signs of Maladaptive Coping**
+
+[![Signs of Maladaptive Coping](/resources/wellness/wellness-p035.jpg){.img-fluid fig-alt="Signs of Maladaptive Coping"}](/resources/wellness/wellness-p035.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p035.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Naloxone: Save a Life**
+
+[![Naloxone: Save a Life](/resources/wellness/wellness-p040.jpg){.img-fluid fig-alt="Naloxone: Save a Life"}](/resources/wellness/wellness-p040.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p040.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Opioid Overdoses: What to Do**
+
+[![Opioid Overdoses: What to Do](/resources/wellness/wellness-p041.jpg){.img-fluid fig-alt="Opioid Overdoses: What to Do"}](/resources/wellness/wellness-p041.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p041.jpg)
+:::
+
+<!-- section-scan-resources:end -->

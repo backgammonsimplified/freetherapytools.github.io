@@ -3,7 +3,7 @@ title: "What Emotions Do for You"
 description: "Learn how emotions communicate, motivate action, and provide information."
 sidebar: learn
 learn-track: emotion-regulation
-learn-order: 2
+learn-order: 1
 categories:
   - Beginner
 tags:
@@ -20,54 +20,68 @@ execute:
 
 Emotions have functions. Understanding them can reduce confusion and support more deliberate action.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### What Emotions Do for You - binder-p0047 {#binder-p0047}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0047
+::: {.bs-practice-resource}
+**Goals of Emotion Regulation**
 
-<!-- binder-resource: binder-p0047 -->
+[![Goals of Emotion Regulation](/resources/emotion-regulation/emotion-regulation-p004.jpg){.img-fluid fig-alt="Goals of Emotion Regulation"}](/resources/emotion-regulation/emotion-regulation-p004.jpg)
 
-[![Preview of What Emotions Do for You (binder-p0047)](../../assets/binder/binder-p0047.jpg){.img-fluid fig-alt="Preview of What Emotions Do for You (binder-p0047)"}](../../assets/binder/binder-p0047.jpg)
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p004.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0047.jpg)
+::: {.bs-practice-resource}
+**What Emotions Do for You**
 
-### What Emotions Do for You - binder-p0048 {#binder-p0048}
+[![What Emotions Do for You](/resources/emotion-regulation/emotion-regulation-p005.jpg){.img-fluid fig-alt="What Emotions Do for You"}](/resources/emotion-regulation/emotion-regulation-p005.jpg)
 
-binder-p0048
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p005.jpg)
+:::
 
-<!-- binder-resource: binder-p0048 -->
+::: {.bs-practice-resource}
+**What Makes It Hard to Regulate Your Emotions**
 
-[![Preview of What Emotions Do for You (binder-p0048)](../../assets/binder/binder-p0048.jpg){.img-fluid fig-alt="Preview of What Emotions Do for You (binder-p0048)"}](../../assets/binder/binder-p0048.jpg)
+[![What Makes It Hard to Regulate Your Emotions](/resources/emotion-regulation/emotion-regulation-p006.jpg){.img-fluid fig-alt="What Makes It Hard to Regulate Your Emotions"}](/resources/emotion-regulation/emotion-regulation-p006.jpg)
 
-[Open full page](../../assets/binder/binder-p0048.jpg)
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p006.jpg)
+:::
 
-### What Emotions Do for You - binder-p0049 {#binder-p0049}
+## Practice Materials {#practice-materials}
 
-binder-p0049
+::: {.bs-practice-resource}
+**Myths About Emotions**
 
-<!-- binder-resource: binder-p0049 -->
+[![Myths About Emotions](/resources/emotion-regulation/emotion-regulation-p007.jpg){.img-fluid fig-alt="Myths About Emotions"}](/resources/emotion-regulation/emotion-regulation-p007.jpg)
 
-[![Preview of What Emotions Do for You (binder-p0049)](../../assets/binder/binder-p0049.jpg){.img-fluid fig-alt="Preview of What Emotions Do for You (binder-p0049)"}](../../assets/binder/binder-p0049.jpg)
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p007.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0049.jpg)
+::: {.bs-practice-resource}
+**Emotion Diary**
 
-### What Emotions Do for You - binder-p0051 {#binder-p0051}
+[![Emotion Diary](/resources/emotion-regulation/emotion-regulation-p009.jpg){.img-fluid fig-alt="Emotion Diary"}](/resources/emotion-regulation/emotion-regulation-p009.jpg)
 
-binder-p0051
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p009.jpg)
+:::
 
-<!-- binder-resource: binder-p0051 -->
+## Reference Materials {#reference-materials}
 
-[![Preview of What Emotions Do for You (binder-p0051)](../../assets/binder/binder-p0051.jpg){.img-fluid fig-alt="Preview of What Emotions Do for You (binder-p0051)"}](../../assets/binder/binder-p0051.jpg)
+::: {.bs-practice-resource}
+**Basic Functions of Emotions**
 
-[Open full page](../../assets/binder/binder-p0051.jpg)
+[![Basic Functions of Emotions](/resources/emotion-regulation/emotion-regulation-p003.jpg){.img-fluid fig-alt="Basic Functions of Emotions"}](/resources/emotion-regulation/emotion-regulation-p003.jpg)
 
-### What Emotions Do for You - binder-p0052 {#binder-p0052}
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p003.jpg)
+:::
 
-binder-p0052
+::: {.bs-practice-resource}
+**Emotion Diary Example**
 
-<!-- binder-resource: binder-p0052 -->
+[![Emotion Diary Example](/resources/emotion-regulation/emotion-regulation-p008.jpg){.img-fluid fig-alt="Emotion Diary Example"}](/resources/emotion-regulation/emotion-regulation-p008.jpg)
 
-[![Preview of What Emotions Do for You (binder-p0052)](../../assets/binder/binder-p0052.jpg){.img-fluid fig-alt="Preview of What Emotions Do for You (binder-p0052)"}](../../assets/binder/binder-p0052.jpg)
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p008.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0052.jpg)
+<!-- section-scan-resources:end -->

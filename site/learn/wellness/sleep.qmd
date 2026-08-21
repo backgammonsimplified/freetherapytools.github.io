@@ -3,7 +3,7 @@ title: "Sleep"
 description: "Explore sleep patterns and choose practical supports for more balanced rest."
 sidebar: learn
 learn-track: wellness
-learn-order: 2
+learn-order: 1
 categories:
   - Beginner
 tags:
@@ -20,24 +20,76 @@ execute:
 
 Sleep tracking and small routine changes can clarify what helps or disrupts rest.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+## PLEASE Body Care {#please-body-care}
 
-### Sleep - binder-p0069 {#binder-p0069}
+PLEASE connects physical care with emotional stability. The overview below is shared here once and supports related [Emotion Regulation](/learn/emotion-regulation/) lessons.
 
-binder-p0069
+### Treat Physical Illness {#treat-physical-illness}
 
-<!-- binder-resource: binder-p0069 -->
+### Balanced Eating {#balanced-eating}
 
-[![Preview of Sleep (binder-p0069)](../../assets/binder/binder-p0069.jpg){.img-fluid fig-alt="Preview of Sleep (binder-p0069)"}](../../assets/binder/binder-p0069.jpg)
+### Avoid Mood-Altering Substances {#avoid-mood-altering-substances}
 
-[Open full page](../../assets/binder/binder-p0069.jpg)
+### Balanced Sleep {#balanced-sleep}
 
-### Sleep - binder-p0070 {#binder-p0070}
+### Exercise {#exercise}
 
-binder-p0070
+<!-- section-scan-resources:start -->
 
-<!-- binder-resource: binder-p0070 -->
+## Handouts & Worksheets {#handouts-worksheets}
 
-[![Preview of Sleep (binder-p0070)](../../assets/binder/binder-p0070.jpg){.img-fluid fig-alt="Preview of Sleep (binder-p0070)"}](../../assets/binder/binder-p0070.jpg)
+::: {.bs-practice-resource}
+**Taking Care of Your Mind by Taking Care of Your Body**
 
-[Open full page](../../assets/binder/binder-p0070.jpg)
+[![Taking Care of Your Mind by Taking Care of Your Body](/resources/wellness/wellness-p002.jpg){.img-fluid fig-alt="Taking Care of Your Mind by Taking Care of Your Body"}](/resources/wellness/wellness-p002.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p002.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Additional Sleep Hygiene Tips**
+
+[![Additional Sleep Hygiene Tips](/resources/wellness/wellness-p007.jpg){.img-fluid fig-alt="Additional Sleep Hygiene Tips"}](/resources/wellness/wellness-p007.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p007.jpg)
+:::
+
+## Practice Materials {#practice-materials}
+
+::: {.bs-practice-resource}
+**Sleep Hygiene Practice Sheet**
+
+[![Sleep Hygiene Practice Sheet](/resources/wellness/wellness-p008.jpg){.img-fluid fig-alt="Sleep Hygiene Practice Sheet"}](/resources/wellness/wellness-p008.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p008.jpg)
+:::
+
+## Exercises {#exercises}
+
+::: {.bs-practice-resource}
+**Exploring Sleep**
+
+[![Exploring Sleep](/resources/wellness/wellness-p004.jpg){.img-fluid fig-alt="Exploring Sleep"}](/resources/wellness/wellness-p004.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p004.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**Understanding Sleep**
+
+[![Understanding Sleep](/resources/wellness/wellness-p005.jpg){.img-fluid fig-alt="Understanding Sleep"}](/resources/wellness/wellness-p005.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p005.jpg)
+:::
+
+::: {.bs-practice-resource}
+**The Five Stages of Sleep**
+
+[![The Five Stages of Sleep](/resources/wellness/wellness-p006.jpg){.img-fluid fig-alt="The Five Stages of Sleep"}](/resources/wellness/wellness-p006.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p006.jpg)
+:::
+
+<!-- section-scan-resources:end -->

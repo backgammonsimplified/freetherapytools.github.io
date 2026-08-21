@@ -1,6 +1,6 @@
 ---
 title: "CBT Skills"
-description: "The six binder-authorized CBT curriculum lessons."
+description: "The six-session CBT curriculum."
 sidebar: cbt
 learn-track-index: cbt-anxiety
 learn-track-order: 7

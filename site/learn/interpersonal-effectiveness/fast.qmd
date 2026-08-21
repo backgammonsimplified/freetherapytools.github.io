@@ -1,5 +1,5 @@
 ---
-title: "FAST"
+title: "DEAR + FAST"
 description: "Protect self-respect while asking, refusing, or negotiating."
 sidebar: learn
 learn-track: interpersonal-effectiveness
@@ -28,24 +28,54 @@ FAST helps you remain fair and aligned with your values.
 
 ## Truthful {#truthful}
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### FAST - binder-p0071 {#binder-p0071}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0071
+::: {.bs-practice-resource}
+**Guidelines for Self-Respect Effectiveness: FAST**
 
-<!-- binder-resource: binder-p0071 -->
+[![Guidelines for Self-Respect Effectiveness: FAST](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p033.jpg){.img-fluid fig-alt="Guidelines for Self-Respect Effectiveness: FAST"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p033.jpg)
 
-[![Preview of FAST (binder-p0071)](../../assets/binder/binder-p0071.jpg){.img-fluid fig-alt="Preview of FAST (binder-p0071)"}](../../assets/binder/binder-p0071.jpg)
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p033.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0071.jpg)
+## Practice Materials {#practice-materials}
 
-### FAST - binder-p0072 {#binder-p0072}
+::: {.bs-practice-resource}
+**DEAR + FAST Script**
 
-binder-p0072
+[![DEAR + FAST Script](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p035.jpg){.img-fluid fig-alt="DEAR + FAST Script"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p035.jpg)
 
-<!-- binder-resource: binder-p0072 -->
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p035.jpg)
+:::
 
-[![Preview of FAST (binder-p0072)](../../assets/binder/binder-p0072.jpg){.img-fluid fig-alt="Preview of FAST (binder-p0072)"}](../../assets/binder/binder-p0072.jpg)
+## Exercises {#exercises}
 
-[Open full page](../../assets/binder/binder-p0072.jpg)
+::: {.bs-practice-resource}
+**Self-Respect Effectiveness Reflection**
+
+[![Self-Respect Effectiveness Reflection](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p031.jpg){.img-fluid fig-alt="Self-Respect Effectiveness Reflection"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p031.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p031.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**A Bill of Assertive Rights**
+
+[![A Bill of Assertive Rights](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p032.jpg){.img-fluid fig-alt="A Bill of Assertive Rights"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p032.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p032.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Apologizing Effectively**
+
+[![Apologizing Effectively](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p034.jpg){.img-fluid fig-alt="Apologizing Effectively"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p034.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p034.jpg)
+:::
+
+<!-- section-scan-resources:end -->

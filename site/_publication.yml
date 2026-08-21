@@ -1,10 +1,10 @@
 website:
-  title: "Backgammon Simplified"
+  title: "Therapy Skill Kit"
   site-url: "https://backgammonsimplified.github.io"
 
 bs-publication:
   schema-id: "https://backgammonsimplified.github.io/schemas/publication-identity-v1"
-  name: "Backgammon Simplified"
+  name: "Therapy Skill Kit"
   acronym: "BS"
   canonical-origin: "https://backgammonsimplified.github.io"
   authored-content:
@@ -14,7 +14,7 @@ bs-publication:
       url: "https://backgammonsimplified.github.io/about.html"
     publisher:
       schema-type: Organization
-      name: "Backgammon Simplified"
+      name: "Therapy Skill Kit"
       url: "https://backgammonsimplified.github.io/"
     modified-date-field: date-modified
   indexing:

@@ -1,9 +1,9 @@
 ---
-title: "IMPROVE the Moment"
+title: "IMPROVE"
 description: "Make a painful moment more workable when the situation cannot immediately change."
 sidebar: learn
 learn-track: doubling-cube
-learn-order: 5
+learn-order: 4
 categories:
   - Beginner
 tags:
@@ -35,24 +35,44 @@ IMPROVE collects ways to support yourself while moving through distress.
 
 ## Self-Encouragement {#self-encouragement}
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### IMPROVE the Moment - binder-p0118 {#binder-p0118}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0118
+::: {.bs-practice-resource}
+**Improving the Moment**
 
-<!-- binder-resource: binder-p0118 -->
+[![Improving the Moment](/resources/distress-tolerance/distress-tolerance-p025.jpg){.img-fluid fig-alt="Improving the Moment"}](/resources/distress-tolerance/distress-tolerance-p025.jpg)
 
-[![Preview of IMPROVE the Moment (binder-p0118)](../../assets/binder/binder-p0118.jpg){.img-fluid fig-alt="Preview of IMPROVE the Moment (binder-p0118)"}](../../assets/binder/binder-p0118.jpg)
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p025.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0118.jpg)
+## Practice Materials {#practice-materials}
 
-### IMPROVE the Moment - binder-p0119 {#binder-p0119}
+::: {.bs-practice-resource}
+**IMPROVE Practice**
 
-binder-p0119
+[![IMPROVE Practice](/resources/distress-tolerance/distress-tolerance-p028.jpg){.img-fluid fig-alt="IMPROVE Practice"}](/resources/distress-tolerance/distress-tolerance-p028.jpg)
 
-<!-- binder-resource: binder-p0119 -->
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p028.jpg)
+:::
 
-[![Preview of IMPROVE the Moment (binder-p0119)](../../assets/binder/binder-p0119.jpg){.img-fluid fig-alt="Preview of IMPROVE the Moment (binder-p0119)"}](../../assets/binder/binder-p0119.jpg)
+## Exercises {#exercises}
 
-[Open full page](../../assets/binder/binder-p0119.jpg)
+::: {.bs-practice-resource}
+**One Thing in the Moment**
+
+[![One Thing in the Moment](/resources/distress-tolerance/distress-tolerance-p026.jpg){.img-fluid fig-alt="One Thing in the Moment"}](/resources/distress-tolerance/distress-tolerance-p026.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p026.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Peaceful Place Meditation**
+
+[![Peaceful Place Meditation](/resources/distress-tolerance/distress-tolerance-p027.jpg){.img-fluid fig-alt="Peaceful Place Meditation"}](/resources/distress-tolerance/distress-tolerance-p027.jpg)
+
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p027.jpg)
+:::
+
+<!-- section-scan-resources:end -->

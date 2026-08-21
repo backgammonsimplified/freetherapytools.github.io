@@ -1,9 +1,9 @@
 ---
-title: "ABC PLEASE"
-description: "Reduce emotional vulnerability and prepare for difficult situations."
+title: "Accumulating Positive Emotions"
+description: "Build positive experiences now and work toward a life worth living over time."
 sidebar: learn
 learn-track: emotion-regulation
-learn-order: 7
+learn-order: 5
 categories:
   - Beginner
 tags:
@@ -18,13 +18,17 @@ execute:
   enabled: false
 ---
 
-ABC PLEASE combines long-term resilience practices with daily body care.
+Accumulating positive emotions includes short-term pleasant experiences and longer-term steps toward values and priorities.
 
 ## Accumulating Positive Emotions {#accumulating-positive-emotions}
 
 ## Build Mastery {#build-mastery}
 
+Continue with [Building Mastery & Cope Ahead](positive-emotions-mastery-cope-ahead.qmd#build-mastery).
+
 ## Cope Ahead {#cope-ahead}
+
+Continue with [Building Mastery & Cope Ahead](positive-emotions-mastery-cope-ahead.qmd#cope-ahead).
 
 ## Treat Physical Illness {#treat-physical-illness}
 
@@ -36,14 +40,116 @@ ABC PLEASE combines long-term resilience practices with daily body care.
 
 ## Exercise {#exercise}
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### ABC PLEASE - binder-p0031 {#binder-p0031}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0031
+::: {.bs-practice-resource}
+**ABC PLEASE Overview**
 
-<!-- binder-resource: binder-p0031 -->
+[![ABC PLEASE Overview](/resources/emotion-regulation/emotion-regulation-p057.jpg){.img-fluid fig-alt="ABC PLEASE Overview"}](/resources/emotion-regulation/emotion-regulation-p057.jpg)
 
-[![Preview of ABC PLEASE (binder-p0031)](../../assets/binder/binder-p0031.jpg){.img-fluid fig-alt="Preview of ABC PLEASE (binder-p0031)"}](../../assets/binder/binder-p0031.jpg)
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p057.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0031.jpg)
+::: {.bs-practice-resource}
+**Accumulating Positive Emotions: Short Term**
+
+[![Accumulating Positive Emotions: Short Term](/resources/emotion-regulation/emotion-regulation-p058.jpg){.img-fluid fig-alt="Accumulating Positive Emotions: Short Term"}](/resources/emotion-regulation/emotion-regulation-p058.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p058.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Accumulating Positive Emotions: Long Term**
+
+[![Accumulating Positive Emotions: Long Term](/resources/emotion-regulation/emotion-regulation-p062.jpg){.img-fluid fig-alt="Accumulating Positive Emotions: Long Term"}](/resources/emotion-regulation/emotion-regulation-p062.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p062.jpg)
+:::
+
+## Practice Materials {#practice-materials}
+
+::: {.bs-practice-resource}
+**Building Positive Experiences Now**
+
+[![Building Positive Experiences Now](/resources/emotion-regulation/emotion-regulation-p066.jpg){.img-fluid fig-alt="Building Positive Experiences Now"}](/resources/emotion-regulation/emotion-regulation-p066.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p066.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Daily Pleasant Moments Record**
+
+[![Daily Pleasant Moments Record](/resources/emotion-regulation/emotion-regulation-p067.jpg){.img-fluid fig-alt="Daily Pleasant Moments Record"}](/resources/emotion-regulation/emotion-regulation-p067.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p067.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Accumulating Positive Emotions: Long Term Worksheet, Part 1**
+
+[![Accumulating Positive Emotions: Long Term Worksheet, Part 1](/resources/emotion-regulation/emotion-regulation-p068.jpg){.img-fluid fig-alt="Accumulating Positive Emotions: Long Term Worksheet, Part 1"}](/resources/emotion-regulation/emotion-regulation-p068.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p068.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Accumulating Positive Emotions: Long Term Worksheet, Part 2**
+
+[![Accumulating Positive Emotions: Long Term Worksheet, Part 2](/resources/emotion-regulation/emotion-regulation-p069.jpg){.img-fluid fig-alt="Accumulating Positive Emotions: Long Term Worksheet, Part 2"}](/resources/emotion-regulation/emotion-regulation-p069.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p069.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**Pleasant Events List, Part 1**
+
+[![Pleasant Events List, Part 1](/resources/emotion-regulation/emotion-regulation-p059.jpg){.img-fluid fig-alt="Pleasant Events List, Part 1"}](/resources/emotion-regulation/emotion-regulation-p059.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p059.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Pleasant Events List, Part 2**
+
+[![Pleasant Events List, Part 2](/resources/emotion-regulation/emotion-regulation-p060.jpg){.img-fluid fig-alt="Pleasant Events List, Part 2"}](/resources/emotion-regulation/emotion-regulation-p060.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p060.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Pleasant Events List, Part 3**
+
+[![Pleasant Events List, Part 3](/resources/emotion-regulation/emotion-regulation-p061.jpg){.img-fluid fig-alt="Pleasant Events List, Part 3"}](/resources/emotion-regulation/emotion-regulation-p061.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p061.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Values and Priorities List, Part 1**
+
+[![Values and Priorities List, Part 1](/resources/emotion-regulation/emotion-regulation-p063.jpg){.img-fluid fig-alt="Values and Priorities List, Part 1"}](/resources/emotion-regulation/emotion-regulation-p063.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p063.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Values and Priorities List, Part 2**
+
+[![Values and Priorities List, Part 2](/resources/emotion-regulation/emotion-regulation-p064.jpg){.img-fluid fig-alt="Values and Priorities List, Part 2"}](/resources/emotion-regulation/emotion-regulation-p064.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p064.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Values and Priorities List, Part 3**
+
+[![Values and Priorities List, Part 3](/resources/emotion-regulation/emotion-regulation-p065.jpg){.img-fluid fig-alt="Values and Priorities List, Part 3"}](/resources/emotion-regulation/emotion-regulation-p065.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p065.jpg)
+:::
+
+<!-- section-scan-resources:end -->

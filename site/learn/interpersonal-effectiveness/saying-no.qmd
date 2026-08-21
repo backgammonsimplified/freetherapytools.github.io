@@ -1,9 +1,9 @@
 ---
-title: "Saying No and Choosing Intensity"
+title: "How to Ask & Say No & Troubleshooting"
 description: "Match the intensity of a request or refusal to the situation."
 sidebar: learn
 learn-track: interpersonal-effectiveness
-learn-order: 7
+learn-order: 6
 categories:
   - Beginner
 tags:
@@ -20,24 +20,120 @@ execute:
 
 Effective refusal is clear, proportionate, and attentive to both priorities and safety.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+## Walking the Middle Path {#walking-the-middle-path}
 
-### Saying No / Intensity Material - binder-p0074 {#binder-p0074}
+Walking the middle path combines validation, flexibility, and a both-and perspective.
 
-binder-p0074
+<!-- section-scan-resources:start -->
 
-<!-- binder-resource: binder-p0074 -->
+## Handouts & Worksheets {#handouts-worksheets}
 
-[![Preview of Saying No / Intensity Material (binder-p0074)](../../assets/binder/binder-p0074.jpg){.img-fluid fig-alt="Preview of Saying No / Intensity Material (binder-p0074)"}](../../assets/binder/binder-p0074.jpg)
+::: {.bs-practice-resource}
+**How Intensely to Ask or Say No, Part 1**
 
-[Open full page](../../assets/binder/binder-p0074.jpg)
+[![How Intensely to Ask or Say No, Part 1](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p037.jpg){.img-fluid fig-alt="How Intensely to Ask or Say No, Part 1"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p037.jpg)
 
-### How to Ask and Say No - binder-p0083 {#binder-p0083}
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p037.jpg)
+:::
 
-binder-p0083
+::: {.bs-practice-resource}
+**How Intensely to Ask or Say No, Part 2**
 
-<!-- binder-resource: binder-p0083 -->
+[![How Intensely to Ask or Say No, Part 2](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p038.jpg){.img-fluid fig-alt="How Intensely to Ask or Say No, Part 2"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p038.jpg)
 
-[![Preview of How to Ask and Say No (binder-p0083)](../../assets/binder/binder-p0083.jpg){.img-fluid fig-alt="Preview of How to Ask and Say No (binder-p0083)"}](../../assets/binder/binder-p0083.jpg)
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p038.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0083.jpg)
+::: {.bs-practice-resource}
+**How Intensely to Ask or Say No, Part 3**
+
+[![How Intensely to Ask or Say No, Part 3](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p039.jpg){.img-fluid fig-alt="How Intensely to Ask or Say No, Part 3"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p039.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p039.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Troubleshooting Interpersonal Effectiveness, Part 1**
+
+[![Troubleshooting Interpersonal Effectiveness, Part 1](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p040.jpg){.img-fluid fig-alt="Troubleshooting Interpersonal Effectiveness, Part 1"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p040.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p040.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Troubleshooting Interpersonal Effectiveness, Part 2**
+
+[![Troubleshooting Interpersonal Effectiveness, Part 2](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p041.jpg){.img-fluid fig-alt="Troubleshooting Interpersonal Effectiveness, Part 2"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p041.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p041.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Walking the Middle Path**
+
+[![Walking the Middle Path](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p045.jpg){.img-fluid fig-alt="Walking the Middle Path"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p045.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p045.jpg)
+:::
+
+## Practice Materials {#practice-materials}
+
+::: {.bs-practice-resource}
+**Troubleshooting Interpersonal Effectiveness Skills, Part 1**
+
+[![Troubleshooting Interpersonal Effectiveness Skills, Part 1](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p042.jpg){.img-fluid fig-alt="Troubleshooting Interpersonal Effectiveness Skills, Part 1"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p042.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p042.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Troubleshooting Interpersonal Effectiveness Skills, Part 2**
+
+[![Troubleshooting Interpersonal Effectiveness Skills, Part 2](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p043.jpg){.img-fluid fig-alt="Troubleshooting Interpersonal Effectiveness Skills, Part 2"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p043.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p043.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Identifying Mindfulness of Others**
+
+[![Identifying Mindfulness of Others](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p046.jpg){.img-fluid fig-alt="Identifying Mindfulness of Others"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p046.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p046.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Opposite Sides That Can Both Be True**
+
+[![Opposite Sides That Can Both Be True](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p047.jpg){.img-fluid fig-alt="Opposite Sides That Can Both Be True"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p047.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p047.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Important Opposites to Balance**
+
+[![Important Opposites to Balance](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p048.jpg){.img-fluid fig-alt="Important Opposites to Balance"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p048.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p048.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Identifying Dialectics**
+
+[![Identifying Dialectics](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p049.jpg){.img-fluid fig-alt="Identifying Dialectics"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p049.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p049.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**Dialectics: Acceptance and Change**
+
+[![Dialectics: Acceptance and Change](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p044.jpg){.img-fluid fig-alt="Dialectics: Acceptance and Change"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p044.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p044.jpg)
+:::
+
+<!-- section-scan-resources:end -->

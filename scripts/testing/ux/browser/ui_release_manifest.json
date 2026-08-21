@@ -83,7 +83,7 @@
       "name": "CBT lesson",
       "route": "/learn/cbt-anxiety/thought-records.html",
       "kind": "learn-lesson",
-      "required_markers": ["bs-learn-article", "binder-p0019"]
+      "required_markers": ["bs-learn-article", "Thought Record Part 1"]
     },
     {
       "id": "mindfulness-index",

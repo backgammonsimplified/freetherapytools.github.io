@@ -3,7 +3,7 @@ title: "Check the Facts"
 description: "Compare interpretations and emotional intensity with what is observable."
 sidebar: learn
 learn-track: emotion-regulation
-learn-order: 4
+learn-order: 3
 categories:
   - Beginner
 tags:
@@ -20,24 +20,62 @@ execute:
 
 Check the Facts asks whether an emotion, its intensity, and its duration fit the available evidence.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### Check the Facts - binder-p0039 {#binder-p0039}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0039
+::: {.bs-practice-resource}
+**Changing Emotional Responses**
 
-<!-- binder-resource: binder-p0039 -->
+[![Changing Emotional Responses](/resources/emotion-regulation/emotion-regulation-p031.jpg){.img-fluid fig-alt="Changing Emotional Responses"}](/resources/emotion-regulation/emotion-regulation-p031.jpg)
 
-[![Preview of Check the Facts (binder-p0039)](../../assets/binder/binder-p0039.jpg){.img-fluid fig-alt="Preview of Check the Facts (binder-p0039)"}](../../assets/binder/binder-p0039.jpg)
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p031.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0039.jpg)
+::: {.bs-practice-resource}
+**Check the Facts**
 
-### Check the Facts - binder-p0040 {#binder-p0040}
+[![Check the Facts](/resources/emotion-regulation/emotion-regulation-p032.jpg){.img-fluid fig-alt="Check the Facts"}](/resources/emotion-regulation/emotion-regulation-p032.jpg)
 
-binder-p0040
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p032.jpg)
+:::
 
-<!-- binder-resource: binder-p0040 -->
+## Practice Materials {#practice-materials}
 
-[![Preview of Check the Facts (binder-p0040)](../../assets/binder/binder-p0040.jpg){.img-fluid fig-alt="Preview of Check the Facts (binder-p0040)"}](../../assets/binder/binder-p0040.jpg)
+::: {.bs-practice-resource}
+**Fact or Opinion?**
 
-[Open full page](../../assets/binder/binder-p0040.jpg)
+[![Fact or Opinion?](/resources/emotion-regulation/emotion-regulation-p029.jpg){.img-fluid fig-alt="Fact or Opinion?"}](/resources/emotion-regulation/emotion-regulation-p029.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p029.jpg)
+:::
+
+## Exercises {#exercises}
+
+::: {.bs-practice-resource}
+**Check the Facts Practice**
+
+[![Check the Facts Practice](/resources/emotion-regulation/emotion-regulation-p034.jpg){.img-fluid fig-alt="Check the Facts Practice"}](/resources/emotion-regulation/emotion-regulation-p034.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p034.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**Fact, Opinion, Belief, and Prejudice**
+
+[![Fact, Opinion, Belief, and Prejudice](/resources/emotion-regulation/emotion-regulation-p030.jpg){.img-fluid fig-alt="Fact, Opinion, Belief, and Prejudice"}](/resources/emotion-regulation/emotion-regulation-p030.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p030.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Examples of Emotions That Fit the Facts**
+
+[![Examples of Emotions That Fit the Facts](/resources/emotion-regulation/emotion-regulation-p033.jpg){.img-fluid fig-alt="Examples of Emotions That Fit the Facts"}](/resources/emotion-regulation/emotion-regulation-p033.jpg)
+
+[Download / View Handout](/resources/emotion-regulation/emotion-regulation-p033.jpg)
+:::
+
+<!-- section-scan-resources:end -->

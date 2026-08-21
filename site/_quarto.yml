@@ -13,10 +13,10 @@ project:
     - "assets/social/generated/*.png"
     - assets/bs-glossary.js
     - assets/bs-glossary-lookup.json
+    - assets/bs-learn-scroll.js
     - assets/bs-learn-sequence.json
     - assets/bs-cbt-sequence.json
     - assets/bs-mindfulness-sequence.json
-    - assets/bs-review-sequence.json
     - assets/bs-research-sequence.json
     - "assets/positions/**"
     - data/lesson-analysis-svg-mvp.json
@@ -37,6 +37,7 @@ metadata-files:
   - _learn-navigation.yml
 
 website:
+  title: "Therapy Skill Kit"
   description: "A practical curriculum of DBT, CBT, and mindfulness skills."
   search:
     location: navbar
@@ -70,9 +71,6 @@ website:
     center:
       - text: "Code: AGPL-3.0-only · Educational content: CC BY-SA 4.0 · Licensing"
         href: /licensing.html
-    right:
-      - text: Curriculum review
-        href: /review/
 
 format:
   html:

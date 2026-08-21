@@ -34,14 +34,42 @@ DEAR MAN helps organize what to say and how to stay focused.
 
 ## Negotiate {#negotiate}
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### DEAR MAN / FAST Practice - binder-p0073 {#binder-p0073}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0073
+::: {.bs-practice-resource}
+**Guidelines for Objectives Effectiveness: DEAR MAN, Part 1**
 
-<!-- binder-resource: binder-p0073 -->
+[![Guidelines for Objectives Effectiveness: DEAR MAN, Part 1](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p017.jpg){.img-fluid fig-alt="Guidelines for Objectives Effectiveness: DEAR MAN, Part 1"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p017.jpg)
 
-[![Preview of DEAR MAN / FAST Practice (binder-p0073)](../../assets/binder/binder-p0073.jpg){.img-fluid fig-alt="Preview of DEAR MAN / FAST Practice (binder-p0073)"}](../../assets/binder/binder-p0073.jpg)
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p017.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0073.jpg)
+::: {.bs-practice-resource}
+**Guidelines for Objectives Effectiveness: DEAR MAN, Part 2**
+
+[![Guidelines for Objectives Effectiveness: DEAR MAN, Part 2](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p018.jpg){.img-fluid fig-alt="Guidelines for Objectives Effectiveness: DEAR MAN, Part 2"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p018.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p018.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Applying DEAR MAN Skills to a Difficult Interaction**
+
+[![Applying DEAR MAN Skills to a Difficult Interaction](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p019.jpg){.img-fluid fig-alt="Applying DEAR MAN Skills to a Difficult Interaction"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p019.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p019.jpg)
+:::
+
+## Practice Materials {#practice-materials}
+
+::: {.bs-practice-resource}
+**DEAR MAN Script**
+
+[![DEAR MAN Script](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p020.jpg){.img-fluid fig-alt="DEAR MAN Script"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p020.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p020.jpg)
+:::
+
+<!-- section-scan-resources:end -->

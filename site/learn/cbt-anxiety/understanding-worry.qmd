@@ -32,24 +32,84 @@ Separate worries you can act on from hypothetical worries that call for attentio
 
 Note worries when they arise and return to them during a planned, limited period so they take up less of the day.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### Understanding Worry - binder-p0009 {#binder-p0009}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0009
+::: {.bs-practice-resource}
+**Understanding Worry, Part 1**
 
-<!-- binder-resource: binder-p0009 -->
+[![Understanding Worry, Part 1](/resources/cbt-skills/cbt-skills-p036.jpg){.img-fluid fig-alt="Understanding Worry, Part 1"}](/resources/cbt-skills/cbt-skills-p036.jpg)
 
-[![Preview of Understanding Worry (binder-p0009)](../../assets/binder/binder-p0009.jpg){.img-fluid fig-alt="Preview of Understanding Worry (binder-p0009)"}](../../assets/binder/binder-p0009.jpg)
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p036.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0009.jpg)
+::: {.bs-practice-resource}
+**Understanding Worry, Part 2**
 
-### Understanding Worry - binder-p0010 {#binder-p0010}
+[![Understanding Worry, Part 2](/resources/cbt-skills/cbt-skills-p037.jpg){.img-fluid fig-alt="Understanding Worry, Part 2"}](/resources/cbt-skills/cbt-skills-p037.jpg)
 
-binder-p0010
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p037.jpg)
+:::
 
-<!-- binder-resource: binder-p0010 -->
+::: {.bs-practice-resource}
+**Postpone Your Worry**
 
-[![Preview of Understanding Worry (binder-p0010)](../../assets/binder/binder-p0010.jpg){.img-fluid fig-alt="Preview of Understanding Worry (binder-p0010)"}](../../assets/binder/binder-p0010.jpg)
+[![Postpone Your Worry](/resources/cbt-skills/cbt-skills-p040.jpg){.img-fluid fig-alt="Postpone Your Worry"}](/resources/cbt-skills/cbt-skills-p040.jpg)
 
-[Open full page](../../assets/binder/binder-p0010.jpg)
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p040.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Using the Worry Tree**
+
+[![Using the Worry Tree](/resources/cbt-skills/cbt-skills-p041.jpg){.img-fluid fig-alt="Using the Worry Tree"}](/resources/cbt-skills/cbt-skills-p041.jpg)
+
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p041.jpg)
+:::
+
+## Practice Materials {#practice-materials}
+
+::: {.bs-practice-resource}
+**Worry Diary**
+
+[![Worry Diary](/resources/cbt-skills/cbt-skills-p044.jpg){.img-fluid fig-alt="Worry Diary"}](/resources/cbt-skills/cbt-skills-p044.jpg)
+
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p044.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Fear Ladder Starter**
+
+[![Fear Ladder Starter](/resources/cbt-skills/cbt-skills-p045.jpg){.img-fluid fig-alt="Fear Ladder Starter"}](/resources/cbt-skills/cbt-skills-p045.jpg)
+
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p045.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**Worry Beliefs**
+
+[![Worry Beliefs](/resources/cbt-skills/cbt-skills-p038.jpg){.img-fluid fig-alt="Worry Beliefs"}](/resources/cbt-skills/cbt-skills-p038.jpg)
+
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p038.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Worry and Problem Solving**
+
+[![Worry and Problem Solving](/resources/cbt-skills/cbt-skills-p039.jpg){.img-fluid fig-alt="Worry and Problem Solving"}](/resources/cbt-skills/cbt-skills-p039.jpg)
+
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p039.jpg)
+:::
+
+::: {.bs-practice-resource}
+**The Worry Tree**
+
+[![The Worry Tree](/resources/cbt-skills/cbt-skills-p042.jpg){.img-fluid fig-alt="The Worry Tree"}](/resources/cbt-skills/cbt-skills-p042.jpg)
+
+[Download / View Handout](/resources/cbt-skills/cbt-skills-p042.jpg)
+:::
+
+<!-- section-scan-resources:end -->

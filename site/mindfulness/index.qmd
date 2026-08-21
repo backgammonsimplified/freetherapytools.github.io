@@ -10,6 +10,6 @@ execute:
   enabled: false
 ---
 
-Mindfulness skills build awareness of present experience and support deliberate, effective action. This initial curriculum preserves the already identified binder resources while scan placement remains provisional.
+Mindfulness skills build awareness of present experience and support deliberate, effective action. A dedicated new Mindfulness source is not yet available, so this section preserves the authored lesson structure without scan attachments.
 
 {{< include _lesson-catalogue.html >}}

@@ -1,5 +1,5 @@
 ---
-title: "GIVE"
+title: "DEAR + GIVE"
 description: "Support the relationship while communicating effectively."
 sidebar: learn
 learn-track: interpersonal-effectiveness
@@ -28,44 +28,70 @@ GIVE focuses on how you relate to the other person during an interaction.
 
 ## Easy Manner {#easy-manner}
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### GIVE and Validation - binder-p0075 {#binder-p0075}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0075
+::: {.bs-practice-resource}
+**Guidelines for Relationship Effectiveness: GIVE**
 
-<!-- binder-resource: binder-p0075 -->
+[![Guidelines for Relationship Effectiveness: GIVE](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p023.jpg){.img-fluid fig-alt="Guidelines for Relationship Effectiveness: GIVE"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p023.jpg)
 
-[![Preview of GIVE and Validation (binder-p0075)](../../assets/binder/binder-p0075.jpg){.img-fluid fig-alt="Preview of GIVE and Validation (binder-p0075)"}](../../assets/binder/binder-p0075.jpg)
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p023.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0075.jpg)
+::: {.bs-practice-resource}
+**Levels of Validation**
 
-### GIVE and Validation - binder-p0076 {#binder-p0076}
+[![Levels of Validation](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p024.jpg){.img-fluid fig-alt="Levels of Validation"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p024.jpg)
 
-binder-p0076
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p024.jpg)
+:::
 
-<!-- binder-resource: binder-p0076 -->
+## Practice Materials {#practice-materials}
 
-[![Preview of GIVE and Validation (binder-p0076)](../../assets/binder/binder-p0076.jpg){.img-fluid fig-alt="Preview of GIVE and Validation (binder-p0076)"}](../../assets/binder/binder-p0076.jpg)
+::: {.bs-practice-resource}
+**DEAR + GIVE Script**
 
-[Open full page](../../assets/binder/binder-p0076.jpg)
+[![DEAR + GIVE Script](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p028.jpg){.img-fluid fig-alt="DEAR + GIVE Script"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p028.jpg)
 
-### GIVE and Validation - binder-p0077 {#binder-p0077}
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p028.jpg)
+:::
 
-binder-p0077
+## Exercises {#exercises}
 
-<!-- binder-resource: binder-p0077 -->
+::: {.bs-practice-resource}
+**Finding and Maintaining Relationships**
 
-[![Preview of GIVE and Validation (binder-p0077)](../../assets/binder/binder-p0077.jpg){.img-fluid fig-alt="Preview of GIVE and Validation (binder-p0077)"}](../../assets/binder/binder-p0077.jpg)
+[![Finding and Maintaining Relationships](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p022.jpg){.img-fluid fig-alt="Finding and Maintaining Relationships"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p022.jpg)
 
-[Open full page](../../assets/binder/binder-p0077.jpg)
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p022.jpg)
+:::
 
-### GIVE and Validation - binder-p0078 {#binder-p0078}
+## Reference Materials {#reference-materials}
 
-binder-p0078
+::: {.bs-practice-resource}
+**A Few Words About Validation**
 
-<!-- binder-resource: binder-p0078 -->
+[![A Few Words About Validation](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p025.jpg){.img-fluid fig-alt="A Few Words About Validation"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p025.jpg)
 
-[![Preview of GIVE and Validation (binder-p0078)](../../assets/binder/binder-p0078.jpg){.img-fluid fig-alt="Preview of GIVE and Validation (binder-p0078)"}](../../assets/binder/binder-p0078.jpg)
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p025.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0078.jpg)
+::: {.bs-practice-resource}
+**Validation Expressions**
+
+[![Validation Expressions](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p026.jpg){.img-fluid fig-alt="Validation Expressions"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p026.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p026.jpg)
+:::
+
+::: {.bs-practice-resource}
+**The Four Horsemen and Their Antidotes**
+
+[![The Four Horsemen and Their Antidotes](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p027.jpg){.img-fluid fig-alt="The Four Horsemen and Their Antidotes"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p027.jpg)
+
+[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p027.jpg)
+:::
+
+<!-- section-scan-resources:end -->

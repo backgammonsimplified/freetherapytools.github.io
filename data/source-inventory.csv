@@ -1,0 +1,332 @@
+id,source_document,source_page,page_type,section,lesson,resource_title,resource_kind,publish,notes
+general-p001,0 general handouts and skills to turn to app.pdf,1,section-cover,General Skills,,General Handouts,structural,false,Cover metadata only.
+general-p002,0 general handouts and skills to turn to app.pdf,2,reference,General Skills,skill-finder,Skills & Strengths List,reference,true,
+general-p003,0 general handouts and skills to turn to app.pdf,3,reference,General Skills,skill-finder,Skills Overview,reference,true,
+general-p004,0 general handouts and skills to turn to app.pdf,4,reference,General Skills,skill-finder,Emotional Overload & Emotional Numbness Skills Guide,reference,true,"The general scan cover lists a Feeling Wheel, but this physical page contains a skills-selection guide."
+general-p005,0 general handouts and skills to turn to app.pdf,5,reference,General Skills,skill-finder,Skills Use Guideline,reference,true,
+general-p006,0 general handouts and skills to turn to app.pdf,6,content-handout,General Skills,skill-finder,Dialectics: Acceptance and Change,handout,true,
+goal-setting-p001,1 goal setting and tracking.pdf,1,section-cover,Goal Setting & Tracking,,Goal Setting,structural,false,Cover metadata only.
+goal-setting-p002,1 goal setting and tracking.pdf,2,worksheet,Goal Setting & Tracking,goal-guidelines,Case Map,worksheet,true,
+goal-setting-p003,1 goal setting and tracking.pdf,3,content-handout,Goal Setting & Tracking,goal-guidelines,Goal Setting Guidelines,handout,true,
+goal-setting-p004,1 goal setting and tracking.pdf,4,content-handout,Goal Setting & Tracking,goal-guidelines,SMART Goal Setting,handout,true,
+goal-setting-p005,1 goal setting and tracking.pdf,5,worksheet,Goal Setting & Tracking,weekly-goal-worksheets,Daily Goal Worksheet: Monday to Wednesday,worksheet,true,
+goal-setting-p006,1 goal setting and tracking.pdf,6,worksheet,Goal Setting & Tracking,weekly-goal-worksheets,Daily Goal Worksheet: Thursday to Sunday,worksheet,true,
+goal-setting-p007,1 goal setting and tracking.pdf,7,worksheet,Goal Setting & Tracking,weekly-home-practice,Weekly Home Practice Tracker,worksheet,true,
+goal-setting-p008,1 goal setting and tracking.pdf,8,worksheet,Goal Setting & Tracking,weekly-home-practice,Weekly Food Diary,worksheet,true,
+goal-setting-p009,1 goal setting and tracking.pdf,9,duplicate,Goal Setting & Tracking,,Weekly Food Diary,duplicate,false,Rotated duplicate of goal-setting-p008.
+goal-setting-p010,1 goal setting and tracking.pdf,10,worksheet,Goal Setting & Tracking,weekly-home-practice,Monthly Habit Tracker,worksheet,true,
+goal-setting-p011,1 goal setting and tracking.pdf,11,duplicate,Goal Setting & Tracking,,Monthly Habit Tracker,duplicate,false,Duplicate of goal-setting-p010.
+goal-setting-p012,1 goal setting and tracking.pdf,12,duplicate,Goal Setting & Tracking,,Daily Goal Worksheet: Monday to Wednesday,duplicate,false,Repeated copy of goal-setting-p005.
+goal-setting-p013,1 goal setting and tracking.pdf,13,duplicate,Goal Setting & Tracking,,Daily Goal Worksheet: Thursday to Sunday,duplicate,false,Repeated copy of goal-setting-p006.
+goal-setting-p014,1 goal setting and tracking.pdf,14,duplicate,Goal Setting & Tracking,,Weekly Home Practice Tracker,duplicate,false,Repeated copy of goal-setting-p007.
+goal-setting-p015,1 goal setting and tracking.pdf,15,duplicate,Goal Setting & Tracking,,Daily Goal Worksheet: Monday to Wednesday,duplicate,false,Repeated copy of goal-setting-p005.
+goal-setting-p016,1 goal setting and tracking.pdf,16,duplicate,Goal Setting & Tracking,,Daily Goal Worksheet: Thursday to Sunday,duplicate,false,Repeated copy of goal-setting-p006.
+goal-setting-p017,1 goal setting and tracking.pdf,17,duplicate,Goal Setting & Tracking,,Weekly Home Practice Tracker,duplicate,false,Repeated copy of goal-setting-p007.
+goal-setting-p018,1 goal setting and tracking.pdf,18,duplicate,Goal Setting & Tracking,,Daily Goal Worksheet: Monday to Wednesday,duplicate,false,Repeated copy of goal-setting-p005.
+goal-setting-p019,1 goal setting and tracking.pdf,19,duplicate,Goal Setting & Tracking,,Daily Goal Worksheet: Thursday to Sunday,duplicate,false,Repeated copy of goal-setting-p006.
+goal-setting-p020,1 goal setting and tracking.pdf,20,duplicate,Goal Setting & Tracking,,Weekly Home Practice Tracker,duplicate,false,Repeated copy of goal-setting-p007.
+goal-setting-p021,1 goal setting and tracking.pdf,21,duplicate,Goal Setting & Tracking,,Daily Goal Worksheet: Monday to Wednesday,duplicate,false,Repeated copy of goal-setting-p005.
+goal-setting-p022,1 goal setting and tracking.pdf,22,duplicate,Goal Setting & Tracking,,Daily Goal Worksheet: Thursday to Sunday,duplicate,false,Repeated copy of goal-setting-p006.
+goal-setting-p023,1 goal setting and tracking.pdf,23,duplicate,Goal Setting & Tracking,,Weekly Home Practice Tracker,duplicate,false,Repeated copy of goal-setting-p007.
+goal-setting-p024,1 goal setting and tracking.pdf,24,duplicate,Goal Setting & Tracking,,Daily Goal Worksheet: Monday to Wednesday,duplicate,false,Repeated copy of goal-setting-p005.
+goal-setting-p025,1 goal setting and tracking.pdf,25,duplicate,Goal Setting & Tracking,,Daily Goal Worksheet: Thursday to Sunday,duplicate,false,Repeated copy of goal-setting-p006.
+goal-setting-p026,1 goal setting and tracking.pdf,26,duplicate,Goal Setting & Tracking,,Weekly Home Practice Tracker,duplicate,false,Repeated copy of goal-setting-p007.
+goal-setting-p027,1 goal setting and tracking.pdf,27,duplicate,Goal Setting & Tracking,,Daily Goal Worksheet: Monday to Wednesday,duplicate,false,Repeated copy of goal-setting-p005.
+goal-setting-p028,1 goal setting and tracking.pdf,28,duplicate,Goal Setting & Tracking,,Daily Goal Worksheet: Thursday to Sunday,duplicate,false,Repeated copy of goal-setting-p006.
+goal-setting-p029,1 goal setting and tracking.pdf,29,duplicate,Goal Setting & Tracking,,Weekly Home Practice Tracker,duplicate,false,Repeated copy of goal-setting-p007.
+goal-setting-p030,1 goal setting and tracking.pdf,30,duplicate,Goal Setting & Tracking,,Daily Goal Worksheet: Monday to Wednesday,duplicate,false,Repeated copy of goal-setting-p005.
+goal-setting-p031,1 goal setting and tracking.pdf,31,duplicate,Goal Setting & Tracking,,Daily Goal Worksheet: Thursday to Sunday,duplicate,false,Repeated copy of goal-setting-p006.
+goal-setting-p032,1 goal setting and tracking.pdf,32,duplicate,Goal Setting & Tracking,,Weekly Home Practice Tracker,duplicate,false,Repeated copy of goal-setting-p007.
+goal-setting-p033,1 goal setting and tracking.pdf,33,worksheet,Goal Setting & Tracking,weekly-home-practice,Daily Mood Tracker,worksheet,true,
+goal-setting-p034,1 goal setting and tracking.pdf,34,worksheet,Goal Setting & Tracking,weekly-home-practice,Skills and Wellness Diary Card,worksheet,true,
+distress-tolerance-p001,2 Distress Tolerance.pdf,1,section-cover,Distress Tolerance,,Distress Tolerance,structural,false,Cover metadata only.
+distress-tolerance-p002,2 Distress Tolerance.pdf,2,session-divider,Distress Tolerance,,Session 1: Introduction & STOP,structural,false,Blank session notes page; establishes lesson boundary.
+distress-tolerance-p003,2 Distress Tolerance.pdf,3,exercise,Distress Tolerance,dt-stop,How Can I Make a Distress Crisis Worse?,exercise,true,
+distress-tolerance-p004,2 Distress Tolerance.pdf,4,content-handout,Distress Tolerance,dt-stop,When to Use Crisis Survival Skills,handout,true,
+distress-tolerance-p005,2 Distress Tolerance.pdf,5,content-handout,Distress Tolerance,dt-radical-acceptance,Turning the Mind,handout,true,Title clearly places this later page with Radical Acceptance.
+distress-tolerance-p006,2 Distress Tolerance.pdf,6,content-handout,Distress Tolerance,dt-radical-acceptance,Willingness,handout,true,Title clearly places this later page with Radical Acceptance.
+distress-tolerance-p007,2 Distress Tolerance.pdf,7,content-handout,Distress Tolerance,dt-stop,STOP Skill,handout,true,
+distress-tolerance-p008,2 Distress Tolerance.pdf,8,worksheet,Distress Tolerance,dt-radical-acceptance,"Turning the Mind, Willingness, and Willfulness",worksheet,true,Title clearly places this later page with Radical Acceptance.
+distress-tolerance-p009,2 Distress Tolerance.pdf,9,worksheet,Distress Tolerance,dt-stop,Using the STOP Skill,worksheet,true,
+distress-tolerance-p010,2 Distress Tolerance.pdf,10,session-divider,Distress Tolerance,,Session 2: TIPP,structural,false,Blank session notes page; establishes lesson boundary.
+distress-tolerance-p011,2 Distress Tolerance.pdf,11,reference,Distress Tolerance,dt-tipp,Window of Tolerance,reference,true,
+distress-tolerance-p012,2 Distress Tolerance.pdf,12,content-handout,Distress Tolerance,dt-tipp,Changing Your Body Chemistry with TIPP,handout,true,
+distress-tolerance-p013,2 Distress Tolerance.pdf,13,content-handout,Distress Tolerance,dt-tipp,"Using Cold Water, Step by Step",handout,true,
+distress-tolerance-p014,2 Distress Tolerance.pdf,14,content-handout,Distress Tolerance,dt-tipp,"Paired Muscle Relaxation, Step by Step",handout,true,
+distress-tolerance-p015,2 Distress Tolerance.pdf,15,exercise,Distress Tolerance,dt-tipp,Progressive Muscle Relaxation: Nose to Toes,exercise,true,
+distress-tolerance-p016,2 Distress Tolerance.pdf,16,worksheet,Distress Tolerance,dt-tipp,Changing Body Chemistry with TIPP Skills,worksheet,true,
+distress-tolerance-p017,2 Distress Tolerance.pdf,17,session-divider,Distress Tolerance,,Session 3: Distraction & Self-Soothing,structural,false,Blank session notes page; establishes lesson boundary.
+distress-tolerance-p018,2 Distress Tolerance.pdf,18,content-handout,Distress Tolerance,dt-distraction,Distracting with Wise Mind ACCEPTS,handout,true,
+distress-tolerance-p019,2 Distress Tolerance.pdf,19,reference,Distress Tolerance,dt-distraction,Wise Mind ACCEPTS Overview,reference,true,
+distress-tolerance-p020,2 Distress Tolerance.pdf,20,content-handout,Distress Tolerance,dt-distraction,Self-Soothing,handout,true,
+distress-tolerance-p021,2 Distress Tolerance.pdf,21,exercise,Distress Tolerance,dt-distraction,Self-Soothing Practice,exercise,true,
+distress-tolerance-p022,2 Distress Tolerance.pdf,22,worksheet,Distress Tolerance,dt-distraction,Distracting with Wise Mind ACCEPTS,worksheet,true,
+distress-tolerance-p023,2 Distress Tolerance.pdf,23,exercise,Distress Tolerance,dt-distraction,Creating a Self-Soothing Kit,exercise,true,
+distress-tolerance-p024,2 Distress Tolerance.pdf,24,session-divider,Distress Tolerance,,Session 4: IMPROVE,structural,false,Blank session notes page; establishes lesson boundary.
+distress-tolerance-p025,2 Distress Tolerance.pdf,25,content-handout,Distress Tolerance,dt-improve,Improving the Moment,handout,true,
+distress-tolerance-p026,2 Distress Tolerance.pdf,26,exercise,Distress Tolerance,dt-improve,One Thing in the Moment,exercise,true,
+distress-tolerance-p027,2 Distress Tolerance.pdf,27,exercise,Distress Tolerance,dt-improve,Peaceful Place Meditation,exercise,true,
+distress-tolerance-p028,2 Distress Tolerance.pdf,28,worksheet,Distress Tolerance,dt-improve,IMPROVE Practice,worksheet,true,
+distress-tolerance-p029,2 Distress Tolerance.pdf,29,session-divider,Distress Tolerance,,Session 5: Pros & Cons,structural,false,Blank session notes page; establishes lesson boundary.
+distress-tolerance-p030,2 Distress Tolerance.pdf,30,content-handout,Distress Tolerance,dt-pros-cons,Pros and Cons,handout,true,
+distress-tolerance-p031,2 Distress Tolerance.pdf,31,reference,Distress Tolerance,dt-pros-cons,Pros and Cons: How To,reference,true,
+distress-tolerance-p032,2 Distress Tolerance.pdf,32,worksheet,Distress Tolerance,dt-pros-cons,Pros and Cons of Acting on Crisis Urges,worksheet,true,
+distress-tolerance-p033,2 Distress Tolerance.pdf,33,exercise,Distress Tolerance,dt-pros-cons,Pros and Cons Practice,exercise,true,
+distress-tolerance-p034,2 Distress Tolerance.pdf,34,session-divider,Distress Tolerance,,"Session 6: Radical Acceptance, Half-Smiling & Willing Hands",structural,false,Blank session notes page; establishes lesson boundary.
+distress-tolerance-p035,2 Distress Tolerance.pdf,35,reference,Distress Tolerance,dt-radical-acceptance,Dandelions,reference,true,
+distress-tolerance-p036,2 Distress Tolerance.pdf,36,exercise,Distress Tolerance,dt-radical-acceptance,Developing the Skill of Radical Acceptance,exercise,true,
+distress-tolerance-p037,2 Distress Tolerance.pdf,37,content-handout,Distress Tolerance,dt-radical-acceptance,Radical Acceptance,handout,true,
+distress-tolerance-p038,2 Distress Tolerance.pdf,38,content-handout,Distress Tolerance,dt-radical-acceptance,Radical Acceptance: Factors That Interfere,handout,true,
+distress-tolerance-p039,2 Distress Tolerance.pdf,39,reference,Distress Tolerance,dt-radical-acceptance,Radical Acceptance Quick Reference,reference,true,
+distress-tolerance-p040,2 Distress Tolerance.pdf,40,content-handout,Distress Tolerance,dt-radical-acceptance,Practicing Radical Acceptance Step by Step,handout,true,
+distress-tolerance-p041,2 Distress Tolerance.pdf,41,content-handout,Distress Tolerance,dt-radical-acceptance,Half-Smiling and Willing Hands,handout,true,
+distress-tolerance-p042,2 Distress Tolerance.pdf,42,duplicate,Distress Tolerance,,Practicing Radical Acceptance Step by Step,duplicate,false,Marked duplicate of distress-tolerance-p040.
+distress-tolerance-p043,2 Distress Tolerance.pdf,43,reference,Distress Tolerance,dt-radical-acceptance,How to Solve a Problem,reference,true,
+distress-tolerance-p044,2 Distress Tolerance.pdf,44,reference,Distress Tolerance,dt-radical-acceptance,Three Parts of Radical Acceptance,reference,true,
+distress-tolerance-p045,2 Distress Tolerance.pdf,45,duplicate,Distress Tolerance,,Developing the Skill of Radical Acceptance,duplicate,false,Completed copy of distress-tolerance-p036; not suitable as a blank public worksheet.
+distress-tolerance-p046,2 Distress Tolerance.pdf,46,worksheet,Distress Tolerance,dt-radical-acceptance,Radical Acceptance Practice,worksheet,true,
+distress-tolerance-p047,2 Distress Tolerance.pdf,47,content-handout,Distress Tolerance,dt-radical-acceptance,"Practicing Half-Smiling and Willing Hands, Part 1",handout,true,
+distress-tolerance-p048,2 Distress Tolerance.pdf,48,content-handout,Distress Tolerance,dt-radical-acceptance,"Practicing Half-Smiling and Willing Hands, Part 2",handout,true,
+interpersonal-effectiveness-p001,4 Distress Tolerance.pdf,1,section-cover,Interpersonal Effectiveness,,Interpersonal Effectiveness,structural,false,Cover metadata only; filename is misleading.
+interpersonal-effectiveness-p002,4 Distress Tolerance.pdf,2,session-divider,Interpersonal Effectiveness,,Session 1: Boundaries,structural,false,Blank session notes page; establishes lesson boundary.
+interpersonal-effectiveness-p003,4 Distress Tolerance.pdf,3,content-handout,Interpersonal Effectiveness,ie-boundaries,Understanding Boundaries,handout,true,
+interpersonal-effectiveness-p004,4 Distress Tolerance.pdf,4,worksheet,Interpersonal Effectiveness,ie-boundaries,Identifying Your Boundaries,worksheet,true,
+interpersonal-effectiveness-p005,4 Distress Tolerance.pdf,5,reference,Interpersonal Effectiveness,ie-boundaries,Characteristics of Healthy Relationships,reference,true,
+interpersonal-effectiveness-p006,4 Distress Tolerance.pdf,6,exercise,Interpersonal Effectiveness,ie-boundaries,Identifying My Personal Boundaries,exercise,true,
+interpersonal-effectiveness-p007,4 Distress Tolerance.pdf,7,exercise,Interpersonal Effectiveness,ie-boundaries,Understanding My Boundaries,exercise,true,
+interpersonal-effectiveness-p008,4 Distress Tolerance.pdf,8,session-divider,Interpersonal Effectiveness,,Session 2: Clarifying Priorities & Myths,structural,false,Blank session notes page; establishes lesson boundary.
+interpersonal-effectiveness-p009,4 Distress Tolerance.pdf,9,content-handout,Interpersonal Effectiveness,ie-priorities,Factors in the Way of Interpersonal Effectiveness,handout,true,
+interpersonal-effectiveness-p010,4 Distress Tolerance.pdf,10,content-handout,Interpersonal Effectiveness,ie-priorities,Myths in the Way of Interpersonal Effectiveness,handout,true,
+interpersonal-effectiveness-p011,4 Distress Tolerance.pdf,11,worksheet,Interpersonal Effectiveness,ie-priorities,Challenging Myths: Objectives Effectiveness,worksheet,true,
+interpersonal-effectiveness-p012,4 Distress Tolerance.pdf,12,worksheet,Interpersonal Effectiveness,ie-priorities,Challenging Myths: Relationship and Self-Respect,worksheet,true,
+interpersonal-effectiveness-p013,4 Distress Tolerance.pdf,13,content-handout,Interpersonal Effectiveness,ie-priorities,Obtaining Objectives Skillfully,handout,true,
+interpersonal-effectiveness-p014,4 Distress Tolerance.pdf,14,content-handout,Interpersonal Effectiveness,ie-priorities,Clarifying Goals in Interpersonal Situations,handout,true,
+interpersonal-effectiveness-p015,4 Distress Tolerance.pdf,15,worksheet,Interpersonal Effectiveness,ie-priorities,Clarifying Priorities in Interpersonal Situations,worksheet,true,
+interpersonal-effectiveness-p016,4 Distress Tolerance.pdf,16,session-divider,Interpersonal Effectiveness,,Session 3: DEAR MAN,structural,false,Blank session notes page; establishes lesson boundary.
+interpersonal-effectiveness-p017,4 Distress Tolerance.pdf,17,content-handout,Interpersonal Effectiveness,ie-dear-man,"Guidelines for Objectives Effectiveness: DEAR MAN, Part 1",handout,true,
+interpersonal-effectiveness-p018,4 Distress Tolerance.pdf,18,content-handout,Interpersonal Effectiveness,ie-dear-man,"Guidelines for Objectives Effectiveness: DEAR MAN, Part 2",handout,true,
+interpersonal-effectiveness-p019,4 Distress Tolerance.pdf,19,content-handout,Interpersonal Effectiveness,ie-dear-man,Applying DEAR MAN Skills to a Difficult Interaction,handout,true,
+interpersonal-effectiveness-p020,4 Distress Tolerance.pdf,20,worksheet,Interpersonal Effectiveness,ie-dear-man,DEAR MAN Script,worksheet,true,
+interpersonal-effectiveness-p021,4 Distress Tolerance.pdf,21,session-divider,Interpersonal Effectiveness,,Session 4: DEAR + GIVE,structural,false,Blank session notes page; establishes lesson boundary.
+interpersonal-effectiveness-p022,4 Distress Tolerance.pdf,22,exercise,Interpersonal Effectiveness,ie-give,Finding and Maintaining Relationships,exercise,true,
+interpersonal-effectiveness-p023,4 Distress Tolerance.pdf,23,content-handout,Interpersonal Effectiveness,ie-give,Guidelines for Relationship Effectiveness: GIVE,handout,true,
+interpersonal-effectiveness-p024,4 Distress Tolerance.pdf,24,content-handout,Interpersonal Effectiveness,ie-give,Levels of Validation,handout,true,
+interpersonal-effectiveness-p025,4 Distress Tolerance.pdf,25,reference,Interpersonal Effectiveness,ie-give,A Few Words About Validation,reference,true,
+interpersonal-effectiveness-p026,4 Distress Tolerance.pdf,26,reference,Interpersonal Effectiveness,ie-give,Validation Expressions,reference,true,
+interpersonal-effectiveness-p027,4 Distress Tolerance.pdf,27,reference,Interpersonal Effectiveness,ie-give,The Four Horsemen and Their Antidotes,reference,true,
+interpersonal-effectiveness-p028,4 Distress Tolerance.pdf,28,worksheet,Interpersonal Effectiveness,ie-give,DEAR + GIVE Script,worksheet,true,
+interpersonal-effectiveness-p029,4 Distress Tolerance.pdf,29,duplicate,Interpersonal Effectiveness,,DEAR + GIVE Script,duplicate,false,Duplicate copy of interpersonal-effectiveness-p028.
+interpersonal-effectiveness-p030,4 Distress Tolerance.pdf,30,session-divider,Interpersonal Effectiveness,,Session 5: DEAR + FAST,structural,false,Blank session notes page; establishes lesson boundary.
+interpersonal-effectiveness-p031,4 Distress Tolerance.pdf,31,exercise,Interpersonal Effectiveness,ie-fast,Self-Respect Effectiveness Reflection,exercise,true,
+interpersonal-effectiveness-p032,4 Distress Tolerance.pdf,32,reference,Interpersonal Effectiveness,ie-fast,A Bill of Assertive Rights,reference,true,
+interpersonal-effectiveness-p033,4 Distress Tolerance.pdf,33,content-handout,Interpersonal Effectiveness,ie-fast,Guidelines for Self-Respect Effectiveness: FAST,handout,true,
+interpersonal-effectiveness-p034,4 Distress Tolerance.pdf,34,reference,Interpersonal Effectiveness,ie-fast,Apologizing Effectively,reference,true,
+interpersonal-effectiveness-p035,4 Distress Tolerance.pdf,35,worksheet,Interpersonal Effectiveness,ie-fast,DEAR + FAST Script,worksheet,true,
+interpersonal-effectiveness-p036,4 Distress Tolerance.pdf,36,session-divider,Interpersonal Effectiveness,,"Session 6: Ask, Say No & Troubleshooting",structural,false,Blank session notes page; establishes lesson boundary.
+interpersonal-effectiveness-p037,4 Distress Tolerance.pdf,37,content-handout,Interpersonal Effectiveness,ie-ask-no,"How Intensely to Ask or Say No, Part 1",handout,true,
+interpersonal-effectiveness-p038,4 Distress Tolerance.pdf,38,content-handout,Interpersonal Effectiveness,ie-ask-no,"How Intensely to Ask or Say No, Part 2",handout,true,
+interpersonal-effectiveness-p039,4 Distress Tolerance.pdf,39,content-handout,Interpersonal Effectiveness,ie-ask-no,"How Intensely to Ask or Say No, Part 3",handout,true,
+interpersonal-effectiveness-p040,4 Distress Tolerance.pdf,40,content-handout,Interpersonal Effectiveness,ie-ask-no,"Troubleshooting Interpersonal Effectiveness, Part 1",handout,true,
+interpersonal-effectiveness-p041,4 Distress Tolerance.pdf,41,content-handout,Interpersonal Effectiveness,ie-ask-no,"Troubleshooting Interpersonal Effectiveness, Part 2",handout,true,
+interpersonal-effectiveness-p042,4 Distress Tolerance.pdf,42,worksheet,Interpersonal Effectiveness,ie-ask-no,"Troubleshooting Interpersonal Effectiveness Skills, Part 1",worksheet,true,
+interpersonal-effectiveness-p043,4 Distress Tolerance.pdf,43,worksheet,Interpersonal Effectiveness,ie-ask-no,"Troubleshooting Interpersonal Effectiveness Skills, Part 2",worksheet,true,
+interpersonal-effectiveness-p044,4 Distress Tolerance.pdf,44,reference,Interpersonal Effectiveness,ie-ask-no,Dialectics: Acceptance and Change,reference,true,
+interpersonal-effectiveness-p045,4 Distress Tolerance.pdf,45,content-handout,Interpersonal Effectiveness,ie-ask-no,Walking the Middle Path,handout,true,
+interpersonal-effectiveness-p046,4 Distress Tolerance.pdf,46,worksheet,Interpersonal Effectiveness,ie-ask-no,Identifying Mindfulness of Others,worksheet,true,
+interpersonal-effectiveness-p047,4 Distress Tolerance.pdf,47,worksheet,Interpersonal Effectiveness,ie-ask-no,Opposite Sides That Can Both Be True,worksheet,true,
+interpersonal-effectiveness-p048,4 Distress Tolerance.pdf,48,worksheet,Interpersonal Effectiveness,ie-ask-no,Important Opposites to Balance,worksheet,true,
+interpersonal-effectiveness-p049,4 Distress Tolerance.pdf,49,worksheet,Interpersonal Effectiveness,ie-ask-no,Identifying Dialectics,worksheet,true,
+wellness-p001,5 Wellness.pdf,1,section-cover,Wellness,,Wellness,structural,false,Cover metadata only.
+wellness-p002,5 Wellness.pdf,2,content-handout,Wellness,wellness-sleep,Taking Care of Your Mind by Taking Care of Your Body,handout,true,PLEASE overview supports Wellness and is linked from Emotion Regulation.
+wellness-p003,5 Wellness.pdf,3,session-divider,Wellness,,Session 1: Sleep,structural,false,Blank session notes page; establishes lesson boundary.
+wellness-p004,5 Wellness.pdf,4,exercise,Wellness,wellness-sleep,Exploring Sleep,exercise,true,
+wellness-p005,5 Wellness.pdf,5,reference,Wellness,wellness-sleep,Understanding Sleep,reference,true,
+wellness-p006,5 Wellness.pdf,6,reference,Wellness,wellness-sleep,The Five Stages of Sleep,reference,true,
+wellness-p007,5 Wellness.pdf,7,content-handout,Wellness,wellness-sleep,Additional Sleep Hygiene Tips,handout,true,
+wellness-p008,5 Wellness.pdf,8,worksheet,Wellness,wellness-sleep,Sleep Hygiene Practice Sheet,worksheet,true,
+wellness-p009,5 Wellness.pdf,9,session-divider,Wellness,,Session 2: Behaviour Activation,structural,false,Blank session notes page; establishes lesson boundary.
+wellness-p010,5 Wellness.pdf,10,reference,Wellness,wellness-activation,The First Vicious Cycle,reference,true,
+wellness-p011,5 Wellness.pdf,11,reference,Wellness,wellness-activation,The Second Vicious Cycle,reference,true,
+wellness-p012,5 Wellness.pdf,12,worksheet,Wellness,wellness-activation,Your Cycles,worksheet,true,
+wellness-p013,5 Wellness.pdf,13,content-handout,Wellness,wellness-activation,The Upward Spiral of Behavioural Activation,handout,true,
+wellness-p014,5 Wellness.pdf,14,content-handout,Wellness,wellness-activation,What Is Behaviour Activation?,handout,true,
+wellness-p015,5 Wellness.pdf,15,content-handout,Wellness,wellness-activation,Behaviour Activation: Battery vs. Generator,handout,true,
+wellness-p016,5 Wellness.pdf,16,content-handout,Wellness,wellness-activation,"Behavioural Activation Tips, Part 1",handout,true,
+wellness-p017,5 Wellness.pdf,17,content-handout,Wellness,wellness-activation,"Behavioural Activation Tips, Part 2",handout,true,
+wellness-p018,5 Wellness.pdf,18,content-handout,Wellness,wellness-activation,"Behavioural Activation Tips, Part 3",handout,true,
+wellness-p019,5 Wellness.pdf,19,worksheet,Wellness,wellness-activation,Activity Monitoring Worksheet,worksheet,true,
+wellness-p020,5 Wellness.pdf,20,worksheet,Wellness,wellness-activation,Activity Planning Worksheet,worksheet,true,
+wellness-p021,5 Wellness.pdf,21,worksheet,Wellness,wellness-activation,Behavioural Activation Barriers and Resources,worksheet,true,
+wellness-p022,5 Wellness.pdf,22,session-divider,Wellness,,Session 3: Behaviour Chain Analysis & Missing Links,structural,false,Blank session notes page; establishes lesson boundary.
+wellness-p023,5 Wellness.pdf,23,content-handout,Wellness,wellness-bca,Analyzing Behaviour,handout,true,
+wellness-p024,5 Wellness.pdf,24,reference,Wellness,wellness-bca,The Behaviour Chain Analysis,reference,true,
+wellness-p025,5 Wellness.pdf,25,reference,Wellness,wellness-bca,"Behaviour Chain Analysis Example, Part 1",reference,true,
+wellness-p026,5 Wellness.pdf,26,reference,Wellness,wellness-bca,"Behaviour Chain Analysis Example, Part 2",reference,true,
+wellness-p027,5 Wellness.pdf,27,reference,Wellness,wellness-bca,"Behaviour Chain Analysis Example, Part 3",reference,true,
+wellness-p028,5 Wellness.pdf,28,worksheet,Wellness,wellness-bca,"Behaviour Chain Analysis Worksheet, Part 1",worksheet,true,
+wellness-p029,5 Wellness.pdf,29,worksheet,Wellness,wellness-bca,"Behaviour Chain Analysis Worksheet, Part 2",worksheet,true,
+wellness-p030,5 Wellness.pdf,30,worksheet,Wellness,wellness-bca,"Behaviour Chain Analysis Worksheet, Part 3",worksheet,true,
+wellness-p031,5 Wellness.pdf,31,worksheet,Wellness,wellness-bca,Behaviour Chain Analysis Map,worksheet,true,
+wellness-p032,5 Wellness.pdf,32,worksheet,Wellness,wellness-bca,Missing-Links Analysis,worksheet,true,
+wellness-p033,5 Wellness.pdf,33,session-divider,Wellness,,Session 4: Addictions,structural,false,Blank session notes page; establishes lesson boundary.
+wellness-p034,5 Wellness.pdf,34,reference,Wellness,wellness-addictions,Effects of Substance Use,reference,true,
+wellness-p035,5 Wellness.pdf,35,reference,Wellness,wellness-addictions,Signs of Maladaptive Coping,reference,true,
+wellness-p036,5 Wellness.pdf,36,content-handout,Wellness,wellness-addictions,Stages of Change,handout,true,
+wellness-p037,5 Wellness.pdf,37,worksheet,Wellness,wellness-addictions,"Stages of Change Worksheet, Part 1",worksheet,true,
+wellness-p038,5 Wellness.pdf,38,worksheet,Wellness,wellness-addictions,"Stages of Change Worksheet, Part 2",worksheet,true,
+wellness-p039,5 Wellness.pdf,39,worksheet,Wellness,wellness-addictions,"Stages of Change Worksheet, Part 3",worksheet,true,
+wellness-p040,5 Wellness.pdf,40,reference,Wellness,wellness-addictions,Naloxone: Save a Life,reference,true,
+wellness-p041,5 Wellness.pdf,41,reference,Wellness,wellness-addictions,Opioid Overdoses: What to Do,reference,true,
+wellness-p042,5 Wellness.pdf,42,session-divider,Wellness,,Session 5: Balanced Eating,structural,false,Blank session notes page; establishes lesson boundary.
+wellness-p043,5 Wellness.pdf,43,content-handout,Wellness,wellness-eating,"Seven Tips for Balanced Eating, Part 1",handout,true,
+wellness-p044,5 Wellness.pdf,44,content-handout,Wellness,wellness-eating,"Seven Tips for Balanced Eating, Part 2",handout,true,
+wellness-p045,5 Wellness.pdf,45,reference,Wellness,wellness-eating,Eating Well on a Budget,reference,true,
+wellness-p046,5 Wellness.pdf,46,reference,Wellness,wellness-eating,"Canada's Food Guide: Eat Well, Live Well",reference,true,
+wellness-p047,5 Wellness.pdf,47,reference,Wellness,wellness-eating,Healthy Eating Is More Than the Foods You Eat,reference,true,
+wellness-p048,5 Wellness.pdf,48,reference,Wellness,wellness-eating,Estimating Portion Sizes,reference,true,
+wellness-p049,5 Wellness.pdf,49,worksheet,Wellness,wellness-eating,Weekly Food Journal,worksheet,true,
+wellness-p050,5 Wellness.pdf,50,worksheet,Wellness,wellness-eating,Weekly Meal Plan,worksheet,true,
+wellness-p051,5 Wellness.pdf,51,session-divider,Wellness,,Session 6: Medication & Doctor's Visits,structural,false,Blank session notes page; establishes lesson boundary.
+wellness-p052,5 Wellness.pdf,52,exercise,Wellness,wellness-medication,Doctor Appointment Barriers,exercise,true,
+wellness-p053,5 Wellness.pdf,53,content-handout,Wellness,wellness-medication,Tips for Managing Appointments,handout,true,
+wellness-p054,5 Wellness.pdf,54,worksheet,Wellness,wellness-medication,Questions for Your Doctor and Appointment Reminder,worksheet,true,
+wellness-p055,5 Wellness.pdf,55,content-handout,Wellness,wellness-medication,"Myths About Psychiatric Medication, Part 1",handout,true,
+wellness-p056,5 Wellness.pdf,56,content-handout,Wellness,wellness-medication,"Myths About Psychiatric Medication, Part 2",handout,true,
+wellness-p057,5 Wellness.pdf,57,reference,Wellness,wellness-medication,Medication Reminder Tools,reference,true,
+wellness-p058,5 Wellness.pdf,58,reference,Wellness,wellness-medication,Medication Organizers,reference,true,
+wellness-p059,5 Wellness.pdf,59,reference,Wellness,wellness-medication,Alarms and Medication Dispensers,reference,true,
+wellness-p060,5 Wellness.pdf,60,worksheet,Wellness,wellness-medication,My Current Medications,worksheet,true,
+wellness-p061,5 Wellness.pdf,61,worksheet,Wellness,wellness-medication,My Current Medications: Extended,worksheet,true,
+wellness-p062,5 Wellness.pdf,62,reference,Wellness,wellness-medication,Health Care Connect,reference,true,
+emotion-regulation-p001,6 Emotional Regulation.pdf,1,section-cover,Emotion Regulation,,Emotion Regulation,structural,false,Cover metadata only.
+emotion-regulation-p002,6 Emotional Regulation.pdf,2,session-divider,Emotion Regulation,,Session 1: What Emotions Do for You,structural,false,Blank session notes page; establishes lesson boundary.
+emotion-regulation-p003,6 Emotional Regulation.pdf,3,reference,Emotion Regulation,er-what,Basic Functions of Emotions,reference,true,
+emotion-regulation-p004,6 Emotional Regulation.pdf,4,content-handout,Emotion Regulation,er-what,Goals of Emotion Regulation,handout,true,
+emotion-regulation-p005,6 Emotional Regulation.pdf,5,content-handout,Emotion Regulation,er-what,What Emotions Do for You,handout,true,
+emotion-regulation-p006,6 Emotional Regulation.pdf,6,content-handout,Emotion Regulation,er-what,What Makes It Hard to Regulate Your Emotions,handout,true,
+emotion-regulation-p007,6 Emotional Regulation.pdf,7,worksheet,Emotion Regulation,er-what,Myths About Emotions,worksheet,true,
+emotion-regulation-p008,6 Emotional Regulation.pdf,8,reference,Emotion Regulation,er-what,Emotion Diary Example,reference,true,
+emotion-regulation-p009,6 Emotional Regulation.pdf,9,worksheet,Emotion Regulation,er-what,Emotion Diary,worksheet,true,
+emotion-regulation-p010,6 Emotional Regulation.pdf,10,session-divider,Emotion Regulation,,Session 2: Emotions,structural,false,Blank session notes page; establishes lesson boundary.
+emotion-regulation-p011,6 Emotional Regulation.pdf,11,exercise,Emotion Regulation,er-emotions,Learning About Emotions,exercise,true,
+emotion-regulation-p012,6 Emotional Regulation.pdf,12,reference,Emotion Regulation,er-emotions,Model for Describing Emotions,reference,true,
+emotion-regulation-p013,6 Emotional Regulation.pdf,13,duplicate,Emotion Regulation,,Basic Functions of Emotions,duplicate,false,Duplicate of emotion-regulation-p003.
+emotion-regulation-p014,6 Emotional Regulation.pdf,14,content-handout,Emotion Regulation,er-emotions,Ways to Describe Emotions: Anger,handout,true,
+emotion-regulation-p015,6 Emotional Regulation.pdf,15,content-handout,Emotion Regulation,er-emotions,Ways to Describe Emotions: Disgust,handout,true,
+emotion-regulation-p016,6 Emotional Regulation.pdf,16,content-handout,Emotion Regulation,er-emotions,Ways to Describe Emotions: Envy,handout,true,
+emotion-regulation-p017,6 Emotional Regulation.pdf,17,content-handout,Emotion Regulation,er-emotions,Ways to Describe Emotions: Fear,handout,true,
+emotion-regulation-p018,6 Emotional Regulation.pdf,18,content-handout,Emotion Regulation,er-emotions,Ways to Describe Emotions: Happiness,handout,true,
+emotion-regulation-p019,6 Emotional Regulation.pdf,19,content-handout,Emotion Regulation,er-emotions,Ways to Describe Emotions: Jealousy,handout,true,
+emotion-regulation-p020,6 Emotional Regulation.pdf,20,content-handout,Emotion Regulation,er-emotions,Ways to Describe Emotions: Love,handout,true,
+emotion-regulation-p021,6 Emotional Regulation.pdf,21,content-handout,Emotion Regulation,er-emotions,Ways to Describe Emotions: Sadness,handout,true,
+emotion-regulation-p022,6 Emotional Regulation.pdf,22,content-handout,Emotion Regulation,er-emotions,Ways to Describe Emotions: Shame,handout,true,
+emotion-regulation-p023,6 Emotional Regulation.pdf,23,content-handout,Emotion Regulation,er-emotions,Ways to Describe Emotions: Guilt,handout,true,
+emotion-regulation-p024,6 Emotional Regulation.pdf,24,worksheet,Emotion Regulation,er-emotions,Understanding and Naming Your Emotions,worksheet,true,
+emotion-regulation-p025,6 Emotional Regulation.pdf,25,worksheet,Emotion Regulation,er-emotions,Observing and Describing Emotions,worksheet,true,
+emotion-regulation-p026,6 Emotional Regulation.pdf,26,exercise,Emotion Regulation,er-emotions,The Tangled Ball of Emotions,exercise,true,
+emotion-regulation-p027,6 Emotional Regulation.pdf,27,exercise,Emotion Regulation,er-emotions,Where Do I Feel Emotions?,exercise,true,
+emotion-regulation-p028,6 Emotional Regulation.pdf,28,session-divider,Emotion Regulation,,Session 3: Check the Facts,structural,false,Blank session notes page; establishes lesson boundary.
+emotion-regulation-p029,6 Emotional Regulation.pdf,29,worksheet,Emotion Regulation,er-check,Fact or Opinion?,worksheet,true,
+emotion-regulation-p030,6 Emotional Regulation.pdf,30,reference,Emotion Regulation,er-check,"Fact, Opinion, Belief, and Prejudice",reference,true,
+emotion-regulation-p031,6 Emotional Regulation.pdf,31,content-handout,Emotion Regulation,er-check,Changing Emotional Responses,handout,true,
+emotion-regulation-p032,6 Emotional Regulation.pdf,32,content-handout,Emotion Regulation,er-check,Check the Facts,handout,true,
+emotion-regulation-p033,6 Emotional Regulation.pdf,33,reference,Emotion Regulation,er-check,Examples of Emotions That Fit the Facts,reference,true,
+emotion-regulation-p034,6 Emotional Regulation.pdf,34,exercise,Emotion Regulation,er-check,Check the Facts Practice,exercise,true,
+emotion-regulation-p035,6 Emotional Regulation.pdf,35,session-divider,Emotion Regulation,,Session 4: Opposite Action & Problem Solving,structural,false,Blank session notes page; establishes lesson boundary.
+emotion-regulation-p036,6 Emotional Regulation.pdf,36,worksheet,Emotion Regulation,er-opposite,Choosing Problem Solving or Opposite Action,worksheet,true,
+emotion-regulation-p037,6 Emotional Regulation.pdf,37,content-handout,Emotion Regulation,er-opposite,Opposite Action and Problem Solving,handout,true,
+emotion-regulation-p038,6 Emotional Regulation.pdf,38,content-handout,Emotion Regulation,er-opposite,Opposite Action,handout,true,
+emotion-regulation-p039,6 Emotional Regulation.pdf,39,content-handout,Emotion Regulation,er-opposite,Problem Solving,handout,true,
+emotion-regulation-p040,6 Emotional Regulation.pdf,40,content-handout,Emotion Regulation,er-opposite,"Reviewing Opposite Action and Problem Solving, Part 1",handout,true,
+emotion-regulation-p041,6 Emotional Regulation.pdf,41,content-handout,Emotion Regulation,er-opposite,"Reviewing Opposite Action and Problem Solving, Part 2",handout,true,
+emotion-regulation-p042,6 Emotional Regulation.pdf,42,content-handout,Emotion Regulation,er-opposite,"Reviewing Opposite Action and Problem Solving, Part 3",handout,true,
+emotion-regulation-p043,6 Emotional Regulation.pdf,43,reference,Emotion Regulation,er-opposite,Opposite Action Elevator Example,reference,true,
+emotion-regulation-p044,6 Emotional Regulation.pdf,44,content-handout,Emotion Regulation,er-opposite,Opposite Action for Fear,handout,true,
+emotion-regulation-p045,6 Emotional Regulation.pdf,45,content-handout,Emotion Regulation,er-opposite,Opposite Action for Anger,handout,true,
+emotion-regulation-p046,6 Emotional Regulation.pdf,46,content-handout,Emotion Regulation,er-opposite,Opposite Action for Disgust,handout,true,
+emotion-regulation-p047,6 Emotional Regulation.pdf,47,content-handout,Emotion Regulation,er-opposite,Opposite Action for Envy,handout,true,
+emotion-regulation-p048,6 Emotional Regulation.pdf,48,content-handout,Emotion Regulation,er-opposite,Opposite Action for Jealousy,handout,true,
+emotion-regulation-p049,6 Emotional Regulation.pdf,49,content-handout,Emotion Regulation,er-opposite,Opposite Action for Love,handout,true,
+emotion-regulation-p050,6 Emotional Regulation.pdf,50,content-handout,Emotion Regulation,er-opposite,Opposite Action for Sadness,handout,true,
+emotion-regulation-p051,6 Emotional Regulation.pdf,51,content-handout,Emotion Regulation,er-opposite,Opposite Action for Shame,handout,true,
+emotion-regulation-p052,6 Emotional Regulation.pdf,52,content-handout,Emotion Regulation,er-opposite,Opposite Action for Guilt,handout,true,
+emotion-regulation-p053,6 Emotional Regulation.pdf,53,exercise,Emotion Regulation,er-opposite,Opposite Action to Change Emotions,exercise,true,
+emotion-regulation-p054,6 Emotional Regulation.pdf,54,worksheet,Emotion Regulation,er-opposite,"Problem Solving Worksheet, Part 1",worksheet,true,
+emotion-regulation-p055,6 Emotional Regulation.pdf,55,worksheet,Emotion Regulation,er-opposite,"Problem Solving Worksheet, Part 2",worksheet,true,
+emotion-regulation-p056,6 Emotional Regulation.pdf,56,session-divider,Emotion Regulation,,Session 5: Accumulating Positive Emotions,structural,false,Blank session notes page; establishes lesson boundary.
+emotion-regulation-p057,6 Emotional Regulation.pdf,57,content-handout,Emotion Regulation,er-accumulating,ABC PLEASE Overview,handout,true,
+emotion-regulation-p058,6 Emotional Regulation.pdf,58,content-handout,Emotion Regulation,er-accumulating,Accumulating Positive Emotions: Short Term,handout,true,
+emotion-regulation-p059,6 Emotional Regulation.pdf,59,reference,Emotion Regulation,er-accumulating,"Pleasant Events List, Part 1",reference,true,
+emotion-regulation-p060,6 Emotional Regulation.pdf,60,reference,Emotion Regulation,er-accumulating,"Pleasant Events List, Part 2",reference,true,
+emotion-regulation-p061,6 Emotional Regulation.pdf,61,reference,Emotion Regulation,er-accumulating,"Pleasant Events List, Part 3",reference,true,
+emotion-regulation-p062,6 Emotional Regulation.pdf,62,content-handout,Emotion Regulation,er-accumulating,Accumulating Positive Emotions: Long Term,handout,true,
+emotion-regulation-p063,6 Emotional Regulation.pdf,63,reference,Emotion Regulation,er-accumulating,"Values and Priorities List, Part 1",reference,true,
+emotion-regulation-p064,6 Emotional Regulation.pdf,64,reference,Emotion Regulation,er-accumulating,"Values and Priorities List, Part 2",reference,true,
+emotion-regulation-p065,6 Emotional Regulation.pdf,65,reference,Emotion Regulation,er-accumulating,"Values and Priorities List, Part 3",reference,true,
+emotion-regulation-p066,6 Emotional Regulation.pdf,66,worksheet,Emotion Regulation,er-accumulating,Building Positive Experiences Now,worksheet,true,
+emotion-regulation-p067,6 Emotional Regulation.pdf,67,worksheet,Emotion Regulation,er-accumulating,Daily Pleasant Moments Record,worksheet,true,
+emotion-regulation-p068,6 Emotional Regulation.pdf,68,worksheet,Emotion Regulation,er-accumulating,"Accumulating Positive Emotions: Long Term Worksheet, Part 1",worksheet,true,
+emotion-regulation-p069,6 Emotional Regulation.pdf,69,worksheet,Emotion Regulation,er-accumulating,"Accumulating Positive Emotions: Long Term Worksheet, Part 2",worksheet,true,
+emotion-regulation-p070,6 Emotional Regulation.pdf,70,session-divider,Emotion Regulation,,Session 6: Building Mastery & Cope Ahead,structural,false,Blank session notes page; establishes lesson boundary.
+emotion-regulation-p071,6 Emotional Regulation.pdf,71,content-handout,Emotion Regulation,er-mastery,Building Mastery,handout,true,
+emotion-regulation-p072,6 Emotional Regulation.pdf,72,content-handout,Emotion Regulation,er-mastery,Changing Emotional Responses with Cope Ahead,handout,true,
+emotion-regulation-p073,6 Emotional Regulation.pdf,73,content-handout,Emotion Regulation,er-mastery,How to Cope Ahead,handout,true,
+emotion-regulation-p074,6 Emotional Regulation.pdf,74,reference,Emotion Regulation,er-mastery,Mind Mapping and Mastery,reference,true,
+emotion-regulation-p075,6 Emotional Regulation.pdf,75,exercise,Emotion Regulation,er-mastery,Mastery Mind Map,exercise,true,
+emotion-regulation-p076,6 Emotional Regulation.pdf,76,worksheet,Emotion Regulation,er-mastery,Cope Ahead Worksheet,worksheet,true,
+emotion-regulation-p077,6 Emotional Regulation.pdf,77,exercise,Emotion Regulation,er-mastery,"Cope Ahead for the Holidays, Part 1",exercise,true,
+emotion-regulation-p078,6 Emotional Regulation.pdf,78,exercise,Emotion Regulation,er-mastery,"Cope Ahead for the Holidays, Part 2",exercise,true,
+cbt-skills-p001,7 CBT SKills.pdf,1,section-cover,CBT Skills,,CBT Skills,structural,false,Cover metadata only.
+cbt-skills-p002,7 CBT SKills.pdf,2,session-divider,CBT Skills,,Session 1: Introduction to CBT,structural,false,Blank session notes page; establishes lesson boundary.
+cbt-skills-p003,7 CBT SKills.pdf,3,reference,CBT Skills,cbt-intro,"Fear, Anxiety, Stress, and Panic",reference,true,
+cbt-skills-p004,7 CBT SKills.pdf,4,worksheet,CBT Skills,cbt-intro,Understanding My Anxiety,worksheet,true,
+cbt-skills-p005,7 CBT SKills.pdf,5,worksheet,CBT Skills,cbt-intro,The Cost of Anxiety,worksheet,true,
+cbt-skills-p006,7 CBT SKills.pdf,6,reference,CBT Skills,cbt-intro,Symptoms of Anxiety,reference,true,
+cbt-skills-p007,7 CBT SKills.pdf,7,reference,CBT Skills,cbt-intro,Alarming Adrenaline,reference,true,
+cbt-skills-p008,7 CBT SKills.pdf,8,reference,CBT Skills,cbt-intro,Fight or Flight,reference,true,
+cbt-skills-p009,7 CBT SKills.pdf,9,content-handout,CBT Skills,cbt-intro,Five Factor Model,handout,true,
+cbt-skills-p010,7 CBT SKills.pdf,10,worksheet,CBT Skills,cbt-intro,Five Factor Model Worksheet,worksheet,true,
+cbt-skills-p011,7 CBT SKills.pdf,11,session-divider,CBT Skills,,Session 2: Thinking Traps,structural,false,Blank session notes page; establishes lesson boundary.
+cbt-skills-p012,7 CBT SKills.pdf,12,reference,CBT Skills,cbt-traps,Thinking Traps Overview,reference,true,
+cbt-skills-p013,7 CBT SKills.pdf,13,worksheet,CBT Skills,cbt-traps,Testing Your Thoughts: Side One,worksheet,true,
+cbt-skills-p014,7 CBT SKills.pdf,14,reference,CBT Skills,cbt-traps,What Are Core Beliefs?,reference,true,
+cbt-skills-p015,7 CBT SKills.pdf,15,worksheet,CBT Skills,cbt-traps,Testing Your Thoughts: Side Two,worksheet,true,
+cbt-skills-p016,7 CBT SKills.pdf,16,exercise,CBT Skills,cbt-traps,Find the Thinking Traps,exercise,true,
+cbt-skills-p017,7 CBT SKills.pdf,17,worksheet,CBT Skills,cbt-traps,"Identifying Thinking Traps, Part 1",worksheet,true,
+cbt-skills-p018,7 CBT SKills.pdf,18,worksheet,CBT Skills,cbt-traps,"Identifying Thinking Traps, Part 2",worksheet,true,
+cbt-skills-p019,7 CBT SKills.pdf,19,session-divider,CBT Skills,,Session 3: Thought Records Part 1,structural,false,Blank session notes page; establishes lesson boundary.
+cbt-skills-p020,7 CBT SKills.pdf,20,reference,CBT Skills,cbt-records-1,The Farmer and His Horse,reference,true,
+cbt-skills-p021,7 CBT SKills.pdf,21,content-handout,CBT Skills,cbt-records-1,How to Get Out of a Thinking Trap,handout,true,
+cbt-skills-p022,7 CBT SKills.pdf,22,reference,CBT Skills,cbt-records-1,Challenge Negative Thinking,reference,true,
+cbt-skills-p023,7 CBT SKills.pdf,23,worksheet,CBT Skills,cbt-records-1,Challenging Negative Thinking Practice,worksheet,true,
+cbt-skills-p024,7 CBT SKills.pdf,24,content-handout,CBT Skills,cbt-records-1,Thought Record Part 1,handout,true,
+cbt-skills-p025,7 CBT SKills.pdf,25,worksheet,CBT Skills,cbt-records-1,Identifying Automatic Thoughts,worksheet,true,
+cbt-skills-p026,7 CBT SKills.pdf,26,session-divider,CBT Skills,,Session 4: Thought Records Part 2,structural,false,Blank session notes page; establishes lesson boundary.
+cbt-skills-p027,7 CBT SKills.pdf,27,content-handout,CBT Skills,cbt-records-2,Thought Record Part 2: Challenging the Hot Thought,handout,true,
+cbt-skills-p028,7 CBT SKills.pdf,28,content-handout,CBT Skills,cbt-records-2,Looking for Evidence,handout,true,
+cbt-skills-p029,7 CBT SKills.pdf,29,content-handout,CBT Skills,cbt-records-2,Creating Balanced Alternatives,handout,true,
+cbt-skills-p030,7 CBT SKills.pdf,30,content-handout,CBT Skills,cbt-records-2,Best Friend Technique and Re-Rating,handout,true,
+cbt-skills-p031,7 CBT SKills.pdf,31,reference,CBT Skills,cbt-records-2,Thoughts About Thought Records,reference,true,
+cbt-skills-p032,7 CBT SKills.pdf,32,reference,CBT Skills,cbt-records-2,Completed Thought Record Example 1,reference,true,
+cbt-skills-p033,7 CBT SKills.pdf,33,reference,CBT Skills,cbt-records-2,Completed Thought Record Example 2,reference,true,
+cbt-skills-p034,7 CBT SKills.pdf,34,worksheet,CBT Skills,cbt-records-2,Blank Thought Record,worksheet,true,
+cbt-skills-p035,7 CBT SKills.pdf,35,session-divider,CBT Skills,,Session 5: Understanding Worry,structural,false,Blank session notes page; establishes lesson boundary.
+cbt-skills-p036,7 CBT SKills.pdf,36,content-handout,CBT Skills,cbt-worry,"Understanding Worry, Part 1",handout,true,
+cbt-skills-p037,7 CBT SKills.pdf,37,content-handout,CBT Skills,cbt-worry,"Understanding Worry, Part 2",handout,true,
+cbt-skills-p038,7 CBT SKills.pdf,38,reference,CBT Skills,cbt-worry,Worry Beliefs,reference,true,
+cbt-skills-p039,7 CBT SKills.pdf,39,reference,CBT Skills,cbt-worry,Worry and Problem Solving,reference,true,
+cbt-skills-p040,7 CBT SKills.pdf,40,content-handout,CBT Skills,cbt-worry,Postpone Your Worry,handout,true,
+cbt-skills-p041,7 CBT SKills.pdf,41,content-handout,CBT Skills,cbt-worry,Using the Worry Tree,handout,true,
+cbt-skills-p042,7 CBT SKills.pdf,42,reference,CBT Skills,cbt-worry,The Worry Tree,reference,true,
+cbt-skills-p043,7 CBT SKills.pdf,43,duplicate,CBT Skills,,The Worry Tree,duplicate,false,Duplicate copy of cbt-skills-p042.
+cbt-skills-p044,7 CBT SKills.pdf,44,worksheet,CBT Skills,cbt-worry,Worry Diary,worksheet,true,
+cbt-skills-p045,7 CBT SKills.pdf,45,worksheet,CBT Skills,cbt-worry,Fear Ladder Starter,worksheet,true,
+cbt-skills-p046,7 CBT SKills.pdf,46,session-divider,CBT Skills,,Session 6: Safety Behaviours & Exposure,structural,false,Blank session notes page; establishes lesson boundary.
+cbt-skills-p047,7 CBT SKills.pdf,47,worksheet,CBT Skills,cbt-exposure,Avoidance Worksheet,worksheet,true,
+cbt-skills-p048,7 CBT SKills.pdf,48,content-handout,CBT Skills,cbt-exposure,What Are Safety Behaviours?,handout,true,
+cbt-skills-p049,7 CBT SKills.pdf,49,worksheet,CBT Skills,cbt-exposure,Safety Behaviour Checklist,worksheet,true,
+cbt-skills-p050,7 CBT SKills.pdf,50,content-handout,CBT Skills,cbt-exposure,Situational Exposure,handout,true,
+cbt-skills-p051,7 CBT SKills.pdf,51,reference,CBT Skills,cbt-exposure,Examples of Fear Ladders,reference,true,
+cbt-skills-p052,7 CBT SKills.pdf,52,reference,CBT Skills,cbt-exposure,Ideas for Challenging Different Fears,reference,true,
+cbt-skills-p053,7 CBT SKills.pdf,53,worksheet,CBT Skills,cbt-exposure,Developing Exposure Hierarchies,worksheet,true,
+cbt-skills-p054,7 CBT SKills.pdf,54,worksheet,CBT Skills,cbt-exposure,Exposure Hierarchy Worksheet,worksheet,true,

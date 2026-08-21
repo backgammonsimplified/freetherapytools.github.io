@@ -1,5 +1,5 @@
 ---
-title: "STOP and Crisis Survival"
+title: "Introduction & STOP"
 description: "Pause, step back, observe, and proceed mindfully during a crisis."
 sidebar: learn
 learn-track: doubling-cube
@@ -27,34 +27,44 @@ Stop. Take a step back. Observe what is happening inside and around you. Proceed
 
 ## When to Use Crisis Survival Skills {#crisis-survival}
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### STOP and Crisis Survival - binder-p0129 {#binder-p0129}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0129
+::: {.bs-practice-resource}
+**When to Use Crisis Survival Skills**
 
-<!-- binder-resource: binder-p0129 -->
+[![When to Use Crisis Survival Skills](/resources/distress-tolerance/distress-tolerance-p004.jpg){.img-fluid fig-alt="When to Use Crisis Survival Skills"}](/resources/distress-tolerance/distress-tolerance-p004.jpg)
 
-[![Preview of STOP and Crisis Survival (binder-p0129)](../../assets/binder/binder-p0129.jpg){.img-fluid fig-alt="Preview of STOP and Crisis Survival (binder-p0129)"}](../../assets/binder/binder-p0129.jpg)
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p004.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0129.jpg)
+::: {.bs-practice-resource}
+**STOP Skill**
 
-### STOP and Crisis Survival - binder-p0130 {#binder-p0130}
+[![STOP Skill](/resources/distress-tolerance/distress-tolerance-p007.jpg){.img-fluid fig-alt="STOP Skill"}](/resources/distress-tolerance/distress-tolerance-p007.jpg)
 
-binder-p0130
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p007.jpg)
+:::
 
-<!-- binder-resource: binder-p0130 -->
+## Practice Materials {#practice-materials}
 
-[![Preview of STOP and Crisis Survival (binder-p0130)](../../assets/binder/binder-p0130.jpg){.img-fluid fig-alt="Preview of STOP and Crisis Survival (binder-p0130)"}](../../assets/binder/binder-p0130.jpg)
+::: {.bs-practice-resource}
+**Using the STOP Skill**
 
-[Open full page](../../assets/binder/binder-p0130.jpg)
+[![Using the STOP Skill](/resources/distress-tolerance/distress-tolerance-p009.jpg){.img-fluid fig-alt="Using the STOP Skill"}](/resources/distress-tolerance/distress-tolerance-p009.jpg)
 
-### STOP and Crisis Survival - binder-p0131 {#binder-p0131}
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p009.jpg)
+:::
 
-binder-p0131
+## Exercises {#exercises}
 
-<!-- binder-resource: binder-p0131 -->
+::: {.bs-practice-resource}
+**How Can I Make a Distress Crisis Worse?**
 
-[![Preview of STOP and Crisis Survival (binder-p0131)](../../assets/binder/binder-p0131.jpg){.img-fluid fig-alt="Preview of STOP and Crisis Survival (binder-p0131)"}](../../assets/binder/binder-p0131.jpg)
+[![How Can I Make a Distress Crisis Worse?](/resources/distress-tolerance/distress-tolerance-p003.jpg){.img-fluid fig-alt="How Can I Make a Distress Crisis Worse?"}](/resources/distress-tolerance/distress-tolerance-p003.jpg)
 
-[Open full page](../../assets/binder/binder-p0131.jpg)
+[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p003.jpg)
+:::
+
+<!-- section-scan-resources:end -->

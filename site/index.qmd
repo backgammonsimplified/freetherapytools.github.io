@@ -1,6 +1,6 @@
 ---
 title: "Therapy Skill Kit"
-description: "Browse practical DBT, CBT, and mindfulness skills in a binder-led curriculum."
+description: "Browse practical DBT, CBT, and mindfulness skills in an educational curriculum."
 page-layout: full
 toc: false
 format:
@@ -18,7 +18,7 @@ THERAPY SKILL KIT
 <h1>Find a skill,<br class="bs-home-desktop-break">then practise it.</h1>
 
 ::: {.bs-hero-copy}
-Clear, binder-led lessons for DBT, CBT, and mindfulness practice.
+Clear lessons, handouts, worksheets, and exercises for DBT, CBT, and mindfulness practice.
 :::
 ::::::
 

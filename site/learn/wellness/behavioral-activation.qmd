@@ -1,9 +1,9 @@
 ---
-title: "Behavioral Activation"
+title: "Behaviour Activation"
 description: "Plan actions that build pleasure, mastery, connection, and momentum."
 sidebar: learn
 learn-track: wellness
-learn-order: 3
+learn-order: 2
 categories:
   - Beginner
 tags:
@@ -20,34 +20,108 @@ execute:
 
 Behavioural activation uses planned action to interrupt avoidance and increase contact with meaningful activities.
 
-## Handouts and Worksheets {#handouts-and-worksheets}
+<!-- section-scan-resources:start -->
 
-### Behavioural Activation Barriers and Resources - binder-p0062 {#binder-p0062}
+## Handouts & Worksheets {#handouts-worksheets}
 
-binder-p0062
+::: {.bs-practice-resource}
+**The Upward Spiral of Behavioural Activation**
 
-<!-- binder-resource: binder-p0062 -->
+[![The Upward Spiral of Behavioural Activation](/resources/wellness/wellness-p013.jpg){.img-fluid fig-alt="The Upward Spiral of Behavioural Activation"}](/resources/wellness/wellness-p013.jpg)
 
-[![Preview of Behavioural Activation Barriers and Resources (binder-p0062)](../../assets/binder/binder-p0062.jpg){.img-fluid fig-alt="Preview of Behavioural Activation Barriers and Resources (binder-p0062)"}](../../assets/binder/binder-p0062.jpg)
+[Download / View Handout](/resources/wellness/wellness-p013.jpg)
+:::
 
-[Open full page](../../assets/binder/binder-p0062.jpg)
+::: {.bs-practice-resource}
+**What Is Behaviour Activation?**
 
-### Behavioural Activation - binder-p0065 {#binder-p0065}
+[![What Is Behaviour Activation?](/resources/wellness/wellness-p014.jpg){.img-fluid fig-alt="What Is Behaviour Activation?"}](/resources/wellness/wellness-p014.jpg)
 
-binder-p0065
+[Download / View Handout](/resources/wellness/wellness-p014.jpg)
+:::
 
-<!-- binder-resource: binder-p0065 -->
+::: {.bs-practice-resource}
+**Behaviour Activation: Battery vs. Generator**
 
-[![Preview of Behavioural Activation (binder-p0065)](../../assets/binder/binder-p0065.jpg){.img-fluid fig-alt="Preview of Behavioural Activation (binder-p0065)"}](../../assets/binder/binder-p0065.jpg)
+[![Behaviour Activation: Battery vs. Generator](/resources/wellness/wellness-p015.jpg){.img-fluid fig-alt="Behaviour Activation: Battery vs. Generator"}](/resources/wellness/wellness-p015.jpg)
 
-[Open full page](../../assets/binder/binder-p0065.jpg)
+[Download / View Handout](/resources/wellness/wellness-p015.jpg)
+:::
 
-### Behavioural Activation - binder-p0066 {#binder-p0066}
+::: {.bs-practice-resource}
+**Behavioural Activation Tips, Part 1**
 
-binder-p0066
+[![Behavioural Activation Tips, Part 1](/resources/wellness/wellness-p016.jpg){.img-fluid fig-alt="Behavioural Activation Tips, Part 1"}](/resources/wellness/wellness-p016.jpg)
 
-<!-- binder-resource: binder-p0066 -->
+[Download / View Handout](/resources/wellness/wellness-p016.jpg)
+:::
 
-[![Preview of Behavioural Activation (binder-p0066)](../../assets/binder/binder-p0066.jpg){.img-fluid fig-alt="Preview of Behavioural Activation (binder-p0066)"}](../../assets/binder/binder-p0066.jpg)
+::: {.bs-practice-resource}
+**Behavioural Activation Tips, Part 2**
 
-[Open full page](../../assets/binder/binder-p0066.jpg)
+[![Behavioural Activation Tips, Part 2](/resources/wellness/wellness-p017.jpg){.img-fluid fig-alt="Behavioural Activation Tips, Part 2"}](/resources/wellness/wellness-p017.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p017.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Behavioural Activation Tips, Part 3**
+
+[![Behavioural Activation Tips, Part 3](/resources/wellness/wellness-p018.jpg){.img-fluid fig-alt="Behavioural Activation Tips, Part 3"}](/resources/wellness/wellness-p018.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p018.jpg)
+:::
+
+## Practice Materials {#practice-materials}
+
+::: {.bs-practice-resource}
+**Your Cycles**
+
+[![Your Cycles](/resources/wellness/wellness-p012.jpg){.img-fluid fig-alt="Your Cycles"}](/resources/wellness/wellness-p012.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p012.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Activity Monitoring Worksheet**
+
+[![Activity Monitoring Worksheet](/resources/wellness/wellness-p019.jpg){.img-fluid fig-alt="Activity Monitoring Worksheet"}](/resources/wellness/wellness-p019.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p019.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Activity Planning Worksheet**
+
+[![Activity Planning Worksheet](/resources/wellness/wellness-p020.jpg){.img-fluid fig-alt="Activity Planning Worksheet"}](/resources/wellness/wellness-p020.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p020.jpg)
+:::
+
+::: {.bs-practice-resource}
+**Behavioural Activation Barriers and Resources**
+
+[![Behavioural Activation Barriers and Resources](/resources/wellness/wellness-p021.jpg){.img-fluid fig-alt="Behavioural Activation Barriers and Resources"}](/resources/wellness/wellness-p021.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p021.jpg)
+:::
+
+## Reference Materials {#reference-materials}
+
+::: {.bs-practice-resource}
+**The First Vicious Cycle**
+
+[![The First Vicious Cycle](/resources/wellness/wellness-p010.jpg){.img-fluid fig-alt="The First Vicious Cycle"}](/resources/wellness/wellness-p010.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p010.jpg)
+:::
+
+::: {.bs-practice-resource}
+**The Second Vicious Cycle**
+
+[![The Second Vicious Cycle](/resources/wellness/wellness-p011.jpg){.img-fluid fig-alt="The Second Vicious Cycle"}](/resources/wellness/wellness-p011.jpg)
+
+[Download / View Handout](/resources/wellness/wellness-p011.jpg)
+:::
+
+<!-- section-scan-resources:end -->
