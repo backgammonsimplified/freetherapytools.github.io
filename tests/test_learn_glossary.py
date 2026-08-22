@@ -1615,7 +1615,9 @@ private code phrase
         self.assertNotIn("data.bsLessonTrackToggle", javascript)
         for required in (
             '<span aria-hidden="true">&larr;</span> Term Search',
-            'toggle.textContent = active ? "\\u2192 Show Lessons" : "\\u2190 Hide"',
+            ': "\\u2192 Show Lessons"',
+            '? "\\u2192 Show navigation"',
+            ': "\\u2190 Hide"',
             '"bs-learn-left-sidebar-toggle--nav-hidden"',
             'pageHeader.classList.contains("headroom--unpinned")',
             "pageScrollingDown = currentScrollY > lastScrollY",
@@ -1629,8 +1631,10 @@ private code phrase
             "const keepExpandedWhileScrolling =",
             "!keepExpandedWhileScrolling &&",
             "sidebarScroller.addEventListener",
-            "let autoCollapsePending = window.scrollY <= 32",
-            "if (!keepExpandedWhileScrolling && collapsed)",
+            "let autoCollapsePending = true",
+            "if (!keepExpandedWhileScrolling && collapsed && !manuallyCollapsed)",
+            "keepExpandedWhileScrolling === false",
+            "!manuallyCollapsed",
             "collapsed = false",
             "lastScrollY = currentScrollY",
             "autoCollapsePending &&",
