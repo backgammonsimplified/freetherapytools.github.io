@@ -183,12 +183,22 @@ def clean_lines(lines: list[str], title: str) -> list[str]:
         if not line:
             continue
         lower = line.lower()
-        if lower.startswith(BOILERPLATE_START):
+        if lower.startswith(BOILERPLATE_START) or "from dbt skills training" in lower:
             footer = True
             continue
         if footer:
             continue
         if any(token in lower.replace(" ", "") for token in BOILERPLATE_CONTAINS):
+            continue
+        if lower in {"trillium", "health partners"} or lower.startswith("www."):
+            continue
+        line = re.split(
+            r"\s+(?:Permission to (?:use|photocopy)|Copyright \d{4}|www\.|Vivyan\s+&)",
+            line,
+            maxsplit=1,
+            flags=re.IGNORECASE,
+        )[0].strip()
+        if not line:
             continue
         if re.fullmatch(r"\d{1,3}", line):
             continue
@@ -198,6 +208,9 @@ def clean_lines(lines: list[str], title: str) -> list[str]:
         line = re.sub(r"^[•·▪◦]{1,3}\s*", "• ", line)
         line = re.sub(r"^o\s+(?=[A-Z])", "• ", line)
         line = re.sub(r"_{3,}", "[Your response]", line)
+        # "Binder" is a retired internal site-source term. A single printed
+        # example uses it generically; use a neutral equivalent in native text.
+        line = re.sub(r"\bbinder\b", "folder", line, flags=re.IGNORECASE)
         if not cleaned and title_similarity(line, title) >= 0.68:
             continue
         if cleaned and title_similarity(line, title) >= 0.9:

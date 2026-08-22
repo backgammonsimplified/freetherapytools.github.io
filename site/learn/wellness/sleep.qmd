@@ -201,8 +201,6 @@ In the far left column, put down the days of the week. Then put times/hours in b
 
 ##### Min
 
-0 From DBT Skills Training Handouts and Worksheets, Second Edition by Marsha M. Linehan. Copyright 2015 by Marsha M. Linehan. Permission to photocopy this worksheet is granted to purchasers of 7 this book for personal use only (see copyright page for details). Purchasers may download a larger version of this worksheet from www.guilford.com/dbt- worksheets.
-
 <!-- native-resource-content:wellness-p008:end -->
 ::::
 
@@ -243,10 +241,6 @@ In the far left column, put down the days of the week. Then put times/hours in b
 2. Did you ever have problems with your sleep? If so, describe what they were.
 
 3. What were some things you did to help you overcome your sleep-related problems?
-
-##### Trillium
-
-##### Health Partners
 
 <!-- native-resource-content:wellness-p004:end -->
 ::::

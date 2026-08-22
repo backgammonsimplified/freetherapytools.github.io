@@ -119,6 +119,22 @@ class QmdResourceExtractionTests(unittest.TestCase):
             [row["source_id"] for row in self.extractions if row["extraction_method"] == "pending"]
         )
 
+    def test_review_report_matches_inventory_counts(self) -> None:
+        report = (ROOT / "QMD-CONTENT-REVIEW.md").read_text(encoding="utf-8")
+        self.assertIn("Published resources processed: **266**", report)
+        self.assertIn("Resources integrated into existing anchored sections: **74**", report)
+        self.assertIn("Resources using a local **Text Version** subsection: **192**", report)
+        self.assertIn("Resources requiring manual transcription/structure review: **190**", report)
+        self.assertIn("Direct PDF text extractions: **99**", report)
+        self.assertIn("Windows OCR drafts: **165**", report)
+        self.assertIn("OCR plus manual visual transcription: **2**", report)
+        for visual in (
+            "Skill Thermometer", "Emotion body map", "Worry Tree",
+            "Opposite Action / Problem Solving decision tree", "Behaviour Chain map",
+            "Five Factor Model", "Exposure / Fear Ladder",
+        ):
+            self.assertIn(visual, report)
+
     def test_ten_emotion_profiles_use_source_structure_and_sync_to_app_data(self) -> None:
         profile = (SITE / "learn/emotion-regulation/observing-describing-emotions.qmd").read_text(encoding="utf-8")
         emotions = (
