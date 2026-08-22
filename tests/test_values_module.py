@@ -13,6 +13,135 @@ LEARN_JS = ROOT / "site" / "assets" / "bs-learn.js"
 PAGE = ROOT / "site" / "skill-finder" / "values" / "index.qmd"
 GENERATOR = ROOT / "scripts" / "values_workbook.py"
 
+EXPECTED_FIRST_128 = """Acceptance
+Authenticity
+Balance
+Care
+Compassion
+Connection
+Courage
+Creativity
+Curiosity
+Growth
+Health
+Honesty
+Kindness
+Love
+Purpose
+Responsibility
+Achievement
+Adventure
+Autonomy
+Commitment
+Community
+Contribution
+Family
+Freedom
+Friendship
+Gratitude
+Integrity
+Joy
+Learning
+Mindfulness
+Respect
+Trust
+Accountability
+Awareness
+Collaboration
+Communication
+Competence
+Discipline
+Empathy
+Fairness
+Flexibility
+Forgiveness
+Generosity
+Hope
+Humor
+Independence
+Justice
+Loyalty
+Mastery
+Meaning
+Open-Mindedness
+Patience
+Peace
+Persistence
+Playfulness
+Reliability
+Resilience
+Safety
+Self-Awareness
+Self-Care
+Service
+Spirituality
+Stability
+Wisdom
+Adaptability
+Advocacy
+Appreciation
+Assertiveness
+Attentiveness
+Beauty
+Benevolence
+Boldness
+Bravery
+Calmness
+Candor
+Challenge
+Charity
+Cheerfulness
+Clarity
+Cleanliness
+Common Sense
+Consistency
+Contentment
+Cooperation
+Courtesy
+Decisiveness
+Dedication
+Dependability
+Determination
+Dignity
+Effectiveness
+Encouragement
+Endurance
+Energy
+Enjoyment
+Equality
+Ethics
+Excellence
+Exploration
+Expressiveness
+Fitness
+Focus
+Fortitude
+Friendliness
+Fun
+Giving
+Grace
+Harmony
+Hard Work
+Improvement
+Inclusiveness
+Individuality
+Insight
+Inspiration
+Intimacy
+Knowledge
+Leadership
+Moderation
+Motivation
+Openness
+Optimism
+Organization
+Passion
+Presence
+Recreation
+Reflectiveness
+Self-Control
+Supportiveness""".splitlines()
+
 
 class ValuesModuleTests(unittest.TestCase):
     @classmethod
@@ -27,10 +156,46 @@ class ValuesModuleTests(unittest.TestCase):
 
     def test_values_dictionary_is_unique_and_substantial(self):
         values = self.data["values"]
-        self.assertGreaterEqual(len(values), 250)
+        self.assertEqual(len(values), 257)
         self.assertEqual(len(values), len({value["id"] for value in values}))
         self.assertEqual(len(values), len({value["name"].casefold() for value in values}))
         self.assertTrue(all(value["definition"].strip() for value in values))
+
+    def test_progressive_display_ranks_are_unique_contiguous_and_exact(self):
+        ordered = sorted(self.data["values"], key=lambda value: value["display_rank"])
+        self.assertEqual([value["display_rank"] for value in ordered], list(range(1, 258)))
+        names = [value["name"] for value in ordered]
+        self.assertEqual(names[:16], EXPECTED_FIRST_128[:16])
+        self.assertEqual(names[:32], EXPECTED_FIRST_128[:32])
+        self.assertEqual(names[:64], EXPECTED_FIRST_128[:64])
+        self.assertEqual(names[:128], EXPECTED_FIRST_128)
+        self.assertEqual(len([value for value in ordered if value["display_rank"] <= 256]), 256)
+        self.assertEqual(names[-1], "Perfection")
+
+    def test_progressive_dictionary_controls_search_and_selection_contract(self):
+        self.assertIn("const VALUE_DISPLAY_OPTIONS = [16, 32, 64, 128, 256, \"all\"]", self.javascript)
+        self.assertIn("const DEFAULT_VALUE_DISPLAY = 32", self.javascript)
+        self.assertIn("let displaySize = DEFAULT_VALUE_DISPLAY", self.javascript)
+        self.assertIn("canonicalValuesForDisplay(data.values, displaySize, searchQuery)", self.javascript)
+        self.assertIn("Search all 257 values and definitions", self.javascript)
+        self.assertIn("complete 257-value dictionary", self.javascript)
+        self.assertIn("values-selected-summary", self.javascript)
+        self.assertIn("Selected values", self.javascript)
+        self.assertIn("Remove ${escapeHtml(value.name)} from selected values", self.javascript)
+        self.assertIn("data-values-tier", self.javascript)
+        self.assertIn("input:checked + span", self.css)
+        self.assertIn('content: "✓"', self.css)
+        self.assertIn("input:focus-visible + span", self.css)
+        self.assertIn("flex-wrap: wrap", self.css)
+
+    def test_display_tier_is_not_exported_and_later_stages_use_all_selections(self):
+        top_keys = re.search(r'const topKeys = \[(.*?)\];', self.javascript, re.DOTALL)
+        self.assertIsNotNone(top_keys)
+        self.assertNotIn("displaySize", top_keys.group(1))
+        selected_values = re.search(r"function selectedValues\(data, state\) \{(.*?)\n  \}", self.javascript, re.DOTALL)
+        self.assertIsNotNone(selected_values)
+        self.assertIn("allValues(data, state)", selected_values.group(1))
+        self.assertNotIn("display_rank", selected_values.group(1))
 
     def test_nine_required_domains_exist(self):
         self.assertEqual(

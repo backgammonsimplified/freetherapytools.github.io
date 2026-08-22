@@ -31,6 +31,169 @@ DOMAINS = [
     ("home-resources", "Home, Resources, Security & Lifestyle"),
 ]
 
+FIXED_DISPLAY_ORDER = (
+    "Acceptance",
+    "Authenticity",
+    "Balance",
+    "Care",
+    "Compassion",
+    "Connection",
+    "Courage",
+    "Creativity",
+    "Curiosity",
+    "Growth",
+    "Health",
+    "Honesty",
+    "Kindness",
+    "Love",
+    "Purpose",
+    "Responsibility",
+    "Achievement",
+    "Adventure",
+    "Autonomy",
+    "Commitment",
+    "Community",
+    "Contribution",
+    "Family",
+    "Freedom",
+    "Friendship",
+    "Gratitude",
+    "Integrity",
+    "Joy",
+    "Learning",
+    "Mindfulness",
+    "Respect",
+    "Trust",
+    "Accountability",
+    "Awareness",
+    "Collaboration",
+    "Communication",
+    "Competence",
+    "Discipline",
+    "Empathy",
+    "Fairness",
+    "Flexibility",
+    "Forgiveness",
+    "Generosity",
+    "Hope",
+    "Humor",
+    "Independence",
+    "Justice",
+    "Loyalty",
+    "Mastery",
+    "Meaning",
+    "Open-Mindedness",
+    "Patience",
+    "Peace",
+    "Persistence",
+    "Playfulness",
+    "Reliability",
+    "Resilience",
+    "Safety",
+    "Self-Awareness",
+    "Self-Care",
+    "Service",
+    "Spirituality",
+    "Stability",
+    "Wisdom",
+    "Adaptability",
+    "Advocacy",
+    "Appreciation",
+    "Assertiveness",
+    "Attentiveness",
+    "Beauty",
+    "Benevolence",
+    "Boldness",
+    "Bravery",
+    "Calmness",
+    "Candor",
+    "Challenge",
+    "Charity",
+    "Cheerfulness",
+    "Clarity",
+    "Cleanliness",
+    "Common Sense",
+    "Consistency",
+    "Contentment",
+    "Cooperation",
+    "Courtesy",
+    "Decisiveness",
+    "Dedication",
+    "Dependability",
+    "Determination",
+    "Dignity",
+    "Effectiveness",
+    "Encouragement",
+    "Endurance",
+    "Energy",
+    "Enjoyment",
+    "Equality",
+    "Ethics",
+    "Excellence",
+    "Exploration",
+    "Expressiveness",
+    "Fitness",
+    "Focus",
+    "Fortitude",
+    "Friendliness",
+    "Fun",
+    "Giving",
+    "Grace",
+    "Harmony",
+    "Hard Work",
+    "Improvement",
+    "Inclusiveness",
+    "Individuality",
+    "Insight",
+    "Inspiration",
+    "Intimacy",
+    "Knowledge",
+    "Leadership",
+    "Moderation",
+    "Motivation",
+    "Openness",
+    "Optimism",
+    "Organization",
+    "Passion",
+    "Presence",
+    "Recreation",
+    "Reflectiveness",
+    "Self-Control",
+    "Supportiveness",
+)
+
+# Keep explicitly outcome-, recognition-, and status-oriented prompts near the
+# complete-dictionary end while leaving the remainder deterministic.
+LATE_DISPLAY_VALUES = (
+    "Abundance",
+    "Accomplishment",
+    "Advancement",
+    "Ambition",
+    "Attractiveness",
+    "Being the Best",
+    "Brilliance",
+    "Competitiveness",
+    "Efficiency",
+    "Fame",
+    "Greatness",
+    "Influence",
+    "Performance",
+    "Popularity",
+    "Power",
+    "Productivity",
+    "Professionalism",
+    "Prosperity",
+    "Quality",
+    "Recognition",
+    "Results Orientation",
+    "Significance",
+    "Status",
+    "Success",
+    "Talent",
+    "Wealth",
+    "Winning",
+)
+
 
 def paragraphs(source: Path) -> list[str]:
     with zipfile.ZipFile(source) as archive:
@@ -80,6 +243,23 @@ def extract_values(lines: list[str]) -> list[dict[str, object]]:
     return values
 
 
+def add_display_ranks(values: list[dict[str, object]]) -> None:
+    by_name = {str(value["name"]): value for value in values}
+    required = set(FIXED_DISPLAY_ORDER) | set(LATE_DISPLAY_VALUES) | {"Perfection"}
+    missing = required - set(by_name)
+    if missing:
+        raise ValueError(f"Display ranking names missing from workbook: {sorted(missing)}")
+    if len(FIXED_DISPLAY_ORDER) != 128 or len(set(FIXED_DISPLAY_ORDER)) != 128:
+        raise ValueError("The fixed Values display tiers must contain 128 unique names")
+    reserved = required
+    middle = sorted((name for name in by_name if name not in reserved), key=str.casefold)
+    ordered_names = [*FIXED_DISPLAY_ORDER, *middle, *LATE_DISPLAY_VALUES, "Perfection"]
+    if len(ordered_names) != len(values) or len(set(ordered_names)) != len(values):
+        raise ValueError("Values display ranking must cover every canonical value exactly once")
+    for display_rank, name in enumerate(ordered_names, start=1):
+        by_name[name]["display_rank"] = display_rank
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE)
@@ -87,6 +267,7 @@ def main() -> int:
     args = parser.parse_args()
     lines = paragraphs(args.source)
     values = extract_values(lines)
+    add_display_ranks(values)
     payload = {
         "schema_version": 1,
         "source_document": args.source.name,

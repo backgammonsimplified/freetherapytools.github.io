@@ -1,7 +1,23 @@
 (function (global) {
   "use strict";
 
+  const VALUE_DISPLAY_OPTIONS = [16, 32, 64, 128, 256, "all"];
+  const DEFAULT_VALUE_DISPLAY = 32;
+
+  function canonicalValuesForDisplay(values, displaySize = DEFAULT_VALUE_DISPLAY, searchQuery = "") {
+    const ranked = [...values].sort((left, right) => left.display_rank - right.display_rank);
+    const query = String(searchQuery).trim().toLocaleLowerCase();
+    if (query) {
+      return ranked.filter((value) => `${value.name} ${value.definition}`.toLocaleLowerCase().includes(query));
+    }
+    const limit = displaySize === "all" ? Number.POSITIVE_INFINITY : Number(displaySize);
+    return ranked.filter((value) => value.display_rank <= limit);
+  }
+
   const SkillApps = {
+    DEFAULT_VALUE_DISPLAY,
+    VALUE_DISPLAY_OPTIONS,
+    canonicalValuesForDisplay,
     calculateGap(current, desired) {
       return Number(desired) - Number(current);
     },
@@ -112,9 +128,7 @@
     ).join("")}</ol>`;
   }
 
-  function discoverMarkup(data, state) {
-    const selected = state.selected;
-    const cards = allValues(data, state).map((value) => {
+  function valueCardMarkup(value, selected) {
       const active = Boolean(selected[value.id]);
       const importance = normalizedValueImportance(selected[value.id]?.rating);
       return `<article class="skill-app-card" data-value-card data-search="${escapeHtml(`${value.name} ${value.definition}`.toLowerCase())}">
@@ -125,13 +139,46 @@
           ${active ? `<fieldset class="values-importance"><legend>Importance:</legend><div class="values-importance-buttons" role="group" aria-label="Importance for ${escapeHtml(value.name)}">${VALUE_IMPORTANCE.map(({ label, value: rating }) => `<button type="button" class="${importance === rating ? "" : "secondary"}" data-rating="${escapeHtml(value.id)}" data-importance-value="${rating}" aria-label="${rating} importance" aria-pressed="${importance === rating}">${label}</button>`).join("")}</div></fieldset>` : ""}
         </div>
       </article>`;
-    }).join("");
+  }
+
+  function discoverMarkup(data, state, displaySize, searchQuery) {
+    const selected = state.selected;
+    const searching = Boolean(searchQuery.trim());
+    const visibleCanonical = canonicalValuesForDisplay(data.values, displaySize, searchQuery);
+    const cards = visibleCanonical.map((value) => valueCardMarkup(value, selected)).join("");
+    const selectedRecords = selectedValues(data, state);
+    const customCards = [...state.custom]
+      .sort((left, right) => left.name.localeCompare(right.name, undefined, { sensitivity: "base" }))
+      .map((value) => valueCardMarkup(value, selected))
+      .join("");
+    const tierLabel = displaySize === "all" ? "All" : displaySize;
+    const dictionaryHeading = searching ? "Search results" : displaySize === "all" ? "All values" : "Common values";
+    const dictionaryDescription = searching
+      ? `Showing ${visibleCanonical.length} match${visibleCanonical.length === 1 ? "" : "es"} from the complete 257-value dictionary.`
+      : displaySize === "all"
+        ? "Explore the complete values dictionary."
+        : "A shorter set to help you get started.";
     return `<div class="values-discover-title"><h3>Discover</h3><button type="button" class="secondary values-clear-button" data-clear>Clear selections</button></div>
       <p>Search the workbook's Master Values Dictionary. Select words that resonate; 10-20 is a useful starting range, not a requirement.</p>
       <p class="skill-app-count" aria-live="polite"><span data-selected-count>${Object.keys(selected).length}</span> selected</p>
-      <label for="values-search">Search values and definitions</label>
-      <input id="values-search" type="search" data-values-search autocomplete="off">
-      <div class="skill-app-card-grid" data-value-list>${cards}</div>
+      <section class="values-selected-summary" aria-labelledby="selected-values-heading">
+        <h4 id="selected-values-heading">Selected values</h4>
+        ${selectedRecords.length ? `<div class="values-selected-list">${selectedRecords.map((value) => `<button type="button" class="secondary values-selected-chip" data-toggle-value="${escapeHtml(value.id)}" aria-label="Remove ${escapeHtml(value.name)} from selected values"><span>${escapeHtml(value.name)}</span><span aria-hidden="true">×</span></button>`).join("")}</div>` : "<p>No values selected yet.</p>"}
+      </section>
+      <section class="values-dictionary" aria-labelledby="values-dictionary-heading">
+        <div class="values-dictionary-heading"><h4 id="values-dictionary-heading">${dictionaryHeading}</h4><p>${dictionaryDescription}</p></div>
+        <fieldset class="values-tier-selector"><legend>Show:</legend><div class="values-tier-options">${VALUE_DISPLAY_OPTIONS.map((option) => {
+          const value = String(option);
+          const label = option === "all" ? "All" : value;
+          const checked = String(displaySize) === value;
+          return `<label><input type="radio" name="values-display-size" value="${value}" data-values-tier aria-label="Show ${label.toLowerCase() === "all" ? "all values" : `${label} values`}" ${checked ? "checked" : ""}><span>${label}</span></label>`;
+        }).join("")}</div></fieldset>
+        <label for="values-search">Search all 257 values and definitions</label>
+        <input id="values-search" type="search" data-values-search autocomplete="off" value="${escapeHtml(searchQuery)}">
+        <p class="values-search-status" aria-live="polite">${searching ? dictionaryDescription : `Showing ${tierLabel === "All" ? "all 257" : tierLabel} values.`}</p>
+        <div class="skill-app-card-grid" data-value-list>${cards}</div>
+      </section>
+      ${customCards ? `<section class="values-custom-values" aria-labelledby="custom-values-heading"><h4 id="custom-values-heading">Custom values</h4><div class="skill-app-card-grid">${customCards}</div></section>` : ""}
       <div class="skill-app-actions values-custom-row">
         <input type="text" data-custom-value aria-label="Custom value name" placeholder="Add your own value">
         <button type="button" data-add-custom>Add custom value</button>
@@ -322,6 +369,8 @@
     if (!response.ok) throw new Error("Values data could not be loaded");
     const data = await response.json();
     let state = initialValuesState();
+    let displaySize = DEFAULT_VALUE_DISPLAY;
+    let searchQuery = "";
     let updateActionBar = () => {};
 
     function render() {
@@ -331,7 +380,8 @@
       const continueDisabled = state.step === STEPS.length - 1 || (state.step === 1 && !categorizationComplete);
       const panels = [discoverMarkup, categorizeMarkup, assignMarkup, assessMarkup, actMarkup, barriersMarkup];
       let panel;
-      if (state.step <= 5) panel = panels[state.step](data, state);
+      if (state.step === 0) panel = discoverMarkup(data, state, displaySize, searchQuery);
+      else if (state.step <= 5) panel = panels[state.step](data, state);
       else panel = missionMarkup(data, state);
       root.innerHTML = `<div class="skill-app-shell">
         <header class="skill-app-header"><h2>Discover and Work Towards Your Values</h2><p>Discover and create a plan to work towards your values and accumulate long term positive emotions.</p>${progressMarkup(state.step)}</header>
@@ -352,11 +402,19 @@
           render();
         }
       }));
+      root.querySelectorAll("[data-values-tier]").forEach((input) => input.addEventListener("change", () => {
+        if (!input.checked) return;
+        displaySize = input.value === "all" ? "all" : Number(input.value);
+        render();
+        root.querySelector(`[data-values-tier][value="${CSS.escape(input.value)}"]`)?.focus();
+      }));
       root.querySelector("[data-values-search]")?.addEventListener("input", (event) => {
-        const query = event.target.value.toLowerCase().trim();
-        root.querySelectorAll("[data-value-card]").forEach((card) => {
-          card.hidden = Boolean(query && !card.dataset.search.includes(query));
-        });
+        searchQuery = event.target.value;
+        const cursor = event.target.selectionStart;
+        render();
+        const search = root.querySelector("[data-values-search]");
+        search?.focus();
+        if (Number.isInteger(cursor)) search?.setSelectionRange(cursor, cursor);
       });
       root.querySelectorAll("[data-toggle-value]").forEach((button) => button.addEventListener("click", () => {
         const id = button.dataset.toggleValue;

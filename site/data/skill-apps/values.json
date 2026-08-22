@@ -54,1799 +54,2056 @@
       "name": "Abundance",
       "definition": "To notice enoughness and create room for resources, opportunity, and generosity.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 230
     },
     {
       "id": "equality",
       "name": "Equality",
       "definition": "To treat people as equally worthy of dignity, opportunity, and respect.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 96
     },
     {
       "id": "preparedness",
       "name": "Preparedness",
       "definition": "To anticipate likely needs and get ready in advance.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 175
     },
     {
       "id": "acceptance",
       "name": "Acceptance",
       "definition": "To make room for reality, myself, and others without unnecessary struggle.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 1
     },
     {
       "id": "ethics",
       "name": "Ethics",
       "definition": "To act according to considered principles of right conduct.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 97
     },
     {
       "id": "presence",
       "name": "Presence",
       "definition": "To be fully engaged with the person or activity in front of me.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 124
     },
     {
       "id": "accomplishment",
       "name": "Accomplishment",
       "definition": "To complete meaningful tasks and take satisfaction in finishing what matters.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 231
     },
     {
       "id": "excellence",
       "name": "Excellence",
       "definition": "To pursue high quality and continuous improvement without requiring perfection.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 98
     },
     {
       "id": "proactivity",
       "name": "Proactivity",
       "definition": "To act early and intentionally instead of only reacting.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 176
     },
     {
       "id": "accountability",
       "name": "Accountability",
       "definition": "To own my choices, impacts, commitments, and repairs.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 33
     },
     {
       "id": "excitement",
       "name": "Excitement",
       "definition": "To include stimulation, novelty, and aliveness in my life.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 153
     },
     {
       "id": "productivity",
       "name": "Productivity",
       "definition": "To use time and effort to complete useful or meaningful work.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 245
     },
     {
       "id": "accuracy",
       "name": "Accuracy",
       "definition": "To be correct, careful, and precise when details matter.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 129
     },
     {
       "id": "exploration",
       "name": "Exploration",
       "definition": "To investigate unfamiliar ideas, experiences, places, or options.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 99
     },
     {
       "id": "professionalism",
       "name": "Professionalism",
       "definition": "To bring competence, reliability, boundaries, and respect to work roles.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 246
     },
     {
       "id": "achievement",
       "name": "Achievement",
       "definition": "To pursue meaningful results through effort and follow-through.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 17
     },
     {
       "id": "expressiveness",
       "name": "Expressiveness",
       "definition": "To communicate thoughts, feelings, identity, and creativity openly.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 100
     },
     {
       "id": "prosperity",
       "name": "Prosperity",
       "definition": "To build sufficient resources and conditions for a thriving life.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 247
     },
     {
       "id": "adaptability",
       "name": "Adaptability",
       "definition": "To adjust effectively when circumstances, information, or needs change.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 65
     },
     {
       "id": "fairness",
       "name": "Fairness",
       "definition": "To make balanced, impartial choices and consider relevant needs.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 40
     },
     {
       "id": "punctuality",
       "name": "Punctuality",
       "definition": "To respect time commitments and arrive or deliver when agreed.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 177
     },
     {
       "id": "advancement",
       "name": "Advancement",
       "definition": "To move forward in responsibility, skill, opportunity, or contribution.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 232
     },
     {
       "id": "faith",
       "name": "Faith",
       "definition": "To live in relationship with religious or spiritual beliefs, trust, practices, or a higher power when meaningful to me.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 154
     },
     {
       "id": "purpose",
       "name": "Purpose",
       "definition": "To orient choices around a meaningful reason for living or contributing.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 15
     },
     {
       "id": "adventure",
       "name": "Adventure",
       "definition": "To seek, create, or explore novel and stimulating experiences.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 18
     },
     {
       "id": "fame",
       "name": "Fame",
       "definition": "To pursue broad public recognition or visibility.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 239
     },
     {
       "id": "quality",
       "name": "Quality",
       "definition": "To care about how well something is made, done, or experienced.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 248
     },
     {
       "id": "advocacy",
       "name": "Advocacy",
       "definition": "To speak and act in support of people, needs, or causes that matter.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 66
     },
     {
       "id": "family",
       "name": "Family",
       "definition": "To invest in the care, connection, and responsibilities of family life.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 23
     },
     {
       "id": "realism",
       "name": "Realism",
       "definition": "To see circumstances accurately and plan from what is actually true.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 178
     },
     {
       "id": "affection",
       "name": "Affection",
       "definition": "To express and receive warmth, fondness, care, and appropriate physical or emotional closeness.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 130
     },
     {
       "id": "fidelity",
       "name": "Fidelity",
       "definition": "To be faithful to important relationships and commitments.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 155
     },
     {
       "id": "reason",
       "name": "Reason",
       "definition": "To use evidence, logic, and thoughtful judgment.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 179
     },
     {
       "id": "alertness",
       "name": "Alertness",
       "definition": "To stay attentive to important cues, risks, and opportunities.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 131
     },
     {
       "id": "fitness",
       "name": "Fitness",
       "definition": "To build and maintain physical capacity, movement, and conditioning.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 101
     },
     {
       "id": "reciprocity",
       "name": "Reciprocity",
       "definition": "To build relationships with a workable balance of giving and receiving.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 180
     },
     {
       "id": "altruism",
       "name": "Altruism",
       "definition": "To benefit others without requiring a personal payoff.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 132
     },
     {
       "id": "flexibility",
       "name": "Flexibility",
       "definition": "To change approach when rigidity would be less effective.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 41
     },
     {
       "id": "recognition",
       "name": "Recognition",
       "definition": "To value having effort, contribution, or achievement acknowledged.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 249
     },
     {
       "id": "ambition",
       "name": "Ambition",
       "definition": "To aim high and actively pursue challenging possibilities.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 233
     },
     {
       "id": "focus",
       "name": "Focus",
       "definition": "To direct attention and effort toward the priority at hand.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 102
     },
     {
       "id": "recreation",
       "name": "Recreation",
       "definition": "To restore and enjoy myself through leisure activity.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 125
     },
     {
       "id": "amusement",
       "name": "Amusement",
       "definition": "To make room for lightness, entertainment, and enjoyment.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 133
     },
     {
       "id": "foresight",
       "name": "Foresight",
       "definition": "To consider future consequences and prepare accordingly.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 156
     },
     {
       "id": "reflectiveness",
       "name": "Reflectiveness",
       "definition": "To pause, review experience, and learn from it.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 126
     },
     {
       "id": "appreciation",
       "name": "Appreciation",
       "definition": "To notice and express the value of people, experiences, and resources.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 67
     },
     {
       "id": "forgiveness",
       "name": "Forgiveness",
       "definition": "To loosen resentment and allow repair or release when possible.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 42
     },
     {
       "id": "reliability",
       "name": "Reliability",
       "definition": "To follow through consistently and predictably.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 56
     },
     {
       "id": "assertiveness",
       "name": "Assertiveness",
       "definition": "To respectfully express needs, limits, preferences, and requests.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 68
     },
     {
       "id": "fortitude",
       "name": "Fortitude",
       "definition": "To meet hardship with steadiness, courage, and endurance.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 103
     },
     {
       "id": "resilience",
       "name": "Resilience",
       "definition": "To recover, adapt, and continue after stress or setbacks.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 57
     },
     {
       "id": "attentiveness",
       "name": "Attentiveness",
       "definition": "To give careful, sustained attention to people, tasks, and surroundings.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 69
     },
     {
       "id": "freedom",
       "name": "Freedom",
       "definition": "To have meaningful choice in how I live and act.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 24
     },
     {
       "id": "resourcefulness",
       "name": "Resourcefulness",
       "definition": "To find workable options using what is available.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 181
     },
     {
       "id": "attractiveness",
       "name": "Attractiveness",
       "definition": "To care about presenting myself in a way that feels appealing and intentional.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 234
     },
     {
       "id": "friendliness",
       "name": "Friendliness",
       "definition": "To approach others with openness, warmth, and goodwill.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 104
     },
     {
       "id": "respect",
       "name": "Respect",
       "definition": "To show consideration for dignity, rights, boundaries, and differences.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 31
     },
     {
       "id": "authenticity",
       "name": "Authenticity",
       "definition": "To act in ways that are genuine and congruent with who I am.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 2
     },
     {
       "id": "friendship",
       "name": "Friendship",
       "definition": "To cultivate mutual companionship, trust, enjoyment, and support.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 25
     },
     {
       "id": "responsibility",
       "name": "Responsibility",
       "definition": "To take care of duties and accept the consequences of my choices.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 16
     },
     {
       "id": "autonomy",
       "name": "Autonomy",
       "definition": "To make self-directed choices and take ownership of my life.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 19
     },
     {
       "id": "fun",
       "name": "Fun",
       "definition": "To intentionally include play, laughter, and enjoyable activity.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 105
     },
     {
       "id": "restraint",
       "name": "Restraint",
       "definition": "To pause and limit impulses when acting on them would be unhelpful.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 182
     },
     {
       "id": "awareness",
       "name": "Awareness",
       "definition": "To notice what is happening internally and externally.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 34
     },
     {
       "id": "generosity",
       "name": "Generosity",
       "definition": "To share time, attention, resources, credit, or care freely.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 43
     },
     {
       "id": "results-orientation",
       "name": "Results Orientation",
       "definition": "To keep attention on meaningful outcomes and completion.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 250
     },
     {
       "id": "balance",
       "name": "Balance",
       "definition": "To allocate energy across important areas without chronic overinvestment in one.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 3
     },
     {
       "id": "giving",
       "name": "Giving",
       "definition": "To offer something useful or meaningful to others.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 106
     },
     {
       "id": "reverence",
       "name": "Reverence",
       "definition": "To approach what I consider sacred or deeply significant with respect.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 183
     },
     {
       "id": "beauty",
       "name": "Beauty",
       "definition": "To notice, create, protect, or cultivate what feels aesthetically meaningful.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 70
     },
     {
       "id": "goodness",
       "name": "Goodness",
       "definition": "To aim to be helpful, decent, and beneficial in my conduct.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 157
     },
     {
       "id": "risk-taking",
       "name": "Risk Taking",
       "definition": "To accept reasonable uncertainty when important opportunities require it.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 184
     },
     {
       "id": "being-the-best",
       "name": "Being the Best",
       "definition": "To strive for exceptional performance in areas I deliberately choose.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 235
     },
     {
       "id": "grace",
       "name": "Grace",
       "definition": "To respond with kindness, composure, and generosity, especially when imperfect.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 107
     },
     {
       "id": "romance",
       "name": "Romance",
       "definition": "To express affection, attraction, and intentional closeness with a partner.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 185
     },
     {
       "id": "belonging",
       "name": "Belonging",
       "definition": "To participate in relationships and groups where I can feel included, known, and connected.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 134
     },
     {
       "id": "gratitude",
       "name": "Gratitude",
       "definition": "To notice and appreciate what is good, helpful, or meaningful.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 26
     },
     {
       "id": "safety",
       "name": "Safety",
       "definition": "To reduce preventable harm and protect physical or emotional wellbeing.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 58
     },
     {
       "id": "benevolence",
       "name": "Benevolence",
       "definition": "To approach others with goodwill and a desire for their welfare.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 71
     },
     {
       "id": "greatness",
       "name": "Greatness",
       "definition": "To develop and use my abilities in a significant way.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 240
     },
     {
       "id": "security",
       "name": "Security",
       "definition": "To create dependable protection, stability, and resources.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 186
     },
     {
       "id": "boldness",
       "name": "Boldness",
       "definition": "To act with confidence and initiative when hesitation would hold me back.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 72
     },
     {
       "id": "growth",
       "name": "Growth",
       "definition": "To keep learning, adapting, and becoming more capable.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 10
     },
     {
       "id": "self-awareness",
       "name": "Self-Awareness",
       "definition": "To recognize my thoughts, feelings, motives, patterns, and behavior.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 59
     },
     {
       "id": "bravery",
       "name": "Bravery",
       "definition": "To take valued action even when fear is present.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 73
     },
     {
       "id": "happiness",
       "name": "Happiness",
       "definition": "To cultivate a life that includes joy, satisfaction, and meaningful engagement.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 158
     },
     {
       "id": "self-care",
       "name": "Self-Care",
       "definition": "To meet legitimate physical, emotional, and practical needs.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 60
     },
     {
       "id": "brilliance",
       "name": "Brilliance",
       "definition": "To use insight, originality, and intellectual strength well.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 236
     },
     {
       "id": "hard-work",
       "name": "Hard Work",
       "definition": "To apply sustained effort where effort serves something important.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 109
     },
     {
       "id": "self-control",
       "name": "Self-Control",
       "definition": "To choose actions based on values rather than immediate impulses.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 127
     },
     {
       "id": "calmness",
       "name": "Calmness",
       "definition": "To cultivate steadiness and reduce unnecessary reactivity.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 74
     },
     {
       "id": "harmony",
       "name": "Harmony",
       "definition": "To seek workable alignment among people, needs, and parts of life.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 108
     },
     {
       "id": "self-development",
       "name": "Self-Development",
       "definition": "To intentionally grow knowledge, skill, character, and life capacity.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 187
     },
     {
       "id": "candor",
       "name": "Candor",
       "definition": "To communicate openly and directly while remaining respectful.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 75
     },
     {
       "id": "health",
       "name": "Health",
       "definition": "To protect and support physical and mental functioning.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 11
     },
     {
       "id": "self-reliance",
       "name": "Self-Reliance",
       "definition": "To trust and strengthen my ability to manage my responsibilities.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 188
     },
     {
       "id": "care",
       "name": "Care",
       "definition": "To protect, nurture, and respond to genuine needs.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 4
     },
     {
       "id": "honesty",
       "name": "Honesty",
       "definition": "To be truthful with myself and others.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 12
     },
     {
       "id": "selflessness",
       "name": "Selflessness",
       "definition": "To make room for others' needs without centering myself every time.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 189
     },
     {
       "id": "carefulness",
       "name": "Carefulness",
       "definition": "To proceed thoughtfully when mistakes, risks, or consequences matter.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 135
     },
     {
       "id": "honor",
       "name": "Honor",
       "definition": "To act in ways I can respect and stand behind.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 159
     },
     {
       "id": "sensitivity",
       "name": "Sensitivity",
       "definition": "To notice and respond thoughtfully to subtle needs, feelings, and context.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 190
     },
     {
       "id": "certainty",
       "name": "Certainty",
       "definition": "To seek clarity and dependable understanding before acting when possible.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 136
     },
     {
       "id": "hope",
       "name": "Hope",
       "definition": "To stay oriented toward possibility and worthwhile future action.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 44
     },
     {
       "id": "sensuality",
       "name": "Sensuality",
       "definition": "To appreciate and engage the senses with awareness and enjoyment.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 191
     },
     {
       "id": "challenge",
       "name": "Challenge",
       "definition": "To choose experiences that stretch my abilities and promote growth.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 76
     },
     {
       "id": "humility",
       "name": "Humility",
       "definition": "To hold abilities and achievements without exaggerating my importance.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 160
     },
     {
       "id": "serenity",
       "name": "Serenity",
       "definition": "To cultivate quiet steadiness and acceptance.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 192
     },
     {
       "id": "charity",
       "name": "Charity",
       "definition": "To give time, money, resources, or care to support others.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 77
     },
     {
       "id": "humor",
       "name": "Humor",
       "definition": "To appreciate and use appropriate playfulness and laughter.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 45
     },
     {
       "id": "service",
       "name": "Service",
       "definition": "To use time, skill, or resources to help others.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 61
     },
     {
       "id": "cheerfulness",
       "name": "Cheerfulness",
       "definition": "To bring a light, encouraging, and positive presence when appropriate.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 78
     },
     {
       "id": "imagination",
       "name": "Imagination",
       "definition": "To envision possibilities beyond what is immediately present.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 161
     },
     {
       "id": "sexuality",
       "name": "Sexuality",
       "definition": "To understand and express sexual identity, needs, and intimacy responsibly.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 193
     },
     {
       "id": "clarity",
       "name": "Clarity",
       "definition": "To understand and communicate what matters in a straightforward way.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 79
     },
     {
       "id": "improvement",
       "name": "Improvement",
       "definition": "To make things better through learning, practice, or revision.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 110
     },
     {
       "id": "sharing",
       "name": "Sharing",
       "definition": "To let others participate in my time, resources, ideas, or experience.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 194
     },
     {
       "id": "cleanliness",
       "name": "Cleanliness",
       "definition": "To maintain personal and physical environments with care and hygiene.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 80
     },
     {
       "id": "inclusiveness",
       "name": "Inclusiveness",
       "definition": "To create belonging and reduce unnecessary exclusion.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 111
     },
     {
       "id": "significance",
       "name": "Significance",
       "definition": "To live in a way that feels consequential and meaningful.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 251
     },
     {
       "id": "cleverness",
       "name": "Cleverness",
       "definition": "To solve problems resourcefully and use ideas effectively.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 137
     },
     {
       "id": "independence",
       "name": "Independence",
       "definition": "To function capably and make choices without excessive reliance on others.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 46
     },
     {
       "id": "simplicity",
       "name": "Simplicity",
       "definition": "To reduce unnecessary complexity and focus on what matters.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 195
     },
     {
       "id": "collaboration",
       "name": "Collaboration",
       "definition": "To work jointly with others toward a shared result.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 35
     },
     {
       "id": "individuality",
       "name": "Individuality",
       "definition": "To honor my distinct preferences, identity, style, and path.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 112
     },
     {
       "id": "sincerity",
       "name": "Sincerity",
       "definition": "To communicate and act without pretense or manipulation.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 196
     },
     {
       "id": "comfort",
       "name": "Comfort",
       "definition": "To create appropriate ease, rest, and relief from unnecessary strain.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 138
     },
     {
       "id": "industry",
       "name": "Industry",
       "definition": "To be diligent, productive, and willing to work steadily.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 162
     },
     {
       "id": "skilfulness",
       "name": "Skilfulness",
       "definition": "To practice abilities and apply them effectively.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 197
     },
     {
       "id": "commitment",
       "name": "Commitment",
       "definition": "To stay devoted to chosen people, principles, and responsibilities.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 20
     },
     {
       "id": "influence",
       "name": "Influence",
       "definition": "To use my voice, position, relationships, or expertise to shape decisions and outcomes responsibly.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 241
     },
     {
       "id": "solitude",
       "name": "Solitude",
       "definition": "To protect time alone for rest, reflection, creativity, or renewal.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 198
     },
     {
       "id": "common-sense",
       "name": "Common Sense",
       "definition": "To use practical judgment grounded in reality and context.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 81
     },
     {
       "id": "innovation",
       "name": "Innovation",
       "definition": "To develop and apply new approaches that improve what exists.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 163
     },
     {
       "id": "spirituality",
       "name": "Spirituality",
       "definition": "To connect with what feels larger than myself or deeply sacred.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 62
     },
     {
       "id": "communication",
       "name": "Communication",
       "definition": "To exchange information, feelings, and needs clearly and responsively.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 36
     },
     {
       "id": "insight",
       "name": "Insight",
       "definition": "To understand patterns, motives, meanings, and relationships more deeply.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 113
     },
     {
       "id": "spontaneity",
       "name": "Spontaneity",
       "definition": "To allow flexible, unplanned action when it enriches life.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 199
     },
     {
       "id": "community",
       "name": "Community",
       "definition": "To participate in and strengthen groups I belong to.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 21
     },
     {
       "id": "inspiration",
       "name": "Inspiration",
       "definition": "To awaken possibility, energy, or meaningful action in myself or others.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 114
     },
     {
       "id": "stability",
       "name": "Stability",
       "definition": "To create dependable routines, relationships, and conditions.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 63
     },
     {
       "id": "compassion",
       "name": "Compassion",
       "definition": "To respond to suffering with kindness, understanding, and helpful action.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 5
     },
     {
       "id": "integrity",
       "name": "Integrity",
       "definition": "To align actions with chosen principles, especially when inconvenient.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 27
     },
     {
       "id": "status",
       "name": "Status",
       "definition": "To value social standing, rank, prestige, or recognized position.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 252
     },
     {
       "id": "competence",
       "name": "Competence",
       "definition": "To develop and apply the ability needed to do things well.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 37
     },
     {
       "id": "intelligence",
       "name": "Intelligence",
       "definition": "To develop and use reasoning, learning, and understanding effectively.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 164
     },
     {
       "id": "stewardship",
       "name": "Stewardship",
       "definition": "To care responsibly for resources, roles, places, or communities entrusted to me.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 200
     },
     {
       "id": "competitiveness",
       "name": "Competitiveness",
       "definition": "To test myself against others or standards while competing fairly and respectfully.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 237
     },
     {
       "id": "intimacy",
       "name": "Intimacy",
       "definition": "To allow closeness, vulnerability, and mutual knowing in trusted relationships.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 115
     },
     {
       "id": "strength",
       "name": "Strength",
       "definition": "To build and use physical, emotional, or moral capacity.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 201
     },
     {
       "id": "concentration",
       "name": "Concentration",
       "definition": "To focus sustained attention on what I am doing.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 139
     },
     {
       "id": "intuition",
       "name": "Intuition",
       "definition": "To notice and consider informed inner signals alongside evidence.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 165
     },
     {
       "id": "structure",
       "name": "Structure",
       "definition": "To create clear systems, boundaries, routines, and expectations.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 202
     },
     {
       "id": "confidence",
       "name": "Confidence",
       "definition": "To trust my capacity to cope, learn, decide, and act.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 140
     },
     {
       "id": "joy",
       "name": "Joy",
       "definition": "To welcome delight and fully engage with moments of gladness.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 28
     },
     {
       "id": "success",
       "name": "Success",
       "definition": "To define and pursue outcomes that represent doing well by my standards.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 253
     },
     {
       "id": "conformity",
       "name": "Conformity",
       "definition": "To follow shared rules, customs, or expectations when doing so fits my chosen values and responsibilities.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 141
     },
     {
       "id": "justice",
       "name": "Justice",
       "definition": "To support fair treatment, rights, accountability, and repair.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 47
     },
     {
       "id": "supportiveness",
       "name": "Supportiveness",
       "definition": "To be available, encouraging, and practically helpful.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 128
     },
     {
       "id": "connection",
       "name": "Connection",
       "definition": "To be present, engaged, and emotionally linked with people or experience.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 6
     },
     {
       "id": "kindness",
       "name": "Kindness",
       "definition": "To treat myself and others with considerate, helpful care.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 13
     },
     {
       "id": "sustainability",
       "name": "Sustainability",
       "definition": "To choose practices that can continue without avoidable depletion or harm.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 203
     },
     {
       "id": "consistency",
       "name": "Consistency",
       "definition": "To act reliably across time instead of only when motivation is high.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 82
     },
     {
       "id": "knowledge",
       "name": "Knowledge",
       "definition": "To acquire, organize, and use accurate understanding.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 116
     },
     {
       "id": "talent",
       "name": "Talent",
       "definition": "To develop and use natural or learned strengths.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 254
     },
     {
       "id": "contentment",
       "name": "Contentment",
       "definition": "To appreciate what is enough while still allowing growth.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 83
     },
     {
       "id": "lawfulness",
       "name": "Lawfulness",
       "definition": "To respect laws and legitimate rules that I have reason to uphold, while using judgment and conscience.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 166
     },
     {
       "id": "teamwork",
       "name": "Teamwork",
       "definition": "To coordinate strengths and responsibilities toward a shared goal.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 204
     },
     {
       "id": "contribution",
       "name": "Contribution",
       "definition": "To add something useful, meaningful, or beneficial.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 22
     },
     {
       "id": "leadership",
       "name": "Leadership",
       "definition": "To guide, organize, influence, and take responsibility for shared direction.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 117
     },
     {
       "id": "temperance",
       "name": "Temperance",
       "definition": "To practice moderation and wise self-restraint.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 205
     },
     {
       "id": "control",
       "name": "Control",
       "definition": "To influence what is mine to influence and manage responsibly.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 142
     },
     {
       "id": "learning",
       "name": "Learning",
       "definition": "To continually gain knowledge, skill, perspective, or understanding.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 29
     },
     {
       "id": "thankfulness",
       "name": "Thankfulness",
       "definition": "To deliberately express appreciation for what I receive or experience.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 206
     },
     {
       "id": "conviction",
       "name": "Conviction",
       "definition": "To stand behind considered principles and decisions.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 143
     },
     {
       "id": "liberty",
       "name": "Liberty",
       "definition": "To protect meaningful freedom from unnecessary control or restriction.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 167
     },
     {
       "id": "thoroughness",
       "name": "Thoroughness",
       "definition": "To complete work carefully and attend to important details.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 207
     },
     {
       "id": "cooperation",
       "name": "Cooperation",
       "definition": "To coordinate respectfully with others and support shared needs.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 84
     },
     {
       "id": "logic",
       "name": "Logic",
       "definition": "To reason coherently and use evidence when making judgments.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 168
     },
     {
       "id": "thoughtfulness",
       "name": "Thoughtfulness",
       "definition": "To consider impact, context, and other people before acting.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 208
     },
     {
       "id": "courage",
       "name": "Courage",
       "definition": "To move toward what matters despite fear, uncertainty, or difficulty.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 7
     },
     {
       "id": "love",
       "name": "Love",
       "definition": "To act with affection, care, commitment, and goodwill.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 14
     },
     {
       "id": "timeliness",
       "name": "Timeliness",
       "definition": "To act at an appropriate time and meet relevant deadlines.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 209
     },
     {
       "id": "courtesy",
       "name": "Courtesy",
       "definition": "To treat people with politeness, consideration, and social respect.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 85
     },
     {
       "id": "loyalty",
       "name": "Loyalty",
       "definition": "To remain faithful and supportive toward chosen people and commitments.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 48
     },
     {
       "id": "tolerance",
       "name": "Tolerance",
       "definition": "To allow difference and discomfort without unnecessary hostility.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 210
     },
     {
       "id": "creativity",
       "name": "Creativity",
       "definition": "To generate, express, or combine ideas in original ways.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 8
     },
     {
       "id": "making-a-difference",
       "name": "Making a Difference",
       "definition": "To create a positive effect that matters beyond myself.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 169
     },
     {
       "id": "toughness",
       "name": "Toughness",
       "definition": "To withstand strain and remain effective under pressure.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 211
     },
     {
       "id": "credibility",
       "name": "Credibility",
       "definition": "To be believable because my words, actions, and expertise are dependable.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 144
     },
     {
       "id": "mastery",
       "name": "Mastery",
       "definition": "To deepen skill through sustained practice and refinement.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 49
     },
     {
       "id": "tradition",
       "name": "Tradition",
       "definition": "To preserve or participate in practices that connect me with heritage or continuity.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 212
     },
     {
       "id": "curiosity",
       "name": "Curiosity",
       "definition": "To explore, ask questions, learn, and remain interested.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 9
     },
     {
       "id": "maturity",
       "name": "Maturity",
       "definition": "To respond with responsibility, perspective, and emotional steadiness.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 170
     },
     {
       "id": "tranquility",
       "name": "Tranquility",
       "definition": "To cultivate a quiet, low-conflict sense of ease.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 213
     },
     {
       "id": "daring",
       "name": "Daring",
       "definition": "To take meaningful risks and try what feels bold or unfamiliar.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 145
     },
     {
       "id": "meaning",
       "name": "Meaning",
       "definition": "To connect daily life with what feels significant and worthwhile.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 50
     },
     {
       "id": "transparency",
       "name": "Transparency",
       "definition": "To make relevant information, motives, and processes appropriately visible.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 214
     },
     {
       "id": "decisiveness",
       "name": "Decisiveness",
       "definition": "To make timely choices after considering what matters.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 86
     },
     {
       "id": "mindfulness",
       "name": "Mindfulness",
       "definition": "To pay open, curious attention to present experience.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 30
     },
     {
       "id": "trust",
       "name": "Trust",
       "definition": "To risk reasonable reliance on myself, others, or a relationship.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 32
     },
     {
       "id": "dedication",
       "name": "Dedication",
       "definition": "To give sustained effort to a chosen responsibility or purpose.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 87
     },
     {
       "id": "moderation",
       "name": "Moderation",
       "definition": "To avoid harmful extremes and choose sustainable amounts.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 118
     },
     {
       "id": "trustworthiness",
       "name": "Trustworthiness",
       "definition": "To earn trust through honesty, reliability, loyalty, and appropriate confidentiality.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 215
     },
     {
       "id": "dependability",
       "name": "Dependability",
       "definition": "To be someone others and I can reasonably count on.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 88
     },
     {
       "id": "motivation",
       "name": "Motivation",
       "definition": "To cultivate reasons and momentum for valued action.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 119
     },
     {
       "id": "truth",
       "name": "Truth",
       "definition": "To seek and speak what is accurate and real.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 216
     },
     {
       "id": "determination",
       "name": "Determination",
       "definition": "To continue purposeful effort when progress is difficult.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 89
     },
     {
       "id": "open-mindedness",
       "name": "Open-Mindedness",
       "definition": "To consider evidence and viewpoints without rushing to dismiss them.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 51
     },
     {
       "id": "understanding",
       "name": "Understanding",
       "definition": "To make sense of people, situations, ideas, and causes.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 217
     },
     {
       "id": "development",
       "name": "Development",
       "definition": "To build capacity, maturity, knowledge, or skill over time.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 146
     },
     {
       "id": "openness",
       "name": "Openness",
       "definition": "To remain receptive to experience, people, feedback, and possibility.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 120
     },
     {
       "id": "uniqueness",
       "name": "Uniqueness",
       "definition": "To value what is distinctive rather than automatically conforming.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 218
     },
     {
       "id": "devotion",
       "name": "Devotion",
       "definition": "To give deep loyalty, care, and attention to what I cherish.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 147
     },
     {
       "id": "optimism",
       "name": "Optimism",
       "definition": "To look for realistic possibility and constructive next steps.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 121
     },
     {
       "id": "unity",
       "name": "Unity",
       "definition": "To strengthen connection, solidarity, and shared purpose.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 219
     },
     {
       "id": "dignity",
       "name": "Dignity",
       "definition": "To treat myself and others as worthy of respect.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 90
     },
     {
       "id": "order",
       "name": "Order",
       "definition": "To keep things arranged in a clear and workable way.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 171
     },
     {
       "id": "usefulness",
       "name": "Usefulness",
       "definition": "To be practically helpful and contribute something that serves a need.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 220
     },
     {
       "id": "discipline",
       "name": "Discipline",
       "definition": "To follow chosen standards and routines even when I do not feel like it.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 38
     },
     {
       "id": "organization",
       "name": "Organization",
       "definition": "To structure tasks, time, information, and resources effectively.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 122
     },
     {
       "id": "valor",
       "name": "Valor",
       "definition": "To act with notable courage in the service of something important.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 221
     },
     {
       "id": "discovery",
       "name": "Discovery",
       "definition": "To seek new knowledge, experiences, places, or possibilities.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 148
     },
     {
       "id": "originality",
       "name": "Originality",
       "definition": "To express ideas or approaches that are distinctly my own.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 172
     },
     {
       "id": "versatility",
       "name": "Versatility",
       "definition": "To function effectively across different roles, tasks, or situations.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 222
     },
     {
       "id": "diversity",
       "name": "Diversity",
       "definition": "To value varied backgrounds, perspectives, experiences, and identities.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 149
     },
     {
       "id": "passion",
       "name": "Passion",
       "definition": "To invest strong interest and energy in what deeply matters.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 123
     },
     {
       "id": "vision",
       "name": "Vision",
       "definition": "To imagine a meaningful future and organize action toward it.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 223
     },
     {
       "id": "drive",
       "name": "Drive",
       "definition": "To bring energy and persistence to important pursuits.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 150
     },
     {
       "id": "patience",
       "name": "Patience",
       "definition": "To wait, persist, or tolerate delay without unnecessary escalation.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 52
     },
     {
       "id": "vitality",
       "name": "Vitality",
       "definition": "To live with physical and emotional aliveness.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 224
     },
     {
       "id": "effectiveness",
       "name": "Effectiveness",
       "definition": "To choose actions that work in the real situation.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 91
     },
     {
       "id": "peace",
       "name": "Peace",
       "definition": "To cultivate nonviolence, inner steadiness, and constructive resolution.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 53
     },
     {
       "id": "warmth",
       "name": "Warmth",
       "definition": "To communicate friendliness, affection, and emotional availability.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 225
     },
     {
       "id": "efficiency",
       "name": "Efficiency",
       "definition": "To use time, effort, and resources without unnecessary waste.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 238
     },
     {
       "id": "perfection",
       "name": "Perfection",
       "definition": "To pursue flawlessness or exactness in areas where that standard is useful.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 257
     },
     {
       "id": "wealth",
       "name": "Wealth",
       "definition": "To build financial resources and material options.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 255
     },
     {
       "id": "empathy",
       "name": "Empathy",
       "definition": "To understand and respond to another person's perspective and feelings.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 39
     },
     {
       "id": "performance",
       "name": "Performance",
       "definition": "To execute tasks or roles capably when it is time to deliver.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 242
     },
     {
       "id": "welcoming",
       "name": "Welcoming",
       "definition": "To help people feel received, included, and at ease.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 226
     },
     {
       "id": "empowerment",
       "name": "Empowerment",
       "definition": "To strengthen my own or others' ability to choose and act.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 151
     },
     {
       "id": "persistence",
       "name": "Persistence",
       "definition": "To keep taking effective steps despite setbacks or slow progress.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 54
     },
     {
       "id": "well-being",
       "name": "Well-Being",
       "definition": "To support a sustainable overall quality of physical and emotional life.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 227
     },
     {
       "id": "encouragement",
       "name": "Encouragement",
       "definition": "To reinforce hope, effort, growth, and valued behavior.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 92
     },
     {
       "id": "playfulness",
       "name": "Playfulness",
       "definition": "To bring spontaneity, imagination, and lightness into life.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 55
     },
     {
       "id": "winning",
       "name": "Winning",
       "definition": "To value competitive success and doing what is needed to prevail fairly.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 256
     },
     {
       "id": "endurance",
       "name": "Endurance",
       "definition": "To sustain effort and cope through prolonged difficulty.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 93
     },
     {
       "id": "pleasure",
       "name": "Pleasure",
       "definition": "To make room for healthy sensory and emotional enjoyment.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 173
     },
     {
       "id": "wisdom",
       "name": "Wisdom",
       "definition": "To use knowledge, perspective, and experience in sound judgment.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 64
     },
     {
       "id": "energy",
       "name": "Energy",
       "definition": "To cultivate vitality and engage actively with life.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 94
     },
     {
       "id": "poise",
       "name": "Poise",
       "definition": "To carry myself with composure and self-possession.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 174
     },
     {
       "id": "wonder",
       "name": "Wonder",
       "definition": "To remain open to awe, fascination, and the extraordinary in ordinary life.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 228
     },
     {
       "id": "enjoyment",
       "name": "Enjoyment",
       "definition": "To notice and participate in experiences that are satisfying or pleasant.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 95
     },
     {
       "id": "popularity",
       "name": "Popularity",
       "definition": "To value being widely liked, accepted, or socially sought after.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 243
     },
     {
       "id": "zeal",
       "name": "Zeal",
       "definition": "To pursue important aims with strong energy and devotion.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 229
     },
     {
       "id": "enthusiasm",
       "name": "Enthusiasm",
       "definition": "To bring interest, positive energy, and engagement to what matters.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 152
     },
     {
       "id": "power",
       "name": "Power",
       "definition": "To have meaningful influence, authority, or capacity to shape outcomes.",
       "suggested_domains": [],
-      "aliases": []
+      "aliases": [],
+      "display_rank": 244
     }
   ],
   "custom_values_allowed": true
