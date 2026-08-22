@@ -63,6 +63,10 @@ INTEGRATED_SOURCE_IDS = {
     "emotion-regulation-p048", "emotion-regulation-p049",
     "emotion-regulation-p050", "emotion-regulation-p051",
     "emotion-regulation-p052", "emotion-regulation-p057",
+    "cbt-skills-p009", "cbt-skills-p012", "cbt-skills-p024",
+    "cbt-skills-p027", "cbt-skills-p034", "cbt-skills-p041",
+    "cbt-skills-p042", "cbt-skills-p048", "cbt-skills-p050",
+    "cbt-skills-p053", "cbt-skills-p054",
 }
 
 

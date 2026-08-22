@@ -28,6 +28,30 @@ Ask what evidence supports the thought, what evidence does not support it, and w
 
 Develop an alternative that acknowledges the difficulty without treating the original hot thought as the only possible interpretation.
 
+## Thought Record Part 2 {#thought-record-part-2}
+
+Continue from the situation, emotions, and hot thought recorded in Part 1:
+
+### 4. Identify Thinking Traps
+
+Check any patterns that apply, such as all-or-nothing thinking, overgeneralizing, mental filtering, disqualifying the positive, mind reading, fortune telling, catastrophizing, minimizing, emotional reasoning, should statements, labelling, personalization, or overestimating threat.
+
+### 5. Supporting Evidence
+
+List factual evidence that supports the hot thought. Separate observable facts from assumptions and feelings.
+
+### 6. Challenging Evidence
+
+List facts the hot thought overlooks or contradicts. Consider past experiences, alternative explanations, and what a trusted person might notice.
+
+### 7. Alternative Balanced Thought
+
+Write a fair interpretation that includes all the evidence. Ask how you or a best friend could understand the situation. Rate how much you believe the new thought from 0 to 100.
+
+### 8. Re-rate Emotion and Mood
+
+Rate each emotion again from 0 to 100. The goal is not to force a lower number; it is to notice what changes after considering a fuller account.
+
 <!-- section-scan-resources:start -->
 
 ## Handouts & Worksheets {#handouts-worksheets}
@@ -49,6 +73,14 @@ Develop an alternative that acknowledges the difficulty without treating the ori
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:cbt-skills-p027:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:cbt-skills-p027:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-cbt-skills-p028 data-source-id="cbt-skills-p028"}
@@ -68,6 +100,44 @@ Develop an alternative that acknowledges the difficulty without treating the ori
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:cbt-skills-p028:start -->
+
+#### Text Version
+
+Just because we believe our "hot thought" does not necessarily mean it's true. You may be saying "but I feel like it's true", however, a feeling is not a fact. Feelings are not evidence for anything - they are just feelings. Indeed, feelings are real and valid, but the strength of your feelings does not prove the convictions of your thoughts. Remember, thoughts are not facts. In columns 5 and 6, we write down the evidence that supports your hot thought and evidence that does not support it. Seeking evidence is not easy to do. We often come up with a lot of
+
+**assumptions that we think are facts. What's the difference?**
+
+Here are some examples to think about, try to identify which ones are factual: I could tell she didn't like me by the way she looked at me She had a peculiar look on her face. She said she was tired I know he doesn't love me, if he did, he would know by now what I like He did get me what I wanted for Christmas when t gave him a list last time All teenagers are lazy My teenager does not care about how the house looks, like I do My friend does not want to be my friend anymore because she didn't text me back She did tell me that she has been very busy and stressed with a work project
+
+##### FINDING EVIDENCE THAT DOES NOT SUPPORT THE HOT THOUGHT
+
+Use the questions below to complete column 6 of the thought record: Have I had any experiences that show that this thought is not completely
+
+**true all the time?**
+
+If my best friend or someone I loved had this thought, what would I tell
+
+**them?**
+
+If my best friend or someone who loves me knew I was thinking this thought, what would they say to me? What evidence would they point
+
+**out to me that would suggest that my thoughts were not 100% true?**
+
+When I am not feeling this way, do I think about this type of situation any
+
+**differently? How?**
+
+When I have felt this way in the past, what did I think about that helped
+
+**me feel better?**
+
+Have I been in this type of situation before? What happened? Is there anything different between this situation and previous ones? What have I
+
+**learned from prior experiences that could help me now?**
+
+<!-- native-resource-content:cbt-skills-p028:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-cbt-skills-p029 data-source-id="cbt-skills-p029"}
@@ -87,6 +157,48 @@ Develop an alternative that acknowledges the difficulty without treating the ori
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:cbt-skills-p029:start -->
+
+#### Text Version
+
+Are there any small things that contradict my thoughts, which I might be
+
+**discounting as not important?**
+
+Five years from now, if I look back at this situation, will I look at it any
+
+**differently? Will I focus on any different part of my experience?**
+
+Are there any strengths or positives in me or the situation, which am
+
+**ignoring?**
+
+Am I jumping to any conclusions which are not completely justified by the
+
+**evidence?**
+
+Is there any evidence that might lead to a different conclusion than the
+
+**one I've made?**
+
+When examining the evidence that challenges the hot thought it is important to consider the effects of that thought on your life. Is this thought helpful to me? Will thoughts like this help me achieve my goals and a life worth living? Do thoughts like this truly have my best interests
+
+**at heart?**
+
+##### CREATING ALTERNATIVES OR MORE BALANCED THINKING
+
+In working through columns 5 and 6, the evidence may now suggest that the originally held hot thought may not be entirely true. So now it is important to actually replace the original thought with an alternative thought that is more balanced and reflective of reality. This is done in column 7 of the thought record.
+
+##### HOT THOUGHT
+
+Nothing ever works our for me. can't stand it when people don't like me. I'm a failure. You can't trust anyone, Thevll just hurt you.
+
+##### NEW BALANCED THOUGHT
+
+I have had my share of things not work out, but good things have also happened in my life. Although it would feel better if everyone liked me, I can survive without everyone's approval. It is important that those people I really value, think well of me and help me grow as a person. I have failed at some things I've tried. I have been successful at many others. Not everyone can or should be trusted. Trust needs to be earned and I need to give some people a chance. Can you see how the first column is written in extremes and absolutes? The second column is a more balanced version, with an alternative way of thinking about things. The second approach takes work to create, and a great deal of insight. The change does not happen overnight. The extreme automatic thoughts have taken years to become believable, so it will take time,
+
+<!-- native-resource-content:cbt-skills-p029:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-cbt-skills-p030 data-source-id="cbt-skills-p030"}
@@ -106,6 +218,24 @@ Develop an alternative that acknowledges the difficulty without treating the ori
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:cbt-skills-p030:start -->
+
+#### Text Version
+
+patience, and lots of practice to shift our thoughts. After establishing the new balanced thought, rate how much you believe in the new thought on a scale of O - 100.
+
+##### BEST FRIEND TECHNIQUE
+
+The Best Friend Technique is designed to help you gain some objectivity on the situation. It helps to expand your limited perspective and invite more self compassion and empathy. This technique poses some variation of the following question: "If your best friend was in this situation, what would you say to them? If you have a really wise and loving best friend, what
+
+**would they say to you if you told them your thoughts?**
+
+##### RE RATE YOUR EMOTIONS/MOOD
+
+Once you have challenged and reframed the thought to a more alternative balanced thought, it is important to re rate your Emotions/Mood on a scale of 0-100 in column 8. We may not entirely buy into the new balanced thought at first but we can take notice of how we are feeling after we have gone through the process of putting our hot thought on trial. HOME PRACTICE: For this week's home practice, experiment completing an entire thought record from columns 1-8 about a situation that caused an emotional response. You can also complete the remaining sections of the thought record from last week's home practice. The next pages have two sample thought records if you need any further help.
+
+<!-- native-resource-content:cbt-skills-p030:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -117,6 +247,14 @@ Develop an alternative that acknowledges the difficulty without treating the ori
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p034.jpg)
 
+
+<!-- native-resource-content:cbt-skills-p034:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:cbt-skills-p034:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -128,6 +266,28 @@ Develop an alternative that acknowledges the difficulty without treating the ori
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p031.jpg)
 
+
+<!-- native-resource-content:cbt-skills-p031:start -->
+
+#### Text Version
+
+CBT is not abouq learning to think positively or about telünp people what think. is about {earning tc view circwnszances as accurately as possible and simply assuming that our thoughts are tactual. Here are sonne things to keep in as we ptactite using this strategy to chaltenge our thoughts.
+
+- Thought records are emotionally difficuit because they f0Fce us to write what rte may trying to Yet, without writing it down, might never be abte to recognize and challenge the inner be{ief that guide us.
+
+- Doing a thoughk record might feel like doing an exposure exercise. At the beginning we Rnipht feet mo*-e emotional distæxs, However, when we comp(ete the exerciser the kevel of emotional Dfstrggs becomes lower than we began„ we stop the exercise part-way through, we may end up feeling worse than when 'We started-
+
+- Some peopte have a very hard time noticing their thoughts, either due to strang emotionai distress or because they are not used to doing it. if this is the cage you, it might be helpful to pause a times pey day, grab a piece paper (or phone) and recard what you are abie to in you:- Completing thought records is not: recommended when you are in emotion mind. Conskåer applying Disttess Tueerance skills to he\p bring you closer to wise prior completing the thought record_
+
+- The more we do thought records, the more we internall"ze the habit ot asking owselves questions to help ug get a balanced Df Situations. Rather than changmg some of the thoughts parmanent\y, our goa{ is tc Bund a habit asking claräfying questions 'B.ihenever we tind ourse\ves feel(ng pain.
+
+- Sometånas the balanced statement exactåy the same as the initial. thought r if, after doing a thought record, we confinue to worry about: a certain event, then we need tc ask 0QE-selves what we can about
+
+- We frequently have do muftip12 thought records many different issues (and work on changing our behaviour habits as to gee peogress. The more we use this strategy, the gets.
+
+Some people think, "Gnce ihmish all of th€se hame practices; I'll better and be fre€ from thought records". Unfrytunately, this isn't true. Thought reco$d$ work when we use them Ance stop working stop, The more we do it, the kess we wiil need rely on Khem, because our thinking habits change. Looking for evidence for and aga4nst automatic thoughts become second nautve. Vet, there will still be times when we might feel ova-whelming pain khat doesn't seem to quite match aur circumstances - on those occasions, we Mieht benefit from using a thought record.
+
+<!-- native-resource-content:cbt-skills-p031:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-cbt-skills-p032 data-source-id="cbt-skills-p032"}
@@ -137,6 +297,100 @@ Develop an alternative that acknowledges the difficulty without treating the ori
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p032.jpg)
 
+
+<!-- native-resource-content:cbt-skills-p032:start -->
+
+#### Text Version
+
+1. uaticn
+
+##### (Who. What, When,
+
+##### Where)
+
+rhursdoy 11:30
+
+3. Automatic Thoughts
+
+##### (Identify Hot Though-ti
+
+This is too complicated to learn. D uring group learning about never understand ph}s_ thought record never gpl berre,r_ Nqthjng heb me. Thi5 theråpy won't work. J am doomed to always be depressed. 2. Em oti5ß5/ Mood/Sen5ation /100
+
+##### Cognitive .,ans
+
+##### {Thinking traps)
+
+##### AEI OT Nothing
+
+##### Overgeneralizing
+
+##### Mental filter O
+
+##### Disqualifyitlg the Positive
+
+##### Mind Reaciång
+
+##### F-ortur!e O
+
+##### Catastrophizing
+
+##### Minim ino
+
+##### Emotional Reasoning O
+
+##### Persona*ization
+
+Overes@imaticn of Threät
+
+##### S. Supporting evidence -Tor
+
+til? hot
+
+##### r look yt this though
+
+record and i don't know what to do. WOY never v" good at school, don't know what you mean by "=vi'åence",
+
+6. Challenging evidence the hot thousht At workr tearned the compagfs jitiøg Eys tem, which compl/cüted_ EåHier worksheets seemed herd Untn they wer- exp[rained again then they seemed easier, Other group members soid they were cz.'äfused, My clinic/an keeps Tewng me to b? patient, fr come.
+
+7. Alternative 3alanced Thought {rate how much believe the new thought 0-100) Other wavs you or a best
+
+**friend can interpret this?**
+
+Even though I don't understand this learned other things in the past. (90%) My cl/n/c}an will help show me how to do this 160%} With practice it might moke more sense and ger
+
+8. Rate your orion/ Mood now
+
+##### Ang
+
+##### Shame
+
+##### Guih
+
+##### Anxious
+
+##### Other
+
+floo /100 /100 1100 /100
+
+##### hat thought is
+
+##### Sadn ess
+
+##### Fear
+
+##### Anger
+
+##### Anxious
+
+##### Other
+
+751100
+
+##### / IOC
+
+/100 40/100 My head started m hurt ond never understand this. my pclms were sweaty.
+
+<!-- native-resource-content:cbt-skills-p032:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-cbt-skills-p033 data-source-id="cbt-skills-p033"}
@@ -146,6 +400,112 @@ Develop an alternative that acknowledges the difficulty without treating the ori
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p033.jpg)
 
+
+<!-- native-resource-content:cbt-skills-p033:start -->
+
+#### Text Version
+
+1. Sifuätion
+
+##### (Whor What, When,
+
+##### Whe:e)
+
+3. Automatic Thoughts
+
+##### (Identify Hot Thought)
+
+At home In the evening after They donrr understand rne group. Trying to rest a tittle but my portnerctrne and rhey think 1' am hopttess starred to criticize me for not doing anything_ shut Our problems neue.r down und myself for get the whole night. 2. E taoti on 5Fmoodfsensations Maybe they are r}ghtr rm just lazy ond wetk. would be happier with someone else. My parents used to agways tefl me "tife is hard" und thot' need to up my socks und not compjüin'l
+
+##### My höt thought is
+
+A4åYbe they are right, 'and weak,
+
+4. Cognitive Distortions
+
+##### {Thinking traps)
+
+##### or Nothing
+
+##### Overgeneraiiting
+
+##### Mental F*lter•
+
+##### Disqualifying the Positive
+
+##### Mind Reading
+
+##### Catastrophüing
+
+##### Minimizing
+
+##### Emotional Reasoning
+
+##### Shouzs O
+
+##### La beiiing•
+
+##### Pevsonelization
+
+s. Supporting evidence the hot Thought weük_ should be g better partner. Peopiz counting on me. ern letting them down,
+
+##### CAREFUL
+
+**is the Gbove Evidenc±??**
+
+Feelings are not faces! Are the beliefs above
+
+**ond occurwre?**
+
+6. Challenging evidence far
+
+7. Atternative Balanced how much you believe in the new thought 0-100) Qiher you or a best
+
+**friend can interpret this?**
+
+i Nthough used to over functioning, it 0k to take some time for my core_ so used to doing everything that people around aren't used seeing me take a break.
+
+##### Airhough criticized,
+
+thot doesn't mean they were being (70%) am sick, not Lueak•p ond am feorning to take of mysejf. (85%)
+
+8. Rite your
+
+##### Emotion/Mood now
+
+##### Sadness
+
+##### Fear
+
+##### Anger;
+
+##### Sha
+
+##### Goat
+
+##### Anxious
+
+##### Other
+
+nao 1100 noo Overestimation of Threat O the hot Khoughk have depression and one of rhe symptoms fatigue. Mm suppose to be sef core. They actually fust asked me "hot } doing. They didn't ar.tuatly stzy
+
+##### Dqfng something
+
+wrong. am o Reony hard worker which is why am burned out Peop/e adways me have been meeting my
+
+##### Sadness
+
+##### Anger
+
+##### Shame
+
+##### Guilt
+
+##### An
+
+1100 noo noo 35 *'100 My body tensed up aoc: f kind of started trembling ond
+
+<!-- native-resource-content:cbt-skills-p033:end -->
 ::::
 
 <!-- section-scan-resources:end -->

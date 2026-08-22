@@ -20,6 +20,56 @@ execute:
 
 Thinking traps are habits of interpretation. Naming one creates an opportunity to check it.
 
+## Thinking Traps {#thinking-traps}
+
+### All-or-Nothing Thinking
+
+Seeing a situation in absolute categories, with no middle ground: success or failure, perfect or ruined, best or worst.
+
+### Overgeneralizing
+
+Taking one event as proof of a broad, continuing pattern and using words such as *always*, *never*, or *everything*.
+
+### Mental Filter
+
+Focusing on one negative detail while filtering out other information that could change the overall picture.
+
+### Disqualifying the Positive
+
+Dismissing positive experiences as unimportant, accidental, or something that does not count.
+
+### Mind Reading
+
+Assuming you know what another person thinks without enough evidence.
+
+### Fortune Telling
+
+Predicting a negative outcome as though it were already certain.
+
+### Magnification, Catastrophizing, and Minimization
+
+Exaggerating danger, mistakes, or consequences while shrinking your strengths, options, or ability to cope.
+
+### Emotional Reasoning
+
+Treating a feeling as proof: *I feel afraid, so this must be dangerous* or *I feel guilty, so I must have done something wrong*.
+
+### Should Statements
+
+Using rigid rules about how you, other people, or the world must behave, then judging reality against those rules.
+
+### Labelling
+
+Turning a behaviour or mistake into a fixed global label about yourself or another person.
+
+### Personalization
+
+Taking excessive responsibility for an outcome or assuming another person's behaviour is about you when other explanations are possible.
+
+### Overestimating Danger
+
+Treating a threat as more likely or more severe than the evidence supports while underestimating available coping resources.
+
 <!-- section-scan-resources:start -->
 
 ## Practice Materials {#practice-materials}
@@ -31,6 +81,40 @@ Thinking traps are habits of interpretation. Naming one creates an opportunity t
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p013.jpg)
 
+
+<!-- native-resource-content:cbt-skills-p013:start -->
+
+#### Text Version
+
+thouuhlf-; "tiay be true. in the middle. BECAUSE you THINK SOMET'HING, DOESN'T NECESSARILY MEAN *T'S TRUE. 2. When yau yc:ur worse: or you lirvd yourself eng•qinq unl*Qiprui the questions on the lever-se side of this write clov•.n tme it will probably Q*ke. about 5 idol all questions appiv Lo all auiornaßc you':} can use {he list below to identify cagnitive [I-is*artians. You roay thal nere distortion applies. Spclßn-g. handwriti:v; li_ Wiis worksheet if mead imprave.s hy- 1.0%
+
+##### Cognitive Distortions
+
+or rloülirl!} iiiir:$f.ieg nr disc:rnmiino
+
+##### Crnotiorwl
+
+##### Mirid ieudil•,!}
+
+##### Should'
+
+##### Tl_ulrici_
+
+Fril toföi GLh_-cess.
+
+##### Exanwie•
+
+Examol,:: won'l. 7 did riuez•n•:. c.am.getl.•nl; i r;ui.
+
+##### know lot of F.hå-:qs okay I failure
+
+- I'm lose" • i no uou'd_•
+
+##### E-Xsrnpley
+
+'Ciel-ting a mediocre oualuælion proves ho:.v Am Gottinq high rn;ad€J ruean f,i-nar$_' example: one LD" aiso Sevtta-I Mien raiingsl, it Fm aoinq a 'He's that don't. know tho [ir*_ relc uncomfortaåle at thc I dnrfl_ have vuhät: it takes make Cxampll_•: 'The to me did I mada a ælista!ce 'My san •s anything tgtlt. I at teachino_• 0 hdBÄed aeci: 420Zöi (Ingoi$ve Seck Irr_fli11jLe Ior Crygriili•r gehduior Therapy and Beyond. 3rd edit;arL 700 •
+
+<!-- native-resource-content:cbt-skills-p013:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-cbt-skills-p015 data-source-id="cbt-skills-p015"}
@@ -40,6 +124,38 @@ Thinking traps are habits of interpretation. Naming one creates an opportunity t
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p015.jpg)
 
+
+<!-- native-resource-content:cbt-skills-p015:start -->
+
+#### Text Version
+
+2, 5. e.
+
+##### TESTING YOUR THOUGHTS: SEDE TWO WORKSHEET
+
+is me situation? You he thougtlts about. E,ornethinrg that just happened irl (he envirararr,en: or samettßag that liappened inside of you (e an irdense painf!-fi an daydrcanq, fbshcar:-k or of such as thinking about r my Iulure).
+
+**What am thinking ar innaginkpg?**
+
+is {he cognitive topüorüil} What makes rne ålirlk the Liqoughi_ i5 truep
+
+**What T,akes rr;e think liloughl_ is [iOl. true true?**
+
+**What's another vuav to look this?**
+
+**If the worst could do li;en?**
+
+**What s the that cruu\d happe!l?**
+
+What will probably happen* ID. What will happen keep tellånq myself ttle
+
+11. What ca.'ld r.:hrsnged my thinking? 12 What my friend or farnily mevnber [think a specihc happened to h*rrh IS What v•jüLlid te_ good do X cogni .
+
+8eck Ir.Stilule for Cogniqve
+
+##### u! Sru
+
+<!-- native-resource-content:cbt-skills-p015:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-cbt-skills-p017 data-source-id="cbt-skills-p017"}
@@ -59,6 +175,38 @@ Thinking traps are habits of interpretation. Naming one creates an opportunity t
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:cbt-skills-p017:start -->
+
+#### Text Version
+
+**Can you think of examples of the following thinking traps that you fall into?**
+
+Think about the situations when this happens and what you tend to say to yourself. Can you think of a more balanced and rational thought that would be more fair and helpful to say to
+
+**yourself in these situations?**
+
+##### THINKING TRAP EXAMPLE
+
+##### Fortune-telling
+
+##### Black-and-white thinking
+
+##### Mind-reading
+
+##### Over-generalization
+
+ever a ever..
+
+##### Labelling
+
+##### Trillium
+
+##### MORE HELPFUL THOUGHT
+
+##### Health Partners
+
+<!-- native-resource-content:cbt-skills-p017:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-cbt-skills-p018 data-source-id="cbt-skills-p018"}
@@ -78,6 +226,38 @@ Thinking traps are habits of interpretation. Naming one creates an opportunity t
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:cbt-skills-p018:start -->
+
+#### Text Version
+
+**Can you think of examples of the following thinking traps that you fall into?**
+
+Think about the situations when this happens and what you tend to say to yourself. an you think of a more balanced and rational thought that would be more fair and helpful to say to
+
+**yourself in these situations?**
+
+##### THINKING TRAP EXAMPLE
+
+##### Over-estimating danger
+
+##### DANGER
+
+##### EVERYWHERE
+
+##### Filtering
+
+##### Catastrophizing
+
+##### "Should" Statements
+
+##### MORE HELPFUL THOUGHT
+
+##### Trillium
+
+##### Health Partners
+
+<!-- native-resource-content:cbt-skills-p018:end -->
 ::::
 
 ## Exercises {#exercises}
@@ -99,6 +279,36 @@ Thinking traps are habits of interpretation. Naming one creates an opportunity t
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:cbt-skills-p016:start -->
+
+#### Text Version
+
+1. 2. 3. 4. 5. 6. 7. 8. 9.
+
+##### Automatic Thoughts
+
+People at work don't believe that I'm really ill. They think I just want time off. It will be awful if people can tell that I'm anxious. People only care about themselves. I made a total fool of myself when I forgot his name. My friend is only calling because she wants something.
+
+**I finally did some laundry today. But so what?**
+
+Look at all the stuff I haven't done. I can't make time for myself because it feels selfish. I forgot about my son's baseball game. I'm a terrible mother. You should always try to do your best.
+
+**Thinking Traps?**
+
+IO. I don't feel like doing anything. I'm just lazy. II. I've made a complete mess of things.
+
+12. I'm not going to the barbecue because I won't be able to think of anything to say to people.
+
+13. It's safer not to trust anyone.
+
+14. Sisters should support each other.
+
+15. She only complimented me to be polite.
+
+16. I know I'll never feel better.
+
+<!-- native-resource-content:cbt-skills-p016:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -110,6 +320,14 @@ Thinking traps are habits of interpretation. Naming one creates an opportunity t
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p012.jpg)
 
+
+<!-- native-resource-content:cbt-skills-p012:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:cbt-skills-p012:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-cbt-skills-p014 data-source-id="cbt-skills-p014"}
@@ -119,6 +337,66 @@ Thinking traps are habits of interpretation. Naming one creates an opportunity t
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p014.jpg)
 
+
+<!-- native-resource-content:cbt-skills-p014:start -->
+
+#### Text Version
+
+Core beliefs æe person's most central ideas about themselves, 01hers, and thé wodd. These baiaie act a Yetis through whlth every SltüatÉötl and Ife experience gs seen. Beceuse ot this, peopie diüetent cere Beeiefs mlght be ahe same situation, but think, feel, and behave veo; differently. Evan ii a core belief is iaacwrate, it skill shapes how a person sees the wodd. Hasmfüi cue teiie$s lead to negamve thoughts, }eelings, and behavtots, whereas retltnal be-tefs lea$ to balanced reactons.
+
+##### Person Belief
+
+"i am am _unlcvab}e".. am a Faieurc." am perfeet*y capable, when my bese effort."
+
+##### Common Harmful Core Beliefs
+
+##### Reaction
+
+**Thought: Of course rafted... why bother?**
+
+##### Feeling: Depressed
+
+Behavior: Makes no changes. Thought: because didnt prepale.
+
+##### Feellng: Disappointed
+
+Behav;or: Plens study betore the next test Cole are often hidden beneath surface-level beliers. For exameter {he core belief 'ho one Okes mew might underlie the surface belief '*my friends onry spend ume Mth me out pity". '.Tthe is daoge_xsus"
+
+##### am gapped"
+
+##### -"No one
+
+##### Consequences of Harmful Core Beiiee8
+
+##### Problems
+
+##### Mental Reaeth Problems
+
+- diffkculty .t_rusting- others af Enqdequacy in Reeagionehips epx_iety..
+
+excessive jpaipusy.
+
+- substah% @bu$ä
+
+##### - -Oyerey or aggressive
+
+-diffic LÅty. hg stress needs ahoye one's own Iow éeff-esteem
+
+##### Facts About Core Beliefs
+
+People ere not botn corg
+
+- beliefs. usuahy Deveeop in chhdhood, or dating Seessfw trapmattc periods adukthpod.
+
+- Infprmation that con\radicts tore beliefs is often Negative core he!iefs not necessariiy evee they feei_
+
+- core be\iefs tend to ti$d and !ong-sændfig. Howeve!. they can be changed.
+
+##### Aid
+
+by com
+
+<!-- native-resource-content:cbt-skills-p014:end -->
 ::::
 
 <!-- section-scan-resources:end -->

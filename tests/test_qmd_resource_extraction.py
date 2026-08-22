@@ -63,6 +63,18 @@ class QmdResourceExtractionTests(unittest.TestCase):
             )
             self.assertNotEqual("pending", self.by_id[source_id]["extraction_method"])
 
+    def test_cbt_resources_have_native_qmd_content(self) -> None:
+        cbt_rows = [row for row in self.published if row["section"] == "CBT Skills"]
+        self.assertEqual(46, len(cbt_rows))
+        for resource in cbt_rows:
+            source_id = resource["id"]
+            lesson = ROOT / self.by_id[source_id]["lesson_qmd"]
+            self.assertIn(
+                f"<!-- native-resource-content:{source_id}:start -->",
+                lesson.read_text(encoding="utf-8"),
+            )
+            self.assertNotEqual("pending", self.by_id[source_id]["extraction_method"])
+
     def test_ten_emotion_profiles_use_source_structure_and_sync_to_app_data(self) -> None:
         profile = (SITE / "learn/emotion-regulation/observing-describing-emotions.qmd").read_text(encoding="utf-8")
         emotions = (
@@ -116,6 +128,16 @@ class QmdResourceExtractionTests(unittest.TestCase):
             "site/learn/emotion-regulation/opposite-action.qmd": (
                 "## Opposite Action {#opposite-action}",
                 "## Decision Path {#opposite-action-decision-path}",
+            ),
+            "site/learn/cbt-anxiety/introduction-to-cbt.qmd": (
+                "## Five Factor Model {#five-factor-model}",
+            ),
+            "site/learn/cbt-anxiety/thinking-traps.qmd": (
+                "## Thinking Traps {#thinking-traps}",
+            ),
+            "site/learn/cbt-anxiety/understanding-worry.qmd": (
+                "## Worry Tree {#worry-tree}",
+                "### Decision Sequence",
             ),
         }
         for relative, expected in checks.items():

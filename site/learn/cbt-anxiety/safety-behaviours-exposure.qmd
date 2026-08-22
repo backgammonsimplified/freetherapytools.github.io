@@ -20,6 +20,52 @@ execute:
 
 Exposure involves approaching feared situations gradually while reducing behaviours that prevent new learning.
 
+## Safety Behaviours {#safety-behaviours}
+
+Safety behaviours are things you do to prevent, escape, hide, or reduce a feared outcome. They can include checking, reassurance seeking, carrying a protective object, staying near exits, rehearsing excessively, distracting from bodily sensations, avoiding eye contact, or relying on another person.
+
+They may bring short-term relief while keeping anxiety going: if the feared outcome does not happen, the safety behaviour gets the credit, so you do not learn that the situation may be safer or more manageable than predicted.
+
+### Review a Safety Behaviour
+
+- What situation triggers it?
+- What outcome are you trying to prevent?
+- What do you do to feel safer?
+- What does the behaviour cost or prevent you from learning?
+- What small experiment could reduce it safely?
+
+## Situational Exposure {#situational-exposure}
+
+Exposure means intentionally entering a feared but safe-enough situation, remaining there long enough to learn, and repeating the practice. The aim is new learning and increased ability to cope—not forcing anxiety to disappear on command.
+
+1. Predict what you fear will happen and how you would cope.
+2. Choose a manageable step from the ladder.
+3. Enter the situation while reducing safety behaviours where it is safe to do so.
+4. Notice what actually happens, including uncertainty and your ability to stay.
+5. Repeat the step until you have learned what it can teach you, then move to a harder step.
+
+## Exposure / Fear Ladder {#fear-ladder}
+
+### Build the Ladder
+
+1. Name the fear or avoided goal.
+2. Brainstorm many specific situations, from easier to harder.
+3. Rate predicted distress for each from 0 to 100.
+4. Order the situations by difficulty. Similar ratings can share a rung.
+5. Choose a starting step that is challenging but workable.
+
+### For Each Rung
+
+- **Situation:** What exactly will you approach?
+- **Predicted fear:** What do you think will happen?
+- **Safety behaviours to reduce:** What will you practise doing differently?
+- **Repetition plan:** When, where, how long, and how often?
+- **Observed result:** What happened, what did not happen, and what did you learn?
+
+::: {.callout-caution title="Use appropriate support"}
+Exposure is for feared situations that are safe enough to approach. Do not use it to enter genuine danger. Seek professional guidance for trauma memories, severe symptoms, medical risks, or exposures that could put you or someone else at risk.
+:::
+
 <!-- section-scan-resources:start -->
 
 ## Handouts & Worksheets {#handouts-worksheets}
@@ -41,6 +87,14 @@ Exposure involves approaching feared situations gradually while reducing behavio
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:cbt-skills-p048:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:cbt-skills-p048:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-cbt-skills-p050 data-source-id="cbt-skills-p050"}
@@ -50,6 +104,14 @@ Exposure involves approaching feared situations gradually while reducing behavio
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p050.jpg)
 
+
+<!-- native-resource-content:cbt-skills-p050:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:cbt-skills-p050:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -61,6 +123,28 @@ Exposure involves approaching feared situations gradually while reducing behavio
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p047.jpg)
 
+
+<!-- native-resource-content:cbt-skills-p047:start -->
+
+#### Text Version
+
+**What are the thlags that you are avoiding because you feei too Anxeous to do them?**
+
+**What things have you put Ott due to worry?**
+
+**Are these things that are possibåe to change?**
+
+**What thoughts get in the way?**
+
+**What are some things vou could start to do push against the fear?**
+
+**What wou*d you like to have happen in this situation?**
+
+##### Triüiurn
+
+##### Health Partners
+
+<!-- native-resource-content:cbt-skills-p047:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-cbt-skills-p049 data-source-id="cbt-skills-p049"}
@@ -70,6 +154,18 @@ Exposure involves approaching feared situations gradually while reducing behavio
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p049.jpg)
 
+
+<!-- native-resource-content:cbt-skills-p049:start -->
+
+#### Text Version
+
+using the betow, can you pick some of the safety behaviaws you may he Ijsng to avoid feeäing anxious? Remember that aål these for flis of avoidance work in the shortterm and cause Fncreæsed anxiety and more avoidance in the long term. Sitting only in the back row of the to avoid beiøg not*ced. Avgding eye contact while grocery shopping and Zgeng through the checkout. Weuing sung!asses while ushog public transportation {evea on gioomy days). Over-preparing for presentations or meetings. Mentally rehearsing conversations befoæ they happen, Carrying bottle ot anti,anxieiy medical'h)fi whenever of the home. [gaving the house only Ef accompanied by a trusted loved one, Creating an escape plan from any buüd*ng entered. Checking the tocks on the hoose or car door multiple times. Frequently checking or go;ng on electronics during social interactions, Consuming recreaticoai drugs, or other substances to curb anxiety; Engaging in superstitious Rituaes before, dwing, G! after sitüätion that elicits anxiety. Avoidarca Eocations or situations that tend to increase anxiety. Having to object in thaq tend to mcrease anxiety. F"equent Visits the doctor for slight changes in phys*tal symptoms -0*' sensations. Frequent checking of heart rat2, hiood pressure, or other vital æccvdings. SE3Ying awake for Fong geriods of time to ensure safety of home. Wearing excessive amounts of clothing when in to avoid atteotion. Re-æ•eading a text e-mail multiple times before sending. Caning a loved one several tirnes throughout the day to check their safety Avoidance of not feeling in Compeete contro' (refusal to Deeegate tasks to cthers/dolng everything purse'" Perfectionism can be avoidance Avoidance of risk {even risk is too much). This might inciude excessive checking or Teassucatce seeking.
+
+##### Other i
+
+##### Other
+
+<!-- native-resource-content:cbt-skills-p049:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-cbt-skills-p053 data-source-id="cbt-skills-p053"}
@@ -79,6 +175,14 @@ Exposure involves approaching feared situations gradually while reducing behavio
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p053.jpg)
 
+
+<!-- native-resource-content:cbt-skills-p053:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:cbt-skills-p053:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-cbt-skills-p054 data-source-id="cbt-skills-p054"}
@@ -88,6 +192,14 @@ Exposure involves approaching feared situations gradually while reducing behavio
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p054.jpg)
 
+
+<!-- native-resource-content:cbt-skills-p054:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:cbt-skills-p054:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -99,6 +211,34 @@ Exposure involves approaching feared situations gradually while reducing behavio
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p051.jpg)
 
+
+<!-- native-resource-content:cbt-skills-p051:start -->
+
+#### Text Version
+
+Goat; Go to the mall by myself
+
+##### i Situation
+
+Walk around the alone slaw day (for example, Monday afternoon) Walk at'Oieeid the mall with friend on e day (For example, Monday Sii otltside the tuall entrance on a bench with or friend Goa': Drive a ear in my neighbourhood
+
+##### Situation
+
+Drive dowa a main road wifh Mom when there is more traffic (for exae»pie, Sunday down B main road with Mom when there very fitne {for verv
+
+##### ;Sunciay morning)
+
+Ehe block with Mom the car up a-nd down driveway Mom in the car üiüium
+
+##### Health Partners
+
+fear
+
+##### Fe&r
+
+##### Rating
+
+<!-- native-resource-content:cbt-skills-p051:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-cbt-skills-p052 data-source-id="cbt-skills-p052"}
@@ -108,6 +248,28 @@ Exposure involves approaching feared situations gradually while reducing behavio
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p052.jpg)
 
+
+<!-- native-resource-content:cbt-skills-p052:start -->
+
+#### Text Version
+
+##### tf making a n*istake
+
+1. 2. 3. 4. 5. Make a spedfng tnlstake ia an friend. Misuse a word wwhen to stranger. Put-Paseey make a noistake 'Ahen handing in an asgignment. Purposely önsvver a question wrong In Make your handwriting a Iite2 rnessy on a test and cross sornetmng than erase
+
+##### Fear of facing the unknown
+
+1. 2. 3, 4. 5. Order something yourve never aaten before at a restaurant, Ask Ehe Barsta at c:affee shop to a bevacage you have never tried before, and go It. Explore a safe new part of the city a friend, let your ft-Fend plan an evening by pick*ng restaurant or movie, go akong With whatever she or he planned (without knowing the in advance). fruita new to hang out you and your friends
+
+##### Socfal fears
+
+2, 3. 4. 5. Cali a stcæ and ask it they have something in your size eod can put it on hold fer the day. Buy spmething and then return it a couple hours later saying you changed lurnd (don't forget to check the store's return policy before you do one). Approach a Stranger in a safe piace and ask directions to nearest qæc-ety stü*'e, Get a hus and put the wrong amount of Order scmething at a fast food restaurant aad once the cashier has punched in, change your mind.
+
+##### MI ium
+
+##### Heaäth Partneis
+
+<!-- native-resource-content:cbt-skills-p052:end -->
 ::::
 
 <!-- section-scan-resources:end -->
