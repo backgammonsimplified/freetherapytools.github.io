@@ -215,7 +215,12 @@
     if (!response.ok) throw new Error("Values data could not be loaded");
     const data = await response.json();
     const key = "values";
-    const legacyState = localStorage.getItem(STORAGE_PREFIX + key) ? loadState(key, initialValuesState) : null;
+    let legacyState = null;
+    try {
+      if (localStorage.getItem(STORAGE_PREFIX + key)) legacyState = loadState(key, initialValuesState);
+    } catch (_error) {
+      legacyState = null;
+    }
     let state = initialValuesState();
     let progressController = null;
 

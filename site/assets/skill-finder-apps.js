@@ -108,9 +108,11 @@
       this.root.querySelector("[data-flow-restart]")?.addEventListener("click", () => this.restart());
       this.root.querySelector("[data-flow-continue]")?.addEventListener("click", () => this.go(node.next));
       this.root.querySelectorAll("[data-flow-choice]").forEach((button) => button.addEventListener("click", () => { if (node.field) this.answers[node.field] = button.dataset.value; this.go(button.dataset.next); }));
-      this.root.querySelector("[data-flow-text]")?.addEventListener("submit", (event) => { event.preventDefault(); this.answers[node.field] = new FormData(event.currentTarget).get("answer").trim(); this.go(node.next); });
+      const textForm = this.root.querySelector("[data-flow-text]");
+      textForm?.querySelector("textarea")?.addEventListener("input", (event) => { this.answers[node.field] = event.target.value; });
+      textForm?.addEventListener("submit", (event) => { event.preventDefault(); this.answers[node.field] = new FormData(event.currentTarget).get("answer").trim(); this.go(node.next); });
       const rating = this.root.querySelector("[data-flow-rating]");
-      rating?.querySelector("input")?.addEventListener("input", (event) => { rating.querySelector("output").textContent = event.target.value; });
+      rating?.querySelector("input")?.addEventListener("input", (event) => { this.answers[node.field] = event.target.value; rating.querySelector("output").textContent = event.target.value; });
       rating?.addEventListener("submit", (event) => { event.preventDefault(); this.answers[node.field] = new FormData(event.currentTarget).get("answer"); this.go(node.next); });
     }
   }

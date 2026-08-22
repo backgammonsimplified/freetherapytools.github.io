@@ -39,6 +39,7 @@
 
 .skill-progress-drawer {
   background: var(--bs-body-bg, #fff);
+  box-sizing: border-box;
   box-shadow: -0.4rem 0 1.5rem rgb(0 0 0 / 22%);
   color: var(--bs-body-color, #212529);
   height: 100%;
@@ -72,6 +73,7 @@
 .skill-progress-drawer label,
 .skill-progress-drawer input[type="text"],
 .skill-progress-drawer input[type="file"] {
+  box-sizing: border-box;
   display: block;
   width: 100%;
 }

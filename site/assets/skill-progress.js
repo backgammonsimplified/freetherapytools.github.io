@@ -88,7 +88,9 @@
     } catch (_error) {
       return { ok: false, code: "damaged" };
     }
-    if (!isPlainObject(record) || record.format !== FORMAT || typeof record.tool_id !== "string" || !isPlainObject(record.state)) {
+    if (!isPlainObject(record) || record.format !== FORMAT || typeof record.tool_id !== "string"
+      || typeof record.tool_title !== "string" || typeof record.route !== "string" || typeof record.saved_at !== "string"
+      || Number.isNaN(Date.parse(record.saved_at)) || !isPlainObject(record.state)) {
       return { ok: false, code: "not-progress" };
     }
     if (!Number.isInteger(record.schema_version) || record.schema_version < 1) return { ok: false, code: "damaged" };
@@ -108,7 +110,7 @@
     if (record.tool_id !== config.toolId) return { ok: false, code: "wrong-tool", record };
     if (record.schema_version > config.schemaVersion) return { ok: false, code: "future-version" };
     try {
-      if (record.schema_version !== config.schemaVersion || !config.validateState(record.state)) return { ok: false, code: "damaged" };
+      if (record.schema_version !== config.schemaVersion || record.route !== config.route || !config.validateState(record.state)) return { ok: false, code: "damaged" };
     } catch (_error) {
       return { ok: false, code: "damaged" };
     }
@@ -399,7 +401,7 @@
   }
 
   function xmlEscape(value) {
-    return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&apos;");
+    return String(value).replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&apos;");
   }
 
   function markdownToWordXml(markdown) {

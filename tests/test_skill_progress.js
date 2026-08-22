@@ -33,6 +33,7 @@ assert.deepEqual(progress.validateForTool(record, config).state, state);
 const wrong = progress.validateForTool({ ...record, tool_id: "values", tool_title: "Values & Valued Action" }, config);
 assert.equal(wrong.code, "wrong-tool");
 assert.equal(progress.validateForTool({ ...record, schema_version: 2 }, config).code, "future-version");
+assert.equal(progress.validateForTool({ ...record, route: "/wrong/" }, config).code, "damaged");
 assert.equal(progress.validateForTool({ ...record, state: { broken: true } }, config).code, "damaged");
 assert.equal(progress.parseProgress("ordinary notes").code, "not-progress");
 assert.equal(progress.parseProgress("<!-- therapy-skill-kit-progress\n{bad}\n-->").code, "damaged");
@@ -52,7 +53,7 @@ assert.equal(progress.sanitizeFilename(' goal: "test" / answer '), "goal-test-an
   const bytes = new Uint8Array(await docx.arrayBuffer());
   assert.deepEqual([...bytes.slice(0, 4)], [0x50, 0x4b, 0x03, 0x04], "DOCX must be a ZIP package");
   const text = new TextDecoder().decode(bytes);
-  for (const part of ["[Content_Types].xml", "_rels/.rels", "word/document.xml", "word/styles.xml"]) assert.ok(text.includes(part), part);
+  for (const part of ["[Content_Types].xml", "_rels/.rels", "word/_rels/document.xml.rels", "word/document.xml", "word/styles.xml"]) assert.ok(text.includes(part), part);
   assert.ok(text.includes("Worry Tree"));
   console.log("skill progress unit checks passed");
 })().catch((error) => {

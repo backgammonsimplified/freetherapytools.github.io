@@ -74,6 +74,7 @@ class SkillProgressTests(unittest.TestCase):
         for token in ('role: "dialog"', '"aria-modal": "true"', 'aria-live', 'event.key === "Escape"', 'prefers-reduced-motion'):
             self.assertIn(token, PROGRESS + CSS)
         self.assertIn("@media (max-width: 575.98px)", CSS)
+        self.assertIn("box-sizing: border-box", CSS)
         self.assertIn("@media print", CSS)
         self.assertIn("body.skill-progress-printing > *:not(.skill-progress-print)", CSS)
 
