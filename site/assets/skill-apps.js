@@ -131,11 +131,11 @@
       <p class="skill-app-count" aria-live="polite"><span data-selected-count>${Object.keys(selected).length}</span> selected</p>
       <label for="values-search">Search values and definitions</label>
       <input id="values-search" type="search" data-values-search autocomplete="off">
+      <div class="skill-app-card-grid" data-value-list>${cards}</div>
       <div class="skill-app-actions values-custom-row">
         <input type="text" data-custom-value aria-label="Custom value name" placeholder="Add your own value">
         <button type="button" data-add-custom>Add custom value</button>
-      </div>
-      <div class="skill-app-card-grid" data-value-list>${cards}</div>`;
+      </div>`;
   }
 
   function categorizeMarkup(data, state) {

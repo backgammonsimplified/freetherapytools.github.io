@@ -375,9 +375,9 @@ body:has(.skill-app[data-skill-app="values"].values-action-bar-visible) .bs-term
 .values-custom-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  margin-block: 0.75rem 2rem;
-  padding-bottom: 1.75rem;
-  border-bottom: 1px solid var(--skill-app-border);
+  margin-block: 2rem 0.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--skill-app-border);
 }
 
 .values-custom-row input {
