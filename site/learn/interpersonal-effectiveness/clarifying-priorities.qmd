@@ -24,104 +24,139 @@ Before acting, decide which goal matters most: getting an objective, preserving 
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p009 data-source-id="interpersonal-effectiveness-p009"}
 **Factors in the Way of Interpersonal Effectiveness**
 
 [![Factors in the Way of Interpersonal Effectiveness](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p009.jpg){.img-fluid fig-alt="Factors in the Way of Interpersonal Effectiveness"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p009.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p009.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p009" data-source-id="interpersonal-effectiveness-p009" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-2-factors-in-the-way-of-interpersonal-effectiveness-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Factors in the Way of Interpersonal Effectiveness](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-2-factors-in-the-way-of-interpersonal-effectiveness-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Factors in the Way of Interpersonal Effectiveness"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-2-factors-in-the-way-of-interpersonal-effectiveness-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-2-factors-in-the-way-of-interpersonal-effectiveness-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p010 data-source-id="interpersonal-effectiveness-p010"}
 **Myths in the Way of Interpersonal Effectiveness**
 
 [![Myths in the Way of Interpersonal Effectiveness](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p010.jpg){.img-fluid fig-alt="Myths in the Way of Interpersonal Effectiveness"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p010.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p010.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p010" data-source-id="interpersonal-effectiveness-p010" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-2a-myths-in-the-way-of-interpersonal-effectiveness-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Myths in the Way of Interpersonal Effectiveness](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-2a-myths-in-the-way-of-interpersonal-effectiveness-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Myths in the Way of Interpersonal Effectiveness"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-2a-myths-in-the-way-of-interpersonal-effectiveness-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-2a-myths-in-the-way-of-interpersonal-effectiveness-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p013 data-source-id="interpersonal-effectiveness-p013"}
 **Obtaining Objectives Skillfully**
 
 [![Obtaining Objectives Skillfully](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p013.jpg){.img-fluid fig-alt="Obtaining Objectives Skillfully"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p013.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p013.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p013" data-source-id="interpersonal-effectiveness-p013" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-3-overview-obtaining-objectives-skillfully-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Obtaining Objectives Skillfully](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-3-overview-obtaining-objectives-skillfully-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Obtaining Objectives Skillfully"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-3-overview-obtaining-objectives-skillfully-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-3-overview-obtaining-objectives-skillfully-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p014 data-source-id="interpersonal-effectiveness-p014"}
 **Clarifying Goals in Interpersonal Situations**
 
 [![Clarifying Goals in Interpersonal Situations](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p014.jpg){.img-fluid fig-alt="Clarifying Goals in Interpersonal Situations"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p014.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p014.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p014" data-source-id="interpersonal-effectiveness-p014" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-4-clarifying-goals-in-interpersonal-situations-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Clarifying Goals in Interpersonal Situations](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-4-clarifying-goals-in-interpersonal-situations-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Clarifying Goals in Interpersonal Situations"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-4-clarifying-goals-in-interpersonal-situations-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-4-clarifying-goals-in-interpersonal-situations-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p011 data-source-id="interpersonal-effectiveness-p011"}
 **Challenging Myths: Objectives Effectiveness**
 
 [![Challenging Myths: Objectives Effectiveness](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p011.jpg){.img-fluid fig-alt="Challenging Myths: Objectives Effectiveness"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p011.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p011.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p011" data-source-id="interpersonal-effectiveness-p011" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-2-challenging-myths-in-the-way-of-obtaining-objectives-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Challenging Myths: Objectives Effectiveness](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-2-challenging-myths-in-the-way-of-obtaining-objectives-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Challenging Myths: Objectives Effectiveness"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-2-challenging-myths-in-the-way-of-obtaining-objectives-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-2-challenging-myths-in-the-way-of-obtaining-objectives-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p012 data-source-id="interpersonal-effectiveness-p012"}
 **Challenging Myths: Relationship and Self-Respect**
 
 [![Challenging Myths: Relationship and Self-Respect](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p012.jpg){.img-fluid fig-alt="Challenging Myths: Relationship and Self-Respect"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p012.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p012.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p012" data-source-id="interpersonal-effectiveness-p012" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-2-challenging-myths-in-the-way-of-relationship-and-self-respect-effectiveness-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Challenging Myths: Relationship and Self-Respect](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-2-challenging-myths-in-the-way-of-relationship-and-self-respect-effectiveness-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Challenging Myths: Relationship and Self-Respect"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-2-challenging-myths-in-the-way-of-relationship-and-self-respect-effectiveness-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-2-challenging-myths-in-the-way-of-relationship-and-self-respect-effectiveness-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p015 data-source-id="interpersonal-effectiveness-p015"}
 **Clarifying Priorities in Interpersonal Situations**
 
 [![Clarifying Priorities in Interpersonal Situations](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p015.jpg){.img-fluid fig-alt="Clarifying Priorities in Interpersonal Situations"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p015.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p015.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p015" data-source-id="interpersonal-effectiveness-p015" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-3-clarifying-priorities-in-interpersonal-situations-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Clarifying Priorities in Interpersonal Situations](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-3-clarifying-priorities-in-interpersonal-situations-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Clarifying Priorities in Interpersonal Situations"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-3-clarifying-priorities-in-interpersonal-situations-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-3-clarifying-priorities-in-interpersonal-situations-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 <!-- section-scan-resources:end -->

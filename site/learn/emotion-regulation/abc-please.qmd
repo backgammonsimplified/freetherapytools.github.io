@@ -44,166 +44,235 @@ Continue with [Building Mastery & Cope Ahead](positive-emotions-mastery-cope-ahe
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-emotion-regulation-p057 data-source-id="emotion-regulation-p057"}
 **ABC PLEASE Overview**
 
 [![ABC PLEASE Overview](/resources/emotion-regulation/emotion-regulation-p057.jpg){.img-fluid fig-alt="ABC PLEASE Overview"}](/resources/emotion-regulation/emotion-regulation-p057.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p057.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p057" data-source-id="emotion-regulation-p057" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-14-overview-reducing-vulnerability-to-emotion-mind-abc-please-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: ABC PLEASE Overview](/resources/clean/emotion-regulation/emotion-regulation-handout-14-overview-reducing-vulnerability-to-emotion-mind-abc-please-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: ABC PLEASE Overview"}](/resources/clean/emotion-regulation/emotion-regulation-handout-14-overview-reducing-vulnerability-to-emotion-mind-abc-please-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-14-overview-reducing-vulnerability-to-emotion-mind-abc-please-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p058 data-source-id="emotion-regulation-p058"}
 **Accumulating Positive Emotions: Short Term**
 
 [![Accumulating Positive Emotions: Short Term](/resources/emotion-regulation/emotion-regulation-p058.jpg){.img-fluid fig-alt="Accumulating Positive Emotions: Short Term"}](/resources/emotion-regulation/emotion-regulation-p058.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p058.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p058" data-source-id="emotion-regulation-p058" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-15-accumulating-positive-emotions-short-term-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Accumulating Positive Emotions: Short Term](/resources/clean/emotion-regulation/emotion-regulation-handout-15-accumulating-positive-emotions-short-term-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Accumulating Positive Emotions: Short Term"}](/resources/clean/emotion-regulation/emotion-regulation-handout-15-accumulating-positive-emotions-short-term-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-15-accumulating-positive-emotions-short-term-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p062 data-source-id="emotion-regulation-p062"}
 **Accumulating Positive Emotions: Long Term**
 
 [![Accumulating Positive Emotions: Long Term](/resources/emotion-regulation/emotion-regulation-p062.jpg){.img-fluid fig-alt="Accumulating Positive Emotions: Long Term"}](/resources/emotion-regulation/emotion-regulation-p062.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p062.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p062" data-source-id="emotion-regulation-p062" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-17-accumulating-positive-emotions-long-term-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Accumulating Positive Emotions: Long Term](/resources/clean/emotion-regulation/emotion-regulation-handout-17-accumulating-positive-emotions-long-term-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Accumulating Positive Emotions: Long Term"}](/resources/clean/emotion-regulation/emotion-regulation-handout-17-accumulating-positive-emotions-long-term-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-17-accumulating-positive-emotions-long-term-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-emotion-regulation-p066 data-source-id="emotion-regulation-p066"}
 **Building Positive Experiences Now**
 
 [![Building Positive Experiences Now](/resources/emotion-regulation/emotion-regulation-p066.jpg){.img-fluid fig-alt="Building Positive Experiences Now"}](/resources/emotion-regulation/emotion-regulation-p066.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p066.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p067 data-source-id="emotion-regulation-p067"}
 **Daily Pleasant Moments Record**
 
 [![Daily Pleasant Moments Record](/resources/emotion-regulation/emotion-regulation-p067.jpg){.img-fluid fig-alt="Daily Pleasant Moments Record"}](/resources/emotion-regulation/emotion-regulation-p067.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p067.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p068 data-source-id="emotion-regulation-p068"}
 **Accumulating Positive Emotions: Long Term Worksheet, Part 1**
 
 [![Accumulating Positive Emotions: Long Term Worksheet, Part 1](/resources/emotion-regulation/emotion-regulation-p068.jpg){.img-fluid fig-alt="Accumulating Positive Emotions: Long Term Worksheet, Part 1"}](/resources/emotion-regulation/emotion-regulation-p068.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p068.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:emotion-regulation-p068:php-p0026" data-source-id="emotion-regulation-p068" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0026.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Accumulating Positive Emotions: Long Term Worksheet, Part 1](/resources/high-res/php/php-p0026.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Accumulating Positive Emotions: Long Term Worksheet, Part 1"}](/resources/high-res/php/php-p0026.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0026.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p069 data-source-id="emotion-regulation-p069"}
 **Accumulating Positive Emotions: Long Term Worksheet, Part 2**
 
 [![Accumulating Positive Emotions: Long Term Worksheet, Part 2](/resources/emotion-regulation/emotion-regulation-p069.jpg){.img-fluid fig-alt="Accumulating Positive Emotions: Long Term Worksheet, Part 2"}](/resources/emotion-regulation/emotion-regulation-p069.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p069.jpg)
+
+::: {.bs-resource-match data-match-id="php-high-res:emotion-regulation-p069:php-p0027" data-source-id="emotion-regulation-p069" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0027.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Accumulating Positive Emotions: Long Term Worksheet, Part 2](/resources/high-res/php/php-p0027.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Accumulating Positive Emotions: Long Term Worksheet, Part 2"}](/resources/high-res/php/php-p0027.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0027.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-emotion-regulation-p059 data-source-id="emotion-regulation-p059"}
 **Pleasant Events List, Part 1**
 
 [![Pleasant Events List, Part 1](/resources/emotion-regulation/emotion-regulation-p059.jpg){.img-fluid fig-alt="Pleasant Events List, Part 1"}](/resources/emotion-regulation/emotion-regulation-p059.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p059.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p059" data-source-id="emotion-regulation-p059" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-16-pleasant-events-list-1-of-3-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Pleasant Events List, Part 1](/resources/clean/emotion-regulation/emotion-regulation-handout-16-pleasant-events-list-1-of-3-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Pleasant Events List, Part 1"}](/resources/clean/emotion-regulation/emotion-regulation-handout-16-pleasant-events-list-1-of-3-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-16-pleasant-events-list-1-of-3-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p060 data-source-id="emotion-regulation-p060"}
 **Pleasant Events List, Part 2**
 
 [![Pleasant Events List, Part 2](/resources/emotion-regulation/emotion-regulation-p060.jpg){.img-fluid fig-alt="Pleasant Events List, Part 2"}](/resources/emotion-regulation/emotion-regulation-p060.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p060.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p060" data-source-id="emotion-regulation-p060" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-16-pleasant-events-list-2-of-3-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Pleasant Events List, Part 2](/resources/clean/emotion-regulation/emotion-regulation-handout-16-pleasant-events-list-2-of-3-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Pleasant Events List, Part 2"}](/resources/clean/emotion-regulation/emotion-regulation-handout-16-pleasant-events-list-2-of-3-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-16-pleasant-events-list-2-of-3-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p061 data-source-id="emotion-regulation-p061"}
 **Pleasant Events List, Part 3**
 
 [![Pleasant Events List, Part 3](/resources/emotion-regulation/emotion-regulation-p061.jpg){.img-fluid fig-alt="Pleasant Events List, Part 3"}](/resources/emotion-regulation/emotion-regulation-p061.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p061.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p061" data-source-id="emotion-regulation-p061" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-16-pleasant-events-list-3-of-3-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Pleasant Events List, Part 3](/resources/clean/emotion-regulation/emotion-regulation-handout-16-pleasant-events-list-3-of-3-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Pleasant Events List, Part 3"}](/resources/clean/emotion-regulation/emotion-regulation-handout-16-pleasant-events-list-3-of-3-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-16-pleasant-events-list-3-of-3-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p063 data-source-id="emotion-regulation-p063"}
 **Values and Priorities List, Part 1**
 
 [![Values and Priorities List, Part 1](/resources/emotion-regulation/emotion-regulation-p063.jpg){.img-fluid fig-alt="Values and Priorities List, Part 1"}](/resources/emotion-regulation/emotion-regulation-p063.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p063.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p063" data-source-id="emotion-regulation-p063" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-18-values-and-priorities-list-1-of-3-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Values and Priorities List, Part 1](/resources/clean/emotion-regulation/emotion-regulation-handout-18-values-and-priorities-list-1-of-3-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Values and Priorities List, Part 1"}](/resources/clean/emotion-regulation/emotion-regulation-handout-18-values-and-priorities-list-1-of-3-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-18-values-and-priorities-list-1-of-3-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p064 data-source-id="emotion-regulation-p064"}
 **Values and Priorities List, Part 2**
 
 [![Values and Priorities List, Part 2](/resources/emotion-regulation/emotion-regulation-p064.jpg){.img-fluid fig-alt="Values and Priorities List, Part 2"}](/resources/emotion-regulation/emotion-regulation-p064.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p064.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p064" data-source-id="emotion-regulation-p064" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-18-values-and-priorities-list-2-of-3-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Values and Priorities List, Part 2](/resources/clean/emotion-regulation/emotion-regulation-handout-18-values-and-priorities-list-2-of-3-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Values and Priorities List, Part 2"}](/resources/clean/emotion-regulation/emotion-regulation-handout-18-values-and-priorities-list-2-of-3-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-18-values-and-priorities-list-2-of-3-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p065 data-source-id="emotion-regulation-p065"}
 **Values and Priorities List, Part 3**
 
 [![Values and Priorities List, Part 3](/resources/emotion-regulation/emotion-regulation-p065.jpg){.img-fluid fig-alt="Values and Priorities List, Part 3"}](/resources/emotion-regulation/emotion-regulation-p065.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p065.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p065" data-source-id="emotion-regulation-p065" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-18-values-and-priorities-list-3-of-3-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Values and Priorities List, Part 3](/resources/clean/emotion-regulation/emotion-regulation-handout-18-values-and-priorities-list-3-of-3-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Values and Priorities List, Part 3"}](/resources/clean/emotion-regulation/emotion-regulation-handout-18-values-and-priorities-list-3-of-3-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-18-values-and-priorities-list-3-of-3-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 <!-- section-scan-resources:end -->

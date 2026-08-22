@@ -32,56 +32,85 @@ FAST helps you remain fair and aligned with your values.
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p033 data-source-id="interpersonal-effectiveness-p033"}
 **Guidelines for Self-Respect Effectiveness: FAST**
 
 [![Guidelines for Self-Respect Effectiveness: FAST](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p033.jpg){.img-fluid fig-alt="Guidelines for Self-Respect Effectiveness: FAST"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p033.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p033.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p033" data-source-id="interpersonal-effectiveness-p033" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-7-guidelines-for-self-respect-effectiveness-fast-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Guidelines for Self-Respect Effectiveness: FAST](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-7-guidelines-for-self-respect-effectiveness-fast-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Guidelines for Self-Respect Effectiveness: FAST"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-7-guidelines-for-self-respect-effectiveness-fast-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-7-guidelines-for-self-respect-effectiveness-fast-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p035 data-source-id="interpersonal-effectiveness-p035"}
 **DEAR + FAST Script**
 
 [![DEAR + FAST Script](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p035.jpg){.img-fluid fig-alt="DEAR + FAST Script"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p035.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p035.jpg)
+
+::: {.bs-resource-match data-match-id="php-high-res:interpersonal-effectiveness-p035:php-p0073" data-source-id="interpersonal-effectiveness-p035" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0073.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: DEAR + FAST Script](/resources/high-res/php/php-p0073.jpg){.img-fluid fig-alt="Higher-Resolution Copy: DEAR + FAST Script"}](/resources/high-res/php/php-p0073.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0073.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Exercises {#exercises}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p031 data-source-id="interpersonal-effectiveness-p031"}
 **Self-Respect Effectiveness Reflection**
 
 [![Self-Respect Effectiveness Reflection](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p031.jpg){.img-fluid fig-alt="Self-Respect Effectiveness Reflection"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p031.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p031.jpg)
-:::
+
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p032 data-source-id="interpersonal-effectiveness-p032"}
 **A Bill of Assertive Rights**
 
 [![A Bill of Assertive Rights](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p032.jpg){.img-fluid fig-alt="A Bill of Assertive Rights"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p032.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p032.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p034 data-source-id="interpersonal-effectiveness-p034"}
 **Apologizing Effectively**
 
 [![Apologizing Effectively](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p034.jpg){.img-fluid fig-alt="Apologizing Effectively"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p034.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p034.jpg)
+
+::: {.bs-resource-match data-match-id="php-high-res:interpersonal-effectiveness-p034:php-p0072" data-source-id="interpersonal-effectiveness-p034" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0072.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Apologizing Effectively](/resources/high-res/php/php-p0072.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Apologizing Effectively"}](/resources/high-res/php/php-p0072.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0072.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 <!-- section-scan-resources:end -->

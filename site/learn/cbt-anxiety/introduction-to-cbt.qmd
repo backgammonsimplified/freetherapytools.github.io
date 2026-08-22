@@ -24,72 +24,80 @@ CBT skills examine patterns and test more balanced, useful ways of understanding
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-cbt-skills-p009 data-source-id="cbt-skills-p009"}
 **Five Factor Model**
 
 [![Five Factor Model](/resources/cbt-skills/cbt-skills-p009.jpg){.img-fluid fig-alt="Five Factor Model"}](/resources/cbt-skills/cbt-skills-p009.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p009.jpg)
-:::
+
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-cbt-skills-p004 data-source-id="cbt-skills-p004"}
 **Understanding My Anxiety**
 
 [![Understanding My Anxiety](/resources/cbt-skills/cbt-skills-p004.jpg){.img-fluid fig-alt="Understanding My Anxiety"}](/resources/cbt-skills/cbt-skills-p004.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p004.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p005 data-source-id="cbt-skills-p005"}
 **The Cost of Anxiety**
 
 [![The Cost of Anxiety](/resources/cbt-skills/cbt-skills-p005.jpg){.img-fluid fig-alt="The Cost of Anxiety"}](/resources/cbt-skills/cbt-skills-p005.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p005.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p010 data-source-id="cbt-skills-p010"}
 **Five Factor Model Worksheet**
 
 [![Five Factor Model Worksheet](/resources/cbt-skills/cbt-skills-p010.jpg){.img-fluid fig-alt="Five Factor Model Worksheet"}](/resources/cbt-skills/cbt-skills-p010.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p010.jpg)
-:::
+
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-cbt-skills-p003 data-source-id="cbt-skills-p003"}
 **Fear, Anxiety, Stress, and Panic**
 
 [![Fear, Anxiety, Stress, and Panic](/resources/cbt-skills/cbt-skills-p003.jpg){.img-fluid fig-alt="Fear, Anxiety, Stress, and Panic"}](/resources/cbt-skills/cbt-skills-p003.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p003.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p006 data-source-id="cbt-skills-p006"}
 **Symptoms of Anxiety**
 
 [![Symptoms of Anxiety](/resources/cbt-skills/cbt-skills-p006.jpg){.img-fluid fig-alt="Symptoms of Anxiety"}](/resources/cbt-skills/cbt-skills-p006.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p006.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p007 data-source-id="cbt-skills-p007"}
 **Alarming Adrenaline**
 
 [![Alarming Adrenaline](/resources/cbt-skills/cbt-skills-p007.jpg){.img-fluid fig-alt="Alarming Adrenaline"}](/resources/cbt-skills/cbt-skills-p007.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p007.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p008 data-source-id="cbt-skills-p008"}
 **Fight or Flight**
 
 [![Fight or Flight](/resources/cbt-skills/cbt-skills-p008.jpg){.img-fluid fig-alt="Fight or Flight"}](/resources/cbt-skills/cbt-skills-p008.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p008.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

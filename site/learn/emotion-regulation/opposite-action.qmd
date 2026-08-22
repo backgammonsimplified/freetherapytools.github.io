@@ -30,278 +30,380 @@ Use problem solving when the facts support the emotion and a practical change is
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-emotion-regulation-p037 data-source-id="emotion-regulation-p037"}
 **Opposite Action and Problem Solving**
 
 [![Opposite Action and Problem Solving](/resources/emotion-regulation/emotion-regulation-p037.jpg){.img-fluid fig-alt="Opposite Action and Problem Solving"}](/resources/emotion-regulation/emotion-regulation-p037.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p037.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p037" data-source-id="emotion-regulation-p037" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-9-opposite-action-and-problem-solving-deciding-which-to-use-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Opposite Action and Problem Solving](/resources/clean/emotion-regulation/emotion-regulation-handout-9-opposite-action-and-problem-solving-deciding-which-to-use-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Opposite Action and Problem Solving"}](/resources/clean/emotion-regulation/emotion-regulation-handout-9-opposite-action-and-problem-solving-deciding-which-to-use-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-9-opposite-action-and-problem-solving-deciding-which-to-use-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p038 data-source-id="emotion-regulation-p038"}
 **Opposite Action**
 
 [![Opposite Action](/resources/emotion-regulation/emotion-regulation-p038.jpg){.img-fluid fig-alt="Opposite Action"}](/resources/emotion-regulation/emotion-regulation-p038.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p038.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p038" data-source-id="emotion-regulation-p038" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-10-opposite-action-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Opposite Action](/resources/clean/emotion-regulation/emotion-regulation-handout-10-opposite-action-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Opposite Action"}](/resources/clean/emotion-regulation/emotion-regulation-handout-10-opposite-action-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-10-opposite-action-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p039 data-source-id="emotion-regulation-p039"}
 **Problem Solving**
 
 [![Problem Solving](/resources/emotion-regulation/emotion-regulation-p039.jpg){.img-fluid fig-alt="Problem Solving"}](/resources/emotion-regulation/emotion-regulation-p039.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p039.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p039" data-source-id="emotion-regulation-p039" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-12-problem-solving-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Problem Solving](/resources/clean/emotion-regulation/emotion-regulation-handout-12-problem-solving-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Problem Solving"}](/resources/clean/emotion-regulation/emotion-regulation-handout-12-problem-solving-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-12-problem-solving-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p040 data-source-id="emotion-regulation-p040"}
 **Reviewing Opposite Action and Problem Solving, Part 1**
 
 [![Reviewing Opposite Action and Problem Solving, Part 1](/resources/emotion-regulation/emotion-regulation-p040.jpg){.img-fluid fig-alt="Reviewing Opposite Action and Problem Solving, Part 1"}](/resources/emotion-regulation/emotion-regulation-p040.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p040.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p040" data-source-id="emotion-regulation-p040" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-13-reviewing-opposite-action-and-problem-solving-1-of-3-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Reviewing Opposite Action and Problem Solving, Part 1](/resources/clean/emotion-regulation/emotion-regulation-handout-13-reviewing-opposite-action-and-problem-solving-1-of-3-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Reviewing Opposite Action and Problem Solving, Part 1"}](/resources/clean/emotion-regulation/emotion-regulation-handout-13-reviewing-opposite-action-and-problem-solving-1-of-3-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-13-reviewing-opposite-action-and-problem-solving-1-of-3-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p041 data-source-id="emotion-regulation-p041"}
 **Reviewing Opposite Action and Problem Solving, Part 2**
 
 [![Reviewing Opposite Action and Problem Solving, Part 2](/resources/emotion-regulation/emotion-regulation-p041.jpg){.img-fluid fig-alt="Reviewing Opposite Action and Problem Solving, Part 2"}](/resources/emotion-regulation/emotion-regulation-p041.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p041.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p041" data-source-id="emotion-regulation-p041" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-13-reviewing-opposite-action-and-problem-solving-2-of-3-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Reviewing Opposite Action and Problem Solving, Part 2](/resources/clean/emotion-regulation/emotion-regulation-handout-13-reviewing-opposite-action-and-problem-solving-2-of-3-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Reviewing Opposite Action and Problem Solving, Part 2"}](/resources/clean/emotion-regulation/emotion-regulation-handout-13-reviewing-opposite-action-and-problem-solving-2-of-3-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-13-reviewing-opposite-action-and-problem-solving-2-of-3-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p042 data-source-id="emotion-regulation-p042"}
 **Reviewing Opposite Action and Problem Solving, Part 3**
 
 [![Reviewing Opposite Action and Problem Solving, Part 3](/resources/emotion-regulation/emotion-regulation-p042.jpg){.img-fluid fig-alt="Reviewing Opposite Action and Problem Solving, Part 3"}](/resources/emotion-regulation/emotion-regulation-p042.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p042.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p042" data-source-id="emotion-regulation-p042" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-13-reviewing-opposite-action-and-problem-solving-3-of-3-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Reviewing Opposite Action and Problem Solving, Part 3](/resources/clean/emotion-regulation/emotion-regulation-handout-13-reviewing-opposite-action-and-problem-solving-3-of-3-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Reviewing Opposite Action and Problem Solving, Part 3"}](/resources/clean/emotion-regulation/emotion-regulation-handout-13-reviewing-opposite-action-and-problem-solving-3-of-3-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-13-reviewing-opposite-action-and-problem-solving-3-of-3-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p044 data-source-id="emotion-regulation-p044"}
 **Opposite Action for Fear**
 
 [![Opposite Action for Fear](/resources/emotion-regulation/emotion-regulation-p044.jpg){.img-fluid fig-alt="Opposite Action for Fear"}](/resources/emotion-regulation/emotion-regulation-p044.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p044.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p044" data-source-id="emotion-regulation-p044" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-fear-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Opposite Action for Fear](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-fear-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Opposite Action for Fear"}](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-fear-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-fear-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p045 data-source-id="emotion-regulation-p045"}
 **Opposite Action for Anger**
 
 [![Opposite Action for Anger](/resources/emotion-regulation/emotion-regulation-p045.jpg){.img-fluid fig-alt="Opposite Action for Anger"}](/resources/emotion-regulation/emotion-regulation-p045.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p045.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p045" data-source-id="emotion-regulation-p045" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-anger-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Opposite Action for Anger](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-anger-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Opposite Action for Anger"}](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-anger-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-anger-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p046 data-source-id="emotion-regulation-p046"}
 **Opposite Action for Disgust**
 
 [![Opposite Action for Disgust](/resources/emotion-regulation/emotion-regulation-p046.jpg){.img-fluid fig-alt="Opposite Action for Disgust"}](/resources/emotion-regulation/emotion-regulation-p046.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p046.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p046" data-source-id="emotion-regulation-p046" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-disgust-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Opposite Action for Disgust](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-disgust-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Opposite Action for Disgust"}](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-disgust-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-disgust-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p047 data-source-id="emotion-regulation-p047"}
 **Opposite Action for Envy**
 
 [![Opposite Action for Envy](/resources/emotion-regulation/emotion-regulation-p047.jpg){.img-fluid fig-alt="Opposite Action for Envy"}](/resources/emotion-regulation/emotion-regulation-p047.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p047.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p047" data-source-id="emotion-regulation-p047" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-envy-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Opposite Action for Envy](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-envy-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Opposite Action for Envy"}](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-envy-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-envy-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p048 data-source-id="emotion-regulation-p048"}
 **Opposite Action for Jealousy**
 
 [![Opposite Action for Jealousy](/resources/emotion-regulation/emotion-regulation-p048.jpg){.img-fluid fig-alt="Opposite Action for Jealousy"}](/resources/emotion-regulation/emotion-regulation-p048.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p048.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p048" data-source-id="emotion-regulation-p048" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-jealousy-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Opposite Action for Jealousy](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-jealousy-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Opposite Action for Jealousy"}](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-jealousy-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-jealousy-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p049 data-source-id="emotion-regulation-p049"}
 **Opposite Action for Love**
 
 [![Opposite Action for Love](/resources/emotion-regulation/emotion-regulation-p049.jpg){.img-fluid fig-alt="Opposite Action for Love"}](/resources/emotion-regulation/emotion-regulation-p049.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p049.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p049" data-source-id="emotion-regulation-p049" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-love-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Opposite Action for Love](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-love-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Opposite Action for Love"}](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-love-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-love-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p050 data-source-id="emotion-regulation-p050"}
 **Opposite Action for Sadness**
 
 [![Opposite Action for Sadness](/resources/emotion-regulation/emotion-regulation-p050.jpg){.img-fluid fig-alt="Opposite Action for Sadness"}](/resources/emotion-regulation/emotion-regulation-p050.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p050.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p050" data-source-id="emotion-regulation-p050" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-sadness-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Opposite Action for Sadness](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-sadness-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Opposite Action for Sadness"}](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-sadness-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-sadness-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p051 data-source-id="emotion-regulation-p051"}
 **Opposite Action for Shame**
 
 [![Opposite Action for Shame](/resources/emotion-regulation/emotion-regulation-p051.jpg){.img-fluid fig-alt="Opposite Action for Shame"}](/resources/emotion-regulation/emotion-regulation-p051.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p051.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p051" data-source-id="emotion-regulation-p051" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-shame-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Opposite Action for Shame](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-shame-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Opposite Action for Shame"}](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-shame-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-shame-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p052 data-source-id="emotion-regulation-p052"}
 **Opposite Action for Guilt**
 
 [![Opposite Action for Guilt](/resources/emotion-regulation/emotion-regulation-p052.jpg){.img-fluid fig-alt="Opposite Action for Guilt"}](/resources/emotion-regulation/emotion-regulation-p052.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p052.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p052" data-source-id="emotion-regulation-p052" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-guilt-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Opposite Action for Guilt](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-guilt-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Opposite Action for Guilt"}](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-guilt-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-guilt-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-emotion-regulation-p036 data-source-id="emotion-regulation-p036"}
 **Choosing Problem Solving or Opposite Action**
 
 [![Choosing Problem Solving or Opposite Action](/resources/emotion-regulation/emotion-regulation-p036.jpg){.img-fluid fig-alt="Choosing Problem Solving or Opposite Action"}](/resources/emotion-regulation/emotion-regulation-p036.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p036.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:emotion-regulation-p036:php-p0042" data-source-id="emotion-regulation-p036" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0042.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Choosing Problem Solving or Opposite Action](/resources/high-res/php/php-p0042.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Choosing Problem Solving or Opposite Action"}](/resources/high-res/php/php-p0042.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0042.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p054 data-source-id="emotion-regulation-p054"}
 **Problem Solving Worksheet, Part 1**
 
 [![Problem Solving Worksheet, Part 1](/resources/emotion-regulation/emotion-regulation-p054.jpg){.img-fluid fig-alt="Problem Solving Worksheet, Part 1"}](/resources/emotion-regulation/emotion-regulation-p054.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p054.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p054" data-source-id="emotion-regulation-p054" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-worksheet-8-problem-solving-to-change-emotions-1-of-2-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Problem Solving Worksheet, Part 1](/resources/clean/emotion-regulation/emotion-regulation-worksheet-8-problem-solving-to-change-emotions-1-of-2-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Problem Solving Worksheet, Part 1"}](/resources/clean/emotion-regulation/emotion-regulation-worksheet-8-problem-solving-to-change-emotions-1-of-2-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-worksheet-8-problem-solving-to-change-emotions-1-of-2-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p055 data-source-id="emotion-regulation-p055"}
 **Problem Solving Worksheet, Part 2**
 
 [![Problem Solving Worksheet, Part 2](/resources/emotion-regulation/emotion-regulation-p055.jpg){.img-fluid fig-alt="Problem Solving Worksheet, Part 2"}](/resources/emotion-regulation/emotion-regulation-p055.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p055.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p055" data-source-id="emotion-regulation-p055" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-worksheet-8-problem-solving-to-change-emotions-2-of-2-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Problem Solving Worksheet, Part 2](/resources/clean/emotion-regulation/emotion-regulation-worksheet-8-problem-solving-to-change-emotions-2-of-2-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Problem Solving Worksheet, Part 2"}](/resources/clean/emotion-regulation/emotion-regulation-worksheet-8-problem-solving-to-change-emotions-2-of-2-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-worksheet-8-problem-solving-to-change-emotions-2-of-2-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Exercises {#exercises}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-emotion-regulation-p053 data-source-id="emotion-regulation-p053"}
 **Opposite Action to Change Emotions**
 
 [![Opposite Action to Change Emotions](/resources/emotion-regulation/emotion-regulation-p053.jpg){.img-fluid fig-alt="Opposite Action to Change Emotions"}](/resources/emotion-regulation/emotion-regulation-p053.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p053.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p053" data-source-id="emotion-regulation-p053" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-worksheet-7-opposite-action-to-change-emotions-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Opposite Action to Change Emotions](/resources/clean/emotion-regulation/emotion-regulation-worksheet-7-opposite-action-to-change-emotions-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Opposite Action to Change Emotions"}](/resources/clean/emotion-regulation/emotion-regulation-worksheet-7-opposite-action-to-change-emotions-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-worksheet-7-opposite-action-to-change-emotions-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-emotion-regulation-p043 data-source-id="emotion-regulation-p043"}
 **Opposite Action Elevator Example**
 
 [![Opposite Action Elevator Example](/resources/emotion-regulation/emotion-regulation-p043.jpg){.img-fluid fig-alt="Opposite Action Elevator Example"}](/resources/emotion-regulation/emotion-regulation-p043.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p043.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

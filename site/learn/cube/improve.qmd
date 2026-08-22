@@ -39,46 +39,54 @@ IMPROVE collects ways to support yourself while moving through distress.
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-distress-tolerance-p025 data-source-id="distress-tolerance-p025"}
 **Improving the Moment**
 
 [![Improving the Moment](/resources/distress-tolerance/distress-tolerance-p025.jpg){.img-fluid fig-alt="Improving the Moment"}](/resources/distress-tolerance/distress-tolerance-p025.jpg)
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p025.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:distress-tolerance-p025" data-source-id="distress-tolerance-p025" data-match-source="linehan-book" data-candidate-asset="/resources/clean/distress-tolerance/distress-tolerance-handout-9-improving-the-moment-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Improving the Moment](/resources/clean/distress-tolerance/distress-tolerance-handout-9-improving-the-moment-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Improving the Moment"}](/resources/clean/distress-tolerance/distress-tolerance-handout-9-improving-the-moment-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/distress-tolerance/distress-tolerance-handout-9-improving-the-moment-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-distress-tolerance-p028 data-source-id="distress-tolerance-p028"}
 **IMPROVE Practice**
 
 [![IMPROVE Practice](/resources/distress-tolerance/distress-tolerance-p028.jpg){.img-fluid fig-alt="IMPROVE Practice"}](/resources/distress-tolerance/distress-tolerance-p028.jpg)
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p028.jpg)
-:::
+
+::::
 
 ## Exercises {#exercises}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-distress-tolerance-p026 data-source-id="distress-tolerance-p026"}
 **One Thing in the Moment**
 
 [![One Thing in the Moment](/resources/distress-tolerance/distress-tolerance-p026.jpg){.img-fluid fig-alt="One Thing in the Moment"}](/resources/distress-tolerance/distress-tolerance-p026.jpg)
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p026.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-distress-tolerance-p027 data-source-id="distress-tolerance-p027"}
 **Peaceful Place Meditation**
 
 [![Peaceful Place Meditation](/resources/distress-tolerance/distress-tolerance-p027.jpg){.img-fluid fig-alt="Peaceful Place Meditation"}](/resources/distress-tolerance/distress-tolerance-p027.jpg)
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p027.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

@@ -24,104 +24,146 @@ Behavioural activation uses planned action to interrupt avoidance and increase c
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p013 data-source-id="wellness-p013"}
 **The Upward Spiral of Behavioural Activation**
 
 [![The Upward Spiral of Behavioural Activation](/resources/wellness/wellness-p013.jpg){.img-fluid fig-alt="The Upward Spiral of Behavioural Activation"}](/resources/wellness/wellness-p013.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p013.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:wellness-p013:php-p0066" data-source-id="wellness-p013" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0066.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: The Upward Spiral of Behavioural Activation](/resources/high-res/php/php-p0066.jpg){.img-fluid fig-alt="Higher-Resolution Copy: The Upward Spiral of Behavioural Activation"}](/resources/high-res/php/php-p0066.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0066.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p014 data-source-id="wellness-p014"}
 **What Is Behaviour Activation?**
 
 [![What Is Behaviour Activation?](/resources/wellness/wellness-p014.jpg){.img-fluid fig-alt="What Is Behaviour Activation?"}](/resources/wellness/wellness-p014.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p014.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p015 data-source-id="wellness-p015"}
 **Behaviour Activation: Battery vs. Generator**
 
 [![Behaviour Activation: Battery vs. Generator](/resources/wellness/wellness-p015.jpg){.img-fluid fig-alt="Behaviour Activation: Battery vs. Generator"}](/resources/wellness/wellness-p015.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p015.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p016 data-source-id="wellness-p016"}
 **Behavioural Activation Tips, Part 1**
 
 [![Behavioural Activation Tips, Part 1](/resources/wellness/wellness-p016.jpg){.img-fluid fig-alt="Behavioural Activation Tips, Part 1"}](/resources/wellness/wellness-p016.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p016.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p017 data-source-id="wellness-p017"}
 **Behavioural Activation Tips, Part 2**
 
 [![Behavioural Activation Tips, Part 2](/resources/wellness/wellness-p017.jpg){.img-fluid fig-alt="Behavioural Activation Tips, Part 2"}](/resources/wellness/wellness-p017.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p017.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p018 data-source-id="wellness-p018"}
 **Behavioural Activation Tips, Part 3**
 
 [![Behavioural Activation Tips, Part 3](/resources/wellness/wellness-p018.jpg){.img-fluid fig-alt="Behavioural Activation Tips, Part 3"}](/resources/wellness/wellness-p018.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p018.jpg)
-:::
+
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p012 data-source-id="wellness-p012"}
 **Your Cycles**
 
 [![Your Cycles](/resources/wellness/wellness-p012.jpg){.img-fluid fig-alt="Your Cycles"}](/resources/wellness/wellness-p012.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p012.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:wellness-p012:php-p0065" data-source-id="wellness-p012" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0065.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Your Cycles](/resources/high-res/php/php-p0065.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Your Cycles"}](/resources/high-res/php/php-p0065.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0065.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p019 data-source-id="wellness-p019"}
 **Activity Monitoring Worksheet**
 
 [![Activity Monitoring Worksheet](/resources/wellness/wellness-p019.jpg){.img-fluid fig-alt="Activity Monitoring Worksheet"}](/resources/wellness/wellness-p019.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p019.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p020 data-source-id="wellness-p020"}
 **Activity Planning Worksheet**
 
 [![Activity Planning Worksheet](/resources/wellness/wellness-p020.jpg){.img-fluid fig-alt="Activity Planning Worksheet"}](/resources/wellness/wellness-p020.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p020.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p021 data-source-id="wellness-p021"}
 **Behavioural Activation Barriers and Resources**
 
 [![Behavioural Activation Barriers and Resources](/resources/wellness/wellness-p021.jpg){.img-fluid fig-alt="Behavioural Activation Barriers and Resources"}](/resources/wellness/wellness-p021.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p021.jpg)
+
+::: {.bs-resource-match data-match-id="php-high-res:wellness-p021:php-p0062" data-source-id="wellness-p021" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0062.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Behavioural Activation Barriers and Resources](/resources/high-res/php/php-p0062.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Behavioural Activation Barriers and Resources"}](/resources/high-res/php/php-p0062.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0062.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p010 data-source-id="wellness-p010"}
 **The First Vicious Cycle**
 
 [![The First Vicious Cycle](/resources/wellness/wellness-p010.jpg){.img-fluid fig-alt="The First Vicious Cycle"}](/resources/wellness/wellness-p010.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p010.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p011 data-source-id="wellness-p011"}
 **The Second Vicious Cycle**
 
 [![The Second Vicious Cycle](/resources/wellness/wellness-p011.jpg){.img-fluid fig-alt="The Second Vicious Cycle"}](/resources/wellness/wellness-p011.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p011.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

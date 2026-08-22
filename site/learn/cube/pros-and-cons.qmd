@@ -25,54 +25,76 @@ A pros-and-cons grid slows urgent decisions down and brings longer-term conseque
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-distress-tolerance-p030 data-source-id="distress-tolerance-p030"}
 **Pros and Cons**
 
 [![Pros and Cons](/resources/distress-tolerance/distress-tolerance-p030.jpg){.img-fluid fig-alt="Pros and Cons"}](/resources/distress-tolerance/distress-tolerance-p030.jpg)
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p030.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:distress-tolerance-p030" data-source-id="distress-tolerance-p030" data-match-source="linehan-book" data-candidate-asset="/resources/clean/distress-tolerance/distress-tolerance-handout-5-pros-and-cons-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Pros and Cons](/resources/clean/distress-tolerance/distress-tolerance-handout-5-pros-and-cons-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Pros and Cons"}](/resources/clean/distress-tolerance/distress-tolerance-handout-5-pros-and-cons-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/distress-tolerance/distress-tolerance-handout-5-pros-and-cons-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-distress-tolerance-p032 data-source-id="distress-tolerance-p032"}
 **Pros and Cons of Acting on Crisis Urges**
 
 [![Pros and Cons of Acting on Crisis Urges](/resources/distress-tolerance/distress-tolerance-p032.jpg){.img-fluid fig-alt="Pros and Cons of Acting on Crisis Urges"}](/resources/distress-tolerance/distress-tolerance-p032.jpg)
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p032.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:distress-tolerance-p032" data-source-id="distress-tolerance-p032" data-match-source="linehan-book" data-candidate-asset="/resources/clean/distress-tolerance/distress-tolerance-worksheet-3-pros-and-cons-of-acting-on-crisis-urges-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Pros and Cons of Acting on Crisis Urges](/resources/clean/distress-tolerance/distress-tolerance-worksheet-3-pros-and-cons-of-acting-on-crisis-urges-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Pros and Cons of Acting on Crisis Urges"}](/resources/clean/distress-tolerance/distress-tolerance-worksheet-3-pros-and-cons-of-acting-on-crisis-urges-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/distress-tolerance/distress-tolerance-worksheet-3-pros-and-cons-of-acting-on-crisis-urges-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Exercises {#exercises}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-distress-tolerance-p033 data-source-id="distress-tolerance-p033"}
 **Pros and Cons Practice**
 
 [![Pros and Cons Practice](/resources/distress-tolerance/distress-tolerance-p033.jpg){.img-fluid fig-alt="Pros and Cons Practice"}](/resources/distress-tolerance/distress-tolerance-p033.jpg)
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p033.jpg)
-:::
+
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-distress-tolerance-p031 data-source-id="distress-tolerance-p031"}
 **Pros and Cons: How To**
 
 [![Pros and Cons: How To](/resources/distress-tolerance/distress-tolerance-p031.jpg){.img-fluid fig-alt="Pros and Cons: How To"}](/resources/distress-tolerance/distress-tolerance-p031.jpg)
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p031.jpg)
+
+::: {.bs-resource-match data-match-id="php-high-res:distress-tolerance-p031:php-p0121" data-source-id="distress-tolerance-p031" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0121.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Pros and Cons: How To](/resources/high-res/php/php-p0121.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Pros and Cons: How To"}](/resources/high-res/php/php-p0121.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0121.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 <!-- section-scan-resources:end -->

@@ -61,6 +61,16 @@ class PhpMatchInventoryTests(unittest.TestCase):
                 self.assertEqual("", row["high_res_preview"])
                 self.assertEqual("false", row["publicly_displayed"])
 
+    def test_high_matches_are_on_lessons_and_candidates_are_not(self):
+        lesson_text = "\n".join(path.read_text(encoding="utf-8") for path in (SITE / "learn").rglob("*.qmd"))
+        lesson_text += (SITE / "skill-finder/index.qmd").read_text(encoding="utf-8")
+        for row in self.rows:
+            if row["php_match_status"] == "high":
+                self.assertIn(f'data-match-id="{row["match_id"]}"', lesson_text)
+                self.assertIn(row["high_res_asset"], lesson_text)
+            elif row["php_match_status"] == "candidate":
+                self.assertNotIn(row["high_res_asset"], lesson_text)
+
     def test_duplicate_curriculum_copies_reuse_one_physical_asset(self):
         rows = {row["source_id"]: row for row in self.rows}
         first = rows["wellness-p060"]

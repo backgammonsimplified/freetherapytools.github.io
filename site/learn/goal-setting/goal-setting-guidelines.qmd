@@ -32,30 +32,43 @@ A SMART goal is specific, measurable, achievable, relevant, and time-bound.
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-goal-setting-p003 data-source-id="goal-setting-p003"}
 **Goal Setting Guidelines**
 
 [![Goal Setting Guidelines](/resources/goal-setting/goal-setting-p003.jpg){.img-fluid fig-alt="Goal Setting Guidelines"}](/resources/goal-setting/goal-setting-p003.jpg)
 
 [Download / View Handout](/resources/goal-setting/goal-setting-p003.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:goal-setting-p003:php-p0145" data-source-id="goal-setting-p003" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0145.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Goal Setting Guidelines](/resources/high-res/php/php-p0145.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Goal Setting Guidelines"}](/resources/high-res/php/php-p0145.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0145.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-goal-setting-p004 data-source-id="goal-setting-p004"}
 **SMART Goal Setting**
 
 [![SMART Goal Setting](/resources/goal-setting/goal-setting-p004.jpg){.img-fluid fig-alt="SMART Goal Setting"}](/resources/goal-setting/goal-setting-p004.jpg)
 
 [Download / View Handout](/resources/goal-setting/goal-setting-p004.jpg)
-:::
+
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-goal-setting-p002 data-source-id="goal-setting-p002"}
 **Case Map**
 
 [![Case Map](/resources/goal-setting/goal-setting-p002.jpg){.img-fluid fig-alt="Case Map"}](/resources/goal-setting/goal-setting-p002.jpg)
 
 [Download / View Handout](/resources/goal-setting/goal-setting-p002.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

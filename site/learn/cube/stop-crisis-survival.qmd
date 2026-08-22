@@ -31,52 +31,64 @@ Stop. Take a step back. Observe what is happening inside and around you. Proceed
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-distress-tolerance-p004 data-source-id="distress-tolerance-p004"}
 **When to Use Crisis Survival Skills**
 
 [![When to Use Crisis Survival Skills](/resources/distress-tolerance/distress-tolerance-p004.jpg){.img-fluid fig-alt="When to Use Crisis Survival Skills"}](/resources/distress-tolerance/distress-tolerance-p004.jpg)
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p004.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:distress-tolerance-p004" data-source-id="distress-tolerance-p004" data-match-source="linehan-book" data-candidate-asset="/resources/clean/distress-tolerance/distress-tolerance-handout-3-when-to-use-crisis-survival-skills-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: When to Use Crisis Survival Skills](/resources/clean/distress-tolerance/distress-tolerance-handout-3-when-to-use-crisis-survival-skills-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: When to Use Crisis Survival Skills"}](/resources/clean/distress-tolerance/distress-tolerance-handout-3-when-to-use-crisis-survival-skills-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/distress-tolerance/distress-tolerance-handout-3-when-to-use-crisis-survival-skills-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-distress-tolerance-p007 data-source-id="distress-tolerance-p007"}
 **STOP Skill**
 
 [![STOP Skill](/resources/distress-tolerance/distress-tolerance-p007.jpg){.img-fluid fig-alt="STOP Skill"}](/resources/distress-tolerance/distress-tolerance-p007.jpg)
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p007.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:distress-tolerance-p007" data-source-id="distress-tolerance-p007" data-match-source="linehan-book" data-candidate-asset="/resources/clean/distress-tolerance/distress-tolerance-handout-4-stop-skill-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: STOP Skill](/resources/clean/distress-tolerance/distress-tolerance-handout-4-stop-skill-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: STOP Skill"}](/resources/clean/distress-tolerance/distress-tolerance-handout-4-stop-skill-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/distress-tolerance/distress-tolerance-handout-4-stop-skill-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-distress-tolerance-p009 data-source-id="distress-tolerance-p009"}
 **Using the STOP Skill**
 
 [![Using the STOP Skill](/resources/distress-tolerance/distress-tolerance-p009.jpg){.img-fluid fig-alt="Using the STOP Skill"}](/resources/distress-tolerance/distress-tolerance-p009.jpg)
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p009.jpg)
-:::
+
+::::
 
 ## Exercises {#exercises}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-distress-tolerance-p003 data-source-id="distress-tolerance-p003"}
 **How Can I Make a Distress Crisis Worse?**
 
 [![How Can I Make a Distress Crisis Worse?](/resources/distress-tolerance/distress-tolerance-p003.jpg){.img-fluid fig-alt="How Can I Make a Distress Crisis Worse?"}](/resources/distress-tolerance/distress-tolerance-p003.jpg)
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p003.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

@@ -24,72 +24,80 @@ The aim is to understand the function of a coping behaviour and build safer alte
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p036 data-source-id="wellness-p036"}
 **Stages of Change**
 
 [![Stages of Change](/resources/wellness/wellness-p036.jpg){.img-fluid fig-alt="Stages of Change"}](/resources/wellness/wellness-p036.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p036.jpg)
-:::
+
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p037 data-source-id="wellness-p037"}
 **Stages of Change Worksheet, Part 1**
 
 [![Stages of Change Worksheet, Part 1](/resources/wellness/wellness-p037.jpg){.img-fluid fig-alt="Stages of Change Worksheet, Part 1"}](/resources/wellness/wellness-p037.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p037.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p038 data-source-id="wellness-p038"}
 **Stages of Change Worksheet, Part 2**
 
 [![Stages of Change Worksheet, Part 2](/resources/wellness/wellness-p038.jpg){.img-fluid fig-alt="Stages of Change Worksheet, Part 2"}](/resources/wellness/wellness-p038.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p038.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p039 data-source-id="wellness-p039"}
 **Stages of Change Worksheet, Part 3**
 
 [![Stages of Change Worksheet, Part 3](/resources/wellness/wellness-p039.jpg){.img-fluid fig-alt="Stages of Change Worksheet, Part 3"}](/resources/wellness/wellness-p039.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p039.jpg)
-:::
+
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p034 data-source-id="wellness-p034"}
 **Effects of Substance Use**
 
 [![Effects of Substance Use](/resources/wellness/wellness-p034.jpg){.img-fluid fig-alt="Effects of Substance Use"}](/resources/wellness/wellness-p034.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p034.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p035 data-source-id="wellness-p035"}
 **Signs of Maladaptive Coping**
 
 [![Signs of Maladaptive Coping](/resources/wellness/wellness-p035.jpg){.img-fluid fig-alt="Signs of Maladaptive Coping"}](/resources/wellness/wellness-p035.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p035.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p040 data-source-id="wellness-p040"}
 **Naloxone: Save a Life**
 
 [![Naloxone: Save a Life](/resources/wellness/wellness-p040.jpg){.img-fluid fig-alt="Naloxone: Save a Life"}](/resources/wellness/wellness-p040.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p040.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p041 data-source-id="wellness-p041"}
 **Opioid Overdoses: What to Do**
 
 [![Opioid Overdoses: What to Do](/resources/wellness/wellness-p041.jpg){.img-fluid fig-alt="Opioid Overdoses: What to Do"}](/resources/wellness/wellness-p041.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p041.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

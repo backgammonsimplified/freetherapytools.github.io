@@ -24,100 +24,141 @@ Emotions have functions. Understanding them can reduce confusion and support mor
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-emotion-regulation-p004 data-source-id="emotion-regulation-p004"}
 **Goals of Emotion Regulation**
 
 [![Goals of Emotion Regulation](/resources/emotion-regulation/emotion-regulation-p004.jpg){.img-fluid fig-alt="Goals of Emotion Regulation"}](/resources/emotion-regulation/emotion-regulation-p004.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p004.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p004" data-source-id="emotion-regulation-p004" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-1-goals-of-emotion-regulation-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Goals of Emotion Regulation](/resources/clean/emotion-regulation/emotion-regulation-handout-1-goals-of-emotion-regulation-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Goals of Emotion Regulation"}](/resources/clean/emotion-regulation/emotion-regulation-handout-1-goals-of-emotion-regulation-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-1-goals-of-emotion-regulation-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p005 data-source-id="emotion-regulation-p005"}
 **What Emotions Do for You**
 
 [![What Emotions Do for You](/resources/emotion-regulation/emotion-regulation-p005.jpg){.img-fluid fig-alt="What Emotions Do for You"}](/resources/emotion-regulation/emotion-regulation-p005.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p005.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p005" data-source-id="emotion-regulation-p005" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-3-what-emotions-do-for-you-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: What Emotions Do for You](/resources/clean/emotion-regulation/emotion-regulation-handout-3-what-emotions-do-for-you-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: What Emotions Do for You"}](/resources/clean/emotion-regulation/emotion-regulation-handout-3-what-emotions-do-for-you-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-3-what-emotions-do-for-you-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p006 data-source-id="emotion-regulation-p006"}
 **What Makes It Hard to Regulate Your Emotions**
 
 [![What Makes It Hard to Regulate Your Emotions](/resources/emotion-regulation/emotion-regulation-p006.jpg){.img-fluid fig-alt="What Makes It Hard to Regulate Your Emotions"}](/resources/emotion-regulation/emotion-regulation-p006.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p006.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p006" data-source-id="emotion-regulation-p006" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-4-what-makes-it-hard-to-regulate-your-emotions-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: What Makes It Hard to Regulate Your Emotions](/resources/clean/emotion-regulation/emotion-regulation-handout-4-what-makes-it-hard-to-regulate-your-emotions-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: What Makes It Hard to Regulate Your Emotions"}](/resources/clean/emotion-regulation/emotion-regulation-handout-4-what-makes-it-hard-to-regulate-your-emotions-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-4-what-makes-it-hard-to-regulate-your-emotions-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-emotion-regulation-p007 data-source-id="emotion-regulation-p007"}
 **Myths About Emotions**
 
 [![Myths About Emotions](/resources/emotion-regulation/emotion-regulation-p007.jpg){.img-fluid fig-alt="Myths About Emotions"}](/resources/emotion-regulation/emotion-regulation-p007.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p007.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p007" data-source-id="emotion-regulation-p007" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-4a-myths-about-emotions-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Myths About Emotions](/resources/clean/emotion-regulation/emotion-regulation-handout-4a-myths-about-emotions-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Myths About Emotions"}](/resources/clean/emotion-regulation/emotion-regulation-handout-4a-myths-about-emotions-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-4a-myths-about-emotions-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p009 data-source-id="emotion-regulation-p009"}
 **Emotion Diary**
 
 [![Emotion Diary](/resources/emotion-regulation/emotion-regulation-p009.jpg){.img-fluid fig-alt="Emotion Diary"}](/resources/emotion-regulation/emotion-regulation-p009.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p009.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p009" data-source-id="emotion-regulation-p009" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-worksheet-2b-emotion-diary-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Emotion Diary](/resources/clean/emotion-regulation/emotion-regulation-worksheet-2b-emotion-diary-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Emotion Diary"}](/resources/clean/emotion-regulation/emotion-regulation-worksheet-2b-emotion-diary-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-worksheet-2b-emotion-diary-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-emotion-regulation-p003 data-source-id="emotion-regulation-p003"}
 **Basic Functions of Emotions**
 
 [![Basic Functions of Emotions](/resources/emotion-regulation/emotion-regulation-p003.jpg){.img-fluid fig-alt="Basic Functions of Emotions"}](/resources/emotion-regulation/emotion-regulation-p003.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p003.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:emotion-regulation-p003:php-p0052" data-source-id="emotion-regulation-p003" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0052.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Basic Functions of Emotions](/resources/high-res/php/php-p0052.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Basic Functions of Emotions"}](/resources/high-res/php/php-p0052.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0052.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p008 data-source-id="emotion-regulation-p008"}
 **Emotion Diary Example**
 
 [![Emotion Diary Example](/resources/emotion-regulation/emotion-regulation-p008.jpg){.img-fluid fig-alt="Emotion Diary Example"}](/resources/emotion-regulation/emotion-regulation-p008.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p008.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p008" data-source-id="emotion-regulation-p008" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-worksheet-2c-example-emotion-diary-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Emotion Diary Example](/resources/clean/emotion-regulation/emotion-regulation-worksheet-2c-example-emotion-diary-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Emotion Diary Example"}](/resources/clean/emotion-regulation/emotion-regulation-worksheet-2c-example-emotion-diary-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-worksheet-2c-example-emotion-diary-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 <!-- section-scan-resources:end -->

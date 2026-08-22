@@ -28,184 +28,245 @@ Walking the middle path combines validation, flexibility, and a both-and perspec
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p037 data-source-id="interpersonal-effectiveness-p037"}
 **How Intensely to Ask or Say No, Part 1**
 
 [![How Intensely to Ask or Say No, Part 1](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p037.jpg){.img-fluid fig-alt="How Intensely to Ask or Say No, Part 1"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p037.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p037.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p037" data-source-id="interpersonal-effectiveness-p037" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-8-evaluating-options-for-whether-or-how-intensely-to-ask-or-say-no-1-of-3-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: How Intensely to Ask or Say No, Part 1](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-8-evaluating-options-for-whether-or-how-intensely-to-ask-or-say-no-1-of-3-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: How Intensely to Ask or Say No, Part 1"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-8-evaluating-options-for-whether-or-how-intensely-to-ask-or-say-no-1-of-3-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-8-evaluating-options-for-whether-or-how-intensely-to-ask-or-say-no-1-of-3-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p038 data-source-id="interpersonal-effectiveness-p038"}
 **How Intensely to Ask or Say No, Part 2**
 
 [![How Intensely to Ask or Say No, Part 2](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p038.jpg){.img-fluid fig-alt="How Intensely to Ask or Say No, Part 2"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p038.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p038.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p038" data-source-id="interpersonal-effectiveness-p038" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-8-factors-to-consider-2-of-3-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: How Intensely to Ask or Say No, Part 2](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-8-factors-to-consider-2-of-3-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: How Intensely to Ask or Say No, Part 2"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-8-factors-to-consider-2-of-3-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-8-factors-to-consider-2-of-3-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p039 data-source-id="interpersonal-effectiveness-p039"}
 **How Intensely to Ask or Say No, Part 3**
 
 [![How Intensely to Ask or Say No, Part 3](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p039.jpg){.img-fluid fig-alt="How Intensely to Ask or Say No, Part 3"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p039.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p039.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p039" data-source-id="interpersonal-effectiveness-p039" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-8-factors-to-consider-3-of-3-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: How Intensely to Ask or Say No, Part 3](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-8-factors-to-consider-3-of-3-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: How Intensely to Ask or Say No, Part 3"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-8-factors-to-consider-3-of-3-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-8-factors-to-consider-3-of-3-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p040 data-source-id="interpersonal-effectiveness-p040"}
 **Troubleshooting Interpersonal Effectiveness, Part 1**
 
 [![Troubleshooting Interpersonal Effectiveness, Part 1](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p040.jpg){.img-fluid fig-alt="Troubleshooting Interpersonal Effectiveness, Part 1"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p040.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p040.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p040" data-source-id="interpersonal-effectiveness-p040" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-1-of-2-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Troubleshooting Interpersonal Effectiveness, Part 1](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-1-of-2-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Troubleshooting Interpersonal Effectiveness, Part 1"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-1-of-2-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-1-of-2-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p041 data-source-id="interpersonal-effectiveness-p041"}
 **Troubleshooting Interpersonal Effectiveness, Part 2**
 
 [![Troubleshooting Interpersonal Effectiveness, Part 2](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p041.jpg){.img-fluid fig-alt="Troubleshooting Interpersonal Effectiveness, Part 2"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p041.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p041.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p041" data-source-id="interpersonal-effectiveness-p041" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-2-of-2-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Troubleshooting Interpersonal Effectiveness, Part 2](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-2-of-2-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Troubleshooting Interpersonal Effectiveness, Part 2"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-2-of-2-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-2-of-2-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p045 data-source-id="interpersonal-effectiveness-p045"}
 **Walking the Middle Path**
 
 [![Walking the Middle Path](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p045.jpg){.img-fluid fig-alt="Walking the Middle Path"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p045.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p045.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p045" data-source-id="interpersonal-effectiveness-p045" data-match-source="linehan-book" data-candidate-asset="/resources/clean/mindfulness/mindfulness-handout-10-walking-the-middle-path-finding-the-synthesis-between-opposites-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Walking the Middle Path](/resources/clean/mindfulness/mindfulness-handout-10-walking-the-middle-path-finding-the-synthesis-between-opposites-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Walking the Middle Path"}](/resources/clean/mindfulness/mindfulness-handout-10-walking-the-middle-path-finding-the-synthesis-between-opposites-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/mindfulness/mindfulness-handout-10-walking-the-middle-path-finding-the-synthesis-between-opposites-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p042 data-source-id="interpersonal-effectiveness-p042"}
 **Troubleshooting Interpersonal Effectiveness Skills, Part 1**
 
 [![Troubleshooting Interpersonal Effectiveness Skills, Part 1](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p042.jpg){.img-fluid fig-alt="Troubleshooting Interpersonal Effectiveness Skills, Part 1"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p042.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p042.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p042" data-source-id="interpersonal-effectiveness-p042" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-7-troubleshooting-interpersonal-effectiveness-skills-1-of-2-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Troubleshooting Interpersonal Effectiveness Skills, Part 1](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-7-troubleshooting-interpersonal-effectiveness-skills-1-of-2-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Troubleshooting Interpersonal Effectiveness Skills, Part 1"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-7-troubleshooting-interpersonal-effectiveness-skills-1-of-2-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-7-troubleshooting-interpersonal-effectiveness-skills-1-of-2-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p043 data-source-id="interpersonal-effectiveness-p043"}
 **Troubleshooting Interpersonal Effectiveness Skills, Part 2**
 
 [![Troubleshooting Interpersonal Effectiveness Skills, Part 2](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p043.jpg){.img-fluid fig-alt="Troubleshooting Interpersonal Effectiveness Skills, Part 2"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p043.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p043.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p043" data-source-id="interpersonal-effectiveness-p043" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-7-troubleshooting-interpersonal-effectiveness-skills-2-of-2-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Troubleshooting Interpersonal Effectiveness Skills, Part 2](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-7-troubleshooting-interpersonal-effectiveness-skills-2-of-2-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Troubleshooting Interpersonal Effectiveness Skills, Part 2"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-7-troubleshooting-interpersonal-effectiveness-skills-2-of-2-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-worksheet-7-troubleshooting-interpersonal-effectiveness-skills-2-of-2-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p046 data-source-id="interpersonal-effectiveness-p046"}
 **Identifying Mindfulness of Others**
 
 [![Identifying Mindfulness of Others](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p046.jpg){.img-fluid fig-alt="Identifying Mindfulness of Others"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p046.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p046.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p046" data-source-id="interpersonal-effectiveness-p046" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-12a-identifying-mindfulness-of-others-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Identifying Mindfulness of Others](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-12a-identifying-mindfulness-of-others-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Identifying Mindfulness of Others"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-12a-identifying-mindfulness-of-others-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-12a-identifying-mindfulness-of-others-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p047 data-source-id="interpersonal-effectiveness-p047"}
 **Opposite Sides That Can Both Be True**
 
 [![Opposite Sides That Can Both Be True](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p047.jpg){.img-fluid fig-alt="Opposite Sides That Can Both Be True"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p047.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p047.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p047" data-source-id="interpersonal-effectiveness-p047" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-16a-examples-of-opposite-sides-that-can-both-be-true-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Opposite Sides That Can Both Be True](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-16a-examples-of-opposite-sides-that-can-both-be-true-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Opposite Sides That Can Both Be True"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-16a-examples-of-opposite-sides-that-can-both-be-true-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-16a-examples-of-opposite-sides-that-can-both-be-true-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p048 data-source-id="interpersonal-effectiveness-p048"}
 **Important Opposites to Balance**
 
 [![Important Opposites to Balance](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p048.jpg){.img-fluid fig-alt="Important Opposites to Balance"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p048.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p048.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p048" data-source-id="interpersonal-effectiveness-p048" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-16b-important-opposites-to-balance-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Important Opposites to Balance](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-16b-important-opposites-to-balance-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Important Opposites to Balance"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-16b-important-opposites-to-balance-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-16b-important-opposites-to-balance-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p049 data-source-id="interpersonal-effectiveness-p049"}
 **Identifying Dialectics**
 
 [![Identifying Dialectics](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p049.jpg){.img-fluid fig-alt="Identifying Dialectics"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p049.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p049.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p049" data-source-id="interpersonal-effectiveness-p049" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-16c-identifying-dialectics-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Identifying Dialectics](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-16c-identifying-dialectics-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Identifying Dialectics"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-16c-identifying-dialectics-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-16c-identifying-dialectics-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p044 data-source-id="interpersonal-effectiveness-p044"}
 **Dialectics: Acceptance and Change**
 
 [![Dialectics: Acceptance and Change](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p044.jpg){.img-fluid fig-alt="Dialectics: Acceptance and Change"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p044.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p044.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

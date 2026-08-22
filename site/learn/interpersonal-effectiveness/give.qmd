@@ -32,78 +32,103 @@ GIVE focuses on how you relate to the other person during an interaction.
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p023 data-source-id="interpersonal-effectiveness-p023"}
 **Guidelines for Relationship Effectiveness: GIVE**
 
 [![Guidelines for Relationship Effectiveness: GIVE](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p023.jpg){.img-fluid fig-alt="Guidelines for Relationship Effectiveness: GIVE"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p023.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p023.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p023" data-source-id="interpersonal-effectiveness-p023" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-6-guidelines-for-relationship-effectiveness-give-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Guidelines for Relationship Effectiveness: GIVE](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-6-guidelines-for-relationship-effectiveness-give-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Guidelines for Relationship Effectiveness: GIVE"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-6-guidelines-for-relationship-effectiveness-give-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-6-guidelines-for-relationship-effectiveness-give-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p024 data-source-id="interpersonal-effectiveness-p024"}
 **Levels of Validation**
 
 [![Levels of Validation](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p024.jpg){.img-fluid fig-alt="Levels of Validation"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p024.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p024.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p024" data-source-id="interpersonal-effectiveness-p024" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-6a-expanding-the-v-in-give-levels-of-validation-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Levels of Validation](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-6a-expanding-the-v-in-give-levels-of-validation-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Levels of Validation"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-6a-expanding-the-v-in-give-levels-of-validation-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-6a-expanding-the-v-in-give-levels-of-validation-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p028 data-source-id="interpersonal-effectiveness-p028"}
 **DEAR + GIVE Script**
 
 [![DEAR + GIVE Script](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p028.jpg){.img-fluid fig-alt="DEAR + GIVE Script"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p028.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p028.jpg)
-:::
+
+::::
 
 ## Exercises {#exercises}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p022 data-source-id="interpersonal-effectiveness-p022"}
 **Finding and Maintaining Relationships**
 
 [![Finding and Maintaining Relationships](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p022.jpg){.img-fluid fig-alt="Finding and Maintaining Relationships"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p022.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p022.jpg)
-:::
+
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p025 data-source-id="interpersonal-effectiveness-p025"}
 **A Few Words About Validation**
 
 [![A Few Words About Validation](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p025.jpg){.img-fluid fig-alt="A Few Words About Validation"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p025.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p025.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:interpersonal-effectiveness-p025:php-p0077" data-source-id="interpersonal-effectiveness-p025" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0077.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: A Few Words About Validation](/resources/high-res/php/php-p0077.jpg){.img-fluid fig-alt="Higher-Resolution Copy: A Few Words About Validation"}](/resources/high-res/php/php-p0077.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0077.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p026 data-source-id="interpersonal-effectiveness-p026"}
 **Validation Expressions**
 
 [![Validation Expressions](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p026.jpg){.img-fluid fig-alt="Validation Expressions"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p026.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p026.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p027 data-source-id="interpersonal-effectiveness-p027"}
 **The Four Horsemen and Their Antidotes**
 
 [![The Four Horsemen and Their Antidotes](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p027.jpg){.img-fluid fig-alt="The Four Horsemen and Their Antidotes"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p027.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p027.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

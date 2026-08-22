@@ -32,72 +32,120 @@ Develop an alternative that acknowledges the difficulty without treating the ori
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-cbt-skills-p027 data-source-id="cbt-skills-p027"}
 **Thought Record Part 2: Challenging the Hot Thought**
 
 [![Thought Record Part 2: Challenging the Hot Thought](/resources/cbt-skills/cbt-skills-p027.jpg){.img-fluid fig-alt="Thought Record Part 2: Challenging the Hot Thought"}](/resources/cbt-skills/cbt-skills-p027.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p027.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:cbt-skills-p027:php-p0012" data-source-id="cbt-skills-p027" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0012.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Thought Record Part 2: Challenging the Hot Thought](/resources/high-res/php/php-p0012.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Thought Record Part 2: Challenging the Hot Thought"}](/resources/high-res/php/php-p0012.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0012.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p028 data-source-id="cbt-skills-p028"}
 **Looking for Evidence**
 
 [![Looking for Evidence](/resources/cbt-skills/cbt-skills-p028.jpg){.img-fluid fig-alt="Looking for Evidence"}](/resources/cbt-skills/cbt-skills-p028.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p028.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:cbt-skills-p028:php-p0013" data-source-id="cbt-skills-p028" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0013.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Looking for Evidence](/resources/high-res/php/php-p0013.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Looking for Evidence"}](/resources/high-res/php/php-p0013.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0013.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p029 data-source-id="cbt-skills-p029"}
 **Creating Balanced Alternatives**
 
 [![Creating Balanced Alternatives](/resources/cbt-skills/cbt-skills-p029.jpg){.img-fluid fig-alt="Creating Balanced Alternatives"}](/resources/cbt-skills/cbt-skills-p029.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p029.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:cbt-skills-p029:php-p0014" data-source-id="cbt-skills-p029" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0014.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Creating Balanced Alternatives](/resources/high-res/php/php-p0014.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Creating Balanced Alternatives"}](/resources/high-res/php/php-p0014.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0014.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p030 data-source-id="cbt-skills-p030"}
 **Best Friend Technique and Re-Rating**
 
 [![Best Friend Technique and Re-Rating](/resources/cbt-skills/cbt-skills-p030.jpg){.img-fluid fig-alt="Best Friend Technique and Re-Rating"}](/resources/cbt-skills/cbt-skills-p030.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p030.jpg)
+
+::: {.bs-resource-match data-match-id="php-high-res:cbt-skills-p030:php-p0015" data-source-id="cbt-skills-p030" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0015.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Best Friend Technique and Re-Rating](/resources/high-res/php/php-p0015.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Best Friend Technique and Re-Rating"}](/resources/high-res/php/php-p0015.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0015.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-cbt-skills-p034 data-source-id="cbt-skills-p034"}
 **Blank Thought Record**
 
 [![Blank Thought Record](/resources/cbt-skills/cbt-skills-p034.jpg){.img-fluid fig-alt="Blank Thought Record"}](/resources/cbt-skills/cbt-skills-p034.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p034.jpg)
-:::
+
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-cbt-skills-p031 data-source-id="cbt-skills-p031"}
 **Thoughts About Thought Records**
 
 [![Thoughts About Thought Records](/resources/cbt-skills/cbt-skills-p031.jpg){.img-fluid fig-alt="Thoughts About Thought Records"}](/resources/cbt-skills/cbt-skills-p031.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p031.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p032 data-source-id="cbt-skills-p032"}
 **Completed Thought Record Example 1**
 
 [![Completed Thought Record Example 1](/resources/cbt-skills/cbt-skills-p032.jpg){.img-fluid fig-alt="Completed Thought Record Example 1"}](/resources/cbt-skills/cbt-skills-p032.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p032.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p033 data-source-id="cbt-skills-p033"}
 **Completed Thought Record Example 2**
 
 [![Completed Thought Record Example 2](/resources/cbt-skills/cbt-skills-p033.jpg){.img-fluid fig-alt="Completed Thought Record Example 2"}](/resources/cbt-skills/cbt-skills-p033.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p033.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

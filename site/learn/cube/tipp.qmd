@@ -37,82 +37,114 @@ The window of tolerance is a practical map for noticing nervous-system states an
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-distress-tolerance-p012 data-source-id="distress-tolerance-p012"}
 **Changing Your Body Chemistry with TIPP**
 
 [![Changing Your Body Chemistry with TIPP](/resources/distress-tolerance/distress-tolerance-p012.jpg){.img-fluid fig-alt="Changing Your Body Chemistry with TIPP"}](/resources/distress-tolerance/distress-tolerance-p012.jpg)
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p012.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:distress-tolerance-p012" data-source-id="distress-tolerance-p012" data-match-source="linehan-book" data-candidate-asset="/resources/clean/distress-tolerance/distress-tolerance-handout-6-tip-skills-changing-your-body-chemistry-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Changing Your Body Chemistry with TIPP](/resources/clean/distress-tolerance/distress-tolerance-handout-6-tip-skills-changing-your-body-chemistry-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Changing Your Body Chemistry with TIPP"}](/resources/clean/distress-tolerance/distress-tolerance-handout-6-tip-skills-changing-your-body-chemistry-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/distress-tolerance/distress-tolerance-handout-6-tip-skills-changing-your-body-chemistry-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-distress-tolerance-p013 data-source-id="distress-tolerance-p013"}
 **Using Cold Water, Step by Step**
 
 [![Using Cold Water, Step by Step](/resources/distress-tolerance/distress-tolerance-p013.jpg){.img-fluid fig-alt="Using Cold Water, Step by Step"}](/resources/distress-tolerance/distress-tolerance-p013.jpg)
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p013.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:distress-tolerance-p013" data-source-id="distress-tolerance-p013" data-match-source="linehan-book" data-candidate-asset="/resources/clean/distress-tolerance/distress-tolerance-handout-6a-using-cold-water-step-by-step-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Using Cold Water, Step by Step](/resources/clean/distress-tolerance/distress-tolerance-handout-6a-using-cold-water-step-by-step-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Using Cold Water, Step by Step"}](/resources/clean/distress-tolerance/distress-tolerance-handout-6a-using-cold-water-step-by-step-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/distress-tolerance/distress-tolerance-handout-6a-using-cold-water-step-by-step-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-distress-tolerance-p014 data-source-id="distress-tolerance-p014"}
 **Paired Muscle Relaxation, Step by Step**
 
 [![Paired Muscle Relaxation, Step by Step](/resources/distress-tolerance/distress-tolerance-p014.jpg){.img-fluid fig-alt="Paired Muscle Relaxation, Step by Step"}](/resources/distress-tolerance/distress-tolerance-p014.jpg)
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p014.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:distress-tolerance-p014" data-source-id="distress-tolerance-p014" data-match-source="linehan-book" data-candidate-asset="/resources/clean/distress-tolerance/distress-tolerance-handout-6b-paired-muscle-relaxation-step-by-step-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Paired Muscle Relaxation, Step by Step](/resources/clean/distress-tolerance/distress-tolerance-handout-6b-paired-muscle-relaxation-step-by-step-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Paired Muscle Relaxation, Step by Step"}](/resources/clean/distress-tolerance/distress-tolerance-handout-6b-paired-muscle-relaxation-step-by-step-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/distress-tolerance/distress-tolerance-handout-6b-paired-muscle-relaxation-step-by-step-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-distress-tolerance-p016 data-source-id="distress-tolerance-p016"}
 **Changing Body Chemistry with TIPP Skills**
 
 [![Changing Body Chemistry with TIPP Skills](/resources/distress-tolerance/distress-tolerance-p016.jpg){.img-fluid fig-alt="Changing Body Chemistry with TIPP Skills"}](/resources/distress-tolerance/distress-tolerance-p016.jpg)
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p016.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:distress-tolerance-p016" data-source-id="distress-tolerance-p016" data-match-source="linehan-book" data-candidate-asset="/resources/clean/distress-tolerance/distress-tolerance-worksheet-4-changing-body-chemistry-with-tip-skills-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Changing Body Chemistry with TIPP Skills](/resources/clean/distress-tolerance/distress-tolerance-worksheet-4-changing-body-chemistry-with-tip-skills-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Changing Body Chemistry with TIPP Skills"}](/resources/clean/distress-tolerance/distress-tolerance-worksheet-4-changing-body-chemistry-with-tip-skills-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/distress-tolerance/distress-tolerance-worksheet-4-changing-body-chemistry-with-tip-skills-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Exercises {#exercises}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-distress-tolerance-p015 data-source-id="distress-tolerance-p015"}
 **Progressive Muscle Relaxation: Nose to Toes**
 
 [![Progressive Muscle Relaxation: Nose to Toes](/resources/distress-tolerance/distress-tolerance-p015.jpg){.img-fluid fig-alt="Progressive Muscle Relaxation: Nose to Toes"}](/resources/distress-tolerance/distress-tolerance-p015.jpg)
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p015.jpg)
-:::
+
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-distress-tolerance-p011 data-source-id="distress-tolerance-p011"}
 **Window of Tolerance**
 
 [![Window of Tolerance](/resources/distress-tolerance/distress-tolerance-p011.jpg){.img-fluid fig-alt="Window of Tolerance"}](/resources/distress-tolerance/distress-tolerance-p011.jpg)
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p011.jpg)
+
+::: {.bs-resource-match data-match-id="php-high-res:distress-tolerance-p011:php-p0126" data-source-id="distress-tolerance-p011" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0126.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Window of Tolerance](/resources/high-res/php/php-p0126.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Window of Tolerance"}](/resources/high-res/php/php-p0126.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0126.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 <!-- section-scan-resources:end -->

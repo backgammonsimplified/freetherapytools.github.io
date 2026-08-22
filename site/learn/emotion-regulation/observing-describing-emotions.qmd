@@ -26,210 +26,294 @@ For a cross-curriculum skills-selection reference, use the [Emotional Overload &
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-emotion-regulation-p014 data-source-id="emotion-regulation-p014"}
 **Ways to Describe Emotions: Anger**
 
 [![Ways to Describe Emotions: Anger](/resources/emotion-regulation/emotion-regulation-p014.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Anger"}](/resources/emotion-regulation/emotion-regulation-p014.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p014.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p014" data-source-id="emotion-regulation-p014" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-anger-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Ways to Describe Emotions: Anger](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-anger-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ways to Describe Emotions: Anger"}](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-anger-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-anger-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p015 data-source-id="emotion-regulation-p015"}
 **Ways to Describe Emotions: Disgust**
 
 [![Ways to Describe Emotions: Disgust](/resources/emotion-regulation/emotion-regulation-p015.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Disgust"}](/resources/emotion-regulation/emotion-regulation-p015.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p015.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p015" data-source-id="emotion-regulation-p015" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-disgust-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Ways to Describe Emotions: Disgust](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-disgust-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ways to Describe Emotions: Disgust"}](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-disgust-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-disgust-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p016 data-source-id="emotion-regulation-p016"}
 **Ways to Describe Emotions: Envy**
 
 [![Ways to Describe Emotions: Envy](/resources/emotion-regulation/emotion-regulation-p016.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Envy"}](/resources/emotion-regulation/emotion-regulation-p016.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p016.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p016" data-source-id="emotion-regulation-p016" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-envy-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Ways to Describe Emotions: Envy](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-envy-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ways to Describe Emotions: Envy"}](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-envy-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-envy-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p017 data-source-id="emotion-regulation-p017"}
 **Ways to Describe Emotions: Fear**
 
 [![Ways to Describe Emotions: Fear](/resources/emotion-regulation/emotion-regulation-p017.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Fear"}](/resources/emotion-regulation/emotion-regulation-p017.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p017.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p017" data-source-id="emotion-regulation-p017" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-fear-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Ways to Describe Emotions: Fear](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-fear-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ways to Describe Emotions: Fear"}](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-fear-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-fear-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p018 data-source-id="emotion-regulation-p018"}
 **Ways to Describe Emotions: Happiness**
 
 [![Ways to Describe Emotions: Happiness](/resources/emotion-regulation/emotion-regulation-p018.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Happiness"}](/resources/emotion-regulation/emotion-regulation-p018.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p018.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p018" data-source-id="emotion-regulation-p018" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-happiness-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Ways to Describe Emotions: Happiness](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-happiness-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ways to Describe Emotions: Happiness"}](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-happiness-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-happiness-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p019 data-source-id="emotion-regulation-p019"}
 **Ways to Describe Emotions: Jealousy**
 
 [![Ways to Describe Emotions: Jealousy](/resources/emotion-regulation/emotion-regulation-p019.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Jealousy"}](/resources/emotion-regulation/emotion-regulation-p019.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p019.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p019" data-source-id="emotion-regulation-p019" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-jealousy-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Ways to Describe Emotions: Jealousy](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-jealousy-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ways to Describe Emotions: Jealousy"}](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-jealousy-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-jealousy-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p020 data-source-id="emotion-regulation-p020"}
 **Ways to Describe Emotions: Love**
 
 [![Ways to Describe Emotions: Love](/resources/emotion-regulation/emotion-regulation-p020.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Love"}](/resources/emotion-regulation/emotion-regulation-p020.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p020.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p020" data-source-id="emotion-regulation-p020" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-love-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Ways to Describe Emotions: Love](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-love-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ways to Describe Emotions: Love"}](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-love-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-love-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p021 data-source-id="emotion-regulation-p021"}
 **Ways to Describe Emotions: Sadness**
 
 [![Ways to Describe Emotions: Sadness](/resources/emotion-regulation/emotion-regulation-p021.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Sadness"}](/resources/emotion-regulation/emotion-regulation-p021.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p021.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p021" data-source-id="emotion-regulation-p021" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-sadness-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Ways to Describe Emotions: Sadness](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-sadness-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ways to Describe Emotions: Sadness"}](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-sadness-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-sadness-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p022 data-source-id="emotion-regulation-p022"}
 **Ways to Describe Emotions: Shame**
 
 [![Ways to Describe Emotions: Shame](/resources/emotion-regulation/emotion-regulation-p022.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Shame"}](/resources/emotion-regulation/emotion-regulation-p022.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p022.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p022" data-source-id="emotion-regulation-p022" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-shame-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Ways to Describe Emotions: Shame](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-shame-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ways to Describe Emotions: Shame"}](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-shame-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-shame-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p023 data-source-id="emotion-regulation-p023"}
 **Ways to Describe Emotions: Guilt**
 
 [![Ways to Describe Emotions: Guilt](/resources/emotion-regulation/emotion-regulation-p023.jpg){.img-fluid fig-alt="Ways to Describe Emotions: Guilt"}](/resources/emotion-regulation/emotion-regulation-p023.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p023.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p023" data-source-id="emotion-regulation-p023" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-guilt-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Ways to Describe Emotions: Guilt](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-guilt-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ways to Describe Emotions: Guilt"}](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-guilt-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-guilt-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-emotion-regulation-p024 data-source-id="emotion-regulation-p024"}
 **Understanding and Naming Your Emotions**
 
 [![Understanding and Naming Your Emotions](/resources/emotion-regulation/emotion-regulation-p024.jpg){.img-fluid fig-alt="Understanding and Naming Your Emotions"}](/resources/emotion-regulation/emotion-regulation-p024.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p024.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:emotion-regulation-p024:php-p0045" data-source-id="emotion-regulation-p024" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0045.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Understanding and Naming Your Emotions](/resources/high-res/php/php-p0045.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Understanding and Naming Your Emotions"}](/resources/high-res/php/php-p0045.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0045.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p025 data-source-id="emotion-regulation-p025"}
 **Observing and Describing Emotions**
 
 [![Observing and Describing Emotions](/resources/emotion-regulation/emotion-regulation-p025.jpg){.img-fluid fig-alt="Observing and Describing Emotions"}](/resources/emotion-regulation/emotion-regulation-p025.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p025.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p025" data-source-id="emotion-regulation-p025" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-worksheet-4a-observing-and-describing-emotions-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Observing and Describing Emotions](/resources/clean/emotion-regulation/emotion-regulation-worksheet-4a-observing-and-describing-emotions-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Observing and Describing Emotions"}](/resources/clean/emotion-regulation/emotion-regulation-worksheet-4a-observing-and-describing-emotions-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-worksheet-4a-observing-and-describing-emotions-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Exercises {#exercises}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-emotion-regulation-p011 data-source-id="emotion-regulation-p011"}
 **Learning About Emotions**
 
 [![Learning About Emotions](/resources/emotion-regulation/emotion-regulation-p011.jpg){.img-fluid fig-alt="Learning About Emotions"}](/resources/emotion-regulation/emotion-regulation-p011.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p011.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:emotion-regulation-p011:php-p0047" data-source-id="emotion-regulation-p011" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0047.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Learning About Emotions](/resources/high-res/php/php-p0047.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Learning About Emotions"}](/resources/high-res/php/php-p0047.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0047.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p026 data-source-id="emotion-regulation-p026"}
 **The Tangled Ball of Emotions**
 
 [![The Tangled Ball of Emotions](/resources/emotion-regulation/emotion-regulation-p026.jpg){.img-fluid fig-alt="The Tangled Ball of Emotions"}](/resources/emotion-regulation/emotion-regulation-p026.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p026.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p027 data-source-id="emotion-regulation-p027"}
 **Where Do I Feel Emotions?**
 
 [![Where Do I Feel Emotions?](/resources/emotion-regulation/emotion-regulation-p027.jpg){.img-fluid fig-alt="Where Do I Feel Emotions?"}](/resources/emotion-regulation/emotion-regulation-p027.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p027.jpg)
-:::
+
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-emotion-regulation-p012 data-source-id="emotion-regulation-p012"}
 **Model for Describing Emotions**
 
 [![Model for Describing Emotions](/resources/emotion-regulation/emotion-regulation-p012.jpg){.img-fluid fig-alt="Model for Describing Emotions"}](/resources/emotion-regulation/emotion-regulation-p012.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p012.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p012" data-source-id="emotion-regulation-p012" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-5-model-for-describing-emotions-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Model for Describing Emotions](/resources/clean/emotion-regulation/emotion-regulation-handout-5-model-for-describing-emotions-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Model for Describing Emotions"}](/resources/clean/emotion-regulation/emotion-regulation-handout-5-model-for-describing-emotions-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-5-model-for-describing-emotions-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 <!-- section-scan-resources:end -->

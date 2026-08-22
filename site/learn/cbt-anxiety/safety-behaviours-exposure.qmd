@@ -24,72 +24,90 @@ Exposure involves approaching feared situations gradually while reducing behavio
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-cbt-skills-p048 data-source-id="cbt-skills-p048"}
 **What Are Safety Behaviours?**
 
 [![What Are Safety Behaviours?](/resources/cbt-skills/cbt-skills-p048.jpg){.img-fluid fig-alt="What Are Safety Behaviours?"}](/resources/cbt-skills/cbt-skills-p048.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p048.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:cbt-skills-p048:php-p0007" data-source-id="cbt-skills-p048" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0007.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: What Are Safety Behaviours?](/resources/high-res/php/php-p0007.jpg){.img-fluid fig-alt="Higher-Resolution Copy: What Are Safety Behaviours?"}](/resources/high-res/php/php-p0007.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0007.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p050 data-source-id="cbt-skills-p050"}
 **Situational Exposure**
 
 [![Situational Exposure](/resources/cbt-skills/cbt-skills-p050.jpg){.img-fluid fig-alt="Situational Exposure"}](/resources/cbt-skills/cbt-skills-p050.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p050.jpg)
-:::
+
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-cbt-skills-p047 data-source-id="cbt-skills-p047"}
 **Avoidance Worksheet**
 
 [![Avoidance Worksheet](/resources/cbt-skills/cbt-skills-p047.jpg){.img-fluid fig-alt="Avoidance Worksheet"}](/resources/cbt-skills/cbt-skills-p047.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p047.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p049 data-source-id="cbt-skills-p049"}
 **Safety Behaviour Checklist**
 
 [![Safety Behaviour Checklist](/resources/cbt-skills/cbt-skills-p049.jpg){.img-fluid fig-alt="Safety Behaviour Checklist"}](/resources/cbt-skills/cbt-skills-p049.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p049.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p053 data-source-id="cbt-skills-p053"}
 **Developing Exposure Hierarchies**
 
 [![Developing Exposure Hierarchies](/resources/cbt-skills/cbt-skills-p053.jpg){.img-fluid fig-alt="Developing Exposure Hierarchies"}](/resources/cbt-skills/cbt-skills-p053.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p053.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p054 data-source-id="cbt-skills-p054"}
 **Exposure Hierarchy Worksheet**
 
 [![Exposure Hierarchy Worksheet](/resources/cbt-skills/cbt-skills-p054.jpg){.img-fluid fig-alt="Exposure Hierarchy Worksheet"}](/resources/cbt-skills/cbt-skills-p054.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p054.jpg)
-:::
+
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-cbt-skills-p051 data-source-id="cbt-skills-p051"}
 **Examples of Fear Ladders**
 
 [![Examples of Fear Ladders](/resources/cbt-skills/cbt-skills-p051.jpg){.img-fluid fig-alt="Examples of Fear Ladders"}](/resources/cbt-skills/cbt-skills-p051.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p051.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p052 data-source-id="cbt-skills-p052"}
 **Ideas for Challenging Different Fears**
 
 [![Ideas for Challenging Different Fears](/resources/cbt-skills/cbt-skills-p052.jpg){.img-fluid fig-alt="Ideas for Challenging Different Fears"}](/resources/cbt-skills/cbt-skills-p052.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p052.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

@@ -32,20 +32,42 @@ Record the skill you practised and the strength you used.
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-goal-setting-p005 data-source-id="goal-setting-p005"}
 **Daily Goal Worksheet: Monday to Wednesday**
 
 [![Daily Goal Worksheet: Monday to Wednesday](/resources/goal-setting/goal-setting-p005.jpg){.img-fluid fig-alt="Daily Goal Worksheet: Monday to Wednesday"}](/resources/goal-setting/goal-setting-p005.jpg)
 
 [Download / View Handout](/resources/goal-setting/goal-setting-p005.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:goal-setting-p005:php-p0139" data-source-id="goal-setting-p005" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0139.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Daily Goal Worksheet: Monday to Wednesday](/resources/high-res/php/php-p0139.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Daily Goal Worksheet: Monday to Wednesday"}](/resources/high-res/php/php-p0139.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0139.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-goal-setting-p006 data-source-id="goal-setting-p006"}
 **Daily Goal Worksheet: Thursday to Sunday**
 
 [![Daily Goal Worksheet: Thursday to Sunday](/resources/goal-setting/goal-setting-p006.jpg){.img-fluid fig-alt="Daily Goal Worksheet: Thursday to Sunday"}](/resources/goal-setting/goal-setting-p006.jpg)
 
 [Download / View Handout](/resources/goal-setting/goal-setting-p006.jpg)
+
+::: {.bs-resource-match data-match-id="php-high-res:goal-setting-p006:php-p0137" data-source-id="goal-setting-p006" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0137.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Daily Goal Worksheet: Thursday to Sunday](/resources/high-res/php/php-p0137.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Daily Goal Worksheet: Thursday to Sunday"}](/resources/high-res/php/php-p0137.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0137.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 <!-- section-scan-resources:end -->

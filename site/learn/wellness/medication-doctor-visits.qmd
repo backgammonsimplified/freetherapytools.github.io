@@ -24,98 +24,139 @@ These tools support accurate communication with prescribers and other health-car
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p053 data-source-id="wellness-p053"}
 **Tips for Managing Appointments**
 
 [![Tips for Managing Appointments](/resources/wellness/wellness-p053.jpg){.img-fluid fig-alt="Tips for Managing Appointments"}](/resources/wellness/wellness-p053.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p053.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p055 data-source-id="wellness-p055"}
 **Myths About Psychiatric Medication, Part 1**
 
 [![Myths About Psychiatric Medication, Part 1](/resources/wellness/wellness-p055.jpg){.img-fluid fig-alt="Myths About Psychiatric Medication, Part 1"}](/resources/wellness/wellness-p055.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p055.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p056 data-source-id="wellness-p056"}
 **Myths About Psychiatric Medication, Part 2**
 
 [![Myths About Psychiatric Medication, Part 2](/resources/wellness/wellness-p056.jpg){.img-fluid fig-alt="Myths About Psychiatric Medication, Part 2"}](/resources/wellness/wellness-p056.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p056.jpg)
-:::
+
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p054 data-source-id="wellness-p054"}
 **Questions for Your Doctor and Appointment Reminder**
 
 [![Questions for Your Doctor and Appointment Reminder](/resources/wellness/wellness-p054.jpg){.img-fluid fig-alt="Questions for Your Doctor and Appointment Reminder"}](/resources/wellness/wellness-p054.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p054.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p060 data-source-id="wellness-p060"}
 **My Current Medications**
 
 [![My Current Medications](/resources/wellness/wellness-p060.jpg){.img-fluid fig-alt="My Current Medications"}](/resources/wellness/wellness-p060.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p060.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:wellness-p060:php-p0054" data-source-id="wellness-p060" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0054.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: My Current Medications](/resources/high-res/php/php-p0054.jpg){.img-fluid fig-alt="Higher-Resolution Copy: My Current Medications"}](/resources/high-res/php/php-p0054.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0054.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p061 data-source-id="wellness-p061"}
 **My Current Medications: Extended**
 
 [![My Current Medications: Extended](/resources/wellness/wellness-p061.jpg){.img-fluid fig-alt="My Current Medications: Extended"}](/resources/wellness/wellness-p061.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p061.jpg)
+
+::: {.bs-resource-match data-match-id="php-high-res:wellness-p061:php-p0054" data-source-id="wellness-p061" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0054.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: My Current Medications: Extended](/resources/high-res/php/php-p0054.jpg){.img-fluid fig-alt="Higher-Resolution Copy: My Current Medications: Extended"}](/resources/high-res/php/php-p0054.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0054.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Exercises {#exercises}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p052 data-source-id="wellness-p052"}
 **Doctor Appointment Barriers**
 
 [![Doctor Appointment Barriers](/resources/wellness/wellness-p052.jpg){.img-fluid fig-alt="Doctor Appointment Barriers"}](/resources/wellness/wellness-p052.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p052.jpg)
+
+::: {.bs-resource-match data-match-id="php-high-res:wellness-p052:php-p0057" data-source-id="wellness-p052" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0057.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Doctor Appointment Barriers](/resources/high-res/php/php-p0057.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Doctor Appointment Barriers"}](/resources/high-res/php/php-p0057.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0057.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p057 data-source-id="wellness-p057"}
 **Medication Reminder Tools**
 
 [![Medication Reminder Tools](/resources/wellness/wellness-p057.jpg){.img-fluid fig-alt="Medication Reminder Tools"}](/resources/wellness/wellness-p057.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p057.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p058 data-source-id="wellness-p058"}
 **Medication Organizers**
 
 [![Medication Organizers](/resources/wellness/wellness-p058.jpg){.img-fluid fig-alt="Medication Organizers"}](/resources/wellness/wellness-p058.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p058.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p059 data-source-id="wellness-p059"}
 **Alarms and Medication Dispensers**
 
 [![Alarms and Medication Dispensers](/resources/wellness/wellness-p059.jpg){.img-fluid fig-alt="Alarms and Medication Dispensers"}](/resources/wellness/wellness-p059.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p059.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p062 data-source-id="wellness-p062"}
 **Health Care Connect**
 
 [![Health Care Connect](/resources/wellness/wellness-p062.jpg){.img-fluid fig-alt="Health Care Connect"}](/resources/wellness/wellness-p062.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p062.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

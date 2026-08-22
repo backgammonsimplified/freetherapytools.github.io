@@ -24,76 +24,104 @@ Check the Facts asks whether an emotion, its intensity, and its duration fit the
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-emotion-regulation-p031 data-source-id="emotion-regulation-p031"}
 **Changing Emotional Responses**
 
 [![Changing Emotional Responses](/resources/emotion-regulation/emotion-regulation-p031.jpg){.img-fluid fig-alt="Changing Emotional Responses"}](/resources/emotion-regulation/emotion-regulation-p031.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p031.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p031" data-source-id="emotion-regulation-p031" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-7-overview-changing-emotional-responses-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Changing Emotional Responses](/resources/clean/emotion-regulation/emotion-regulation-handout-7-overview-changing-emotional-responses-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Changing Emotional Responses"}](/resources/clean/emotion-regulation/emotion-regulation-handout-7-overview-changing-emotional-responses-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-7-overview-changing-emotional-responses-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p032 data-source-id="emotion-regulation-p032"}
 **Check the Facts**
 
 [![Check the Facts](/resources/emotion-regulation/emotion-regulation-p032.jpg){.img-fluid fig-alt="Check the Facts"}](/resources/emotion-regulation/emotion-regulation-p032.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p032.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p032" data-source-id="emotion-regulation-p032" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-8-check-the-facts-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Check the Facts](/resources/clean/emotion-regulation/emotion-regulation-handout-8-check-the-facts-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Check the Facts"}](/resources/clean/emotion-regulation/emotion-regulation-handout-8-check-the-facts-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-8-check-the-facts-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-emotion-regulation-p029 data-source-id="emotion-regulation-p029"}
 **Fact or Opinion?**
 
 [![Fact or Opinion?](/resources/emotion-regulation/emotion-regulation-p029.jpg){.img-fluid fig-alt="Fact or Opinion?"}](/resources/emotion-regulation/emotion-regulation-p029.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p029.jpg)
-:::
+
+::::
 
 ## Exercises {#exercises}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-emotion-regulation-p034 data-source-id="emotion-regulation-p034"}
 **Check the Facts Practice**
 
 [![Check the Facts Practice](/resources/emotion-regulation/emotion-regulation-p034.jpg){.img-fluid fig-alt="Check the Facts Practice"}](/resources/emotion-regulation/emotion-regulation-p034.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p034.jpg)
+
+::: {.bs-resource-match data-match-id="php-high-res:emotion-regulation-p034:php-p0040" data-source-id="emotion-regulation-p034" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0040.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Check the Facts Practice](/resources/high-res/php/php-p0040.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Check the Facts Practice"}](/resources/high-res/php/php-p0040.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0040.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-emotion-regulation-p030 data-source-id="emotion-regulation-p030"}
 **Fact, Opinion, Belief, and Prejudice**
 
 [![Fact, Opinion, Belief, and Prejudice](/resources/emotion-regulation/emotion-regulation-p030.jpg){.img-fluid fig-alt="Fact, Opinion, Belief, and Prejudice"}](/resources/emotion-regulation/emotion-regulation-p030.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p030.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-emotion-regulation-p033 data-source-id="emotion-regulation-p033"}
 **Examples of Emotions That Fit the Facts**
 
 [![Examples of Emotions That Fit the Facts](/resources/emotion-regulation/emotion-regulation-p033.jpg){.img-fluid fig-alt="Examples of Emotions That Fit the Facts"}](/resources/emotion-regulation/emotion-regulation-p033.jpg)
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p033.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:emotion-regulation-p033" data-source-id="emotion-regulation-p033" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-8a-examples-of-emotions-that-fit-the-facts-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Examples of Emotions That Fit the Facts](/resources/clean/emotion-regulation/emotion-regulation-handout-8a-examples-of-emotions-that-fit-the-facts-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Examples of Emotions That Fit the Facts"}](/resources/clean/emotion-regulation/emotion-regulation-handout-8a-examples-of-emotions-that-fit-the-facts-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-8a-examples-of-emotions-that-fit-the-facts-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 <!-- section-scan-resources:end -->

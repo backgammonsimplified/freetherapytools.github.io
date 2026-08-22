@@ -159,6 +159,7 @@ FIELDS = [
     "source_id", "source_document", "source_page", "resource_title", "resource_kind",
     "match_status", "confidence", "book_pdf_page", "book_printed_page", "book_module",
     "book_handout_or_worksheet_number", "book_title", "match_evidence", "clean_asset",
+    "match_id", "match_source", "publicly_displayed", "review_state",
     "review_needed", "notes",
 ]
 
@@ -199,6 +200,10 @@ def build_rows() -> list[dict[str, str]]:
             "book_title": "",
             "match_evidence": "No exact printed identifier/title match verified.",
             "clean_asset": "",
+            "match_id": "",
+            "match_source": "",
+            "publicly_displayed": "false",
+            "review_state": "unmatched",
             "review_needed": "false",
             "notes": "Current curriculum resource remains the only public copy.",
         }
@@ -218,9 +223,14 @@ def build_rows() -> list[dict[str, str]]:
                 pdf_path, _ = asset_paths(module, number, title)
                 row["match_evidence"] = "Printed identifier and title agree; content visually verified against the reference-book PDF."
                 row["clean_asset"] = "/" + pdf_path.relative_to(ROOT / "site").as_posix()
+                row["match_id"] = f"linehan-book:{source_id}"
+                row["match_source"] = "linehan-book"
+                row["publicly_displayed"] = "true"
+                row["review_state"] = "pending"
                 row["notes"] = "High-confidence clean copy is displayed below the selected curriculum handout."
             else:
                 row["match_evidence"] = "Conceptually related page found, but printed title or page sequence is not an exact one-to-one match."
+                row["review_state"] = "possible"
                 row["notes"] = "Review needed; candidate is not published."
         rows.append(row)
     return rows

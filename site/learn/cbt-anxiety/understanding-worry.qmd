@@ -36,80 +36,119 @@ Note worries when they arise and return to them during a planned, limited period
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-cbt-skills-p036 data-source-id="cbt-skills-p036"}
 **Understanding Worry, Part 1**
 
 [![Understanding Worry, Part 1](/resources/cbt-skills/cbt-skills-p036.jpg){.img-fluid fig-alt="Understanding Worry, Part 1"}](/resources/cbt-skills/cbt-skills-p036.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p036.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p037 data-source-id="cbt-skills-p037"}
 **Understanding Worry, Part 2**
 
 [![Understanding Worry, Part 2](/resources/cbt-skills/cbt-skills-p037.jpg){.img-fluid fig-alt="Understanding Worry, Part 2"}](/resources/cbt-skills/cbt-skills-p037.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p037.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:cbt-skills-p037:php-p0008" data-source-id="cbt-skills-p037" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0008.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Understanding Worry, Part 2](/resources/high-res/php/php-p0008.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Understanding Worry, Part 2"}](/resources/high-res/php/php-p0008.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0008.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p040 data-source-id="cbt-skills-p040"}
 **Postpone Your Worry**
 
 [![Postpone Your Worry](/resources/cbt-skills/cbt-skills-p040.jpg){.img-fluid fig-alt="Postpone Your Worry"}](/resources/cbt-skills/cbt-skills-p040.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p040.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p041 data-source-id="cbt-skills-p041"}
 **Using the Worry Tree**
 
 [![Using the Worry Tree](/resources/cbt-skills/cbt-skills-p041.jpg){.img-fluid fig-alt="Using the Worry Tree"}](/resources/cbt-skills/cbt-skills-p041.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p041.jpg)
-:::
+
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-cbt-skills-p044 data-source-id="cbt-skills-p044"}
 **Worry Diary**
 
 [![Worry Diary](/resources/cbt-skills/cbt-skills-p044.jpg){.img-fluid fig-alt="Worry Diary"}](/resources/cbt-skills/cbt-skills-p044.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p044.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p045 data-source-id="cbt-skills-p045"}
 **Fear Ladder Starter**
 
 [![Fear Ladder Starter](/resources/cbt-skills/cbt-skills-p045.jpg){.img-fluid fig-alt="Fear Ladder Starter"}](/resources/cbt-skills/cbt-skills-p045.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p045.jpg)
-:::
+
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-cbt-skills-p038 data-source-id="cbt-skills-p038"}
 **Worry Beliefs**
 
 [![Worry Beliefs](/resources/cbt-skills/cbt-skills-p038.jpg){.img-fluid fig-alt="Worry Beliefs"}](/resources/cbt-skills/cbt-skills-p038.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p038.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:cbt-skills-p038:php-p0009" data-source-id="cbt-skills-p038" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0009.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Worry Beliefs](/resources/high-res/php/php-p0009.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Worry Beliefs"}](/resources/high-res/php/php-p0009.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0009.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p039 data-source-id="cbt-skills-p039"}
 **Worry and Problem Solving**
 
 [![Worry and Problem Solving](/resources/cbt-skills/cbt-skills-p039.jpg){.img-fluid fig-alt="Worry and Problem Solving"}](/resources/cbt-skills/cbt-skills-p039.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p039.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:cbt-skills-p039:php-p0010" data-source-id="cbt-skills-p039" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0010.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Worry and Problem Solving](/resources/high-res/php/php-p0010.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Worry and Problem Solving"}](/resources/high-res/php/php-p0010.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0010.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p042 data-source-id="cbt-skills-p042"}
 **The Worry Tree**
 
 [![The Worry Tree](/resources/cbt-skills/cbt-skills-p042.jpg){.img-fluid fig-alt="The Worry Tree"}](/resources/cbt-skills/cbt-skills-p042.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p042.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

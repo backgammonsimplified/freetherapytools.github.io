@@ -1759,3 +1759,49 @@ body.bs-research-index .bs-research-empty {
 }
 
 /* BS RESEARCH INDEX END */
+.bs-resource-match {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--bs-border-color);
+}
+
+.bs-match-review-enabled .bs-resource-match[data-match-review-state="incorrect"] {
+  padding: 1rem;
+  border: 2px solid var(--bs-danger);
+  border-radius: 0.5rem;
+}
+
+.bs-match-review-control {
+  margin-top: 0.5rem;
+}
+
+.bs-match-review-status {
+  margin-left: 0.5rem;
+  color: var(--bs-danger-text-emphasis);
+  font-weight: 600;
+}
+
+.bs-review-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.bs-review-card {
+  padding: 1rem;
+  border: 1px solid var(--bs-border-color);
+  border-radius: 0.5rem;
+  background: var(--bs-body-bg);
+}
+
+.bs-review-card img {
+  width: 100%;
+  max-height: 22rem;
+  object-fit: contain;
+  background: #fff;
+}
+
+.bs-review-meta {
+  color: var(--bs-secondary-color);
+  font-size: 0.85rem;
+}

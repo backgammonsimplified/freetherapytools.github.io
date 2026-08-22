@@ -38,56 +38,72 @@ DEAR MAN helps organize what to say and how to stay focused.
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p017 data-source-id="interpersonal-effectiveness-p017"}
 **Guidelines for Objectives Effectiveness: DEAR MAN, Part 1**
 
 [![Guidelines for Objectives Effectiveness: DEAR MAN, Part 1](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p017.jpg){.img-fluid fig-alt="Guidelines for Objectives Effectiveness: DEAR MAN, Part 1"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p017.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p017.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p017" data-source-id="interpersonal-effectiveness-p017" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-5-guidelines-for-objectives-effectiveness-dear-man-1-of-2-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Guidelines for Objectives Effectiveness: DEAR MAN, Part 1](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-5-guidelines-for-objectives-effectiveness-dear-man-1-of-2-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Guidelines for Objectives Effectiveness: DEAR MAN, Part 1"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-5-guidelines-for-objectives-effectiveness-dear-man-1-of-2-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-5-guidelines-for-objectives-effectiveness-dear-man-1-of-2-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p018 data-source-id="interpersonal-effectiveness-p018"}
 **Guidelines for Objectives Effectiveness: DEAR MAN, Part 2**
 
 [![Guidelines for Objectives Effectiveness: DEAR MAN, Part 2](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p018.jpg){.img-fluid fig-alt="Guidelines for Objectives Effectiveness: DEAR MAN, Part 2"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p018.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p018.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p018" data-source-id="interpersonal-effectiveness-p018" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-5-guidelines-for-objectives-effectiveness-dear-man-2-of-2-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Guidelines for Objectives Effectiveness: DEAR MAN, Part 2](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-5-guidelines-for-objectives-effectiveness-dear-man-2-of-2-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Guidelines for Objectives Effectiveness: DEAR MAN, Part 2"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-5-guidelines-for-objectives-effectiveness-dear-man-2-of-2-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-5-guidelines-for-objectives-effectiveness-dear-man-2-of-2-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p019 data-source-id="interpersonal-effectiveness-p019"}
 **Applying DEAR MAN Skills to a Difficult Interaction**
 
 [![Applying DEAR MAN Skills to a Difficult Interaction](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p019.jpg){.img-fluid fig-alt="Applying DEAR MAN Skills to a Difficult Interaction"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p019.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p019.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p019" data-source-id="interpersonal-effectiveness-p019" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-5a-applying-dear-man-skills-to-a-difficult-current-interaction-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Applying DEAR MAN Skills to a Difficult Interaction](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-5a-applying-dear-man-skills-to-a-difficult-current-interaction-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Applying DEAR MAN Skills to a Difficult Interaction"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-5a-applying-dear-man-skills-to-a-difficult-current-interaction-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-5a-applying-dear-man-skills-to-a-difficult-current-interaction-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p020 data-source-id="interpersonal-effectiveness-p020"}
 **DEAR MAN Script**
 
 [![DEAR MAN Script](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p020.jpg){.img-fluid fig-alt="DEAR MAN Script"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p020.jpg)
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p020.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

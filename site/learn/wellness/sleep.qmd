@@ -38,70 +38,94 @@ PLEASE connects physical care with emotional stability. The overview below is sh
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p002 data-source-id="wellness-p002"}
 **Taking Care of Your Mind by Taking Care of Your Body**
 
 [![Taking Care of Your Mind by Taking Care of Your Body](/resources/wellness/wellness-p002.jpg){.img-fluid fig-alt="Taking Care of Your Mind by Taking Care of Your Body"}](/resources/wellness/wellness-p002.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p002.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:wellness-p002" data-source-id="wellness-p002" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-handout-20-taking-care-of-your-mind-by-taking-care-of-your-body-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Taking Care of Your Mind by Taking Care of Your Body](/resources/clean/emotion-regulation/emotion-regulation-handout-20-taking-care-of-your-mind-by-taking-care-of-your-body-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Taking Care of Your Mind by Taking Care of Your Body"}](/resources/clean/emotion-regulation/emotion-regulation-handout-20-taking-care-of-your-mind-by-taking-care-of-your-body-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-handout-20-taking-care-of-your-mind-by-taking-care-of-your-body-clean.pdf)
-:::
 
-::: {.bs-practice-resource}
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p007 data-source-id="wellness-p007"}
 **Additional Sleep Hygiene Tips**
 
 [![Additional Sleep Hygiene Tips](/resources/wellness/wellness-p007.jpg){.img-fluid fig-alt="Additional Sleep Hygiene Tips"}](/resources/wellness/wellness-p007.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p007.jpg)
-:::
+
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p008 data-source-id="wellness-p008"}
 **Sleep Hygiene Practice Sheet**
 
 [![Sleep Hygiene Practice Sheet](/resources/wellness/wellness-p008.jpg){.img-fluid fig-alt="Sleep Hygiene Practice Sheet"}](/resources/wellness/wellness-p008.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p008.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:wellness-p008" data-source-id="wellness-p008" data-match-source="linehan-book" data-candidate-asset="/resources/clean/emotion-regulation/emotion-regulation-worksheet-14b-sleep-hygiene-practice-sheet-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Sleep Hygiene Practice Sheet](/resources/clean/emotion-regulation/emotion-regulation-worksheet-14b-sleep-hygiene-practice-sheet-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Sleep Hygiene Practice Sheet"}](/resources/clean/emotion-regulation/emotion-regulation-worksheet-14b-sleep-hygiene-practice-sheet-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/emotion-regulation/emotion-regulation-worksheet-14b-sleep-hygiene-practice-sheet-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Exercises {#exercises}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p004 data-source-id="wellness-p004"}
 **Exploring Sleep**
 
 [![Exploring Sleep](/resources/wellness/wellness-p004.jpg){.img-fluid fig-alt="Exploring Sleep"}](/resources/wellness/wellness-p004.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p004.jpg)
+
+::: {.bs-resource-match data-match-id="php-high-res:wellness-p004:php-p0070" data-source-id="wellness-p004" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0070.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Exploring Sleep](/resources/high-res/php/php-p0070.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Exploring Sleep"}](/resources/high-res/php/php-p0070.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0070.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p005 data-source-id="wellness-p005"}
 **Understanding Sleep**
 
 [![Understanding Sleep](/resources/wellness/wellness-p005.jpg){.img-fluid fig-alt="Understanding Sleep"}](/resources/wellness/wellness-p005.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p005.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p006 data-source-id="wellness-p006"}
 **The Five Stages of Sleep**
 
 [![The Five Stages of Sleep](/resources/wellness/wellness-p006.jpg){.img-fluid fig-alt="The Five Stages of Sleep"}](/resources/wellness/wellness-p006.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p006.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

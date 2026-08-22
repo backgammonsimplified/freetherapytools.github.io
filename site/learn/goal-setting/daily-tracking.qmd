@@ -38,44 +38,59 @@ Tracking is information gathering, not a grade. Record what happened so patterns
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-goal-setting-p007 data-source-id="goal-setting-p007"}
 **Weekly Home Practice Tracker**
 
 [![Weekly Home Practice Tracker](/resources/goal-setting/goal-setting-p007.jpg){.img-fluid fig-alt="Weekly Home Practice Tracker"}](/resources/goal-setting/goal-setting-p007.jpg)
 
 [Download / View Handout](/resources/goal-setting/goal-setting-p007.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:goal-setting-p007:php-p0138" data-source-id="goal-setting-p007" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0138.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Weekly Home Practice Tracker](/resources/high-res/php/php-p0138.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Weekly Home Practice Tracker"}](/resources/high-res/php/php-p0138.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0138.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-goal-setting-p008 data-source-id="goal-setting-p008"}
 **Weekly Food Diary**
 
 [![Weekly Food Diary](/resources/goal-setting/goal-setting-p008.jpg){.img-fluid fig-alt="Weekly Food Diary"}](/resources/goal-setting/goal-setting-p008.jpg)
 
 [Download / View Handout](/resources/goal-setting/goal-setting-p008.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-goal-setting-p010 data-source-id="goal-setting-p010"}
 **Monthly Habit Tracker**
 
 [![Monthly Habit Tracker](/resources/goal-setting/goal-setting-p010.jpg){.img-fluid fig-alt="Monthly Habit Tracker"}](/resources/goal-setting/goal-setting-p010.jpg)
 
 [Download / View Handout](/resources/goal-setting/goal-setting-p010.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-goal-setting-p033 data-source-id="goal-setting-p033"}
 **Daily Mood Tracker**
 
 [![Daily Mood Tracker](/resources/goal-setting/goal-setting-p033.jpg){.img-fluid fig-alt="Daily Mood Tracker"}](/resources/goal-setting/goal-setting-p033.jpg)
 
 [Download / View Handout](/resources/goal-setting/goal-setting-p033.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-goal-setting-p034 data-source-id="goal-setting-p034"}
 **Skills and Wellness Diary Card**
 
 [![Skills and Wellness Diary Card](/resources/goal-setting/goal-setting-p034.jpg){.img-fluid fig-alt="Skills and Wellness Diary Card"}](/resources/goal-setting/goal-setting-p034.jpg)
 
 [Download / View Handout](/resources/goal-setting/goal-setting-p034.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

@@ -28,100 +28,128 @@ A behaviour chain traces prompting events, vulnerabilities, links, consequences,
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p023 data-source-id="wellness-p023"}
 **Analyzing Behaviour**
 
 [![Analyzing Behaviour](/resources/wellness/wellness-p023.jpg){.img-fluid fig-alt="Analyzing Behaviour"}](/resources/wellness/wellness-p023.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p023.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:wellness-p023" data-source-id="wellness-p023" data-match-source="linehan-book" data-candidate-asset="/resources/clean/general/general-handout-6-overview-analyzing-behavior-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Analyzing Behaviour](/resources/clean/general/general-handout-6-overview-analyzing-behavior-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Analyzing Behaviour"}](/resources/clean/general/general-handout-6-overview-analyzing-behavior-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/general/general-handout-6-overview-analyzing-behavior-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p028 data-source-id="wellness-p028"}
 **Behaviour Chain Analysis Worksheet, Part 1**
 
 [![Behaviour Chain Analysis Worksheet, Part 1](/resources/wellness/wellness-p028.jpg){.img-fluid fig-alt="Behaviour Chain Analysis Worksheet, Part 1"}](/resources/wellness/wellness-p028.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p028.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p029 data-source-id="wellness-p029"}
 **Behaviour Chain Analysis Worksheet, Part 2**
 
 [![Behaviour Chain Analysis Worksheet, Part 2](/resources/wellness/wellness-p029.jpg){.img-fluid fig-alt="Behaviour Chain Analysis Worksheet, Part 2"}](/resources/wellness/wellness-p029.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p029.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p030 data-source-id="wellness-p030"}
 **Behaviour Chain Analysis Worksheet, Part 3**
 
 [![Behaviour Chain Analysis Worksheet, Part 3](/resources/wellness/wellness-p030.jpg){.img-fluid fig-alt="Behaviour Chain Analysis Worksheet, Part 3"}](/resources/wellness/wellness-p030.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p030.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p031 data-source-id="wellness-p031"}
 **Behaviour Chain Analysis Map**
 
 [![Behaviour Chain Analysis Map](/resources/wellness/wellness-p031.jpg){.img-fluid fig-alt="Behaviour Chain Analysis Map"}](/resources/wellness/wellness-p031.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p031.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:wellness-p031:php-p0059" data-source-id="wellness-p031" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0059.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Behaviour Chain Analysis Map](/resources/high-res/php/php-p0059.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Behaviour Chain Analysis Map"}](/resources/high-res/php/php-p0059.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0059.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p032 data-source-id="wellness-p032"}
 **Missing-Links Analysis**
 
 [![Missing-Links Analysis](/resources/wellness/wellness-p032.jpg){.img-fluid fig-alt="Missing-Links Analysis"}](/resources/wellness/wellness-p032.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p032.jpg)
 
+::: {.bs-resource-match data-match-id="linehan-book:wellness-p032" data-source-id="wellness-p032" data-match-source="linehan-book" data-candidate-asset="/resources/clean/general/general-worksheet-3-missing-links-analysis-clean.pdf"}
 **Clean Printable Copy**
 
 [![Clean Printable Copy: Missing-Links Analysis](/resources/clean/general/general-worksheet-3-missing-links-analysis-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Missing-Links Analysis"}](/resources/clean/general/general-worksheet-3-missing-links-analysis-clean.pdf)
 
 [Open Clean Printable Copy](/resources/clean/general/general-worksheet-3-missing-links-analysis-clean.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p024 data-source-id="wellness-p024"}
 **The Behaviour Chain Analysis**
 
 [![The Behaviour Chain Analysis](/resources/wellness/wellness-p024.jpg){.img-fluid fig-alt="The Behaviour Chain Analysis"}](/resources/wellness/wellness-p024.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p024.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p025 data-source-id="wellness-p025"}
 **Behaviour Chain Analysis Example, Part 1**
 
 [![Behaviour Chain Analysis Example, Part 1](/resources/wellness/wellness-p025.jpg){.img-fluid fig-alt="Behaviour Chain Analysis Example, Part 1"}](/resources/wellness/wellness-p025.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p025.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p026 data-source-id="wellness-p026"}
 **Behaviour Chain Analysis Example, Part 2**
 
 [![Behaviour Chain Analysis Example, Part 2](/resources/wellness/wellness-p026.jpg){.img-fluid fig-alt="Behaviour Chain Analysis Example, Part 2"}](/resources/wellness/wellness-p026.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p026.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p027 data-source-id="wellness-p027"}
 **Behaviour Chain Analysis Example, Part 3**
 
 [![Behaviour Chain Analysis Example, Part 3](/resources/wellness/wellness-p027.jpg){.img-fluid fig-alt="Behaviour Chain Analysis Example, Part 3"}](/resources/wellness/wellness-p027.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p027.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

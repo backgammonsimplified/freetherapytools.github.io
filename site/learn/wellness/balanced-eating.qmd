@@ -24,72 +24,90 @@ Balanced eating is body care, not perfection. Use the planning tools in a way th
 
 ## Handouts & Worksheets {#handouts-worksheets}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p043 data-source-id="wellness-p043"}
 **Seven Tips for Balanced Eating, Part 1**
 
 [![Seven Tips for Balanced Eating, Part 1](/resources/wellness/wellness-p043.jpg){.img-fluid fig-alt="Seven Tips for Balanced Eating, Part 1"}](/resources/wellness/wellness-p043.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p043.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p044 data-source-id="wellness-p044"}
 **Seven Tips for Balanced Eating, Part 2**
 
 [![Seven Tips for Balanced Eating, Part 2](/resources/wellness/wellness-p044.jpg){.img-fluid fig-alt="Seven Tips for Balanced Eating, Part 2"}](/resources/wellness/wellness-p044.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p044.jpg)
-:::
+
+::::
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p049 data-source-id="wellness-p049"}
 **Weekly Food Journal**
 
 [![Weekly Food Journal](/resources/wellness/wellness-p049.jpg){.img-fluid fig-alt="Weekly Food Journal"}](/resources/wellness/wellness-p049.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p049.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p050 data-source-id="wellness-p050"}
 **Weekly Meal Plan**
 
 [![Weekly Meal Plan](/resources/wellness/wellness-p050.jpg){.img-fluid fig-alt="Weekly Meal Plan"}](/resources/wellness/wellness-p050.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p050.jpg)
+
+::: {.bs-resource-match data-match-id="php-high-res:wellness-p050:php-p0055" data-source-id="wellness-p050" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0055.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Weekly Meal Plan](/resources/high-res/php/php-p0055.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Weekly Meal Plan"}](/resources/high-res/php/php-p0055.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0055.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-wellness-p045 data-source-id="wellness-p045"}
 **Eating Well on a Budget**
 
 [![Eating Well on a Budget](/resources/wellness/wellness-p045.jpg){.img-fluid fig-alt="Eating Well on a Budget"}](/resources/wellness/wellness-p045.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p045.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p046 data-source-id="wellness-p046"}
 **Canada's Food Guide: Eat Well, Live Well**
 
 [![Canada's Food Guide: Eat Well, Live Well](/resources/wellness/wellness-p046.jpg){.img-fluid fig-alt="Canada's Food Guide: Eat Well, Live Well"}](/resources/wellness/wellness-p046.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p046.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p047 data-source-id="wellness-p047"}
 **Healthy Eating Is More Than the Foods You Eat**
 
 [![Healthy Eating Is More Than the Foods You Eat](/resources/wellness/wellness-p047.jpg){.img-fluid fig-alt="Healthy Eating Is More Than the Foods You Eat"}](/resources/wellness/wellness-p047.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p047.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-wellness-p048 data-source-id="wellness-p048"}
 **Estimating Portion Sizes**
 
 [![Estimating Portion Sizes](/resources/wellness/wellness-p048.jpg){.img-fluid fig-alt="Estimating Portion Sizes"}](/resources/wellness/wellness-p048.jpg)
 
 [Download / View Handout](/resources/wellness/wellness-p048.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

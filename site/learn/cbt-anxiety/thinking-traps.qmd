@@ -24,64 +24,101 @@ Thinking traps are habits of interpretation. Naming one creates an opportunity t
 
 ## Practice Materials {#practice-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-cbt-skills-p013 data-source-id="cbt-skills-p013"}
 **Testing Your Thoughts: Side One**
 
 [![Testing Your Thoughts: Side One](/resources/cbt-skills/cbt-skills-p013.jpg){.img-fluid fig-alt="Testing Your Thoughts: Side One"}](/resources/cbt-skills/cbt-skills-p013.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p013.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p015 data-source-id="cbt-skills-p015"}
 **Testing Your Thoughts: Side Two**
 
 [![Testing Your Thoughts: Side Two](/resources/cbt-skills/cbt-skills-p015.jpg){.img-fluid fig-alt="Testing Your Thoughts: Side Two"}](/resources/cbt-skills/cbt-skills-p015.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p015.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p017 data-source-id="cbt-skills-p017"}
 **Identifying Thinking Traps, Part 1**
 
 [![Identifying Thinking Traps, Part 1](/resources/cbt-skills/cbt-skills-p017.jpg){.img-fluid fig-alt="Identifying Thinking Traps, Part 1"}](/resources/cbt-skills/cbt-skills-p017.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p017.jpg)
-:::
 
-::: {.bs-practice-resource}
+::: {.bs-resource-match data-match-id="php-high-res:cbt-skills-p017:php-p0017" data-source-id="cbt-skills-p017" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0017.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Identifying Thinking Traps, Part 1](/resources/high-res/php/php-p0017.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Identifying Thinking Traps, Part 1"}](/resources/high-res/php/php-p0017.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0017.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p018 data-source-id="cbt-skills-p018"}
 **Identifying Thinking Traps, Part 2**
 
 [![Identifying Thinking Traps, Part 2](/resources/cbt-skills/cbt-skills-p018.jpg){.img-fluid fig-alt="Identifying Thinking Traps, Part 2"}](/resources/cbt-skills/cbt-skills-p018.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p018.jpg)
+
+::: {.bs-resource-match data-match-id="php-high-res:cbt-skills-p018:php-p0018" data-source-id="cbt-skills-p018" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0018.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Identifying Thinking Traps, Part 2](/resources/high-res/php/php-p0018.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Identifying Thinking Traps, Part 2"}](/resources/high-res/php/php-p0018.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0018.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Exercises {#exercises}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-cbt-skills-p016 data-source-id="cbt-skills-p016"}
 **Find the Thinking Traps**
 
 [![Find the Thinking Traps](/resources/cbt-skills/cbt-skills-p016.jpg){.img-fluid fig-alt="Find the Thinking Traps"}](/resources/cbt-skills/cbt-skills-p016.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p016.jpg)
+
+::: {.bs-resource-match data-match-id="php-high-res:cbt-skills-p016:php-p0016" data-source-id="cbt-skills-p016" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0016.pdf"}
+**Higher-Resolution Copy**
+
+[![Higher-Resolution Copy: Find the Thinking Traps](/resources/high-res/php/php-p0016.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Find the Thinking Traps"}](/resources/high-res/php/php-p0016.pdf)
+
+[Open Higher-Resolution Copy](/resources/high-res/php/php-p0016.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
 :::
+::::
 
 ## Reference Materials {#reference-materials}
 
-::: {.bs-practice-resource}
+:::: {.bs-practice-resource #resource-cbt-skills-p012 data-source-id="cbt-skills-p012"}
 **Thinking Traps Overview**
 
 [![Thinking Traps Overview](/resources/cbt-skills/cbt-skills-p012.jpg){.img-fluid fig-alt="Thinking Traps Overview"}](/resources/cbt-skills/cbt-skills-p012.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p012.jpg)
-:::
 
-::: {.bs-practice-resource}
+::::
+
+:::: {.bs-practice-resource #resource-cbt-skills-p014 data-source-id="cbt-skills-p014"}
 **What Are Core Beliefs?**
 
 [![What Are Core Beliefs?](/resources/cbt-skills/cbt-skills-p014.jpg){.img-fluid fig-alt="What Are Core Beliefs?"}](/resources/cbt-skills/cbt-skills-p014.jpg)
 
 [Download / View Handout](/resources/cbt-skills/cbt-skills-p014.jpg)
-:::
+
+::::
 
 <!-- section-scan-resources:end -->

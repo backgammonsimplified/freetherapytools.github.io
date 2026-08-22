@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
 INVENTORY = ROOT / "data" / "source-inventory.csv"
 BOOK_MATCHES = ROOT / "data" / "book-matches.csv"
+PHP_MATCHES = ROOT / "data" / "php-matches.csv"
 
 
 @dataclass(frozen=True)
@@ -558,8 +559,35 @@ def load_book_matches() -> dict[str, dict[str, str]]:
         return {row["source_id"]: row for row in csv.DictReader(handle)}
 
 
+def load_php_matches() -> dict[str, dict[str, str]]:
+    if not PHP_MATCHES.is_file():
+        return {}
+    with PHP_MATCHES.open(encoding="utf-8-sig") as handle:
+        return {row["source_id"]: row for row in csv.DictReader(handle)}
+
+
+def alternative_resource_markdown(
+    *, title: str, label: str, pdf: str, preview: str, match_id: str,
+    source_id: str, match_source: str,
+) -> str:
+    return (
+        f"::: {{.bs-resource-match data-match-id=\"{match_id}\" "
+        f"data-source-id=\"{source_id}\" data-match-source=\"{match_source}\" "
+        f"data-candidate-asset=\"{pdf}\"}}\n"
+        f"**{label}**\n\n"
+        f"[![{label}: {title}]({preview})"
+        f"{{.img-fluid fig-alt=\"{label}: {title}\"}}]({pdf})\n\n"
+        f"[Open {label}]({pdf})\n\n"
+        "<button type=\"button\" class=\"btn btn-sm btn-outline-danger "
+        "bs-match-review-control\" hidden>Incorrect match</button>\n"
+        "<span class=\"bs-match-review-status\" aria-live=\"polite\"></span>\n"
+        ":::"
+    )
+
+
 def resource_markdown(
-    record: dict[str, object], qmd: Path, book_matches: dict[str, dict[str, str]]
+    record: dict[str, object], qmd: Path, book_matches: dict[str, dict[str, str]],
+    php_matches: dict[str, dict[str, str]],
 ) -> str:
     identifier = str(record["id"])
     slug = identifier.rsplit("-p", 1)[0]
@@ -567,27 +595,44 @@ def resource_markdown(
     relative = Path("/") / asset.relative_to(SITE)
     href = relative.as_posix()
     title = str(record["resource_title"])
-    block = (
-        "::: {.bs-practice-resource}\n"
-        f"**{title}**\n\n"
-        f"[![{title}]({href}){{.img-fluid fig-alt=\"{title}\"}}]({href})\n\n"
-        f"[Download / View Handout]({href})\n"
-    )
     match = book_matches.get(identifier)
-    if match and match.get("confidence") == "high" and match.get("clean_asset"):
+    php_match = php_matches.get(identifier)
+    accepted_alternative = bool(
+        (match and match.get("confidence") == "high" and match.get("review_state") == "accepted")
+        or (php_match and php_match.get("php_match_status") == "high"
+            and php_match.get("review_state") == "accepted")
+    )
+    block = (
+        f":::: {{.bs-practice-resource #resource-{identifier} data-source-id=\"{identifier}\"}}\n"
+        f"**{title}**\n"
+    )
+    if not accepted_alternative:
+        block += (
+            f"\n[![{title}]({href}){{.img-fluid fig-alt=\"{title}\"}}]({href})\n\n"
+            f"[Download / View Handout]({href})\n"
+        )
+    if (match and match.get("confidence") == "high" and match.get("clean_asset")
+            and match.get("review_state") != "rejected"):
         clean_pdf = match["clean_asset"]
         clean_preview = clean_pdf.removesuffix(".pdf") + ".jpg"
-        block += (
-            "\n**Clean Printable Copy**\n\n"
-            f"[![Clean Printable Copy: {title}]({clean_preview})"
-            f"{{.img-fluid fig-alt=\"Clean Printable Copy: {title}\"}}]({clean_pdf})\n\n"
-            f"[Open Clean Printable Copy]({clean_pdf})\n"
+        block += "\n" + alternative_resource_markdown(
+            title=title, label="Clean Printable Copy", pdf=clean_pdf,
+            preview=clean_preview, match_id=match["match_id"], source_id=identifier,
+            match_source="linehan-book",
         )
-    return block + ":::"
+    if (php_match and php_match.get("php_match_status") == "high"
+            and php_match.get("review_state") != "rejected"):
+        block += "\n" + alternative_resource_markdown(
+            title=title, label="Higher-Resolution Copy", pdf=php_match["high_res_asset"],
+            preview=php_match["high_res_preview"], match_id=php_match["match_id"],
+            source_id=identifier, match_source="php-high-res",
+        )
+    return block + "\n::::"
 
 
 def attach_resources(records: list[dict[str, object]]) -> None:
     book_matches = load_book_matches()
+    php_matches = load_php_matches()
     by_lesson: dict[str, list[dict[str, object]]] = {key: [] for key in LESSON_FILES}
     for record in records:
         if record["publish"] == "true":
@@ -611,7 +656,7 @@ def attach_resources(records: list[dict[str, object]]) -> None:
             heading = heading_for_kind[kind]
             anchor = heading.lower().replace(" & ", "-").replace(" ", "-")
             blocks.append(f"## {heading} {{#{anchor}}}")
-            blocks.extend(resource_markdown(record, qmd, book_matches) for record in matching)
+            blocks.extend(resource_markdown(record, qmd, book_matches, php_matches) for record in matching)
         blocks.append("<!-- section-scan-resources:end -->")
         qmd.write_text(source + "\n\n" + "\n\n".join(blocks) + "\n", encoding="utf-8", newline="\n")
 
