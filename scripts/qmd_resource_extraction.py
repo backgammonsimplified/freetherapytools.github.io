@@ -72,6 +72,11 @@ INTEGRATED_SOURCE_IDS = {
     "interpersonal-effectiveness-p018", "interpersonal-effectiveness-p023",
     "interpersonal-effectiveness-p033", "interpersonal-effectiveness-p037",
     "interpersonal-effectiveness-p038", "interpersonal-effectiveness-p039",
+    "wellness-p002", "wellness-p013", "wellness-p014",
+    "wellness-p023", "wellness-p024", "wellness-p031",
+    "wellness-p032", "wellness-p036", "wellness-p043",
+    "wellness-p044", "wellness-p052", "wellness-p053",
+    "wellness-p054",
 }
 
 

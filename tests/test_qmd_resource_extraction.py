@@ -87,6 +87,18 @@ class QmdResourceExtractionTests(unittest.TestCase):
             )
             self.assertNotEqual("pending", self.by_id[source_id]["extraction_method"])
 
+    def test_wellness_resources_have_native_qmd_content(self) -> None:
+        rows = [row for row in self.published if row["section"] == "Wellness"]
+        self.assertEqual(55, len(rows))
+        for resource in rows:
+            source_id = resource["id"]
+            lesson = ROOT / self.by_id[source_id]["lesson_qmd"]
+            self.assertIn(
+                f"<!-- native-resource-content:{source_id}:start -->",
+                lesson.read_text(encoding="utf-8"),
+            )
+            self.assertNotEqual("pending", self.by_id[source_id]["extraction_method"])
+
     def test_ten_emotion_profiles_use_source_structure_and_sync_to_app_data(self) -> None:
         profile = (SITE / "learn/emotion-regulation/observing-describing-emotions.qmd").read_text(encoding="utf-8")
         emotions = (
@@ -159,6 +171,17 @@ class QmdResourceExtractionTests(unittest.TestCase):
                 "## Mindful {#mindful}",
                 "## Appear Confident {#appear-confident}",
                 "## Negotiate {#negotiate}",
+            ),
+            "site/learn/wellness/behavior-chain-missing-links.qmd": (
+                "## Behaviour Chain Analysis {#behaviour-chain-analysis}",
+                "### Vulnerability Factors",
+                "### Prompting Event",
+                "### Links in the Chain",
+                "### Problem Behaviour",
+                "### Consequences",
+                "### Skillful Alternatives",
+                "### Prevention",
+                "### Repair",
             ),
         }
         for relative, expected in checks.items():

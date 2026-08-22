@@ -20,6 +20,27 @@ execute:
 
 The aim is to understand the function of a coping behaviour and build safer alternatives.
 
+## Stages of Change {#stages-of-change}
+
+- **Precontemplation:** You are not currently considering change or do not yet see a need for it.
+- **Contemplation:** You recognize reasons to change and also feel ambivalent.
+- **Preparation:** You intend to act and begin making a specific plan or small changes.
+- **Action:** You actively change the behaviour and environment.
+- **Maintenance:** You strengthen the new pattern and prepare for high-risk situations.
+- **Return to an old pattern:** A lapse can happen at any stage. Treat it as information for a new chain analysis and plan, not proof that change is impossible.
+
+### Change Worksheet Prompts
+
+- What behaviour are you considering changing?
+- What do you get from it in the short term, and what does it cost in the short and long term?
+- What stage best describes your position today?
+- What would move you one step forward?
+- Who, what, or which service could support that step?
+
+::: {.callout-caution title="Urgent overdose risk"}
+The visual overdose and naloxone resources below contain emergency material and are retained for review. If an overdose may be happening, use local emergency services and follow current instructions from trained emergency or public-health professionals.
+:::
+
 <!-- section-scan-resources:start -->
 
 ## Handouts & Worksheets {#handouts-worksheets}
@@ -31,6 +52,14 @@ The aim is to understand the function of a coping behaviour and build safer alte
 
 [Download / View Handout](/resources/wellness/wellness-p036.jpg)
 
+
+<!-- native-resource-content:wellness-p036:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:wellness-p036:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -42,6 +71,54 @@ The aim is to understand the function of a coping behaviour and build safer alte
 
 [Download / View Handout](/resources/wellness/wellness-p037.jpg)
 
+
+<!-- native-resource-content:wellness-p037:start -->
+
+#### Text Version
+
+##### Nark
+
+##### Precon
+
+##### Relagse
+
+##### häTkiq
+
+p.ller:-w; o!
+
+##### Precontempiatiaa
+
+reilå; C. cntemßat:on A which individua! Ecarns
+
+##### Maintenance
+
+##### Creair.Q
+
+tn lhe chsnc,e5 from each new eyele
+
+##### Preparation
+
+makg
+
+##### Acüon
+
+##### Mgve
+
+Do you yourseil or denying e problem in your life? Ef yes,
+
+##### negetive]Wi
+
+##### Contemplaüon
+
+Why should you makg Io 3*Eoviatg this Gcobegmq
+
+**WHY pö&itiue changes this protiem?**
+
+How are yoo (igih
+
+##### hktp://CaI'epatron.Corg
+
+<!-- native-resource-content:wellness-p037:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p038 data-source-id="wellness-p038"}
@@ -51,6 +128,20 @@ The aim is to understand the function of a coping behaviour and build safer alte
 
 [Download / View Handout](/resources/wellness/wellness-p038.jpg)
 
+
+<!-- native-resource-content:wellness-p038:start -->
+
+#### Text Version
+
+What chR"enge; yoo Fee# Io
+
+**sisps should wau take dinke a change?**
+
+##### Attion
+
+Deschbe your {'fan e' action OD you Eave a supparr yes, p*ease you How Fiee you Noedino veuesett Me ictenä'ite steps What action step5 €ldn'q httpd?Parepatronx•.01i1 oarepatron
+
+<!-- native-resource-content:wellness-p038:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p039 data-source-id="wellness-p039"}
@@ -60,6 +151,32 @@ The aim is to understand the function of a coping behaviour and build safer alte
 
 [Download / View Handout](/resources/wellness/wellness-p039.jpg)
 
+
+<!-- native-resource-content:wellness-p039:start -->
+
+#### Text Version
+
+##### Maintenance (Conqinued)
+
+**What havo you Ghanenging?**
+
+**Haw *Oil you sustaia your evenime?**
+
+##### Relapse
+
+Why do you 2hinl( vou relapsed 7
+
+**do 'Ga Tcae about your tc'apse?**
+
+**What you iea:a ticm your w'apse?**
+
+**What ag yaur ot aot*on Io get cn track?**
+
+##### Addftiønal Note
+
+r.atgrc _hup.'/(Ca renatron.com carspatron
+
+<!-- native-resource-content:wellness-p039:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -71,6 +188,64 @@ The aim is to understand the function of a coping behaviour and build safer alte
 
 [Download / View Handout](/resources/wellness/wellness-p034.jpg)
 
+
+<!-- native-resource-content:wellness-p034:start -->
+
+#### Text Version
+
+-Euphdfi@. Tålkåtivé .:Gontidenep. Social[.F.3irt4iiÖus . •Sjéeo.:aid.•. "Réilif'ffdm.#ithdiawc:,.
+
+##### Reliif
+
+**OF THIS PAGE?**
+
+##### Depre$sion
+
+##### Embarassment
+
+##### Gastritis
+
+##### Guilt
+
+##### Family conflict
+
+##### Job less
+
+##### Vomiting
+
+##### Self* disgust
+
+Accidents/Driving under the infiuenee Job performance impaired
+
+##### Brain damage
+
+##### Dizzieness
+
+##### Nausea
+
+##### Unpleasant taste
+
+##### Debt
+
+##### Over-spending
+
+Legal chaf$s
+
+##### Psychological depedence
+
+##### Liver disease
+
+##### Aggression
+
+##### Hangover
+
+##### Cancer
+
+##### Social disapproval
+
+##### Stomach ulcers
+
+<!-- native-resource-content:wellness-p034:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p035 data-source-id="wellness-p035"}
@@ -80,6 +255,36 @@ The aim is to understand the function of a coping behaviour and build safer alte
 
 [Download / View Handout](/resources/wellness/wellness-p035.jpg)
 
+
+<!-- native-resource-content:wellness-p035:start -->
+
+#### Text Version
+
+##### 9 Sige You're Engagng
+
+##### in Maladaptive Coping
+
+##### AiiåTcluaÉ
+
+##### , YOU: Attempt
+
+##### To Keep;your
+
+##### Pissu•ö
+
+sociål$itüatgdns.
+
+##### YOüt Make
+
+##### E*cuses When
+
+##### Concerödd
+
+##### Wiih: Y,ötir;;•
+
+##### Pfoblems
+
+<!-- native-resource-content:wellness-p035:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p040 data-source-id="wellness-p040"}
@@ -89,6 +294,46 @@ The aim is to understand the function of a coping behaviour and build safer alte
 
 [Download / View Handout](/resources/wellness/wellness-p040.jpg)
 
+
+<!-- native-resource-content:wellness-p040:start -->
+
+#### Text Version
+
+**What is naloxone?**
+
+Naloxone {p ronolncsd nu-l_CX-ouvn) is fast-acting drug used reuerse the effetts Cf ark opioid overdose. Naloxone can æstore breath Eng within 2 to minutes.
+
+**Why does naloxone work only temporarifv?**
+
+N&bxone is active the bed}' for only 90 but the effects Df mast can last longer. This that the effects of naloxoae are Likeey to wear of F the cp'Aeds me gone from the body, which could bræelhing to gtap Nöbione mead to be used again, den ending on tho amout±tl rvpe or (liathüd of (erg.r An is an emevgen:y. Euan It has been auaye for heiø. if ur someone you know using opioida, make Cueg Eo carry r,édoxone nith Yolj. available without g prescriptöon and can picked up tt "lost pharfflacies ar local
+
+**Is naloxone safe for everyone?**
+
+Yes, gaioxone is sate for agas. It. wosks or-dy you have opiofds :vetom. is to keep an-hanå 't canaat bc u god not dependence How is naloxone helping to address Canada'S
+
+**opioid crisis?**
+
+Naloxone hss been used to successfully reugf thtusar,ds of opioid overdoses .sc;roee Caneda. iG used by first-responde:s es peramedica and Take-horne aaroxone kite are algo to lhlhu at risk of oue:dose or who is \ikely to ancounter o ne. Take-ho me naioxoae„ kits are. avaiiabie out a prescription oen picköd at most health eucharitie=.
+
+##### KNOW
+
+##### MORE
+
+- Tsbn97B.O.$GO-2893$2
+
+##### THE
+
+In Canada, two types of take-home
+
+##### naloxone kits are Availabee
+
+Ne Spray ig_nraycd Directih the nose whtra it iG Eogdrhac_i. If starts ta take effect in to 3 minutes Fnjectabes Naloxone is injected into a muscle in your &ady: tho Lg-lpgl awn, thigh or buttocks beet. stats to æke effect B to 6 minutes,
+
+##### Naioxone Saves Lives. Get a Kit,
+
+Naloxone tempotariiy reverses the effects of an ove$doee hglg restore V if think someone is experiencing an opioid overdose, cell 9-1-1 ar Eoca! emergency help line, then give naiexone Sy folkcwing the directrons the kit Taker-home kits are Auaieeb12 at most pharmacies or Locae haaåth autharit;es; no preecripti0ß Is meeded Kits expirs and Should be reptaced after 18 to 24 months . Get the facts at &uC-ariaöa
+
+<!-- native-resource-content:wellness-p040:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p041 data-source-id="wellness-p041"}
@@ -98,6 +343,58 @@ The aim is to understand the function of a coping behaviour and build safer alte
 
 [Download / View Handout](/resources/wellness/wellness-p041.jpg)
 
+
+<!-- native-resource-content:wellness-p041:start -->
+
+#### Text Version
+
+Opioids - like oxycodone. and hyd40rnorphons - era medication's thut czn hg*p rei8ue pciu Howevgt. opioid& are cpitids any opioids that are made, shared 0' 50M ii!egaäy.
+
+**How can opioids cause an overdose?**
+
+Oplolda aF!ect hövv b?ain controls yaur breathiny if you toke more npiffids than votr budy handle, you val! to she" s$gns and symptoms of an overdose, sunh as:
+
+##### Saw, nt
+
+bre*thing or 5narin9 awako Ptotact yourself front an overdose
+
+##### If L]Gg opioids
+
+- dan*t With UecohÜI. Otha drL}gs
+
+- don't use - with B fliend
+
+- know the signs ot sn opio;.d overdose canya neloxøne Cot if you witness en overdose, stay and help Witnessing Fin overdose he ficaryr as; a breathing becomes weake;, shallower, ar even srcps cornpieteiy. doses are a medÉca! emergency.
+
+at gceng to hglp can gave Gogaeonors !ife_ Ff vøu'ue taken drugs, or baue some on you, ycx_l ore pretectal drug charges the Good Drug Overdose Act, Itis law ta the pereon Nho seeks BPd
+
+##### KNOW
+
+##### MORE
+
+FACTS. RIG".
+
+**Suspectarmetdose?**
+
+##### CALL
+
+##### Overdoses can happen if you take
+
+an opioid not prascribedfov Yali
+
+- mere than prescribed for you, Gtsch higher dose
+
+- an opioid With other Dfues (e.g icty medication, m Lioc!o or sleeping p4is) an opioid that has been tampeeed with [e.g..
+
+troken c,Eliehed)
+
+- produced or opioids if heve. sapped tekir;g for e Whig and stårt taking thecn again, yoo can be et risk of an overd0$e Becijirsa yaur body is rot used to the dwg anymo'ü.
+
+##### If you suspect an opioid overdose, yau should
+
+Call (or your local emergency hefp *ine) and stav at the scene Giug if you haue it that the Samaritan Drug Overdose Att prttects you from drug possession charges Cåiiiidä.
+
+<!-- native-resource-content:wellness-p041:end -->
 ::::
 
 <!-- section-scan-resources:end -->

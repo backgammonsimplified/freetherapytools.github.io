@@ -26,13 +26,30 @@ PLEASE connects physical care with emotional stability. The overview below is sh
 
 ### Treat Physical Illness {#treat-physical-illness}
 
+Attend to physical health concerns, take prescribed medication as directed, and contact a health-care provider when needed.
+
 ### Balanced Eating {#balanced-eating}
+
+Eat regularly and adequately. Notice whether restriction, overeating, dehydration, or long gaps between meals increase emotional vulnerability.
 
 ### Avoid Mood-Altering Substances {#avoid-mood-altering-substances}
 
+Avoid non-prescribed mood-altering substances and follow the plan agreed on with a qualified prescriber for medications.
+
 ### Balanced Sleep {#balanced-sleep}
 
+Aim for the amount of sleep that supports your functioning. Keep wake time and bedtime reasonably consistent, and use the sleep practice sheet to test what helps.
+
 ### Exercise {#exercise}
+
+Use regular movement that fits your health, mobility, and ability. Small, repeatable activity counts.
+
+## Sleep Practice {#sleep-practice}
+
+- Track bedtime, estimated time to fall asleep, waking during the night, final wake time, and time out of bed.
+- Note naps, caffeine or other substances, medication timing, exercise, and major stressors.
+- Choose one sleep-supporting change at a time and observe the pattern over several days.
+- If sleep problems are persistent, severe, or connected with a medical or mental-health concern, bring the record to a qualified health-care provider.
 
 <!-- section-scan-resources:start -->
 
@@ -55,6 +72,14 @@ PLEASE connects physical care with emotional stability. The overview below is sh
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:wellness-p002:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:wellness-p002:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p007 data-source-id="wellness-p007"}
@@ -64,6 +89,58 @@ PLEASE connects physical care with emotional stability. The overview below is sh
 
 [Download / View Handout](/resources/wellness/wellness-p007.jpg)
 
+
+<!-- native-resource-content:wellness-p007:start -->
+
+#### Text Version
+
+##### Morning
+
+Additionatsléei:Hggiéne Tips..
+
+##### Daytime
+
+- Go tc bed, 2nd getup at {he sarne time each day, Iftdludir,p weekenfis. you want change those times, do se Gradjal!y_ emmple, change your bed! irne by just half an hour this week, ancrher baff bour next week,
+
+- napping 60firæ the day, especially on a regular bas is.
+
+- seme natura{ light dining the day Ga Oatg[dE
+
+##### get gome fresh air during the day. Oven Ehe blinds
+
+- Limit caffeino. Caffeine is Found coffee, tea. cola drinks, chocolater and pain medications _ Have no more than two cups of coffee per dey2 and after iur:eh.
+
+- aware that nicotine a stimulagt. T you area. smoker, nicotiæe withdrawal during the n;ght mzy anaken you
+
+##### Evening
+
+being ?3äiödüLé
+
+##### phyk Dö
+
+##### üge:your
+
+riiétiruéi
+
+##### Nighttime
+
+- Take pressure of-f- Don't force sleeg. The ha'der you try, the morc sleep instead on getting quiet rest and relaxation In
+
+- Eie on your stomach with your head Turnece ta one side you This slaws dawn your breathing.
+
+Once you Teee mcre relaxed, the in which yau Like Io sieep
+
+- taunt backwards from cng as you in eyes Vkuaiize euh number head, Et you not Whea reach zero, at one hundred uptä aslee#.
+
+- on pour Perhqps your breaths, Each time your mind bring yter Put your bedroorfi clock in a drawer, o:- turn its face from you. Waeching the clack adegd pressure on you to fall "j,eev.
+
+- use a night {ight you ett up during the night, don't-turn bright Even bijef exposure to bright light may make harder to get back to sleep.
+
+- if you have for a and canrcåt FäLk asleep, to another toatn, and try again laær_ Associate your hed with not '.'Éth tossing and turning.
+
+wrniræ the Chermaztat a Itttle. i; thought ct61 cold) help sleep.
+
+<!-- native-resource-content:wellness-p007:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -85,6 +162,48 @@ PLEASE connects physical care with emotional stability. The overview below is sh
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:wellness-p008:start -->
+
+#### Text Version
+
+*Emotion Regulation Worksheet 14b*
+
+##### Due Date: Name: Week Starting
+
+In the far left column, put down the days of the week. Then put times/hours in bed, and what you did in the 4 hours before bed, in the next three columns. Along with describing the strategies you used, please rate your degree of rumination before and after using skills. Write in 0 if you had no rumination. Finally, rate the overall usefulness of your strategies. hours/ Starting ending minutes emotion/ emotion/ usefulness Time in bed rumination rumination of to bed/ during the food, drink, exercise intensity Describe strategies used to get to sleep (or intensity strategies Day time up day within 4 hours of bed (0-100) back to sleep) (0-100) (0-100)
+
+##### Hrs
+
+##### Min
+
+##### Hrs
+
+##### Min
+
+##### Hrs
+
+##### Min
+
+##### Hrs
+
+##### Min
+
+##### Hrs
+
+##### Min
+
+##### Hrs
+
+##### Min
+
+##### Hrs
+
+##### Min
+
+0 From DBT Skills Training Handouts and Worksheets, Second Edition by Marsha M. Linehan. Copyright 2015 by Marsha M. Linehan. Permission to photocopy this worksheet is granted to purchasers of 7 this book for personal use only (see copyright page for details). Purchasers may download a larger version of this worksheet from www.guilford.com/dbt- worksheets.
+
+<!-- native-resource-content:wellness-p008:end -->
 ::::
 
 ## Exercises {#exercises}
@@ -106,6 +225,30 @@ PLEASE connects physical care with emotional stability. The overview below is sh
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:wellness-p004:start -->
+
+#### Text Version
+
+1. How do you react when you experience changes or difficulties with your sleep
+
+**patterns?**
+
+##### PHYSICAL
+
+##### MENTAL
+
+##### BEHAVIOUR
+
+2. Did you ever have problems with your sleep? If so, describe what they were.
+
+3. What were some things you did to help you overcome your sleep-related problems?
+
+##### Trillium
+
+##### Health Partners
+
+<!-- native-resource-content:wellness-p004:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -117,6 +260,38 @@ PLEASE connects physical care with emotional stability. The overview below is sh
 
 [Download / View Handout](/resources/wellness/wellness-p005.jpg)
 
+
+<!-- native-resource-content:wellness-p005:start -->
+
+#### Text Version
+
+##### SLEEP
+
+##### SLEEP
+
+_ • the Bedt*rqg and/or now long to
+
+##### Efapi,'
+
+- to baccci. dbiljr
+
+**USE A SLEEP DIARY?**
+
+-t?nhé eeép disiüptlorjg that idfbuehte sleep tb-'i6cr3t*F}
+
+##### More
+
+prcüldeis t6 detæ'rinthe
+
+##### Ot Sc-tidri'
+
+-ell
+
+##### Xiii
+
+iiiéöiikéfi'-
+
+<!-- native-resource-content:wellness-p005:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p006 data-source-id="wellness-p006"}
@@ -126,6 +301,14 @@ PLEASE connects physical care with emotional stability. The overview below is sh
 
 [Download / View Handout](/resources/wellness/wellness-p006.jpg)
 
+
+<!-- native-resource-content:wellness-p006:start -->
+
+#### Text Version
+
+##### 5 Stages o
+
+<!-- native-resource-content:wellness-p006:end -->
 ::::
 
 <!-- section-scan-resources:end -->

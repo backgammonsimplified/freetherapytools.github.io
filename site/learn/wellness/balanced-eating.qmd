@@ -20,6 +20,31 @@ execute:
 
 Balanced eating is body care, not perfection. Use the planning tools in a way that fits your needs and clinical guidance.
 
+## Seven Practical Supports {#balanced-eating-supports}
+
+1. **Eat by time as well as hunger.** Regular meals and snacks can help when hunger cues are muted or irregular.
+2. **Include variety.** Choose foods from different groups and rotate options when practical.
+3. **Plan enough food.** Undereating can increase fatigue, preoccupation, and later extremes.
+4. **Notice all-or-nothing rules.** Aim for a workable pattern rather than a perfect day.
+5. **Prepare for barriers.** Keep realistic options available for limited time, money, energy, or access.
+6. **Eat mindfully when you can.** Notice taste, fullness, satisfaction, pace, and the context without turning observation into judgment.
+7. **Review the pattern with appropriate support.** Medical conditions, allergies, pregnancy, medication effects, and eating disorders can require individualized professional guidance.
+
+## Weekly Food Journal {#weekly-food-journal}
+
+For each day, record meals, snacks, drinks, approximate timing, hunger or energy patterns, and observations that would help you plan. Do not use the journal to assign moral value to food or to punish yourself.
+
+## Weekly Meal Plan {#weekly-meal-plan}
+
+### For Each Day
+
+- Breakfast:
+- Lunch:
+- Dinner:
+- Snacks:
+- Preparation or shopping needed:
+- Backup option:
+
 <!-- section-scan-resources:start -->
 
 ## Handouts & Worksheets {#handouts-worksheets}
@@ -31,6 +56,14 @@ Balanced eating is body care, not perfection. Use the planning tools in a way th
 
 [Download / View Handout](/resources/wellness/wellness-p043.jpg)
 
+
+<!-- native-resource-content:wellness-p043:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:wellness-p043:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p044 data-source-id="wellness-p044"}
@@ -40,6 +73,14 @@ Balanced eating is body care, not perfection. Use the planning tools in a way th
 
 [Download / View Handout](/resources/wellness/wellness-p044.jpg)
 
+
+<!-- native-resource-content:wellness-p044:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:wellness-p044:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -51,6 +92,64 @@ Balanced eating is body care, not perfection. Use the planning tools in a way th
 
 [Download / View Handout](/resources/wellness/wellness-p049.jpg)
 
+
+<!-- native-resource-content:wellness-p049:start -->
+
+#### Text Version
+
+##### Partial Hospitalization Program Wellness Group
+
+##### Meel/snack
+
+##### Breakfast
+
+##### Snacks
+
+##### Lunch
+
+##### Snacks
+
+##### Dinner
+
+##### Sna cks
+
+##### Vegetables
+
+##### and Fruits
+
+##### Whole Grain
+
+oqds
+
+##### Protein Foods
+
+##### Cooking at
+
+##### home/ Eating
+
+##### with Athets
+
+##### Mindful Eating
+
+##### Monday
+
+##### Tues dav
+
+##### Wednesday
+
+##### Thursday
+
+##### Ttü.tuxti
+
+##### Haa!th Partners
+
+##### Friday
+
+##### Saturday
+
+##### Sun dav
+
+<!-- native-resource-content:wellness-p049:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p050 data-source-id="wellness-p050"}
@@ -70,6 +169,38 @@ Balanced eating is body care, not perfection. Use the planning tools in a way th
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:wellness-p050:start -->
+
+#### Text Version
+
+##### BREAKFAST
+
+##### LUNCH
+
+##### DINNER
+
+##### SNACKS
+
+##### COOKING AT
+
+##### EATING WITH
+
+##### HOME/
+
+##### OTHERS
+
+##### MINDFUL
+
+##### EATING
+
+##### MONTH
+
+##### WEEK
+
+##### SHOPPING LIST
+
+<!-- native-resource-content:wellness-p050:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -81,6 +212,40 @@ Balanced eating is body care, not perfection. Use the planning tools in a way th
 
 [Download / View Handout](/resources/wellness/wellness-p045.jpg)
 
+
+<!-- native-resource-content:wellness-p045:start -->
+
+#### Text Version
+
+##### Eating Well
+
+on a Budget
+
+##### Eöfs
+
+enjoy hÉå_lthy .
+
+##### Shäéke-
+
+bagg those, In boxe:.
+
+##### Corisideiijo-riame brahdÉ
+
+##### -"tiié hani$g; but: fai (essmone#-
+
+_ food hems:äiéöftéii a
+
+##### - _TiY
+
+whith Cüt•döWö OtikcööVéniénæ• . foods..
+
+##### öWn- Eueuy6Lx
+
+- si#s: , SéRvemeatlesshiéai$.
+
+beåhs, - meat - HOt biéäkfäSt öréäItitöf,', Wheal (are -a-:greef åi-z
+
+<!-- native-resource-content:wellness-p045:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p046 data-source-id="wellness-p046"}
@@ -90,6 +255,36 @@ Balanced eating is body care, not perfection. Use the planning tools in a way th
 
 [Download / View Handout](/resources/wellness/wellness-p046.jpg)
 
+
+<!-- native-resource-content:wellness-p046:start -->
+
+#### Text Version
+
+ada's d guide Häve plenty Végétäbjes_ . •ånd fruits-
+
+##### _ Canada -
+
+Eat well. Live well. Eat a variety of heaithyfoodseach day
+
+##### Eat Piot_eiii
+
+_föQde:. Discover guidä at'
+
+##### Canada.ca/Foodguide
+
+##### MÅKeswäter
+
+etihk, of choice
+
+##### - : Choose
+
+##### wbdléGraen
+
+föäds
+
+##### Canadä
+
+<!-- native-resource-content:wellness-p046:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p047 data-source-id="wellness-p047"}
@@ -99,6 +294,30 @@ Balanced eating is body care, not perfection. Use the planning tools in a way th
 
 [Download / View Handout](/resources/wellness/wellness-p047.jpg)
 
+
+<!-- native-resource-content:wellness-p047:start -->
+
+#### Text Version
+
+##### Canada's
+
+foodguide Eat well. Live well. more than.:thefoodsyou eat Bé mihdftii Of. •ydut..e.ating habits Enjöyydür_.fböd
+
+- COOK Edt meals with others f66d lab61ä -
+
+##### Gnada
+
+##### Limit Ioods
+
+at
+
+##### Canada:ca/Foodguide
+
+##### : $4. itiärkéiiiij.
+
+Canadå.
+
+<!-- native-resource-content:wellness-p047:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p048 data-source-id="wellness-p048"}
@@ -108,6 +327,30 @@ Balanced eating is body care, not perfection. Use the planning tools in a way th
 
 [Download / View Handout](/resources/wellness/wellness-p048.jpg)
 
+
+<!-- native-resource-content:wellness-p048:start -->
+
+#### Text Version
+
+Your hands can be very useful in estimating appropriate portions. When planning a meal, use the foilowing partion
+
+##### sizes as a guide
+
+an a-now-: thé size of fist fc-r or Drir:k 00 ca 1 cup of fat rvoiik: -n'itr: a
+
+- ,ö.keih f' orr
+
+- Choose r nuth es rou i" hands.
+
+##### Choose bright}
+
+yellow,' beams, orocca:.-).
+
+##### arÄc.s
+
+Choose en amour:z the size c:' the palm ofycur r.and the thickness rf your f:rger. ta amount the size of ycur
+
+<!-- native-resource-content:wellness-p048:end -->
 ::::
 
 <!-- section-scan-resources:end -->

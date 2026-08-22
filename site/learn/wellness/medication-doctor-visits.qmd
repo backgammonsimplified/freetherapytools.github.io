@@ -20,6 +20,44 @@ execute:
 
 These tools support accurate communication with prescribers and other health-care providers.
 
+## Prepare for an Appointment {#prepare-appointment}
+
+### Before
+
+- Write the main reason for the visit and the questions you most want answered.
+- Bring an up-to-date medication list, including dose, timing, prescriber, non-prescription products, allergies, and relevant side effects.
+- Note symptoms, when they started, what changes them, and how they affect daily life.
+- Bring records or a support person when helpful and permitted.
+
+### During
+
+- Describe concerns directly and ask for unfamiliar terms to be explained.
+- Ask what options exist, their expected benefits, important risks, how to use the plan, and what should prompt follow-up or urgent care.
+- Repeat the plan back in your own words and write down next steps.
+
+### After
+
+- Arrange tests, referrals, prescriptions, or follow-up appointments.
+- Store the updated medication and appointment information where you can find it.
+- Contact the clinic or pharmacist if instructions conflict or remain unclear.
+
+## Current Medication Record {#current-medication-record}
+
+For each medication, record:
+
+- medication name and strength;
+- dose and schedule;
+- reason for taking it;
+- prescriber and pharmacy;
+- date started or changed;
+- benefits noticed;
+- side effects or concerns;
+- refill date and monitoring instructions.
+
+::: {.callout-caution title="Medication safety"}
+Do not start, stop, or change a prescribed medication solely from this worksheet. Discuss changes and concerning effects with a qualified prescriber or pharmacist; use emergency services for an urgent reaction or immediate danger.
+:::
+
 <!-- section-scan-resources:start -->
 
 ## Handouts & Worksheets {#handouts-worksheets}
@@ -31,6 +69,14 @@ These tools support accurate communication with prescribers and other health-car
 
 [Download / View Handout](/resources/wellness/wellness-p053.jpg)
 
+
+<!-- native-resource-content:wellness-p053:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:wellness-p053:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p055 data-source-id="wellness-p055"}
@@ -40,6 +86,50 @@ These tools support accurate communication with prescribers and other health-car
 
 [Download / View Handout](/resources/wellness/wellness-p055.jpg)
 
+
+<!-- native-resource-content:wellness-p055:start -->
+
+#### Text Version
+
+##### Psychiatric Medicati0ü isn't Safa
+
+Psychktric medication extensively studied and tested rigorous clinical trials, across djfferent populätions, before it's ever available the to
+
+##### Common
+
+medications, like an are generalÉy safe and wea tolgra€ed, AH madications, psychiatric or potential side effects and risks, Your should discuss those with you when talking about lhe poi€ntial benefits. You have evevy right ask, as welt!
+
+##### Once You Taking
+
+##### Medäcation, You Can't Stop
+
+Stopping med Icatean abruptly not recommended, and stopping some medication abyupi[y can cause withcwavqai symptoms Chaa can be senous. If you and your pravjder decide it's time for you to go off your medication, there are safe ways tc do so: The mast common method involves gradually tapering your dose, burc it should always be dona under the supervision of a medfca\ professional wha r,an monitor your symptoms.
+
+##### Lifeslyle Changes are Enough
+
+to Treat All Psychiatric *ssoes Evidence shows healthy routines Eke good sleep hygiene, exercise, and nutrition pgay a tola in keeping people Physicahy and mmtat{y Heateby_ F-tr some people, working out, heathier diet, and better night's steep may not be enough orr their own, which is where Dthev form 5 of treatment. kike therapy and medication come in. Often times, taking medication con even maka it easier to put those lifestyle changes in action!
+
+##### Psychiat$fic Medication
+
+##### Has Verribee Side Effects
+
+##### AS mentioned,
+
+all medications have potential side effects, Providers usually only prescribe a medication any kind when they Think the benefits outweigh the potect\al rÉsks. When you start taking a mental heath medicationd your provider likely start a kower dose to reduce the risk of adverse side common side effects are typically mild and decrease attu the first few weeks Df taking the medication, they worsen, talk to your prescribäng
+
+##### Psychiatric Medication Changes
+
+##### Your Personality/Who You Are
+
+The goal of medication is to help you feel more like yowsekf, not The goak is heip you feel better mentady and function healthily in yoar daily life
+
+##### Psychiatric Medication is Addictive,
+
+##### and Get Addicted
+
+Certain controlled mentat health rnedications, like benzodÉazep4nes, do come "ith a risk of physical or psychological dependence. For that reason, thay are u suauy prescribed short-term, and the flsk of abuse ar dependence is typically greater in people with a pyevious history of substance use disorder.
+
+<!-- native-resource-content:wellness-p055:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p056 data-source-id="wellness-p056"}
@@ -49,6 +139,44 @@ These tools support accurate communication with prescribers and other health-car
 
 [Download / View Handout](/resources/wellness/wellness-p056.jpg)
 
+
+<!-- native-resource-content:wellness-p056:start -->
+
+#### Text Version
+
+Psychiatric Meclicatäon js a
+
+##### "Quick-Fixjshort-cut/Cop-cut"
+
+##### This myth is two-fold
+
+##### Fi rhost
+
+medications Miat you'd cad crquick"- Antidepressants, for instance, can take 6-8 weeks ta work fully - and that75 after you fiad the right medication AND (io:seæ Secat•dly, Whike a may not solve the underlying cause of your mental hea\ti-l condition, it can help you a lifestyle and do the things that make you feet like you.
+
+##### Noa-Prescription Medications are
+
+##### Safer than Prescription Medications
+
+##### Splitting Pills is Always Safe
+
+##### and Cost-Effective
+
+Consumers r especially senic»-s, often split påils to save money. but doing so can disrupt esserstial rxoæerties of Ehe oxarnp{e, sorne medications contain a time- release property that is destt-oyed when a pitl is cut: reducing the medication's safety. In addition, some pills are made with a protective coatÉng to prevent nausea. Always ask pharmacist a pill is safe to split. AIE medications, even those sold withcut a piescript*on, have the potentiak to cause harm, Taking more than the recommended dose can cause serious adverse effects, such as stomach bkeeding, as well as or problems, The effects tf certain prescription med*cations he can Significantw bolstered or weakened it taken with some non=prescri medications.
+
+##### Patients
+
+should tell their phY5ÉCjan and pharmacist about au the medications including and herba{ supplements they are taking to hekp avt*d potentiakiy dangerous drug The Name/Cfass of MY Medication is Aeways Associated w}th My Diagnosis A Singee can be prescribed many cfffferant symptoms and dlagnases - Psychiatrfc Qr Medication is Only for
+
+##### "Weak" Patients Severe Conditi0üs
+
+We may assume that if we need medication manage mental iüness symptoms, it means there iG something wrong with our or a lack cf wälpower. The trüth that liental health is a serious and it takes courage to seek help far your Weel-being. There are many peopie around the world who currently use medication and Heaethy; successful and Meanrngfue lives. While stigma sur:ounding mentat heath exists, it's (Mpcrtanc to remember .that your use of for mentat Tmly a responsible and proactive method of managing your wetlness. In the same way any physi cal may require otherwise.
+
+##### Antidepressants,
+
+stim utants, medication, the men tat health is no different. Ask yourself: would you ever shame or question a person with diabetes for taking insulin? It's not a matter Gf willpower, qt's a nnatter 'f reality, antipsychotics, mood stabilizers, among other of drugs can be plescrbed for a variety reasons! fire. can be taking an antipsychotic and have no psychosis history/diagnosis/symptoms. coukd be prescribed as a sleep
+
+<!-- native-resource-content:wellness-p056:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -60,6 +188,14 @@ These tools support accurate communication with prescribers and other health-car
 
 [Download / View Handout](/resources/wellness/wellness-p054.jpg)
 
+
+<!-- native-resource-content:wellness-p054:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:wellness-p054:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p060 data-source-id="wellness-p060"}
@@ -79,6 +215,88 @@ These tools support accurate communication with prescribers and other health-car
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:wellness-p060:start -->
+
+#### Text Version
+
+##### My Known Allergies
+
+##### Dose
+
+##### Why I am taking the medication
+
+##### Side effects
+
+##### How often
+
+##### Dose
+
+Why I am taking the medication;
+
+##### Side effects
+
+##### How often
+
+##### Dose
+
+##### Why I am taking the medication
+
+##### Side effects
+
+##### How often
+
+##### Dose
+
+##### Why I am taking the medication
+
+Side effects.
+
+##### How often
+
+##### Dose;
+
+Why 1 am taking the medication;
+
+##### Side effects
+
+##### How often
+
+##### Dose
+
+##### Why I am taking the medication
+
+##### Side effects
+
+##### How often
+
+##### Dose
+
+##### Why I am taking the medication
+
+##### Side effects
+
+##### How often
+
+##### Dose
+
+##### Why I am taking the medication
+
+##### Side effects
+
+##### How often
+
+##### Dose
+
+##### Why I am taking the medication
+
+##### Side effects
+
+##### How often
+
+##### My Pharmacy
+
+<!-- native-resource-content:wellness-p060:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p061 data-source-id="wellness-p061"}
@@ -98,6 +316,88 @@ These tools support accurate communication with prescribers and other health-car
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:wellness-p061:start -->
+
+#### Text Version
+
+##### My Known Allergies
+
+##### Dose
+
+##### Why I am taking the medication
+
+##### Side effects
+
+##### How often
+
+##### Dose
+
+Why I am taking the medication;
+
+##### Side effects
+
+##### How often
+
+##### Dose
+
+##### Why I am taking the medication
+
+##### Side effects
+
+##### How often
+
+##### Dose
+
+##### Why I am taking the medication
+
+Side effects.
+
+##### How often
+
+##### Dose;
+
+Why 1 am taking the medication;
+
+##### Side effects
+
+##### How often
+
+##### Dose
+
+##### Why I am taking the medication
+
+##### Side effects
+
+##### How often
+
+##### Dose
+
+##### Why I am taking the medication
+
+##### Side effects
+
+##### How often
+
+##### Dose
+
+##### Why I am taking the medication
+
+##### Side effects
+
+##### How often
+
+##### Dose
+
+##### Why I am taking the medication
+
+##### Side effects
+
+##### How often
+
+##### My Pharmacy
+
+<!-- native-resource-content:wellness-p061:end -->
 ::::
 
 ## Exercises {#exercises}
@@ -119,6 +419,14 @@ These tools support accurate communication with prescribers and other health-car
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:wellness-p052:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:wellness-p052:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -130,6 +438,24 @@ These tools support accurate communication with prescribers and other health-car
 
 [Download / View Handout](/resources/wellness/wellness-p057.jpg)
 
+
+<!-- native-resource-content:wellness-p057:start -->
+
+#### Text Version
+
+##### My Current Medications
+
+There are me ny applications that can be downloaded td your phone and/or tablet to assist with medication organization end reminders, Bekow are a_few examples that can be down\oaded via App Store on yow Apple device or. Google Piay on your Android device, iBöätäiid\'$öh8 R6iiiÉd
+
+##### "-Pill
+
+##### Medsca pe
+
+##### Medscape
+
+- This free, online database provides information on prescrioüon and ove(-the-ccunter dmgs, drug interection checker toot, and a pill identifier tool This can a resource {c {earn Entre about your credications
+
+<!-- native-resource-content:wellness-p057:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p058 data-source-id="wellness-p058"}
@@ -139,6 +465,38 @@ These tools support accurate communication with prescribers and other health-car
 
 [Download / View Handout](/resources/wellness/wellness-p058.jpg)
 
+
+<!-- native-resource-content:wellness-p058:start -->
+
+#### Text Version
+
+Once a day Weekly Pill
+
+##### Orgaaizer
+
+Twice a day Weekly Pikl
+
+##### Organizer
+
+times a day Week}y Pill
+
+##### Organizer
+
+##### Blister Pack
+
+Hclps plan your weekly medications
+
+- J.rarge letters make it easy to read Ceear plastic lids open wide for easy filling and Visuae inspccticn of medications Dosage and quantities can be prepared in \idvance Most organizers have removable containers fox easy The "once a day" pih box is good if you aced to take pills The "twice a day" pill box is good if you ne.cd to organize your morning and evening "fours times a day*' pill box is good if you need to take pills in the marning, afternoon, and at bedtime Some pharmacists will a wcekky pill box for you.
+
+The Wister pack is lye-filled by your pharmacist and be delivered preparcd for you to pick up at the pharmacy. Where to purchase;
+
+- Any ph annacy
+
+- slores Ordered through internet Prices range from $1 .DO $10.00 *Be sure to look around for best options and prices to meet yout specific needs.
+
+creaied _:Jk Gust for
+
+<!-- native-resource-content:wellness-p058:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p059 data-source-id="wellness-p059"}
@@ -148,6 +506,26 @@ These tools support accurate communication with prescribers and other health-car
 
 [Download / View Handout](/resources/wellness/wellness-p059.jpg)
 
+
+<!-- native-resource-content:wellness-p059:start -->
+
+#### Text Version
+
+Si:nple use. Can set up for medications twicc.t thrcc or four times a day. Tray slides hack ta keep pills; contained. Automatic set-up with push of •a bullon. A tami provides of' when to take Medicate0fi. Timed alarm system provides nexg dosage automaticaklyr 103ds up to 7 days of 4 times per day dosing. Stores medication undec k_wk gnd key
+
+- _Pa\Iicukqiy helpfil when dosing is comp3ex and reminders are needed to lake
+
+##### Medreadytm Automaged Medication
+
+##### Dispenser
+
+##### Where to purchase
+
+medication.
+
+- Pharmacy or specialty medical supply M8ny options availabie hy order on thc internet Price ranges from $5.00 to $150.00 by Healih, -j*iihum Health 20] J
+
+<!-- native-resource-content:wellness-p059:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p062 data-source-id="wellness-p062"}
@@ -157,6 +535,30 @@ These tools support accurate communication with prescribers and other health-car
 
 [Download / View Handout](/resources/wellness/wellness-p062.jpg)
 
+
+<!-- native-resource-content:wellness-p062:start -->
+
+#### Text Version
+
+Helpirg you find a fanü!y doctor or nurse pra(titioner on reconnect people toithmx-t health pp-ovider one. How does Health Caxe Connect support your
+
+**search ror a Famiey health rare provider?**
+
+Health Connect is A that a health rare provider find thee•r tomrnunäty_ The i!luguam doctors or who ur e accepting patients aild links them peagle "'hn are in need a fami3y care prnhörnrr. How tojoin the program Registering fov Heilt.h Care When speak to who a oi and you for the preg-ara. Yau up online at. ontario .l_ta.meøltheareconnect Health Care Connect gives priority those most in need efa family health care provider given Io iMd#Hdllüiå" hea:t.h Yau hp referred Io a Panli?y u IIE•aet1tlnncr once on-e_ És C4tre to assist you, /iut gou sh.Dir.td 'cggp Aeudliz eave Efouaoura as What you need to know about Health (are
+
+##### Connect
+
+- C'.are_ assist* your a family 0? ptaelit'ioner
+
+- It does not gueæ-anf.ce (hat, ane be fænt>d, ShüuEd aisa cnnténac looking your
+
+- You k Care Connector supports your search for a family health care provider yor.ikve joined a O.ai}ed u Caye wilt be assigned to you lind a health provider in your area.
+
+(are and BE sore get Louch Caæe_ if Voui' earl(åcl information or health i Jo you need Caruily doctor or nurse can 1-8&0-445-1822 or visit ontario.ea/hcaltheargcunneet
+
+##### Rontario
+
+<!-- native-resource-content:wellness-p062:end -->
 ::::
 
 <!-- section-scan-resources:end -->

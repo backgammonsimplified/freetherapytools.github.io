@@ -22,7 +22,49 @@ A behaviour chain traces prompting events, vulnerabilities, links, consequences,
 
 ## Behaviour Chain Analysis {#behaviour-chain-analysis}
 
+Use a chain analysis after an ineffective behaviour to understand causes and plan solutions. Describe each link specifically and without global self-judgment.
+
+### Vulnerability Factors
+
+What made you more vulnerable before the event—illness, sleep, eating, substances, pain, stress, conflict, isolation, or another factor?
+
+### Prompting Event
+
+What event began the chain? Describe the observable facts: who did what, when, and where?
+
+### Links in the Chain
+
+Trace the sequence in order. Include thoughts, interpretations, emotions, body sensations, urges, actions, and events in the environment. Add small links rather than jumping from the prompting event straight to the problem behaviour.
+
+### Problem Behaviour
+
+Describe exactly what you did or did not do, including its intensity, duration, and relevant context.
+
+### Consequences
+
+What happened immediately and later? Include effects on you, other people, the environment, and whether any consequence reinforced the behaviour.
+
+### Skillful Alternatives
+
+For every important link, identify a skill or different action that could have changed the chain. Mark the earliest realistic place to intervene.
+
+### Prevention
+
+Plan how to reduce vulnerability and cope ahead for similar prompting events.
+
+### Repair
+
+Identify what can be repaired, corrected, or learned from now. Repair is an effective action, not punishment.
+
 ## Missing-Links Analysis {#missing-links-analysis}
+
+Use a missing-links analysis when an effective behaviour did not happen.
+
+1. **Did you know what effective behaviour was needed?** If not, get information, instructions, or clarification.
+2. **Were you willing to do it?** If not, examine pros and cons, values, and consequences; work on commitment.
+3. **Did the thought of doing it occur?** If not, add cues, reminders, schedules, or environmental supports.
+4. **What got in the way when you tried?** Identify missing skills, emotions, thoughts, practical barriers, and reinforcement patterns.
+5. **What is the repair and future plan?** Practise the needed skill, change the environment, and specify the next cue and action.
 
 <!-- section-scan-resources:start -->
 
@@ -45,6 +87,14 @@ A behaviour chain traces prompting events, vulnerabilities, links, consequences,
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:wellness-p023:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:wellness-p023:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -56,6 +106,48 @@ A behaviour chain traces prompting events, vulnerabilities, links, consequences,
 
 [Download / View Handout](/resources/wellness/wellness-p028.jpg)
 
+
+<!-- native-resource-content:wellness-p028:start -->
+
+#### Text Version
+
+##### WHAT EXACTLY •S THE BEHAVIOUR THAT I AM ANALYZENG7
+
+WHAT PROMPTING EVENT IN THE ENVIRONMENT STARTED ME ONTHE CHAEN ro MY
+
+**TARGETED at-HAVIOUR?**
+
+WHAT WERE MY VULNERABLILITY FACTORS? {check apply) Ü Unbalanced sleep Unbalanced eatiag Onbalanted Ü Used mood-altering drugs or prescriptions in a non-
+
+##### prescrihed way used alcohoi/drugs other
+
+WHAT WERE THE GNKS EN THE CHAEN BETWEEN THE PROMPTING EVENT AND THE
+
+**PROBLEM BEHAVIOUR?**
+
+Possib*o Types ot Links
+
+##### A. Acidns
+
+g, eereatioos
+
+##### F,
+
+teedngs D. E.
+
+##### F,
+
+G.
+
+##### Actions
+
+##### Body Sensations
+
+##### Cognitionshthoughts
+
+##### Events
+
+<!-- native-resource-content:wellness-p028:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p029 data-source-id="wellness-p029"}
@@ -65,6 +157,30 @@ A behaviour chain traces prompting events, vulnerabilities, links, consequences,
 
 [Download / View Handout](/resources/wellness/wellness-p029.jpg)
 
+
+<!-- native-resource-content:wellness-p029:start -->
+
+#### Text Version
+
+**WHAT WERE THE SHORT TERM PROS'GONS OF ENGAGING IN THIS BEHAVIOUR?**
+
+##### Cons
+
+**WHAT WERE THE LONG TERM PROS'CONS OF ENGAGING IN BEHAVFOUR?**
+
+##### Cons
+
+##### PART
+
+##### SOLUTION ANALYSES
+
+##### TH*NGS CAN DO TODAY TO REDUCE FACTORS;
+
+##### WAYS TO PREVENT/COPE DIFFERENTLY WITH THE PROMPTING EVENT
+
+"If A Was to happen to me again today, could cope by:
+
+<!-- native-resource-content:wellness-p029:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p030 data-source-id="wellness-p030"}
@@ -74,6 +190,24 @@ A behaviour chain traces prompting events, vulnerabilities, links, consequences,
 
 [Download / View Handout](/resources/wellness/wellness-p030.jpg)
 
+
+<!-- native-resource-content:wellness-p030:start -->
+
+#### Text Version
+
+**WHAT HARM (or CONSEQUENCES) DID MY PROBLEM BEHAVIOUR CALCSE?**
+
+##### PLANS 70 CORRECT (or REPAIR) AND OVERCORRECT THE HARM
+
+THREE SKILLS I Commit TO USING IN THE FUTURE WHEN URGES USE THIS
+
+##### BEHAVIOUR HAPPEN AGAIN;
+
+2. 3. On the C-10 rate how helpful this behaviour chain was for yo« < 10 extremely O not
+
+##### at ail he;pful
+
+<!-- native-resource-content:wellness-p030:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p031 data-source-id="wellness-p031"}
@@ -93,6 +227,14 @@ A behaviour chain traces prompting events, vulnerabilities, links, consequences,
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:wellness-p031:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:wellness-p031:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p032 data-source-id="wellness-p032"}
@@ -112,6 +254,14 @@ A behaviour chain traces prompting events, vulnerabilities, links, consequences,
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:wellness-p032:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:wellness-p032:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -123,6 +273,14 @@ A behaviour chain traces prompting events, vulnerabilities, links, consequences,
 
 [Download / View Handout](/resources/wellness/wellness-p024.jpg)
 
+
+<!-- native-resource-content:wellness-p024:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:wellness-p024:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p025 data-source-id="wellness-p025"}
@@ -132,6 +290,66 @@ A behaviour chain traces prompting events, vulnerabilities, links, consequences,
 
 [Download / View Handout](/resources/wellness/wellness-p025.jpg)
 
+
+<!-- native-resource-content:wellness-p025:start -->
+
+#### Text Version
+
+**WHAT EXACTLY IS TEE BEHAVIOUR THAT AM ANALYZING?**
+
+cete seu,ing
+
+##### WHAT PROMPTING EVENT THE ENVIRONMENT STARTED ME ONTHE CHAIN 70 MY
+
+**TARGETED BEHAVIOUR?**
+
+f snoozed 3 times in the Momfng and did Döt get ready the night before Wi*Av WERE MY VULNERABLILIEY FACTORS? (check that apply) Unbalanced sleep Unbalanced eating Unbalanced exercise ü Used mood-aibeöng drugs or prescriptions in a non-
+
+##### prescribed way Used Alcohowdrugs other
+
+Sftess about upcoming conversation mokher
+
+##### Headache
+
+WHAT WERE THE THE CHAIN SETWEEN THE PROMPT)NG EVENT AND THE
+
+**PROBLEM BEHAV\OUR?**
+
+##### Passibee Types Links
+
+##### A. Actions
+
+B. Eqdy sensalio,zs
+
+##### O, Æö9ÄIEoä$Fthtughts
+
+A. B. E.
+
+##### Actions
+
+- 1 was up EN night serowng on my phone, Yelled back at my partner for bothehng me aboul the dishes
+
+- Threw my bag across the room and started yelling because I could not find what I needed. Snoozed three times.
+
+##### ecdy Sensations
+
+##### Felt gmggy
+
+Low ena;gy
+
+##### Headache
+
+- Ngusee
+
+##### Cognitions/thoughts
+
+- {'m going to be 'ate ag8in! Everyone witl tha! Vm jwespansfbie and get it righf What's the point of going? sh0Gtdnf oothergowng
+
+- I'm not feeling wefi and not in the mcod_
+
+##### Events
+
+<!-- native-resource-content:wellness-p025:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p026 data-source-id="wellness-p026"}
@@ -141,6 +359,60 @@ A behaviour chain traces prompting events, vulnerabilities, links, consequences,
 
 [Download / View Handout](/resources/wellness/wellness-p026.jpg)
 
+
+<!-- native-resource-content:wellness-p026:start -->
+
+#### Text Version
+
+F. Panner yelled at me For not doing the dishes as reedy in the mornjnq
+
+##### Feelings
+
+Just started sgejng i'm so angw that my partner was me and knew } was frying fo be on tima for PHP Anxious that am going to be 'ate for the time this "eek
+
+**WHAT WERE THE SHORT TERM PROSICONS OF ENGAGING IN BEHAVIOUR?**
+
+##### pros
+
+Gel to *feep Miss lhe mole crowded bus the morning
+
+##### Cons
+
+have to seta qaaf Io corne on time Clinician reminding me or my r 2 behaviour Fee' shame as f ya/k into 'ate dunng Mindfulness activity
+
+- out G 031 Setting tonn
+
+**WHAT WERE THE LONG TERM PROS'CONS OF ENGAGING IN THIS BEHAVIOLR?**
+
+##### präS
+
+##### Cons
+
+Don? have to opal'enge myself
+
+##### Do ECA
+
+Feet shame that 13m Qlweys fate
+
+##### PART II
+
+##### SOLUTION ANALYSIS
+
+THINGS I CAN DO TODAY TO REDUCE MY VULNERAB'L\TY FACTORS:
+
+##### Steep hygriene„
+
+Medüation betwe bed, aa!anceä eating,
+
+##### WAYS TO PREVENT/COPE DIFFERENTLY THE EVENT
+
+"lf xx was to happen to me again toda% I couid cope by: Let my Partnef know !h3t am running late and we con later Take a bæath Mindfully abserve my body sensaoons Identity my emotion-anger and anxious
+
+**Ghatk {in with myself With check he facts thal everyone thinks that I'm in-espansif)'?**
+
+can'! get y,' right Idenufy my thinking fraps„-mind reading and labelling problem so;va hopv to better vepare tor the next day oii my phone at 10:00 pm
+
+<!-- native-resource-content:wellness-p026:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p027 data-source-id="wellness-p027"}
@@ -150,6 +422,32 @@ A behaviour chain traces prompting events, vulnerabilities, links, consequences,
 
 [Download / View Handout](/resources/wellness/wellness-p027.jpg)
 
+
+<!-- native-resource-content:wellness-p027:start -->
+
+#### Text Version
+
+**WHAT HARM (or CONSEQUENCES} 010 MY PROBLEM BEHAVIOUR CAUSE?**
+
+- Feel Shame about f ny behaviour My G/inic,ian haff to meet "ith ine again about temg t have do a BCA
+
+##### PLANS TO CORRECT (o, AND OVERCORRECT THE HARM
+
+##### Do a BOA
+
+Pfan to come on time the next day THREE SKILLS I COMMIT TO USENG IN THE FUTURE WHEN URGES TO use THIS
+
+##### Behaviour RAPPEN AGAIN
+
+1. P\Ohlejn So'ving
+
+2. Opposife Action
+
+3. pros & cons 4 Positive seßl-ta/k On the rate how Helpfue this behavlour chain was for you (10 Extremeev helpful, G not
+
+##### at all helpfu
+
+<!-- native-resource-content:wellness-p027:end -->
 ::::
 
 <!-- section-scan-resources:end -->

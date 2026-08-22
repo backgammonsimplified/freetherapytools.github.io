@@ -20,6 +20,37 @@ execute:
 
 Behavioural activation uses planned action to interrupt avoidance and increase contact with meaningful activities.
 
+## The Behavioural Activation Cycle {#behavioural-activation-cycle}
+
+Low mood or anxiety can reduce activity. Less activity means fewer opportunities for pleasure, mastery, connection, and evidence that action is possible, which can deepen low mood and avoidance.
+
+Behavioural activation reverses the cycle:
+
+1. Notice avoidance and the situations in which it occurs.
+2. Choose a small, specific activity linked with pleasure, mastery, connection, or a valued role.
+3. Schedule when and where it will happen.
+4. Act according to the plan rather than waiting to feel motivated first.
+5. Record what happened and what you noticed before and after.
+6. Adjust the size or timing and repeat.
+
+## Activity Monitoring {#activity-monitoring}
+
+For each part of the day, record:
+
+- what you did;
+- your mood or sense of pleasure;
+- your sense of achievement or mastery;
+- patterns between activity, avoidance, and mood.
+
+## Activity Planning {#activity-planning}
+
+- **Activity:** What exactly will you do?
+- **Purpose:** Is it for pleasure, mastery, connection, self-care, or a valued responsibility?
+- **When and where:** Put it into a real time and place.
+- **Smallest workable version:** What counts if energy is limited?
+- **Support or barrier plan:** What could help you start?
+- **Review:** What happened, and what is the next effective step?
+
 <!-- section-scan-resources:start -->
 
 ## Handouts & Worksheets {#handouts-worksheets}
@@ -41,6 +72,14 @@ Behavioural activation uses planned action to interrupt avoidance and increase c
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:wellness-p013:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:wellness-p013:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p014 data-source-id="wellness-p014"}
@@ -50,6 +89,14 @@ Behavioural activation uses planned action to interrupt avoidance and increase c
 
 [Download / View Handout](/resources/wellness/wellness-p014.jpg)
 
+
+<!-- native-resource-content:wellness-p014:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:wellness-p014:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p015 data-source-id="wellness-p015"}
@@ -59,6 +106,20 @@ Behavioural activation uses planned action to interrupt avoidance and increase c
 
 [Download / View Handout](/resources/wellness/wellness-p015.jpg)
 
+
+<!-- native-resource-content:wellness-p015:start -->
+
+#### Text Version
+
+##### What hs
+
+**Behaviour Activation?**
+
+##### BATTERY CENÉRATOR
+
+- energy and fö tike-a- we: to be: full-In dr_dér- _fcr: _somethihg: Bzhaviot@l activätiofi, we use a diffe$ent analogy; ,ihåt: Vf.• Båt_ter-y. - Many years ago, Bik", With-lights that were powered .emergéncy:fläShlights that use the of' Wihdihg å physiéål ere-hk make: the tight shin': This is works: -SOmé-Wörk needs to- be pit; for the Ilght tö Start shtnirig. båSéd 'dii
+
+<!-- native-resource-content:wellness-p015:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p016 data-source-id="wellness-p016"}
@@ -68,6 +129,22 @@ Behavioural activation uses planned action to interrupt avoidance and increase c
 
 [Download / View Handout](/resources/wellness/wellness-p016.jpg)
 
+
+<!-- native-resource-content:wellness-p016:start -->
+
+#### Text Version
+
+##### BEHAVIORAL
+
+##### ACTIVATION TIPS
+
+Behaviorai Activation can be chagengrnq. It is common encourlge$ :cadbäocks along the way ami war;t give up. The only barrier to improvemenl is giving up you cofttinue to *eat/" about your valued hte course and stay
+
+- o-ut there", chances are things impsove: use the t\ps beiow to help navigate *hat came up diiring course Behavioral Treatment.
+
+i. Be prepared for a challenge *ecausæ we are working against our Hfain's attempts to protect us , it takes effor* aed same discomfor\ Ea get results from Behaviorai the Iohg run. Mvyé öne' Step at tiiné" Céf.'tbåck: höiiö."- Wnen failures inevitably happen, be prepared to (gspond active*y_ Depressio{l Wiee Eel! us to give when things don't and try convince us that ail ihose rægative thoughts are {he t,ruth_ Prove the depression wrong by getting back there and moving toward what you really Rewaif?ing the takes time. ane Smael step at a time, Tiying move qu\Ckiy a recipe for faiiure disappointment which can ovepaheim us to the pohm of waning to give up: C'Siowly the way to get to where want to be" 4, Address negative thinking *eväew Managing and Disyess Tolerance content and to the tlwughts that to keep us iso*atedl *Wile mare self compassion uuhen addressing are self Cikicat and Gauge success according to the extent that you are Giving a valued life, not whether or Not you have emotions. While aim CBT is improve mood and have fewer negatqve emotons in [he run. in the shod Fun we must remember Inat emotions are pafi life we get rid of completeiy. But... we can improve life and how feel by moving tcward va!ued acåons.
+
+<!-- native-resource-content:wellness-p016:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p017 data-source-id="wellness-p017"}
@@ -77,6 +154,32 @@ Behavioural activation uses planned action to interrupt avoidance and increase c
 
 [Download / View Handout](/resources/wellness/wellness-p017.jpg)
 
+
+<!-- native-resource-content:wellness-p017:start -->
+
+#### Text Version
+
+##### BEHAVIORAL
+
+##### ACTIVATION TIPS
+
+6. Monitor your activities and mood specifically as you can We miss important clues to treating depression when we don't pay enough attention to Ehe details of our acliwity. Awareness patterns and tendenoies is necessary we can work towards change and ftnprcvemen!.
+
+##### Ptobiéiii
+
+Focus your atten(ion on solving problems thai could be leading to iuaher depressive sy and Ytork accept those things that cannot be solved.
+
+8. 1 Bél sui•e-Yöur activities Eine up with you».
+
+##### Values
+
+Sometimes we think we are living a valued ii!æ ure afe not; this leads Continue to explore your vaiues. Remembet aiE not internal states' now people snecitic things to "Va'ues" ate what we mearÉNgiue and important. These he dii!erent diiierent people. Vatues are imporant to much g03E-äfec1ed activity comes from a toundatic-n of "hat is valued. exarnße, one may vadue heahhy lifestyle and a retated goa' 'nay tv {Please reter t' Values and List in Emokion Reguea1Éon
+
+##### Session 3)
+
+9, Be sure you have. the skills you need to be successful Trying to do somelhing in which we hæve the necessary skills seis us up ior failijre. Some people learn {hat aæ 'incompetent r" only becausa they continue te tyy to duthings for lhey are not Firrd out what skills are necessary i" be successfuÉ aE a task. and then, given the of work it would gake to iearn the necessary decide il it makes sense to to pursee that acliuity_ each of Behavioral Aeovaton necessary. sometimes are about why we are doing sumelhing; this potentiäHy Aeads to resistance Ding new things, and we rnjss on {he possibk ben
+
+<!-- native-resource-content:wellness-p017:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p018 data-source-id="wellness-p018"}
@@ -86,6 +189,20 @@ Behavioural activation uses planned action to interrupt avoidance and increase c
 
 [Download / View Handout](/resources/wellness/wellness-p018.jpg)
 
+
+<!-- native-resource-content:wellness-p018:start -->
+
+#### Text Version
+
+##### BEHAVIORAL
+
+##### ACTIVATION TIPS
+
+11. Practice mindfulness Resgarch shales Ehat enioyment is much more likely when we are pvesent al%i mindful. Use Behaviorae Activafd,n as an opportunay ta pracüce being nfE1df1d of potentially Pieasurabee experiences as {hey occur.
+
+'.12•.- Rcwerd yquf$elf Rewa(d yourselt tor your Depression arkd criticism to kake away the "kudos" we deserve when we achieve something, Make explicit effort rewwd yowrself
+
+<!-- native-resource-content:wellness-p018:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -107,6 +224,36 @@ Behavioural activation uses planned action to interrupt avoidance and increase c
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:wellness-p012:start -->
+
+#### Text Version
+
+Try to determine your own "vicious cycles", identifying specific events, emotions and responses
+
+##### What happened
+
+*life events, triggers, etc.*
+
+##### HOY-YOU feel
+
+*emotions*
+
+What you do
+
+*or don't do*
+
+##### SECOND
+
+##### VICIOUS
+
+##### CYCLE
+
+##### FIRST VICIOUS
+
+##### CYCLE
+
+<!-- native-resource-content:wellness-p012:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p019 data-source-id="wellness-p019"}
@@ -116,6 +263,36 @@ Behavioural activation uses planned action to interrupt avoidance and increase c
 
 [Download / View Handout](/resources/wellness/wellness-p019.jpg)
 
+
+<!-- native-resource-content:wellness-p019:start -->
+
+#### Text Version
+
+ånstructions; Record your activity for each hour day (what you were doing, with where, etc.). Record a rating your mood as you doing each activity. Mood is rated between 0-10, vu;th "O" indicating "low mood'* and "IO" indicating "good mwd,"
+
+##### Sun
+
+7:00 aru
+
+##### 8;QJ am
+
+##### g'_OQ
+
+4:00 p m
+
+##### _S:0tpm
+
+##### SOO pm
+
+##### Mon
+
+##### Wed
+
+##### Sat
+
+5. 9
+
+<!-- native-resource-content:wellness-p019:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p020 data-source-id="wellness-p020"}
@@ -125,6 +302,32 @@ Behavioural activation uses planned action to interrupt avoidance and increase c
 
 [Download / View Handout](/resources/wellness/wellness-p020.jpg)
 
+
+<!-- native-resource-content:wellness-p020:start -->
+
+#### Text Version
+
+5. 25 Instructions: Write some specific activilies that you recorded -tho "Values, PÉQasure, and Mastery Activities List" the "activity" coiumn. Piace a check in the "completed" column to Éldicate if you comp*eted the scheduled aclivtj.
+
+Recotd raking in the lest row; i: rated between 0. IO indicating "most negative" and "10" "most positive."
+
+##### Activi
+
+irn
+
+##### BEn
+
+pru 4:00 pm . 6:00 pen 20:01 pni
+
+##### Scheduled Activities for (name)
+
+##### Core Éeted
+
+Day 'f week/date
+
+##### Mood ratim
+
+<!-- native-resource-content:wellness-p020:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p021 data-source-id="wellness-p021"}
@@ -144,6 +347,28 @@ Behavioural activation uses planned action to interrupt avoidance and increase c
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:wellness-p021:start -->
+
+#### Text Version
+
+##### BEHAVIORAL ACTIVATION
+
+##### BARRIERS AND RESOURCES WORKSEET
+
+##### GOAL
+
+##### When I want to achieve it
+
+##### How am I going to do it
+
+##### How am I going to measure it
+
+##### What are some possible barriers
+
+##### What are some possible resources
+
+<!-- native-resource-content:wellness-p021:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -155,6 +380,46 @@ Behavioural activation uses planned action to interrupt avoidance and increase c
 
 [Download / View Handout](/resources/wellness/wellness-p010.jpg)
 
+
+<!-- native-resource-content:wellness-p010:start -->
+
+#### Text Version
+
+Cvenk5 Dfteo get the depression roü!ng."
+
+##### This could
+
+new or a rem!nder from poit or 5ttess{1A event. lead to behavlours: we avoid o' which makes {eel worse What hapraene.d
+
+*stressful bife events J triggers from past, etc.*
+
+tost my job" had first child" How you feel
+
+*emotions*
+
+##### Sad
+
+##### Anxious
+
+##### Sfressed
+
+##### Shut down
+
+##### Embarassad
+
+What you do
+
+*or don't do*
+
+Stay in bed Don't engage with Iamely Don't retrun calls or texts
+
+##### Avoid people
+
+The 5tress OF events Leads nag3tive emotions khet are distressing ard make ko dray*' back,
+
+##### CYCLC
+
+<!-- native-resource-content:wellness-p010:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-wellness-p011 data-source-id="wellness-p011"}
@@ -164,6 +429,48 @@ Behavioural activation uses planned action to interrupt avoidance and increase c
 
 [Download / View Handout](/resources/wellness/wellness-p011.jpg)
 
+
+<!-- native-resource-content:wellness-p011:start -->
+
+#### Text Version
+
+##### l;Olauon,
+
+other t,Ehavlfxß cause (urther negative events; making even more What haæaen.e-d
+
+*life events, triggers, etc,*
+
+lost my job" "VVe had our first child"
+
+- Fncreased odds of more hardships and negative [Efe events My me because never return calls or texts How you feel
+
+*emotions*
+
+##### Sad
+
+##### Anxious
+
+##### Stressed
+
+##### Shut down
+
+##### Embarassed
+
+##### What
+
+*or don't do*
+
+##### Stay bed
+
+Don't engage With family Don't retrun calls or texts
+
+##### Avoid people
+
+vaoes
+
+##### CYCLE
+
+<!-- native-resource-content:wellness-p011:end -->
 ::::
 
 <!-- section-scan-resources:end -->
