@@ -23,15 +23,36 @@ Radical acceptance is recognizing reality without approval, passivity, or giving
 
 ## Turning the Mind {#turning-the-mind}
 
-Turning the mind is the repeated choice to move from rejection toward acceptance.
+Turning the mind is the repeated choice to move from rejection toward acceptance. The choice does not instantly create acceptance; it puts you on the path toward it.
+
+1. Observe signs that you are not accepting reality, such as bitterness, avoidance, or thoughts that the situation should not be happening.
+2. Make an inner commitment to accept reality as it is.
+3. Make the choice again each time you reach the fork between rejection and acceptance.
+4. Plan how you will notice and respond when you drift out of acceptance later.
 
 ## Willingness {#willingness}
 
 Willingness means doing what the situation calls for without adding avoidable resistance.
 
+- Participate fully in life and do what the moment requires.
+- Act wholeheartedly, without dragging your feet.
+- Listen to Wise Mind and act with awareness of your connection to the world around you.
+
+When willfulness shows up, observe and label it, radically accept that it is present, turn your mind toward willingness, and try a half-smile and willing posture. If it feels immovable, ask: **What is the threat?**
+
 ## Willing Hands {#willing-hands}
 
+- **Standing:** Let your arms drop from your shoulders. Unclench your hands and turn them outward, palms up, with relaxed fingers.
+- **Sitting:** Rest your hands on your lap or thighs, unclenched and open, with palms up.
+- **Lying down:** Rest your arms by your sides with hands unclenched, palms up, and fingers relaxed.
+
+The posture is a physical way to communicate willingness to the brain.
+
 ## Half-Smiling {#half-smiling}
+
+1. Relax your face from the top of your head through your jaw. If this is difficult, tense the facial muscles first and then release them.
+2. Let both corners of your lips turn up just enough for you to feel it. The expression can be too subtle for anyone else to notice.
+3. Adopt a serene expression, remembering that the face communicates with the brain and the body connects with the mind.
 
 <!-- section-scan-resources:start -->
 
@@ -54,6 +75,14 @@ Willingness means doing what the situation calls for without adding avoidable re
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p005:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:distress-tolerance-p005:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-distress-tolerance-p006 data-source-id="distress-tolerance-p006"}
@@ -73,6 +102,14 @@ Willingness means doing what the situation calls for without adding avoidable re
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p006:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:distress-tolerance-p006:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-distress-tolerance-p037 data-source-id="distress-tolerance-p037"}
@@ -92,6 +129,50 @@ Willingness means doing what the situation calls for without adding avoidable re
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p037:start -->
+
+#### Text Version
+
+distress tolerance Handout 11 (Distress Tolerance Worksheets 8-9a)
+
+*When you cannot keep painful events and emotions from coming your way.*
+
+**What iS Radical Acceptance?**
+
+1. Radical means all the way, complete and total.
+
+2. It is accepting in your mind, your heart, and your body.
+
+3. It’s when you stop fighting reality, stop throwing tantrums because reality is not the way you want it, and let go of bitterness.
+
+**What haS To Be Accepted?**
+
+1. Reality is as it is (the facts about the past and the present are the facts, even if you don’t like them).
+
+2. There are limitations on the future for everyone (but only realistic limitations need to be accepted).
+
+3. Everything has a cause (including events and situations that cause you pain and suffering).
+
+4. Life can be worth living even with painful events in it.
+
+**Why Accept Reality?**
+
+1. Rejecting reality does not change reality.
+
+2. Changing reality requires first accepting reality.
+
+3. Pain can’t be avoided; it is nature’s way of signaling that something is wrong. Rejecting reality turns pain into suffering.
+
+4.
+
+5. Refusing to accept reality can keep you stuck in unhappiness, bitterness, anger, sadness, shame, or other painful emotions.
+
+6. Acceptance may lead to sadness, but deep calmness usually follows.
+
+7. The path out of hell is through misery. By refusing to accept the misery that is part of climbing out of hell, you fall back into hell.
+
+<!-- native-resource-content:distress-tolerance-p037:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-distress-tolerance-p038 data-source-id="distress-tolerance-p038"}
@@ -111,6 +192,24 @@ Willingness means doing what the situation calls for without adding avoidable re
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p038:start -->
+
+#### Text Version
+
+distress tolerance Handout 11a
+
+##### Radical Acceptance iS noT
+
+Approval, compassion, love, passivity, or against change.
+
+##### Factors That Interfere With Acceptance
+
+1. You don’t have the skills for acceptance; you do not know how to accept really painful events and facts. 2. You believe that if you accept a painful event, you are making light of it or are approving of the facts, and that nothing will be done to change or prevent future painful events. 3. Emotions get in the way (unbearable sadness; anger at the person or group that caused the painful event; rage at the injustice of the world; overwhelming shame about who you are; guilt about your own behavior).
+
+##### Other
+
+<!-- native-resource-content:distress-tolerance-p038:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-distress-tolerance-p040 data-source-id="distress-tolerance-p040"}
@@ -130,6 +229,14 @@ Willingness means doing what the situation calls for without adding avoidable re
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p040:start -->
+
+#### Text Version
+
+distress tolerance Handout 11b (Distress Tolerance Worksheets 9, 9a) Observe that you are questioning or fighting reality (“It shouldn’t be this way”). Remind yourself that the unpleasant reality is just as it is and cannot be changed (“This is what happened”). Remind yourself that there are causes for the reality. Acknowledge that some sort of history led up to this very moment. Consider how people’s lives have been shaped by a series of factors. Notice that given these causal factors and how history led up to this moment, this reality had to occur just this way (“This is how things happened”). Practice accepting with the whole self (mind, body, and spirit). Be creative in finding ways to involve your whole self. Use accepting self-talk-but also consider using relaxation; mindfulness of your breath; half- smiling and willing hands while thinking about what feels unacceptable; prayer; going to a place that helps bring you to acceptance; or imagery. Practice opposite action. List all the behaviors you would do if you did accept the facts. Then act as if you have already accepted the facts. Engage in the behaviors that you would do if you really had accepted. Cope ahead with events that seem unacceptable. Imagine (in your mind’s eye) believing what you don’t want to accept. Rehearse in your mind what you would do if you accepted what seems unacceptable. Attend to body sensations as you think about what you need to accept. Allow disappointment, sadness, or grief to arise within you. Acknowledge that life can be worth living even when there is pain. Do pros and cons if you find yourself resisting practicing acceptance.
+
+<!-- native-resource-content:distress-tolerance-p040:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-distress-tolerance-p041 data-source-id="distress-tolerance-p041"}
@@ -149,6 +256,14 @@ Willingness means doing what the situation calls for without adding avoidable re
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p041:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:distress-tolerance-p041:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-distress-tolerance-p047 data-source-id="distress-tolerance-p047"}
@@ -168,6 +283,32 @@ Willingness means doing what the situation calls for without adding avoidable re
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p047:start -->
+
+#### Text Version
+
+distress tolerance Handout 14a (Distress Tolerance Worksheet 10) (p. 1 of 2)
+
+1. half-Smile When you First Wake up in The Morning. Hang a branch, any other sign, or even the word “smile” on the ceiling or wall, so that you see it right away when you open your eyes. This sign will serve as your reminder. Use these seconds before you get out of bed to take hold of your breath. Inhale and exhale three breaths gently while maintaining a half-smile. Follow your breaths. Add willing hands to your half-smile, or practice willing hands alone.
+
+2. half-Smile During your free Moments. Anywhere you find yourself sitting or standing, half-smile. Look at a child, a leaf, a painting on a wall, or anything that is relatively still, and smile. Inhale and exhale quietly three times.
+
+3. half-Smile With Willing Hands While you are Listening To Music. Listen to a piece of music for 2 or 3 minutes. Pay attention to the words, music, rhythm, and sentiments of the music you are listening to (not your daydreams of other times). Half-smile while watching your inhalations and exhalations. Adopt a willing-hands posture.
+
+4. half-Smile With Willing Hands When you are Irritated. When you realize “I’m irritated,” half-smile or adopt a willing-hands posture at once. Inhale and exhale quietly, maintaining a half-smile or willing hands for three breaths.
+
+5. half-Smile in a Lying-Down Position. Lie on your back on a flat surface, without the support of mattress or pillow. Keep your two arms loosely by your sides, and keep your two legs slightly apart, stretched out before you. Maintain willing hands and a half-smile. Breathe in and out gently, keeping your attention focused on your breath. Let go of every muscle in your body. Relax each muscle as though it were sinking down through the floor, or as though it were as soft and yielding as a piece of silk hanging in the breeze to dry. Let go entirely, keeping your attention only on your breath and half-smile.
+
+Think of yourself as a cat, completely relaxed before a warm fire, whose muscles yield without resistance to anyone’s touch. Continue for 15 breaths.
+
+6. half-Smile in a Sitting Position. Sit on the floor with your back straight, or on a chair with your two feet touching the floor. Half- smile. Inhale and exhale while maintaining the half-smile. Let go.
+
+*continued on next page*
+
+Note. Exercises 1 and 3-7 are adapted from The Miracle of Mindfulness (pp. 77-81, 93) by Thich Nhat Hanh. Copyright 1975, 1976 by Thich Nhat Hanh. Preface and English translation copyright 1975, 1976, 1987 by Mobi Ho. Adapted by permission of Beacon Press, Boston.
+
+<!-- native-resource-content:distress-tolerance-p047:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-distress-tolerance-p048 data-source-id="distress-tolerance-p048"}
@@ -187,6 +328,36 @@ Willingness means doing what the situation calls for without adding avoidable re
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p048:start -->
+
+#### Text Version
+
+distress tolerance Handout 14a (p. 2 of 2)
+
+7. half-Smile With Willing Hands While you are Contemplating a Person you Dislike or are Angry With.
+
+- Sit quietly. Breathe and smile a half-smile. Hold your hands open with palms up.
+
+- Imagine the image of the person who has caused you suffering.
+
+- Regard the features you dislike the most or find the most repulsive.
+
+- Try to examine what makes this person happy and what causes suffering in his or her daily life.
+
+- Imagine the person’s perceptions; try to see what patterns of thought and reason this person follows.
+
+- Examine what motivates this person’s hopes and actions.
+
+- Finally, consider the person’s consciousness. See whether the person’s views and insights are open and free or not, and whether or not the person has been influenced by any prejudices, narrowmindedness, hatred, or anger.
+
+- See whether or not the person is master of him- or herself.
+
+- Continue until you feel compassion rise in your heart like a well filling with fresh water, and your anger and resentment disappear. Practice this exercise many times on the same person.
+
+##### notes/other times to half-smile and/or form willing hands
+
+<!-- native-resource-content:distress-tolerance-p048:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -208,6 +379,36 @@ Willingness means doing what the situation calls for without adding avoidable re
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p008:start -->
+
+#### Text Version
+
+distress tolerance Worksheet 10 (Distress Tolerance Handouts 12, 13)
+
+##### Due Date: Name: Week Starting
+
+Practice each skill, and rate your level of acceptance of reality as it is before and after: from 0 (no acceptance at all) to 5 (I’m at peace with this). List what you tried specifically under the rating.
+
+##### Turning the mind: Acceptance Before: After
+
+**Observe not accepting. What did you observe? What were you having trouble accepting?**
+
+**make an inner Commitment to accept what feels unacceptable. How did you do this?**
+
+Describe your plan for Catching Yourself the next time you drift from acceptance.
+
+##### Willingness (rate 0-5): Acceptance Before: After
+
+##### Willfulness Before: After
+
+Describe Effective Behavior you did to move forward toward a goal. Notice Willfulness. Describe how you are not participating effectively in the world as it is, or how you are not doing something you know needs to be done to move toward a goal. Describe how you Practiced Radically Accepting your Willfulness.
+
+**make an inner Commitment to accept what feels unacceptable. How did you do this?**
+
+Describe what you did that was Willing.
+
+<!-- native-resource-content:distress-tolerance-p008:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-distress-tolerance-p046 data-source-id="distress-tolerance-p046"}
@@ -227,6 +428,52 @@ Willingness means doing what the situation calls for without adding avoidable re
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p046:start -->
+
+#### Text Version
+
+distress tolerance Worksheet 9 (Distress Tolerance Handouts 11-11b) radical acceptance
+
+##### Due Date: Name: Week Starting
+
+Figure ouT What you Need To Radically Accept
+
+1. Make a list of two very important things in your life right now that you need to radically accept. Then give each one a number indicating how much you accept this part of yourself or your life: from 0 (no acceptance, I am in complete denial and/or rebellion) to 5 (complete acceptance, I am at peace with this). Note: if you have already completed this section, you don’t need to do it again unless things have changed.
+
+What I need to accept (Acceptance, 0-5)
+
+1. ( )
+
+2. ( )
+
+2. Make a list of two less important things in your life you are having trouble accepting this week. Then rate your acceptance just as you did above.
+
+What I need to accept (Acceptance, 0-5)
+
+1. ( )
+
+2. ( ) refine your List
+
+3. Review your two lists above. check the facts. Check for interpretations and opinions. Make sure that what you are trying to accept is in fact the case. check for judgments. Avoid “good,” “bad,” and judgmental language. Rewrite any items above if needed so that they are factual and nonjudgmental.
+
+##### Practice Radical Acceptance
+
+4. Choose one item from the very important list and one item from the less important list to practice on.
+
+1. 2.
+
+5. Focus your mind on each of these facts or events separately, allowing your Wise Mind to radically accept that these are facts of your life. Check off any of the following exercises that you did.
+
+Observed that I was questioning or fighting Attended to my body sensations as I reality. thought about what I need to accept. Reminded myself that reality is what it is. Allowed myself to experience Considered the causes of the reality, and disappointment, sadness, or grief. nonjudgmentally accepted that causes Acknowledged that life can be worth living exist. even when there is pain. Practiced accepting all the way with my Did pros and cons of accepting versus whole being (mind, body, spirit). denial and rejection.
+
+##### Practiced opposite action. Other
+
+Coped ahead with events that seemed unacceptable.
+
+6. Rate your degree of acceptance after practicing radical acceptance (0-5):
+
+<!-- native-resource-content:distress-tolerance-p046:end -->
 ::::
 
 ## Exercises {#exercises}
@@ -238,6 +485,30 @@ Willingness means doing what the situation calls for without adding avoidable re
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p036.jpg)
 
+
+<!-- native-resource-content:distress-tolerance-p036:start -->
+
+#### Text Version
+
+##### Exercise 1: Radical Acceptance
+
+F here an Énfinite PANFUL things thag can happen to you, but there are NOT an infinite Numbef of *esponses vau can have to pain,
+
+**Z. What aie- 'D'Y;e difficuit •situations your life right now that vou w.*h accepting?**
+
+2. ace you deafing with those SitliätÅons (ight now?
+
+3. When not accept*ng these issues, how does that affect;
+
+**a. Your body?**
+
+**b. mccd?**
+
+**c. You{ thoughts about and vourseif?**
+
+**d. energy level?**
+
+<!-- native-resource-content:distress-tolerance-p036:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -249,6 +520,18 @@ Willingness means doing what the situation calls for without adding avoidable re
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p035.jpg)
 
+
+<!-- native-resource-content:distress-tolerance-p035:start -->
+
+#### Text Version
+
+Ima? bought. R new house and was {Ging hue Eawn, ked week. daing {he gardening Inuks told him to do- biggest prcölcm that tho lawr always to hare wowing wheee he didn't wa\t then. the ünte he fmmd dandelions, ho pukled then But, alas, they back. He went to his local Eavdeaine a:ld killer. 'l"his wyrked s•ume time. but aftt'*' summer he found dandclions wot•ked and poli2(1 killed dande!ions ait sgnrner. The next he thought hc would have nn al sime none oyer lhe But. ail gf bc had dandelißli.r: au aver again, 'l'his *imc dccldcå the wit*' type ot' he spent Fjftune and had new sod down. T'his far time, he was very happy. as he to relax, a dauthli(iü was the dandeügnsi:t of ncighbou:s. SD he an Capkpaqn all kis 10 kill their dandelians. II} the thiid year, he was He still had Su. (I'0i1sædi.ing every local txpevt and ga2'dCR 500k, hg decided to write Of for advice. thc government itmjld help. 21fte1' waiting months, he finally lettmhae.k. excited, Help He tore open the letter and tead the
+
+##### Sir
+
+We have your Erohlclr and have ail Å14er careful consideration. t]ititk ca31 good Sir, our you learn tc those dandel Imis. '
+
+<!-- native-resource-content:distress-tolerance-p035:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-distress-tolerance-p039 data-source-id="distress-tolerance-p039"}
@@ -258,6 +541,40 @@ Willingness means doing what the situation calls for without adding avoidable re
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p039.jpg)
 
+
+<!-- native-resource-content:distress-tolerance-p039:start -->
+
+#### Text Version
+
+' cinf RÄrj}C , -Chä to: G tru that
+
+##### St'äyiriä
+
+##### acceptance
+
+##### æeg(n ey fécusing: nn: Yoll?
+
+- napöe.nihä.tö
+
+##### Jüé_t
+
+##### - Ptagodeover: and
+
+- Acceptance-tÉkaS
+
+##### statements
+
+- _ i gnornent 'it-,iS liiij thi-&igh
+
+- 'It's not 9äåut: it no
+
+##### &itüatiöri is. tertip#rary
+
+deåb_
+
+##### Caz.)
+
+<!-- native-resource-content:distress-tolerance-p039:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-distress-tolerance-p043 data-source-id="distress-tolerance-p043"}
@@ -267,6 +584,32 @@ Willingness means doing what the situation calls for without adding avoidable re
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p043.jpg)
 
+
+<!-- native-resource-content:distress-tolerance-p043:start -->
+
+#### Text Version
+
+There arg an infinite number of PNNFUL thüngs that can happen to you, hut there are NOT an infinite number responses you have to pain. There are rea"v only FOUR things you can do in 'ife when realiv painful things happen.
+
+##### You cculd respond by
+
+1. 2. 3. 4.
+
+**Solving the problem. 3s it Whet is in my c.oaüoÉ to do about ft?**
+
+Changing how you feet/think about the problem - reframe it in e more rea!i5Eic wav Accepting prob\ern- ACCEPTANCE
+
+##### Staying miserable
+
+##### SUFFERING
+
+PAR multe lied b While pain in lite is sometimes we can DIAL OOWN the suffæring we expenence bv developing and peactlc±ng Raoical ACCEPTANCE regarding the things we cannot current'y change but we continue to straggie with,
+
+**What RADICAL ACCEPVANCE?**
+
+it is comp*ete/totai Qt something from your heart and come With sadness. Acceptance may also come with a feeling that a burden has, been Acceptance can free vou up a bit and help you to -te on. Gamed from: Linehan, Borde"in'_• York; Thc 29±3
+
+<!-- native-resource-content:distress-tolerance-p043:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-distress-tolerance-p044 data-source-id="distress-tolerance-p044"}
@@ -276,6 +619,32 @@ Willingness means doing what the situation calls for without adding avoidable re
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p044.jpg)
 
+
+<!-- native-resource-content:distress-tolerance-p044:start -->
+
+#### Text Version
+
+##### Radical Aueetance
+
+Accept the Reafity *hat things are as thev are r}eht now
+
+2. Accept that the event ur situation you are s*tugqling with Es causing you pain
+
+3. Accepq that life can Stile be worth living eveti with painful RADICAL ACCEPTANCE is NOT Side" or
+
+##### RADICAL ACCEPTANCE does NOT
+
+RADICAL ACCEPTANCE is NOT about defeat or Change, bot me king changes despite the bad things that haue h*ppened and NOT wastå*g e-ftergy denying or struggfir,g with what is. RADICAL ACCEPTANCE IS reality saving to life it
+
+##### A way to practice RADICAL ACCEPTANCE
+
+Begin by focusing your breath. Just notice thoughts that you might have such as "the 5ituatfon isn't tail", h3te_ "Why æs this happening to me?" can't stand whet happened Just let those thoughts not to clmg on them. Give voucself an accepting statement, a; "'T IS WHAT or "l ACCEPT". Practice oupr and over Acceptance often requires manv
+
+##### MORE M/AYS -ro PRACT*CE RADICAL ACCEPTANCE;
+
+Cl Observing that am questionmg fighting reaiity. C] Reminding Myselp that reaäty is what it is. Considering causes of reailtg and non- judgmentally accepting that they exist, C) Dc#ng pros and ccms of accepting vs. Deniee and reject ön Coping ahead w;th events that seem Ü Attending to eodv sensations as think about what need accept Allowing myse#t- to experience disappointment, sadness or grief. Acknowledging that life can be worth even when there is pain. Practicing opposite action accept\ng the way wth my whole being (mind, body, spirit)
+
+<!-- native-resource-content:distress-tolerance-p044:end -->
 ::::
 
 <!-- section-scan-resources:end -->

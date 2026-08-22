@@ -23,17 +23,31 @@ IMPROVE collects ways to support yourself while moving through distress.
 
 ## Imagery {#imagery}
 
+Imagine a relaxing scene, a protected room, a calming fantasy, events going well, painful emotion draining away, or a happy time that you can replay in your mind.
+
 ## Meaning {#meaning}
+
+Look for purpose or a positive aspect within the painful situation. Repeat what you find, or connect the moment with spiritual or personal values.
 
 ## Prayer {#prayer}
 
+Open your heart to a supreme being, God, your own Wise Mind, or whatever fits your beliefs. Ask for strength to bear the pain or practise turning over what you cannot control.
+
 ## Relaxation {#relaxation}
+
+Use a warm bath, a hot drink, massage, stretching, yoga, deep breathing, or a deliberately relaxed facial expression.
 
 ## One Thing in the Moment {#one-thing-in-the-moment}
 
+Put your full attention on exactly what you are doing now. Return your mind to the present and to the physical sensations of this one moment.
+
 ## Vacation {#vacation}
 
+Take a brief, time-limited break from responsibility: rest in bed, spend time outside, read something enjoyable, turn off your phone, or give yourself an hour away from hard work. Choose a break that will not create a larger problem later.
+
 ## Self-Encouragement {#self-encouragement}
+
+Speak to yourself as you would to someone you care about. Examples from the handout include: *I will make it out of this*, *I am doing the best I can*, *I can stand it*, *This too shall pass*, and *It will not last forever*. Add rethoughts that are especially useful in your own crisis situations.
 
 <!-- section-scan-resources:start -->
 
@@ -56,6 +70,14 @@ IMPROVE collects ways to support yourself while moving through distress.
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p025:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:distress-tolerance-p025:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -67,6 +89,20 @@ IMPROVE collects ways to support yourself while moving through distress.
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p028.jpg)
 
+
+<!-- native-resource-content:distress-tolerance-p028:start -->
+
+#### Text Version
+
+##### Exercise #1
+
+Describe a situation Durfng the past few weeks where you exper;enced distæss. Now, go through the IMPROVE and choose thæe different that you have used during this to-ne distress. Provide details. 2. 3.
+
+##### Exercise #2
+
+Thjnk of a Gftuatktn coming up in the next coupÉe of weeks where you iT*ight experience some distress. there an IMPROVE skid you couåd use in that situation? Please Desceöe.
+
+<!-- native-resource-content:distress-tolerance-p028:end -->
 ::::
 
 ## Exercises {#exercises}
@@ -78,6 +114,14 @@ IMPROVE collects ways to support yourself while moving through distress.
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p026.jpg)
 
+
+<!-- native-resource-content:distress-tolerance-p026:start -->
+
+#### Text Version
+
+Exercise: Practice cne thing in the moment by coioring in the letters.
+
+<!-- native-resource-content:distress-tolerance-p026:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-distress-tolerance-p027 data-source-id="distress-tolerance-p027"}
@@ -87,6 +131,32 @@ IMPROVE collects ways to support yourself while moving through distress.
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p027.jpg)
 
+
+<!-- native-resource-content:distress-tolerance-p027:start -->
+
+#### Text Version
+
+begin to n picättre yotn• of d plhce whewe you can relax, intagina what Lhig pleee needs tp be. order EOE' you Feee cg;m and the physical the place you arc imagrining, where this peacenrc}. piace? You miglit son:ewhere outdoors... r or indcors„,.. it !nay he a small pl•ctce, or huge one.... create image cf i'hi5 place.
+
+*pause*
+
+picluee details about your peaecg•ui place. Who in this place? are you
+
+**alone? Or p€l'hftps you are with e}se? Are there other people present? ånhnals?**
+
+Eil'ds? Imagino is at your Flac.e, whether is only, or yott have company.
+
+*pause*
+
+even more datni\ about your surroundings. Focus now the relaxing sounds around you in your peaceful place. Lruagine the of 20t1ch.., including the •telikperat-utre, any breeze that may present- f:he sur2Åce you are on, imagine the details of chis calming piace in your mind. Focus on the sights of your - colors, shapes, I H obiec.ts„... plante,.:... water. of the beautiful t.bai' make your place enjoyable. To add further detail this scenes irnegine yourself thcre. What we,tfld you be doing in this caiming place? Perhaps you are jÆS* sitting, enjoyiag Ellis place, relaxing, Maybe you imagiüß wa}kfrug „ or doing any othe€ variety öf activities. PiQ.fi-u•c Yourseee in this peaceful imagine a feeling of of peace.... a place where have worries, cares, concerns... , a place wheee you can simply
+
+##### rejuvenate, rekæ.x, and enjoy jnst
+
+*pause*
+
+Enjoy yout- pöacefui Place for a few moments more. Memorize the Eights, and sensations around you. Know that yon can return to this place in your mind whenever you need a break. You take mental vacation to allow yourse!f to regroup before returning ta your regt-dal' roles, Keep with you I-he. feelingof cafrn from your place as you to your everyday life,
+
+<!-- native-resource-content:distress-tolerance-p027:end -->
 ::::
 
 <!-- section-scan-resources:end -->

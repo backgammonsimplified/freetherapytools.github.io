@@ -25,29 +25,53 @@ Distraction and self-soothing can help you get through a crisis until you can re
 
 ### Activities {#activities}
 
+Focus on a task, clean a room, watch something, read, play a game, walk, exercise, make something, spend time with someone, or choose another absorbing activity.
+
 ### Contributing {#contributing}
+
+Volunteer, help someone, offer encouragement, give away something you no longer need, make something for another person, or do something thoughtful.
 
 ### Comparisons {#comparisons}
 
+Compare this moment with a time you felt differently, notice how other people cope with similar difficulties, or place the current situation in a wider perspective. Use comparisons to reduce suffering, not to invalidate it.
+
 ### Emotions / Opposite Emotion {#opposite-emotion}
+
+Choose a book, show, film, story, letter, music, or other activity that brings up an emotion different from the painful emotion you are trying to survive.
 
 ### Pushing Away {#pushing-away}
 
+Temporarily leave the situation physically or mentally. Put the pain on an imaginary shelf, box it up for later, build a mental wall, or firmly redirect rumination. Return to the problem when you are able to respond effectively.
+
 ### Thoughts {#thoughts}
 
+Count objects or colours, repeat the words of a song, work a puzzle, read, or give your mind another neutral task.
+
 ### Sensations {#sensations}
+
+Use a strong but safe sensation: squeeze a rubber ball, listen to loud music at a safe volume, hold ice briefly, step into rain or snow, or take a hot or cold shower.
 
 ## Self-Soothing with the Five Senses {#self-soothing-five-senses}
 
 ### Vision {#vision}
 
+Look closely at stars, nature, art, a candle flame, a sunrise or sunset, a pleasing room, or any sight that helps you slow down. Attend mindfully to each thing you see.
+
 ### Hearing {#hearing}
+
+Listen to soothing or energizing music, sounds of nature or the city, radio, singing, humming, or an instrument. Let sounds come and go without holding on to them.
 
 ### Taste {#taste}
 
+Choose a favourite food or soothing drink, peppermint, gum, or a small special treat. Slow down and taste one thing mindfully.
+
 ### Smell {#smell}
 
+Use a favourite soap, lotion, scented candle, coffee, cinnamon, flowers, fresh air, or the smell of a wooded place. Breathe in the scent mindfully.
+
 ### Touch {#touch}
+
+Take a warm bath or shower, pet an animal, soak your feet, use lotion, wrap up in a blanket, put clean sheets on the bed, hug someone safe, or notice another soothing physical sensation.
 
 <!-- section-scan-resources:start -->
 
@@ -70,6 +94,14 @@ Distraction and self-soothing can help you get through a crisis until you can re
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p018:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:distress-tolerance-p018:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-distress-tolerance-p020 data-source-id="distress-tolerance-p020"}
@@ -89,6 +121,14 @@ Distraction and self-soothing can help you get through a crisis until you can re
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p020:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:distress-tolerance-p020:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -110,6 +150,74 @@ Distraction and self-soothing can help you get through a crisis until you can re
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p022:start -->
+
+#### Text Version
+
+distress tolerance Worksheet 5b (Distress Tolerance Handout 7)
+
+##### Due Date: Name: Week Starting
+
+For each ACCEPTS skill, write down what you did during the week, and write down a number to indicate how effective the skill was in helping you tolerate the distress and cope with the situation (keeping you from doing something to make the situation worse). Use the following scale: I still couldn’t stand I was able to cope somewhat, I could use skills, the situation, even at least for a little while. tolerated distress, and for one more minute. It helped somewhat. resisted problem urges. 1 2 3 4 5
+
+##### Day: Activities
+
+##### / Effectiveness
+
+##### / Effectiveness
+
+##### / Effectiveness
+
+##### Day: Contributions
+
+##### / Effectiveness
+
+##### / Effectiveness
+
+##### / Effectiveness
+
+##### Day: Comparisons
+
+##### / Effectiveness
+
+##### / Effectiveness
+
+##### / Effectiveness
+
+##### Day: Emotions
+
+##### / Effectiveness
+
+##### / Effectiveness
+
+##### / Effectiveness
+
+##### Day: Pushing Away
+
+##### / Effectiveness
+
+##### / Effectiveness
+
+##### / Effectiveness
+
+##### Day: Thoughts
+
+##### / Effectiveness
+
+##### / Effectiveness
+
+##### / Effectiveness
+
+##### Day: Sensations
+
+##### / Effectiveness
+
+##### / Effectiveness
+
+##### / Effectiveness
+
+<!-- native-resource-content:distress-tolerance-p022:end -->
 ::::
 
 ## Exercises {#exercises}
@@ -131,6 +239,36 @@ Distraction and self-soothing can help you get through a crisis until you can re
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p021:start -->
+
+#### Text Version
+
+##### Exercise 1: Self-Soothing
+
+Self-soothing is about comforting, nurturing and being kind to yourself. Think of activities that involve your five senses, and remember to practice using these even when you are not distressed, so that you will remember to use them when you are in a crisis. In the table below, write down the activities you can use to help you feel comforted. Senses to be soothed My activities to help me feet nurtured or comforted
+
+*e.g. look at the ocean, a favourite picture*
+
+##### Vision
+
+*e.g. listen to your favourite song*
+
+##### Hearing
+
+*e.g. drink milk, eat warm soup*
+
+##### Taste
+
+*e.g. bake biscuits, spray your favourite perfume*
+
+##### Smell
+
+*e.g. wrap yourself in your favourite blanket*
+
+##### Touch
+
+<!-- native-resource-content:distress-tolerance-p021:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-distress-tolerance-p023 data-source-id="distress-tolerance-p023"}
@@ -140,6 +278,80 @@ Distraction and self-soothing can help you get through a crisis until you can re
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p023.jpg)
 
+
+<!-- native-resource-content:distress-tolerance-p023:start -->
+
+#### Text Version
+
+##### Creating a
+
+##### Self-Soothing Kit
+
+##### To Start
+
+I.Find something yoti uauid liki7 to keep your items in (box yaut if you (consider using soothing co-Lduf5. positive messages and images.
+
+##### Sound
+
+- Create PeayÉisr on your phorna
+
+##### White aofse
+
+- Earphones
+
+- Ear plugs
+
+##### Taste
+
+- tee pa•kægæs
+
+- Gum gour tandies
+
+- Mines
+
+- Chocolate
+
+- Chips/ other crwth}' snarks pop pins Candy
+
+##### Touch
+
+- Fidget toy
+
+- P}ayuough
+
+- necklec.ef bracelet stone
+
+- square of soothing matwiai
+
+- Lotion
+
+##### Hett 8tg
+
+3. U?ing the 5 sense*, experiment ary_-3 customize the items; in your kit -to refleet your pergonaå preferences nf}eds, Cons*der having Muetiple Remg of the Add or remove as you whöt wag-ks best for you.
+
+4. Keep your sell-eoathing kit in an eccessibÉ needed.
+
+##### Smell
+
+- at spices cit-teanaon}
+
+- Mouz- favour-he scented lotion,
+
+- Scented candle
+
+- Ammatheraoy ONs
+
+##### Vision
+
+- Pictures of memories Funny picüires cur sayingæ
+
+- Pictuleg of soothing (beach, mountains) Affisrnaöon cards
+
+##### (Yitter/Colming
+
+##### Mask
+
+<!-- native-resource-content:distress-tolerance-p023:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -151,6 +363,14 @@ Distraction and self-soothing can help you get through a crisis until you can re
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p019.jpg)
 
+
+<!-- native-resource-content:distress-tolerance-p019:start -->
+
+#### Text Version
+
+Printed content could not be extracted reliably from this page.
+
+<!-- native-resource-content:distress-tolerance-p019:end -->
 ::::
 
 <!-- section-scan-resources:end -->

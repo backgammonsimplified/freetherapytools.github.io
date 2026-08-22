@@ -587,7 +587,7 @@ def alternative_resource_markdown(
 
 def resource_markdown(
     record: dict[str, object], qmd: Path, book_matches: dict[str, dict[str, str]],
-    php_matches: dict[str, dict[str, str]],
+    php_matches: dict[str, dict[str, str]], native_content: str = "",
 ) -> str:
     identifier = str(record["id"])
     slug = identifier.rsplit("-p", 1)[0]
@@ -627,6 +627,8 @@ def resource_markdown(
             preview=php_match["high_res_preview"], match_id=php_match["match_id"],
             source_id=identifier, match_source="php-high-res",
         )
+    if native_content:
+        block += "\n\n" + native_content.strip()
     return block + "\n::::"
 
 
@@ -647,6 +649,15 @@ def attach_resources(records: list[dict[str, object]]) -> None:
     for lesson, relative in LESSON_FILES.items():
         qmd = SITE / relative
         source = qmd.read_text(encoding="utf-8").rstrip()
+        native_content = {
+            match.group("source_id"): match.group(0).strip()
+            for match in re.finditer(
+                r"<!-- native-resource-content:(?P<source_id>[^:]+):start -->.*?"
+                r"<!-- native-resource-content:(?P=source_id):end -->",
+                source,
+                flags=re.DOTALL,
+            )
+        }
         source = re.sub(r"\n<!-- section-scan-resources:start -->.*?<!-- section-scan-resources:end -->\s*\Z", "", source, flags=re.DOTALL).rstrip()
         blocks = ["<!-- section-scan-resources:start -->"]
         for kind in order:
@@ -656,7 +667,13 @@ def attach_resources(records: list[dict[str, object]]) -> None:
             heading = heading_for_kind[kind]
             anchor = heading.lower().replace(" & ", "-").replace(" ", "-")
             blocks.append(f"## {heading} {{#{anchor}}}")
-            blocks.extend(resource_markdown(record, qmd, book_matches, php_matches) for record in matching)
+            blocks.extend(
+                resource_markdown(
+                    record, qmd, book_matches, php_matches,
+                    native_content.get(str(record["id"]), ""),
+                )
+                for record in matching
+            )
         blocks.append("<!-- section-scan-resources:end -->")
         qmd.write_text(source + "\n\n" + "\n\n".join(blocks) + "\n", encoding="utf-8", newline="\n")
 

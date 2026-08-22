@@ -42,6 +42,32 @@ A pros-and-cons grid slows urgent decisions down and brings longer-term conseque
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p030:start -->
+
+#### Text Version
+
+distress tolerance Handout 5 (Distress Tolerance Worksheets 3, 3a) Use pros and cons any time you have to decide between two courses of action. An urge is a crisis when it is very strong and when acting on the urge will make things worse in the long term. Make a list of the pros and cons of acting on your crisis urges. These might be to engage in dangerous, addictive, or harmful behaviors, or they might be to give in, give up, or avoid doing what is necessary to build a life you want to live. Make another list of the pros and cons of resisting crisis urges-that is, tolerating the distress and not giving in to the urges. Use the grid below to evaluate both sets of pros and cons (this type of grid is also used in Distress Tolerance Worksheet 3). Or you can use the type of grid seen in Distress Tolerance Worksheet 3a and in the pros-and-cons worksheets for other modules.
+
+##### Pros Cons
+
+pros of acting on impulsive urges, cons of acting on impulsive urges, giving in, giving up, or avoiding what giving in, giving up, or avoiding what needs to be done. needs to be done. acting on crisis urges pros of resisting impulsive urges, cons of resisting impulsive urges, doing what needs to be done, and doing what needs to be done, and not giving up. not giving up. resisting crisis urges
+
+##### Before an overwhelming crisis urge hits
+
+Write out your pros and cons; carry them with you. Rehearse your pros and cons over and over.
+
+##### When an overwhelming crisis urge hits
+
+Review your pros and cons. Get out your list and read it over again.
+
+- Imagine the positive consequences of resisting the urge.
+
+- Think of the negative consequences of giving in to crisis behaviors.
+
+- Remember past consequences when you have acted on crisis urges.
+
+<!-- native-resource-content:distress-tolerance-p030:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -63,6 +89,44 @@ A pros-and-cons grid slows urgent decisions down and brings longer-term conseque
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p032:start -->
+
+#### Text Version
+
+distress tolerance Worksheet 3 (Distress Tolerance Handout 5)
+
+##### Due Date: Name: Week Starting
+
+1. Describe the problem behavior you are trying to stop:
+
+2. List pros and cons for acting on crisis urges (including urges to act and urges to quit), and create a separate list for resisting crisis behavior by tolerating distress and using skills. Use the back of this sheet if you need more room.
+
+3. Read the pros and cons when an urge toward the problem behavior occurs. problem behavior Pros Cons
+
+1. 1.
+
+2. 2. acting on crisis 3. 3.
+
+urges
+
+4. 4.
+
+5. 5.
+
+1. 1.
+
+2. 2. resisting crisis 3. 3.
+
+urges
+
+4. 4.
+
+5. 5. Identify which pros and cons are short-term (just for today) or long-term (beyond today). Then ask your Wise Mind: Would you rather have a good day or a good life? Make a mindful choice about your behavior.
+
+If this worksheet helps you choose skillful behavior over crisis behavior, be sure to keep it where you can find it and review it again when you are in crisis. Adapted from an unpublished worksheet by Seth Axelrod, with his permission.
+
+<!-- native-resource-content:distress-tolerance-p032:end -->
 ::::
 
 ## Exercises {#exercises}
@@ -74,6 +138,34 @@ A pros-and-cons grid slows urgent decisions down and brings longer-term conseque
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p033.jpg)
 
+
+<!-- native-resource-content:distress-tolerance-p033:start -->
+
+#### Text Version
+
+##### Exercise 1: Pros and Cons
+
+##### PROS
+
+. F I-cs at fitting an urges, giving in. giving up. or avoiding what needs to be
+
+##### Acting
+
+on urgec Froe of Resisung ImplesÅ,re u!ges, doing needs be dana and not giv;eg up. wees nos . Pros of actiog on impu15ive urges, giving in, up, what neeus tc be done.
+
+##### Acting
+
+crasis urges Pros of rests!ing impu;sve doing What noeds eo he done. and not
+
+##### Resisting
+
+, erts•s urges Cons ot acting on impulsive giving gtving upr or What needs to be done, Cons of {eststgng Frnpu\siæ urges. doino what needs Io be done, and giv*ng
+
+##### CONS
+
+Cone o; actlng on uæes. g&ing in, giving up, or what neecs cone. Cone of Impuis;ve urges, daing what EO ua done and not giuihg up.
+
+<!-- native-resource-content:distress-tolerance-p033:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -95,6 +187,28 @@ A pros-and-cons grid slows urgent decisions down and brings longer-term conseque
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p031:start -->
+
+#### Text Version
+
+1. Describe the crisis behaviour/urge.
+
+- An urge is a crisis when it is strong and when acting on it will make things worse.
+
+- These might be to engage in dangerous, addictive or harmful behaviours, or they might be to give in, give up, or avoid doing what is necessary to build a life you want to live
+
+2. Examine the advantages and disadvantages of the behaviour, and then the advantages and disadvantages of resisting the urge/behaviour
+
+3. Consider both short-term and long-term consequences. Ask your Wise Mind: Would you rather have a good day or a good life? Make a mindful choice about your behaviour.
+
+4. Consider pros and cons for each different crisis urge
+
+5. Rehearse pros (of resisting urges) and cons (of giving into urges) multiple times
+
+6. Review earlier pros and cons when a crisis urge strikes or if not available, elicit support to assist you with this in the face of a crisis
+
+<!-- native-resource-content:distress-tolerance-p031:end -->
 ::::
 
 <!-- section-scan-resources:end -->

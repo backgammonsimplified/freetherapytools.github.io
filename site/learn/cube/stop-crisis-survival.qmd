@@ -23,9 +23,27 @@ Distress tolerance skills help you survive intense moments without making the si
 
 ## STOP {#stop}
 
-Stop. Take a step back. Observe what is happening inside and around you. Proceed mindfully.
+### Stop
+
+Do not react automatically. Freeze for a moment, do not move, and keep your emotions from taking control of your next action.
+
+### Take a Step Back
+
+Step away from the situation if you can. Take a break, let go, and take a deep breath before acting on impulse.
+
+### Observe
+
+Notice what is happening inside and around you. Ask what the situation is, what you are thinking and feeling, and what other people are saying or doing.
+
+### Proceed Mindfully
+
+Act with awareness. Consider your thoughts and feelings, the facts of the situation, other people's perspectives, and your goals. Ask Wise Mind which action is likely to make things better rather than worse.
 
 ## When to Use Crisis Survival Skills {#crisis-survival}
+
+Use crisis-survival skills when you are in intense pain that cannot be helped quickly, when you want to act on emotion but doing so would make matters worse, when emotion threatens to overwhelm you, or when you need to stay skillful through a short-term situation.
+
+They are not a substitute for solving problems that can be solved, changing emotions that can be changed, or building a life worth living. Overusing crisis skills can become avoidance.
 
 <!-- section-scan-resources:start -->
 
@@ -48,6 +66,42 @@ Stop. Take a step back. Observe what is happening inside and around you. Proceed
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p004:start -->
+
+#### Text Version
+
+distress tolerance Handout 3
+
+##### you are in a Crisis when the situation is
+
+- Highly stressful.
+
+- Short-term (that is, it won’t last a long time).
+
+- Creates intense pressure to resolve the crisis now.
+
+##### uSe Crisis Survival Skills when
+
+1. You have intense pain that cannot be helped quickly.
+
+2. You want to act on your emotions, but it will only make things worse.
+
+3. Emotion mind threatens to overwhelm you, and you need to stay skillful.
+
+4. You are overwhelmed, yet demands must be met.
+
+5. Arousal is extreme, but problems can’t be solved immediately.
+
+##### Don’T uSe Crisis Survival Skills for
+
+- Everyday problems.
+
+- Solving all your life problems.
+
+- Making your life worth living.
+
+<!-- native-resource-content:distress-tolerance-p004:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-distress-tolerance-p007 data-source-id="distress-tolerance-p007"}
@@ -67,6 +121,14 @@ Stop. Take a step back. Observe what is happening inside and around you. Proceed
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p007:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:distress-tolerance-p007:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -78,6 +140,28 @@ Stop. Take a step back. Observe what is happening inside and around you. Proceed
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p009.jpg)
 
+
+<!-- native-resource-content:distress-tolerance-p009:start -->
+
+#### Text Version
+
+##### USONG stop
+
+a situotbn during past week during which digress Were nble to lhe problem? YES [3 NO STOP is one ot the skids to use when connot the pE-Ootefe1_ ii gou were to use STOP, th)nk how the SiilÆTiua mjghl have gone diffe{entlu_ Write down thoughts be;ow.
+
+##### STOP
+
+vake o
+
+##### Step Back
+
+##### Observe
+
+##### Proceed
+
+##### Miftdfulig
+
+<!-- native-resource-content:distress-tolerance-p009:end -->
 ::::
 
 ## Exercises {#exercises}
@@ -89,6 +173,14 @@ Stop. Take a step back. Observe what is happening inside and around you. Proceed
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p003.jpg)
 
+
+<!-- native-resource-content:distress-tolerance-p003:start -->
+
+#### Text Version
+
+cfßü
+
+<!-- native-resource-content:distress-tolerance-p003:end -->
 ::::
 
 <!-- section-scan-resources:end -->

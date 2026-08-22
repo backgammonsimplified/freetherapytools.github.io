@@ -23,11 +23,34 @@ TIPP skills can help bring intense arousal down enough to choose the next effect
 
 ## Temperature {#temperature}
 
+Change the temperature of your face with cold water to calm down quickly. While holding your breath, place your face in a bowl of cold water or hold a cold pack over your eyes and cheeks for about 30 seconds. Keep the water above 50°F (10°C).
+
+::: {.callout-caution title="Physical safety"}
+Very cold water can lower heart rate rapidly. Consult a health care provider before using this skill if you have a heart or other medical condition, a low resting heart rate because of medication, take a beta-blocker, are allergic to cold, or have an eating disorder.
+:::
+
 ## Intense Exercise {#intense-exercise}
+
+When your body is revved up by emotion, briefly use intense exercise to expend stored physical energy. Depending on your health and ability, this might include fast walking, running, jumping, playing basketball, or lifting weights.
+
+::: {.callout-caution title="Physical safety"}
+Intense exercise raises heart rate. Choose an activity that is safe for your body and consult a health care provider when a medical condition could make this skill unsafe.
+:::
 
 ## Paced Breathing {#paced-breathing}
 
+- Breathe deeply into your belly.
+- Slow your inhaling and exhaling to about five or six breaths per minute.
+- Breathe out more slowly than you breathe in, such as 5 seconds in and 7 seconds out.
+
 ## Paired / Progressive Muscle Relaxation {#progressive-muscle-relaxation}
+
+1. As you breathe in, tense the muscles in your body gently enough to avoid a cramp.
+2. Notice the tension.
+3. As you breathe out, say **Relax** silently.
+4. Let go of the tension and notice how the sensations change.
+
+Practice first in a quiet place. Work through separate muscle groups, then larger groups, and eventually the whole body. Pairing the out-breath and the word *relax* with releasing tension makes it easier to call on this response when distress is high.
 
 ## Window of Tolerance {#window-of-tolerance}
 
@@ -54,6 +77,14 @@ The window of tolerance is a practical map for noticing nervous-system states an
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p012:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:distress-tolerance-p012:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-distress-tolerance-p013 data-source-id="distress-tolerance-p013"}
@@ -73,6 +104,20 @@ The window of tolerance is a practical map for noticing nervous-system states an
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p013:start -->
+
+#### Text Version
+
+Distress tolerance Handout 6a (Distress Tolerance Worksheet 4)
+
+##### Cold Water Can Work Wonders
+
+When you put your full face into cold water . . . or you put a zip-lock bag with cold water on your eyes and upper cheeks, and hold your breath, it tells your brain you are diving underwater. This causes the “dive response” to occur. (It may take 15-30 seconds to start.) Your heart slows down, blood flow to nonessential organs is reduced, and blood flow is redirected to the brain and heart. This response can actually help regulate your emotions. This will be useful as a distress tolerance strategy when you are having a very strong, distressing emotion, or when you are having very strong urges to engage in dangerous behaviors. (This strategy works best when you are sitting quietlyactivity and distraction may make it less effective.) try it oUt!
+
+> **Safety note:** Very cold water decreases your heart rate. If you have any heart or medical condition, have a lowered base heart rate due to medications, or are on a beta- blocker, consult your health care provider before using these skills. Avoid ice water if you are allergic to the cold.
+
+<!-- native-resource-content:distress-tolerance-p013:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-distress-tolerance-p014 data-source-id="distress-tolerance-p014"}
@@ -92,6 +137,52 @@ The window of tolerance is a practical map for noticing nervous-system states an
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p014:start -->
+
+#### Text Version
+
+distress tolerance Handout 6b (Distress Tolerance Worksheet 4a) If you have decided to practice paired muscle relaxation, it can be very helpful to practice relaxing each of your muscles first. When you are starting, practice in a quiet place to reduce distractions, and make sure that you have enough time. As you improve with practice, you will want to practice in many different kinds of places, so that you can relax effectively when you most need to. remember that effectiveness improves with practice. If judgments arise, observe them, let them go, and return to your practice. If you become anxious, try focusing on breathing in to the count of 5 and out to the count of 7 (or the counts you have already determined for paced breathing), breathing all the while into your belly until you can return to relaxation exercises. now that you are ready to begin . . .
+
+1. Get your body into a comfortable position in which you can relax. Loosen tight clothing. Lie or sit down, with all body parts uncrossed and no body part supporting any others.
+
+2. For each area of the body listed below, gather tension by tightening muscles. Focus on the sensation of tightness in and around that area. Hold the tension as you inhale for 5-6 seconds, then release and breathe out.
+
+3. As you release, say in your mind very slowly the word “Relax.”
+
+4. Observe the changes in sensations as you relax for 10-15 seconds then move on to the next muscle.
+
+Start first with each of the 16 muscle groups. Once you can do that, practice with medium groups of muscles and then large groups. Once you are good at that, practice tensing your entire body at once. When you tense your entire body, you are like a robot-stiff, nothing moving. When you relax your entire body, you are like a rag doll-all muscles drooping down. Once you can relax all your muscles, practice three or four times a day until you can routinely m l relax your entire body rapidly. e u l g i a By practicing pairing exhaling and the word “Relax” with relaxing your muscles, you will r edm a eventually be able to relax just by letting go and saying the word “Relax.”
+
+##### M S
+
+1. Hands and wrists: Make fists with both hands and pull fists up on the wrists.
+
+2. Lower and upper arms: Make fists and bend both arms up to touch your shoulders.
+
+3. Shoulders: Pull both shoulders up to your ears.
+
+4. Forehead: Pull eyebrows close together, wrinkling forehead.
+
+5. Eyes: Shut eyes tightly.
+
+6. Nose and upper cheeks: Scrunch up nose; bring upper lips and cheeks up toward eyes.
+
+7. Lips and lower face: Press lips together; bring edges of lips back toward ears.
+
+8. Tongue and mouth: Teeth together; tongue pushing on upper mouth.
+
+9. Neck: Push head back into chair, floor, or bed, or push chin down to chest.
+
+10. Chest: Take deep breath and hold it.
+
+11. Back: Arch back, bringing shoulder blades together.
+
+12. Stomach: Hold stomach in tightly.
+
+13. Buttocks: Squeeze buttocks
+
+<!-- native-resource-content:distress-tolerance-p014:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -113,6 +204,64 @@ The window of tolerance is a practical map for noticing nervous-system states an
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p016:start -->
+
+#### Text Version
+
+Distress tolerance Worksheet 4 (Distress Tolerance Handouts 6-6b)
+
+##### Due Date: Name: Week Starting
+
+Describe the situation you were in when you chose to practice each skill. Rate both your emotional arousal and distress tolerance before and after using the TIP skill. Describe what you actually did. Use the back of this sheet if necessary.
+
+##### Changing My Facial Temperature
+
+Used cold water to change emotions
+
+##### Situation
+
+##### Arousal (0-100) Before: After
+
+##### T
+
+Distress tolerance (0 = I can’t stand it; 100 = I can definitely survive) Before: After:
+
+##### What I did (describe)
+
+##### Intense Exercise
+
+##### Situation
+
+##### Arousal (0-100) Before: After
+
+I Distress tolerance (0 = I can’t stand it; 100 = I can definitely survive) Before: After:
+
+##### What I did (describe)
+
+##### Paced Breathing
+
+##### Situation
+
+##### Arousal (0-100) Before: After
+
+Distress tolerance (0 = I can’t stand it; 100 = I can definitely survive) Before: After:
+
+##### What I did (describe)
+
+##### P
+
+##### Paired Muscle Relaxation
+
+##### Situation
+
+##### Arousal (0-100) Before: After
+
+Distress tolerance (0 = I can’t stand it; 100 = I can definitely survive) Before: After:
+
+##### What I did (describe)
+
+<!-- native-resource-content:distress-tolerance-p016:end -->
 ::::
 
 ## Exercises {#exercises}
@@ -124,6 +273,38 @@ The window of tolerance is a practical map for noticing nervous-system states an
 
 [Download / View Handout](/resources/distress-tolerance/distress-tolerance-p015.jpg)
 
+
+<!-- native-resource-content:distress-tolerance-p015:start -->
+
+#### Text Version
+
+This exercise moves from the hands down through the body. For each image, gently tighten the named muscles, notice the tension, and then release them completely. Do not tighten hard enough to cause pain or a cramp.
+
+##### Lemonade
+
+Imagine holding a lemon. Squeeze it hard and notice the tightness in your hand, then drop it and feel the hand relax. Repeat with both hands.
+
+##### Lazy Cat
+
+Imagine stretching like a cat: reach your arms forward, raise them overhead, and feel the pull through your shoulders. Let your arms drop and notice the warm, relaxed feeling.
+
+##### Fly on Your Nose
+
+Without using your hands, scrunch your nose and face as though trying to move a fly. Hold briefly, then release and notice your cheeks, mouth, and eyes soften.
+
+##### Turtle Shell
+
+Imagine you are a turtle pulling your head down into your shell. Raise your shoulders and press your head down, hold briefly, and then let your shoulders drop as the danger passes.
+
+##### Baby Elephant
+
+Tighten your stomach as though bracing for an elephant's foot, hold, and release. Then notice the difference between a hard, tight abdomen and a soft one.
+
+##### Mud in Your Toes
+
+Imagine pressing your bare toes deep into mud. Curl your toes and press your feet down, then step out of the puddle, let your toes loosen, and feel your feet relax.
+
+<!-- native-resource-content:distress-tolerance-p015:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -145,6 +326,38 @@ The window of tolerance is a practical map for noticing nervous-system states an
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:distress-tolerance-p011:start -->
+
+#### Text Version
+
+Think of the window of tolerance as a river. When the river narrows it becomes fast and unsafe; when it widens it slows down. Inside the window you can feel balanced, calm, relaxed, in control, and able to respond effectively to challenges.
+
+##### Hyperarousal
+
+- Responsiveness increases beyond your workable range.
+- You may feel anxious, angry, or out of control.
+- You may want to fight or run away.
+
+##### Moving Above the Window
+
+As you begin to move outside your window, you may feel agitated, anxious, or angry. You are uncomfortable, but not necessarily out of control yet.
+
+##### Hypoarousal
+
+- Responsiveness decreases beyond your workable range.
+- You may feel emotionally numb, exhausted, or depressed.
+- Your body may feel as though it is shutting down or freezing.
+
+##### Moving Below the Window
+
+You may feel overwhelmed, begin to shut down, or lose track of time. You are uncomfortable, but not necessarily out of control yet.
+
+##### What Changes the Window
+
+Stress and trauma can narrow the window of tolerance. Practices such as meditation, listening to music, and engaging in hobbies can help expand it.
+
+<!-- native-resource-content:distress-tolerance-p011:end -->
 ::::
 
 <!-- section-scan-resources:end -->
