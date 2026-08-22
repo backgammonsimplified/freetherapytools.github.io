@@ -2,7 +2,7 @@
 
 ## Status
 
-The shared, local-only progress system is registered on all 13 current interactive Skill Finder tools. Each tool uses schema version 1 and provides validated state capture, exact file restoration, a human-readable Markdown formatter, JSON/Markdown progress files, true client-side DOCX export, and a print/PDF view. Twelve tools use browser autosave. Values intentionally does not save entries in browser storage and instead offers explicit downloads.
+The shared, local-only progress system is registered on all 13 current interactive Skill Finder tools. Each tool uses schema version 1 and provides validated state capture, exact file restoration, a human-readable Markdown formatter, JSON/Markdown progress files, true client-side DOCX export, and a print/PDF view. All 13 tools use temporary browser autosave and offer explicit downloads.
 
 No Learn lesson source, Learn JavaScript, Learn CSS, resource-match review file, or OCR/QMD lesson content was changed.
 
@@ -10,7 +10,7 @@ No Learn lesson source, Learn JavaScript, Learn CSS, resource-match review file,
 
 | Tool ID | Route | Autosave | Markdown / JSON restore | Readable export |
 |---|---|---:|---:|---:|
-| `values` | `/skill-finder/values/` | No | Yes | Yes |
+| `values` | `/skill-finder/values/` | Yes | Yes | Yes |
 | `thermometer` | `/skill-finder/thermometer/` | Yes | Yes | Yes |
 | `emotion-explorer` | `/skill-finder/emotions/` | Yes | Yes | Yes |
 | `change-emotion` | `/skill-finder/change-emotion/` | Yes | Yes | Yes |
@@ -28,8 +28,8 @@ No Learn lesson source, Learn JavaScript, Learn CSS, resource-match review file,
 
 - One adapter framework provides the title-row **Open previous progress** control, configurable floating **Save progress** control, accessible drawer, end-of-tool export area, browser drafts, file validation, wrong-tool handoff, and exports.
 - Draft keys follow `therapy-skill-kit:progress:<tool-id>` and are written after a 450 ms debounce.
-- On the 12 autosaving tools, a returning user sees **Previous browser progress found** with explicit **Continue** and **Start over** choices. Current work is never replaced merely because a draft exists.
-- Values never reads or writes `localStorage`. It has no floating autosave control or Browser Progress section; its bottom **Download your results** area and file-opening control remain available.
+- On all 13 autosaving tools, a returning user sees **Previous browser progress found** with explicit **Continue** and **Start over** choices. Current work is never replaced merely because a draft exists.
+- Values uses the shared temporary browser draft but keeps its floating save control hidden; its top **Open previous progress** control and bottom **Download your results** area remain available for partial or completed work.
 - Markdown and JSON use the same `therapy-skill-kit-progress` record. Markdown has a machine-readable JSON comment plus a tool-specific readable summary.
 - Imports are limited to 2 MiB, parsed as data, checked for format/schema/tool/route/state structure, and never evaluated or rendered as imported HTML.
 - A valid wrong-tool record is retained in `sessionStorage` only for a local navigation handoff. State is never placed in a URL.
@@ -45,7 +45,7 @@ No Learn lesson source, Learn JavaScript, Learn CSS, resource-match review file,
 
 ## Privacy and security
 
-- For the 12 autosaving tools, personal progress is stored only in the current browser origin, an explicitly saved local file, or a short-lived same-origin `sessionStorage` handoff. Values uses only explicitly saved local files and the short-lived handoff needed to open a valid Values file from another tool.
+- Personal progress is stored only in the current browser origin, an explicitly saved local file, or a short-lived same-origin `sessionStorage` handoff.
 - The progress system contains no `fetch`, `XMLHttpRequest`, or `sendBeacon` call.
 - Imported content is applied only through validated state and existing safe renderers; the shared UI uses safe DOM creation and `textContent`.
 - No personal answers are logged. Automated and browser checks use synthetic fixture text only.
@@ -63,7 +63,7 @@ No Learn lesson source, Learn JavaScript, Learn CSS, resource-match review file,
 
 - `node tests/test_skill_progress.js` covers Markdown and JSON round trips, readable Markdown, wrong-tool detection, future-schema rejection, damaged state rejection, filename rules, metadata comment safety, and a ZIP/DOCX package check.
 - `tests/test_skill_progress.py` covers all 13 identities/routes, adapter contracts, shared UI labels, privacy/no-network guards, accessibility/mobile/print contracts, asset order, and absence of controls from Learn QMD sources.
-- Focused progress, Skill Finder, Values, resource-match, PHP-match, QMD-extraction, and curriculum regression selection: 60 tests passed.
+- Focused progress, Skill Finder, Values, resource-match, PHP-match, QMD-extraction, and curriculum regression selection: 61 tests passed.
 - Learn/Research JavaScript regression checks passed.
 - `git diff --check` passed.
 
@@ -73,7 +73,7 @@ The complete repository-wide Python discovery still includes unrelated, pre-exis
 
 The real production JavaScript and data were exercised through a temporary local fixture (removed after review):
 
-- Values: the revised Discover interface was reviewed at desktop and 390px widths. Cards flowed alphabetically across each row, the custom-value row had a clear separated gap before the cards, **View definition** disclosures expanded and collapsed correctly, selected cards showed all five importance buttons without horizontal overflow, and no browser-draft or floating-save controls appeared. The shared Open/Continue/Start-over actions use the updated rounded button treatment.
+- Values: the revised Discover interface was reviewed at desktop and 390px widths. Cards flowed alphabetically across each row, the custom-value row had a clear separated gap before the cards, **View definition** disclosures expanded and collapsed correctly, selected cards showed H/M/L importance buttons without horizontal overflow, and the temporary browser draft worked without adding a floating-save control. The shared Open/Continue/Start-over actions use the updated rounded button treatment.
 - Emotion Explorer: Fear, a descriptive word, chest/body area, prompting event, and final stage restored exactly.
 - Worry Tree: actionable/later branch, prior answers, current flow node, and partially typed current answer restored exactly. This check found and led to a fix for current-screen flow input capture.
 - Behaviour Chain: two synthetic links restored in their original order and types.
@@ -90,7 +90,7 @@ The managed browser declined permission to select a local progress file. It was 
 
 Review these local routes after running the normal preview command:
 
-1. `/skill-finder/values/` — alphabetical Discover cards, definition disclosures, 1–5 importance controls, Clear selections, no browser draft, Markdown save/load, DOCX, and print.
+1. `/skill-finder/values/` — alphabetical Discover cards, definition disclosures, H/M/L importance controls, Clear selections, temporary browser draft, Markdown save/load, DOCX, and print.
 2. `/skill-finder/emotions/` — selected emotion, words, body regions, details, and stage.
 3. `/skill-finder/worry-tree/` — partial branch state and current text.
 4. `/skill-finder/behaviour-chain/` — ordered links.

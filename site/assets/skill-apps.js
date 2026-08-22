@@ -15,6 +15,11 @@
   if (typeof document === "undefined") return;
 
   const STEPS = ["DISCOVER", "SORT", "NARROW", "ASSESS", "ACT", "BARRIERS", "MISSION", "REVIEW"];
+  const VALUE_IMPORTANCE = [
+    { label: "H", value: "High" },
+    { label: "M", value: "Medium" },
+    { label: "L", value: "Low" },
+  ];
   const Progress = global.TherapySkillProgress;
 
   function escapeHtml(value) {
@@ -64,6 +69,15 @@
     return allValues(data, state).filter((value) => state.selected[value.id]);
   }
 
+  function normalizedValueImportance(value) {
+    const rating = String(value || "");
+    if (["High", "Medium", "Low"].includes(rating)) return rating;
+    if (["4", "5"].includes(rating)) return "High";
+    if (rating === "3") return "Medium";
+    if (["1", "2"].includes(rating)) return "Low";
+    return "";
+  }
+
   function coreValues(data, state) {
     return selectedValues(data, state).filter((value) => state.core[value.id]?.chosen);
   }
@@ -78,18 +92,18 @@
     const selected = state.selected;
     const cards = allValues(data, state).map((value) => {
       const active = Boolean(selected[value.id]);
-      const importance = String(selected[value.id]?.rating || "");
+      const importance = normalizedValueImportance(selected[value.id]?.rating);
       return `<article class="skill-app-card" data-value-card data-search="${escapeHtml(`${value.name} ${value.definition}`.toLowerCase())}">
         <h4>${escapeHtml(value.name)}</h4>
         <details class="values-definition"><summary><span class="values-definition-show">View definition</span><span class="values-definition-hide">Hide definition</span></summary><p>${escapeHtml(value.definition)}</p></details>
         <div class="values-card-controls">
           <button type="button" class="values-select-button ${active ? "secondary" : ""}" data-toggle-value="${escapeHtml(value.id)}" aria-pressed="${active}">${active ? "Remove" : "Select"}</button>
-          ${active ? `<fieldset class="values-importance"><legend>Importance:</legend><div class="values-importance-buttons" role="group" aria-label="Importance for ${escapeHtml(value.name)}">${[1, 2, 3, 4, 5].map((rating) => `<button type="button" class="${importance === String(rating) ? "" : "secondary"}" data-rating="${escapeHtml(value.id)}" data-importance-value="${rating}" aria-pressed="${importance === String(rating)}">${rating}</button>`).join("")}</div></fieldset>` : ""}
+          ${active ? `<fieldset class="values-importance"><legend>Importance:</legend><div class="values-importance-buttons" role="group" aria-label="Importance for ${escapeHtml(value.name)}">${VALUE_IMPORTANCE.map(({ label, value: rating }) => `<button type="button" class="${importance === rating ? "" : "secondary"}" data-rating="${escapeHtml(value.id)}" data-importance-value="${rating}" aria-label="${rating} importance" aria-pressed="${importance === rating}">${label}</button>`).join("")}</div></fieldset>` : ""}
         </div>
       </article>`;
     }).join("");
     return `<div class="values-discover-title"><h3>Discover</h3><button type="button" class="secondary values-clear-button" data-clear>Clear selections</button></div>
-      <p>Search the workbook's Master Values Dictionary. Select words that resonate; 15-30 is a useful starting range, not a requirement.</p>
+      <p>Search the workbook's Master Values Dictionary. Select words that resonate; 10-20 is a useful starting range, not a requirement.</p>
       <p class="skill-app-count" aria-live="polite"><span data-selected-count>${Object.keys(selected).length}</span> selected</p>
       <label for="values-search">Search values and definitions</label>
       <input id="values-search" type="search" data-values-search autocomplete="off">
@@ -213,7 +227,7 @@
       root.innerHTML = `<div class="skill-app-shell">
         <header class="skill-app-header"><h2>Discover and Work Towards Your Values</h2><p>Discover and create a plan to work towards your values and accumulate long term positive emotions.</p>${progressMarkup(state.step)}</header>
         <section class="skill-app-panel" aria-live="polite">${panel}</section>
-        <footer class="skill-app-footer"><div><strong data-values-status aria-live="polite">Your entries are not saved in this browser.</strong><br><small>Download your results below if you want to keep a copy.</small></div>
+        <footer class="skill-app-footer"><div><strong data-values-status aria-live="polite">Your entries are not saved on our servers.</strong><br><small>A temporary draft is saved in this browser. You can download partial or completed results below.</small></div>
           <div class="skill-app-actions"><button type="button" class="secondary" data-back ${state.step === 0 ? "disabled" : ""}>Back</button><button type="button" data-next ${state.step === STEPS.length - 1 ? "disabled" : ""}>Continue</button></div></footer>
       </div>`;
       bind();
@@ -320,11 +334,10 @@
       const valueName = (id, next) => [...data.values, ...next.custom].find((value) => value.id === id)?.name || id;
       Progress.registerTool({
         root, toolId: "values", toolTitle: "Discover and Work Towards Your Values", route: Progress.TOOL_ROUTES.values, schemaVersion: 1,
-        browserAutosave: false,
         showFloating: false,
         showFinalStartAgain: false,
         finalHeading: "Download your results",
-        privacyText: "Your entries are not saved in this browser. Use the download options if you want to keep a copy. Nothing you enter here is uploaded.",
+        privacyText: "Your entries are not saved on our servers. A temporary draft is saved in this browser. Download your results to keep a copy. Nothing you enter here is uploaded.",
         getState: () => state,
         setState: (next) => { state = JSON.parse(JSON.stringify(next)); render(); },
         validateState,
@@ -332,7 +345,10 @@
           const selected = Object.keys(next.selected).map((id) => valueName(id, next));
           const core = Object.entries(next.core).filter(([, item]) => item.chosen).map(([id]) => id);
           const lines = ["# Discover and Work Towards Your Values", ""];
-          if (selected.length) lines.push("## Selected Values", "", ...Object.keys(next.selected).map((id) => `- ${valueName(id, next)}${next.selected[id].rating ? ` — Importance: ${next.selected[id].rating}/5` : ""}`), "");
+          if (selected.length) lines.push("## Selected Values", "", ...Object.keys(next.selected).map((id) => {
+            const importance = normalizedValueImportance(next.selected[id].rating);
+            return `- ${valueName(id, next)}${importance ? ` — Importance: ${importance}` : ""}`;
+          }), "");
           if (core.length) {
             lines.push("## Core Values and Alignment", "");
             core.forEach((id) => {

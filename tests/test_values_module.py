@@ -46,7 +46,8 @@ class ValuesModuleTests(unittest.TestCase):
         self.assertEqual(self.data["process"], ["DISCOVER", "SORT", "NARROW", "ASSESS", "ACT", "BARRIERS", "MISSION", "REVIEW"])
         self.assertTrue(self.data["custom_values_allowed"])
         self.assertRegex(self.javascript, re.compile(r"Number\(desired\)\s*-\s*Number\(current\)"))
-        self.assertIn("Your entries are not saved in this browser", self.javascript)
+        self.assertIn("Your entries are not saved on our servers", self.javascript)
+        self.assertIn("A temporary draft is saved in this browser", self.javascript)
         self.assertIn("Nothing you enter here is uploaded", self.javascript)
         self.assertNotIn("localStorage", self.javascript)
         self.assertNotIn("https://", self.javascript)
@@ -59,7 +60,7 @@ class ValuesModuleTests(unittest.TestCase):
         self.assertIn(title, self.page)
         self.assertIn(subtitle, self.javascript)
         self.assertIn(subtitle, self.page)
-        self.assertIn("browserAutosave: false", self.javascript)
+        self.assertNotIn("browserAutosave: false", self.javascript)
         self.assertIn("showFloating: false", self.javascript)
         self.assertIn('finalHeading: "Download your results"', self.javascript)
 
@@ -75,9 +76,15 @@ class ValuesModuleTests(unittest.TestCase):
         self.assertIn("margin-block: 0.75rem 2rem", self.css)
         self.assertIn("padding-bottom: 1.75rem", self.css)
         self.assertIn(".values-definition[open] summary::after", self.css)
+        self.assertIn("font-size: clamp(1.25rem, 1.5vw, 1.45rem)", self.css)
+        self.assertIn("font-size: 0.76rem", self.css)
+        self.assertIn("font-size: 0.78rem", self.css)
 
     def test_importance_buttons_and_clear_selections_replace_old_controls(self):
-        self.assertIn("[1, 2, 3, 4, 5]", self.javascript)
+        self.assertIn('{ label: "H", value: "High" }', self.javascript)
+        self.assertIn('{ label: "M", value: "Medium" }', self.javascript)
+        self.assertIn('{ label: "L", value: "Low" }', self.javascript)
+        self.assertNotIn("[1, 2, 3, 4, 5]", self.javascript)
         self.assertIn("Importance:", self.javascript)
         self.assertIn("data-importance-value", self.javascript)
         self.assertIn("Clear selections", self.javascript)
@@ -85,6 +92,12 @@ class ValuesModuleTests(unittest.TestCase):
         self.assertNotIn("Clear Saved Data", self.javascript)
         self.assertNotIn("Optional importance label", self.javascript)
         self.assertNotRegex(self.javascript, r'<select[^>]+data-rating')
+
+    def test_discover_range_and_partial_progress_guidance(self):
+        self.assertIn("10-20 is a useful starting range", self.javascript)
+        self.assertNotIn("15-30 is a useful starting range", self.javascript)
+        self.assertIn("If you partly finish the form", self.page)
+        self.assertIn("Open previous progress", self.page)
 
     def test_values_routes_exist(self):
         self.assertTrue((ROOT / "site" / "skill-finder" / "values" / "index.qmd").is_file())

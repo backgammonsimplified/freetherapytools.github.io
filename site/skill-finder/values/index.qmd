@@ -8,7 +8,9 @@ execute:
   enabled: false
 ---
 
-Your entries are not saved in this browser. Download your results at the bottom if you want to keep a copy.
+Your entries are not saved on our servers. A temporary draft is saved in this browser, but download your results at the bottom if you want to keep a copy.
+
+If you partly finish the form, you can still download your results and load them the next time you visit by clicking **Open previous progress**.
 
 ::: {.skill-app data-skill-app="values" data-values-url="/data/skill-apps/values.json"}
 <p>Loading the Values & Valued Action tool...</p>

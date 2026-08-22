@@ -59,7 +59,7 @@ class SkillProgressTests(unittest.TestCase):
             self.assertIn(f'toolId: "{tool_id}"', finder)
         for tool_id in ("behaviour-chain", "exposure"):
             self.assertIn(f'toolId: "{tool_id}"', practice)
-        self.assertIn("browserAutosave: false", values)
+        self.assertNotIn("browserAutosave: false", values)
         self.assertIn("showFloating: false", values)
         self.assertNotIn("localStorage", values)
 
