@@ -77,6 +77,10 @@ INTEGRATED_SOURCE_IDS = {
     "wellness-p032", "wellness-p036", "wellness-p043",
     "wellness-p044", "wellness-p052", "wellness-p053",
     "wellness-p054",
+    "goal-setting-p002", "goal-setting-p003", "goal-setting-p004",
+    "goal-setting-p005", "goal-setting-p006", "goal-setting-p007",
+    "goal-setting-p008", "goal-setting-p010", "goal-setting-p033",
+    "goal-setting-p034",
 }
 
 

@@ -99,6 +99,26 @@ class QmdResourceExtractionTests(unittest.TestCase):
             )
             self.assertNotEqual("pending", self.by_id[source_id]["extraction_method"])
 
+    def test_goal_and_general_resources_have_native_qmd_content(self) -> None:
+        rows = [
+            row for row in self.published
+            if row["section"] in {"Goal Setting & Tracking", "General Skills"}
+        ]
+        self.assertEqual(15, len(rows))
+        for resource in rows:
+            source_id = resource["id"]
+            lesson = ROOT / self.by_id[source_id]["lesson_qmd"]
+            self.assertIn(
+                f"<!-- native-resource-content:{source_id}:start -->",
+                lesson.read_text(encoding="utf-8"),
+            )
+            self.assertNotEqual("pending", self.by_id[source_id]["extraction_method"])
+
+    def test_no_published_resource_remains_pending(self) -> None:
+        self.assertFalse(
+            [row["source_id"] for row in self.extractions if row["extraction_method"] == "pending"]
+        )
+
     def test_ten_emotion_profiles_use_source_structure_and_sync_to_app_data(self) -> None:
         profile = (SITE / "learn/emotion-regulation/observing-describing-emotions.qmd").read_text(encoding="utf-8")
         emotions = (
@@ -182,6 +202,11 @@ class QmdResourceExtractionTests(unittest.TestCase):
                 "### Skillful Alternatives",
                 "### Prevention",
                 "### Repair",
+            ),
+            "site/learn/goal-setting/goal-setting-guidelines.qmd": (
+                "## Goal Setting Guidelines {#goal-setting-guidelines}",
+                "## SMART Goals {#smart-goals}",
+                "## Case Map {#case-map}",
             ),
         }
         for relative, expected in checks.items():

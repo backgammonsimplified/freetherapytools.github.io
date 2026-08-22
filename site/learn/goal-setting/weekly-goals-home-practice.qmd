@@ -24,9 +24,60 @@ These weekly tools make practice visible and help you notice patterns over time.
 
 Choose one small, meaningful target for each day.
 
+### Monday
+
+- Goal:
+- Skill I will practise:
+- Strength I can use:
+- What happened:
+
+### Tuesday
+
+- Goal:
+- Skill I will practise:
+- Strength I can use:
+- What happened:
+
+### Wednesday
+
+- Goal:
+- Skill I will practise:
+- Strength I can use:
+- What happened:
+
+### Thursday
+
+- Goal:
+- Skill I will practise:
+- Strength I can use:
+- What happened:
+
+### Friday
+
+- Goal:
+- Skill I will practise:
+- Strength I can use:
+- What happened:
+
+### Saturday
+
+- Goal:
+- Skill I will practise:
+- Strength I can use:
+- What happened:
+
+### Sunday
+
+- Goal:
+- Skill I will practise:
+- Strength I can use:
+- What happened:
+
 ## Skills and Strengths
 
 Record the skill you practised and the strength you used.
+
+At the end of the week, note what helped, what got in the way, and one adjustment for the next week. Missing a day is information, not failure.
 
 <!-- section-scan-resources:start -->
 
@@ -49,6 +100,14 @@ Record the skill you practised and the strength you used.
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:goal-setting-p005:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:goal-setting-p005:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-goal-setting-p006 data-source-id="goal-setting-p006"}
@@ -68,6 +127,14 @@ Record the skill you practised and the strength you used.
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:goal-setting-p006:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:goal-setting-p006:end -->
 ::::
 
 <!-- section-scan-resources:end -->

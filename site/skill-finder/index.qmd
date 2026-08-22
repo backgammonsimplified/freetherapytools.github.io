@@ -155,6 +155,50 @@ Turn a direction into a specific, measurable, achievable, relevant/realistic, ti
 
 [Download / View Handout](/resources/general/general-p006.jpg)
 
+
+<!-- native-resource-content:general-p006:start -->
+
+#### Text Version
+
+##### DIALECTICS
+
+Dialectics: Two seemingly opposite things can be true at the same time. Marsha Linehan, the creator of DBT, defines dialectics as a synthesis or integration of opposites. The core dialectic in DBT is acceptance AND change. S "Either/or/but"
+
+##### "Both/AND"
+
+- Trust AND suspicion
+
+- Independence AND asking for help
+
+##### Working AND resting
+
+- Openness AND privacy I can be mad at someone AND love and respect that person
+
+- I can disagree with someone AND be their friend
+
+- I care about someone AND I have hurt that person
+
+##### Acceptance
+
+oin cah
+
+##### Aqee 9
+
+ali Both can be true!
+
+##### "The Middle
+
+##### Path"
+
+##### Change
+
+I need to do better
+
+##### Working to
+
+eharögef frealitu
+
+<!-- native-resource-content:general-p006:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -176,6 +220,206 @@ Turn a direction into a specific, measurable, achievable, relevant/realistic, ti
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:general-p002:start -->
+
+#### Text Version
+
+##### DISTRESS TOLERANCE
+
+##### STOP
+
+- Distraction (Wise Mind ACCEPTS)
+
+##### TIPP Your Badu Chemistru
+
+##### Activities
+
+- Temperature
+
+##### Contributing
+
+- Intense Exercise
+
+##### Comparisons
+
+##### 0 Progressive Muscle
+
+##### Opposite Emotion
+
+##### Relaxation
+
+##### Pushing Away
+
+- Paced Breathing
+
+##### Thoughts
+
+- Self-Soothe with the 5 Senses
+
+##### Sensations
+
+##### MINDFULNESS
+
+- Recognizing States of Mind
+
+- "WHAT" Skills
+
+- Observe
+
+##### 0 Describe
+
+- Participate
+
+##### "HOW" Skills
+
+- Non-Judgmentallu
+
+- One-Mindfullu
+
+- Effectively
+
+- IMPROVE the Moment
+
+##### Imagery
+
+##### Meaning
+
+##### Prayer
+
+##### Relaxing
+
+One thing in the moment
+
+##### Vacation
+
+##### Self-Encouragement
+
+- Pros & Cons
+
+- Radical Acceptance
+
+- Willingness
+
+##### EMOTION REGULATION
+
+##### ABC PLEASE
+
+##### Accumulating Positive Emotions
+
+##### Build Masterg
+
+##### Cope Ahead
+
+##### Treat Physical Illness
+
+##### Balance Eating
+
+##### Avoid mood-Altering Substances
+
+##### Balanced Sleep
+
+##### Exercise
+
+- Observing and Describing
+
+##### Emotions
+
+- Check the Facts
+
+- Opposite Action
+
+##### Problem Solving
+
+##### CBT & MANAGING ANXIETY
+
+##### Facing Fearsexposure
+
+##### Challenging Negative Thoughts
+
+##### Recognizing Thinking Traps
+
+##### Using "Worry Time"
+
+##### Box Breathing
+
+##### Behaviour Chain Analysis
+
+##### Gratitude Journaling
+
+##### Positive Self-Talk
+
+##### INTERPERSONAL EFFECTIVENESS
+
+##### Clarifying Priorities
+
+- Objective Effectiveness: DEAR MAN
+
+##### Relationship Effectiveness: GIVE
+
+##### Self-Respect Effectiveness: FAST
+
+##### Boundaries
+
+##### Walking the Middle Path
+
+##### OTHER SKILLS
+
+- Grounding
+
+- Behaviour Activation
+
+##### STRENGTHS
+
+##### Determination
+
+##### Commitment
+
+##### Discipline
+
+##### Hopefulness
+
+- Honestly
+
+##### Kndness
+
+- Open-Minded
+
+##### Self-awareness
+
+##### Motivation
+
+##### Courage
+
+##### Confidence
+
+##### FOCUS
+
+##### Flexibility
+
+##### Forgiveness (self/ •
+
+others)
+
+##### Persistence
+
+##### Humour
+
+- Objectivity
+
+##### Patience
+
+##### Empathy
+
+##### Sensitivitu
+
+##### Compassion
+
+Asking for help
+
+##### Medication Adherence
+
+<!-- native-resource-content:general-p002:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-general-p003 data-source-id="general-p003"}
@@ -185,6 +429,150 @@ Turn a direction into a specific, measurable, achievable, relevant/realistic, ti
 
 [Download / View Handout](/resources/general/general-p003.jpg)
 
+
+<!-- native-resource-content:general-p003:start -->
+
+#### Text Version
+
+##### SKILLS LIST
+
+##### Emotion Regulation Skills
+
+##### Distress Tolerance Skills
+
+- The STOP Skill
+
+##### Pros and Cons
+
+##### TIP Your Body Chemistry
+
+##### Temperature
+
+##### Intense exercise
+
+##### Progressive relaxation
+
+##### Paced breathing
+
+##### Distraction (Wise Mind ACCEPTS)
+
+##### Activities
+
+##### Contributing
+
+##### Comparisons
+
+##### Opposite Emotion
+
+##### Pushing Away
+
+##### Thoughts
+
+##### Sensations
+
+##### Self-Soothe With 5 senses
+
+- IMPROVE the Moment
+
+##### Imagery
+
+##### Meaning
+
+##### Prayer
+
+##### Relaxing
+
+One thing in the Moment
+
+##### Vacation
+
+##### Self-Encouragement
+
+##### Radical Acceptance
+
+##### Will ingness
+
+Skills to Manage Anxie_ty
+
+##### Facing Fears - exposure
+
+##### Challenging Negative Thoughts
+
+##### Recognizing Thinking Traps
+
+Using "worry time"
+
+##### Box Breathing
+
+##### Observing and Describing
+
+##### Emotions
+
+##### Check the Facts
+
+##### Opposite Action
+
+##### Problem Solving
+
+##### Pleasant Events/Moments
+
+##### Cope Ahead
+
+##### Build Mastery
+
+##### Sleep Hygiene
+
+##### Avoid Mood- Altering Substances
+
+##### Physical Activity
+
+##### Balanced Eating
+
+##### Mindfulness Skills
+
+##### Recognizing States of Mind
+
+##### "What" Skills
+
+##### Describe
+
+##### Participate
+
+- "How" Skills
+
+##### Non-Judgementally
+
+##### One-Mindfully
+
+##### Effectively
+
+##### ersonal Effectiveness Skills
+
+##### Inter
+
+##### Clarifying Priorities
+
+##### Objective Effectiveness; DEAR MAN
+
+##### Relationship Effectiveness: GIVE
+
+##### Self-Respect Effectiveness: FAST
+
+##### Boundaries
+
+##### Other Skills
+
+- Behaviour Chain Analysis
+
+##### Gratitude Journaling
+
+- Positive Self-Talk
+
+##### Trillium
+
+##### Health Partners
+
+<!-- native-resource-content:general-p003:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-general-p004 data-source-id="general-p004"}
@@ -194,6 +582,132 @@ Turn a direction into a specific, measurable, achievable, relevant/realistic, ti
 
 [Download / View Handout](/resources/general/general-p004.jpg)
 
+
+<!-- native-resource-content:general-p004:start -->
+
+#### Text Version
+
+##### EMOTIONAL OVERLOAD
+
+##### O
+
+##### O
+
+##### EMOTIONAL NUMBNESS
+
+##### DBT SKILLS
+
+##### STOP
+
+##### TIPP
+
+##### Distract with
+
+##### ACCEPTS
+
+##### Self-Soothe with 5
+
+##### Senses
+
+##### IMPROVE the
+
+##### Moment
+
+##### Radical Acceptance
+
+##### Opposite Action
+
+##### What & How Skills
+
+##### Wise Mind
+
+##### Self-Compassion
+
+##### Cope Ahead
+
+##### Interpersonal
+
+##### Effectiveness
+
+##### TIPP
+
+##### Build Mastery
+
+##### Pleasant Activities
+
+##### O
+
+##### Willingness
+
+##### Mindfulness of
+
+##### Emotions
+
+##### Self-Validation
+
+##### What & How
+
+##### Skills
+
+##### Check the Facts
+
+##### Opposite Action
+
+##### Problem Solving
+
+##### Other
+
+##### Pleasant
+
+##### Activities
+
+##### Adhere to
+
+##### Values
+
+##### Build Mastery
+
+##### PLEASE
+
+##### Other
+
+##### PLEASE
+
+##### Other
+
+##### Examples of Signs
+
+##### (Emotions, Thoughts, Behaviours, Body Sensations)
+
+Engage in self-harm behavior
+
+##### Racing thoughts
+
+Engage in reckless behavior Yelling at others I feel like I want to run away Withdrawing from others
+
+##### Pacing around
+
+Heart rate increases
+
+##### Sweaty
+
+I Clench my fists I start to over think I am irritable I start engaging in unhealthy coping strategies (substances, risky behaviour) Feeling calm/ happy Spending time with others Sleeping and Eating well Able to problem solve Able to identify my emotions Isolating from others Sleeping all the time
+
+##### Not eating
+
+Staying in bed all day/ sitting on the couch
+
+##### Mv Signs
+
+##### (Emotions, Thoughts, Behaviours, Body Sensations)
+
+##### My signs Of Emotional Overload
+
+##### My signs Of Wise Mind
+
+My signs of Emotional Numbness
+
+<!-- native-resource-content:general-p004:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-general-p005 data-source-id="general-p005"}
@@ -213,6 +727,70 @@ Turn a direction into a specific, measurable, achievable, relevant/realistic, ti
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:general-p005:start -->
+
+#### Text Version
+
+z
+
+##### O
+
+z o z
+
+##### EMOTION OVERLOAD
+
+##### TIPP
+
+- Temperature, Intense
+
+##### Exercise, Paced Breathing,
+
+##### Progressive Muscle
+
+relaxation
+
+##### Distract with ACCEPTS
+
+##### Self-Soothe with 5 Senses
+
+##### STOP
+
+##### IMPROVE the Moment
+
+##### Opposite Action
+
+##### DISTRESSED- BUT IN WISE MIND
+
+z z z z o o z z z e)
+
+##### Pros and Cons
+
+##### Problem Solving
+
+##### Check the Facts
+
+##### Cope Ahead
+
+##### WISE MIND
+
+##### Interpersonal Effectiveness
+
+##### Mindfulness of Emotions
+
+##### Radical Acceptance
+
+##### Pleasant Activities
+
+##### EMOTIONAL NUMBNESS
+
+##### Build Mastery
+
+##### PLEASE
+
+##### Grounding
+
+<!-- native-resource-content:general-p005:end -->
 ::::
 
 <!-- section-scan-resources:end -->

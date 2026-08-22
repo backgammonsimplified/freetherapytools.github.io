@@ -24,9 +24,50 @@ Use this lesson to choose a meaningful direction and define a goal you can act o
 
 Choose goals that matter to you, are realistic for your current circumstances, and can be reviewed without self-judgment.
 
+### Choose the Current Target
+
+Work from the highest-priority target that is relevant now:
+
+1. **Life-threatening or medically unstable concerns:** immediate safety, suicidal or self-harm thoughts, behaviours or urges, harm to others, or medical instability.
+2. **Treatment-interfering patterns:** barriers such as absences, lateness, not participating, missed practice, medication difficulties, poor sleep or eating, substance use, addictive behaviour, or conduct that prevents treatment from working.
+3. **Life-worth-living goals:** activities and relationships that build joy, mastery, health, connection, education, work, leisure, and self-care.
+4. **Skill building:** a skill that needs practice or has not yet been tried.
+
+Start with the first relevant level rather than skipping a more urgent concern to work on a lower one.
+
+::: {.callout-caution title="Immediate safety"}
+A goal worksheet is not emergency care. If there is immediate danger, use local emergency or crisis services and involve an appropriate health-care professional or trusted support.
+:::
+
 ## SMART Goals {#smart-goals}
 
 A SMART goal is specific, measurable, achievable, relevant, and time-bound.
+
+- **Specific:** What exactly will you do?
+- **Measurable:** How often, how long, how much, or how will you know it happened?
+- **Achievable:** Is the step small enough for your current functioning and resources?
+- **Relevant and realistic:** Is it connected with the current target and substantially within your control?
+- **Time-bound:** When will you start, review, or complete it?
+
+### Goal Prompt
+
+- My current target is:
+- The specific action I will take is:
+- I will measure it by:
+- The smallest achievable version is:
+- This matters because:
+- I will do or review it on:
+
+## Case Map {#case-map}
+
+Use the case map to gather information without treating any one part as the whole story:
+
+- **Behaviours:** withdrawal, reduced activity, self-care changes, crying, substance use, or other actions you are struggling with.
+- **Body and physical concerns:** sleep, eating, pain, energy, headaches, illness, or other sensations and health concerns.
+- **Thoughts:** worry, self-criticism, hopelessness, mental images, or safety-related thoughts.
+- **Emotions:** sadness, anger, fear, guilt, overwhelm, numbness, or other emotions.
+- **Environmental stressors:** relationships, work, finances, loss, housing, or physical-health demands.
+- **Strengths and resources:** determination, resilience, hope, values, beliefs, people, services, and practical supports.
 
 <!-- section-scan-resources:start -->
 
@@ -49,6 +90,14 @@ A SMART goal is specific, measurable, achievable, relevant, and time-bound.
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:goal-setting-p003:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:goal-setting-p003:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-goal-setting-p004 data-source-id="goal-setting-p004"}
@@ -58,6 +107,14 @@ A SMART goal is specific, measurable, achievable, relevant, and time-bound.
 
 [Download / View Handout](/resources/goal-setting/goal-setting-p004.jpg)
 
+
+<!-- native-resource-content:goal-setting-p004:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:goal-setting-p004:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -69,6 +126,14 @@ A SMART goal is specific, measurable, achievable, relevant, and time-bound.
 
 [Download / View Handout](/resources/goal-setting/goal-setting-p002.jpg)
 
+
+<!-- native-resource-content:goal-setting-p002:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:goal-setting-p002:end -->
 ::::
 
 <!-- section-scan-resources:end -->

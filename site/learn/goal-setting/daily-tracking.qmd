@@ -22,17 +22,43 @@ Tracking is information gathering, not a grade. Record what happened so patterns
 
 ## Mood Tracking {#mood-tracking}
 
+For each day, name the main emotions or mood states, rate intensity when useful, and note the event or context. Add a brief observation about what helped or worsened the pattern.
+
 ## Food Tracking {#food-tracking}
+
+Record meals, snacks, drinks, timing, and observations that support planning. Use this as neutral information and follow individualized clinical guidance when eating is a health concern.
 
 ## Sleep Tracking {#sleep-tracking}
 
+Record bedtime, estimated sleep onset, waking during the night, final wake time, naps, and how rested you felt.
+
 ## Medication Tracking {#medication-tracking}
+
+Record whether medication was taken as directed and any question or effect to discuss with a prescriber or pharmacist. Do not use the tracker to change a prescribed dose on your own.
 
 ## Exercise Tracking {#exercise-tracking}
 
+Record the activity, duration, intensity, and how your body responded. Choose movement that is appropriate for your health and ability.
+
 ## Hygiene {#hygiene}
 
+Track the self-care tasks that matter for your current plan, such as showering, oral care, laundry, or changing clothes. Define a smallest workable version for low-energy days.
+
 ## Substance Use Tracking {#substance-use-tracking}
+
+Record substance, amount, time, context, urges, short-term effects, and later consequences when this is part of your care plan. Bring urgent safety concerns to an appropriate professional or emergency service.
+
+## Monthly Habit Tracker {#monthly-habit-tracker}
+
+For each chosen habit:
+
+- Define the action clearly.
+- Mark the days it happened without converting the record into a grade.
+- At the end of the month, note patterns, barriers, and one adjustment.
+
+## Skills and Wellness Diary Card {#skills-wellness-diary}
+
+For each day, record the skills practised, relevant urges or target behaviours, mood, sleep, eating, medication, movement, hygiene, and substance use only to the degree useful for the treatment plan. Bring questions and patterns to the next review.
 
 <!-- section-scan-resources:start -->
 
@@ -55,6 +81,14 @@ Tracking is information gathering, not a grade. Record what happened so patterns
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:goal-setting-p007:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:goal-setting-p007:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-goal-setting-p008 data-source-id="goal-setting-p008"}
@@ -64,6 +98,14 @@ Tracking is information gathering, not a grade. Record what happened so patterns
 
 [Download / View Handout](/resources/goal-setting/goal-setting-p008.jpg)
 
+
+<!-- native-resource-content:goal-setting-p008:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:goal-setting-p008:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-goal-setting-p010 data-source-id="goal-setting-p010"}
@@ -73,6 +115,14 @@ Tracking is information gathering, not a grade. Record what happened so patterns
 
 [Download / View Handout](/resources/goal-setting/goal-setting-p010.jpg)
 
+
+<!-- native-resource-content:goal-setting-p010:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:goal-setting-p010:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-goal-setting-p033 data-source-id="goal-setting-p033"}
@@ -82,6 +132,14 @@ Tracking is information gathering, not a grade. Record what happened so patterns
 
 [Download / View Handout](/resources/goal-setting/goal-setting-p033.jpg)
 
+
+<!-- native-resource-content:goal-setting-p033:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:goal-setting-p033:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-goal-setting-p034 data-source-id="goal-setting-p034"}
@@ -91,6 +149,14 @@ Tracking is information gathering, not a grade. Record what happened so patterns
 
 [Download / View Handout](/resources/goal-setting/goal-setting-p034.jpg)
 
+
+<!-- native-resource-content:goal-setting-p034:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:goal-setting-p034:end -->
 ::::
 
 <!-- section-scan-resources:end -->
