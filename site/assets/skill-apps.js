@@ -14,7 +14,6 @@
 
   if (typeof document === "undefined") return;
 
-  const STORAGE_PREFIX = "therapy-skill-kit:";
   const STEPS = ["DISCOVER", "SORT", "NARROW", "ASSESS", "ACT", "BARRIERS", "MISSION", "REVIEW"];
   const Progress = global.TherapySkillProgress;
 
@@ -57,21 +56,8 @@
     };
   }
 
-  function loadState(key, fallback) {
-    try {
-      return Object.assign(fallback(), JSON.parse(localStorage.getItem(STORAGE_PREFIX + key) || "{}"));
-    } catch (_error) {
-      return fallback();
-    }
-  }
-
-  function saveState(key, state, status) {
-    localStorage.setItem(STORAGE_PREFIX + key, JSON.stringify(state));
-    if (status) status.textContent = "Progress saves automatically on this device";
-  }
-
   function allValues(data, state) {
-    return [...data.values, ...state.custom];
+    return [...data.values, ...state.custom].sort((left, right) => left.name.localeCompare(right.name, undefined, { sensitivity: "base" }));
   }
 
   function selectedValues(data, state) {
@@ -92,22 +78,22 @@
     const selected = state.selected;
     const cards = allValues(data, state).map((value) => {
       const active = Boolean(selected[value.id]);
+      const importance = String(selected[value.id]?.rating || "");
       return `<article class="skill-app-card" data-value-card data-search="${escapeHtml(`${value.name} ${value.definition}`.toLowerCase())}">
         <h4>${escapeHtml(value.name)}</h4>
-        <p class="skill-app-definition">${escapeHtml(value.definition)}</p>
-        <button type="button" class="${active ? "secondary" : ""}" data-toggle-value="${escapeHtml(value.id)}" aria-pressed="${active}">${active ? "Remove" : "Select"}</button>
-        ${active ? `<label for="rating-${escapeHtml(value.id)}">Optional importance label</label>
-        <select id="rating-${escapeHtml(value.id)}" data-rating="${escapeHtml(value.id)}">
-          ${["", "Very Important", "Quite Important", "Not Important"].map((label) => `<option${selected[value.id].rating === label ? " selected" : ""}>${label}</option>`).join("")}
-        </select>` : ""}
+        <details class="values-definition"><summary>Definition</summary><p>${escapeHtml(value.definition)}</p></details>
+        <div class="values-card-controls">
+          <button type="button" class="values-select-button ${active ? "secondary" : ""}" data-toggle-value="${escapeHtml(value.id)}" aria-pressed="${active}">${active ? "Remove" : "Select"}</button>
+          ${active ? `<fieldset class="values-importance"><legend>Importance:</legend><div class="values-importance-buttons" role="group" aria-label="Importance for ${escapeHtml(value.name)}">${[1, 2, 3, 4, 5].map((rating) => `<button type="button" class="${importance === String(rating) ? "" : "secondary"}" data-rating="${escapeHtml(value.id)}" data-importance-value="${rating}" aria-pressed="${importance === String(rating)}">${rating}</button>`).join("")}</div></fieldset>` : ""}
+        </div>
       </article>`;
     }).join("");
-    return `<h3>Discover</h3>
+    return `<div class="values-discover-title"><h3>Discover</h3><button type="button" class="secondary values-clear-button" data-clear>Clear selections</button></div>
       <p>Search the workbook's Master Values Dictionary. Select words that resonate; 15-30 is a useful starting range, not a requirement.</p>
       <p class="skill-app-count" aria-live="polite"><span data-selected-count>${Object.keys(selected).length}</span> selected</p>
       <label for="values-search">Search values and definitions</label>
       <input id="values-search" type="search" data-values-search autocomplete="off">
-      <div class="skill-app-actions">
+      <div class="skill-app-actions values-custom-row">
         <input type="text" data-custom-value aria-label="Custom value name" placeholder="Add your own value">
         <button type="button" data-add-custom>Add custom value</button>
       </div>
@@ -214,21 +200,7 @@
     const response = await fetch(root.dataset.valuesUrl, { credentials: "same-origin" });
     if (!response.ok) throw new Error("Values data could not be loaded");
     const data = await response.json();
-    const key = "values";
-    let legacyState = null;
-    try {
-      if (localStorage.getItem(STORAGE_PREFIX + key)) legacyState = loadState(key, initialValuesState);
-    } catch (_error) {
-      legacyState = null;
-    }
     let state = initialValuesState();
-    let progressController = null;
-
-    function persist(status) {
-      progressController?.notifyChange();
-      const target = status || root.querySelector("[data-save-status]");
-      if (target) target.textContent = "Progress saves automatically on this device";
-    }
 
     function render() {
       state.step = Math.max(0, Math.min(STEPS.length - 1, Number(state.step) || 0));
@@ -239,10 +211,10 @@
       else if (state.step === 6) panel = missionMarkup(state);
       else panel = reviewMarkup(state);
       root.innerHTML = `<div class="skill-app-shell">
-        <header class="skill-app-header"><h2>Values & Valued Action</h2><p>DISCOVER - SORT - NARROW - ASSESS - ACT - BARRIERS - MISSION - REVIEW</p>${progressMarkup(state.step)}</header>
+        <header class="skill-app-header"><h2>Discover and Work Towards Your Values</h2><p>Discover and create a plan to work towards your values and accumulate long term positive emotions.</p>${progressMarkup(state.step)}</header>
         <section class="skill-app-panel" aria-live="polite">${panel}</section>
-        <footer class="skill-app-footer"><div><strong data-save-status>Progress saves automatically on this device</strong><br><small>Your progress stays on this device unless you save a copy to your computer. Nothing you enter here is uploaded.</small></div>
-          <div class="skill-app-actions"><button type="button" class="secondary" data-back ${state.step === 0 ? "disabled" : ""}>Back</button><button type="button" data-next ${state.step === STEPS.length - 1 ? "disabled" : ""}>Continue</button><button type="button" class="secondary" data-restart>Restart steps</button><button type="button" class="secondary" data-clear>Clear Saved Data</button></div></footer>
+        <footer class="skill-app-footer"><div><strong data-values-status aria-live="polite">Your entries are not saved in this browser.</strong><br><small>Download your results below if you want to keep a copy.</small></div>
+          <div class="skill-app-actions"><button type="button" class="secondary" data-back ${state.step === 0 ? "disabled" : ""}>Back</button><button type="button" data-next ${state.step === STEPS.length - 1 ? "disabled" : ""}>Continue</button></div></footer>
       </div>`;
       bind();
       root.querySelector(".skill-app-panel h3")?.focus?.();
@@ -259,10 +231,16 @@
         const id = button.dataset.toggleValue;
         if (state.selected[id]) delete state.selected[id];
         else state.selected[id] = { rating: "" };
-        persist(); render();
+        render();
       }));
-      root.querySelectorAll("[data-rating]").forEach((select) => select.addEventListener("change", () => {
-        state.selected[select.dataset.rating].rating = select.value; persist();
+      root.querySelectorAll("[data-rating]").forEach((button) => button.addEventListener("click", () => {
+        const id = button.dataset.rating;
+        state.selected[id].rating = button.dataset.importanceValue;
+        root.querySelectorAll(`[data-rating="${CSS.escape(id)}"]`).forEach((option) => {
+          const chosen = option === button;
+          option.setAttribute("aria-pressed", String(chosen));
+          option.classList.toggle("secondary", !chosen);
+        });
       }));
       root.querySelector("[data-add-custom]")?.addEventListener("click", () => {
         const input = root.querySelector("[data-custom-value]");
@@ -271,17 +249,17 @@
         const id = `custom-${Date.now()}`;
         state.custom.push({ id, name, definition: "Your own wording", suggested_domains: [], aliases: [] });
         state.selected[id] = { rating: "" };
-        persist(); render();
+        render();
       });
       root.querySelectorAll("[data-domain-value]").forEach((checkbox) => checkbox.addEventListener("change", () => {
         const id = checkbox.dataset.domainValue;
         const domains = new Set(state.domains[id] || []);
         checkbox.checked ? domains.add(checkbox.value) : domains.delete(checkbox.value);
-        state.domains[id] = [...domains]; persist();
+        state.domains[id] = [...domains];
       }));
       root.querySelectorAll("[data-core-value]").forEach((checkbox) => checkbox.addEventListener("change", () => {
         const id = checkbox.dataset.coreValue;
-        state.core[id] = Object.assign(state.core[id] || {}, { chosen: checkbox.checked }); persist();
+        state.core[id] = Object.assign(state.core[id] || {}, { chosen: checkbox.checked });
       }));
       root.querySelectorAll("[data-assessment-card]").forEach((card) => {
         const id = card.dataset.assessmentCard;
@@ -290,37 +268,35 @@
           state.assessments[id][input.dataset.assess] = input.value;
           const a = state.assessments[id];
           card.querySelector("[data-gap]").textContent = `Gap: ${SkillApps.calculateGap(a.current ?? 5, a.desired ?? 5)}`;
-          persist();
         }));
       });
       root.querySelectorAll("[data-focus-value]").forEach((checkbox) => checkbox.addEventListener("change", () => {
         const id = checkbox.dataset.focusValue;
         if (checkbox.checked && state.focus.length >= 3) {
           checkbox.checked = false;
-          root.querySelector("[data-save-status]").textContent = "Choose up to three focus areas";
+          const status = root.querySelector("[data-values-status]");
+          if (status) status.textContent = "Choose up to three focus areas";
           return;
         }
         state.focus = checkbox.checked ? [...new Set([...state.focus, id])] : state.focus.filter((value) => value !== id);
-        persist(); render();
+        render();
       }));
       root.querySelectorAll("[data-field]").forEach((field) => {
-        const update = () => { setValue(state, field.dataset.field, field.value); persist(); };
+        const update = () => { setValue(state, field.dataset.field, field.value); };
         field.addEventListener("input", update);
         field.addEventListener("change", update);
       });
       root.querySelector("[data-build-mission]")?.addEventListener("click", () => {
         const m = state.mission;
         m.statement = `I want to live as someone who ${m.qualities || "[core qualities]"}, by ${m.actions || "[repeatable actions]"}, in service of ${m.service || "[people, purpose, or contribution]"}.`;
-        persist(); render();
+        render();
       });
-      root.querySelector("[data-back]")?.addEventListener("click", () => { state.step -= 1; persist(); render(); });
-      root.querySelector("[data-next]")?.addEventListener("click", () => { state.step += 1; persist(); render(); });
-      root.querySelector("[data-restart]")?.addEventListener("click", () => { state.step = 0; persist(); render(); });
+      root.querySelector("[data-back]")?.addEventListener("click", () => { state.step -= 1; render(); });
+      root.querySelector("[data-next]")?.addEventListener("click", () => { state.step += 1; render(); });
       root.querySelector("[data-clear]")?.addEventListener("click", () => {
-        localStorage.removeItem(STORAGE_PREFIX + key);
+        if (!global.confirm("Clear all current Values selections and entries?")) return;
         state = initialValuesState();
         render();
-        root.querySelector("[data-save-status]").textContent = "Saved data cleared";
       });
     }
 
@@ -342,16 +318,21 @@
         && strings(next.mission, ["qualities", "actions", "service", "statement"])
         && strings(next.review, ["aligned", "drifted", "attention", "discomfort", "continue", "change", "next", "date"]);
       const valueName = (id, next) => [...data.values, ...next.custom].find((value) => value.id === id)?.name || id;
-      progressController = Progress.registerTool({
-        root, toolId: "values", toolTitle: "Values & Valued Action", route: Progress.TOOL_ROUTES.values, schemaVersion: 1, legacyState,
+      Progress.registerTool({
+        root, toolId: "values", toolTitle: "Discover and Work Towards Your Values", route: Progress.TOOL_ROUTES.values, schemaVersion: 1,
+        browserAutosave: false,
+        showFloating: false,
+        showFinalStartAgain: false,
+        finalHeading: "Download your results",
+        privacyText: "Your entries are not saved in this browser. Use the download options if you want to keep a copy. Nothing you enter here is uploaded.",
         getState: () => state,
         setState: (next) => { state = JSON.parse(JSON.stringify(next)); render(); },
         validateState,
         getReadableSummary: (next) => {
           const selected = Object.keys(next.selected).map((id) => valueName(id, next));
           const core = Object.entries(next.core).filter(([, item]) => item.chosen).map(([id]) => id);
-          const lines = ["# Values & Valued Action", ""];
-          if (selected.length) lines.push("## Selected Values", "", ...selected.map((name) => `- ${name}`), "");
+          const lines = ["# Discover and Work Towards Your Values", ""];
+          if (selected.length) lines.push("## Selected Values", "", ...Object.keys(next.selected).map((id) => `- ${valueName(id, next)}${next.selected[id].rating ? ` — Importance: ${next.selected[id].rating}/5` : ""}`), "");
           if (core.length) {
             lines.push("## Core Values and Alignment", "");
             core.forEach((id) => {

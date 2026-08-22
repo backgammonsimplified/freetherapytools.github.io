@@ -162,7 +162,7 @@
   }
 
   function saveDraftNow() {
-    if (!active) return;
+    if (!active || active.config.browserAutosave === false) return;
     try {
       const record = currentRecord();
       localStorage.setItem(STORAGE_PREFIX + active.config.toolId, JSON.stringify(record));
@@ -174,6 +174,7 @@
   }
 
   function scheduleDraft() {
+    if (active?.config.browserAutosave === false) return;
     global.clearTimeout(autosaveTimer);
     autosaveTimer = global.setTimeout(saveDraftNow, 450);
   }
@@ -220,6 +221,10 @@
 
   function updateDraftUi() {
     if (!active) return;
+    if (active.config.browserAutosave === false) {
+      ensurePageControls();
+      return;
+    }
     const draft = readDraft();
     const savedAt = active.lastSaved || (draft && new Date(draft.record.saved_at));
     active.lastSavedText.textContent = savedAt ? localSavedLabel(savedAt) : "Not yet saved";
@@ -275,7 +280,7 @@
       return;
     }
     active.config.setState(clone(checked.state));
-    saveDraftNow();
+    if (active.config.browserAutosave !== false) saveDraftNow();
     setMessage("Progress restored. You can continue where you left off.");
     closeDrawer();
   }
@@ -311,7 +316,7 @@
         return;
       }
       active.config.setState(clone(checked.state));
-      saveDraftNow();
+      if (active.config.browserAutosave !== false) saveDraftNow();
       setMessage("Progress opened in the correct tool.");
     } catch (_error) {
       setMessage("The transferred progress could not be opened.", true);
@@ -438,7 +443,7 @@
     }
   }
 
-  function buildUi() {
+  function buildUi(config) {
     const backdrop = element("div", { className: "skill-progress-backdrop" });
     backdrop.hidden = true;
     const drawer = element("aside", { className: "skill-progress-drawer", attrs: { role: "dialog", "aria-modal": "true", "aria-labelledby": "skill-progress-heading" } });
@@ -466,20 +471,27 @@
     exportActions.append(docx, print);
     exportSection.append(exportActions);
 
-    const browserSection = element("section");
-    browserSection.append(element("h3", { text: "Browser progress" }));
-    const savedLine = element("p");
-    savedLine.append(document.createTextNode("Last automatically saved: "));
-    const lastSavedText = element("strong", { text: "Not yet saved" });
-    savedLine.append(lastSavedText);
-    const clearButton = element("button", { type: "button", text: "Clear browser progress" });
-    browserSection.append(savedLine, clearButton);
+    let browserSection = null;
+    let lastSavedText = null;
+    let clearButton = null;
+    if (config.browserAutosave !== false) {
+      browserSection = element("section");
+      browserSection.append(element("h3", { text: "Browser progress" }));
+      const savedLine = element("p");
+      savedLine.append(document.createTextNode("Last automatically saved: "));
+      lastSavedText = element("strong", { text: "Not yet saved" });
+      savedLine.append(lastSavedText);
+      clearButton = element("button", { type: "button", text: "Clear browser progress" });
+      browserSection.append(savedLine, clearButton);
+    }
 
     const privacySection = element("section");
-    privacySection.append(element("h3", { text: "Privacy" }), element("p", { className: "skill-progress-privacy", text: "Your progress stays on this device unless you save a copy to your computer. Nothing you enter here is uploaded." }));
+    privacySection.append(element("h3", { text: "Privacy" }), element("p", { className: "skill-progress-privacy", text: config.privacyText || "Your progress stays on this device unless you save a copy to your computer. Nothing you enter here is uploaded." }));
     const message = element("p", { className: "skill-progress-status", attrs: { role: "status", "aria-live": "polite" } });
     const close = element("button", { type: "button", text: "Close" });
-    drawer.append(heading, filenameLabel, filename, saveActions, openSection, exportSection, browserSection, privacySection, message, close);
+    drawer.append(heading, filenameLabel, filename, saveActions, openSection, exportSection);
+    if (browserSection) drawer.append(browserSection);
+    drawer.append(privacySection, message, close);
     document.body.append(backdrop, drawer);
 
     saveMarkdown.addEventListener("click", () => saveFile("md"));
@@ -487,7 +499,7 @@
     fileInput.addEventListener("change", () => loadFile(fileInput.files?.[0]));
     docx.addEventListener("click", exportDocx);
     print.addEventListener("click", printSummary);
-    clearButton.addEventListener("click", () => clearDraft(true));
+    clearButton?.addEventListener("click", () => clearDraft(true));
     close.addEventListener("click", closeDrawer);
     backdrop.addEventListener("click", closeDrawer);
     drawer.addEventListener("keydown", (event) => {
@@ -520,21 +532,24 @@
     const footer = active.config.root.querySelector(".skill-app-footer") || active.config.root.querySelector(".skill-app-shell");
     if (footer && !active.config.root.querySelector("[data-skill-progress-final]")) {
       const area = element("section", { className: "skill-progress-final", attrs: { "data-skill-progress-final": "" } });
-      area.append(element("h3", { text: "Save your work" }));
+      area.append(element("h3", { text: active.config.finalHeading || "Save your work" }));
       const actions = element("div", { className: "skill-progress-final-actions" });
       const md = element("button", { type: "button", text: "Save Markdown" });
       const docx = element("button", { type: "button", text: "Export DOCX" });
       const print = element("button", { type: "button", text: "Print / Save as PDF" });
-      const restart = element("button", { className: "secondary", type: "button", text: "Start again" });
       md.addEventListener("click", () => saveFile("md"));
       docx.addEventListener("click", exportDocx);
       print.addEventListener("click", printSummary);
-      restart.addEventListener("click", startOver);
-      actions.append(md, docx, print, restart);
+      actions.append(md, docx, print);
+      if (active.config.showFinalStartAgain !== false) {
+        const restart = element("button", { className: "secondary", type: "button", text: "Start again" });
+        restart.addEventListener("click", startOver);
+        actions.append(restart);
+      }
       area.append(actions);
       footer.append(area);
     }
-    const draft = readDraft();
+    const draft = active.config.browserAutosave === false ? null : readDraft();
     let prompt = active.config.root.previousElementSibling;
     if (draft && !prompt?.matches?.("[data-skill-progress-draft]")) {
       prompt = element("aside", { className: "skill-progress-draft-prompt", attrs: { "data-skill-progress-draft": "", "aria-label": "Previous browser progress" } });
@@ -558,18 +573,22 @@
     }
     if (active && active.config.root !== config.root) throw new Error("Only one interactive progress tool can be active per page");
     if (active?.observer) active.observer.disconnect();
-    active = { config, initialState: clone(config.getState()), lastSaved: null, ...buildUi() };
-    const floating = element("button", { className: "skill-progress-floating", type: "button", text: "Save progress", attrs: { "data-skill-progress-floating": "", "aria-haspopup": "dialog" } });
-    floating.addEventListener("click", () => openDrawer(floating));
-    document.body.append(floating);
-    active.floating = floating;
-    config.root.addEventListener("input", scheduleDraft);
-    config.root.addEventListener("change", scheduleDraft);
-    config.root.addEventListener("click", scheduleDraft);
+    active = { config, initialState: clone(config.getState()), lastSaved: null, ...buildUi(config) };
+    if (config.showFloating !== false) {
+      const floating = element("button", { className: "skill-progress-floating", type: "button", text: "Save progress", attrs: { "data-skill-progress-floating": "", "aria-haspopup": "dialog" } });
+      floating.addEventListener("click", () => openDrawer(floating));
+      document.body.append(floating);
+      active.floating = floating;
+    }
+    if (config.browserAutosave !== false) {
+      config.root.addEventListener("input", scheduleDraft);
+      config.root.addEventListener("change", scheduleDraft);
+      config.root.addEventListener("click", scheduleDraft);
+    }
     active.observer = new MutationObserver(() => ensurePageControls());
     active.observer.observe(config.root, { childList: true, subtree: true });
     try {
-      if (config.legacyState && config.validateState(config.legacyState) && !localStorage.getItem(STORAGE_PREFIX + config.toolId)) {
+      if (config.browserAutosave !== false && config.legacyState && config.validateState(config.legacyState) && !localStorage.getItem(STORAGE_PREFIX + config.toolId)) {
         localStorage.setItem(STORAGE_PREFIX + config.toolId, JSON.stringify(makeRecord(config, config.legacyState)));
       }
     } catch (_error) {
@@ -578,7 +597,7 @@
     ensurePageControls();
     updateDraftUi();
     consumeHandoff();
-    return { notifyChange: scheduleDraft, saveDraft: saveDraftNow, open: () => openDrawer(floating) };
+    return { notifyChange: scheduleDraft, saveDraft: saveDraftNow, open: () => openDrawer(active.floating) };
   }
 
   function nonEmptySections(title, sections) {

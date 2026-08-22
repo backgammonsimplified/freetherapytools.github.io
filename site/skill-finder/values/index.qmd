@@ -1,6 +1,6 @@
 ---
-title: "Values & Valued Action"
-description: "Discover, organize, and act on values using your own words."
+title: "Discover and Work Towards Your Values"
+description: "Discover and create a plan to work towards your values and accumulate long term positive emotions."
 sidebar: false
 page-layout: full
 toc: false
@@ -8,7 +8,7 @@ execute:
   enabled: false
 ---
 
-Use this private, step-by-step workspace to clarify valued directions and turn them into small actions. It organizes only the choices and words you provide.
+Your entries are not saved in this browser. Download your results at the bottom if you want to keep a copy.
 
 ::: {.skill-app data-skill-app="values" data-values-url="/data/skill-apps/values.json"}
 <p>Loading the Values & Valued Action tool...</p>

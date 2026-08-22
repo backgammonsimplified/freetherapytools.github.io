@@ -59,6 +59,9 @@ class SkillProgressTests(unittest.TestCase):
             self.assertIn(f'toolId: "{tool_id}"', finder)
         for tool_id in ("behaviour-chain", "exposure"):
             self.assertIn(f'toolId: "{tool_id}"', practice)
+        self.assertIn("browserAutosave: false", values)
+        self.assertIn("showFloating: false", values)
+        self.assertNotIn("localStorage", values)
 
     def test_local_only_storage_and_untrusted_import_guards(self):
         self.assertIn('therapy-skill-kit:progress:', PROGRESS)
