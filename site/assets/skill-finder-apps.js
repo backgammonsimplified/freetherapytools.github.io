@@ -3,6 +3,7 @@
 
   const DATA_ROOT = "/data/skill-apps";
   const BODY_REGIONS = ["head / face", "jaw", "throat", "neck / shoulders", "chest / heart", "stomach / gut", "back", "arms", "hands", "legs", "feet", "whole body", "other"];
+  const Progress = global.TherapySkillProgress;
   const escapeHtml = (value) => String(value ?? "")
     .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;").replaceAll("'", "&#039;");
@@ -19,6 +20,29 @@
     ).join("")}</div>`;
   }
 
+  function plainObjectWithKeys(value, keys) {
+    return Progress.isPlainObject(value) && Object.keys(value).every((key) => keys.includes(key));
+  }
+
+  function flowSummary(flow, state) {
+    if (flow.id === "worry-tree") {
+      const type = state.history.includes("action") || ["action", "when", "schedule", "how", "plan-result"].includes(state.nodeId)
+        ? "Current actionable problem"
+        : state.history.includes("hypothetical") || state.nodeId === "hypothetical-result" ? "Hypothetical or outside my control" : "Not selected yet";
+      return Progress.nonEmptySections("Worry Tree", [
+        ["Worry", state.answers.worry], ["Type", type], ["What I Could Do", state.answers.action],
+        ["When", state.answers.timing], ["Scheduled Time or Cue", state.answers.schedule], ["How / First Step", state.answers.how],
+      ]);
+    }
+    const emotion = state.answers.emotion && global.__therapyEmotionNames?.[state.answers.emotion];
+    return Progress.nonEmptySections(flow.title, [
+      ["Emotion", emotion || state.answers.emotion],
+      ["Decision Path", [...state.history, state.nodeId].map((id) => { const node = flow.nodes.find((item) => item.id === id); return node?.title || node?.prompt || id; })],
+      ["Current Decision Point", flow.nodes.find((node) => node.id === state.nodeId)?.title || flow.nodes.find((node) => node.id === state.nodeId)?.prompt],
+      ["Recorded Answers", Object.entries(state.answers).filter(([key]) => key !== "emotion").map(([key, value]) => `${key.replaceAll("-", " ")}: ${value}`)],
+    ]);
+  }
+
   class FlowEngine {
     constructor(root, flow, context = {}) {
       this.root = root;
@@ -29,6 +53,23 @@
       this.history = [];
       this.answers = {};
       this.render();
+      if (Progress) {
+        const allowedAnswers = flow.nodes.map((node) => node.field).filter(Boolean);
+        Progress.registerTool({
+          root,
+          toolId: flow.id,
+          toolTitle: flow.title,
+          route: Progress.TOOL_ROUTES[flow.id],
+          schemaVersion: 1,
+          getState: () => ({ nodeId: this.nodeId, history: this.history, answers: this.answers }),
+          setState: (state) => { this.nodeId = state.nodeId; this.history = [...state.history]; this.answers = { ...state.answers }; this.render(); },
+          validateState: (state) => plainObjectWithKeys(state, ["nodeId", "history", "answers"])
+            && typeof state.nodeId === "string" && this.nodes.has(state.nodeId)
+            && Array.isArray(state.history) && state.history.length <= 100 && state.history.every((node) => typeof node === "string" && this.nodes.has(node))
+            && plainObjectWithKeys(state.answers, allowedAnswers) && Object.values(state.answers).every((value) => typeof value === "string"),
+          getReadableSummary: (state) => flowSummary(flow, state),
+        });
+      }
     }
     go(next) { if (this.nodes.has(next)) { this.history.push(this.nodeId); this.nodeId = next; this.render(true); } }
     back() { if (this.history.length) { this.nodeId = this.history.pop(); this.render(true); } }
@@ -57,7 +98,7 @@
       if (node.type === "question") content = this.questionMarkup(node);
       if (node.type === "information") content = `<h3>${escapeHtml(node.title)}</h3><p>${escapeHtml(node.body)}</p><button type="button" data-flow-continue>Continue</button>`;
       if (node.type === "result") content = this.resultMarkup(node);
-      this.root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>${escapeHtml(this.flow.title)}</h2><p>Your answers stay on this page and are not transmitted.</p></header><section class="skill-app-panel" aria-live="polite" tabindex="-1">${content}</section><footer class="skill-app-footer"><button type="button" class="secondary" data-flow-back ${this.history.length ? "" : "disabled"}>Back</button><button type="button" class="secondary" data-flow-restart>Restart</button></footer></div>`;
+      this.root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>${escapeHtml(this.flow.title)}</h2><p>Your progress stays on this device unless you save a copy to your computer. Nothing you enter here is uploaded.</p></header><section class="skill-app-panel" aria-live="polite" tabindex="-1">${content}</section><footer class="skill-app-footer"><button type="button" class="secondary" data-flow-back ${this.history.length ? "" : "disabled"}>Back</button><button type="button" class="secondary" data-flow-restart>Restart</button></footer></div>`;
       this.bind(node);
       if (moveFocus) this.root.querySelector(".skill-app-panel")?.focus();
     }
@@ -77,6 +118,7 @@
   async function initFlow(root, filename) {
     const [flow, emotionData] = await Promise.all([getJson(`flows/${filename}.json`), getJson("emotions.json")]);
     const engine = new FlowEngine(root, flow, emotionData);
+    global.__therapyEmotionNames = Object.fromEntries(emotionData.emotions.map((emotion) => [emotion.id, emotion.name]));
     const requested = new URLSearchParams(global.location.search).get("emotion");
     if (filename === "change-emotion" && emotionData.emotions.some((item) => item.id === requested)) {
       engine.answers.emotion = requested; engine.nodeId = "fits-facts"; engine.history = ["emotion"]; engine.render();
@@ -85,14 +127,24 @@
 
   async function initThermometer(root) {
     const data = await getJson("thermometer.json");
-    root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Where do you feel closest right now?</h2><p>Choose a zone. The words describe a state, not a diagnosis.</p></header><div class="skill-app-thermometer" role="list">${data.zones.map((zone) => `<button type="button" role="listitem" data-zone="${zone.id}" aria-pressed="false"><strong>${escapeHtml(zone.name)}</strong><span>${escapeHtml(zone.description)}</span></button>`).join("")}</div><section class="skill-app-panel" data-zone-result tabindex="-1"><p>Choose a zone to see skills that may fit where you are right now.</p></section></div>`;
-    root.querySelectorAll("[data-zone]").forEach((button) => button.addEventListener("click", () => {
-      root.querySelectorAll("[data-zone]").forEach((other) => other.setAttribute("aria-pressed", String(other === button)));
-      const zone = data.zones.find((item) => item.id === button.dataset.zone);
-      const result = root.querySelector("[data-zone-result]");
-      result.innerHTML = `<h3>Skills that may fit where you are right now</h3><p>${escapeHtml(zone.description)}</p>${linkCards(zone.skills.map((skill) => ({ ...skill, kind: skill.href.startsWith("/skill-finder") ? "app" : "learn", label: skill.name })))}`;
-      result.focus();
-    }));
+    const state = { selectedZone: "" };
+    function render(focus = false) {
+      const zone = data.zones.find((item) => item.id === state.selectedZone);
+      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Skill Thermometer</h2><p>Choose a zone. The words describe a state, not a diagnosis.</p></header><div class="skill-app-thermometer" role="list">${data.zones.map((item) => `<button type="button" role="listitem" data-zone="${item.id}" aria-pressed="${item.id === state.selectedZone}"><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.description)}</span></button>`).join("")}</div><section class="skill-app-panel" data-zone-result tabindex="-1">${zone ? `<h3>Skills that may fit where you are right now</h3><p>${escapeHtml(zone.description)}</p>${linkCards(zone.skills.map((skill) => ({ ...skill, kind: skill.href.startsWith("/skill-finder") ? "app" : "learn", label: skill.name })))}` : "<p>Choose a zone to see skills that may fit where you are right now.</p>"}</section><footer class="skill-app-footer"></footer></div>`;
+      root.querySelectorAll("[data-zone]").forEach((button) => button.addEventListener("click", () => { state.selectedZone = button.dataset.zone; render(true); }));
+      if (focus) root.querySelector("[data-zone-result]")?.focus();
+    }
+    render();
+    if (Progress) Progress.registerTool({
+      root, toolId: "thermometer", toolTitle: "Skill Thermometer", route: Progress.TOOL_ROUTES.thermometer, schemaVersion: 1,
+      getState: () => state,
+      setState: (next) => { state.selectedZone = next.selectedZone; render(); },
+      validateState: (next) => plainObjectWithKeys(next, ["selectedZone"]) && typeof next.selectedZone === "string" && (!next.selectedZone || data.zones.some((zone) => zone.id === next.selectedZone)),
+      getReadableSummary: (next) => {
+        const zone = data.zones.find((item) => item.id === next.selectedZone);
+        return Progress.nonEmptySections("Skill Thermometer", [["Selected Zone", zone?.name], ["Description", zone?.description], ["Skills to Consider", zone?.skills.map((skill) => skill.name) || []]]);
+      },
+    });
   }
 
   function emotionSelector(emotions, selected) {
@@ -128,6 +180,26 @@
       root.querySelector("[data-emotion-restart]")?.addEventListener("click", () => { Object.assign(state, { step: 0, emotion: "", words: [], regions: [], details: {} }); render(true); });
     }
     render();
+    if (Progress) Progress.registerTool({
+      root, toolId: "emotion-explorer", toolTitle: "Emotion Explorer", route: Progress.TOOL_ROUTES["emotion-explorer"], schemaVersion: 1,
+      getState: () => state,
+      setState: (next) => { Object.assign(state, next, { words: [...next.words], regions: [...next.regions], details: { ...next.details } }); render(); },
+      validateState: (next) => {
+        if (!plainObjectWithKeys(next, ["step", "emotion", "words", "regions", "details"]) || !Number.isInteger(next.step) || next.step < 0 || next.step > 4 || typeof next.emotion !== "string") return false;
+        const emotion = emotions.find((item) => item.id === next.emotion);
+        if (next.emotion && !emotion) return false;
+        if (!Array.isArray(next.words) || next.words.length > 100 || next.words.some((word) => typeof word !== "string" || (emotion && !emotion.related_words.includes(word)))) return false;
+        if (!Array.isArray(next.regions) || next.regions.some((region) => !BODY_REGIONS.includes(region))) return false;
+        return plainObjectWithKeys(next.details, detailFields.map(([key]) => key)) && Object.values(next.details).every((value) => typeof value === "string");
+      },
+      getReadableSummary: (next) => {
+        const emotion = emotions.find((item) => item.id === next.emotion);
+        return Progress.nonEmptySections("Emotion Explorer", [
+          ["Emotion Family", emotion?.name], ["Words That Fit", next.words], ["Body Sensations", next.regions],
+          ...detailFields.map(([key, label]) => [label, next.details[key]]),
+        ]);
+      },
+    });
   }
 
   async function initPleasantEvent(root) {
@@ -137,7 +209,7 @@
     function render(focus = false) {
       const matches = events.filter((event) => (!state.query || event.title.toLowerCase().includes(state.query.toLowerCase())) && (!state.tag || event.tags.includes(state.tag)));
       const selected = events.find((event) => event.id === state.selected);
-      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Pleasant Event Planner</h2><p>Browse 225 source activities. Tags are limited to what can be reasonably inferred from the wording.</p></header><section class="skill-app-panel" tabindex="-1"><div class="skill-app-inline-fields"><div><label for="pleasant-search">Search activities</label><input id="pleasant-search" type="search" value="${escapeHtml(state.query)}"></div><div><label for="pleasant-tag">Browse by tag</label><select id="pleasant-tag"><option value="">All activities</option>${tags.map((tag) => `<option ${state.tag === tag ? "selected" : ""}>${tag}</option>`).join("")}</select></div></div><div class="skill-app-actions"><button type="button" class="secondary" data-surprise>Surprise me</button><span aria-live="polite">${matches.length} activities shown</span></div><div class="pleasant-event-list">${matches.map((event) => `<button type="button" class="secondary" data-event-id="${event.id}" aria-pressed="${event.id === state.selected}">${escapeHtml(event.title)}</button>`).join("")}</div>${selected ? `<section class="skill-app-plan"><h3>Plan: ${escapeHtml(selected.title)}</h3>${[["when", "When?"], ["duration", "How long?"], ["smallest", "Smallest version I could do?"], ["support", "What would help me follow through?"]].map(([key, label]) => `<label for="pleasant-${key}">${label}</label><input id="pleasant-${key}" type="${key === "when" ? "datetime-local" : "text"}" data-plan="${key}" value="${escapeHtml(state.plan[key])}">`).join("")}<p class="skill-app-note">Be mindful of the pleasant moment: gently return attention to what you see, hear, feel, smell, taste, or appreciate.</p>${linkCards([{ label: "Behavioural Activation", href: "/learn/wellness/behavioral-activation.html", kind: "learn" }, { label: "Build Mastery", href: "/learn/emotion-regulation/positive-emotions-mastery-cope-ahead.html#build-mastery", kind: "learn" }, { label: "Values", href: "/skill-finder/values/", kind: "app" }, { label: "SMART Goal Builder", href: "/learn/goal-setting/goal-setting-guidelines.html#smart-goals", kind: "learn" }])}</section>` : ""}</section></div>`;
+      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Pleasant Event Planner</h2><p>Browse 225 source activities. Tags are limited to what can be reasonably inferred from the wording.</p></header><section class="skill-app-panel" tabindex="-1"><div class="skill-app-inline-fields"><div><label for="pleasant-search">Search activities</label><input id="pleasant-search" type="search" value="${escapeHtml(state.query)}"></div><div><label for="pleasant-tag">Browse by tag</label><select id="pleasant-tag"><option value="">All activities</option>${tags.map((tag) => `<option ${state.tag === tag ? "selected" : ""}>${tag}</option>`).join("")}</select></div></div><div class="skill-app-actions"><button type="button" class="secondary" data-surprise>Surprise me</button><span aria-live="polite">${matches.length} activities shown</span></div><div class="pleasant-event-list">${matches.map((event) => `<button type="button" class="secondary" data-event-id="${event.id}" aria-pressed="${event.id === state.selected}">${escapeHtml(event.title)}</button>`).join("")}</div>${selected ? `<section class="skill-app-plan"><h3>Plan: ${escapeHtml(selected.title)}</h3>${[["when", "When?"], ["duration", "How long?"], ["smallest", "Smallest version I could do?"], ["support", "What would help me follow through?"]].map(([key, label]) => `<label for="pleasant-${key}">${label}</label><input id="pleasant-${key}" type="${key === "when" ? "datetime-local" : "text"}" data-plan="${key}" value="${escapeHtml(state.plan[key])}">`).join("")}<p class="skill-app-note">Be mindful of the pleasant moment: gently return attention to what you see, hear, feel, smell, taste, or appreciate.</p>${linkCards([{ label: "Behavioural Activation", href: "/learn/wellness/behavioral-activation.html", kind: "learn" }, { label: "Build Mastery", href: "/learn/emotion-regulation/positive-emotions-mastery-cope-ahead.html#build-mastery", kind: "learn" }, { label: "Values", href: "/skill-finder/values/", kind: "app" }, { label: "SMART Goal Builder", href: "/learn/goal-setting/goal-setting-guidelines.html#smart-goals", kind: "learn" }])}</section>` : ""}</section><footer class="skill-app-footer"></footer></div>`;
       bind(); if (focus) root.querySelector(".skill-app-plan")?.scrollIntoView({ block: "nearest" });
     }
     function bind() {
@@ -148,6 +220,19 @@
       root.querySelectorAll("[data-plan]").forEach((field) => field.addEventListener("input", () => { state.plan[field.dataset.plan] = field.value; }));
     }
     render();
+    if (Progress) Progress.registerTool({
+      root, toolId: "pleasant-event", toolTitle: "Pleasant Event Planner", route: Progress.TOOL_ROUTES["pleasant-event"], schemaVersion: 1,
+      getState: () => state,
+      setState: (next) => { Object.assign(state, next, { plan: { ...next.plan } }); render(); },
+      validateState: (next) => plainObjectWithKeys(next, ["selected", "query", "tag", "plan"])
+        && (next.selected === null || (Number.isInteger(next.selected) && events.some((event) => event.id === next.selected)))
+        && typeof next.query === "string" && typeof next.tag === "string" && (!next.tag || tags.includes(next.tag))
+        && plainObjectWithKeys(next.plan, ["when", "duration", "smallest", "support"]) && Object.values(next.plan).every((value) => typeof value === "string"),
+      getReadableSummary: (next) => {
+        const selected = events.find((event) => event.id === next.selected);
+        return Progress.nonEmptySections("Pleasant Event Planner", [["Pleasant Event", selected?.title], ["When", next.plan.when], ["Duration", next.plan.duration], ["Smallest Version", next.plan.smallest], ["Support", next.plan.support]]);
+      },
+    });
   }
 
   async function start() {

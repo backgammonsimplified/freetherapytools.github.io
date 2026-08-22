@@ -42,8 +42,8 @@ class ValuesModuleTests(unittest.TestCase):
         self.assertEqual(self.data["process"], ["DISCOVER", "SORT", "NARROW", "ASSESS", "ACT", "BARRIERS", "MISSION", "REVIEW"])
         self.assertTrue(self.data["custom_values_allowed"])
         self.assertRegex(self.javascript, re.compile(r"Number\(desired\)\s*-\s*Number\(current\)"))
-        self.assertIn("Saved only in this browser", self.javascript)
-        self.assertIn("Clear Saved Data", self.javascript)
+        self.assertIn("Progress saves automatically on this device", self.javascript)
+        self.assertIn("Nothing you enter here is uploaded", self.javascript)
         self.assertNotIn("https://", self.javascript)
         self.assertNotIn("http://", self.javascript)
 

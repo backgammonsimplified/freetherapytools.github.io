@@ -13,6 +13,7 @@ project:
     - "assets/social/generated/*.png"
     - assets/bs-glossary.js
     - assets/skill-apps.js
+    - assets/skill-progress.js
     - assets/skill-finder-apps.js
     - assets/skill-practice-apps.js
     - "data/skill-apps/**"
@@ -85,6 +86,7 @@ format:
       - assets/bs-learn.css
       - assets/bs-lesson-analysis.css
       - assets/skill-apps.css
+      - assets/skill-progress.css
     include-after-body:
       - includes/bs-scripts.html
     include-in-header:

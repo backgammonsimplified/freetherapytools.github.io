@@ -4,6 +4,7 @@
   const escapeHtml = (value) => String(value ?? "")
     .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;").replaceAll("'", "&#039;");
+  const Progress = typeof window !== "undefined" ? window.TherapySkillProgress : null;
 
   const LINKS = {
     chain: [{ label: "Learn Behaviour Chain Analysis", href: "/learn/wellness/behavior-chain-missing-links.html#behaviour-chain-analysis" }],
@@ -80,21 +81,50 @@
     return `<div class="skill-app-result-links">${links.map((link) => `<a class="skill-app-link-button secondary" href="${escapeHtml(link.href)}">${escapeHtml(link.label)}</a>`).join("")}</div>`;
   }
 
+  function stringsOnly(object, keys) {
+    return Progress?.isPlainObject(object)
+      && Object.keys(object).every((key) => keys.includes(key))
+      && keys.every((key) => typeof object[key] === "string");
+  }
+
+  function register(root, config) {
+    if (Progress) Progress.registerTool({ schemaVersion: 1, root, ...config });
+  }
+
   function initGuidedForm(root, definition) {
-    root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>${escapeHtml(definition.title)}</h2><p>${escapeHtml(definition.intro)} Your entries stay on this page.</p></header><form class="skill-app-panel" data-guided-form>${definition.fields.map(([key, label]) => `<label for="practice-${key}">${escapeHtml(label)}</label><textarea id="practice-${key}" name="${escapeHtml(key)}"></textarea>`).join("")}<button type="submit">Build my summary</button></form><section class="skill-app-panel" data-guided-summary aria-live="polite" tabindex="-1"></section><footer class="skill-app-footer"><button type="button" class="secondary" data-clear-form>Clear</button>${linksMarkup(definition.links)}</footer></div>`;
+    root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>${escapeHtml(definition.title)}</h2><p>${escapeHtml(definition.intro)} Your progress stays on this device unless you save a copy to your computer. Nothing you enter here is uploaded.</p></header><form class="skill-app-panel" data-guided-form>${definition.fields.map(([key, label]) => `<label for="practice-${key}">${escapeHtml(label)}</label><textarea id="practice-${key}" name="${escapeHtml(key)}"></textarea>`).join("")}<button type="submit">Build my summary</button></form><section class="skill-app-panel" data-guided-summary aria-live="polite" tabindex="-1"></section><footer class="skill-app-footer"><button type="button" class="secondary" data-clear-form>Clear</button>${linksMarkup(definition.links)}</footer></div>`;
     const form = root.querySelector("[data-guided-form]");
+    let summaryBuilt = false;
+    const keys = definition.fields.map(([key]) => key);
+    const fieldState = () => Object.fromEntries(definition.fields.map(([key]) => [key, form.elements[key]?.value || ""]));
     form.addEventListener("submit", (event) => {
       event.preventDefault();
+      summaryBuilt = true;
       const values = new FormData(form);
       const summary = root.querySelector("[data-guided-summary]");
       summary.innerHTML = `<h3>Editable planning summary</h3><dl class="skill-app-summary">${definition.fields.map(([key, label]) => `<dt>${escapeHtml(label.split(" — ")[0])}</dt><dd>${escapeHtml(values.get(key) || "Not answered")}</dd>`).join("")}</dl>`;
       summary.focus();
     });
-    root.querySelector("[data-clear-form]").addEventListener("click", () => { form.reset(); root.querySelector("[data-guided-summary]").innerHTML = ""; form.querySelector("textarea")?.focus(); });
+    root.querySelector("[data-clear-form]").addEventListener("click", () => { form.reset(); summaryBuilt = false; root.querySelector("[data-guided-summary]").innerHTML = ""; form.querySelector("textarea")?.focus(); });
+    const toolId = root.dataset.practiceApp;
+    register(root, {
+      toolId,
+      toolTitle: definition.title,
+      route: Progress.TOOL_ROUTES[toolId],
+      getState: () => ({ fields: fieldState(), summaryBuilt }),
+      setState: (next) => {
+        definition.fields.forEach(([key]) => { form.elements[key].value = next.fields[key] || ""; });
+        summaryBuilt = next.summaryBuilt;
+        if (summaryBuilt) form.requestSubmit();
+        else root.querySelector("[data-guided-summary]").replaceChildren();
+      },
+      validateState: (next) => Progress.isPlainObject(next) && Object.keys(next).every((key) => ["fields", "summaryBuilt"].includes(key)) && stringsOnly(next.fields, keys) && typeof next.summaryBuilt === "boolean",
+      getReadableSummary: (next) => Progress.nonEmptySections(definition.title, definition.fields.map(([key, label]) => [label, next.fields[key]])),
+    });
   }
 
   function initBehaviourChain(root) {
-    const state = { links: [{ type: "actions", detail: "" }] };
+    const state = { problem: "", vulnerability: "", prompt: "", links: [{ type: "actions", detail: "" }], consequences: "", skills: "", prevention: "", repair: "" };
     const types = ["actions", "body sensations", "cognitions / thoughts", "environment / events", "feelings"];
     function render(focus = false) {
       root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Behaviour Chain Builder</h2><p>Map what happened without reducing it to one cause. Entries stay on this page.</p></header><section class="skill-app-panel"><label for="chain-problem">Problem behaviour</label><textarea id="chain-problem" data-chain-field="problem">${escapeHtml(state.problem)}</textarea><label for="chain-vulnerability">Vulnerability factors</label><textarea id="chain-vulnerability" data-chain-field="vulnerability">${escapeHtml(state.vulnerability)}</textarea><label for="chain-prompt">Prompting event</label><textarea id="chain-prompt" data-chain-field="prompt">${escapeHtml(state.prompt)}</textarea><h3>Ordered chain links</h3><div data-chain-links>${state.links.map((link, index) => `<fieldset class="skill-app-fieldset"><legend>Link ${index + 1}</legend><label for="chain-type-${index}">Type</label><select id="chain-type-${index}" data-chain-type="${index}">${types.map((type) => `<option ${link.type === type ? "selected" : ""}>${type}</option>`).join("")}</select><label for="chain-detail-${index}">What happened?</label><textarea id="chain-detail-${index}" data-chain-detail="${index}">${escapeHtml(link.detail)}</textarea><div class="skill-app-actions"><button type="button" class="secondary" data-chain-up="${index}" ${index ? "" : "disabled"}>Move up</button><button type="button" class="secondary" data-chain-down="${index}" ${index < state.links.length - 1 ? "" : "disabled"}>Move down</button><button type="button" class="secondary" data-chain-remove="${index}" ${state.links.length > 1 ? "" : "disabled"}>Remove</button></div></fieldset>`).join("")}</div><button type="button" data-chain-add>Add chain link</button><label for="chain-consequences">Consequences</label><textarea id="chain-consequences" data-chain-field="consequences">${escapeHtml(state.consequences)}</textarea><label for="chain-skills">Alternative skills</label><textarea id="chain-skills" data-chain-field="skills">${escapeHtml(state.skills)}</textarea><label for="chain-prevention">Prevention</label><textarea id="chain-prevention" data-chain-field="prevention">${escapeHtml(state.prevention)}</textarea><label for="chain-repair">Repair / solution analysis</label><textarea id="chain-repair" data-chain-field="repair">${escapeHtml(state.repair)}</textarea><h3>Chain view</h3><ol class="skill-app-chain-view">${state.links.map((link) => `<li><strong>${escapeHtml(link.type)}</strong><span>${escapeHtml(link.detail || "Add details above")}</span></li>`).join("")}</ol></section><footer class="skill-app-footer">${linksMarkup(LINKS.chain)}</footer></div>`;
@@ -111,10 +141,31 @@
       root.querySelectorAll("[data-chain-remove]").forEach((button) => button.addEventListener("click", () => { state.links.splice(Number(button.dataset.chainRemove), 1); render(); }));
     }
     render();
+    const scalarKeys = ["problem", "vulnerability", "prompt", "consequences", "skills", "prevention", "repair"];
+    register(root, {
+      toolId: "behaviour-chain",
+      toolTitle: "Behaviour Chain Builder",
+      route: Progress.TOOL_ROUTES["behaviour-chain"],
+      getState: () => state,
+      setState: (next) => { Object.assign(state, next); state.links = next.links.map((link) => ({ ...link })); render(); },
+      validateState: (next) => Progress.isPlainObject(next)
+        && Object.keys(next).every((key) => [...scalarKeys, "links"].includes(key))
+        && scalarKeys.every((key) => typeof next[key] === "string")
+        && Array.isArray(next.links) && next.links.length >= 1 && next.links.length <= 100
+        && next.links.every((link) => Progress.isPlainObject(link) && Object.keys(link).every((key) => ["type", "detail"].includes(key)) && types.includes(link.type) && typeof link.detail === "string"),
+      getReadableSummary: (next) => {
+        const lines = ["# Behaviour Chain", ""];
+        [["Vulnerability Factors", next.vulnerability], ["Prompting Event", next.prompt]].forEach(([heading, value]) => { if (value) lines.push(`## ${heading}`, "", value, ""); });
+        const usedLinks = next.links.filter((link) => link.detail);
+        if (usedLinks.length) { lines.push("## Chain", ""); usedLinks.forEach((link, index) => lines.push(`${index + 1}. ${link.type}: ${link.detail}`)); lines.push(""); }
+        [["Problem Behaviour", next.problem], ["Consequences", next.consequences], ["Skillful Alternatives", next.skills], ["Prevention", next.prevention], ["Repair", next.repair]].forEach(([heading, value]) => { if (value) lines.push(`## ${heading}`, "", value, ""); });
+        return lines.join("\n").trim();
+      },
+    });
   }
 
   function initExposure(root) {
-    const state = { steps: [{ situation: "", before: 0, after: "" }] };
+    const state = { theme: "", safety: "", steps: [{ situation: "", before: "0", after: "" }], next: "" };
     function render(focus = false) {
       root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Exposure Ladder</h2><p>Include only objectively safe, appropriate steps. Entries stay on this page.</p></header><section class="skill-app-panel"><label for="exposure-theme">Feared situation or theme</label><textarea id="exposure-theme" data-exposure-field="theme">${escapeHtml(state.theme)}</textarea><label for="exposure-safety">Safety behaviours I want to notice</label><textarea id="exposure-safety" data-exposure-field="safety">${escapeHtml(state.safety)}</textarea><h3>Graded steps: easier to harder</h3>${state.steps.map((step, index) => `<fieldset class="skill-app-fieldset"><legend>Step ${index + 1}</legend><label for="exposure-step-${index}">Objectively safe practice situation</label><textarea id="exposure-step-${index}" data-exposure-step="${index}">${escapeHtml(step.situation)}</textarea><div class="skill-app-inline-fields"><div><label for="exposure-before-${index}">Before rating 0-100</label><input id="exposure-before-${index}" type="number" min="0" max="100" data-exposure-before="${index}" value="${step.before}"></div><div><label for="exposure-after-${index}">After rating 0-100</label><input id="exposure-after-${index}" type="number" min="0" max="100" data-exposure-after="${index}" value="${escapeHtml(step.after)}"></div></div><div class="skill-app-actions"><button type="button" class="secondary" data-exposure-up="${index}" ${index ? "" : "disabled"}>Move easier</button><button type="button" class="secondary" data-exposure-down="${index}" ${index < state.steps.length - 1 ? "" : "disabled"}>Move harder</button><button type="button" class="secondary" data-exposure-remove="${index}" ${state.steps.length > 1 ? "" : "disabled"}>Remove</button></div></fieldset>`).join("")}<button type="button" data-exposure-add>Add safe step</button><label for="exposure-next">Next practice step</label><textarea id="exposure-next" data-exposure-field="next">${escapeHtml(state.next)}</textarea></section><footer class="skill-app-footer">${linksMarkup(LINKS.exposure)}</footer></div>`;
       bind(); if (focus) root.querySelector("fieldset:last-of-type textarea")?.focus();
@@ -125,12 +176,35 @@
       root.querySelectorAll("[data-exposure-step]").forEach((field) => field.addEventListener("input", () => { state.steps[Number(field.dataset.exposureStep)].situation = field.value; }));
       root.querySelectorAll("[data-exposure-before]").forEach((field) => field.addEventListener("input", () => { state.steps[Number(field.dataset.exposureBefore)].before = field.value; }));
       root.querySelectorAll("[data-exposure-after]").forEach((field) => field.addEventListener("input", () => { state.steps[Number(field.dataset.exposureAfter)].after = field.value; }));
-      root.querySelector("[data-exposure-add]").addEventListener("click", () => { state.steps.push({ situation: "", before: 0, after: "" }); render(true); });
+      root.querySelector("[data-exposure-add]").addEventListener("click", () => { state.steps.push({ situation: "", before: "0", after: "" }); render(true); });
       root.querySelectorAll("[data-exposure-up]").forEach((button) => button.addEventListener("click", () => swap(Number(button.dataset.exposureUp), Number(button.dataset.exposureUp) - 1)));
       root.querySelectorAll("[data-exposure-down]").forEach((button) => button.addEventListener("click", () => swap(Number(button.dataset.exposureDown), Number(button.dataset.exposureDown) + 1)));
       root.querySelectorAll("[data-exposure-remove]").forEach((button) => button.addEventListener("click", () => { state.steps.splice(Number(button.dataset.exposureRemove), 1); render(); }));
     }
     render();
+    register(root, {
+      toolId: "exposure",
+      toolTitle: "Exposure Ladder",
+      route: Progress.TOOL_ROUTES.exposure,
+      getState: () => state,
+      setState: (next) => { Object.assign(state, next); state.steps = next.steps.map((step) => ({ ...step })); render(); },
+      validateState: (next) => Progress.isPlainObject(next)
+        && Object.keys(next).every((key) => ["theme", "safety", "steps", "next"].includes(key))
+        && ["theme", "safety", "next"].every((key) => typeof next[key] === "string")
+        && Array.isArray(next.steps) && next.steps.length >= 1 && next.steps.length <= 100
+        && next.steps.every((step) => Progress.isPlainObject(step)
+          && Object.keys(step).every((key) => ["situation", "before", "after"].includes(key))
+          && ["situation", "before", "after"].every((key) => typeof step[key] === "string")
+          && [step.before, step.after].every((value) => value === "" || (/^\d{1,3}$/.test(value) && Number(value) <= 100))),
+      getReadableSummary: (next) => {
+        const lines = ["# Exposure Ladder", ""];
+        [["Feared Theme", next.theme], ["Safety Behaviours", next.safety]].forEach(([heading, value]) => { if (value) lines.push(`## ${heading}`, "", value, ""); });
+        const used = next.steps.filter((step) => step.situation || step.before || step.after);
+        if (used.length) { lines.push("## Exposure Steps", ""); used.forEach((step, index) => lines.push(`${index + 1}. ${step.situation || "Unnamed step"}${step.before !== "" ? ` — before: ${step.before}/100` : ""}${step.after !== "" ? `; after: ${step.after}/100` : ""}`)); lines.push(""); }
+        if (next.next) lines.push("## Next Practice Step", "", next.next);
+        return lines.join("\n").trim();
+      },
+    });
   }
 
   function start() {

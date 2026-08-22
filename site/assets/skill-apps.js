@@ -16,6 +16,7 @@
 
   const STORAGE_PREFIX = "therapy-skill-kit:";
   const STEPS = ["DISCOVER", "SORT", "NARROW", "ASSESS", "ACT", "BARRIERS", "MISSION", "REVIEW"];
+  const Progress = global.TherapySkillProgress;
 
   function escapeHtml(value) {
     return String(value ?? "")
@@ -66,7 +67,7 @@
 
   function saveState(key, state, status) {
     localStorage.setItem(STORAGE_PREFIX + key, JSON.stringify(state));
-    if (status) status.textContent = "Saved only in this browser";
+    if (status) status.textContent = "Progress saves automatically on this device";
   }
 
   function allValues(data, state) {
@@ -214,10 +215,14 @@
     if (!response.ok) throw new Error("Values data could not be loaded");
     const data = await response.json();
     const key = "values";
-    let state = loadState(key, initialValuesState);
+    const legacyState = localStorage.getItem(STORAGE_PREFIX + key) ? loadState(key, initialValuesState) : null;
+    let state = initialValuesState();
+    let progressController = null;
 
     function persist(status) {
-      saveState(key, state, status || root.querySelector("[data-save-status]"));
+      progressController?.notifyChange();
+      const target = status || root.querySelector("[data-save-status]");
+      if (target) target.textContent = "Progress saves automatically on this device";
     }
 
     function render() {
@@ -231,7 +236,7 @@
       root.innerHTML = `<div class="skill-app-shell">
         <header class="skill-app-header"><h2>Values & Valued Action</h2><p>DISCOVER - SORT - NARROW - ASSESS - ACT - BARRIERS - MISSION - REVIEW</p>${progressMarkup(state.step)}</header>
         <section class="skill-app-panel" aria-live="polite">${panel}</section>
-        <footer class="skill-app-footer"><div><strong data-save-status>Saved only in this browser</strong><br><small>No personal answers are sent anywhere.</small></div>
+        <footer class="skill-app-footer"><div><strong data-save-status>Progress saves automatically on this device</strong><br><small>Your progress stays on this device unless you save a copy to your computer. Nothing you enter here is uploaded.</small></div>
           <div class="skill-app-actions"><button type="button" class="secondary" data-back ${state.step === 0 ? "disabled" : ""}>Back</button><button type="button" data-next ${state.step === STEPS.length - 1 ? "disabled" : ""}>Continue</button><button type="button" class="secondary" data-restart>Restart steps</button><button type="button" class="secondary" data-clear>Clear Saved Data</button></div></footer>
       </div>`;
       bind();
@@ -315,6 +320,58 @@
     }
 
     render();
+    if (Progress) {
+      const topKeys = ["step", "selected", "custom", "domains", "core", "assessments", "focus", "actions", "barriers", "mission", "review"];
+      const objectOf = (value, validate) => Progress.isPlainObject(value) && Object.entries(value).every(([id, item]) => typeof id === "string" && validate(item));
+      const strings = (value, allowed) => Progress.isPlainObject(value) && Object.keys(value).every((key) => allowed.includes(key)) && Object.values(value).every((item) => typeof item === "string");
+      const validateState = (next) => Progress.isPlainObject(next) && Object.keys(next).every((key) => topKeys.includes(key))
+        && Number.isInteger(next.step) && next.step >= 0 && next.step < STEPS.length
+        && objectOf(next.selected, (item) => strings(item, ["rating"]))
+        && Array.isArray(next.custom) && next.custom.length <= 100 && next.custom.every((item) => Progress.isPlainObject(item) && Object.keys(item).every((key) => ["id", "name", "definition", "suggested_domains", "aliases"].includes(key)) && typeof item.id === "string" && typeof item.name === "string" && typeof item.definition === "string" && Array.isArray(item.suggested_domains) && item.suggested_domains.every((value) => typeof value === "string") && Array.isArray(item.aliases) && item.aliases.every((value) => typeof value === "string"))
+        && objectOf(next.domains, (item) => Array.isArray(item) && item.every((entry) => typeof entry === "string"))
+        && objectOf(next.core, (item) => Progress.isPlainObject(item) && Object.keys(item).every((key) => ["chosen", "family"].includes(key)) && (item.chosen === undefined || typeof item.chosen === "boolean") && (item.family === undefined || typeof item.family === "string"))
+        && objectOf(next.assessments, (item) => Progress.isPlainObject(item) && Object.keys(item).every((key) => ["importance", "current", "desired", "domain"].includes(key)) && Object.values(item).every((value) => typeof value === "string" || typeof value === "number"))
+        && Array.isArray(next.focus) && next.focus.length <= 3 && next.focus.every((item) => typeof item === "string")
+        && objectOf(next.actions, (item) => strings(item, ["why", "direction", "actions", "improvement", "next", "when", "support"]))
+        && strings(next.barriers, ["type", "notes", "response", "next"])
+        && strings(next.mission, ["qualities", "actions", "service", "statement"])
+        && strings(next.review, ["aligned", "drifted", "attention", "discomfort", "continue", "change", "next", "date"]);
+      const valueName = (id, next) => [...data.values, ...next.custom].find((value) => value.id === id)?.name || id;
+      progressController = Progress.registerTool({
+        root, toolId: "values", toolTitle: "Values & Valued Action", route: Progress.TOOL_ROUTES.values, schemaVersion: 1, legacyState,
+        getState: () => state,
+        setState: (next) => { state = JSON.parse(JSON.stringify(next)); render(); },
+        validateState,
+        getReadableSummary: (next) => {
+          const selected = Object.keys(next.selected).map((id) => valueName(id, next));
+          const core = Object.entries(next.core).filter(([, item]) => item.chosen).map(([id]) => id);
+          const lines = ["# Values & Valued Action", ""];
+          if (selected.length) lines.push("## Selected Values", "", ...selected.map((name) => `- ${name}`), "");
+          if (core.length) {
+            lines.push("## Core Values and Alignment", "");
+            core.forEach((id) => {
+              const assessment = next.assessments[id] || {};
+              lines.push(`### ${valueName(id, next)}`);
+              if (next.core[id].family) lines.push(`- Value family: ${next.core[id].family}`);
+              if (assessment.importance !== undefined) lines.push(`- Importance: ${assessment.importance}`);
+              if (assessment.current !== undefined) lines.push(`- Current alignment: ${assessment.current}`);
+              if (assessment.desired !== undefined) lines.push(`- Desired alignment: ${assessment.desired}`);
+              if (assessment.current !== undefined && assessment.desired !== undefined) lines.push(`- Gap: ${SkillApps.calculateGap(assessment.current, assessment.desired)}`);
+              lines.push("");
+            });
+          }
+          const focus = next.focus.map((id) => valueName(id, next));
+          if (focus.length) lines.push("## Focus Areas", "", ...focus.map((name) => `- ${name}`), "");
+          next.focus.forEach((id) => {
+            const action = next.actions[id] || {};
+            const sections = [["Why this matters", action.why], ["Longer-term direction", action.direction], ["Short-term actions", action.actions], ["10% improvement", action.improvement], ["Smallest next step", action.next], ["When and where", action.when], ["Support", action.support]].filter(([, value]) => value);
+            if (sections.length) { lines.push(`## Action Plan: ${valueName(id, next)}`, ""); sections.forEach(([label, value]) => lines.push(`### ${label}`, "", value, "")); }
+          });
+          [["Barriers", next.barriers.notes], ["Barrier Response", next.barriers.response], ["Mission Statement", next.mission.statement], ["Next Review Action", next.review.next]].forEach(([heading, value]) => { if (value) lines.push(`## ${heading}`, "", value, ""); });
+          return lines.join("\n").trim();
+        },
+      });
+    }
   }
 
   function init() {

@@ -74,8 +74,8 @@ class SkillFinderAppTests(unittest.TestCase):
         self.assertNotRegex(combined, r"https?://")
         self.assertNotIn("XMLHttpRequest", combined)
         self.assertIn('credentials: "same-origin"', combined)
-        self.assertIn("Saved only in this browser", combined)
-        self.assertIn("Clear Saved Data", combined)
+        self.assertIn("Your progress stays on this device", combined)
+        self.assertIn("Nothing you enter here is uploaded", combined)
 
     def test_all_app_deep_links_resolve_to_source_routes_and_anchors(self):
         files = [SITE / "assets" / "skill-finder-apps.js", DATA / "thermometer.json"] + list((DATA / "flows").glob("*.json"))

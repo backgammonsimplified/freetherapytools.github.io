@@ -1,0 +1,193 @@
+.skill-progress-title-row {
+  align-items: flex-start;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.skill-progress-title-row h2 {
+  margin-bottom: 0;
+}
+
+.skill-progress-open,
+.skill-progress-floating,
+.skill-progress-drawer button,
+.skill-progress-final-actions button,
+.skill-progress-draft-prompt button {
+  min-height: 44px;
+}
+
+.skill-progress-open {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.skill-progress-floating {
+  bottom: max(1.25rem, env(safe-area-inset-bottom));
+  box-shadow: 0 0.35rem 1.2rem rgb(0 0 0 / 22%);
+  position: fixed;
+  right: max(1.25rem, env(safe-area-inset-right));
+  z-index: 1040;
+}
+
+.skill-progress-backdrop {
+  background: rgb(0 0 0 / 42%);
+  inset: 0;
+  position: fixed;
+  z-index: 1050;
+}
+
+.skill-progress-drawer {
+  background: var(--bs-body-bg, #fff);
+  box-shadow: -0.4rem 0 1.5rem rgb(0 0 0 / 22%);
+  color: var(--bs-body-color, #212529);
+  height: 100%;
+  max-width: 100%;
+  overflow-y: auto;
+  padding: 1.5rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateX(0);
+  width: min(31rem, 92vw);
+  z-index: 1060;
+}
+
+.skill-progress-backdrop[hidden],
+.skill-progress-drawer[hidden] {
+  display: none;
+}
+
+.skill-progress-drawer h2,
+.skill-progress-drawer h3 {
+  margin-top: 0;
+}
+
+.skill-progress-drawer section {
+  border-top: 1px solid var(--bs-border-color, #dee2e6);
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+}
+
+.skill-progress-drawer label,
+.skill-progress-drawer input[type="text"],
+.skill-progress-drawer input[type="file"] {
+  display: block;
+  width: 100%;
+}
+
+.skill-progress-drawer input[type="text"],
+.skill-progress-drawer input[type="file"] {
+  margin: 0.4rem 0 0.8rem;
+}
+
+.skill-progress-actions,
+.skill-progress-final-actions,
+.skill-progress-draft-prompt {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.skill-progress-final {
+  border-top: 1px solid var(--bs-border-color, #dee2e6);
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.skill-progress-final h3 {
+  margin-top: 0;
+}
+
+.skill-progress-draft-prompt {
+  background: var(--bs-tertiary-bg, #f4f5f6);
+  border: 1px solid var(--bs-border-color, #dee2e6);
+  border-radius: 0.45rem;
+  margin: 0 0 1rem;
+  padding: 0.8rem 1rem;
+}
+
+.skill-progress-draft-prompt p {
+  flex: 1 1 15rem;
+  margin: 0;
+}
+
+.skill-progress-privacy,
+.skill-progress-status,
+.skill-progress-error {
+  font-size: 0.95rem;
+}
+
+.skill-progress-error {
+  color: var(--bs-danger-text-emphasis, #842029);
+  font-weight: 600;
+}
+
+.skill-progress-print {
+  display: none;
+}
+
+body.skill-progress-dialog-open {
+  overflow: hidden;
+}
+
+@media (max-width: 575.98px) {
+  .skill-progress-title-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .skill-progress-open {
+    align-self: flex-start;
+    white-space: normal;
+  }
+
+  .skill-progress-floating {
+    bottom: max(0.75rem, env(safe-area-inset-bottom));
+    left: 50%;
+    max-width: calc(100vw - 1.5rem);
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  .skill-progress-drawer {
+    bottom: 0;
+    height: min(92vh, 52rem);
+    padding: 1.1rem;
+    top: auto;
+    width: 100%;
+  }
+
+  .skill-progress-final-actions > button,
+  .skill-progress-actions > button {
+    flex: 1 1 11rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-progress-drawer,
+  .skill-progress-floating {
+    scroll-behavior: auto;
+    transition: none;
+  }
+}
+
+@media print {
+  body.skill-progress-printing > *:not(.skill-progress-print) {
+    display: none !important;
+  }
+
+  body.skill-progress-printing .skill-progress-print {
+    color: #000;
+    display: block !important;
+    font: 11pt/1.45 system-ui, sans-serif;
+    margin: 0 auto;
+    max-width: 48rem;
+  }
+
+  .skill-progress-print h1 { font-size: 22pt; }
+  .skill-progress-print h2 { font-size: 16pt; margin-top: 1.2rem; }
+  .skill-progress-print h3 { font-size: 13pt; margin-top: 1rem; }
+}
