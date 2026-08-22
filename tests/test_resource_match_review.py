@@ -70,6 +70,8 @@ class ResourceMatchReviewTests(unittest.TestCase):
         self.assertIn("Candidate php matches: **0**", self.dashboard)
         self.assertIn("Unmatched resources: **125**", self.dashboard)
         self.assertIn('robots: "noindex, nofollow"', self.dashboard)
+        self.assertIn('<meta name="robots" content="noindex, nofollow">', self.dashboard)
+        self.assertIn('<meta name="robots" content="noindex, nofollow">', self.unmatched)
         self.assertIn("/review/unmatched-resources.html?review=1", self.dashboard)
 
     def test_unmatched_gallery_contains_exactly_all_low_resolution_only_resources(self):

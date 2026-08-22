@@ -77,7 +77,9 @@ class SectionScanCurriculumTests(unittest.TestCase):
         actual_assets = {
             path
             for path in (SITE / "resources").rglob("*.jpg")
-            if "clean" not in path.relative_to(SITE / "resources").parts
+            if not {"clean", "high-res"}.intersection(
+                path.relative_to(SITE / "resources").parts
+            )
         }
         self.assertEqual(actual_assets, expected_assets)
 

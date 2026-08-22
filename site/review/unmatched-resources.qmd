@@ -4,6 +4,11 @@ toc: false
 search: false
 robots: "noindex, nofollow"
 page-layout: full
+format:
+  html:
+    include-in-header:
+      text: |
+        <meta name="robots" content="noindex, nofollow">
 ---
 
 This development-only gallery contains every published resource with no high-confidence better copy. Current lesson resources remain unchanged.

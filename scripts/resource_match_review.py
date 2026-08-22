@@ -81,6 +81,11 @@ def page_header(title: str) -> str:
         "search: false\n"
         "robots: \"noindex, nofollow\"\n"
         "page-layout: full\n"
+        "format:\n"
+        "  html:\n"
+        "    include-in-header:\n"
+        "      text: |\n"
+        "        <meta name=\"robots\" content=\"noindex, nofollow\">\n"
         "---\n\n"
     )
 
@@ -90,13 +95,13 @@ def dashboard_markdown(
     candidate_count: int, unmatched_count: int, version: str,
 ) -> str:
     lines = [page_header("Resource Match Review"),
-        "This development-only dashboard supports local review. Open lesson links below and compare both displayed copies.\n",
-        "## Match Summary\n",
+        "This development-only dashboard supports local review. Open lesson links below and compare both displayed copies.\n\n",
+        "## Match Summary\n\n",
         f"- Existing Linehan book high-confidence matches: **{linehan_count}**\n",
         f"- New php high-confidence matches: **{php_count}**\n",
         f"- Candidate php matches: **{candidate_count}**\n",
         f"- Unmatched resources: **{unmatched_count}**\n",
-        "- Incorrect flags stored in this browser: **<span data-match-review-incorrect-count>0</span>**\n",
+        "- Incorrect flags stored in this browser: **<span data-match-review-incorrect-count>0</span>**\n\n",
         "\n[Open unmatched-resource gallery](/review/unmatched-resources.html?review=1)\n\n",
         "## Controls\n\n",
         f"<div data-match-review-dashboard data-match-inventory-version=\"{version}\">\n",

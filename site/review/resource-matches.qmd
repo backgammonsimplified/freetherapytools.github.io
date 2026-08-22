@@ -4,15 +4,23 @@ toc: false
 search: false
 robots: "noindex, nofollow"
 page-layout: full
+format:
+  html:
+    include-in-header:
+      text: |
+        <meta name="robots" content="noindex, nofollow">
 ---
 
 This development-only dashboard supports local review. Open lesson links below and compare both displayed copies.
+
 ## Match Summary
+
 - Existing Linehan book high-confidence matches: **99**
 - New php high-confidence matches: **42**
 - Candidate php matches: **0**
 - Unmatched resources: **125**
 - Incorrect flags stored in this browser: **<span data-match-review-incorrect-count>0</span>**
+
 
 [Open unmatched-resource gallery](/review/unmatched-resources.html?review=1)
 
