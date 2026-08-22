@@ -156,14 +156,14 @@ class ValuesModuleTests(unittest.TestCase):
 
     def test_values_dictionary_is_unique_and_substantial(self):
         values = self.data["values"]
-        self.assertEqual(len(values), 257)
+        self.assertEqual(len(values), 256)
         self.assertEqual(len(values), len({value["id"] for value in values}))
         self.assertEqual(len(values), len({value["name"].casefold() for value in values}))
         self.assertTrue(all(value["definition"].strip() for value in values))
 
     def test_progressive_display_ranks_are_unique_contiguous_and_exact(self):
         ordered = sorted(self.data["values"], key=lambda value: value["display_rank"])
-        self.assertEqual([value["display_rank"] for value in ordered], list(range(1, 258)))
+        self.assertEqual([value["display_rank"] for value in ordered], list(range(1, 257)))
         names = [value["name"] for value in ordered]
         self.assertEqual(names[:16], EXPECTED_FIRST_128[:16])
         self.assertEqual(names[:32], EXPECTED_FIRST_128[:32])
@@ -171,14 +171,16 @@ class ValuesModuleTests(unittest.TestCase):
         self.assertEqual(names[:128], EXPECTED_FIRST_128)
         self.assertEqual(len([value for value in ordered if value["display_rank"] <= 256]), 256)
         self.assertEqual(names[-1], "Perfection")
+        self.assertNotIn("Efficiency", names)
 
     def test_progressive_dictionary_controls_search_and_selection_contract(self):
         self.assertIn("const VALUE_DISPLAY_OPTIONS = [16, 32, 64, 128, 256, \"all\"]", self.javascript)
         self.assertIn("const DEFAULT_VALUE_DISPLAY = 32", self.javascript)
         self.assertIn("let displaySize = DEFAULT_VALUE_DISPLAY", self.javascript)
         self.assertIn("canonicalValuesForDisplay(data.values, displaySize, searchQuery)", self.javascript)
-        self.assertIn("Search all 257 values and definitions", self.javascript)
-        self.assertIn("complete 257-value dictionary", self.javascript)
+        self.assertIn("const CANONICAL_VALUE_COUNT = 256", self.javascript)
+        self.assertIn("Search all ${CANONICAL_VALUE_COUNT} values and definitions", self.javascript)
+        self.assertIn("complete ${CANONICAL_VALUE_COUNT}-value dictionary", self.javascript)
         self.assertIn("values-selected-summary", self.javascript)
         self.assertIn("Selected values", self.javascript)
         self.assertIn("Remove ${escapeHtml(value.name)} from selected values", self.javascript)
@@ -346,6 +348,13 @@ class ValuesModuleTests(unittest.TestCase):
         self.assertIn('gridTemplateColumns.split(/\\s+/)', self.javascript)
         self.assertIn("cards[columns * 2]", self.javascript)
         self.assertIn('root.classList.toggle("values-action-bar-visible", visible)', self.javascript)
+        self.assertIn("Collapse bar", self.javascript)
+        self.assertIn("Show bottom bar", self.javascript)
+        self.assertIn("data-values-action-bar-toggle", self.javascript)
+        self.assertIn("values-action-bar-collapsed", self.javascript)
+        self.assertIn("atPageBottom && !wasAtPageBottom", self.javascript)
+        self.assertIn("--values-action-bar-height", self.css)
+        self.assertIn(".values-action-bar-toggle", self.css)
 
     def test_values_starts_at_app_heading_without_duplicate_page_intro(self):
         self.assertIn('body:has(.skill-app[data-skill-app="values"]) #title-block-header', self.css)

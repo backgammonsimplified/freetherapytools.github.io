@@ -23,6 +23,9 @@ class SkillFinderAppTests(unittest.TestCase):
         self.assertIn('"\\u2192 Show navigation"', javascript)
         self.assertIn('collapsed &&\n            !manuallyCollapsed', javascript)
         self.assertIn("autoCollapsePending = true", javascript)
+        self.assertIn("pageScrollingDown = currentScrollY > lastScrollY", javascript)
+        self.assertIn('toggle.style.left = "0.5rem"', javascript)
+        self.assertIn('backToTop.hidden = window.scrollY <= window.innerHeight', javascript)
         self.assertIn('window.dispatchEvent(new CustomEvent("bs:left-sidebar-change"))', javascript)
 
     def test_every_skill_finder_page_uses_the_shared_sidebar(self):

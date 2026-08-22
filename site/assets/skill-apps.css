@@ -99,6 +99,7 @@
   --values-action-bar-width: min(72rem, calc(100vw - 2rem));
   --values-action-bar-x-shift: -50%;
   --values-action-bar-bottom: 0px;
+  --values-action-bar-height: 8rem;
   padding-bottom: var(--values-action-bar-space);
 }
 
@@ -133,11 +134,48 @@ body:has(.skill-app[data-skill-app="values"]) #title-block-header {
   transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
 }
 
-.skill-app[data-skill-app="values"].values-action-bar-visible .skill-app-footer {
+.skill-app[data-skill-app="values"].values-action-bar-visible:not(.values-action-bar-collapsed) .skill-app-footer {
   opacity: 1;
   pointer-events: auto;
   transform: translate(var(--values-action-bar-x-shift), 0);
   visibility: visible;
+}
+
+.skill-app[data-skill-app="values"] .values-action-bar-toggle {
+  position: fixed;
+  left: calc(var(--values-action-bar-left) + var(--values-action-bar-width) - 0.5rem);
+  bottom: calc(var(--values-action-bar-bottom) + var(--values-action-bar-height) + 0.35rem);
+  z-index: 1036;
+  width: auto;
+  min-height: 2rem;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--skill-app-border);
+  border-radius: 999px;
+  background: var(--bs-page-background, #faf7f2);
+  color: inherit;
+  box-shadow: 0 0.2rem 0.7rem rgb(48 37 29 / 14%);
+  font-size: 0.78rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-100%, 0.75rem);
+  visibility: hidden;
+  transition: bottom 160ms ease, opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+}
+
+.skill-app[data-skill-app="values"].values-action-bar-visible .values-action-bar-toggle {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-100%, 0);
+  visibility: visible;
+}
+
+.skill-app[data-skill-app="values"].values-action-bar-collapsed .values-action-bar-toggle {
+  bottom: calc(var(--values-action-bar-bottom) + 0.5rem);
+}
+
+.skill-app[data-skill-app="values"] .values-action-bar-toggle:focus-visible {
+  outline: 3px solid #1565c0;
+  outline-offset: 2px;
 }
 
 .skill-app[data-skill-app="values"] .skill-app-footer > div:first-child {
@@ -186,12 +224,16 @@ body:has(.skill-app[data-skill-app="values"]) #title-block-header {
   padding: 0.4rem 0.75rem;
 }
 
-body:has(.skill-app[data-skill-app="values"].values-action-bar-visible) .bs-site-tools--floating {
+body:has(.skill-app[data-skill-app="values"].values-action-bar-visible:not(.values-action-bar-collapsed)) .bs-site-tools--floating {
   bottom: calc(8.5rem + 1rem);
 }
 
-body:has(.skill-app[data-skill-app="values"].values-action-bar-visible) .bs-term-lookup--floating {
+body:has(.skill-app[data-skill-app="values"].values-action-bar-visible:not(.values-action-bar-collapsed)) .bs-term-lookup--floating {
   bottom: calc(8.5rem + 4.4rem);
+}
+
+body:has(.skill-app[data-skill-app="values"].values-action-bar-collapsed) .bs-site-tools--floating {
+  bottom: 3.5rem;
 }
 
 .skill-app-grid,
@@ -966,7 +1008,7 @@ body:has(.skill-app[data-skill-app="values"].values-action-bar-visible) .bs-term
     white-space: normal;
   }
 
-  body:has(.skill-app[data-skill-app="values"].values-action-bar-visible) .bs-site-tools--floating {
+  body:has(.skill-app[data-skill-app="values"].values-action-bar-visible:not(.values-action-bar-collapsed)) .bs-site-tools--floating {
     bottom: calc(13.5rem + 0.75rem);
   }
 

@@ -3,19 +3,21 @@
 
   const VALUE_DISPLAY_OPTIONS = [16, 32, 64, 128, 256, "all"];
   const DEFAULT_VALUE_DISPLAY = 32;
+  const CANONICAL_VALUE_COUNT = 256;
 
   function canonicalValuesForDisplay(values, displaySize = DEFAULT_VALUE_DISPLAY, searchQuery = "") {
-    const ranked = [...values].sort((left, right) => left.display_rank - right.display_rank);
     const query = String(searchQuery).trim().toLocaleLowerCase();
-    if (query) {
-      return ranked.filter((value) => `${value.name} ${value.definition}`.toLocaleLowerCase().includes(query));
-    }
     const limit = displaySize === "all" ? Number.POSITIVE_INFINITY : Number(displaySize);
-    return ranked.filter((value) => value.display_rank <= limit);
+    return values
+      .filter((value) => query
+        ? `${value.name} ${value.definition}`.toLocaleLowerCase().includes(query)
+        : value.display_rank <= limit)
+      .sort((left, right) => left.name.localeCompare(right.name, undefined, { sensitivity: "base" }));
   }
 
   const SkillApps = {
     DEFAULT_VALUE_DISPLAY,
+    CANONICAL_VALUE_COUNT,
     VALUE_DISPLAY_OPTIONS,
     canonicalValuesForDisplay,
     calculateGap(current, desired) {
@@ -154,7 +156,7 @@
     const tierLabel = displaySize === "all" ? "All" : displaySize;
     const dictionaryHeading = searching ? "Search results" : displaySize === "all" ? "All values" : "Common values";
     const dictionaryDescription = searching
-      ? `Showing ${visibleCanonical.length} match${visibleCanonical.length === 1 ? "" : "es"} from the complete 257-value dictionary.`
+      ? `Showing ${visibleCanonical.length} match${visibleCanonical.length === 1 ? "" : "es"} from the complete ${CANONICAL_VALUE_COUNT}-value dictionary.`
       : displaySize === "all"
         ? "Explore the complete values dictionary."
         : "A shorter set to help you get started.";
@@ -173,9 +175,9 @@
           const checked = String(displaySize) === value;
           return `<label><input type="radio" name="values-display-size" value="${value}" data-values-tier aria-label="Show ${label.toLowerCase() === "all" ? "all values" : `${label} values`}" ${checked ? "checked" : ""}><span>${label}</span></label>`;
         }).join("")}</div></fieldset>
-        <label for="values-search">Search all 257 values and definitions</label>
+        <label for="values-search">Search all ${CANONICAL_VALUE_COUNT} values and definitions</label>
         <input id="values-search" type="search" data-values-search autocomplete="off" value="${escapeHtml(searchQuery)}">
-        <p class="values-search-status" aria-live="polite">${searching ? dictionaryDescription : `Showing ${tierLabel === "All" ? "all 257" : tierLabel} values.`}</p>
+        <p class="values-search-status" aria-live="polite">${searching ? dictionaryDescription : `Showing ${tierLabel === "All" ? `all ${CANONICAL_VALUE_COUNT}` : tierLabel} values.`}</p>
         <div class="skill-app-card-grid" data-value-list>${cards}</div>
       </section>
       ${customCards ? `<section class="values-custom-values" aria-labelledby="custom-values-heading"><h4 id="custom-values-heading">Custom values</h4><div class="skill-app-card-grid">${customCards}</div></section>` : ""}
@@ -323,23 +325,30 @@
       </section>`;
   }
 
-  function setupValuesActionBar(root, getState) {
+  function setupValuesActionBar(root, getState, getCollapsed, setCollapsed) {
     let frame = 0;
+    let wasAtPageBottom = global.scrollY + global.innerHeight >= document.documentElement.scrollHeight - 8;
     const sync = () => {
       frame = 0;
       const shell = root.querySelector(".skill-app-shell");
       const footer = root.querySelector(".skill-app-footer");
-      if (!shell || !footer) return;
+      const toggle = root.querySelector("[data-values-action-bar-toggle]");
+      if (!shell || !footer || !toggle) return;
       const bounds = shell.getBoundingClientRect();
       root.style.setProperty("--values-action-bar-left", `${bounds.left}px`);
       root.style.setProperty("--values-action-bar-width", `${bounds.width}px`);
       root.style.setProperty("--values-action-bar-x-shift", "0px");
+      root.style.setProperty("--values-action-bar-height", `${footer.getBoundingClientRect().height}px`);
       const siteFooter = document.querySelector(".nav-footer, .page-footer");
       const siteFooterBounds = siteFooter?.getBoundingClientRect();
       const visibleSiteFooter = siteFooterBounds
         ? Math.max(0, Math.min(global.innerHeight, siteFooterBounds.bottom) - Math.max(0, siteFooterBounds.top))
         : 0;
       root.style.setProperty("--values-action-bar-bottom", `${visibleSiteFooter}px`);
+
+      const atPageBottom = global.scrollY + global.innerHeight >= document.documentElement.scrollHeight - 8;
+      if (getCollapsed() && atPageBottom && !wasAtPageBottom) setCollapsed(false);
+      wasAtPageBottom = atPageBottom;
 
       const state = getState();
       let visible = state.step > 0;
@@ -371,7 +380,19 @@
     let state = initialValuesState();
     let displaySize = DEFAULT_VALUE_DISPLAY;
     let searchQuery = "";
+    let actionBarCollapsed = false;
     let updateActionBar = () => {};
+
+    function setActionBarCollapsed(collapsed) {
+      actionBarCollapsed = Boolean(collapsed);
+      root.classList.toggle("values-action-bar-collapsed", actionBarCollapsed);
+      const toggle = root.querySelector("[data-values-action-bar-toggle]");
+      if (toggle) {
+        toggle.setAttribute("aria-expanded", String(!actionBarCollapsed));
+        toggle.textContent = actionBarCollapsed ? "Show bottom bar" : "Collapse bar";
+      }
+      updateActionBar();
+    }
 
     function render() {
       state.step = Math.max(0, Math.min(STEPS.length - 1, Number(state.step) || 0));
@@ -386,9 +407,11 @@
       root.innerHTML = `<div class="skill-app-shell">
         <header class="skill-app-header"><h2>Discover and Work Towards Your Values</h2><p>Discover and create a plan to work towards your values and accumulate long term positive emotions.</p>${progressMarkup(state.step)}</header>
         <section class="skill-app-panel" aria-live="polite">${panel}</section>
-        <footer class="skill-app-footer"><div><strong data-values-status aria-live="polite">Your entries are not saved on our servers.</strong><br><small>A temporary draft is saved in this browser. You can download partial or completed results below.</small></div>
+        <footer class="skill-app-footer" id="values-action-bar"><div><strong data-values-status aria-live="polite">Your entries are not saved on our servers.</strong><br><small>A temporary draft is saved in this browser. You can download partial or completed results below.</small></div>
           <div class="skill-app-actions"><button type="button" class="secondary" data-back ${state.step === 0 ? "disabled" : ""}>Back</button><button type="button" data-next ${continueDisabled ? "disabled" : ""}>Continue</button></div></footer>
+        <button type="button" class="secondary values-action-bar-toggle" data-values-action-bar-toggle aria-controls="values-action-bar" aria-expanded="${!actionBarCollapsed}">${actionBarCollapsed ? "Show bottom bar" : "Collapse bar"}</button>
       </div>`;
+      setActionBarCollapsed(actionBarCollapsed);
       bind();
       updateActionBar();
       root.querySelector(".skill-app-panel h3")?.focus?.();
@@ -512,6 +535,9 @@
       });
       root.querySelector("[data-back]")?.addEventListener("click", () => { state.step -= 1; render(); });
       root.querySelector("[data-next]")?.addEventListener("click", () => { state.step += 1; render(); });
+      root.querySelector("[data-values-action-bar-toggle]")?.addEventListener("click", () => {
+        setActionBarCollapsed(!actionBarCollapsed);
+      });
       root.querySelector("[data-clear]")?.addEventListener("click", () => {
         if (!global.confirm("Clear all current Values selections and entries?")) return;
         state = initialValuesState();
@@ -520,7 +546,12 @@
     }
 
     render();
-    updateActionBar = setupValuesActionBar(root, () => state);
+    updateActionBar = setupValuesActionBar(
+      root,
+      () => state,
+      () => actionBarCollapsed,
+      setActionBarCollapsed
+    );
     updateActionBar();
     if (Progress) {
       const topKeys = ["step", "selected", "custom", "selectedDomains", "domainImportance", "domains", "core", "assessments", "focus", "actions", "barriers", "mission", "review"];

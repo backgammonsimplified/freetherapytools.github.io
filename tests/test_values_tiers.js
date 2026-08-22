@@ -9,21 +9,23 @@ const apps = require(path.join(root, "site", "assets", "skill-apps.js"));
 const data = JSON.parse(fs.readFileSync(path.join(root, "site", "data", "skill-apps", "values.json"), "utf8"));
 
 assert.equal(apps.DEFAULT_VALUE_DISPLAY, 32);
+assert.equal(apps.CANONICAL_VALUE_COUNT, 256);
 assert.deepEqual(apps.VALUE_DISPLAY_OPTIONS, [16, 32, 64, 128, 256, "all"]);
 
 let previous = new Set();
 for (const size of [16, 32, 64, 128, 256]) {
   const visible = apps.canonicalValuesForDisplay(data.values, size);
   assert.equal(visible.length, size);
+  assert.deepEqual(visible.map((value) => value.name), [...visible].map((value) => value.name).sort((a, b) => a.localeCompare(b, undefined, {sensitivity: "base"})));
   const ids = new Set(visible.map((value) => value.id));
   for (const id of previous) assert.ok(ids.has(id), `${id} disappeared from the ${size} tier`);
   previous = ids;
 }
 
-assert.equal(apps.canonicalValuesForDisplay(data.values, "all").length, 257);
+assert.equal(apps.canonicalValuesForDisplay(data.values, "all").length, 256);
 assert.deepEqual(
-  apps.canonicalValuesForDisplay(data.values, 16).map((value) => value.name),
-  data.values.filter((value) => value.display_rank <= 16).sort((a, b) => a.display_rank - b.display_rank).map((value) => value.name),
+  new Set(apps.canonicalValuesForDisplay(data.values, 16).map((value) => value.id)),
+  new Set(data.values.filter((value) => value.display_rank <= 16).map((value) => value.id)),
 );
 
 const stewardship = data.values.find((value) => value.name === "Stewardship");

@@ -31,6 +31,8 @@ DOMAINS = [
     ("home-resources", "Home, Resources, Security & Lifestyle"),
 ]
 
+EXCLUDED_VALUE_NAMES = {"Efficiency"}
+
 FIXED_DISPLAY_ORDER = (
     "Acceptance",
     "Authenticity",
@@ -173,7 +175,6 @@ LATE_DISPLAY_VALUES = (
     "Being the Best",
     "Brilliance",
     "Competitiveness",
-    "Efficiency",
     "Fame",
     "Greatness",
     "Influence",
@@ -266,7 +267,10 @@ def main() -> int:
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     args = parser.parse_args()
     lines = paragraphs(args.source)
-    values = extract_values(lines)
+    values = [
+        value for value in extract_values(lines)
+        if str(value["name"]) not in EXCLUDED_VALUE_NAMES
+    ]
     add_display_ranks(values)
     payload = {
         "schema_version": 1,

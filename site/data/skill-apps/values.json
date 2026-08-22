@@ -143,7 +143,7 @@
       "definition": "To use time and effort to complete useful or meaningful work.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 245
+      "display_rank": 244
     },
     {
       "id": "accuracy",
@@ -167,7 +167,7 @@
       "definition": "To bring competence, reliability, boundaries, and respect to work roles.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 246
+      "display_rank": 245
     },
     {
       "id": "achievement",
@@ -191,7 +191,7 @@
       "definition": "To build sufficient resources and conditions for a thriving life.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 247
+      "display_rank": 246
     },
     {
       "id": "adaptability",
@@ -255,7 +255,7 @@
       "definition": "To pursue broad public recognition or visibility.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 239
+      "display_rank": 238
     },
     {
       "id": "quality",
@@ -263,7 +263,7 @@
       "definition": "To care about how well something is made, done, or experienced.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 248
+      "display_rank": 247
     },
     {
       "id": "advocacy",
@@ -359,7 +359,7 @@
       "definition": "To value having effort, contribution, or achievement acknowledged.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 249
+      "display_rank": 248
     },
     {
       "id": "ambition",
@@ -575,7 +575,7 @@
       "definition": "To keep attention on meaningful outcomes and completion.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 250
+      "display_rank": 249
     },
     {
       "id": "balance",
@@ -687,7 +687,7 @@
       "definition": "To develop and use my abilities in a significant way.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 240
+      "display_rank": 239
     },
     {
       "id": "security",
@@ -1007,7 +1007,7 @@
       "definition": "To live in a way that feels consequential and meaningful.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 251
+      "display_rank": 250
     },
     {
       "id": "cleverness",
@@ -1095,7 +1095,7 @@
       "definition": "To use my voice, position, relationships, or expertise to shape decisions and outcomes responsibly.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 241
+      "display_rank": 240
     },
     {
       "id": "solitude",
@@ -1199,7 +1199,7 @@
       "definition": "To value social standing, rank, prestige, or recognized position.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 252
+      "display_rank": 251
     },
     {
       "id": "competence",
@@ -1295,7 +1295,7 @@
       "definition": "To define and pursue outcomes that represent doing well by my standards.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 253
+      "display_rank": 252
     },
     {
       "id": "conformity",
@@ -1367,7 +1367,7 @@
       "definition": "To develop and use natural or learned strengths.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 254
+      "display_rank": 253
     },
     {
       "id": "contentment",
@@ -1922,20 +1922,12 @@
       "display_rank": 225
     },
     {
-      "id": "efficiency",
-      "name": "Efficiency",
-      "definition": "To use time, effort, and resources without unnecessary waste.",
-      "suggested_domains": [],
-      "aliases": [],
-      "display_rank": 238
-    },
-    {
       "id": "perfection",
       "name": "Perfection",
       "definition": "To pursue flawlessness or exactness in areas where that standard is useful.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 257
+      "display_rank": 256
     },
     {
       "id": "wealth",
@@ -1943,7 +1935,7 @@
       "definition": "To build financial resources and material options.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 255
+      "display_rank": 254
     },
     {
       "id": "empathy",
@@ -1959,7 +1951,7 @@
       "definition": "To execute tasks or roles capably when it is time to deliver.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 242
+      "display_rank": 241
     },
     {
       "id": "welcoming",
@@ -2015,7 +2007,7 @@
       "definition": "To value competitive success and doing what is needed to prevail fairly.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 256
+      "display_rank": 255
     },
     {
       "id": "endurance",
@@ -2079,7 +2071,7 @@
       "definition": "To value being widely liked, accepted, or socially sought after.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 243
+      "display_rank": 242
     },
     {
       "id": "zeal",
@@ -2103,7 +2095,7 @@
       "definition": "To have meaningful influence, authority, or capacity to shape outcomes.",
       "suggested_domains": [],
       "aliases": [],
-      "display_rank": 244
+      "display_rank": 243
     }
   ],
   "custom_values_allowed": true
