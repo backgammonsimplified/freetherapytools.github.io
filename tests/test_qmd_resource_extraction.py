@@ -75,6 +75,18 @@ class QmdResourceExtractionTests(unittest.TestCase):
             )
             self.assertNotEqual("pending", self.by_id[source_id]["extraction_method"])
 
+    def test_interpersonal_resources_have_native_qmd_content(self) -> None:
+        rows = [row for row in self.published if row["section"] == "Interpersonal Effectiveness"]
+        self.assertEqual(41, len(rows))
+        for resource in rows:
+            source_id = resource["id"]
+            lesson = ROOT / self.by_id[source_id]["lesson_qmd"]
+            self.assertIn(
+                f"<!-- native-resource-content:{source_id}:start -->",
+                lesson.read_text(encoding="utf-8"),
+            )
+            self.assertNotEqual("pending", self.by_id[source_id]["extraction_method"])
+
     def test_ten_emotion_profiles_use_source_structure_and_sync_to_app_data(self) -> None:
         profile = (SITE / "learn/emotion-regulation/observing-describing-emotions.qmd").read_text(encoding="utf-8")
         emotions = (
@@ -138,6 +150,15 @@ class QmdResourceExtractionTests(unittest.TestCase):
             "site/learn/cbt-anxiety/understanding-worry.qmd": (
                 "## Worry Tree {#worry-tree}",
                 "### Decision Sequence",
+            ),
+            "site/learn/interpersonal-effectiveness/dear-man.qmd": (
+                "## Describe {#describe}",
+                "## Express {#express}",
+                "## Assert {#assert}",
+                "## Reinforce {#reinforce}",
+                "## Mindful {#mindful}",
+                "## Appear Confident {#appear-confident}",
+                "## Negotiate {#negotiate}",
             ),
         }
         for relative, expected in checks.items():

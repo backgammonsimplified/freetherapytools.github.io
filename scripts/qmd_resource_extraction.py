@@ -67,6 +67,11 @@ INTEGRATED_SOURCE_IDS = {
     "cbt-skills-p027", "cbt-skills-p034", "cbt-skills-p041",
     "cbt-skills-p042", "cbt-skills-p048", "cbt-skills-p050",
     "cbt-skills-p053", "cbt-skills-p054",
+    "interpersonal-effectiveness-p003", "interpersonal-effectiveness-p014",
+    "interpersonal-effectiveness-p015", "interpersonal-effectiveness-p017",
+    "interpersonal-effectiveness-p018", "interpersonal-effectiveness-p023",
+    "interpersonal-effectiveness-p033", "interpersonal-effectiveness-p037",
+    "interpersonal-effectiveness-p038", "interpersonal-effectiveness-p039",
 }
 
 

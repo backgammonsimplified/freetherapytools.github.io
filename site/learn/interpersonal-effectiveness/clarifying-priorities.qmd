@@ -20,6 +20,30 @@ execute:
 
 Before acting, decide which goal matters most: getting an objective, preserving the relationship, or protecting self-respect.
 
+## Clarifying Goals {#clarifying-goals}
+
+### Objectives Effectiveness
+
+What result do you want from the interaction? Identify the concrete request, refusal, change, information, or solution you are seeking.
+
+### Relationship Effectiveness
+
+How do you want the other person to feel about you and the relationship after the interaction? Consider both the present exchange and the longer-term relationship.
+
+### Self-Respect Effectiveness
+
+How do you want to feel about yourself afterward? Identify the values and limits you want your behaviour to reflect.
+
+## Clarifying Priorities {#clarifying-priorities}
+
+Rate or rank the three goals before choosing a strategy. The highest priority guides which skill to emphasize:
+
+- Use **DEAR MAN** to support the objective.
+- Use **GIVE** to support the relationship.
+- Use **FAST** to support self-respect.
+
+The priorities can change with context. Safety, power differences, timing, capability, and the importance of the relationship all affect what is effective.
+
 <!-- section-scan-resources:start -->
 
 ## Handouts & Worksheets {#handouts-worksheets}
@@ -41,6 +65,28 @@ Before acting, decide which goal matters most: getting an objective, preserving 
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:interpersonal-effectiveness-p009:start -->
+
+#### Text Version
+
+*Interpersonal Effectiveness Handout 2*
+
+You Don’t Have tHE Interpersonal Skills You Need
+
+##### You Don’t Know What You Want
+
+You have the skills, but can’t decide what you really want from the other person. You can’t figure out how to balance your needs versus the other person’s needs: Asking for too much versus not asking for anything. Saying no to everything versus giving in to everything. Your Emotions arE Getting In tHE WaY You have the skills, but emotions (anger, pride, contempt, fear, shame, guilt) control what you do.
+
+##### You Forget Your Long-Term Goals For Short-Term Goals
+
+You put your immediate urges and wants ahead of your long-term goals. The future vanishes from your mind.
+
+##### Other People arE Getting In Your WaY
+
+You have the skills but other people get in the way. Other people are more powerful than you. Other people may be threatened or may not like you if you get what you want. Other people may not do what you want unless you sacrifice your self- respect, at least a little. Your Thoughts anD Beliefs arE Getting In tHE WaY Worries about negative consequences if you ask for what you want or say no to someone’s request get in the way of acting effectively. Beliefs that you don’t deserve what you want stop you in your tracks. Beliefs that others don’t deserve what they want make you ineffective.
+
+<!-- native-resource-content:interpersonal-effectiveness-p009:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-interpersonal-effectiveness-p010 data-source-id="interpersonal-effectiveness-p010"}
@@ -60,6 +106,32 @@ Before acting, decide which goal matters most: getting an objective, preserving 
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:interpersonal-effectiveness-p010:start -->
+
+#### Text Version
+
+interpersonal effectiveness Handout 2a (I. E. Worksheet 2) myths in the Way of objectives effectiveness  1. I don’t deserve to get what I want or need.
+
+2. If I make a request, this will show that I am a very weak person.  3. I have to know whether a person is going to say yes before I make a request.
+
+ 4. If I ask for something or say no, I can’t stand it if someone gets upset with me.  5. If they say no, it will kill me.  6. Making requests is a really pushy (bad, self- centered, selfish, etc.) thing to do.  7. Saying no to a request is always a selfish thing to do.  8. I should be willing to sacrifice my own needs for others.
+
+9. I must be really inadequate if I can’t fix this myself. 10. Obviously, the problem is just in my head. If I would just think differently I wouldn’t have to bother everybody else.
+
+11. If I don’t have what I want or need, it doesn’t make any difference; I don’t care really. 12. Skillfulness is a sign of weakness.
+
+##### Other myth
+
+##### Other myth
+
+myths in the Way of relationship and Self- respect effectiveness 13. I shouldn’t have to ask (say no); they should know what I want (and do it). 14. They should have known that their behavior would hurt my feelings; I shouldn’t have to tell them. 15. I shouldn’t have to negotiate or work at getting what I want. 16. Other people should be willing to do more for my needs. 17. Other people should like, approve of, and support me. 18. They don’t deserve my being skillful or treating them well. 19. Getting what I want when I want it is most important. 20. I shouldn’t be fair, kind, courteous, or respectful if others are not so toward me. 21. Revenge will feel so good; it will be worth any negative consequences. 22. Only wimps have values. 23. Everybody lies. 24. Getting what I want is more important than how I get it; the ends really do justify the means.
+
+##### Other myth
+
+##### Other myth
+
+<!-- native-resource-content:interpersonal-effectiveness-p010:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-interpersonal-effectiveness-p013 data-source-id="interpersonal-effectiveness-p013"}
@@ -79,6 +151,42 @@ Before acting, decide which goal matters most: getting an objective, preserving 
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:interpersonal-effectiveness-p013:start -->
+
+#### Text Version
+
+interpersonal effectiveness Handout 3
+
+##### overview
+
+##### Clarifying Priorities
+
+##### How important is
+
+**Getting what you want/obtaining your goal?**
+
+**Keeping the relationship?**
+
+**Maintaining your self- respect?**
+
+##### Objectives Effectiveness: Dear man
+
+Be effective in asserting your rights and wishes.
+
+##### Relationship Effectiveness: Give
+
+Act in such a way that you maintain positive relationships and that others feel good about themselves and about you.
+
+##### Self- Respect Effectiveness: Fast
+
+Act in such a way that you keep your self- respect.
+
+##### Factors To Consider
+
+Decide how firm or intense you want to be in asking for something or saying no.
+
+<!-- native-resource-content:interpersonal-effectiveness-p013:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-interpersonal-effectiveness-p014 data-source-id="interpersonal-effectiveness-p014"}
@@ -98,6 +206,14 @@ Before acting, decide which goal matters most: getting an objective, preserving 
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:interpersonal-effectiveness-p014:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:interpersonal-effectiveness-p014:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -119,6 +235,76 @@ Before acting, decide which goal matters most: getting an objective, preserving 
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:interpersonal-effectiveness-p011:start -->
+
+#### Text Version
+
+interpersonal effectiveness Worksheet 2 (I. E. Handout 2a) (p. 1 of 2) challenging myths in the Way of obtaining objectives challenging myths in the Way of objectives effectiveness
+
+##### Due Date: Name: Week Starting
+
+For each myth, write down a challenge that makes sense to you.
+
+1. I don’t deserve to get what I want or need.
+
+##### Challenge
+
+2. If I make a request, this will show that I’m a very weak person.
+
+##### Challenge
+
+3. I have to know whether a person is going to say yes before I make a request.
+
+##### Challenge
+
+4. If I ask for something or say no, I can’t stand it if someone gets upset with me.
+
+##### Challenge
+
+5. If they say no, it will kill me.
+
+##### Challenge
+
+6. Making requests is a really pushy (bad, self- centered, selfish, etc.) thing to do.
+
+##### Challenge
+
+7. Saying no to a request is always a selfish thing to do.
+
+##### Challenge
+
+8. I should be willing to sacrifice my own needs for others.
+
+##### Challenge
+
+9. I must be really inadequate if I can’t fix this myself.
+
+##### Challenge
+
+10. Obviously, the problem is just in my head. If I would just think differently, I wouldn’t have to bother everybody else.
+
+##### Challenge
+
+11. If I don’t have what I want or need, it doesn’t make any difference; I don’t care, really.
+
+##### Challenge
+
+12. Skillfulness is a sign of weakness.
+
+##### Challenge
+
+##### Other myth
+
+##### Challenge
+
+##### Other myth
+
+##### Challenge
+
+*continued on next page*
+
+<!-- native-resource-content:interpersonal-effectiveness-p011:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-interpersonal-effectiveness-p012 data-source-id="interpersonal-effectiveness-p012"}
@@ -138,6 +324,68 @@ Before acting, decide which goal matters most: getting an objective, preserving 
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:interpersonal-effectiveness-p012:start -->
+
+#### Text Version
+
+interpersonal effectiveness Worksheet 2 (p. 2 of 2) challenging myths in the Way of relationship and Self- respect effectiveness For each myth, write down a challenge that makes sense to you. 13. I shouldn’t have to ask (say no); they should know what I want (and do it).
+
+##### Challenge
+
+14. They should have known that their behavior would hurt my feelings; I shouldn’t have to tell them.
+
+##### Challenge
+
+15. I shouldn’t have to negotiate or work at getting what I want.
+
+##### Challenge
+
+16. Other people should be willing to do more for my needs.
+
+##### Challenge
+
+17. Other people should like, approve of, and support me.
+
+##### Challenge
+
+18. They don’t deserve my being skillful or treating them well.
+
+##### Challenge
+
+19. Getting what I want when I want it is most important.
+
+##### Challenge
+
+20. I shouldn’t be fair, kind, courteous, or respectful if others are not so toward me.
+
+##### Challenge
+
+21. Revenge will feel so good; it will be worth any negative consequences.
+
+##### Challenge
+
+22. Only wimps have values.
+
+##### Challenge
+
+23. Everybody lies.
+
+##### Challenge
+
+24. Getting what I want or need is more important than how I get it; the ends really do justify the means.
+
+##### Challenge
+
+##### Other myth
+
+##### Challenge
+
+##### Other myth
+
+##### Challenge
+
+<!-- native-resource-content:interpersonal-effectiveness-p012:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-interpersonal-effectiveness-p015 data-source-id="interpersonal-effectiveness-p015"}
@@ -157,6 +405,14 @@ Before acting, decide which goal matters most: getting an objective, preserving 
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:interpersonal-effectiveness-p015:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:interpersonal-effectiveness-p015:end -->
 ::::
 
 <!-- section-scan-resources:end -->

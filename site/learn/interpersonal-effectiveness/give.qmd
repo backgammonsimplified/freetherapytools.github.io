@@ -22,11 +22,21 @@ GIVE focuses on how you relate to the other person during an interaction.
 
 ## Gentle {#gentle}
 
+Be courteous and even-tempered. Do not attack, threaten, judge, sneer, or use contempt. Describe consequences only when you are prepared to follow through and doing so is effective.
+
 ## Interested {#interested}
+
+Listen and appear interested in the other person's point of view. Face the person, maintain appropriate eye contact, and avoid interrupting or talking over them.
 
 ## Validate {#validate}
 
+Acknowledge the other person's feelings, wants, difficulties, and opinions. Look for what makes sense in their response without pretending to agree with what you do not agree with.
+
+Validation can include paying attention, reflecting what you heard, naming unspoken feelings or needs carefully, connecting the response to causes or history, recognizing what is valid now, and relating as equals.
+
 ## Easy Manner {#easy-manner}
+
+Use a little humour, a smile, or a soft approach when it fits. Aim for a manner that reduces unnecessary tension without minimizing the issue.
 
 <!-- section-scan-resources:start -->
 
@@ -49,6 +59,14 @@ GIVE focuses on how you relate to the other person during an interaction.
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:interpersonal-effectiveness-p023:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:interpersonal-effectiveness-p023:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-interpersonal-effectiveness-p024 data-source-id="interpersonal-effectiveness-p024"}
@@ -68,6 +86,28 @@ GIVE focuses on how you relate to the other person during an interaction.
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:interpersonal-effectiveness-p024:start -->
+
+#### Text Version
+
+interpersonal effectiveness Handout 6a expanding the v in Give: levels of validation
+
+1.  pay attention: Look interested in the other person instead of bored (no multitasking).
+
+2. reflect Back: Say back what you heard the other person say or do, to be sure you understand exactly what the person is saying. No judgmental language or tone of voice!
+
+3. “read minds”: Be sensitive to what is not being said by the other person. Pay attention to facial expressions, body language, what is happening, and what you know about the person already.
+
+Show you understand in words or by your actions. Check it out and make sure you are right. Let go if you are not.
+
+4. understand: Look for how what the other person is feeling, thinking, or doing makes sense, based on the person’s past experiences, present situation, and/or current state of mind or physical condition (i.e., the causes).
+
+5. acknowledge the valid: Look for how the person’s feelings, thinking, or actions are valid responses because they fit current facts, or are understandable because they are a logical response to current facts.
+
+6. Show equality: Be yourself! Don’t “one-up” or “one-down” the other person. Treat the other as an equal, not as fragile or incompetent.
+
+<!-- native-resource-content:interpersonal-effectiveness-p024:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -79,6 +119,18 @@ GIVE focuses on how you relate to the other person during an interaction.
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p028.jpg)
 
+
+<!-- native-resource-content:interpersonal-effectiveness-p028:start -->
+
+#### Text Version
+
+of situation you are cur?€ntiv experiencing or have experienced recen?y where the RELATIONSHIP the was/ is the priority_ Use the DEAR Give script to pnctjce how this skii! used, What is my Recqiionship issue (Row want the Mher person fee] aboot me? l: Describe Situätitn.
+
+##### E
+
+xpress feelines/cpjnions. Assert reque5t (or say no} the part you wilt use in Tbroken record" to stay Mindful you need Reinforcing comments to make. Be Gentle and Act Interested. Commenis rnake (if needed), Validating other person's thoughts and iee3hngg with actions words while using an Easy Manner, Comments make {f needed)
+
+<!-- native-resource-content:interpersonal-effectiveness-p028:end -->
 ::::
 
 ## Exercises {#exercises}
@@ -90,6 +142,20 @@ GIVE focuses on how you relate to the other person during an interaction.
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p022.jpg)
 
+
+<!-- native-resource-content:interpersonal-effectiveness-p022:start -->
+
+#### Text Version
+
+##### In pairs, refleot on the foäowing quest*cns
+
+3. 4. What are some ways you cowd meet (or have met) Peopee •with shared interests
+
+**and values?**
+
+Describe what you do to make a new fräend and build a friendship with them. Identlry any chafenges you experience starfing new friendships. any chalenges you experience in maintaining.fr$endships.
+
+<!-- native-resource-content:interpersonal-effectiveness-p022:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -111,6 +177,66 @@ GIVE focuses on how you relate to the other person during an interaction.
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:interpersonal-effectiveness-p025:start -->
+
+#### Text Version
+
+**What iS it exactly?**
+
+Simply put, it tells someone "your feelings make sense. Not only do I hear you, but I understand why you feel the way you do. You are not bad or wrong or crazy for feeling the way you do."
+
+##### It means
+
+- Finding the kernel of truth in another personts perspective or situation
+
+- Acknowledging that a person's emotions, thoughts, and behaviours have causes and are therefore understandable
+
+- Not necessarily agreeing with the other person
+
+- Not validating what is actually invalid
+
+**Why Validate?**
+
+It improves our relationships by showing we are listening and understand
+
+##### It reduces
+
+Pressure to prove who is right
+
+##### Negative reactivity
+
+##### Fueling anger
+
+It makes problem solving, closeness, and support possible Because invalidation hurts and alienates Because feeling understood is one of our greatest needs Because it is the opposite of judgment.
+
+- Not saying we like it
+
+##### Hearing
+
+'9 "l hear you" using our ears
+
+**HOW do we validate?**
+
+##### Listening
+
+##### "I'm listening'l
+
+using our ears and mind
+
+##### Understanding
+
+understand" using our ears, mind Heart Use a "reflecting statement" - simply reflect back the message or feeling
+
+##### In-respanse-im
+
+"you never tell me anything that is going on" "darn right, don't you think I should know" "how do you think it makes me feel to be the last one to know" "You don't really care about me" "You should do it this way" "I know you are concerned about what's happening" "I know you care about me" "I know you want to be kept informed, I don't want you to feel left out" "I can understand that you might feel that way" "I understand you think that is best, and this is what I'm comfortable with"
+
+##### J
+
+Remember: We can only change our own behaviour, yet by doing so We become more effective in influencing a change in other's behaviour! "Seek first to understand, then to be understood"
+
+<!-- native-resource-content:interpersonal-effectiveness-p025:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-interpersonal-effectiveness-p026 data-source-id="interpersonal-effectiveness-p026"}
@@ -120,6 +246,32 @@ GIVE focuses on how you relate to the other person during an interaction.
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p026.jpg)
 
+
+<!-- native-resource-content:interpersonal-effectiveness-p026:start -->
+
+#### Text Version
+
+1. know it's hard for you
+
+2. it makes sense that you have gotten that impression
+
+3. I understqnd how frustrating this/thot iS for you Lb. This sounds Like something that really worries/cor;eerns you S, Sounds Like you Wish you had mare Cantrol over this/things
+
+6. know this drives you crazy - it'S tough T. i guess you're feeling realty disappointed
+
+8. | totally get it | appreciate that you See things differently than do
+
+10. | Know.„ things have changed a lot and dealing With change iS not easy
+
+11. Sounds Like it's hard for you understand that this iS:
+
+##### HOW I feel
+
+##### What I think
+
+##### What I need
+
+<!-- native-resource-content:interpersonal-effectiveness-p026:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-interpersonal-effectiveness-p027 data-source-id="interpersonal-effectiveness-p027"}
@@ -129,6 +281,54 @@ GIVE focuses on how you relate to the other person during an interaction.
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p027.jpg)
 
+
+<!-- native-resource-content:interpersonal-effectiveness-p027:start -->
+
+#### Text Version
+
+##### THE FOUR HORSEMEN
+
+##### HOW TO STOP THEM WITH THEIR ANTIDOTES
+
+##### CRITICISM
+
+attacking personality or character,
+
+##### CONTEMPT
+
+Atteekhg sense with an intent to insuåt or abese.
+
+##### DEFENSIVENESS
+
+Victimiziryg yourseif ta ward afi a perceived attack and Feverse the blame.
+
+##### STONEWALLING
+
+Withdrewing to avoid conflict and convey disapproval, distance, and separation.
+
+##### GENTLE START UP
+
+Talk about ytüi feelings using "l' statements and express positive need.
+
+##### BUILD CULTURE
+
+##### OF APPRECIATION
+
+Remind yourself of your paE'tner's positive quaf$ties end find gratitude for positive Actiot!S,
+
+##### TAKE RESPONSIBILITY
+
+Accept your partner 'g perspective offer am apology for vwo»gdoing.
+
+##### PHYSIOLOGICAL
+
+##### SELF-SOOTHING
+
+Take break and gpend that time do something soothing distracting.
+
+##### 'Ill? Gottman Institute
+
+<!-- native-resource-content:interpersonal-effectiveness-p027:end -->
 ::::
 
 <!-- section-scan-resources:end -->

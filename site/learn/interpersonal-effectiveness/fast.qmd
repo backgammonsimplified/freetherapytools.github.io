@@ -22,11 +22,19 @@ FAST helps you remain fair and aligned with your values.
 
 ## Fair {#fair}
 
+Be fair to yourself and to the other person. Include both sets of needs and facts.
+
 ## No Unnecessary Apologies {#no-unnecessary-apologies}
+
+Do not over-apologize for having an opinion, making a request, disagreeing, or saying no. Apologize when an apology fits the facts, not for existing or having needs.
 
 ## Stick to Values {#stick-to-values}
 
+Act in line with your values. Do not abandon what matters merely to gain approval or avoid conflict. Be clear about which value is at stake.
+
 ## Truthful {#truthful}
+
+Do not lie, exaggerate, make excuses, or act helpless when you are not. Describe your reasons accurately and avoid manipulating the situation.
 
 <!-- section-scan-resources:start -->
 
@@ -49,6 +57,14 @@ FAST helps you remain fair and aligned with your values.
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:interpersonal-effectiveness-p033:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:interpersonal-effectiveness-p033:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -70,6 +86,22 @@ FAST helps you remain fair and aligned with your values.
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:interpersonal-effectiveness-p035:start -->
+
+#### Text Version
+
+Think of a situation you are currently experiencing or have experienced recently where the SELF-RESPECT in the situation was/is the priority. Use the DEAR FAST script below to practice how this skill could be used.
+
+##### SELF-RESPECT issue (How I want to feel about myself?)
+
+Describe situation.
+
+##### E
+
+xpress feelings/opinions. Assert request (or say no) directly (circle the part you will use later in "broken record" to stay Mindful if you need it). Reinforcing comments to make. Be Eair and no Apologies. Comments to make (if needed). Stick to your values and be Iruthful. Comments to make (if needed)
+
+<!-- native-resource-content:interpersonal-effectiveness-p035:end -->
 ::::
 
 ## Exercises {#exercises}
@@ -81,6 +113,24 @@ FAST helps you remain fair and aligned with your values.
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p031.jpg)
 
+
+<!-- native-resource-content:interpersonal-effectiveness-p031:start -->
+
+#### Text Version
+
+##### Exercise 1
+
+##### Z
+
+Give an Of an interaction when vou haue done something to reduce your Qwn sense of
+
+**selt-respect? Describe What ettions left vou Feeling with less respect for yourself?**
+
+**Can you think of examples when you haue enhanced your sense of Seef•respgct an interact}on?**
+
+**What do Yoli think was responsible for helpirg you feel better about Y0ürse}f?**
+
+<!-- native-resource-content:interpersonal-effectiveness-p031:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -92,6 +142,14 @@ FAST helps you remain fair and aligned with your values.
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p032.jpg)
 
+
+<!-- native-resource-content:interpersonal-effectiveness-p032:start -->
+
+#### Text Version
+
+You haue the right tn express your own thoughts! feelings, and needs. Yau have (he right to choose how you express themta others ! and thereby. lhe coosequences in doing so. You have the right Io decåde whethey• is necessary offer reasons excy-jses justifying yocte• Behaveour_ A simple explanation perfectly reasonable or even at all deper*åiu on the situation. Justifying is aften an attemæN at seeking approvai or pgrmission, You have Eze to judge whether you are for finding solutions to other people's problems. you aæ woiking harder at solving someone else's problem than they are. then you may the You havz• *Lhe ight change your mind and to be Kljogical in making decÉsions (Particufarly because we donu aways have consider our "position" carefülly when we are '"put on lhe spot'), Vali have Ifie light to make mistakes - a-Nd be for them„ You have the right to say "E don't know" arid dan'i understand', Yau have the light to öe asserive oven when the other Éndiviclual is "doing you a favour" or being nice or trying be hed,pful. You have to say "I'M tot interested" and "I care". you have the right to say "NO" Without feeling guilty. 80m: When t Say Smat-„ üiat Press, lg7s
+
+<!-- native-resource-content:interpersonal-effectiveness-p032:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-interpersonal-effectiveness-p034 data-source-id="interpersonal-effectiveness-p034"}
@@ -111,6 +169,14 @@ FAST helps you remain fair and aligned with your values.
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:interpersonal-effectiveness-p034:start -->
+
+#### Text Version
+
+Printed content could not be extracted reliably from this page.
+
+<!-- native-resource-content:interpersonal-effectiveness-p034:end -->
 ::::
 
 <!-- section-scan-resources:end -->

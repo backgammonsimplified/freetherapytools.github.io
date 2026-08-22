@@ -22,17 +22,41 @@ DEAR MAN helps organize what to say and how to stay focused.
 
 ## Describe {#describe}
 
+Describe the current situation using observable facts. Say what happened without judgments, accusations, or assumptions about motives.
+
 ## Express {#express}
+
+Express your feelings and opinions clearly. Do not assume the other person already knows how the situation affects you.
 
 ## Assert {#assert}
 
+Ask directly for what you want or say no clearly. State the request or limit without expecting the other person to infer it.
+
 ## Reinforce {#reinforce}
+
+Explain the positive effects of getting what you want or need. When appropriate, reward the response in advance by describing how cooperation helps the other person or the relationship.
 
 ## Mindful {#mindful}
 
+Keep your focus on the objective. Use the **broken-record** technique by returning calmly to your request, and ignore attacks, diversions, and irrelevant questions rather than getting pulled off course.
+
 ## Appear Confident {#appear-confident}
 
+Use an effective voice, steady eye contact where culturally appropriate, and an upright posture. Avoid whispering, staring at the floor, retreating from the request, or presenting yourself as uncertain when you are not.
+
 ## Negotiate {#negotiate}
+
+Be willing to give in order to get. Offer and ask for alternatives, reduce the request when appropriate, and turn the problem back by asking what the other person thinks would work.
+
+## DEAR MAN Script {#dear-man-script}
+
+- **Describe:** What are the facts?
+- **Express:** What do you feel or believe?
+- **Assert:** What are you asking for, or what are you saying no to?
+- **Reinforce:** Why would cooperation help?
+- **Mindful:** What phrase will bring you back to the point?
+- **Appear confident:** What voice and posture will you practise?
+- **Negotiate:** What alternatives or limits could still meet the essential need?
 
 <!-- section-scan-resources:start -->
 
@@ -55,6 +79,14 @@ DEAR MAN helps organize what to say and how to stay focused.
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:interpersonal-effectiveness-p017:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:interpersonal-effectiveness-p017:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-interpersonal-effectiveness-p018 data-source-id="interpersonal-effectiveness-p018"}
@@ -74,6 +106,14 @@ DEAR MAN helps organize what to say and how to stay focused.
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:interpersonal-effectiveness-p018:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:interpersonal-effectiveness-p018:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-interpersonal-effectiveness-p019 data-source-id="interpersonal-effectiveness-p019"}
@@ -93,6 +133,30 @@ DEAR MAN helps organize what to say and how to stay focused.
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:interpersonal-effectiveness-p019:start -->
+
+#### Text Version
+
+interpersonal effectiveness Handout 5a applying Dear man Skills current interaction to a Difficult To turn around really difficult situations, focus the skills on the other person’s behavior right now. When other people have really good skills themselves, and keep refusing your legitimate requests or pestering you to do something you don’t want to do. apply Dear man Skills
+
+1. Describe the current interaction. If the “broken record” and ignoring don’t work, make a statement about what is happening between you and the person now, but without imputing motives.
+
+Example: “You keep asking me over and over, even though I have already said no several times,” or “It is hard to keep asking you to empty the dishwasher when it is your month to do it.” not: “You obviously don’t want to hear what I am saying,” “You obviously don’t care about me,” “Well, it’s obvious that what I have to say doesn’t matter to you,” “Obviously you think I’m stupid.”
+
+2. express feelings or opinions about the interaction. For instance, in the middle of an interaction that is not going well, you can express your feelings of discomfort in the situation.
+
+Example: “I am sorry I cannot do what you want, but I’m finding it hard to keep discussing it,” or “It’s becoming very uncomfortable for me to keep talking about this, since I can’t help it. I am starting to feel angry about it,” or “I’m not sure you think this is important for you to do.” not: “I hate you!”, “Every time we talk about this, you get defensive,” “Stop patronizing me!”
+
+3. assert wishes in the situation. When another person is pestering you, you can ask him or her to stop it. When a person is refusing a request, you can suggest that you put the conversation off until another time. Give the other person a chance to think about it.
+
+Example: “Please don’t ask me again. My answer won’t change,” or “OK, let’s stop discussing this now and pick it up again sometime tomorrow,” or “Let’s cool down for a while and then get together to figure out a solution.” not: “Would you shut up?” “You should do this!”, “You should really calm down and do what’s right here.”
+
+4. reinforce. When you are saying no to someone who keeps asking, or when someone won’t take your opinion seriously, suggest ending the conversation, since you aren’t going to change your mind anyway. When trying to get someone to do something for you, you can suggest that you will come up with a better offer later.
+
+Example: “Let’s stop talking about this now. I’m not going to change my mind, and I think this is just going to get frustrating for both of us,” or “OK, I can see you don’t want to do this, so let’s see if we can come up with something that will make you more willing to do it.” not: “If you don’t do this for me, I’ll never do anything for you ever again,” “If you keep asking me, I’ll get a restraining order against you,” “Gosh, you must be a terrible person for not doing this/for asking me to do this.”
+
+<!-- native-resource-content:interpersonal-effectiveness-p019:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -104,6 +168,20 @@ DEAR MAN helps organize what to say and how to stay focused.
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p020.jpg)
 
+
+<!-- native-resource-content:interpersonal-effectiveness-p020:start -->
+
+#### Text Version
+
+of a you are Currengy experiencing or have expe recently where the 0B}Ective in the siwatien was/is the Psiorew, Use the DEAR MAN scrip* äEeow to practice hew this cocid be used. What are my OBJECTIVES this Situatitn {what re5üits do
+
+##### Descdbe situation,
+
+##### E
+
+xpress fee*hgs/opinions. Assert request say no) directly (circÉe khe part use Eater "broken rezord't to stay Mindful if need it)_ Beintorcing comments to make. Mindful and Appearing confident comments make fif fieeded). Negotiating comments to make, p*us turn-the-taöle cammersts (ii needed).
+
+<!-- native-resource-content:interpersonal-effectiveness-p020:end -->
 ::::
 
 <!-- section-scan-resources:end -->
