@@ -42,7 +42,23 @@
         "act kindly instead of being mean",
         "unclench hands, jaw, chest, and stomach"
       ],
-      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available"
+      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available",
+      "prompting_events": [
+        "An important goal is blocked or events do not turn out as expected.",
+        "You or someone you care about is attacked, threatened, or hurt.",
+        "You lose power, status, or respect."
+      ],
+      "interpretations": [
+        "Believing you were treated unfairly or that important goals are being blocked.",
+        "Blaming, judging the situation as wrong or illegitimate, or rigidly thinking I am right.",
+        "Replaying the event that triggered the anger."
+      ],
+      "expressions_actions": [
+        "Attacking or threatening, pounding or breaking things, stomping or slamming doors, walking out, criticizing, complaining, swearing, speaking loudly or sarcastically, frowning, crying, brooding, or withdrawing."
+      ],
+      "aftereffects": [
+        "Attention narrows around the provoking event. You may ruminate about this or earlier situations, imagine future anger-provoking events, or experience numbness or dissociation."
+      ]
     },
     {
       "id": "disgust",
@@ -88,7 +104,21 @@
         "take in sensory information",
         "relax the face, hands, chest, and stomach"
       ],
-      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available"
+      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available",
+      "prompting_events": [
+        "Encountering waste, dirt, blood, a dead body, an unwanted taste, or something experienced as contaminating.",
+        "Witnessing hypocrisy, betrayal, abuse, racism, cruelty, degradation, or unwanted sexual contact.",
+        "Confronting conduct that deeply violates Wise Mind values."
+      ],
+      "interpretations": [
+        "Believing something is toxic or contaminating, judging a body as ugly, viewing a person as evil or immoral, feeling morally superior, or intensely disapproving of your own thoughts, feelings, or behaviour."
+      ],
+      "expressions_actions": [
+        "Looking away, vomiting or spitting out, washing or changing clothes, cleaning, avoiding food, pushing or kicking away, fleeing, attacking, cursing, clenching, frowning, or speaking with contempt."
+      ],
+      "aftereffects": [
+        "Attention stays fixed on what feels offensive or contaminating. The experience may be remembered vividly and can increase avoidance, rejection, or sensitivity to similar cues."
+      ]
     },
     {
       "id": "envy",
@@ -127,7 +157,20 @@
         "check facts about the other person's situation",
         "relax the body"
       ],
-      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available"
+      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available",
+      "prompting_events": [
+        "Someone has something you want or receives recognition, advantage, success, or attention you wanted.",
+        "You compare yourself with someone who seems to have more."
+      ],
+      "interpretations": [
+        "Thinking you deserve what the other person has, that their advantage is unfair, that you are inferior or unlucky, or that you will not get what you need unless it is taken from them."
+      ],
+      "expressions_actions": [
+        "Competing, trying to take or spoil what another has, criticizing or gossiping, looking for the other person's faults, withdrawing, or repeatedly comparing."
+      ],
+      "aftereffects": [
+        "Resentment and comparison can persist, pleasure in your own life may narrow, and you may keep scanning for evidence that others have more."
+      ]
     },
     {
       "id": "fear",
@@ -170,7 +213,20 @@
         "use a confident posture and voice",
         "use paced breathing"
       ],
-      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available"
+      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available",
+      "prompting_events": [
+        "A threat to your life, health, well-being, or that of someone you care about.",
+        "An unfamiliar situation, possible loss, public scrutiny, or cues associated with earlier danger."
+      ],
+      "interpretations": [
+        "Believing you may be harmed, lose something important, fail, be rejected, be unable to cope, or that catastrophe is likely."
+      ],
+      "expressions_actions": [
+        "Fleeing, freezing, hiding, avoiding, talking nervously, screaming, crying, asking for help or reassurance, scanning the surroundings, or preparing to defend yourself."
+      ],
+      "aftereffects": [
+        "Threat cues remain vivid, the body may stay activated, and avoidance can make future fear more likely. Relief after escape can reinforce avoiding."
+      ]
     },
     {
       "id": "happiness",
@@ -211,7 +267,19 @@
         "continue the activity"
       ],
       "opposite_actions": [],
-      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available"
+      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available",
+      "prompting_events": [
+        "Receiving something wanted, achieving a goal, being accepted or respected, enjoying a pleasant sensation or activity, connecting with people, or noticing that feared outcomes did not occur."
+      ],
+      "interpretations": [
+        "Believing that something good has happened, needs have been met, a goal is within reach, the moment is safe, or possibilities are opening."
+      ],
+      "expressions_actions": [
+        "Smiling, laughing, brightening the voice, moving energetically, sharing good news, expressing affection or gratitude, celebrating, and engaging more fully."
+      ],
+      "aftereffects": [
+        "Positive expectations, openness, generosity, confidence, and willingness to connect or pursue goals may increase."
+      ]
     },
     {
       "id": "jealousy",
@@ -250,7 +318,20 @@
         "stop spying or probing",
         "take in all available information"
       ],
-      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available"
+      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available",
+      "prompting_events": [
+        "An important relationship seems threatened by another person.",
+        "Someone you value gives time, attention, commitment, or affection to someone else."
+      ],
+      "interpretations": [
+        "Believing a rival may take your place, that you are being rejected or betrayed, that the relationship is unstable, or that you are not valued enough."
+      ],
+      "expressions_actions": [
+        "Interrogating, checking, spying, clinging, demanding reassurance, accusing, threatening a rival, trying to control contact, or withdrawing to test the relationship."
+      ],
+      "aftereffects": [
+        "Suspicion and scanning may continue, trust can erode, and attempts to control the relationship can create the distance you fear."
+      ]
     },
     {
       "id": "love",
@@ -294,7 +375,19 @@
         "review the costs when those thoughts arise",
         "adjust posture and distance"
       ],
-      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available"
+      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available",
+      "prompting_events": [
+        "Being with, thinking about, or receiving care from a person, animal, place, object, or cause you value; experiencing closeness, acceptance, shared meaning, or physical attraction."
+      ],
+      "interpretations": [
+        "Believing someone is lovable, good, attractive, important, trustworthy, or in need of care; seeing the relationship as meaningful or beneficial."
+      ],
+      "expressions_actions": [
+        "Approaching, touching, holding, spending time together, sharing, helping, protecting, expressing affection, and trying to please or maintain connection."
+      ],
+      "aftereffects": [
+        "Attention returns to the loved person or object, separation may bring longing, and commitment, generosity, or vulnerability may increase."
+      ]
     },
     {
       "id": "sadness",
@@ -344,7 +437,19 @@
         "increase pleasant events",
         "attend to the present moment"
       ],
-      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available"
+      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available",
+      "prompting_events": [
+        "Losing someone or something permanently, not getting what was wanted or expected, feeling separated or rejected, or seeing another person's suffering."
+      ],
+      "interpretations": [
+        "Believing a loss cannot be restored, that life will not improve, that you are alone, or that important goals are out of reach."
+      ],
+      "expressions_actions": [
+        "Crying, speaking softly or little, frowning, slumping, moving slowly, withdrawing, giving up, seeking comfort, or talking about the loss."
+      ],
+      "aftereffects": [
+        "Attention stays with the loss, positive events may be hard to notice, energy and motivation can remain low, and memories of other losses may surface."
+      ]
     },
     {
       "id": "shame",
@@ -377,7 +482,19 @@
         "take in all the information",
         "lift your head and keep a steady voice"
       ],
-      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available"
+      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available",
+      "prompting_events": [
+        "Being exposed or judged for something viewed as wrong, failing to meet personal or group standards, having private information revealed, or being rejected because of a characteristic or action."
+      ],
+      "interpretations": [
+        "Judging yourself as bad, inferior, unlovable, defective, or outside the group; believing others will reject you if they know the truth."
+      ],
+      "expressions_actions": [
+        "Hiding, avoiding eye contact, lowering the head, apologizing repeatedly, appeasing, withdrawing, attacking yourself, or trying to distract attention from the perceived flaw."
+      ],
+      "aftereffects": [
+        "Self-focus and replaying the event may continue. Isolation can increase, and secrecy may prevent corrective experiences or effective repair."
+      ]
     },
     {
       "id": "guilt",
@@ -405,7 +522,19 @@
         "take in all the information",
         "use an upright posture and steady voice"
       ],
-      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available"
+      "source_reference": "Emotion Regulation Handout 6; Emotion Regulation Handout 11 where available",
+      "prompting_events": [
+        "Doing or failing to do something that violates your values, causes harm, breaks a commitment, or falls short of a responsibility."
+      ],
+      "interpretations": [
+        "Believing your behaviour was wrong, that you are responsible for harm, or that you should have acted differently. Guilt focuses on an action; global judgments about being a bad person move toward shame."
+      ],
+      "expressions_actions": [
+        "Apologizing, confessing, explaining, making amends, trying to repair, asking forgiveness, withdrawing, or repeatedly reviewing what happened."
+      ],
+      "aftereffects": [
+        "Attention remains on the action and its consequences. Effective guilt can motivate repair; ineffective guilt can become rumination, avoidance, or self-punishment."
+      ]
     }
   ]
 }

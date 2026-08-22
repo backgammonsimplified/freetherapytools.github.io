@@ -22,9 +22,35 @@ execute:
 
 Opposite Action works best when the emotion does not fit the facts or acting on it would be ineffective.
 
+1. Identify and name the emotion.
+2. Check the facts to decide whether the emotion and its intensity fit the situation.
+3. Notice and describe the emotion's action urge.
+4. Ask Wise Mind whether following that urge would be effective.
+5. Identify the action opposite to the unhelpful urge.
+6. Act opposite **all the way** with behaviour, words, thoughts, posture, facial expression, and tone.
+7. Repeat until the emotion changes.
+
 ## Problem Solving {#problem-solving}
 
 Use problem solving when the facts support the emotion and a practical change is possible.
+
+1. Describe the problem situation in factual terms.
+2. Check the facts and identify the obstacles to resolving it.
+3. Identify your goal in solving the problem.
+4. Brainstorm many possible solutions without judging them yet.
+5. Compare the likely pros and cons and choose a solution that is likely to work.
+6. Put the solution into action.
+7. Evaluate what happened and try another solution if needed.
+
+## Decision Path {#opposite-action-decision-path}
+
+1. **Does the emotion fit the facts?**
+   - **Yes:** ask whether acting on the emotion would be effective.
+     - **Yes:** be mindful of the current emotion, act on the emotion's urge, and problem-solve the event that is prompting an unwanted emotion.
+     - **No:** do not act on the urge; use Opposite Action.
+   - **No:** ask whether acting on the emotion would nevertheless be effective.
+     - **No:** do not act on the urge; change thoughts so they fit the facts and use Opposite Action.
+     - **Yes:** be mindful of the current emotion, act while accepting the consequences gracefully, and reconsider whether Opposite Action would be wiser.
 
 <!-- section-scan-resources:start -->
 
@@ -47,6 +73,14 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p037:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:emotion-regulation-p037:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p038 data-source-id="emotion-regulation-p038"}
@@ -66,6 +100,34 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p038:start -->
+
+#### Text Version
+
+*Emotion Regulation Handout 10 (Emotion Regulation Worksheet 7)*
+
+use opposite action when your emotions do noT fit the facts or when acting on your emotions is noT effective. every Emotion haS an Action Urge. Change The Emotion By Acting Opposite To iTS Action Urge.
+
+##### Consider these examples
+
+##### Emotion Action Urge Opposite Action
+
+Fear Run away/avoid Approach/don’t avoid Anger Attack Gently avoid/be a little nice Sadness Withdraw/isolate Get active Shame Hide/avoid Tell the secret to people who will accept it
+
+##### hoW To Do Opposite Action, Step By Step
+
+Step 1. Identify anD name The Emotion you want to change. Step 2. check The Facts to see if your emotion is justified by the facts. Check also whether the intensity and duration of the emotion fit the facts.
+
+*Example: “Irritation” fits the facts when your car is cut in front of; “road rage” does not.*
+
+An emotion is justified when your emotion fits the facts. Step 3. Identify anD Describe your Action Urges.
+
+**Step 4. aSk Wise Mind: Is expression or acting on this emotion effective in this situation?**
+
+if your emotion does not fit the facts or if acting on your emotion is not effective: Step 5. Identify Opposite Actions to your action urges. Step 6. acT Opposite all The Way to your action urges. Step 7. Repeat Acting Opposite to your action urges until your emotion changes.
+
+<!-- native-resource-content:emotion-regulation-p038:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p039 data-source-id="emotion-regulation-p039"}
@@ -85,6 +147,36 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p039:start -->
+
+#### Text Version
+
+*Emotion Regulation Handout 12 (Emotion Regulation Worksheet 8)*
+
+Step 1. Figure ouT and Describe the problem situation. Step 2. check The Facts (all the facts) to be sure you have the right problem situation! If your facts are correct and If your facts are not correct, the situation is the problem, go back and repeat Step 1. continue with Step 3. Step 3. Identify your Goal in solving the problem.
+
+- Identify what needs to happen or change for you to feel OK.
+
+- Keep it simple, and choose something that can actually happen. Step 4. Brainstorm lots of solutions.
+
+- Think of as many solutions as you can. Ask for suggestions from people you trust.
+
+- Do not be critical of any ideas at first. (Wait for Step 5 to evaluate ideas.) Step 5. Choose a solution that fits the goal and is likely to work.
+
+- If you are unsure, choose two solutions that look good.
+
+- Do PROS and CONS to compare the solutions.
+
+- Choose the best to try first. Step 6. put the solution into Action.
+
+- ACT! Try out the solution.
+
+- Take the first step, and then the second . . . Step 7. Evaluate the results of using the solution.
+
+It worked? yea!!! It didn’t work? Go back to Step 5 and choose a new solution to try.
+
+<!-- native-resource-content:emotion-regulation-p039:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p040 data-source-id="emotion-regulation-p040"}
@@ -104,6 +196,20 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p040:start -->
+
+#### Text Version
+
+Emotion Regulation Handout 13 (Emotion Regulation Worksheets 6-8) (p. 1 of 3) act opposite act on emotion urge, to emotion urge problem-Solve, or avoid justifying events (for unjustified emotion) (for justified emotion) a. Your life is in danger. 1. Do what you are afraid 1. Freeze/run if danger is near. B. Your health is in of doing . . . over and 2. Remove the threatening event. danger. over. r 2. Approach what you are 3. Do what gives you a sense ac. Your well-being is in of control and mastery of the e f danger. afraid of. fearful event.
+
+3. Do what gives you a 4. Avoid the threatening event. sense of control and mastery.
+
+a. An important goal is 1. Gently avoid. 1. Fight back when being attacked, blocked or a desired 2. Take a time out. if you have nothing to lose by activity is interrupted or fighting. prevented. 3. Do something kind. 2. Overcome obstacles to goals. rB. You or someone you 4. Imagine understanding: 3. Work to stop further attacks, e care about is attacked Step into the other g insults, and threats. n or hurt (physically or person’s shoes. a emotionally) by others. 5. Imagine really good 4. Avoid or walk out on people c. You or someone reasons for what who are threatening. you care about is happened. insulted, offended, or threatened by others. a. Something you are 1. Move close. Embrace. 1. Remove/clean up revolting in contact with could 2. Be kind; step into the things. poison or contaminate other person’s shoes. 2. Influence others to stop t you. harmful actions/stop things that sB. You are close to a 3. Take in what feels contaminate your community. u repulsive. g person or group whose s i 3. Avoid or push away harmful D actions or thinking 4. See the situation from could seriously the other person’s point people or things. damage or harm you of view. 4. Imagine understanding a or the group you are person who has done disgusting part of. things.
+
+*continued on next page*
+
+<!-- native-resource-content:emotion-regulation-p040:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p041 data-source-id="emotion-regulation-p041"}
@@ -123,6 +229,32 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p041:start -->
+
+#### Text Version
+
+Emotion Regulation Handout 13 (p. 2 of 3) act opposite act on emotion urge, to emotion urge problem-Solve, or avoid justifying events (for unjustified emotion) (for justified emotion) a. Another person or 1. Inhibit destroying other 1. Improve yourself and your life. group gets or has people’s things. 2. Get others to be fair. y things you don’t have 2. Count your blessings. 3. Devalue what others have that v that you want or need. 3. Imagine how it all you don’t have. n e makes sense.
+
+4. Put on rose- colored glasses.
+
+4. Stop exaggerating 5. Avoid people who have more others’ worth or value. than you.
+
+a. An important and 1. Let go of trying to 1. Protect what you have. desired relationship or control others. 2. Work at being more desirable to y object is in danger of 2. Share what you have the person(s) you want to be in s being damaged or lost. with others. a relationship with (i.e., fight for u o l B. Someone is 3. Stop spying and relationships). a e threatening to take snooping. 3. Leave the relationship. j away an important and 4. No avoiding; take in all desired relationship or the information. object. a. Loving a valued/ 1. Avoid the person, 1. Be with the person, animal, or admired person, animal, animal, or object you thing that you love. or object enhances the love altogether. 2. Touch, hold, etc., the beloved. quality of life for you or 2. Distract yourself from Avoid separations when those you care about. 3. e thoughts of the beloved. possible. v
+
+- B. Loving the person, l 3. Avoid contact with 4. If the beloved is lost, fight to find animal, or object all reminders of the or get the beloved back (if it may increases your chances beloved. be possible).
+
+of attaining your own 4. Remind yourself of why personal goals. love is not justified. a. You have lost 1. Activate your behavior. 1. Grieve; have a memorial service; something or someone 2. Avoid avoiding. visit the cemetery (but don’t build permanently. 3. Build mastery: Do a house at the cemetery). B. Things are not the things that make you 2. Retrieve/replace what is lost. way you expected or feel competent and self- 3. Plan how to rebuild a life worth s wanted or hoped for. confident. living without the beloved or s expected outcomes in your life. e 4. Increase pleasant n d events. 4. Accumulate positives. a S 5. Pay attention to 5. Build mastery: Do things that pleasant events. make you feel competent and self- confident.
+
+6. Communicate need for help.
+
+7. Accept help offered.
+
+8. Put on rose- colored glasses.
+
+*continued on next page*
+
+<!-- native-resource-content:emotion-regulation-p041:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p042 data-source-id="emotion-regulation-p042"}
@@ -142,6 +274,28 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p042:start -->
+
+#### Text Version
+
+Emotion Regulation Handout 13 (p. 3 of 3) act opposite act on emotion urge, to emotion urge problem-Solve, or avoid justifying events (for unjustified emotion) (for justified emotion) a. You will be rejected 1. Make public your 1. Hide what will get you rejected. by a very important personal characteristics 2. Appease those offended. person or group if or behavior (with people 3. Change your behavior or characteristics of who won’t reject you). personal characteristics to fit in. e yourself or of your 2. Repeat the behavior m behavior are made without hiding from 4. Avoid groups who disapprove a public. of you. h people who won’t reject S 5. Find a new group that fits you.
+
+3. Or, if your moral code is your values or that likes your violated, apologize and personal characteristics.
+
+repair; forgive yourself; 6. Work to change society’s or a and let it go. person's values. a. Your own behavior 1. Do what makes you feel 1. Seek forgiveness. violates your own guilty over and over and Repair the harm; make things 2. values or moral code. over. better (or, if not possible, work
+
+2. Make public your to prevent or repair similar harm behavior (with people for others).
+
+t who won’t reject you). 3. Accept the consequences l i gracefully. u Or, if you will be rejected G by others: 4. Commit to avoiding behaviors
+
+3. Hide your behavior. that violate your moral values in
+
+4. Use interpersonal skills. the future.
+
+5. Work to change your group’s values or join a new group.
+
+<!-- native-resource-content:emotion-regulation-p042:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p044 data-source-id="emotion-regulation-p044"}
@@ -161,6 +315,14 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p044:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:emotion-regulation-p044:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p045 data-source-id="emotion-regulation-p045"}
@@ -180,6 +342,14 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p045:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:emotion-regulation-p045:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p046 data-source-id="emotion-regulation-p046"}
@@ -199,6 +369,14 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p046:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:emotion-regulation-p046:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p047 data-source-id="emotion-regulation-p047"}
@@ -218,6 +396,14 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p047:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:emotion-regulation-p047:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p048 data-source-id="emotion-regulation-p048"}
@@ -237,6 +423,14 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p048:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:emotion-regulation-p048:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p049 data-source-id="emotion-regulation-p049"}
@@ -256,6 +450,14 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p049:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:emotion-regulation-p049:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p050 data-source-id="emotion-regulation-p050"}
@@ -275,6 +477,14 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p050:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:emotion-regulation-p050:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p051 data-source-id="emotion-regulation-p051"}
@@ -294,6 +504,14 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p051:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:emotion-regulation-p051:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p052 data-source-id="emotion-regulation-p052"}
@@ -313,6 +531,14 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p052:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:emotion-regulation-p052:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -334,6 +560,24 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p036:start -->
+
+#### Text Version
+
+**HOW DO NE KNOW WHEN TO USE PROBLEM SOLVING SKILLS?**
+
+##### EMOTION
+
+Emotion & its intensity fits the facts and it is effective to act on the urge
+
+##### PROBLEMSOLV/NG
+
+Emotion or its intensity does NOT fit the facts or it is ineffective to act on the urge
+
+##### OPPOSITE ACTIONIüV
+
+<!-- native-resource-content:emotion-regulation-p036:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p054 data-source-id="emotion-regulation-p054"}
@@ -353,6 +597,40 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p054:start -->
+
+#### Text Version
+
+Emotion Regulation Worksheet 8 (Emotion Regulation Handout 12) (p. 1 of 2) problem Solving to change emotions
+
+##### Due Date: Name: Week Starting
+
+Select a prompting event that triggers a painful emotion. Select an event that can be changed. Turn the event into a problem to be solved. Follow the steps below and describe what happened.
+
+##### Emotion name: Intensity (0-100) Before: after
+
+1. What iS The Problem? Describe the problem prompting your emotions. What makes the
+
+**situation a problem?**
+
+2. check The Facts To make Sure you have The Right Problem. Describe what you did to be sure of your facts.
+
+*See Emotion Regulation Worksheet 6 if you need help.*
+
+Rewrite the problem if needed to stick with the facts.
+
+3. What iS a Realistic Short-Term Goal of your Problem Solving? What has to
+
+**happen for you to think you have made progress?**
+
+4. Brainstorm Solutions: List as many solutions and coping strategies as you can think of.
+
+##### DON’T EVALUATE!
+
+*continued on next page*
+
+<!-- native-resource-content:emotion-regulation-p054:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p055 data-source-id="emotion-regulation-p055"}
@@ -372,6 +650,38 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p055:start -->
+
+#### Text Version
+
+Emotion Regulation Worksheet 8 (p. 2 of 2)
+
+5. Which TWo Ideas look Best (are most likely to meet your goal, are possible to do)?
+
+1. 2.
+
+##### Solution 1 Solution 2
+
+##### S
+
+o r p
+
+##### Solution 1 Solution 2
+
+##### S
+
+n o c
+
+6. Choose the solution to try; list the steps needed; check the steps you do and how well they work.
+
+**Step Describe Done What happened?**
+
+1. 2. 3. 4. 5. 6. 7.
+
+7. DiD you reach your Goal? If so, describe. If not, what can you do next? iS There noW a neW Problem To Be Solved? If yes, describe, and problem-solve again.
+
+<!-- native-resource-content:emotion-regulation-p055:end -->
 ::::
 
 ## Exercises {#exercises}
@@ -393,6 +703,34 @@ Use problem solving when the facts support the emotion and a practical change is
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p053:start -->
+
+#### Text Version
+
+*Emotion Regulation Worksheet 7 (Emotion Regulation Handouts 10, 11)*
+
+##### Due Date: Name: Week Starting
+
+Select a current or recent emotional reaction that you find painful or want to change. Figure out if the emotion fits the facts. If it does not, then notice your action urges; figure out what would be opposite actions; and then do the opposite actions. Remember to practice opposite action all the way. Describe what happened.
+
+##### Emotion name: Intensity (0-100) Before: after
+
+Prompting Event for my emotion (who, what, when, where): What prompted the emotion. iS my Emotion (or its intensity or duration) Justified? Does it fit the facts? is it
+
+**effective?**
+
+List the facts that justify the emotion and those that do not. Check the answer that is mostly correct. justified not justified Justified: Go to problem solving noT Justified: continue
+
+##### (Emotion Regulation Worksheet 8)
+
+**Action Urges: What do I feel like doing or saying?**
+
+Opposite Action: What are the actions opposite to my urges? What am I not doing because of my emotions? Describe both what and how to act opposite all the way in the situation. What i did: Describe in detail. hoW i did it: Describe body language, facial expression, posture, gestures, and thoughts. What Aftereffect did the opposite action have on me (my state of mind, other emotions,
+
+**behavior, thoughts, memory, body, etc.)?**
+
+<!-- native-resource-content:emotion-regulation-p053:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -404,6 +742,30 @@ Use problem solving when the facts support the emotion and a practical change is
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p043.jpg)
 
+
+<!-- native-resource-content:emotion-regulation-p043:start -->
+
+#### Text Version
+
+##### ELEVATOR EXAMPLE
+
+You live on the 14th fÉoo:• of a canto building, You ate :ushing to get out the door to work in the morning. Vau are running behind. As contemplate getöng the eleuator to notice 9/10 anxiety about boarding.
+
+##### SCENARIO
+
+few days there have heem multiple sighs on åe and-off saving has been out ot order heard from a neighbour that they stock in the for 2 hours yesterday and endured hot arirf stuffy conditions in the ekeuator during that time -East night you tsked taking the e'euator and it Waufd not come - yau waited minutes and down the stairs Evetnuatfy erg
+
+**VOUR Emottons FACTS?**
+
+**WHICH WOULD YOU FOR EACH SCENAREO?**
+
+##### WHAT Woued LOOK
+
+##### SCENAR;0
+
+- there have öeen no ararming posted on eke,'3toe• this month -you did anyone in your haiidine about e*evator function or getting the eyevatar since you rue iived this bui2dkng took the ekevat0i up and dowg ye;te'dæy without inc?dent
+
+<!-- native-resource-content:emotion-regulation-p043:end -->
 ::::
 
 <!-- section-scan-resources:end -->

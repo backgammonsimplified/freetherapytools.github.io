@@ -20,6 +20,16 @@ execute:
 
 Check the Facts asks whether an emotion, its intensity, and its duration fit the available evidence.
 
+## Check the Facts {#check-the-facts}
+
+1. **Name the emotion** you want to change and rate its intensity.
+2. **Describe the prompting event** using only facts that could be observed or recorded. Challenge judgments, absolutes, and assumptions.
+3. **Notice your interpretations, thoughts, and assumptions.** Look for other possible interpretations and test whether you are treating a threat as certain.
+4. **Identify what you are afraid will happen.** Consider the most threatening outcome, other possible outcomes, and how you could cope even if the feared event occurred.
+5. **Ask whether the emotion fits the facts.** Check both the emotion and its intensity against the actual event.
+
+If the emotion or its intensity does not fit the facts, consider Opposite Action. If it fits and the situation can be changed, consider Problem Solving. If it fits but cannot be changed now, use acceptance, mindfulness, or crisis-survival skills.
+
 <!-- section-scan-resources:start -->
 
 ## Handouts & Worksheets {#handouts-worksheets}
@@ -41,6 +51,14 @@ Check the Facts asks whether an emotion, its intensity, and its duration fit the
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p031:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:emotion-regulation-p031:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p032 data-source-id="emotion-regulation-p032"}
@@ -60,6 +78,58 @@ Check the Facts asks whether an emotion, its intensity, and its duration fit the
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p032:start -->
+
+#### Text Version
+
+*Emotion Regulation Handout 8 (Emotion Regulation Worksheet 5)*
+
+##### Facts
+
+Many emotions and actions are set off by our thoughts and interpretations of events, not by the events themselves.
+
+##### Event → thoughts → Emotions
+
+Our emotions can also have a big effect on our thoughts about events.
+
+##### Event → Emotion → thoughts
+
+Examining our thoughts and checking the facts can help us change our emotions. How to Check tHE Facts
+
+1. ask: what is the emotion I want to change?
+
+##### (See Emotion Regulation Handout 6: Ways of Describing Emotions.)
+
+2. ask: what is the event prompting my emotion? Describe the facts that you observed through your senses.
+
+Challenge judgments, absolutes, and black-and-white descriptions.
+
+##### (See Mindfulness Handout 4: Taking Hold of Your Mind: “What” Skills.)
+
+3. ask: what are my interpretations, thoughts, and assumptions about the
+
+**event?**
+
+Think of other possible interpretations. Practice looking at all sides of a situation and all points of view. Test your interpretations and assumptions to see if they fit the facts.
+
+4. ask: am I assuming a threat? Label the threat.
+
+Assess the probability that the threatening event will really occur. Think of as many other possible outcomes as you can.
+
+5. ask: what’s the catastrophe? Imagine the catastrophe really occurring.
+
+Imagine coping well with a catastrophe (through problem solving, coping ahead, or radical acceptance).
+
+6. ask: Does my emotion and/or its intensity fit the actual facts? Check out facts that fit each emotion.
+
+Ask Wise Mind.
+
+##### (See Emotion Regulation Handout 11: Figuring Out Opposite Actions, and Emotion
+
+##### Regulation Handout 13: Reviewing Problem Solving and Opposite Action.)
+
+<!-- native-resource-content:emotion-regulation-p032:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -71,6 +141,24 @@ Check the Facts asks whether an emotion, its intensity, and its duration fit the
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p029.jpg)
 
+
+<!-- native-resource-content:emotion-regulation-p029:start -->
+
+#### Text Version
+
+##### Instructions
+
+Read each statemeng below. Decåd@ wbether it is a Fact or sn Opinion and your answet in the space provided
+
+##### # Statement
+
+**Fact ?**
+
+**Opinion?**
+
+- The Earth 01bits the sun once every 865 days. mzza is the best ave(. Water boils at 1 OTC et sea {evet She never Ostens to me. taiked the test. am a complete fai0ure. -Exercise can reduce synnptonns of (depression. one caæs about me, 9 'Dogs are better than cats. fer enxious in the Meeteng today, IHe was angry! because he didn't text me iback. 12 Canada has ten provinces, 13 never be good enough. i 1 4 'The meetÅng lasted 45 rnfnutes. That was a terrible movie.
+
+<!-- native-resource-content:emotion-regulation-p029:end -->
 ::::
 
 ## Exercises {#exercises}
@@ -92,6 +180,28 @@ Check the Facts asks whether an emotion, its intensity, and its duration fit the
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p034:start -->
+
+#### Text Version
+
+##### Exercise 1: Check the Facts
+
+It is hard to problem-solve an emotional situation if we do not have our facts straight. You must know what the problem is before you can solve it. Use this worksheet below to determine if it is the event, your interpretation of the even or both that is causing your emotional response.
+
+**What is the EMOTION I want to change?**
+
+**What is the PROMPTING EVENT for my emotional reaction?**
+
+**What are my INTERPRETATIONS (thoughts, beliefs, etc.) about the facts?**
+
+What are the FACTS? (Write down what actually happened, not your interpretation, thoughts or emotions)
+
+**How do the facts differ from my interpretations, thoughts and emotions around this situation?**
+
+**Does my emotion (or its intensity or duration) FIT THE FACTS?**
+
+<!-- native-resource-content:emotion-regulation-p034:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -103,6 +213,30 @@ Check the Facts asks whether an emotion, its intensity, and its duration fit the
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p030.jpg)
 
+
+<!-- native-resource-content:emotion-regulation-p030:start -->
+
+#### Text Version
+
+When forrning personal convictions, we often intefp:-et factuai evidence thrak'gh the fitter of our Vaeuas, fee4ings preferences, and past experiences. Many statements vr,re make when speaking or writing are assertions of fact, op\nion, öeiieff prejudice, it is hetpfu3 to distrrjguish what o fact is from Othef categories of jn oæ-der {o be abie to effectively cheek the facts.
+
+##### Fact
+
+A fact is verifiable, We determine whether it is tfue by researching the evidence. This may involve numbers, dates, testimony, etc. (EX.: "Canada is Devided into 30 ptovinces and 3 teffitories.") The truth Ot the fact is beyond argument,
+
+##### Opinion
+
+opinion is Q judgment based on facts, an honest attempt to drcvv a reasonable from factual evidence. An op4nion is potentiaåiy changecb*e-dependjng on how the evidence is intequetedl
+
+##### Belief
+
+Utlöke an opinion, a belief is a conviction based on cultural or personal faith, morality, or values, They express viewpoints, but they are not 5csed on facts or other Whey cannot be disproved even cot3tegted manne:-
+
+##### Prejudice
+
+Prejudiée is an opinion based on insufficient or unexamined evidence. (Ex.: drivers of {ad cars diive too fast.) Unüke a a prejudice is testable: it can be contested azd disproved on the basie of facts. We often form prejudices accept them from others-family, friends, the medio etc.
+
+<!-- native-resource-content:emotion-regulation-p030:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p033 data-source-id="emotion-regulation-p033"}
@@ -122,6 +256,64 @@ Check the Facts asks whether an emotion, its intensity, and its duration fit the
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p033:start -->
+
+#### Text Version
+
+*Emotion Regulation Handout 8a (Emotion Regulation Worksheet 5)*
+
+fear 1. There is a threat to your life or that of someone you care about.
+
+2. There is a threat to your health or that of someone you care about.
+
+3. There is a threat to your well-being or that of someone you care about.
+
+4. Other: anger 1. An important goal is blocked or a desired activity is interrupted or prevented.
+
+2. You or someone you care about is attacked or hurt by others.
+
+3. You or someone you care about is insulted or threatened by others.
+
+4. The integrity or status of your social group is offended or threatened.
+
+5. Other: Disgust 1. Something you are in contact with could poison or contaminate you.
+
+2. Somebody whom you deeply dislike is touching you or someone you care about.
+
+3. You are around a person or group whose behavior or thinking could seriously damage or harmfully influence you or the group you are part of.
+
+4. Other: envy 1. Another person or group gets or has things you don’t have that you want or need.
+
+2. Other: jealousy 1. A very important and desired relationship or object in your life is in danger of being damaged or lost.
+
+2. Someone is threatening to take a valued relationship or object away from you.
+
+##### Other
+
+3. love 1. Loving a person, animal, or object enhances quality of life for you or for those you care about.
+
+2. Loving a person, animal, or object increases your chances of attaining your own personal goals.
+
+3. Other: Sadness 1. You have lost something or someone permanently.
+
+2. Things are not the way you wanted or expected and hoped them to be.
+
+3. Other: Shame 1. You will be rejected by a person or group you care about if characteristics of yourself or of your behavior are made public.
+
+2. Other: Guilt 1. Your own behavior violates your own values or moral code.
+
+2. Other:
+
+##### intensity and duration of an emotion are justified by
+
+1. How likely it is that the expected outcomes will occur.
+
+2. How great and/or important the outcomes are.
+
+3. How effective the emotion is in your life now.
+
+<!-- native-resource-content:emotion-regulation-p033:end -->
 ::::
 
 <!-- section-scan-resources:end -->

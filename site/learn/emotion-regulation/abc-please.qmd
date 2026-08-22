@@ -22,6 +22,24 @@ Accumulating positive emotions includes short-term pleasant experiences and long
 
 ## Accumulating Positive Emotions {#accumulating-positive-emotions}
 
+### Short Term
+
+Do pleasant things that are possible now. Build positive events into each day, let small opportunities count, be mindful of pleasant experiences without multitasking, and return attention when worry pulls you away.
+
+### Long Term
+
+Make changes that increase positive events over time and support a life worth living:
+
+1. Identify values that matter to you.
+2. Choose one value to work on now.
+3. Identify a few goals connected with that value.
+4. Choose one goal and identify small action steps.
+5. Take one step now and continue with the next effective step.
+
+### Pleasant Events List
+
+The three visual handouts below contain the full 225-item source list. Their native text versions make those activities searchable and readable with browser Find. The Pleasant Event Planner uses the same 225 source activities; no missing entries were found during this pass.
+
 ## Build Mastery {#build-mastery}
 
 Continue with [Building Mastery & Cope Ahead](positive-emotions-mastery-cope-ahead.qmd#build-mastery).
@@ -32,13 +50,23 @@ Continue with [Building Mastery & Cope Ahead](positive-emotions-mastery-cope-ahe
 
 ## Treat Physical Illness {#treat-physical-illness}
 
+Attend to physical illness, take prescribed medication, and arrange medical care when needed.
+
 ## Balanced Eating {#balanced-eating}
+
+Eat regularly and in a balanced way so hunger, restriction, or extremes do not add avoidable vulnerability to emotion mind.
 
 ## Avoid Mood-Altering Substances {#avoid-mood-altering-substances}
 
+Avoid non-prescribed mood-altering substances and use prescribed medications as directed.
+
 ## Balanced Sleep {#balanced-sleep}
 
+Aim for the amount of sleep that helps you function and keep sleep timing as consistent as practical.
+
 ## Exercise {#exercise}
+
+Use regular activity that fits your health and ability to support mood and reduce vulnerability.
 
 <!-- section-scan-resources:start -->
 
@@ -61,6 +89,14 @@ Continue with [Building Mastery & Cope Ahead](positive-emotions-mastery-cope-ahe
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p057:start -->
+
+#### Native Version
+
+This handout's educational content is integrated into the anchored skill sections above.
+
+<!-- native-resource-content:emotion-regulation-p057:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p058 data-source-id="emotion-regulation-p058"}
@@ -80,6 +116,46 @@ Continue with [Building Mastery & Cope Ahead](positive-emotions-mastery-cope-ahe
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p058:start -->
+
+#### Text Version
+
+*Emotion Regulation Handout 15 (Emotion Regulation Worksheets 9, 10, 13)*
+
+accumulate positive emotions in the short term by doing these things.
+
+##### Build Positive Experiences noW
+
+- INCREASE PLEASANT EVENTS that lead to positive emotions.
+
+- Do ONE THING each day from the Pleasant Events List.
+
+##### (See Emotion Regulation Handout 16.)
+
+- Practice opposite action; AVOID AVOIDING.
+
+- BE MINDFUL of pleasant events (no multitasking).
+
+##### Be Mindful of Positive Experiences
+
+- FOCUS your attention on positive moments when they are happening. No multitasking.
+
+- REFOCUS your attention when your mind wanders to the negative.
+
+- PARTICIPATE and ENGAGE fully in each experience.
+
+##### Be Unmindful of Worries
+
+Such as . . .
+
+- When the positive experience will end.
+
+- Whether you deserve this positive experience.
+
+- How much more might be expected of you now.
+
+<!-- native-resource-content:emotion-regulation-p058:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p062 data-source-id="emotion-regulation-p062"}
@@ -99,6 +175,32 @@ Continue with [Building Mastery & Cope Ahead](positive-emotions-mastery-cope-ahe
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p062:start -->
+
+#### Text Version
+
+*Emotion Regulation Handout 17 (Emotion Regulation Worksheets 9, 11-11b, 13)*
+
+Accumulate positive emotions in the long term to build a “life worth living.” That is, make changes in your life so that positive events will occur in the future. Step 1. avoid avoiding. Start now to do what is needed to build the life you want. If you are not sure about what to do, follow the steps below. Step 2. identify values that are important to you.
+
+**ASK: What values are really important to me in my life?**
+
+Examples: Be productive; be part of a group; treat others well; be physically fit. Step 3. identify one value to work on now.
+
+**ASK: What is really important to me, right now, to work on in my life?**
+
+Example: Be productive. Step 4. identify a few goals related to this value.
+
+**ASK: What specific goals can I work on that will make this value part of my life?**
+
+Examples: Get a job where I can do something useful. Be more active keeping up with important tasks at home. Find a volunteer job that will use skills I already have. Step 5. choose one goal to work on now. Do pros and cons, if necessary, to select a goal to work on now. Example: Get a job where I can do something useful. Step 6. identify small action steps toward your goal.
+
+**ASK: What small steps can I take to get to my goal?**
+
+Examples: Visit places and look for job openings on the Internet in my area. Submit applications for jobs at places I want to work. Write résumé. Check out benefits at places I might want to work. Step 7. Take one action step now. Example: Go on Internet and check for jobs in my area.
+
+<!-- native-resource-content:emotion-regulation-p062:end -->
 ::::
 
 ## Practice Materials {#practice-materials}
@@ -110,6 +212,48 @@ Continue with [Building Mastery & Cope Ahead](positive-emotions-mastery-cope-ahe
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p066.jpg)
 
+
+<!-- native-resource-content:emotion-regulation-p066:start -->
+
+#### Text Version
+
+- Set a goal to do ONE thirag {Tom the Pigasant Events List euh day Do the activity trnindfulkvl) and rate your mood 3EFORE stan and AFTER. use the scale feei very upset
+
+##### DAY
+
+##### Monday
+
+##### Tues dey
+
+sdav
+
+##### Ihursday
+
+##### Friday
+
+##### Sato rday
+
+##### Sundav
+
+feel somewhat upset
+
+##### Actevify
+
+##### feel 0K
+
++ 2.5 feel pretty good
+
+##### MOOD
+
+##### BEFORE
+
+I fee* great
+
+##### MOOD
+
+##### AAER
+
+<!-- native-resource-content:emotion-regulation-p066:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p067 data-source-id="emotion-regulation-p067"}
@@ -119,6 +263,32 @@ Continue with [Building Mastery & Cope Ahead](positive-emotions-mastery-cope-ahe
 
 [Download / View Handout](/resources/emotion-regulation/emotion-regulation-p067.jpg)
 
+
+<!-- native-resource-content:emotion-regulation-p067:start -->
+
+#### Text Version
+
+##### EXERCISE #2: Being Mindful Of Positive Experiences
+
+##### DAILY PLEASANT MOMENTS RECORD {Unplanned Pleasant Moments Was Mindful of
+
+##### Outing the Week)
+
+##### Mondav
+
+##### Tuesday
+
+##### Wednesday
+
+##### Thursday
+
+##### Friday
+
+##### Saturday
+
+##### Sundav
+
+<!-- native-resource-content:emotion-regulation-p067:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p068 data-source-id="emotion-regulation-p068"}
@@ -138,6 +308,48 @@ Continue with [Building Mastery & Cope Ahead](positive-emotions-mastery-cope-ahe
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p068:start -->
+
+#### Text Version
+
+Make changes in your life so that positive events will happen more often in the future.
+
+1. Avoid Avoiding
+
+**What important things have you been avoiding lately that you know you need to take care of?**
+
+2. Identify Important Values and Priorities
+
+##### Take note of values that are important to you
+
+3.
+
+##### Be productive
+
+Build, improve or repair relationships Build your character
+
+##### Be healthy
+
+Strive for moderation Personal development through achieving something
+
+##### Have fun
+
+##### Other
+
+##### Other
+
+##### Other
+
+##### Choose One Value To Work On Now
+
+**What value, if improved today, would have the biggest impoct on your life today?**
+
+4. Determine A Goal Related To This Value
+
+**What are some goals that move you toward this value?**
+
+<!-- native-resource-content:emotion-regulation-p068:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p069 data-source-id="emotion-regulation-p069"}
@@ -157,6 +369,28 @@ Continue with [Building Mastery & Cope Ahead](positive-emotions-mastery-cope-ahe
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p069:start -->
+
+#### Text Version
+
+Choose one goal thot you want to focus on starting today:
+
+5. Identify Small Steps Toward The Goal
+
+**What ore some small actions steps you can take to move you closer to this goal?**
+
+1. 2. 3.
+
+6. Take Action Toward Your Goal Each Day Write one or more positive statements affirming your commitment to take action in the direction of your goal each day.
+
+##### I will
+
+##### I will
+
+##### I will
+
+<!-- native-resource-content:emotion-regulation-p069:end -->
 ::::
 
 ## Reference Materials {#reference-materials}
@@ -178,6 +412,88 @@ Continue with [Building Mastery & Cope Ahead](positive-emotions-mastery-cope-ahe
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p059:start -->
+
+#### Text Version
+
+Emotion Regulation Handout 16 (Emotion Regulation Worksheets 9, 10, 13) (p. 1 of 3) pleasant events list
+
+1. Working on my car 36. Having quiet evenings
+
+2. Planning a career 37. Taking care of my plants
+
+3. Getting out of (paying down) debt 38. Buying, selling stock
+
+4. Collecting things (baseball cards, coins, 39. Going swimming stamps, rocks, shells, etc.) 40. Doodling
+
+5. Going on vacation 41. Exercising
+
+6. Thinking how it will be when I finish 42. Collecting old things school 43. Going to a party
+
+7. Recycling old items 44. Thinking about buying things
+
+8. Going on a date 45. Playing golf
+
+9. Relaxing 46. Playing soccer
+
+10. Going to or watching a movie 47. Flying kites
+
+11. Jogging, walking 48. Having discussions with friends
+
+12. Thinking, “I have done a full day’s work” 49. Having family get- togethers
+
+13. Listening to music 50. Riding a bike or motorbike
+
+14. Thinking about past parties 51. Running track
+
+15. Buying household gadgets 52. Going camping
+
+16. Lying in the sun 53. Singing around the house
+
+17. Planning a career change 54. Arranging flowers
+
+18. Laughing 55. Practicing religion (going to church,
+
+19. Thinking about past trips group praying, etc.)
+
+20. Listening to other people 56. Organizing tools
+
+21. Reading magazines or newspapers 57. Going to the beach
+
+22. Engaging in hobbies (stamp collecting, 58. Thinking, “I’m an OK person” model building, etc.) 59. Having a day with nothing to do
+
+23. Spending an evening with good friends 60. Going to class reunions
+
+24. Planning a day’s activities 61. Going skating, skateboarding,
+
+25. Meeting new people rollerblading
+
+26. Remembering beautiful scenery 62. Going sailing or motorboating
+
+27. Saving money 63. Traveling or going on vacations
+
+28. Going home from work 64. Painting
+
+29. Eating 65. Doing something spontaneously
+
+30. Practicing karate, judo, yoga 66. Doing needlepoint, crewel, etc.
+
+31. Thinking about retirement 67. Sleeping
+
+32. Repairing things around the house 68. Driving
+
+33. Working on machinery (cars, boats, 69. Entertaining, giving parties etc.) 70. Going to clubs (garden clubs, Parents
+
+34. Remembering the words and deeds of without Partners, etc.) loving people 71. Thinking about getting married
+
+35. Wearing shocking clothes 72. Going hunting
+
+*continued on next page*
+
+Note. For adults or adolescents. Adapted from Linehan, M. M., Sharp, E., & Ivanoff, A. M. (1980, November). The Adult Pleasant Events Schedule. Paper presented at the meeting of the Association for Advancement of Behavior Therapy, New York. Adapted by permission of the authors.
+
+<!-- native-resource-content:emotion-regulation-p059:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p060 data-source-id="emotion-regulation-p060"}
@@ -197,6 +513,104 @@ Continue with [Building Mastery & Cope Ahead](positive-emotions-mastery-cope-ahe
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p060:start -->
+
+#### Text Version
+
+Emotion Regulation Handout 16 (p. 2 of 3)
+
+73. Singing with groups 117. Acting
+
+74. Flirting 118. Being alone
+
+75. Playing musical instruments 119. Writing diary entries or letters
+
+76. Doing arts and crafts 120. Cleaning
+
+77. Making a gift for someone 121. Reading nonfiction
+
+78. Buying/downloading music 122. Taking children places
+
+79. Watching boxing, wrestling 123. Dancing
+
+80. Planning parties Weightlifting 124.
+
+81. Cooking 125. Going on a picnic
+
+82. Going hiking 126. Thinking, “I did that pretty well,” after
+
+83. Writing (books, poems, articles) doing something
+
+84. Sewing 127. Meditating, yoga
+
+85. Buying clothes 128. Having lunch with a friend
+
+86. Going out to dinner 129. Going to the mountains
+
+87. Working 130. Playing hockey
+
+88. Discussing books; going to a book club 131. Working with clay or pottery
+
+89. Sightseeing 132. Glass blowing
+
+90. Getting a manicure/pedicure or facial 133. Going skiing
+
+91. Going to the beauty parlor 134. Dressing up
+
+92. Early morning coffee and newspaper 135. Reflecting on how I’ve improved
+
+93. Playing tennis 136. Buying small things for myself (perfume,
+
+94. Kissing golf balls, etc.)
+
+95. Watching my children (play) 137. Talking on the phone
+
+96. Thinking, “I have a lot more going for 138. Going to museums me than most people” 139. Thinking religious thoughts
+
+97. Going to plays and concerts 140. Lighting candles
+
+98. Daydreaming 141. White-water canoeing/rafting
+
+99. Planning to go (back) to school 142. Going bowling
+
+100. Thinking about sex 143. Doing woodworking
+
+101. Going for a drive 144. Fantasizing about the future
+
+102. Refinishing furniture 145. Taking ballet/tap- dancing classes
+
+103. Watching TV 146. Debating
+
+104. Making lists of tasks 147. Sitting in a sidewalk café
+
+105. Walking in the woods (or at the 148. Having an aquarium waterfront) 149. Participating in “living history” events
+
+106. Buying gifts 150. Knitting
+
+107. Completing a task 151. Doing crossword puzzles
+
+108. Going to a spectator sport (auto racing, 152. Shooting pool horse racing) 153. Getting a massage
+
+109. Teaching 154. Saying, “I love you”
+
+110. Photography 155. Playing catch, taking batting practice
+
+111. Going fishing 156. Shooting baskets
+
+112. Thinking about pleasant events 157. Seeing and/or showing photos 113.
+
+Staying on a diet 158. Thinking about my good qualities
+
+114. Playing with animals 159. Solving riddles mentally
+
+115. Flying a plane 160. Having a political discussion
+
+116. Reading fiction 161. Buying books
+
+*continued on next page*
+
+<!-- native-resource-content:emotion-regulation-p060:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p061 data-source-id="emotion-regulation-p061"}
@@ -216,6 +630,90 @@ Continue with [Building Mastery & Cope Ahead](positive-emotions-mastery-cope-ahe
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p061:start -->
+
+#### Text Version
+
+Emotion Regulation Handout 16 (p. 3 of 3)
+
+162. Taking a sauna or a steam bath 199. Expressing my love to someone
+
+163. Checking out garage sales 200. Going on field trips, nature walks,
+
+164. Thinking about having a family exploring (hiking away from known
+
+165. Thinking about happy moments in my routes, spelunking) childhood 201. Gathering natural objects (wild foods or
+
+166. Splurging fruit, driftwood)
+
+167. Going horseback riding 202. Going downtown or to a shopping mall
+
+168. Doing something new 203. Going to a fair, carnival, circus, zoo, or
+
+169. Working on jigsaw puzzles amusement park
+
+170. Playing cards 204. Going to the library
+
+171. Thinking, “I’m a person who can cope” 205. Joining or forming a band
+
+172. Taking a nap 206. Learning to do something new
+
+173. Figuring out my favorite scent 207. Listening to the sounds of nature
+
+174. Making a card and giving it to someone 208. Looking at the moon or stars I care about 209. Outdoor work (cutting or chopping
+
+175. Instantmessaging/texting someone wood, farm work)
+
+176. Playing a board game (e.g., Monopoly, 210. Playing organized sports (baseball, Life, Clue, Sorry) softball, football, Frisbee, handball,
+
+177. Putting on my favorite piece of clothing paddleball, squash, soccer, tennis,
+
+178. Making a smoothie and drinking it volleyball, etc.) slowly 211. Playing in the sand, a stream, the
+
+179. Putting on makeup grass; kicking leaves, pebbles, etc.
+
+180. Thinking about a friend’s good qualities 212. Protesting social, political, or
+
+181. Completing something I feel great about environmental conditions
+
+182. Surprising someone with a favor 213. Reading cartoons or comics
+
+183. Surfing the Internet 214. Reading sacred works
+
+184. Playing video games 215. Rearranging or redecorating my room
+
+185. E-mailing friends or the house
+
+186. Going walking or sledding in a snowfall 216. Selling or trading something
+
+187. Getting a haircut 217. Snowmobiling or riding a dune buggy/ 188.
+
+Installing new software ATV
+
+189. Buying a CD or music on Itunes 218. Social networking
+
+190. Watching sports on TV 219. Soaking in the bathtub
+
+191. Taking care of my pets 220. Learning or speaking a foreign
+
+192. Doing volunteer service language
+
+193. Watching stand-up comedy on Youtube 221. Talking on the phone
+
+194. Working in my garden 222. Composing or arranging songs or music
+
+195. Participating in a public performance 223. Thrift store shopping (e.g., a flash mob) 224. Using computers
+
+196. Blogging 225. Visiting people who are sick, shut in, or Fighting for a cause
+
+197. in trouble
+
+198. Conducting experiments
+
+##### Other
+
+<!-- native-resource-content:emotion-regulation-p061:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p063 data-source-id="emotion-regulation-p063"}
@@ -235,6 +733,74 @@ Continue with [Building Mastery & Cope Ahead](positive-emotions-mastery-cope-ahe
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p063:start -->
+
+#### Text Version
+
+Emotion Regulation Handout 18 (Emotion Regulation Worksheets 10, 12, 13) (p. 1 of 3) values and priorities list In my own Wise Mind, I believe it is important to: a. attend to relationships.
+
+1. Repair old relationships.
+
+2. Reach out for new relationships.
+
+3. Work on current relationships.
+
+4. End destructive relationships.
+
+##### Other
+
+B. Be part of a group.
+
+5. Have close and satisfying relationships with others.
+
+6. Feel a sense of belonging.
+
+7. Receive affection and love.
+
+8. Be involved and intimate with others; have and keep close friends.
+
+9. Have a family; stay close to and spend time with family members.
+
+10. Have people to do things with.
+
+##### Other
+
+c. Be powerful and able to influence others.
+
+11. Have the authority to approve or disapprove of what people do, or to control how resources are used.
+
+12. Be a leader.
+
+13. Make a great deal of money.
+
+14. Be respected by others. Be seen by others as successful; become well known; obtain recognition and status.
+
+15.
+
+16. Compete successfully with others.
+
+17. Be popular and accepted.
+
+##### Other
+
+D. achieve things in life.
+
+18. Achieve significant goals; be involved in undertakings I believe are significant.
+
+19. Be productive.
+
+20. Work toward goals; work hard.
+
+21. Be ambitious.
+
+##### Other
+
+*continued on next page*
+
+Adapted from Schwartz, S. H. (1992). Universals in the content and structure of values: Theory and empirical tests in 20 countries. In M. Zanna (Ed.), Advances in experimental social psychology (Vol. 25, pp. 1-65). New York: Academic Press. Copyright 1992 by Academic Press. Adapted by permission of Elsevier B.V.
+
+<!-- native-resource-content:emotion-regulation-p063:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p064 data-source-id="emotion-regulation-p064"}
@@ -254,6 +820,84 @@ Continue with [Building Mastery & Cope Ahead](positive-emotions-mastery-cope-ahe
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p064:start -->
+
+#### Text Version
+
+Emotion Regulation Handout 18 (p. 2 of 3) e. live a life of pleasure and satisfaction.
+
+22. Have a good time.
+
+23. Seek fun and things that give pleasure.
+
+24. Have free time.
+
+25. Enjoy the work I do.
+
+##### Other
+
+f. keep life full of exciting events, relationships, and things.
+
+26. Try new and different things in life.
+
+27. Be daring and seek adventures.
+
+28. Have an exciting life.
+
+##### Other
+
+G. Behave respectfully.
+
+29. Be humble and modest; do not draw attention to myself.
+
+30. Follow traditions and customs; behave properly.
+
+31. Do what I am told and follow rules.
+
+32. Treat others well.
+
+##### Other
+
+h. Be self- directed.
+
+33. Follow my own path in life. Be innovative, think of new ideas, and be creative.
+
+34.
+
+35. Make my own decisions and be free.
+
+36. Be independent; take care of myself and those I am responsible for.
+
+37. Have freedom of thought and action; be able to act in terms of my own priorities.
+
+##### Other
+
+i. Be a spiritual person.
+
+38. Make room in life for spirituality; live life according to spiritual principles.
+
+39. Practice a religion or faith.
+
+40. Grow in understanding of myself, my personal calling, and life’s real purpose.
+
+41. Discern and do the will of God (or a higher power) and find lasting meaning in life.
+
+##### Other
+
+j. Be secure.
+
+42. Live in secure and safe surroundings.
+
+43. Be physically healthy and fit.
+
+44. Have a steady income that meets my own and my family’s basic needs.
+
+##### Other
+
+*continued on next page*
+
+<!-- native-resource-content:emotion-regulation-p064:end -->
 ::::
 
 :::: {.bs-practice-resource #resource-emotion-regulation-p065 data-source-id="emotion-regulation-p065"}
@@ -273,6 +917,58 @@ Continue with [Building Mastery & Cope Ahead](positive-emotions-mastery-cope-ahe
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
 :::
+
+<!-- native-resource-content:emotion-regulation-p065:start -->
+
+#### Text Version
+
+Emotion Regulation Handout 18 (p. 3 of 3) k. recognize the universal good of all things.
+
+45. Be fair, treat people equally, and provide equal opportunities.
+
+46. Understand different people; be open- minded.
+
+47. Care for nature and the environment.
+
+##### Other
+
+l. contribute to the larger community.
+
+48. Help people and those in need; care for others’ well-being; improve society.
+
+49. Be loyal to friends and devoted to close people; be committed to a group that shares my beliefs, values, and ethical principles.
+
+50. Be committed to a cause or to a group that has a larger purpose beyond my own.
+
+51. Make sacrifices for others.
+
+##### Other
+
+m. Work at self- development.
+
+52. Develop a personal philosophy of life.
+
+53. Learn and do challenging things that help me grow and mature as a human being.
+
+##### Other
+
+n. have integrity.
+
+54. Be honest, and acknowledge and stand up for my personal beliefs.
+
+55. Be a responsible person; keep my word to others. Be courageous in facing and living life.
+
+56.
+
+57. Be a person who pays debts to others and repairs damage I have caused.
+
+58. Be accepting of myself, others, and life as it is; live without resentment.
+
+##### Other
+
+##### o. other
+
+<!-- native-resource-content:emotion-regulation-p065:end -->
 ::::
 
 <!-- section-scan-resources:end -->

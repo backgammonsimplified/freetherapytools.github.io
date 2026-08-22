@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import json
 import re
 import unittest
 from pathlib import Path
@@ -50,6 +51,44 @@ class QmdResourceExtractionTests(unittest.TestCase):
             self.assertIn(f"<!-- native-resource-content:{source_id}:start -->", source)
             self.assertNotEqual("pending", self.by_id[source_id]["extraction_method"])
 
+    def test_emotion_regulation_resources_have_native_qmd_content(self) -> None:
+        emotion_rows = [row for row in self.published if row["section"] == "Emotion Regulation"]
+        self.assertEqual(70, len(emotion_rows))
+        for resource in emotion_rows:
+            source_id = resource["id"]
+            lesson = ROOT / self.by_id[source_id]["lesson_qmd"]
+            self.assertIn(
+                f"<!-- native-resource-content:{source_id}:start -->",
+                lesson.read_text(encoding="utf-8"),
+            )
+            self.assertNotEqual("pending", self.by_id[source_id]["extraction_method"])
+
+    def test_ten_emotion_profiles_use_source_structure_and_sync_to_app_data(self) -> None:
+        profile = (SITE / "learn/emotion-regulation/observing-describing-emotions.qmd").read_text(encoding="utf-8")
+        emotions = (
+            "Anger", "Disgust", "Envy", "Fear", "Happiness",
+            "Jealousy", "Love", "Sadness", "Shame", "Guilt",
+        )
+        for emotion in emotions:
+            section = profile.split(f"## {emotion} {{#", 1)[1].split("\n## ", 1)[0]
+            for heading in (
+                "Words That Describe This Emotion", "Prompting Events",
+                "Interpretations", "Biological Changes and Body Sensations",
+                "Expressions and Actions", "Aftereffects",
+            ):
+                self.assertIn(f"### {heading}", section, (emotion, heading))
+        payload = json.loads((SITE / "data/skill-apps/emotions.json").read_text(encoding="utf-8"))
+        self.assertEqual(10, len(payload["emotions"]))
+        for emotion in payload["emotions"]:
+            for field in ("prompting_events", "interpretations", "expressions_actions", "aftereffects"):
+                self.assertTrue(emotion[field], (emotion["id"], field))
+
+    def test_pleasant_event_source_and_app_counts_agree(self) -> None:
+        payload = json.loads((SITE / "data/skill-apps/pleasant-events.json").read_text(encoding="utf-8"))
+        self.assertEqual(225, len(payload["events"]))
+        source = (SITE / "learn/emotion-regulation/abc-please.qmd").read_text(encoding="utf-8")
+        self.assertIn("full 225-item source list", source)
+
     def test_no_parallel_markdown_resource_library_exists(self) -> None:
         self.assertFalse((SITE / "resources-text").exists())
         resource_markdown = [
@@ -71,6 +110,13 @@ class QmdResourceExtractionTests(unittest.TestCase):
                 "### Contributing {#contributing}",
             ),
             "site/learn/cube/improve.qmd": ("## Imagery {#imagery}",),
+            "site/learn/emotion-regulation/check-the-facts.qmd": (
+                "## Check the Facts {#check-the-facts}",
+            ),
+            "site/learn/emotion-regulation/opposite-action.qmd": (
+                "## Opposite Action {#opposite-action}",
+                "## Decision Path {#opposite-action-decision-path}",
+            ),
         }
         for relative, expected in checks.items():
             source = (ROOT / relative).read_text(encoding="utf-8")

@@ -52,6 +52,17 @@ INTEGRATED_SOURCE_IDS = {
     "distress-tolerance-p007", "distress-tolerance-p012",
     "distress-tolerance-p018", "distress-tolerance-p020",
     "distress-tolerance-p025", "distress-tolerance-p041",
+    "emotion-regulation-p014", "emotion-regulation-p015",
+    "emotion-regulation-p016", "emotion-regulation-p017",
+    "emotion-regulation-p018", "emotion-regulation-p019",
+    "emotion-regulation-p020", "emotion-regulation-p021",
+    "emotion-regulation-p022", "emotion-regulation-p023",
+    "emotion-regulation-p031", "emotion-regulation-p037",
+    "emotion-regulation-p044", "emotion-regulation-p045",
+    "emotion-regulation-p046", "emotion-regulation-p047",
+    "emotion-regulation-p048", "emotion-regulation-p049",
+    "emotion-regulation-p050", "emotion-regulation-p051",
+    "emotion-regulation-p052", "emotion-regulation-p057",
 }
 
 
@@ -128,8 +139,29 @@ def title_similarity(line: str, title: str) -> float:
 def clean_lines(lines: list[str], title: str) -> list[str]:
     cleaned: list[str] = []
     footer = False
+    section_phrases = (
+        "prompting events for feeling", "interpretations of events that prompt",
+        "biological changes and experiences", "expressions and actions of",
+        "aftereffects of",
+    )
+    expanded: list[str] = []
     for original in lines:
         line = normalize_text(original)
+        for phrase in section_phrases:
+            match = re.search(rf"\s+({re.escape(phrase)}\b.*)$", line, re.I)
+            if match and match.start() > 0:
+                expanded.extend([line[:match.start()].strip(), match.group(1).strip()])
+                line = ""
+                break
+        if line:
+            parts = re.split(r"\s*•{2}\s*", line)
+            if len(parts) > 1:
+                expanded.append(parts[0])
+                expanded.extend("• " + part for part in parts[1:] if part)
+            else:
+                expanded.append(line)
+
+    for line in expanded:
         if not line:
             continue
         lower = line.lower()
@@ -307,9 +339,9 @@ def main() -> int:
             method = "direct_pdf_text"
             source_label = "searchable-dbt-book"
             lines = extract_pdf_text(source_asset, CACHE / f"{source_id}.txt")
-            confidence = "high"
-            review = "false"
-            notes = "Embedded searchable PDF text normalized and structured in QMD; repeated publication footer omitted."
+            confidence = "medium"
+            review = "true"
+            notes = "Embedded searchable PDF text normalized and structured in QMD; repeated publication footer omitted. Visual structure still requires review unless integrated into an authored section."
         else:
             if php_match.get("php_match_status") == "high" and php_match.get("high_res_preview"):
                 source_asset = SITE / php_match["high_res_preview"].lstrip("/")
@@ -324,6 +356,9 @@ def main() -> int:
             review = "true"
             notes = "Printed text OCR was normalized and structured from the page image; visual comparison is required before final acceptance."
         integrated = source_id in INTEGRATED_SOURCE_IDS
+        if integrated:
+            confidence = "high"
+            review = "false"
         content = (
             "#### Native Version\n\n"
             "This handout's educational content is integrated into the anchored skill sections above."
