@@ -1,7 +1,7 @@
 ---
 title: "Skill Finder"
 description: "Private, browser-based tools for choosing and practicing therapy skills, plus general reference materials."
-sidebar: false
+sidebar: skill-finder
 page-layout: article
 toc: false
 execute:
@@ -128,9 +128,17 @@ Think through priorities, intensity, and troubleshooting without an automatic sc
 ::: {.skill-app-hub-card}
 #### Values & Valued Action
 
-Discover, sort, narrow, assess, and act on values using the workbook process.
+Discover values, connect them to important life domains, compare current and desired effort, and create a mission.
 
 [Open Values & Valued Action](/skill-finder/values/)
+:::
+
+::: {.skill-app-hub-card}
+#### Values Review
+
+Use a weekly or monthly check-in to notice alignment, drift, and the next value-aligned action.
+
+[Open Values Review](/skill-finder/values-review/)
 :::
 
 ::: {.skill-app-hub-card}

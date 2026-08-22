@@ -1,7 +1,7 @@
 ---
 title: "Skill Thermometer"
 description: "Find skills that may fit your current level of emotional activation or numbness."
-sidebar: false
+sidebar: skill-finder
 page-layout: full
 toc: false
 execute:

@@ -1,7 +1,7 @@
 ---
 title: "Behavioural Activation Planner"
 description: "Choose and schedule one small action connected with pleasure, mastery, self-care, or values."
-sidebar: false
+sidebar: skill-finder
 page-layout: full
 toc: false
 ---

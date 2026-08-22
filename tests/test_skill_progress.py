@@ -24,6 +24,7 @@ TOOLS = {
     "ask-or-say-no": "ask-or-say-no",
     "goal-builder": "goal-builder",
     "behavioural-activation": "behavioural-activation",
+    "values-review": "values-review",
 }
 
 
@@ -53,7 +54,7 @@ class SkillProgressTests(unittest.TestCase):
         for source in (values, finder, practice):
             for token in ("registerTool", "getState", "setState", "validateState", "getReadableSummary"):
                 self.assertIn(token, source)
-        for tool_id in ("missing-links", "dear-man", "ask-or-say-no", "goal-builder", "behavioural-activation"):
+        for tool_id in ("missing-links", "dear-man", "ask-or-say-no", "goal-builder", "behavioural-activation", "values-review"):
             self.assertRegex(practice, rf'"{re.escape(tool_id)}"\s*:\s*\{{')
         for tool_id in ("thermometer", "emotion-explorer", "pleasant-event"):
             self.assertIn(f'toolId: "{tool_id}"', finder)

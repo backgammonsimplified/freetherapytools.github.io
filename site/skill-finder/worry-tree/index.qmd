@@ -1,7 +1,7 @@
 ---
 title: "Worry Tree"
 description: "Sort a worry into an actionable plan or a present-focused response."
-sidebar: false
+sidebar: skill-finder
 page-layout: full
 toc: false
 execute:

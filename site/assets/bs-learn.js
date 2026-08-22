@@ -1,6 +1,10 @@
 (function () {
   "use strict";
 
+  function isSkillFinderPage() {
+    return /^\/skill-finder(?:\/|$)/.test(window.location.pathname);
+  }
+
   const DIFFICULTY_SELECTOR = "[data-bs-filter-difficulty]";
   const TRACK_SELECTOR = "[data-bs-filter-track]";
   const TERM_SELECTOR = "[data-bs-filter-term]";
@@ -1124,6 +1128,7 @@
     const glossaryIndexPage = document.body.classList.contains(
       "bs-glossary-index"
     );
+    const skillFinderPage = isSkillFinderPage();
     const lookupDisabled =
       isMainSiteIndex() ||
       document.body.classList.contains("bs-learn-index") ||
@@ -1778,6 +1783,50 @@
       }
     };
 
+    let skillFinderToolsFrame = 0;
+    const positionSkillFinderTools = function () {
+      skillFinderToolsFrame = 0;
+      if (
+        !skillFinderPage ||
+        !desktopQuery.matches ||
+        !tools.classList.contains("bs-site-tools--floating")
+      ) {
+        tools.style.removeProperty("left");
+        tools.style.removeProperty("right");
+        if (lookup) {
+          lookup.style.removeProperty("left");
+          lookup.style.removeProperty("right");
+        }
+        return;
+      }
+      const anchor =
+        document.querySelector(".skill-app-shell") ||
+        document.querySelector("main#quarto-document-content");
+      if (!anchor) {
+        return;
+      }
+      const bounds = anchor.getBoundingClientRect();
+      const viewportWidth = document.documentElement.clientWidth;
+      const toolsWidth = Math.max(tools.getBoundingClientRect().width, 136);
+      const preferredLeft = bounds.right + 12;
+      tools.style.left =
+        Math.max(8, Math.min(preferredLeft, viewportWidth - toolsWidth - 8)) +
+        "px";
+      tools.style.right = "auto";
+      if (lookup && lookup.classList.contains("bs-term-lookup--floating")) {
+        lookup.style.right = Math.max(8, viewportWidth - bounds.right) + "px";
+        lookup.style.left = "auto";
+      }
+    };
+    const scheduleSkillFinderTools = function () {
+      if (!skillFinderPage || skillFinderToolsFrame) {
+        return;
+      }
+      skillFinderToolsFrame = window.requestAnimationFrame(
+        positionSkillFinderTools
+      );
+    };
+
     const placeRefinedBackToTop = function () {
       if (!backToTop) {
         return;
@@ -1904,6 +1953,7 @@
       updateMarginSidebar();
       placeRefinedBackToTop();
       positionRefinedRightTools();
+      scheduleSkillFinderTools();
       updateRightRailForScroll();
     };
 
@@ -1996,8 +2046,30 @@
       passive: true
     });
     window.addEventListener("load", positionRefinedRightTools, { once: true });
+    window.addEventListener("resize", scheduleSkillFinderTools, {
+      passive: true
+    });
+    window.addEventListener("scroll", scheduleSkillFinderTools, {
+      passive: true
+    });
+    window.addEventListener(
+      "bs:left-sidebar-change",
+      scheduleSkillFinderTools
+    );
+    if (skillFinderPage && "MutationObserver" in window) {
+      const pageContent = document.querySelector("main#quarto-document-content");
+      if (pageContent) {
+        new MutationObserver(scheduleSkillFinderTools).observe(pageContent, {
+          childList: true,
+          subtree: true
+        });
+      }
+    }
     window.requestAnimationFrame(function () {
-      window.requestAnimationFrame(positionRefinedRightTools);
+      window.requestAnimationFrame(function () {
+        positionRefinedRightTools();
+        scheduleSkillFinderTools();
+      });
     });
 
     const updateLookupForScroll = function () {
@@ -2214,8 +2286,9 @@
       document.body.classList.contains("bs-learn-article") ||
       document.body.classList.contains("bs-learn-index") ||
       document.body.classList.contains("bs-learn-track-index");
+    const skillFinderPage = isSkillFinderPage();
     const sidebar = document.getElementById("quarto-sidebar");
-    if (!learnPage || !sidebar) {
+    if ((!learnPage && !skillFinderPage) || !sidebar) {
       return;
     }
 
@@ -2228,11 +2301,12 @@
     const pageHeader = document.getElementById("quarto-header");
     const toggle = document.createElement("button");
     let collapsed = false;
+    let manuallyCollapsed = false;
     let lastScrollY = window.scrollY;
     let lastSidebarScrollTop = sidebarScroller.scrollTop;
     let scrollingDown = false;
     let pageScrollingDown = false;
-    let autoCollapsePending = window.scrollY <= 32;
+    let autoCollapsePending = true;
     toggle.type = "button";
     toggle.className = "bs-learn-left-sidebar-toggle";
     toggle.dataset.bsLearnLeftSidebarToggle = "";
@@ -2274,18 +2348,33 @@
       toggle.setAttribute("aria-expanded", active ? "false" : "true");
       toggle.setAttribute(
         "aria-label",
-        active ? "Show Learn table of contents" : "Hide Learn table of contents"
+        active
+          ? skillFinderPage
+            ? "Show Skill Finder navigation"
+            : "Show Learn table of contents"
+          : skillFinderPage
+            ? "Hide Skill Finder navigation"
+            : "Hide Learn table of contents"
       );
-      toggle.textContent = active ? "\u2192 Show Lessons" : "\u2190 Hide";
+      toggle.textContent = active
+        ? skillFinderPage
+          ? "\u2192 Show navigation"
+          : "\u2192 Show Lessons"
+        : "\u2190 Hide";
       if (active) {
         toggle.style.left = "0.5rem";
       } else {
         positionExpandedToggle();
       }
+      window.requestAnimationFrame(function () {
+        window.dispatchEvent(new CustomEvent("bs:left-sidebar-change"));
+      });
     };
 
     toggle.addEventListener("click", function () {
       collapsed = !collapsed;
+      manuallyCollapsed = collapsed;
+      autoCollapsePending = !collapsed;
       update();
     });
     window.addEventListener("resize", update);
@@ -2295,7 +2384,7 @@
         const currentScrollY = window.scrollY;
         if (currentScrollY <= 32) {
           autoCollapsePending = true;
-          if (!keepExpandedWhileScrolling && collapsed) {
+          if (!keepExpandedWhileScrolling && collapsed && !manuallyCollapsed) {
             collapsed = false;
             pageScrollingDown = false;
             scrollingDown = false;
@@ -2309,9 +2398,21 @@
           scrollingDown = pageScrollingDown;
           lastScrollY = currentScrollY;
           if (
+            keepExpandedWhileScrolling === false &&
+            !scrollingDown &&
+            collapsed &&
+            !manuallyCollapsed
+          ) {
+            collapsed = false;
+            autoCollapsePending = true;
+            update();
+            return;
+          }
+          if (
             !keepExpandedWhileScrolling &&
             autoCollapsePending &&
             scrollingDown &&
+            !manuallyCollapsed &&
             currentScrollY > 32
           ) {
             autoCollapsePending = false;
@@ -2495,6 +2596,7 @@
         return;
       }
       document.documentElement.dataset.bsLearnInitialized = "true";
+      document.body.classList.toggle("bs-skill-finder-page", isSkillFinderPage());
       initializeLearnFilters();
       initializeLearnSidebarControls();
       initializeInlineGlossary();

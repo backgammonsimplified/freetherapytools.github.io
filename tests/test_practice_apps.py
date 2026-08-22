@@ -11,7 +11,7 @@ JS = SITE / "assets" / "skill-practice-apps.js"
 
 class PracticeAppTests(unittest.TestCase):
     def test_routes_render_app_containers(self):
-        routes = ["behaviour-chain", "missing-links", "exposure", "dear-man", "ask-or-say-no", "goal-builder", "behavioural-activation"]
+        routes = ["behaviour-chain", "missing-links", "exposure", "dear-man", "ask-or-say-no", "goal-builder", "behavioural-activation", "values-review"]
         for route in routes:
             text = (SITE / "skill-finder" / route / "index.qmd").read_text(encoding="utf-8")
             self.assertIn("data-practice-app", text, route)
@@ -29,6 +29,11 @@ class PracticeAppTests(unittest.TestCase):
             self.assertIn(component, text)
         for component in ("Specific", "Measurable", "Achievable", "Relevant / Realistic", "Time-Oriented"):
             self.assertIn(component, text)
+
+    def test_values_review_supports_weekly_and_monthly_check_ins(self):
+        text = JS.read_text(encoding="utf-8")
+        for token in ("Values Review", "Weekly", "Monthly", "Where did my actions align", "Which value or life domain needs more attention", "Next review date"):
+            self.assertIn(token, text)
 
     def test_no_external_transmission_and_deep_links_resolve(self):
         text = JS.read_text(encoding="utf-8")

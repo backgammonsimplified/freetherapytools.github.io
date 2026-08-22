@@ -1,7 +1,7 @@
 ---
 title: "Missing Links"
 description: "Explore what got in the way when an intended effective behaviour did not happen."
-sidebar: false
+sidebar: skill-finder
 page-layout: full
 toc: false
 ---

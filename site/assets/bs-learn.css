@@ -1472,6 +1472,19 @@ body:is(.bs-learn-index, .bs-learn-article)
 }
 
 @media (min-width: 992px) {
+  body.bs-skill-finder-page .bs-site-tools--floating {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  body.bs-skill-finder-page
+    .bs-site-tools--floating
+    > .bs-term-lookup-reveal {
+    width: auto;
+    padding-inline: 0.45rem;
+    white-space: nowrap;
+  }
+
   .bs-site-tools--floating .bs-term-lookup-close {
     position: absolute;
     top: 0.75rem;

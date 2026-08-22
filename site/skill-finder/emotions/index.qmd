@@ -1,7 +1,7 @@
 ---
 title: "Emotion Explorer"
 description: "Explore emotion words, body sensations, action urges, and aftereffects without assigning a diagnosis."
-sidebar: false
+sidebar: skill-finder
 page-layout: full
 toc: false
 execute:

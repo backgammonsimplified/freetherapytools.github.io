@@ -1,7 +1,7 @@
 ---
 title: "SMART Goal Builder"
 description: "Build a specific, measurable, achievable, relevant or realistic, time-oriented goal."
-sidebar: false
+sidebar: skill-finder
 page-layout: full
 toc: false
 ---

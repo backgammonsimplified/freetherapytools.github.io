@@ -15,6 +15,40 @@ def load(name):
 
 
 class SkillFinderAppTests(unittest.TestCase):
+    def test_skill_finder_sidebar_uses_shared_scroll_and_arrow_controls(self):
+        javascript = (SITE / "assets" / "bs-learn.js").read_text(encoding="utf-8")
+        self.assertIn("const skillFinderPage = isSkillFinderPage()", javascript)
+        self.assertIn('"Show Skill Finder navigation"', javascript)
+        self.assertIn('"Hide Skill Finder navigation"', javascript)
+        self.assertIn('"\\u2192 Show navigation"', javascript)
+        self.assertIn('collapsed &&\n            !manuallyCollapsed', javascript)
+        self.assertIn("autoCollapsePending = true", javascript)
+        self.assertIn('window.dispatchEvent(new CustomEvent("bs:left-sidebar-change"))', javascript)
+
+    def test_every_skill_finder_page_uses_the_shared_sidebar(self):
+        pages = sorted((SITE / "skill-finder").rglob("index.qmd"))
+        self.assertEqual(len(pages), 15)
+        for page in pages:
+            self.assertIn("sidebar: skill-finder", page.read_text(encoding="utf-8"), page)
+
+        navigation = (SITE / "_learn-navigation.yml").read_text(encoding="utf-8")
+        self.assertIn("    - id: skill-finder", navigation)
+        self.assertIn('        - section: "Interactive Tools"', navigation)
+        self.assertIn('        - section: "Learn"', navigation)
+        for route in (
+            "values", "thermometer", "emotions", "change-emotion", "worry-tree",
+            "pleasant-event", "behaviour-chain", "missing-links", "exposure",
+            "dear-man", "ask-or-say-no", "goal-builder", "behavioural-activation", "values-review",
+        ):
+            self.assertIn(f"skill-finder/{route}/index.qmd", navigation)
+        for route in (
+            "learn/index.qmd", "learn/goal-setting/index.qmd", "learn/cube/index.qmd",
+            "learn/interpersonal-effectiveness/index.qmd", "learn/wellness/index.qmd",
+            "learn/emotion-regulation/index.qmd", "cbt-skills/index.qmd",
+            "mindfulness/index.qmd",
+        ):
+            self.assertIn(f"href: {route}", navigation)
+
     def test_flagship_routes_and_assets_exist(self):
         routes = ["values", "thermometer", "emotions", "change-emotion", "worry-tree", "pleasant-event"]
         for route in routes:

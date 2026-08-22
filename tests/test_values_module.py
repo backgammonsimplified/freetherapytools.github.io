@@ -8,7 +8,10 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "site" / "data" / "skill-apps" / "values.json"
 APP = ROOT / "site" / "assets" / "skill-apps.js"
 CSS = ROOT / "site" / "assets" / "skill-apps.css"
+LEARN_CSS = ROOT / "site" / "assets" / "bs-learn.css"
+LEARN_JS = ROOT / "site" / "assets" / "bs-learn.js"
 PAGE = ROOT / "site" / "skill-finder" / "values" / "index.qmd"
+GENERATOR = ROOT / "scripts" / "values_workbook.py"
 
 
 class ValuesModuleTests(unittest.TestCase):
@@ -17,7 +20,10 @@ class ValuesModuleTests(unittest.TestCase):
         cls.data = json.loads(DATA.read_text(encoding="utf-8"))
         cls.javascript = APP.read_text(encoding="utf-8")
         cls.css = CSS.read_text(encoding="utf-8")
+        cls.learn_css = LEARN_CSS.read_text(encoding="utf-8")
+        cls.learn_javascript = LEARN_JS.read_text(encoding="utf-8")
         cls.page = PAGE.read_text(encoding="utf-8")
+        cls.generator = GENERATOR.read_text(encoding="utf-8")
 
     def test_values_dictionary_is_unique_and_substantial(self):
         values = self.data["values"]
@@ -43,7 +49,9 @@ class ValuesModuleTests(unittest.TestCase):
         )
 
     def test_process_custom_values_gap_and_privacy_contract(self):
-        self.assertEqual(self.data["process"], ["DISCOVER", "SORT", "NARROW", "ASSESS", "ACT", "BARRIERS", "MISSION", "REVIEW"])
+        self.assertEqual(self.data["process"], ["DISCOVER", "CATEGORIZE", "ASSIGN", "ASSESS", "ACT", "BARRIERS", "MISSION"])
+        self.assertIn('["DISCOVER", "CATEGORIZE", "ASSIGN", "ASSESS", "ACT", "BARRIERS", "MISSION"]', self.generator)
+        self.assertNotIn('"NARROW"', self.generator)
         self.assertTrue(self.data["custom_values_allowed"])
         self.assertRegex(self.javascript, re.compile(r"Number\(desired\)\s*-\s*Number\(current\)"))
         self.assertIn("Your entries are not saved on our servers", self.javascript)
@@ -96,8 +104,114 @@ class ValuesModuleTests(unittest.TestCase):
     def test_discover_range_and_partial_progress_guidance(self):
         self.assertIn("10-20 is a useful starting range", self.javascript)
         self.assertNotIn("15-30 is a useful starting range", self.javascript)
-        self.assertIn("If you partly finish the form", self.page)
-        self.assertIn("Open previous progress", self.page)
+        self.assertIn("download partial or completed results", self.javascript)
+        self.assertNotIn("If you partly finish the form", self.page)
+
+    def test_categorize_assign_and_domain_assessment_flow(self):
+        self.assertIn("function categorizeMarkup", self.javascript)
+        self.assertIn("Selecting 2-4 is a useful starting range", self.javascript)
+        self.assertNotIn("data-select-all-domains", self.javascript)
+        self.assertIn("data-selected-domain", self.javascript)
+        self.assertIn("data-domain-importance", self.javascript)
+        self.assertIn("domainImportance", self.javascript)
+        self.assertIn("Choose H, M, or L for every selected life domain before continuing", self.javascript)
+        self.assertIn("const categorizationComplete", self.javascript)
+        self.assertIn("state.step === 1 && !categorizationComplete", self.javascript)
+        self.assertIn("function assignMarkup", self.javascript)
+        self.assertIn("Assign each chosen value", self.javascript)
+        self.assertIn("values-assignment-value", self.javascript)
+        self.assertIn("Current Score", self.javascript)
+        self.assertIn("Desired Score", self.javascript)
+        self.assertIn("How much time and effort do you put toward this life domain now?", self.javascript)
+        self.assertIn("How much time and effort do you want to put toward this life domain?", self.javascript)
+        self.assertNotIn("Importance 1-10", self.javascript)
+        self.assertIn("values-domain-assessment-list", self.javascript)
+        self.assertIn("selectedDomains", self.javascript)
+
+    def test_narrow_is_removed_and_assessment_explains_resource_balance(self):
+        self.assertNotIn('"NARROW"', self.javascript)
+        self.assertNotIn("function narrowMarkup", self.javascript)
+        self.assertIn("Priority areas receiving less than you want", self.javascript)
+        self.assertIn("Areas receiving more than you want", self.javascript)
+        self.assertIn("High", self.javascript)
+        self.assertIn("Medium", self.javascript)
+        self.assertNotIn("desired minus current", self.javascript)
+
+    def test_mission_is_generated_editable_and_links_to_follow_up_tools(self):
+        self.assertIn("function generatedMissionStatement", self.javascript)
+        self.assertIn("data-mission-statement", self.javascript)
+        self.assertIn("Regenerate from my selected values", self.javascript)
+        self.assertIn("Where you may want to work on your values", self.javascript)
+        self.assertIn("/skill-finder/goal-builder/", self.javascript)
+        self.assertIn("/skill-finder/values-review/", self.javascript)
+        self.assertNotIn("function reviewMarkup", self.javascript)
+
+    def test_completed_process_steps_are_clickable_for_back_navigation(self):
+        self.assertIn('data-values-step="${index}"', self.javascript)
+        self.assertIn('index > step ? "disabled" : ""', self.javascript)
+        self.assertIn('root.querySelectorAll("[data-values-step]")', self.javascript)
+        self.assertIn("target <= state.step", self.javascript)
+        self.assertIn('.skill-app[data-skill-app="values"] .skill-app-progress button', self.css)
+
+    def test_assign_value_names_are_larger_than_domain_categories(self):
+        self.assertIn("font-size: clamp(1.3rem, 1.8vw, 1.55rem)", self.css)
+        self.assertIn(".values-assignment-domain", self.css)
+        self.assertIn("font-size: 0.9rem", self.css)
+
+    def test_values_actions_stay_visible_without_covering_content(self):
+        self.assertRegex(
+            self.css,
+            re.compile(
+                r'\.skill-app\[data-skill-app="values"\] \.skill-app-footer \{'
+                r'[^}]*position: fixed;[^}]*bottom: var\(--values-action-bar-bottom\);[^}]*'
+                r'width: var\(--values-action-bar-width\);',
+                re.DOTALL,
+            ),
+        )
+        self.assertIn("--values-action-bar-space: 8.5rem", self.css)
+        self.assertIn("--values-action-bar-space: 13.5rem", self.css)
+        self.assertIn("grid-template-columns: repeat(3, minmax(0, 1fr))", self.css)
+        self.assertIn("overflow-y: auto", self.css)
+        self.assertIn("background: var(--bs-page-background, #faf7f2)", self.css)
+        self.assertIn('document.querySelector(".nav-footer, .page-footer")', self.javascript)
+        self.assertIn('root.style.setProperty("--values-action-bar-bottom", `${visibleSiteFooter}px`)', self.javascript)
+        self.assertIn('root.style.setProperty("--values-action-bar-left", `${bounds.left}px`)', self.javascript)
+        self.assertIn('root.style.setProperty("--values-action-bar-width", `${bounds.width}px`)', self.javascript)
+        self.assertIn('gridTemplateColumns.split(/\\s+/)', self.javascript)
+        self.assertIn("cards[columns * 2]", self.javascript)
+        self.assertIn('root.classList.toggle("values-action-bar-visible", visible)', self.javascript)
+
+    def test_values_starts_at_app_heading_without_duplicate_page_intro(self):
+        self.assertIn('body:has(.skill-app[data-skill-app="values"]) #title-block-header', self.css)
+        self.assertIn("showDraftPrompt: false", self.javascript)
+        body = self.page.split("---", 2)[-1]
+        self.assertTrue(body.lstrip().startswith('::: {.skill-app data-skill-app="values"'))
+        self.assertNotIn("Previous browser progress found", body)
+
+    def test_page_tools_are_compact_vertical_and_content_aligned(self):
+        self.assertRegex(
+            self.learn_css,
+            re.compile(
+                r'@media \(min-width: 992px\).*?body\.bs-skill-finder-page '
+                r'\.bs-site-tools--floating \{'
+                r'[^}]*flex-direction: column;[^}]*align-items: flex-end;',
+                re.DOTALL,
+            ),
+        )
+        self.assertRegex(
+            self.learn_css,
+            re.compile(
+                r'body\.bs-skill-finder-page\s+\.bs-site-tools--floating\s+'
+                r'> \.bs-term-lookup-reveal \{'
+                r'[^}]*width: auto;[^}]*padding-inline: 0\.45rem;'
+                r'[^}]*white-space: nowrap;',
+                re.DOTALL,
+            ),
+        )
+        self.assertIn('document.querySelector(".skill-app-shell")', self.learn_javascript)
+        self.assertIn("const preferredLeft = bounds.right + 12", self.learn_javascript)
+        self.assertIn('tools.style.right = "auto"', self.learn_javascript)
+        self.assertIn('"bs:left-sidebar-change"', self.learn_javascript)
 
     def test_values_routes_exist(self):
         self.assertTrue((ROOT / "site" / "skill-finder" / "values" / "index.qmd").is_file())

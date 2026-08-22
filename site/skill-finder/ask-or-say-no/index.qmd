@@ -1,7 +1,7 @@
 ---
 title: "Ask or Say No Planner"
 description: "Reflect on priorities, intensity, and troubleshooting before making a request or saying no."
-sidebar: false
+sidebar: skill-finder
 page-layout: full
 toc: false
 ---

@@ -14,6 +14,7 @@
     ask: [{ label: "Learn How to Ask & Say No", href: "/learn/interpersonal-effectiveness/saying-no.html" }],
     goals: [{ label: "Values", href: "/skill-finder/values/" }, { label: "Behavioural Activation", href: "/skill-finder/behavioural-activation/" }, { label: "Build Mastery", href: "/learn/emotion-regulation/positive-emotions-mastery-cope-ahead.html#build-mastery" }, { label: "Pleasant Event Planner", href: "/skill-finder/pleasant-event/" }],
     activation: [{ label: "Pleasant Event Planner", href: "/skill-finder/pleasant-event/" }, { label: "Values", href: "/skill-finder/values/" }, { label: "SMART Goal Builder", href: "/skill-finder/goal-builder/" }, { label: "Learn Behavioural Activation", href: "/learn/wellness/behavioral-activation.html" }],
+    review: [{ label: "Values & Valued Action", href: "/skill-finder/values/" }, { label: "SMART Goal Builder", href: "/skill-finder/goal-builder/" }],
   };
 
   const FORM_DEFINITIONS = {
@@ -75,6 +76,22 @@
         ["help", "What could help?"], ["smallest", "What is the smallest version?"],
       ], links: LINKS.activation,
     },
+    "values-review": {
+      title: "Values Review",
+      intro: "Use this as a weekly or monthly check-in. Notice patterns without grading yourself.",
+      fields: [
+        ["period", "Review rhythm", "select", [["weekly", "Weekly"], ["monthly", "Monthly"]]],
+        ["values", "Which values did I want to prioritize?"],
+        ["aligned", "Where did my actions align with my values?"],
+        ["drifted", "Where did my time or effort drift away from what mattered?"],
+        ["attention", "Which value or life domain needs more attention?"],
+        ["discomfort", "What discomfort did I make room for while acting on my values?"],
+        ["continue", "What do I want to continue?"],
+        ["change", "What do I want to change?"],
+        ["next", "What is my smallest value-aligned next action?"],
+        ["reviewDate", "Next review date", "date"],
+      ], links: LINKS.review,
+    },
   };
 
   function linksMarkup(links) {
@@ -92,7 +109,13 @@
   }
 
   function initGuidedForm(root, definition) {
-    root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>${escapeHtml(definition.title)}</h2><p>${escapeHtml(definition.intro)} Your progress stays on this device unless you save a copy to your computer. Nothing you enter here is uploaded.</p></header><form class="skill-app-panel" data-guided-form>${definition.fields.map(([key, label]) => `<label for="practice-${key}">${escapeHtml(label)}</label><textarea id="practice-${key}" name="${escapeHtml(key)}"></textarea>`).join("")}<button type="submit">Build my summary</button></form><section class="skill-app-panel" data-guided-summary aria-live="polite" tabindex="-1"></section><footer class="skill-app-footer"><button type="button" class="secondary" data-clear-form>Clear</button>${linksMarkup(definition.links)}</footer></div>`;
+    const fieldMarkup = ([key, label, type = "textarea", options = []]) => {
+      const id = `practice-${key}`;
+      if (type === "select") return `<label for="${id}">${escapeHtml(label)}</label><select id="${id}" name="${escapeHtml(key)}">${options.map(([value, text]) => `<option value="${escapeHtml(value)}">${escapeHtml(text)}</option>`).join("")}</select>`;
+      if (type === "date") return `<label for="${id}">${escapeHtml(label)}</label><input id="${id}" name="${escapeHtml(key)}" type="date">`;
+      return `<label for="${id}">${escapeHtml(label)}</label><textarea id="${id}" name="${escapeHtml(key)}"></textarea>`;
+    };
+    root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>${escapeHtml(definition.title)}</h2><p>${escapeHtml(definition.intro)} Your progress stays on this device unless you save a copy to your computer. Nothing you enter here is uploaded.</p></header><form class="skill-app-panel" data-guided-form>${definition.fields.map(fieldMarkup).join("")}<button type="submit">Build my summary</button></form><section class="skill-app-panel" data-guided-summary aria-live="polite" tabindex="-1"></section><footer class="skill-app-footer"><button type="button" class="secondary" data-clear-form>Clear</button>${linksMarkup(definition.links)}</footer></div>`;
     const form = root.querySelector("[data-guided-form]");
     let summaryBuilt = false;
     const keys = definition.fields.map(([key]) => key);
@@ -105,7 +128,7 @@
       summary.innerHTML = `<h3>Editable planning summary</h3><dl class="skill-app-summary">${definition.fields.map(([key, label]) => `<dt>${escapeHtml(label.split(" — ")[0])}</dt><dd>${escapeHtml(values.get(key) || "Not answered")}</dd>`).join("")}</dl>`;
       summary.focus();
     });
-    root.querySelector("[data-clear-form]").addEventListener("click", () => { form.reset(); summaryBuilt = false; root.querySelector("[data-guided-summary]").innerHTML = ""; form.querySelector("textarea")?.focus(); });
+    root.querySelector("[data-clear-form]").addEventListener("click", () => { form.reset(); summaryBuilt = false; root.querySelector("[data-guided-summary]").innerHTML = ""; form.querySelector("textarea, select, input")?.focus(); });
     const toolId = root.dataset.practiceApp;
     register(root, {
       toolId,

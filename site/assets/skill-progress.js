@@ -19,6 +19,7 @@
     "ask-or-say-no": "/skill-finder/ask-or-say-no/",
     "goal-builder": "/skill-finder/goal-builder/",
     "behavioural-activation": "/skill-finder/behavioural-activation/",
+    "values-review": "/skill-finder/values-review/",
   });
 
   let active = null;
@@ -549,7 +550,7 @@
       area.append(actions);
       footer.append(area);
     }
-    const draft = active.config.browserAutosave === false ? null : readDraft();
+    const draft = active.config.browserAutosave === false || active.config.showDraftPrompt === false ? null : readDraft();
     let prompt = active.config.root.previousElementSibling;
     if (draft && !prompt?.matches?.("[data-skill-progress-draft]")) {
       prompt = element("aside", { className: "skill-progress-draft-prompt", attrs: { "data-skill-progress-draft": "", "aria-label": "Previous browser progress" } });

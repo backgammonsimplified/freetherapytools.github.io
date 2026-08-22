@@ -122,6 +122,34 @@ LEARN_SECTIONS = {
         "track_ids": ("mindfulness",),
     },
 }
+
+SKILL_FINDER_TOOLS = (
+    ("Values & Valued Action", "skill-finder/values/index.qmd"),
+    ("Skill Thermometer", "skill-finder/thermometer/index.qmd"),
+    ("Emotion Explorer", "skill-finder/emotions/index.qmd"),
+    ("Change an Emotion", "skill-finder/change-emotion/index.qmd"),
+    ("Worry Tree", "skill-finder/worry-tree/index.qmd"),
+    ("Pleasant Event Planner", "skill-finder/pleasant-event/index.qmd"),
+    ("Behaviour Chain Builder", "skill-finder/behaviour-chain/index.qmd"),
+    ("Missing Links", "skill-finder/missing-links/index.qmd"),
+    ("Exposure Ladder", "skill-finder/exposure/index.qmd"),
+    ("DEAR MAN Builder", "skill-finder/dear-man/index.qmd"),
+    ("Ask or Say No Planner", "skill-finder/ask-or-say-no/index.qmd"),
+    ("SMART Goal Builder", "skill-finder/goal-builder/index.qmd"),
+    ("Behavioural Activation Planner", "skill-finder/behavioural-activation/index.qmd"),
+    ("Values Review", "skill-finder/values-review/index.qmd"),
+)
+
+SKILL_FINDER_LEARN_LINKS = (
+    ("DBT Skills", "learn/index.qmd"),
+    ("Goal Setting & Tracking", "learn/goal-setting/index.qmd"),
+    ("Distress Tolerance", "learn/cube/index.qmd"),
+    ("Interpersonal Effectiveness", "learn/interpersonal-effectiveness/index.qmd"),
+    ("Wellness", "learn/wellness/index.qmd"),
+    ("Emotion Regulation", "learn/emotion-regulation/index.qmd"),
+    ("CBT Skills", "cbt-skills/index.qmd"),
+    ("Mindfulness", "mindfulness/index.qmd"),
+)
 GLOSSARY_CATEGORIES = (
     "Checker Play",
     "Cube Action",
@@ -1466,6 +1494,39 @@ def build_navigation_yaml(curriculum: list[dict[str, object]]) -> str:
         "website:",
         "  sidebar:",
     ]
+    lines.extend(
+        [
+            "    - id: skill-finder",
+            '      title: "Skill Finder"',
+            "      style: docked",
+            "      collapse-level: 1",
+            "      contents:",
+            '        - text: "Skill Finder Home"',
+            "          href: skill-finder/index.qmd",
+            '        - section: "Interactive Tools"',
+            "          contents:",
+        ]
+    )
+    for title, source_path in SKILL_FINDER_TOOLS:
+        lines.extend(
+            [
+                f'            - text: "{title}"',
+                f"              href: {source_path}",
+            ]
+        )
+    lines.extend(
+        [
+            '        - section: "Learn"',
+            "          contents:",
+        ]
+    )
+    for title, source_path in SKILL_FINDER_LEARN_LINKS:
+        lines.extend(
+            [
+                f'            - text: "{title}"',
+                f"              href: {source_path}",
+            ]
+        )
     for section_id, section in LEARN_SECTIONS.items():
         lines.extend(
             [

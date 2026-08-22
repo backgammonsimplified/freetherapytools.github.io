@@ -14,7 +14,7 @@ from pathlib import Path
 
 try:
     from scripts import learn_glossary
-except ModuleNotFoundError:  # Direct execution sets sys.path to scripts/.
+except (ModuleNotFoundError, ImportError):  # Direct execution sets sys.path to scripts/.
     import learn_glossary  # type: ignore[no-redef]
 
 

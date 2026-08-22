@@ -90,7 +90,7 @@ def main() -> int:
     payload = {
         "schema_version": 1,
         "source_document": args.source.name,
-        "process": ["DISCOVER", "SORT", "NARROW", "ASSESS", "ACT", "BARRIERS", "MISSION", "REVIEW"],
+        "process": ["DISCOVER", "CATEGORIZE", "ASSIGN", "ASSESS", "ACT", "BARRIERS", "MISSION"],
         "domains": [{"id": key, "name": name} for key, name in DOMAINS],
         "values": values,
         "custom_values_allowed": True,
