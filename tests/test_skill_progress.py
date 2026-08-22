@@ -88,6 +88,12 @@ class SkillProgressTests(unittest.TestCase):
         self.assertIn("assets/skill-progress.js", quarto)
         self.assertIn("assets/skill-progress.css", quarto)
 
+    def test_progress_actions_use_modern_shared_button_styling(self):
+        self.assertIn("border-radius: 999px", CSS)
+        self.assertIn("box-shadow:", CSS)
+        self.assertIn("transform: translateY(-1px)", CSS)
+        self.assertIn(".skill-progress-open:focus-visible", CSS)
+
     def test_normal_learn_sources_do_not_contain_progress_controls(self):
         labels = ("Open previous progress", "Save progress", "skill-progress-drawer")
         for folder in (SITE / "learn", SITE / "cbt-skills", SITE / "mindfulness"):

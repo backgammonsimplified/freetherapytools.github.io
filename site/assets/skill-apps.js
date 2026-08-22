@@ -81,7 +81,7 @@
       const importance = String(selected[value.id]?.rating || "");
       return `<article class="skill-app-card" data-value-card data-search="${escapeHtml(`${value.name} ${value.definition}`.toLowerCase())}">
         <h4>${escapeHtml(value.name)}</h4>
-        <details class="values-definition"><summary>Definition</summary><p>${escapeHtml(value.definition)}</p></details>
+        <details class="values-definition"><summary><span class="values-definition-show">View definition</span><span class="values-definition-hide">Hide definition</span></summary><p>${escapeHtml(value.definition)}</p></details>
         <div class="values-card-controls">
           <button type="button" class="values-select-button ${active ? "secondary" : ""}" data-toggle-value="${escapeHtml(value.id)}" aria-pressed="${active}">${active ? "Remove" : "Select"}</button>
           ${active ? `<fieldset class="values-importance"><legend>Importance:</legend><div class="values-importance-buttons" role="group" aria-label="Importance for ${escapeHtml(value.name)}">${[1, 2, 3, 4, 5].map((rating) => `<button type="button" class="${importance === String(rating) ? "" : "secondary"}" data-rating="${escapeHtml(value.id)}" data-importance-value="${rating}" aria-pressed="${importance === String(rating)}">${rating}</button>`).join("")}</div></fieldset>` : ""}

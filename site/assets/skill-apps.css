@@ -215,12 +215,23 @@
 
 .skill-app .values-clear-button,
 .skill-app .values-select-button {
+  border-width: 1px;
+  border-radius: 999px;
+  box-shadow: 0 0.15rem 0.45rem rgb(48 37 29 / 12%);
   min-height: 2rem;
-  padding: 0.25rem 0.65rem;
+  padding: 0.25rem 0.75rem;
 }
 
 .values-custom-row {
-  margin-block: 0.6rem 1.75rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin-block: 0.75rem 2rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--skill-app-border);
+}
+
+.values-custom-row input {
+  min-width: 0;
 }
 
 .values-definition {
@@ -228,14 +239,50 @@
 }
 
 .values-definition summary {
+  align-items: center;
+  background: var(--skill-app-soft);
+  border-radius: 0.5rem;
   color: #4d4640;
   cursor: pointer;
+  display: flex;
   font-weight: 650;
+  gap: 0.5rem;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0.35rem 0.55rem;
+}
+
+.values-definition summary::-webkit-details-marker {
+  display: none;
+}
+
+.values-definition summary::after {
+  content: "+";
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.values-definition[open] summary::after {
+  content: "−";
+}
+
+.values-definition-hide {
+  display: none;
+}
+
+.values-definition[open] .values-definition-show {
+  display: none;
+}
+
+.values-definition[open] .values-definition-hide {
+  display: inline;
 }
 
 .values-definition p {
   color: #4d4640;
-  margin: 0.5rem 0 0;
+  margin: 0.6rem 0 0;
+  padding-inline: 0.25rem;
 }
 
 .values-card-controls {
@@ -267,6 +314,25 @@
   min-height: 1.9rem;
   min-width: 1.9rem;
   padding: 0.15rem;
+}
+
+.skill-app-footer [data-back],
+.skill-app-footer [data-next] {
+  border-width: 1px;
+  border-radius: 999px;
+  box-shadow: 0 0.2rem 0.55rem rgb(48 37 29 / 14%);
+  padding-inline: 1.15rem;
+  transition: box-shadow 160ms ease, transform 160ms ease;
+}
+
+@media (hover: hover) {
+  .skill-app .values-clear-button:hover,
+  .skill-app .values-select-button:hover,
+  .skill-app-footer [data-back]:hover,
+  .skill-app-footer [data-next]:hover {
+    box-shadow: 0 0.35rem 0.8rem rgb(48 37 29 / 18%);
+    transform: translateY(-1px);
+  }
 }
 
 .skill-app-inline-fields {
@@ -479,6 +545,10 @@
     align-items: flex-start;
   }
 
+  .values-custom-row {
+    grid-template-columns: 1fr;
+  }
+
   .emotion-wheel {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -502,5 +572,12 @@
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+  }
+
+  .skill-app .values-clear-button:hover,
+  .skill-app .values-select-button:hover,
+  .skill-app-footer [data-back]:hover,
+  .skill-app-footer [data-next]:hover {
+    transform: none;
   }
 }

@@ -63,7 +63,7 @@ No Learn lesson source, Learn JavaScript, Learn CSS, resource-match review file,
 
 - `node tests/test_skill_progress.js` covers Markdown and JSON round trips, readable Markdown, wrong-tool detection, future-schema rejection, damaged state rejection, filename rules, metadata comment safety, and a ZIP/DOCX package check.
 - `tests/test_skill_progress.py` covers all 13 identities/routes, adapter contracts, shared UI labels, privacy/no-network guards, accessibility/mobile/print contracts, asset order, and absence of controls from Learn QMD sources.
-- Focused progress, Skill Finder, Values, resource-match, PHP-match, QMD-extraction, and curriculum regression selection: 59 tests passed.
+- Focused progress, Skill Finder, Values, resource-match, PHP-match, QMD-extraction, and curriculum regression selection: 60 tests passed.
 - Learn/Research JavaScript regression checks passed.
 - `git diff --check` passed.
 
@@ -73,7 +73,7 @@ The complete repository-wide Python discovery still includes unrelated, pre-exis
 
 The real production JavaScript and data were exercised through a temporary local fixture (removed after review):
 
-- Values: the revised Discover interface was reviewed at desktop and 390px widths. Cards flowed alphabetically across each row, definitions stayed collapsed until requested, selected cards showed all five importance buttons without horizontal overflow, and no browser-draft or floating-save controls appeared.
+- Values: the revised Discover interface was reviewed at desktop and 390px widths. Cards flowed alphabetically across each row, the custom-value row had a clear separated gap before the cards, **View definition** disclosures expanded and collapsed correctly, selected cards showed all five importance buttons without horizontal overflow, and no browser-draft or floating-save controls appeared. The shared Open/Continue/Start-over actions use the updated rounded button treatment.
 - Emotion Explorer: Fear, a descriptive word, chest/body area, prompting event, and final stage restored exactly.
 - Worry Tree: actionable/later branch, prior answers, current flow node, and partially typed current answer restored exactly. This check found and led to a fix for current-screen flow input capture.
 - Behaviour Chain: two synthetic links restored in their original order and types.

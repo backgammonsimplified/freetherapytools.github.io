@@ -14,12 +14,75 @@
 .skill-progress-drawer button,
 .skill-progress-final-actions button,
 .skill-progress-draft-prompt button {
+  align-items: center;
+  appearance: none;
+  background: #6f4e37;
+  border: 1px solid #6f4e37;
+  border-radius: 999px;
+  box-shadow: 0 0.2rem 0.55rem rgb(48 37 29 / 14%);
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-weight: 700;
+  justify-content: center;
   min-height: 44px;
+  padding: 0.6rem 1rem;
+  transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.skill-progress-open.secondary,
+.skill-progress-drawer button.secondary,
+.skill-progress-final-actions button.secondary,
+.skill-progress-draft-prompt button.secondary {
+  background: #fff;
+  border-color: #b8a79a;
+  color: #60442f;
+}
+
+.skill-progress-open:focus-visible,
+.skill-progress-floating:focus-visible,
+.skill-progress-drawer button:focus-visible,
+.skill-progress-final-actions button:focus-visible,
+.skill-progress-draft-prompt button:focus-visible {
+  outline: 3px solid #1565c0;
+  outline-offset: 3px;
+}
+
+@media (hover: hover) {
+  .skill-progress-open:hover,
+  .skill-progress-floating:hover,
+  .skill-progress-drawer button:hover,
+  .skill-progress-final-actions button:hover,
+  .skill-progress-draft-prompt button:hover {
+    box-shadow: 0 0.4rem 0.9rem rgb(48 37 29 / 20%);
+    transform: translateY(-1px);
+  }
+
+  .skill-progress-open.secondary:hover,
+  .skill-progress-drawer button.secondary:hover,
+  .skill-progress-final-actions button.secondary:hover,
+  .skill-progress-draft-prompt button.secondary:hover {
+    background: #f7f2ed;
+    border-color: #8f735f;
+  }
 }
 
 .skill-progress-open {
   flex: 0 0 auto;
   white-space: nowrap;
+}
+
+.skill-app .skill-progress-open {
+  border-width: 1px;
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+}
+
+.skill-app .skill-progress-open.secondary {
+  background: #fff;
+  border-color: #b8a79a;
+  color: #60442f;
 }
 
 .skill-progress-floating {
@@ -170,9 +233,21 @@ body.skill-progress-dialog-open {
 
 @media (prefers-reduced-motion: reduce) {
   .skill-progress-drawer,
-  .skill-progress-floating {
+  .skill-progress-floating,
+  .skill-progress-open,
+  .skill-progress-drawer button,
+  .skill-progress-final-actions button,
+  .skill-progress-draft-prompt button {
     scroll-behavior: auto;
     transition: none;
+  }
+
+  .skill-progress-open:hover,
+  .skill-progress-floating:hover,
+  .skill-progress-drawer button:hover,
+  .skill-progress-final-actions button:hover,
+  .skill-progress-draft-prompt button:hover {
+    transform: none;
   }
 }
 

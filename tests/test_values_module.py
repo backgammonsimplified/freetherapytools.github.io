@@ -65,11 +65,16 @@ class ValuesModuleTests(unittest.TestCase):
 
     def test_discover_cards_are_alphabetical_compact_and_expandable(self):
         self.assertIn("localeCompare", self.javascript)
-        self.assertIn('<details class="values-definition"><summary>Definition</summary>', self.javascript)
+        self.assertIn('<details class="values-definition"><summary>', self.javascript)
+        self.assertIn("View definition", self.javascript)
+        self.assertIn("Hide definition", self.javascript)
         self.assertIn("values-select-button", self.javascript)
         self.assertIn("values-custom-row", self.javascript)
         self.assertIn("minmax(13rem, 1fr)", self.css)
-        self.assertIn("margin-block: 0.6rem 1.75rem", self.css)
+        self.assertIn("grid-template-columns: minmax(0, 1fr) auto", self.css)
+        self.assertIn("margin-block: 0.75rem 2rem", self.css)
+        self.assertIn("padding-bottom: 1.75rem", self.css)
+        self.assertIn(".values-definition[open] summary::after", self.css)
 
     def test_importance_buttons_and_clear_selections_replace_old_controls(self):
         self.assertIn("[1, 2, 3, 4, 5]", self.javascript)
