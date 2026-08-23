@@ -311,6 +311,7 @@
     const valueText = values.join(" and ");
     const direction = [valueText, domain && `in ${domain}`].filter(Boolean).join(" ");
     return {
+      calendarIntent: payload?.calendarIntent === true,
       fields: {
         direction,
         specific: typeof payload?.how === "string" ? payload.how : "",
@@ -476,6 +477,7 @@
   function initGoalBuilder(root) {
     const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "UTC";
     let state = initialGoalState();
+    let focusCalendarOnLoad = false;
     const token = new URLSearchParams(window.location.search).get("handoff");
     if (token && window.TherapySkillHandoff) {
       const payload = window.TherapySkillHandoff.consumePayload(token);
@@ -483,6 +485,10 @@
         const prefill = goalBuilderPrefill(payload);
         state.fields = prefill.fields;
         state.context = prefill.context;
+        if (prefill.calendarIntent) {
+          state.calendar.enabled = true;
+          focusCalendarOnLoad = true;
+        }
       }
       const clean = new URL(window.location.href);
       clean.searchParams.delete("handoff");
@@ -506,7 +512,7 @@
         <form class="skill-app-panel" data-goal-form>${state.context.domain || state.context.what ? `<aside class="skill-app-note"><strong>From your Values plan</strong>${state.context.domain ? `<span>Life Domain: ${escapeHtml(state.context.domain)}</span>` : ""}${state.context.values.length ? `<span>Values: ${escapeHtml(state.context.values.join(", "))}</span>` : ""}${state.context.what ? `<span>What: ${escapeHtml(state.context.what)}</span>` : ""}${state.context.how ? `<span>How: ${escapeHtml(state.context.how)}</span>` : ""}</aside>` : ""}
           ${fields.map(([key, label]) => `<label for="goal-${key}">${escapeHtml(label)}</label><textarea id="goal-${key}" name="${key}" data-goal-field="${key}">${escapeHtml(state.fields[key])}</textarea>`).join("")}
           <fieldset class="skill-app-fieldset"><legend>Target date / deadline</legend><p class="skill-app-field-help">This is goal or task metadata. It does not automatically create a calendar event.</p><label for="goal-target-date">Target date</label><input id="goal-target-date" type="date" data-goal-target-date value="${escapeHtml(state.targetDate)}"></fieldset>
-          <fieldset class="skill-app-fieldset"><legend>Specific calendar commitment</legend><label class="skill-app-check"><input type="checkbox" data-calendar-enabled ${state.calendar.enabled ? "checked" : ""}> <span>Schedule an event or reminder</span></label><p>A target date is a deadline. This separate calendar commitment is for an action that belongs at a particular local date and time.</p>
+          <fieldset class="skill-app-fieldset" id="goal-calendar-commitment"><legend>Specific calendar commitment</legend><label class="skill-app-check"><input type="checkbox" data-calendar-enabled ${state.calendar.enabled ? "checked" : ""}> <span>Schedule an event or reminder</span></label><p>A target date is a deadline. This separate calendar commitment is for an action that belongs at a particular local date and time.</p>
             <div data-calendar-fields ${state.calendar.enabled ? "" : "hidden"}>
               <fieldset class="goal-schedule-type"><legend>Schedule type</legend><label><input type="radio" name="schedule-type" value="one-time" data-calendar-schedule-type ${recurring ? "" : "checked"}> One time</label><label><input type="radio" name="schedule-type" value="recurring" data-calendar-schedule-type ${recurring ? "checked" : ""}> Recurring</label></fieldset>
               <div class="skill-app-inline-fields goal-calendar-fields">
@@ -617,6 +623,12 @@
     }
 
     render();
+    if (focusCalendarOnLoad) window.requestAnimationFrame(() => {
+      const target = root.querySelector("#goal-calendar-commitment");
+      target?.scrollIntoView?.({ block: "start", behavior: window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ? "auto" : "smooth" });
+      target?.querySelector('[data-calendar-field="date"]')?.focus?.({ preventScroll: true });
+      focusCalendarOnLoad = false;
+    });
     register(root, {
       toolId: "goal-builder", toolTitle: "SMART Goal Builder", route: Progress.TOOL_ROUTES["goal-builder"],
       getState: () => state,

@@ -65,12 +65,15 @@ class ValuesRedesignTests(unittest.TestCase):
     def test_workflow_and_accessibility_contracts_are_visible(self):
         for token in (
             "Values are directions for living", "A value can guide an ongoing way of acting", "What could I work on?", "How could I start?",
-            "Another 10 ideas", "Another 10 ways to start", "Write my own What", "Write my own How",
-            "My short-term valued-action list", "Build a SMART goal from this", "opens in a new tab", "<details", "<fieldset", "<legend",
+            "click here for 10 new ideas", "Another 10 ways to start", "Write my own How", "My What:</label><input",
+            "Add to SMART Goal", "Add to Google Calendar", "Add another goal for", "Move to the next life domain",
+            "opens in a new tab", "<details", "<fieldset", "<legend",
         ):
             self.assertIn(token, VALUES_JS)
         self.assertIn('render();\n        root.querySelector(`[data-domain-importance=', VALUES_JS)
-        self.assertIn("state.act.smartFocusId", VALUES_JS)
+        self.assertNotIn("Add this action to my short-term list", VALUES_JS)
+        self.assertNotIn("data-add-shortlist", VALUES_JS)
+        self.assertIn("showActionDomain(nextDomainId)", VALUES_JS)
 
     def test_what_specific_hows_are_parent_linked_and_stale_selection_clears(self):
         whats = [item for items in ACTIONS["domains"].values() for item in items]

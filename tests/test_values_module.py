@@ -328,11 +328,13 @@ class ValuesModuleTests(unittest.TestCase):
         self.assertIn('.skill-app[data-skill-app="values"] .skill-app-progress button', self.css)
 
     def test_assessment_distribution_bar_is_accessible_and_mobile_safe(self):
-        self.assertIn('class="values-priority-bar" role="img"', self.javascript)
+        self.assertIn('class="values-priority-bar" role="list"', self.javascript)
         self.assertIn("values-priority-legend", self.javascript)
         self.assertIn("item.displayPercent", self.javascript)
         self.assertIn("--priority-share", self.javascript)
-        self.assertIn("overflow: hidden", self.css)
+        self.assertIn('role="listitem" tabindex="0"', self.javascript)
+        self.assertIn("data-priority-label", self.javascript)
+        self.assertIn("values-priority-segment:hover::after", self.css)
         self.assertIn("min-width: 0", self.css)
         self.assertIn("grid-template-columns: repeat(auto-fit", self.css)
         self.assertIn("Relative attention distribution", self.javascript)

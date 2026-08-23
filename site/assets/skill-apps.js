@@ -403,9 +403,11 @@
     const incomplete = ranked.filter((item) => item.status === "incomplete");
     if (!ranked.length) return `<section class="values-investment-summary"><h4>${heading}</h4><p>Select life domains in Categorize to see where your resources may need attention.</p></section>`;
     const simpleGroup = (title, items, className, description) => items.length ? `<section class="values-investment-group ${className}"><h5>${title}</h5><p>${description}</p><ul>${items.map((item) => `<li><strong>${escapeHtml(item.domain.name)}</strong> <span>(${escapeHtml(item.importance)} importance; ${item.current} → ${item.desired})</span></li>`).join("")}</ul></section>` : "";
-    const distributionLabel = priority.map((item) => `${item.domain.name}: ${item.displayPercent}%`).join("; ");
     const distribution = priority.length ? `<figure class="values-priority-figure">
-      <div class="values-priority-bar" role="img" aria-label="Relative attention distribution. ${escapeHtml(distributionLabel)}">${priority.map((item, index) => `<span class="values-priority-segment values-priority-color-${index % 9}" style="--priority-share: ${item.relativeScore}" title="${escapeHtml(item.domain.name)} — ${item.displayPercent}%">${item.relativeScore >= 8 ? `<span>${item.displayPercent}%</span>` : ""}</span>`).join("")}</div>
+      <div class="values-priority-bar" role="list" aria-label="Relative attention distribution">${priority.map((item, index) => {
+        const label = `${item.domain.name} — ${item.displayPercent}% of relative priority`;
+        return `<span class="values-priority-segment values-priority-color-${index % 9}" role="listitem" tabindex="0" aria-label="${escapeHtml(label)}" data-priority-label="${escapeHtml(label)}" style="--priority-share: ${item.relativeScore}" title="${escapeHtml(label)}">${item.relativeScore >= 8 ? `<span aria-hidden="true">${item.displayPercent}%</span>` : ""}</span>`;
+      }).join("")}</div>
       <figcaption><ul class="values-priority-legend">${priority.map((item, index) => `<li><span class="values-priority-key values-priority-color-${index % 9}" aria-hidden="true"></span><span>${escapeHtml(item.domain.name)} — <strong>${item.displayPercent}%</strong></span></li>`).join("")}</ul></figcaption>
     </figure>` : "";
     return `<section class="values-investment-summary" data-assessment-insights><h4>${heading}</h4>
@@ -445,7 +447,7 @@
   }
 
   function domainExplorerState(state, domainId) {
-    state.act.domains[domainId] = Object.assign({ open: true, whatPage: 0, selectedWhat: "", customWhat: "", howPage: 0, selectedHow: "", customHow: "" }, state.act.domains[domainId]);
+    state.act.domains[domainId] = Object.assign({ open: true, whatPage: 0, selectedWhat: "", customWhat: "", howPage: 0, selectedHow: "", customHow: "", actioned: "" }, state.act.domains[domainId]);
     return state.act.domains[domainId];
   }
 
@@ -456,7 +458,7 @@
     return deterministicOrder(actionData.domains[domainId] || [], state.act.seed, `${domainId}:what`, relevance);
   }
 
-  function actionDomainMarkup(data, actionData, state, rankedItem) {
+  function actionDomainMarkup(data, actionData, state, rankedItem, hasNextDomain) {
     const domain = rankedItem.domain;
     const explore = domainExplorerState(state, domain.id);
     const values = assignedValuesForDomain(data, state, domain.id);
@@ -474,9 +476,8 @@
         <section><h4>Values you placed here</h4>${values.length ? `<ul class="values-assigned-list">${values.map((value) => `<li>${escapeHtml(value.name)}</li>`).join("")}</ul>` : `<p>No Values are assigned here yet. You can return to Assign without losing this page.</p>`}</section>
         <fieldset class="skill-app-fieldset values-what-choices"><legend>What could I work on?</legend><p>A WHAT is a meaningful direction, project, problem area, or possibility—not automatically a goal.</p>
           <div class="values-suggestion-list" aria-live="polite">${whatPage.map((item) => `<label class="skill-app-check"><input type="radio" name="what-${escapeHtml(domain.id)}" value="${escapeHtml(item.id)}" data-action-what="${escapeHtml(domain.id)}" ${explore.selectedWhat === item.id ? "checked" : ""}> <span>${escapeHtml(item.what)}</span></label>`).join("")}</div>
-          <label class="skill-app-check values-custom-suggestion"><input type="radio" name="what-${escapeHtml(domain.id)}" value="custom" data-action-what="${escapeHtml(domain.id)}" ${explore.selectedWhat === "custom" ? "checked" : ""}> <span>Write my own What</span></label>
-          <label for="custom-what-${escapeHtml(domain.id)}">My What</label><textarea id="custom-what-${escapeHtml(domain.id)}" data-custom-what="${escapeHtml(domain.id)}">${escapeHtml(explore.customWhat)}</textarea>
-          <button type="button" class="secondary" data-another-whats="${escapeHtml(domain.id)}">Another 10 ideas</button>
+          <div class="values-my-what"><label for="custom-what-${escapeHtml(domain.id)}">My What:</label><input id="custom-what-${escapeHtml(domain.id)}" type="text" data-custom-what="${escapeHtml(domain.id)}" value="${escapeHtml(explore.customWhat)}"></div>
+          <p class="values-more-ideas">If none of these resonate, <button type="button" class="values-inline-choice" data-another-whats="${escapeHtml(domain.id)}">click here for 10 new ideas</button>.</p>
         </fieldset>
         ${whatText ? `<fieldset class="skill-app-fieldset values-how-choices"><legend>How could I start?</legend><p>A HOW is a concrete action that could move you in that direction.</p>
           <div class="values-suggestion-list" aria-live="polite">${howPage.map((item) => `<label class="skill-app-check"><input type="radio" name="how-${escapeHtml(domain.id)}" value="${escapeHtml(item.id)}" data-action-how="${escapeHtml(domain.id)}" ${explore.selectedHow === item.id ? "checked" : ""}> <span>${escapeHtml(item.text)}</span></label>`).join("")}</div>
@@ -484,27 +485,20 @@
            <label for="custom-how-${escapeHtml(domain.id)}">My How</label><textarea id="custom-how-${escapeHtml(domain.id)}" data-custom-how="${escapeHtml(domain.id)}">${escapeHtml(explore.customHow)}</textarea>
           ${(explore.howPage + 1) * 10 < howPool.length ? `<button type="button" class="secondary" data-another-hows="${escapeHtml(domain.id)}">Another 10 ways to start</button>` : ""}
           ${(actionData.implementation_supports || []).length ? `<details class="values-implementation-supports"><summary>Make this easier to start</summary><p>These general follow-through supports are separate from the specific ways to do this What.</p><ul>${actionData.implementation_supports.map((item) => `<li>${escapeHtml(item.text)}</li>`).join("")}</ul></details>` : ""}
-          <button type="button" data-add-shortlist="${escapeHtml(domain.id)}" ${howText ? "" : "disabled"}>Add this action to my short-term list</button>
+          <div class="skill-app-actions values-action-destinations"><button type="button" data-action-smart="${escapeHtml(domain.id)}" ${howText ? "" : "disabled"}>Add to SMART Goal <span class="visually-hidden">(opens in a new tab)</span></button><button type="button" class="secondary" data-action-calendar="${escapeHtml(domain.id)}" ${howText ? "" : "disabled"}>Add to Google Calendar <span class="visually-hidden">(opens scheduling in a new tab)</span></button></div>
+          <p class="skill-app-field-help">The calendar option opens the Goal Builder with this action filled in and its calendar section ready. Choose a date and time there; nothing is sent to Google until you click its Google Calendar button.</p>
+          ${explore.actioned ? `<section class="values-action-followup" aria-live="polite" tabindex="-1"><p><strong>${explore.actioned === "calendar" ? "Calendar scheduling opened." : "SMART Goal Builder opened."}</strong> What would you like to do next?</p><div class="skill-app-actions"><button type="button" class="secondary" data-add-another-domain-goal="${escapeHtml(domain.id)}">Add another goal for ${escapeHtml(domain.name)}</button><button type="button" data-next-action-domain="${escapeHtml(domain.id)}" ${hasNextDomain ? "" : "disabled"}>${hasNextDomain ? "Move to the next life domain" : "All life domains reviewed"}</button></div></section>` : ""}
         </fieldset>` : ""}
       </div>
     </details>`;
-  }
-
-  function shortlistMarkup(state) {
-    const items = state.act.shortlist;
-    return `<section class="values-shortlist" aria-labelledby="values-shortlist-heading"><h4 id="values-shortlist-heading">My short-term valued-action list</h4><p>Choose a handful of realistic actions you could try in the short term.</p>
-      ${items.length ? `<fieldset class="skill-app-fieldset"><legend>Choose one current SMART Goal focus</legend><ol>${items.map((item) => `<li><label><input type="radio" name="smart-focus" value="${escapeHtml(item.id)}" data-smart-focus ${state.act.smartFocusId === item.id ? "checked" : ""}> <strong>${escapeHtml(item.how)}</strong></label><span>${escapeHtml(item.domainName)} · ${escapeHtml(item.values.join(", ") || "No assigned Values")}</span><span>WHAT: ${escapeHtml(item.what)}</span><button type="button" class="secondary" data-remove-shortlist="${escapeHtml(item.id)}">Remove</button></li>`).join("")}</ol></fieldset>
-        <button type="button" data-build-smart ${state.act.smartFocusId ? "" : "disabled"}>Build a SMART goal from this <span class="visually-hidden">(opens in a new tab)</span></button><p class="skill-app-field-help">Opens SMART Goal Builder in a new tab. Your Values plan stays open here.</p>` : `<p>No actions added yet.</p>`}
-    </section>`;
   }
 
   function actMarkup(data, actionData, state) {
     const domains = data.domains.filter((domain) => state.selectedDomains.includes(domain.id));
     const ranked = rankDomainAssessments(domains, state);
     return `<h3>Act</h3><p>Explore from life domain to action: <strong>Where in my life? → What direction matters? → What could I work on? → How could I start?</strong> A useful Values plan does not have to end in a formal goal.</p>
-      <div class="values-action-domains">${ranked.map((item) => actionDomainMarkup(data, actionData, state, item)).join("")}</div>
-      ${shortlistMarkup(state)}
-      <aside class="skill-app-note"><h4>Try, return, and reassess</h4><p>Choose a handful of realistic actions, try them, and save this Values plan with <strong>Save progress (.md)</strong>. Later, reopen that Markdown file to reassess your Values or life-domain ratings, or choose another shortlisted action to turn into a SMART goal. The file stays on your device unless you choose to share it.</p></aside>`;
+      <div class="values-action-domains">${ranked.map((item, index) => actionDomainMarkup(data, actionData, state, item, index < ranked.length - 1)).join("")}</div>
+      <aside class="skill-app-note"><h4>Try, return, and reassess</h4><p>Choose realistic actions, try them, and save this Values plan with <strong>Save progress (.md)</strong>. Later, reopen that Markdown file to reassess your Values or life-domain ratings, or create another goal. The file stays on your device unless you choose to share it.</p></aside>`;
   }
 
   function barriersMarkup(_data, state) {
@@ -659,6 +653,61 @@
       return true;
     }
 
+    function selectedActionForDomain(domainId) {
+      const domain = data.domains.find((item) => item.id === domainId);
+      const explore = domainExplorerState(state, domainId);
+      const whats = whatChoicesForDomain(data, actionData, state, domainId);
+      const what = whats.find((item) => item.id === explore.selectedWhat);
+      const how = what?.hows.find((item) => item.id === explore.selectedHow);
+      const whatText = explore.selectedWhat === "custom" ? explore.customWhat.trim() : what?.what || "";
+      const howText = explore.selectedHow === "custom" ? explore.customHow.trim() : how?.text || "";
+      if (!domain || !whatText || !howText) return null;
+      return {
+        domainId, domainName: domain.name,
+        values: assignedValuesForDomain(data, state, domainId).map((value) => value.name),
+        what: whatText, how: howText, whatId: what?.id || "", howId: how?.id || "",
+      };
+    }
+
+    function openActionHandoff(domainId, calendarIntent = false) {
+      const item = selectedActionForDomain(domainId);
+      if (!item || !global.TherapySkillHandoff) return;
+      try {
+        const token = global.TherapySkillHandoff.storePayload({
+          domain: item.domainName, values: item.values, what: item.what, how: item.how,
+          mission: state.mission.statement, calendarIntent,
+        });
+        const opened = global.open(global.TherapySkillHandoff.goalBuilderUrl(token), "_blank");
+        if (!opened) {
+          root.querySelector("[data-values-status]").textContent = "Your browser blocked the new tab. Allow pop-ups for this site and try again.";
+          return;
+        }
+        opened.opener = null;
+        let recorded = state.act.shortlist.find((candidate) => candidate.domainId === domainId && candidate.what === item.what && candidate.how === item.how);
+        if (!recorded) {
+          recorded = { ...item, id: `action-${Date.now().toString(36)}-${state.act.shortlist.length}` };
+          state.act.shortlist.push(recorded);
+        }
+        state.act.smartFocusId = recorded.id;
+        domainExplorerState(state, domainId).actioned = calendarIntent ? "calendar" : "smart";
+        render();
+        global.requestAnimationFrame(() => root.querySelector(`[data-action-domain="${CSS.escape(domainId)}"] .values-action-followup`)?.focus?.({ preventScroll: true }));
+      } catch (_error) {
+        root.querySelector("[data-values-status]").textContent = "The private local handoff could not be created in this browser.";
+      }
+    }
+
+    function showActionDomain(domainId) {
+      global.requestAnimationFrame(() => {
+        const details = root.querySelector(`[data-action-domain="${CSS.escape(domainId)}"]`);
+        const target = details?.querySelector("summary") || details;
+        const navbar = document.querySelector("#quarto-header, .navbar");
+        const navbarHeight = navbar?.getBoundingClientRect?.().height || 0;
+        target?.focus?.({ preventScroll: true });
+        if (target) global.scrollTo?.({ top: Math.max(0, global.scrollY + target.getBoundingClientRect().top - navbarHeight - 16), behavior: global.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ? "auto" : "smooth" });
+      });
+    }
+
     function bind() {
       root.querySelectorAll("[data-values-step]").forEach((button) => button.addEventListener("click", () => {
         const target = Number(button.dataset.valuesStep);
@@ -747,19 +796,25 @@
       });
       root.querySelectorAll("[data-action-domain]").forEach((details) => details.addEventListener("toggle", () => { domainExplorerState(state, details.dataset.actionDomain).open = details.open; }));
       root.querySelectorAll("[data-action-what]").forEach((input) => input.addEventListener("change", () => {
-        const explore = domainExplorerState(state, input.dataset.actionWhat);
+        const domainId = input.dataset.actionWhat;
+        const explore = domainExplorerState(state, domainId);
         explore.selectedWhat = input.value;
         explore.selectedHow = "";
         explore.howPage = 0;
+        explore.actioned = "";
+        root.querySelector(`[data-action-domain="${CSS.escape(domainId)}"] .values-action-followup`)?.remove();
         render();
       }));
       root.querySelectorAll("[data-custom-what]").forEach((input) => input.addEventListener("input", () => {
         const domainId = input.dataset.customWhat;
         const explore = domainExplorerState(state, domainId);
         explore.customWhat = input.value;
+        explore.actioned = "";
+        root.querySelector(`[data-action-domain="${CSS.escape(domainId)}"] .values-action-followup`)?.remove();
+        const hasHowPanel = Boolean(root.querySelector(`[data-action-domain="${CSS.escape(domainId)}"] .values-how-choices`));
         const needsHowPanel = explore.selectedWhat !== "custom" || !root.querySelector(`[data-action-domain="${CSS.escape(domainId)}"] .values-how-choices`);
         explore.selectedWhat = "custom";
-        if (needsHowPanel && input.value.trim()) { render(); root.querySelector(`[data-custom-what="${CSS.escape(domainId)}"]`)?.focus(); }
+        if ((needsHowPanel && input.value.trim()) || (hasHowPanel && !input.value.trim())) { render(); root.querySelector(`[data-custom-what="${CSS.escape(domainId)}"]`)?.focus(); }
       }));
       root.querySelectorAll("[data-another-whats]").forEach((button) => button.addEventListener("click", () => {
         domainExplorerState(state, button.dataset.anotherWhats).whatPage += 1;
@@ -768,66 +823,48 @@
       }));
       root.querySelectorAll("[data-action-how]").forEach((input) => input.addEventListener("change", () => {
         const domainId = input.dataset.actionHow;
-        domainExplorerState(state, domainId).selectedHow = input.value;
-        const add = root.querySelector(`[data-add-shortlist="${CSS.escape(domainId)}"]`);
-        if (add) add.disabled = input.value === "custom" && !domainExplorerState(state, domainId).customHow.trim();
+        const explore = domainExplorerState(state, domainId);
+        explore.selectedHow = input.value;
+        explore.actioned = "";
+        root.querySelector(`[data-action-domain="${CSS.escape(domainId)}"] .values-action-followup`)?.remove();
+        const disabled = input.value === "custom" && !explore.customHow.trim();
+        root.querySelectorAll(`[data-action-smart="${CSS.escape(domainId)}"], [data-action-calendar="${CSS.escape(domainId)}"]`).forEach((button) => { button.disabled = disabled; });
       }));
       root.querySelectorAll("[data-custom-how]").forEach((input) => input.addEventListener("input", () => {
         const domainId = input.dataset.customHow;
         const explore = domainExplorerState(state, domainId);
         explore.selectedHow = "custom";
         explore.customHow = input.value;
+        explore.actioned = "";
+        root.querySelector(`[data-action-domain="${CSS.escape(domainId)}"] .values-action-followup`)?.remove();
         const radio = root.querySelector(`[data-action-how="${CSS.escape(domainId)}"][value="custom"]`);
         if (radio) radio.checked = true;
-        const add = root.querySelector(`[data-add-shortlist="${CSS.escape(domainId)}"]`);
-        if (add) add.disabled = !input.value.trim();
+        root.querySelectorAll(`[data-action-smart="${CSS.escape(domainId)}"], [data-action-calendar="${CSS.escape(domainId)}"]`).forEach((button) => { button.disabled = !input.value.trim(); });
       }));
       root.querySelectorAll("[data-another-hows]").forEach((button) => button.addEventListener("click", () => {
         domainExplorerState(state, button.dataset.anotherHows).howPage += 1;
         render();
         root.querySelector(`[data-another-hows="${CSS.escape(button.dataset.anotherHows)}"]`)?.focus();
       }));
-      root.querySelectorAll("[data-add-shortlist]").forEach((button) => button.addEventListener("click", () => {
-        const domainId = button.dataset.addShortlist;
-        const domain = data.domains.find((item) => item.id === domainId);
-        const explore = domainExplorerState(state, domainId);
-        const whats = whatChoicesForDomain(data, actionData, state, domainId);
-        const what = whats.find((item) => item.id === explore.selectedWhat);
-        const how = what?.hows.find((item) => item.id === explore.selectedHow);
-        const whatText = explore.selectedWhat === "custom" ? explore.customWhat.trim() : what?.what || "";
-        const howText = explore.selectedHow === "custom" ? explore.customHow.trim() : how?.text || "";
-        if (!whatText || !howText) return;
-        const duplicate = state.act.shortlist.find((item) => item.domainId === domainId && item.what === whatText && item.how === howText);
-        if (!duplicate) state.act.shortlist.push({
-          id: `action-${Date.now().toString(36)}-${state.act.shortlist.length}`,
-          domainId, domainName: domain.name,
-          values: assignedValuesForDomain(data, state, domainId).map((value) => value.name),
-          what: whatText, how: howText,
-          whatId: what?.id || "", howId: how?.id || "",
-        });
+      root.querySelectorAll("[data-action-smart]").forEach((button) => button.addEventListener("click", () => openActionHandoff(button.dataset.actionSmart, false)));
+      root.querySelectorAll("[data-action-calendar]").forEach((button) => button.addEventListener("click", () => openActionHandoff(button.dataset.actionCalendar, true)));
+      root.querySelectorAll("[data-add-another-domain-goal]").forEach((button) => button.addEventListener("click", () => {
+        const explore = domainExplorerState(state, button.dataset.addAnotherDomainGoal);
+        Object.assign(explore, { open: true, whatPage: 0, selectedWhat: "", customWhat: "", howPage: 0, selectedHow: "", customHow: "", actioned: "" });
         render();
-        root.querySelector(".values-shortlist")?.scrollIntoView?.({ block: "nearest" });
+        root.querySelector(`[data-action-domain="${CSS.escape(button.dataset.addAnotherDomainGoal)}"] [data-action-what]`)?.focus();
       }));
-      root.querySelectorAll("[data-remove-shortlist]").forEach((button) => button.addEventListener("click", () => {
-        state.act.shortlist = state.act.shortlist.filter((item) => item.id !== button.dataset.removeShortlist);
-        if (state.act.smartFocusId === button.dataset.removeShortlist) state.act.smartFocusId = "";
+      root.querySelectorAll("[data-next-action-domain]").forEach((button) => button.addEventListener("click", () => {
+        const domains = data.domains.filter((domain) => state.selectedDomains.includes(domain.id));
+        const ranked = rankDomainAssessments(domains, state);
+        const index = ranked.findIndex((item) => item.domain.id === button.dataset.nextActionDomain);
+        const nextDomainId = ranked[index + 1]?.domain.id;
+        if (!nextDomainId) return;
+        domainExplorerState(state, button.dataset.nextActionDomain).open = false;
+        domainExplorerState(state, nextDomainId).open = true;
         render();
+        showActionDomain(nextDomainId);
       }));
-      root.querySelectorAll("[data-smart-focus]").forEach((input) => input.addEventListener("change", () => {
-        if (input.checked) { state.act.smartFocusId = input.value; root.querySelector("[data-build-smart]").disabled = false; }
-      }));
-      root.querySelector("[data-build-smart]")?.addEventListener("click", () => {
-        const item = state.act.shortlist.find((candidate) => candidate.id === state.act.smartFocusId);
-        if (!item || !global.TherapySkillHandoff) return;
-        try {
-          const token = global.TherapySkillHandoff.storePayload({ domain: item.domainName, values: item.values, what: item.what, how: item.how, mission: state.mission.statement });
-          const opened = global.open(global.TherapySkillHandoff.goalBuilderUrl(token), "_blank");
-          if (opened) opened.opener = null;
-          if (!opened) root.querySelector("[data-values-status]").textContent = "Your browser blocked the new tab. Allow pop-ups for this site and try again.";
-        } catch (_error) {
-          root.querySelector("[data-values-status]").textContent = "The private local handoff could not be created in this browser.";
-        }
-      });
       root.querySelectorAll("[data-field]").forEach((field) => {
         const update = () => { setValue(state, field.dataset.field, field.value); };
         field.addEventListener("input", update);
