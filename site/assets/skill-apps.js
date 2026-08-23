@@ -168,6 +168,15 @@
     migrateValuesFurthestStep,
     rankedMissionDirections,
     generatedMissionStatement,
+    rankedSelectedDomains,
+    domainPriorityRadius,
+    missionMapData,
+    missionMapLayout,
+    priorityDistributionMarkup,
+    missionCalculationDetailsMarkup,
+    missionMapMarkup,
+    missionMarkup,
+    actionDomainMarkup,
     calculateGap(current, desired) {
       return Number(desired) - Number(current);
     },
@@ -286,6 +295,109 @@
     }).filter((item) => item.values.length);
   }
 
+  function rankedSelectedDomains(data, state) {
+    return rankDomainAssessments(
+      data.domains.filter((domain) => state.selectedDomains.includes(domain.id)),
+      state
+    );
+  }
+
+  function domainPriorityRadius(relativeScore, minimum = 38, maximum = 78) {
+    const share = Math.max(0, Math.min(100, Number(relativeScore) || 0)) / 100;
+    return Math.sqrt((minimum * minimum) + (((maximum * maximum) - (minimum * minimum)) * share));
+  }
+
+  function compactDomainLabel(name) {
+    return String(name || "").split(/,| & /, 1)[0].trim();
+  }
+
+  function missionMapData(data, state, rankedDomains = rankedSelectedDomains(data, state)) {
+    const domainOrder = new Map(rankedDomains.map((item, index) => [item.domain.id, index]));
+    const selectedDomainIds = new Set(domainOrder.keys());
+    const values = [...data.values, ...(state.legacy || []), ...(state.custom || [])]
+      .filter((value) => state.selected?.[value.id])
+      .map((value) => ({
+        id: value.id,
+        name: value.name,
+        importance: normalizedValueImportance(state.selected[value.id]?.rating),
+        domainIds: [...new Set((state.domains?.[value.id] || []).filter((domainId) => selectedDomainIds.has(domainId)))]
+          .sort((left, right) => domainOrder.get(left) - domainOrder.get(right) || left.localeCompare(right)),
+      }))
+      .filter((value) => value.domainIds.length)
+      .sort((left, right) => importanceRank(left.importance) - importanceRank(right.importance)
+        || left.name.localeCompare(right.name, undefined, { sensitivity: "base" })
+        || left.id.localeCompare(right.id));
+    const domains = rankedDomains.map((item, index) => ({
+      id: item.domain.id,
+      name: item.domain.name,
+      displayName: compactDomainLabel(item.domain.name),
+      importance: item.importance,
+      relativeScore: item.relativeScore,
+      displayPercent: item.displayPercent,
+      radius: domainPriorityRadius(item.relativeScore),
+      colorIndex: index % 9,
+      valueIds: values.filter((value) => value.domainIds.includes(item.domain.id)).map((value) => value.id),
+    }));
+    const edges = [
+      ...domains.map((domain) => ({ id: `you-domain-${domain.id}`, source: "you", target: `domain-${domain.id}`, type: "domain" })),
+      ...domains.flatMap((domain) => domain.valueIds.map((valueId) => ({
+        id: `domain-${domain.id}-value-${valueId}`,
+        source: `domain-${domain.id}`,
+        target: `value-${valueId}`,
+        type: "value",
+      }))),
+    ];
+    return { center: { id: "you", label: "You" }, domains, values, edges };
+  }
+
+  function missionMapLayout(map, mode = "desktop") {
+    const anchored = new Map(map.domains.map((domain) => [domain.id, []]));
+    map.values.forEach((value) => anchored.get(value.domainIds[0])?.push(value));
+    if (mode === "mobile") {
+      const width = 390;
+      const center = { id: "you", x: width / 2, y: 46, radius: 30 };
+      const domains = [];
+      const values = [];
+      let cursor = 112;
+      map.domains.forEach((domain) => {
+        const branchValues = anchored.get(domain.id) || [];
+        const branchHeight = Math.max((domain.radius * 2) + 36, Math.max(1, branchValues.length) * 46 + 34);
+        const y = cursor + branchHeight / 2;
+        domains.push({ ...domain, x: 96, y });
+        const firstValueY = y - ((branchValues.length - 1) * 46 / 2);
+        branchValues.forEach((value, index) => values.push({ ...value, x: 292, y: firstValueY + index * 46, width: 150, height: 36 }));
+        cursor += branchHeight + 24;
+      });
+      return { mode, width, height: Math.max(260, cursor + 12), center, domains, values };
+    }
+
+    const capacity = map.domains.length <= 4 ? 6 : map.domains.length <= 6 ? 4 : 3;
+    const maximumRings = Math.max(1, ...map.domains.map((domain) => Math.ceil((anchored.get(domain.id) || []).length / capacity)));
+    const outerRadius = 326 + ((maximumRings - 1) * 54);
+    const size = Math.max(860, Math.ceil((outerRadius + 104) * 2));
+    const center = { id: "you", x: size / 2, y: size / 2, radius: 34 };
+    const domainRing = Math.min(232, size * 0.27);
+    const domains = map.domains.map((domain, index) => {
+      const angle = -Math.PI / 2 + (index * Math.PI * 2 / Math.max(1, map.domains.length));
+      return { ...domain, angle, x: center.x + Math.cos(angle) * domainRing, y: center.y + Math.sin(angle) * domainRing };
+    });
+    const values = [];
+    domains.forEach((domain) => {
+      const branchValues = anchored.get(domain.id) || [];
+      const sector = Math.min(0.72, (Math.PI * 2 / Math.max(1, domains.length)) * 0.78);
+      for (let start = 0, ring = 0; start < branchValues.length; start += capacity, ring += 1) {
+        const row = branchValues.slice(start, start + capacity);
+        row.forEach((value, index) => {
+          const offset = row.length === 1 ? 0 : ((index / (row.length - 1)) - 0.5) * sector;
+          const radius = 326 + ring * 54;
+          const angle = domain.angle + offset;
+          values.push({ ...value, x: center.x + Math.cos(angle) * radius, y: center.y + Math.sin(angle) * radius, width: 126, height: 34 });
+        });
+      }
+    });
+    return { mode, width: size, height: size, center, domains, values };
+  }
+
   function progressMarkup(step, furthestStep) {
     return `<ol class="skill-app-progress" aria-label="Values process">${STEPS.map((name, index) =>
       `<li${index === step ? ' aria-current="step"' : ""}><button type="button" data-values-step="${index}" ${index > furthestStep ? "disabled" : ""}>${index + 1}. ${name}</button></li>`
@@ -394,25 +506,56 @@
     return "Gap: your current and desired investment are the same.";
   }
 
+  function priorityDistributionMarkup(ranked) {
+    const priority = ranked.filter((item) => item.attentionScore > 0);
+    if (!priority.length) return `<figure class="values-priority-figure">
+      <div class="values-priority-bar values-priority-bar-empty" role="img" aria-label="Relative attention distribution: no positive attention scores"><span>No positive priority to distribute</span></div>
+      <figcaption>All selected domains currently have 0% Relative Priority.</figcaption>
+    </figure>`;
+    return `<figure class="values-priority-figure">
+      <div class="values-priority-bar" role="list" aria-label="Relative attention distribution">${priority.map((item, index) => {
+        const label = `${item.domain.name} — ${item.displayPercent}% of relative priority`;
+        return `<span class="values-priority-segment values-priority-color-${index % 9}" role="listitem" tabindex="0" aria-label="${escapeHtml(label)}" data-priority-label="${escapeHtml(label)}" style="--priority-share: ${item.relativeScore}" title="${escapeHtml(label)}">${item.relativeScore >= 8 ? `<span aria-hidden="true">${item.displayPercent}%</span>` : ""}</span>`;
+      }).join("")}</div>
+      <figcaption><ul class="values-priority-legend">${priority.map((item, index) => `<li><span class="values-priority-key values-priority-color-${index % 9}" aria-hidden="true"></span><span>${escapeHtml(item.domain.name)} — <strong>${item.displayPercent}%</strong></span></li>`).join("")}</ul></figcaption>
+    </figure>`;
+  }
+
+  function missionCalculationDetailsMarkup(ranked) {
+    return `<details class="values-calculation-details">
+      <summary>View calculation details</summary>
+      <p>This is a planning aid calculated from your own ratings, not a clinical score.</p>
+      <ol class="values-attention-ranking">${ranked.map((item) => `<li>
+        <strong>${escapeHtml(item.domain.name)}</strong>
+        <span>Importance: ${escapeHtml(item.importance || "Not selected")}</span>
+        <span>Current Score (1-10): ${item.complete ? item.current : "Not entered"}</span>
+        <span>Desired Score (1-10): ${item.complete ? item.desired : "Not entered"}</span>
+        <span>Gap (desired - current): ${item.complete ? item.gap : "Not available"}</span>
+        <span>Positive gap / desired improvement: ${item.positiveGap}</span>
+        <span>Raw Attention Score: ${item.attentionScore.toFixed(2)}</span>
+        <span>Relative Priority: ${item.displayPercent}%</span>
+      </li>`).join("")}</ol>
+      <div class="values-calculation-formula" aria-label="Relative Priority formula">
+        <p><code>positive gap = max(desired - current, 0)</code></p>
+        <p><code>High = 3/3<br>Medium = 2/3<br>Low = 1/3</code></p>
+        <p><code>attention score = positive gap × importance weight</code></p>
+        <p><code>relative priority = domain attention score / total positive attention scores</code></p>
+        <p>Displayed positive Relative Priority percentages use deterministic largest-remainder allocation and total exactly 100%. When there are no positive attention scores, every displayed percentage remains 0%.</p>
+      </div>
+    </details>`;
+  }
+
   function assessmentInsightsMarkup(data, state, heading = "What your scores suggest") {
-    const selected = data.domains.filter((domain) => state.selectedDomains.includes(domain.id));
-    const ranked = rankDomainAssessments(selected, state).map((item) => ({ ...item, status: !item.complete ? "incomplete" : item.gap > 0 ? "under" : item.gap < 0 ? "over" : "balanced" }));
+    const ranked = rankedSelectedDomains(data, state).map((item) => ({ ...item, status: !item.complete ? "incomplete" : item.gap > 0 ? "under" : item.gap < 0 ? "over" : "balanced" }));
     const priority = ranked.filter((item) => item.attentionScore > 0);
     const over = ranked.filter((item) => item.status === "over");
     const balanced = ranked.filter((item) => item.status === "balanced");
     const incomplete = ranked.filter((item) => item.status === "incomplete");
     if (!ranked.length) return `<section class="values-investment-summary"><h4>${heading}</h4><p>Select life domains in Categorize to see where your resources may need attention.</p></section>`;
     const simpleGroup = (title, items, className, description) => items.length ? `<section class="values-investment-group ${className}"><h5>${title}</h5><p>${description}</p><ul>${items.map((item) => `<li><strong>${escapeHtml(item.domain.name)}</strong> <span>(${escapeHtml(item.importance)} importance; ${item.current} → ${item.desired})</span></li>`).join("")}</ul></section>` : "";
-    const distribution = priority.length ? `<figure class="values-priority-figure">
-      <div class="values-priority-bar" role="list" aria-label="Relative attention distribution">${priority.map((item, index) => {
-        const label = `${item.domain.name} — ${item.displayPercent}% of relative priority`;
-        return `<span class="values-priority-segment values-priority-color-${index % 9}" role="listitem" tabindex="0" aria-label="${escapeHtml(label)}" data-priority-label="${escapeHtml(label)}" style="--priority-share: ${item.relativeScore}" title="${escapeHtml(label)}">${item.relativeScore >= 8 ? `<span aria-hidden="true">${item.displayPercent}%</span>` : ""}</span>`;
-      }).join("")}</div>
-      <figcaption><ul class="values-priority-legend">${priority.map((item, index) => `<li><span class="values-priority-key values-priority-color-${index % 9}" aria-hidden="true"></span><span>${escapeHtml(item.domain.name)} — <strong>${item.displayPercent}%</strong></span></li>`).join("")}</ul></figcaption>
-    </figure>` : "";
     return `<section class="values-investment-summary" data-assessment-insights><h4>${heading}</h4>
       <p>This is a planning aid calculated from your own ratings, not a clinical score. The attention score is the weighted size of the desired improvement. Relative priority is that domain's share of all positive weighted improvement scores.</p>
-      ${distribution}
+      ${priorityDistributionMarkup(ranked)}
       ${priority.length ? `<ol class="values-attention-ranking">${priority.map((item) => `<li><strong>${escapeHtml(item.domain.name)}</strong><span>${escapeHtml(item.importance)} importance</span><span>Current: ${item.current}</span><span>Desired: ${item.desired}</span><span>Desired improvement: +${item.positiveGap}</span><span>Attention score: ${item.attentionScore.toFixed(2)}</span><span>Relative priority: ${item.displayPercent}%</span></li>`).join("")}</ol>` : `<p>None of the selected domains currently has a positive desired-investment gap, so there is no relative attention distribution to show.</p>`}
       <details class="values-ranking-explanation"><summary>How this ranking is calculated</summary><p>Positive desired improvement (desired minus current, with negative gaps treated as zero) is multiplied by importance: High = 3/3, Medium = 2/3, Low = 1/3. Each positive attention score is then divided by the total of all positive attention scores. Displayed whole percentages use deterministic largest-remainder allocation so they total exactly 100%.</p></details>
       ${simpleGroup("Areas you may want to rebalance", over, "is-over", "You rated current investment above desired investment. That is not inherently bad; it may simply be worth reviewing how resources are allocated.")}
@@ -473,7 +616,7 @@
     return `<details class="values-action-domain" data-action-domain="${escapeHtml(domain.id)}" ${explore.open !== false ? "open" : ""}>
       <summary><span><strong>${escapeHtml(domain.name)}</strong><small>${escapeHtml(rankedItem.importance)} importance · ${rankedItem.complete ? `${rankedItem.current} → ${rankedItem.desired}` : "assessment incomplete"} · Attention ${rankedItem.attentionScore.toFixed(2)} · Relative ${rankedItem.displayPercent}%</small></span></summary>
       <div class="values-action-domain-body">
-        <section><h4>Values you placed here</h4>${values.length ? `<ul class="values-assigned-list">${values.map((value) => `<li>${escapeHtml(value.name)}</li>`).join("")}</ul>` : `<p>No Values are assigned here yet. You can return to Assign without losing this page.</p>`}</section>
+        <details class="values-assigned-values"><summary>Values for this domain (${values.length})</summary>${values.length ? `<ul class="values-assigned-list">${values.map((value) => `<li>${escapeHtml(value.name)}</li>`).join("")}</ul>` : `<p>No Values are assigned to this domain yet. You can return to Assign without losing Act work.</p>`}</details>
         <fieldset class="skill-app-fieldset values-what-choices"><legend>What could I work on?</legend><p>A WHAT is a meaningful direction, project, problem area, or possibility—not automatically a goal.</p>
           <div class="values-suggestion-list" aria-live="polite">${whatPage.map((item) => `<label class="skill-app-check"><input type="radio" name="what-${escapeHtml(domain.id)}" value="${escapeHtml(item.id)}" data-action-what="${escapeHtml(domain.id)}" ${explore.selectedWhat === item.id ? "checked" : ""}> <span>${escapeHtml(item.what)}</span></label>`).join("")}</div>
           <div class="values-my-what"><label for="custom-what-${escapeHtml(domain.id)}">My What:</label><input id="custom-what-${escapeHtml(domain.id)}" type="text" data-custom-what="${escapeHtml(domain.id)}" value="${escapeHtml(explore.customWhat)}"></div>
@@ -519,17 +662,102 @@
       </div>`;
   }
 
+  function svgLabelLines(label, maximumCharacters = 16, maximumLines = 2) {
+    const words = String(label || "").trim().split(/\s+/).filter(Boolean);
+    const lines = [];
+    words.forEach((word) => {
+      const current = lines.at(-1);
+      if (current && `${current} ${word}`.length <= maximumCharacters) lines[lines.length - 1] = `${current} ${word}`;
+      else lines.push(word);
+    });
+    if (lines.length > maximumLines) {
+      const visible = lines.slice(0, maximumLines);
+      visible[maximumLines - 1] = `${visible[maximumLines - 1].slice(0, Math.max(1, maximumCharacters - 1))}…`;
+      return visible;
+    }
+    return lines;
+  }
+
+  function svgTextMarkup(label, x, y, className, maximumCharacters = 16, maximumLines = 2) {
+    const lines = svgLabelLines(label, maximumCharacters, maximumLines);
+    const start = y - ((lines.length - 1) * 7);
+    return `<text class="${className}" x="${x}" y="${start}" text-anchor="middle">${lines.map((line, index) => `<tspan x="${x}" dy="${index ? 14 : 0}">${escapeHtml(line)}</tspan>`).join("")}</text>`;
+  }
+
+  function missionMapSvg(map, layout, idPrefix) {
+    const nodes = new Map([
+      ["you", layout.center],
+      ...layout.domains.map((domain) => [`domain-${domain.id}`, domain]),
+      ...layout.values.map((value) => [`value-${value.id}`, value]),
+    ]);
+    const edges = map.edges.map((edge) => {
+      const source = nodes.get(edge.source);
+      const target = nodes.get(edge.target);
+      if (!source || !target) return "";
+      return `<line class="values-map-edge values-map-edge-${edge.type}" data-map-edge="${escapeHtml(edge.id)}" x1="${source.x.toFixed(2)}" y1="${source.y.toFixed(2)}" x2="${target.x.toFixed(2)}" y2="${target.y.toFixed(2)}"><title>${escapeHtml(edge.type === "domain" ? `You to ${target.name}` : `${source.name} to ${target.name}`)}</title></line>`;
+    }).join("");
+    const domains = layout.domains.map((domain) => `<g class="values-map-domain-node" data-map-node="domain-${escapeHtml(domain.id)}" transform="translate(${domain.x.toFixed(2)} ${domain.y.toFixed(2)})">
+      <title>${escapeHtml(`${domain.name} — ${domain.displayPercent}% Relative Priority`)}</title>
+      <circle class="values-map-domain values-priority-color-${domain.colorIndex}" r="${domain.radius.toFixed(2)}"></circle>
+      ${svgTextMarkup(domain.displayName, 0, -5, "values-map-domain-label", 15, 2)}
+      <text class="values-map-domain-percent" x="0" y="22" text-anchor="middle">${domain.displayPercent}%</text>
+    </g>`).join("");
+    const values = layout.values.map((value) => `<g class="values-map-value-node" data-map-node="value-${escapeHtml(value.id)}" transform="translate(${value.x.toFixed(2)} ${value.y.toFixed(2)})">
+      <title>${escapeHtml(`${value.name}${value.importance ? ` — ${value.importance} importance` : ""}; connected to ${value.domainIds.map((domainId) => map.domains.find((domain) => domain.id === domainId)?.name).filter(Boolean).join(", ")}`)}</title>
+      <rect class="values-map-value" x="${(-value.width / 2).toFixed(2)}" y="${(-value.height / 2).toFixed(2)}" width="${value.width}" height="${value.height}" rx="${Math.min(17, value.height / 2)}"></rect>
+      ${svgTextMarkup(value.name, 0, 4, "values-map-value-label", layout.mode === "mobile" ? 20 : 16, 2)}
+    </g>`).join("");
+    return `<svg class="values-map-svg values-map-svg-${layout.mode}" viewBox="0 0 ${layout.width} ${layout.height}" role="img" aria-labelledby="${idPrefix}-title ${idPrefix}-description" preserveAspectRatio="xMidYMid meet">
+      <title id="${idPrefix}-title">My values map</title>
+      <desc id="${idPrefix}-description">You connects to every selected life domain. Domain circle area increases with Relative Priority. Each assigned Value connects to every selected domain where it was placed.</desc>
+      <g class="values-map-edges">${edges}</g>
+      <g class="values-map-center" data-map-node="you" transform="translate(${layout.center.x} ${layout.center.y})"><circle r="${layout.center.radius}"></circle><text x="0" y="5" text-anchor="middle">You</text></g>
+      <g class="values-map-domains">${domains}</g>
+      <g class="values-map-values">${values}</g>
+    </svg>`;
+  }
+
+  function missionMapMarkup(data, state, rankedDomains = rankedSelectedDomains(data, state)) {
+    const map = missionMapData(data, state, rankedDomains);
+    const desktop = missionMapLayout(map, "desktop");
+    const mobile = missionMapLayout(map, "mobile");
+    const domainFallback = map.domains.map((domain) => {
+      const values = domain.valueIds.map((valueId) => map.values.find((value) => value.id === valueId)?.name).filter(Boolean);
+      return `<li><strong>${escapeHtml(domain.name)} — ${domain.displayPercent}%</strong>${values.length ? `<ul>${values.map((value) => `<li>${escapeHtml(value)}</li>`).join("")}</ul>` : "<p>No assigned Values.</p>"}</li>`;
+    }).join("");
+    const relationshipFallback = map.values.map((value) => `<li>${escapeHtml(value.name)} — connected to ${escapeHtml(naturalList(value.domainIds.map((domainId) => map.domains.find((domain) => domain.id === domainId)?.name).filter(Boolean)))}</li>`).join("");
+    return `<section class="values-map" aria-labelledby="values-map-heading">
+      <h4 id="values-map-heading">My values map</h4>
+      <p class="values-map-intro">Life Domains are sized by Relative Priority; Values connect to every domain where you assigned them.</p>
+      ${missionMapSvg(map, desktop, "values-map-desktop")}
+      ${missionMapSvg(map, mobile, "values-map-mobile")}
+      <div class="visually-hidden" data-values-map-fallback>
+        <p>You connects to all selected life domains. Each domain lists its Relative Priority and assigned Values.</p>
+        <ul>${domainFallback}</ul>
+        <p>Value relationships:</p><ul>${relationshipFallback}</ul>
+      </div>
+    </section>`;
+  }
+
   function missionMarkup(data, state) {
     if (state.mission.autoGenerated !== false) {
       state.mission.statement = generatedMissionStatement(data, state);
       state.mission.autoGenerated = true;
     }
-    const directions = rankedMissionDirections(data, state).slice(0, 3);
-    return `<h3>Mission</h3><p>This draft uses your selected Values, assignments, life-domain importance, and Assessment ranking. Edit it until it sounds like you.</p>
-      ${directions.length ? `<section class="values-mission-directions" aria-labelledby="values-mission-directions-heading"><h4 id="values-mission-directions-heading">Your highest-priority directions</h4>${directions.map((item) => `<div><strong>${escapeHtml(item.domain.name)} — ${item.displayPercent}%</strong><span>${escapeHtml(item.values.map((value) => value.name).join(", "))}</span></div>`).join("")}</section>` : ""}
-      <label for="mission-result">Editable mission statement</label><textarea id="mission-result" data-mission-statement>${escapeHtml(state.mission.statement)}</textarea>
-      <button type="button" class="secondary" data-regenerate-mission>Regenerate from my current rankings and assignments</button>
-      ${assessmentInsightsMarkup(data, state, "Priorities informing this draft")}`;
+    const ranked = rankedSelectedDomains(data, state);
+    return `<h3>Mission</h3>
+      <section class="values-mission-priorities" aria-labelledby="values-mission-priorities-heading">
+        <h4 id="values-mission-priorities-heading">Priorities</h4>
+        ${priorityDistributionMarkup(ranked)}
+        ${missionCalculationDetailsMarkup(ranked)}
+      </section>
+      ${missionMapMarkup(data, state, ranked)}
+      <section class="values-mission-statement" aria-labelledby="values-mission-statement-heading">
+        <h4 id="values-mission-statement-heading">Mission statement</h4>
+        <p>This draft uses your selected Values, assignments, life-domain importance, and Assessment ranking. Edit it until it sounds like you.</p>
+        <label for="mission-result">Editable mission statement</label><textarea id="mission-result" data-mission-statement>${escapeHtml(state.mission.statement)}</textarea>
+        <button type="button" class="secondary" data-regenerate-mission>Regenerate from my current rankings and assignments</button>
+      </section>`;
   }
 
   function setupValuesActionBar(root, getState, getCollapsed, setCollapsed) {

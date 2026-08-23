@@ -224,6 +224,7 @@ git remote get-url origin
 git branch --show-current
 git rev-parse --short HEAD
 git status --short --branch
+git ls-remote origin refs/heads/master
 ```
 
 Expected:
@@ -251,6 +252,17 @@ Codex should **STOP** if:
 - a force push would be required.
 
 Never force push unless explicitly requested.
+
+The SHA returned by `git ls-remote origin refs/heads/master` at the start of a run is the authoritative baseline. Do not require an older hard-coded starting SHA.
+
+In a managed Windows Codex run, a dirty `git status` is not automatically evidence of user work because the checkout's index can be stale. For every reported tracked modification:
+
+1. obtain current authoritative remote `master` in a disposable clean clone or equivalent read-only comparison environment;
+2. compare the actual working-tree file bytes with the corresponding remote-master file bytes;
+3. treat byte-identical reported modifications as **CLEAN-EQUIVALENT** and continue;
+4. **STOP** if any reported tracked file differs byte-for-byte, because it may be genuine user work.
+
+Known ignored Codex artifacts under `tmp/` do not by themselves make the checkout dirty. Unexpected non-ignored/untracked files still require inspection.
 
 ---
 
@@ -489,12 +501,18 @@ Observed pattern:
 - Codex may commit/push successfully from a disposable clone or isolated Git metadata;
 - normal interactive Git Bash can later reconcile the original checkout.
 
-Operational rule:
+Managed-ACL operating procedure:
 
-1. verify the remote commit independently;
-2. use normal Git Bash to fetch/compare;
-3. reset local only after confirming no independent work would be lost;
-4. never force push to repair a sandbox ACL problem.
+1. establish authoritative remote `master` with `git ls-remote origin refs/heads/master`;
+2. when status reports tracked changes, compare working-tree bytes to that remote tree instead of trusting a possibly stale local index;
+3. byte-identical tracked files mean **CLEAN-EQUIVALENT**; report the condition and continue;
+4. real byte differences mean **STOP**; do not overwrite possible user work;
+5. try normal Git writes first, but do not fight repeated index/ref/lock denial;
+6. if necessary, implement/test in the original working tree, copy only intended changed files into a disposable clean clone based on the exact starting remote SHA, and commit there;
+7. immediately before pushing, run `git ls-remote origin refs/heads/master` again and preserve any concurrent commits;
+8. push non-force only, verify the resulting remote SHA independently, and distinguish the stale main-checkout HEAD from authoritative remote HEAD in the handoff.
+
+Never force push or reset the original checkout merely to repair a sandbox ACL problem.
 
 ---
 
@@ -1380,17 +1398,9 @@ This score is a planning aid based on the user's answers, not a clinical measure
 
 ---
 
-# 31. Relative Priority — latest requirement, pending correction
+# 31. Relative Priority — implemented
 
-The verified code at `e0109ff` still used:
-
-```text
-relative = attention_score / maximum_attention_score × 100
-```
-
-The requirement changed.
-
-Desired:
+The shared Assessment ranking uses:
 
 ```text
 total_positive_score = sum(all positive attention scores)
@@ -1435,9 +1445,9 @@ Do not fake equal shares if all raw scores are zero.
 
 ---
 
-# 32. Pending horizontal Relative Priority visualization
+# 32. Horizontal Relative Priority visualization — implemented
 
-The user wants a Backgammon-Simplified-style compact horizontal segmented bar.
+Mission and Assessment reuse a compact horizontal segmented bar driven by the shared ranking data.
 
 Requirements:
 
@@ -1451,7 +1461,7 @@ Requirements:
 - accessible text/ARIA exposes equivalent information;
 - mobile (~390px) does not horizontally overflow.
 
-Before implementation, inspect Backgammon reference commit `6ce8831...` for a probability/distribution/segmented-bar pattern and reuse mechanics/design tokens if appropriate.
+No separate priority formula or duplicated stored percentage exists.
 
 ---
 
@@ -1544,7 +1554,7 @@ Inputs remain `min=1`, `max=10`.
 
 ---
 
-# 36. Mission architecture — latest requirement
+# 36. Mission architecture — implemented
 
 Mission comes after Assessment and before Act.
 
@@ -1561,21 +1571,30 @@ Algorithm:
 
 Do not gather top-domain Values and then globally reorder them in a way that destroys domain priority.
 
-Suggested preview:
+The rendered Mission information architecture is:
 
 ```text
-Your highest-priority directions
-
-Close Relationships — 42%
-Connection, Compassion, Courage
-
-Personal Growth — 31%
-Curiosity, Learning
+Mission
+    Priorities
+    horizontal Relative Priority bar
+    View calculation details (native disclosure, closed by default)
+    My values map
+    Mission statement
 ```
 
-Then editable Mission text.
+The calculation disclosure contains every selected life domain's H/M/L importance, Current Score, Desired Score, signed/positive gap, raw Attention Score, normalized Relative Priority, and the single shared formula explanation. Positive displayed shares total 100%; all-zero inputs remain truthful at 0%.
 
-Manual edit persists. Only explicit Regenerate should replace it.
+The map is derived view state and is not added to saved-progress schemas:
+
+```text
+You
+  -> selected Life Domains (circle area sized by normalized Relative Priority)
+       -> all Values assigned to each domain
+```
+
+It uses deterministic SVG rather than a graph dependency. Desktop uses a ranked radial layout; narrow screens use a taller deterministic domain/value branch layout. Each Value is one visual node per rendered map. A Value assigned to several domains receives an edge from every one of those domains. Zero-score domains remain visible at the minimum circle size while retaining a truthful `0%` label. Full domain names, percentages, and relationships are also exposed through SVG descriptions and structured assistive text.
+
+The generated Mission text remains editable. Manual edits persist. Only explicit Regenerate replaces a manual draft; opening or closing either disclosure does not regenerate it.
 
 ---
 
@@ -1601,6 +1620,8 @@ Each domain should show:
 - Values actually assigned to that domain.
 
 Do not show unrelated selected Values under a domain.
+
+Assigned Values are now a nested native disclosure labelled `Values for this domain (N)`. It is closed by default inside the normally open outer domain disclosure, keeping What/How work prominent. Toggling it does not rerender or change selected What/How, custom text, paging, actioned state, or shortlist state. Domains with no assignments show a non-blocking return-to-Assign note inside the disclosure.
 
 ---
 
@@ -1914,6 +1935,7 @@ site/assets/skill-practice-apps.js
 site/includes/bs-scripts.html
 tests/test_values_redesign.py
 tests/test_values_smart.js
+tests/test_values_mission_map.js
 ```
 
 The next pass should preserve and extend this work.
@@ -2182,9 +2204,9 @@ Important principles:
 
 ---
 
-# 58. Next focused correction sprint
+# 58. Historical focused correction sprint — implemented
 
-The next Codex pass should start from current remote `master` and make a **focused correction**, not a broad rewrite.
+The navigation, normalized priority, What/How, and recurring scheduling correction described below is an implemented historical checkpoint, not the next task. Future passes should start from current remote `master` and preserve this architecture.
 
 Do not redo:
 
@@ -2198,7 +2220,7 @@ Do not redo:
 - unrelated Skill Finder tools;
 - Personal Planning architecture.
 
-Required work:
+Implemented scope:
 
 1. furthest-visited Values step navigation;
 2. scroll-to-top on actual step transitions;
@@ -2678,7 +2700,7 @@ Do not:
 - reintroduce Perfection canonically;
 - aggressively merge merely related Values;
 - hide the attention-score formula;
-- after the pending fix, allow positive Relative Priority display to total anything other than 100%;
+- allow positive Relative Priority display to total anything other than 100%;
 - auto-fill SMART Relevant from Values;
 - treat generic timers/reminders as What-specific Hows;
 - silently discard old progress;
@@ -2686,7 +2708,7 @@ Do not:
 
 ---
 
-# 77. Immediate next-action checklist
+# 77. Current ACL-aware run checklist
 
 Before the next Codex run:
 
@@ -2695,10 +2717,10 @@ Before the next Codex run:
 3. verify clean worktree;
 4. verify SSH origin;
 5. launch Codex with `therapy-nav`;
-6. give it the focused Values navigation / priority / What-How / recurrence correction task;
+6. compare tracked working-tree bytes to authoritative remote bytes if managed ACLs make status unreliable;
 7. require non-force commit/push;
 8. independently verify resulting remote commit;
-9. reconcile local checkout using normal Git Bash;
+9. if the main checkout cannot write Git metadata, distinguish its local HEAD/status from the verified remote result;
 10. render and manually inspect Values + Goal Builder.
 
 Preflight:
@@ -2725,14 +2747,14 @@ clean
 
 ---
 
-# 78. Suggested next Codex task
+# 78. Completed focused Values checkpoint
 
 ```text
 PROJECT: Therapy Skill Kit
-TASK: Focused Values navigation, normalized Relative Priority, specific What/How, and recurring SMART scheduling correction.
+IMPLEMENTED: Values navigation, normalized Relative Priority, specific What/How, recurring SMART scheduling, Mission values map, and compact Act assigned-Values context.
 ```
 
-The task should explicitly preserve current `origin/master` and treat it as the baseline rather than expecting an older hard-coded commit.
+The next task should explicitly preserve current `origin/master` and treat it as the baseline rather than expecting an older hard-coded commit.
 
 ---
 

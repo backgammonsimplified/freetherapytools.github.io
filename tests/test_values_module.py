@@ -308,10 +308,31 @@ class ValuesModuleTests(unittest.TestCase):
         self.assertIn("function generatedMissionStatement", self.javascript)
         self.assertIn("data-mission-statement", self.javascript)
         self.assertIn("Regenerate from my current rankings and assignments", self.javascript)
-        self.assertIn("Priorities informing this draft", self.javascript)
+        self.assertNotIn("Priorities informing this draft", self.javascript)
+        self.assertNotIn("Your highest-priority directions", self.javascript)
+        self.assertIn('id="values-mission-priorities-heading">Priorities</h4>', self.javascript)
+        self.assertIn('<details class="values-calculation-details">', self.javascript)
+        self.assertIn("View calculation details", self.javascript)
+        self.assertIn("My values map", self.javascript)
+        self.assertIn('id="values-mission-statement-heading">Mission statement</h4>', self.javascript)
         self.assertIn("TherapySkillHandoff.goalBuilderUrl(token)", self.javascript)
         self.assertIn('["DISCOVER", "CATEGORIZE", "ASSIGN", "ASSESS", "MISSION", "ACT", "BARRIERS"]', self.javascript)
         self.assertNotIn("function reviewMarkup", self.javascript)
+
+    def test_mission_map_and_compact_act_context_contracts(self):
+        for token in (
+            "function missionMapData", "function missionMapLayout", "function domainPriorityRadius",
+            'data-map-node="you"', "values-map-svg-${layout.mode}",
+            'role="img" aria-labelledby=', "data-values-map-fallback", "connected to",
+            "Math.sqrt((minimum * minimum)", "Math.PI * 2", 'mode === "mobile"',
+        ):
+            self.assertIn(token, self.javascript)
+        self.assertNotIn("Math.random", self.javascript)
+        self.assertIn('<details class="values-assigned-values"><summary>Values for this domain (${values.length})</summary>', self.javascript)
+        self.assertNotIn("<h4>Values you placed here</h4>", self.javascript)
+        self.assertIn("No Values are assigned to this domain yet", self.javascript)
+        self.assertIn(".values-map-svg-mobile", self.css)
+        self.assertIn(".values-assigned-values", self.css)
 
     def test_completed_process_steps_are_clickable_for_back_navigation(self):
         self.assertIn('data-values-step="${index}"', self.javascript)
