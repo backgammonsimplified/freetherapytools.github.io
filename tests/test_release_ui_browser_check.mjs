@@ -97,6 +97,10 @@ assert.ok(
   helperSource.includes('tab.playwright.locator(".bs-term-lookup-close")')
 );
 assert.ok(canonicalHelperSource.includes("mobile Wise Mind lookup resolves in place"));
+assert.ok(canonicalHelperSource.includes("scroll auto-hide preserves lesson article geometry"));
+assert.ok(canonicalHelperSource.includes("scroll auto-hide preserves right-rail geometry"));
+assert.ok(canonicalHelperSource.includes("scroll auto-hide creates no horizontal overflow"));
+assert.ok(canonicalHelperSource.includes("scrolling upward restores the left rail without moving page geometry"));
 assert.ok(canonicalHelperSource.includes("lesson content reclaims left-rail space"));
 assert.ok(canonicalHelperSource.includes("collapsing the right rail reflows lesson content"));
 

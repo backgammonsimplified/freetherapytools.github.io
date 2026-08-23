@@ -2369,7 +2369,7 @@
       sidebar.querySelector(".sidebar-menu-container") || sidebar;
     const pageHeader = document.getElementById("quarto-header");
     const toggle = document.createElement("button");
-    let collapsed = false;
+    let autoHidden = false;
     let manuallyCollapsed = false;
     let lastScrollY = window.scrollY;
     let lastSidebarScrollTop = sidebarScroller.scrollTop;
@@ -2389,6 +2389,7 @@
     };
 
     const updateVisibility = function () {
+      const collapsed = autoHidden || manuallyCollapsed;
       const navbarHidden = Boolean(
         pageHeader && pageHeader.classList.contains("headroom--unpinned")
       );
@@ -2410,9 +2411,19 @@
     };
 
     const update = function () {
-      const active = desktopQuery.matches && collapsed;
-      sidebar.hidden = active;
-      document.body.classList.toggle("bs-learn-left-sidebar-collapsed", active);
+      const manualActive = desktopQuery.matches && manuallyCollapsed;
+      const autoHiddenActive =
+        desktopQuery.matches && autoHidden && !manualActive;
+      const active = manualActive || autoHiddenActive;
+      sidebar.hidden = manualActive;
+      document.body.classList.toggle(
+        "bs-learn-left-sidebar-collapsed",
+        manualActive
+      );
+      document.body.classList.toggle(
+        "bs-learn-left-sidebar-auto-hidden",
+        autoHiddenActive
+      );
       updateVisibility();
       toggle.setAttribute("aria-expanded", active ? "false" : "true");
       toggle.setAttribute(
@@ -2441,9 +2452,14 @@
     };
 
     toggle.addEventListener("click", function () {
-      collapsed = !collapsed;
-      manuallyCollapsed = collapsed;
-      autoCollapsePending = !collapsed;
+      if (autoHidden || manuallyCollapsed) {
+        autoHidden = false;
+        manuallyCollapsed = false;
+        autoCollapsePending = true;
+      } else {
+        manuallyCollapsed = true;
+        autoCollapsePending = false;
+      }
       update();
     });
     window.addEventListener("resize", update);
@@ -2453,8 +2469,8 @@
         const currentScrollY = window.scrollY;
         if (currentScrollY <= 32) {
           autoCollapsePending = true;
-          if (!keepExpandedWhileScrolling && collapsed && !manuallyCollapsed) {
-            collapsed = false;
+          if (!keepExpandedWhileScrolling && autoHidden) {
+            autoHidden = false;
             pageScrollingDown = false;
             scrollingDown = false;
             lastScrollY = currentScrollY;
@@ -2469,10 +2485,9 @@
           if (
             keepExpandedWhileScrolling === false &&
             !scrollingDown &&
-            collapsed &&
-            !manuallyCollapsed
+            autoHidden
           ) {
-            collapsed = false;
+            autoHidden = false;
             autoCollapsePending = true;
             update();
             return;
@@ -2485,8 +2500,8 @@
             currentScrollY > 32
           ) {
             autoCollapsePending = false;
-            if (!collapsed) {
-              collapsed = true;
+            if (!autoHidden) {
+              autoHidden = true;
               update();
               return;
             }
@@ -2516,7 +2531,7 @@
     }
     if ("ResizeObserver" in window) {
       new ResizeObserver(function () {
-        if (!toggle.hidden && !collapsed) {
+        if (!toggle.hidden && !autoHidden && !manuallyCollapsed) {
           positionExpandedToggle();
         }
       }).observe(sidebar);

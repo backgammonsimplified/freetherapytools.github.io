@@ -701,10 +701,70 @@ const interactWithLearnSidebar = async (tab, check, context) => {
   );
   check(Boolean(railToggle), context, "whole-left-rail control is visible");
   if (!railToggle) return;
-  const main = tab.playwright.locator("main#quarto-document-content");
-  const beforeWidth = await main.evaluate((element) => element.getBoundingClientRect().width);
+  const article = tab.playwright
+    .locator("main#quarto-document-content > .quarto-title-block")
+    .first();
+  const rightRail = tab.playwright.locator("#quarto-margin-sidebar");
+  const geometry = (locator) =>
+    locator.evaluate((element) => {
+      const rectangle = element.getBoundingClientRect();
+      return { x: rectangle.x, width: rectangle.width };
+    });
+  const withinGeometryTolerance = (before, after) =>
+    Math.abs(before.x - after.x) <= 1 &&
+    Math.abs(before.width - after.width) <= 1;
+  const beforeAutoArticle = await geometry(article);
+  const beforeAutoRightRail = await geometry(rightRail);
+  const beforeAutoOverflow = await tab.playwright.locator("html").evaluate(
+    (element) => element.scrollWidth - element.clientWidth
+  );
+  await scrollTo(tab, 700);
+  const autoHiddenBodyClass =
+    (await tab.playwright.locator("body").getAttribute("class")) || "";
+  const afterAutoArticle = await geometry(article);
+  const afterAutoRightRail = await geometry(rightRail);
+  check(
+    autoHiddenBodyClass.includes("bs-learn-left-sidebar-auto-hidden") &&
+      !autoHiddenBodyClass.includes("bs-learn-left-sidebar-collapsed") &&
+      (await sidebar.getAttribute("hidden")) === null &&
+      !(await sidebar.isVisible()),
+    context,
+    "scroll auto-hide moves the left rail off-canvas without removing its grid item"
+  );
+  check(
+    withinGeometryTolerance(beforeAutoArticle, afterAutoArticle),
+    context,
+    "scroll auto-hide preserves lesson article geometry"
+  );
+  check(
+    withinGeometryTolerance(beforeAutoRightRail, afterAutoRightRail),
+    context,
+    "scroll auto-hide preserves right-rail geometry"
+  );
+  check(
+    (await tab.playwright.locator("html").evaluate(
+      (element) => element.scrollWidth - element.clientWidth
+    )) <= beforeAutoOverflow + 1,
+    context,
+    "scroll auto-hide creates no horizontal overflow"
+  );
+  await scrollTo(tab, 0);
+  const restoredAutoArticle = await geometry(article);
+  const restoredAutoRightRail = await geometry(rightRail);
+  check(
+    await sidebar.isVisible() &&
+      withinGeometryTolerance(beforeAutoArticle, restoredAutoArticle) &&
+      withinGeometryTolerance(beforeAutoRightRail, restoredAutoRightRail),
+    context,
+    "scrolling upward restores the left rail without moving page geometry"
+  );
+  const beforeWidth = await article.evaluate(
+    (element) => element.getBoundingClientRect().width
+  );
   await railToggle.click();
-  const afterWidth = await main.evaluate((element) => element.getBoundingClientRect().width);
+  const afterWidth = await article.evaluate(
+    (element) => element.getBoundingClientRect().width
+  );
   check(
     (await sidebar.getAttribute("hidden")) !== null &&
       (await tab.playwright.locator("body").getAttribute("class")).includes(

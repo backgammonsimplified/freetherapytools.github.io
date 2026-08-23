@@ -224,6 +224,7 @@ function renderedSidebarFixture(relativePath) {
 }
 
 const documentListeners = new Map();
+const windowListeners = new Map();
 const fakeBody = new FakeElement("body");
 fakeBody.classList.add("bs-learn-article");
 let activeSidebar = null;
@@ -253,7 +254,11 @@ global.CustomEvent = class CustomEvent {
 global.window = {
   location: { pathname: "/learn/cube/tipp.html" },
   scrollY: 0,
-  addEventListener() {},
+  addEventListener(name, callback) {
+    const callbacks = windowListeners.get(name) || [];
+    callbacks.push(callback);
+    windowListeners.set(name, callbacks);
+  },
   requestAnimationFrame(callback) {
     callback();
     return 1;
@@ -264,7 +269,9 @@ global.window = {
   matchMedia() {
     return { matches: true, addEventListener() {} };
   },
-  dispatchEvent() {}
+  dispatchEvent(event) {
+    (windowListeners.get(event.type) || []).forEach((callback) => callback(event));
+  }
 };
 
 for (const relativePath of [
@@ -317,6 +324,15 @@ const wholeRailToggle = fakeBody.children.find((child) =>
 );
 assert.ok(wholeRailToggle, "whole-left-rail toggle did not mount");
 assert.equal(wholeRailToggle.hidden, false, "desktop whole-left-rail toggle is hidden");
+window.scrollY = 200;
+window.dispatchEvent({ type: "scroll" });
+assert.equal(activeSidebar.hidden, false, "scroll auto-hide removed the sidebar grid item");
+assert.equal(fakeBody.classList.contains("bs-learn-left-sidebar-auto-hidden"), true);
+assert.equal(fakeBody.classList.contains("bs-learn-left-sidebar-collapsed"), false);
+window.scrollY = 100;
+window.dispatchEvent({ type: "scroll" });
+assert.equal(activeSidebar.hidden, false);
+assert.equal(fakeBody.classList.contains("bs-learn-left-sidebar-auto-hidden"), false);
 wholeRailToggle.click();
 assert.equal(activeSidebar.hidden, true);
 assert.equal(fakeBody.classList.contains("bs-learn-left-sidebar-collapsed"), true);
