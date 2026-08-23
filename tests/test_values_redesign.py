@@ -66,7 +66,8 @@ class ValuesRedesignTests(unittest.TestCase):
 
     def test_goal_builder_specialization_and_save_export_wording(self):
         for token in (
-            "function initGoalBuilder", "Target date / deadline", "Schedule a specific action", "Browser-local timezone",
+            "function initGoalBuilder", "Target date / deadline", "Schedule an event or reminder", "Times use your browser timezone",
+            "Event or reminder date", "Starts at", "Duration in minutes", "data-calendar-duration=\"30\"", "step=\"any\"",
             "Download calendar event (.ics)", "Add to Google Calendar", "No event details are sent to Google before you click",
             "BEGIN:VCALENDAR", "DTSTART", "DTEND", "goalGtdMarkdown", "due_date", "therapy-skill-kit-progress",
         ):

@@ -42,6 +42,18 @@ assert.equal(normalizedOld.targetDate, "");
 assert.equal(normalizedOld.calendar.enabled, false);
 
 const calendar = { enabled: true, date: "2026-09-15", startTime: "19:00", durationMinutes: "30" };
+assert.equal(goal.calendarWindow(calendar).end.getTime() - goal.calendarWindow(calendar).start.getTime(), 30 * 60 * 1000, "the default 30-minute duration works");
+for (const durationMinutes of ["0.5", "1", "15", "30", "75", "1440", "1500", "10080"]) {
+  assert.ok(goal.calendarWindow({ ...calendar, durationMinutes }), `${durationMinutes} minutes should be accepted`);
+}
+for (const durationMinutes of ["", "0", "-1", "not-a-number"]) {
+  assert.equal(goal.calendarWindow({ ...calendar, durationMinutes }), null, `${durationMinutes || "blank"} is not a positive duration`);
+}
+assert.equal(goal.calendarHelpText({ ...calendar, date: "" }), "Choose the event or reminder date.");
+assert.equal(goal.calendarHelpText({ ...calendar, startTime: "" }), "Choose when the event or reminder starts.");
+assert.match(goal.calendarHelpText({ ...calendar, durationMinutes: "0" }), /any positive duration/);
+assert.match(goal.calendarHelpText(calendar), /^Ready\./);
+assert.equal(goal.calendarDateFromOffset(1, new Date(2026, 7, 23, 23, 30)), "2026-08-24");
 const ics = goal.buildIcsEvent({ title: "Call, Sam; check in", description: "Line 1\nPath C:\\Temp", calendar, now: new Date("2026-08-23T12:00:00Z"), uid: "smart@example" });
 for (const line of ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Therapy Skill Kit//SMART Goal Builder//EN", "BEGIN:VEVENT", "UID:smart@example", "DTSTAMP:20260823T120000Z", "DTSTART:", "DTEND:", "SUMMARY:Call\\, Sam\\; check in", "DESCRIPTION:Line 1\\nPath C:\\\\Temp", "END:VEVENT", "END:VCALENDAR"]) assert.ok(ics.includes(line), line);
 assert.equal(goal.buildIcsEvent({ title: "Call Sam", calendar: { ...calendar, startTime: "" } }), null);

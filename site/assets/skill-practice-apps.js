@@ -108,6 +108,17 @@
 
   function pad(number) { return String(number).padStart(2, "0"); }
 
+  function localDateValue(date) {
+    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+  }
+
+  function calendarDateFromOffset(days, now = new Date()) {
+    const date = new Date(now.getTime());
+    date.setHours(12, 0, 0, 0);
+    date.setDate(date.getDate() + Number(days || 0));
+    return localDateValue(date);
+  }
+
   function utcCalendarStamp(date) {
     return `${date.getUTCFullYear()}${pad(date.getUTCMonth() + 1)}${pad(date.getUTCDate())}T${pad(date.getUTCHours())}${pad(date.getUTCMinutes())}${pad(date.getUTCSeconds())}Z`;
   }
@@ -116,11 +127,22 @@
     const dateMatch = String(calendar?.date || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
     const timeMatch = String(calendar?.startTime || "").match(/^(\d{2}):(\d{2})$/);
     const duration = Number(calendar?.durationMinutes);
-    if (!dateMatch || !timeMatch || !Number.isInteger(duration) || duration < 1 || duration > 1440) return null;
+    if (!dateMatch || !timeMatch || !Number.isFinite(duration) || duration <= 0) return null;
     const parts = [...dateMatch.slice(1), ...timeMatch.slice(1)].map(Number);
     const start = new Date(parts[0], parts[1] - 1, parts[2], parts[3], parts[4], 0, 0);
     if (start.getFullYear() !== parts[0] || start.getMonth() !== parts[1] - 1 || start.getDate() !== parts[2] || start.getHours() !== parts[3] || start.getMinutes() !== parts[4]) return null;
-    return { start, end: new Date(start.getTime() + duration * 60000) };
+    const end = new Date(start.getTime() + duration * 60000);
+    return Number.isFinite(end.getTime()) ? { start, end } : null;
+  }
+
+  function calendarHelpText(calendar) {
+    if (!String(calendar?.date || "").trim()) return "Choose the event or reminder date.";
+    if (!String(calendar?.startTime || "").trim()) return "Choose when the event or reminder starts.";
+    const duration = Number(calendar?.durationMinutes);
+    if (!Number.isFinite(duration) || duration <= 0) return "Enter any positive duration in minutes. For example: 10, 30, 75, or 180.";
+    return calendarWindow(calendar)
+      ? "Ready. You can download the calendar file or open the prefilled Google Calendar event."
+      : "Check the date and start time, then try again.";
   }
 
   function escapeIcsText(value) {
@@ -339,9 +361,13 @@
         <form class="skill-app-panel" data-goal-form>${state.context.domain || state.context.what ? `<aside class="skill-app-note"><strong>From your Values plan</strong>${state.context.domain ? `<span>Life Domain: ${escapeHtml(state.context.domain)}</span>` : ""}${state.context.values.length ? `<span>Values: ${escapeHtml(state.context.values.join(", "))}</span>` : ""}${state.context.what ? `<span>What: ${escapeHtml(state.context.what)}</span>` : ""}${state.context.how ? `<span>How: ${escapeHtml(state.context.how)}</span>` : ""}</aside>` : ""}
           ${fields.map(([key, label]) => `<label for="goal-${key}">${escapeHtml(label)}</label><textarea id="goal-${key}" name="${key}" data-goal-field="${key}">${escapeHtml(state.fields[key])}</textarea>`).join("")}
           <fieldset class="skill-app-fieldset"><legend>Target date / deadline</legend><p class="skill-app-field-help">This is goal or task metadata. It does not automatically create a calendar event.</p><label for="goal-target-date">Target date</label><input id="goal-target-date" type="date" data-goal-target-date value="${escapeHtml(state.targetDate)}"></fieldset>
-          <fieldset class="skill-app-fieldset"><legend>Specific calendar commitment</legend><label class="skill-app-check"><input type="checkbox" data-calendar-enabled ${state.calendar.enabled ? "checked" : ""}> <span>Schedule a specific action</span></label><p>Use this only for a date-and-time commitment such as a call, meeting, or focused work session.</p>
-            <div data-calendar-fields ${state.calendar.enabled ? "" : "hidden"}><div class="skill-app-inline-fields"><div><label for="goal-calendar-date">Date</label><input id="goal-calendar-date" type="date" data-calendar-field="date" value="${escapeHtml(state.calendar.date)}"></div><div><label for="goal-calendar-time">Start time</label><input id="goal-calendar-time" type="time" data-calendar-field="startTime" value="${escapeHtml(state.calendar.startTime)}"></div><div><label for="goal-calendar-duration">Duration (minutes)</label><input id="goal-calendar-duration" type="number" min="1" max="1440" step="5" inputmode="numeric" data-calendar-field="durationMinutes" value="${escapeHtml(state.calendar.durationMinutes)}"></div></div>
-              <p id="goal-calendar-timezone">Browser-local timezone: <strong>${escapeHtml(timezone)}</strong></p><p id="goal-calendar-help">Enter a date, start time, and duration to enable calendar actions.</p>
+          <fieldset class="skill-app-fieldset"><legend>Event or reminder</legend><label class="skill-app-check"><input type="checkbox" data-calendar-enabled ${state.calendar.enabled ? "checked" : ""}> <span>Schedule an event or reminder</span></label><p>Use this for something that belongs at a particular date and time, such as a call, meeting, reminder, or focused work session.</p>
+            <div data-calendar-fields ${state.calendar.enabled ? "" : "hidden"}><div class="skill-app-inline-fields goal-calendar-fields">
+              <div class="goal-calendar-field"><label for="goal-calendar-date">Event or reminder date</label><input id="goal-calendar-date" type="date" data-calendar-field="date" value="${escapeHtml(state.calendar.date)}"><div class="goal-calendar-shortcuts" aria-label="Date shortcuts"><button type="button" class="secondary" data-calendar-date-offset="0">Today</button><button type="button" class="secondary" data-calendar-date-offset="1">Tomorrow</button><button type="button" class="secondary" data-calendar-date-offset="7">In one week</button></div></div>
+              <div class="goal-calendar-field"><label for="goal-calendar-time">Starts at</label><input id="goal-calendar-time" type="time" data-calendar-field="startTime" value="${escapeHtml(state.calendar.startTime)}"><div class="goal-calendar-shortcuts" aria-label="Start-time shortcuts"><button type="button" class="secondary" data-calendar-start-time="09:00">9:00 AM</button><button type="button" class="secondary" data-calendar-start-time="13:00">1:00 PM</button><button type="button" class="secondary" data-calendar-start-time="18:00">6:00 PM</button></div></div>
+              <div class="goal-calendar-field"><label for="goal-calendar-duration">Duration in minutes</label><input id="goal-calendar-duration" type="number" min="0.1" step="any" inputmode="decimal" data-calendar-field="durationMinutes" aria-describedby="goal-calendar-duration-help" value="${escapeHtml(state.calendar.durationMinutes)}"><p class="skill-app-field-help" id="goal-calendar-duration-help">Enter any positive number of minutes, or use a shortcut.</p><div class="goal-calendar-shortcuts" aria-label="Duration shortcuts"><button type="button" class="secondary" data-calendar-duration="15">15 min</button><button type="button" class="secondary" data-calendar-duration="30">30 min</button><button type="button" class="secondary" data-calendar-duration="45">45 min</button><button type="button" class="secondary" data-calendar-duration="60">1 hour</button><button type="button" class="secondary" data-calendar-duration="90">90 min</button></div></div>
+            </div>
+              <p id="goal-calendar-timezone">Times use your browser timezone: <strong>${escapeHtml(timezone)}</strong></p><p id="goal-calendar-help" role="status" aria-live="polite">${escapeHtml(calendarHelpText(state.calendar))}</p>
               <div class="skill-app-actions"><button type="button" data-download-ics ${calendarReady() ? "" : "disabled"} aria-describedby="goal-calendar-help">Download calendar event (.ics)</button><button type="button" data-google-calendar ${calendarReady() ? "" : "disabled"} aria-describedby="goal-google-copy">Add to Google Calendar <span class="visually-hidden">(opens in a new tab)</span></button></div>
               <p id="goal-google-copy">Opens a prefilled Google Calendar event in a new tab. You choose whether to save it. No event details are sent to Google before you click.</p>
             </div></fieldset>
@@ -355,6 +381,8 @@
       const ready = calendarReady();
       root.querySelector("[data-download-ics]")?.toggleAttribute("disabled", !ready);
       root.querySelector("[data-google-calendar]")?.toggleAttribute("disabled", !ready);
+      const help = root.querySelector("#goal-calendar-help");
+      if (help) help.textContent = calendarHelpText(state.calendar);
     }
 
     function bind() {
@@ -365,7 +393,29 @@
         root.querySelector("[data-calendar-fields]").hidden = !event.target.checked;
         updateCalendarActions();
       });
-      root.querySelectorAll("[data-calendar-field]").forEach((field) => field.addEventListener("input", () => { state.calendar[field.dataset.calendarField] = field.value; updateCalendarActions(); }));
+      root.querySelectorAll("[data-calendar-field]").forEach((field) => {
+        const update = () => { state.calendar[field.dataset.calendarField] = field.value; updateCalendarActions(); };
+        field.addEventListener("input", update);
+        field.addEventListener("change", update);
+      });
+      root.querySelectorAll("[data-calendar-date-offset]").forEach((button) => button.addEventListener("click", () => {
+        state.calendar.date = calendarDateFromOffset(button.dataset.calendarDateOffset);
+        const input = root.querySelector('[data-calendar-field="date"]');
+        if (input) input.value = state.calendar.date;
+        updateCalendarActions();
+      }));
+      root.querySelectorAll("[data-calendar-start-time]").forEach((button) => button.addEventListener("click", () => {
+        state.calendar.startTime = button.dataset.calendarStartTime;
+        const input = root.querySelector('[data-calendar-field="startTime"]');
+        if (input) input.value = state.calendar.startTime;
+        updateCalendarActions();
+      }));
+      root.querySelectorAll("[data-calendar-duration]").forEach((button) => button.addEventListener("click", () => {
+        state.calendar.durationMinutes = button.dataset.calendarDuration;
+        const input = root.querySelector('[data-calendar-field="durationMinutes"]');
+        if (input) input.value = state.calendar.durationMinutes;
+        updateCalendarActions();
+      }));
       root.querySelector("[data-goal-form]")?.addEventListener("submit", (event) => { event.preventDefault(); state.summaryBuilt = true; render(); root.querySelector("[data-goal-summary]")?.focus(); });
       root.querySelector("[data-clear-goal]")?.addEventListener("click", () => { state = initialGoalState(); render(); root.querySelector("textarea")?.focus(); });
       root.querySelector("[data-download-ics]")?.addEventListener("click", () => {
@@ -488,6 +538,6 @@
     });
   }
 
-  if (typeof module !== "undefined" && module.exports) module.exports = { FORM_DEFINITIONS, calendarWindow, escapeIcsText, buildIcsEvent, buildGoogleCalendarUrl, goalBuilderPrefill, normalizeGoalState, goalGtdMarkdown, goalTitle };
+  if (typeof module !== "undefined" && module.exports) module.exports = { FORM_DEFINITIONS, calendarDateFromOffset, calendarWindow, calendarHelpText, escapeIcsText, buildIcsEvent, buildGoogleCalendarUrl, goalBuilderPrefill, normalizeGoalState, goalGtdMarkdown, goalTitle };
   if (typeof document !== "undefined") document.addEventListener("DOMContentLoaded", start);
 })();
