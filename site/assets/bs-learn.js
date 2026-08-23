@@ -806,6 +806,19 @@
       return;
     }
 
+    if (menu.querySelector(".bs-learn-sidebar-actions")) {
+      return;
+    }
+
+    function updateActiveSection() {
+      sections.forEach(function (section) {
+        section.classList.toggle(
+          "bs-learn-active-section",
+          Boolean(section.querySelector(".sidebar-link.active"))
+        );
+      });
+    }
+
     const controls = document.createElement("div");
     controls.className = "bs-learn-sidebar-actions";
     controls.setAttribute("role", "group");
@@ -866,6 +879,8 @@
         window.setTimeout(update, 0);
       });
     });
+    updateActiveSection();
+    document.addEventListener("bs:active-lesson-change", updateActiveSection);
     update();
   }
 
@@ -1006,7 +1021,7 @@
     lookup.hidden = true;
     lookup.innerHTML =
       '<div class="bs-term-lookup-heading">' +
-      "<strong>Look Up a Term</strong>" +
+      "<strong>Look up a term</strong>" +
       '<button type="button" class="bs-term-lookup-close" ' +
       'data-bs-term-lookup-close aria-controls="bs-term-lookup-panel" ' +
       'aria-expanded="true" aria-label="Collapse term lookup">' +
@@ -1255,8 +1270,12 @@
         "<strong>Page tools</strong>" +
         '<button type="button" data-bs-mobile-tools-close>Close</button>' +
         "</div>" +
+        '<div class="bs-mobile-tools-track" data-bs-mobile-tools-track></div>' +
         '<nav class="bs-mobile-tools-toc" aria-label="On this page" ' +
-        "data-bs-mobile-tools-toc></nav>";
+        "data-bs-mobile-tools-toc></nav>" +
+        '<button type="button" class="bs-mobile-term-lookup" ' +
+        'data-bs-mobile-term-toggle aria-controls="bs-term-lookup-panel" ' +
+        'aria-expanded="false">Look up a term</button>';
       mobileDrawerToc = mobileDrawer.querySelector(
         "[data-bs-mobile-tools-toc]"
       );
@@ -1451,6 +1470,33 @@
       if (!mobileDrawerToc) {
         return;
       }
+      const mobileTrack = mobileDrawer
+        ? mobileDrawer.querySelector("[data-bs-mobile-tools-track]")
+        : null;
+      if (mobileTrack) {
+        mobileTrack.replaceChildren();
+        const sourceTrack = Array.from(
+          document.querySelectorAll("[data-bs-lesson-track-nav]")
+        ).find(function (candidate) {
+          return !candidate.closest("[data-bs-mobile-tools-drawer]");
+        });
+        if (sourceTrack) {
+          const trackClone = sourceTrack.cloneNode(true);
+          trackClone.removeAttribute("id");
+          trackClone.querySelectorAll("[id]").forEach(function (element) {
+            element.removeAttribute("id");
+          });
+          trackClone
+            .querySelectorAll("[hidden]")
+            .forEach(function (element) {
+              element.removeAttribute("hidden");
+            });
+          mobileTrack.appendChild(trackClone);
+          mobileTrack.hidden = false;
+        } else {
+          mobileTrack.hidden = true;
+        }
+      }
       const sourceToc = Array.from(document.querySelectorAll("#TOC")).find(
         tocHasHashLinks
       );
@@ -1525,6 +1571,19 @@
         drawerClose.addEventListener("click", function () {
           setMobileDrawerOpen(false);
           mobileDrawerEdge.focus();
+        });
+      }
+      const mobileTermToggle = mobileDrawer.querySelector(
+        "[data-bs-mobile-term-toggle]"
+      );
+      if (mobileTermToggle) {
+        mobileTermToggle.hidden = !lookup;
+        mobileTermToggle.addEventListener("click", function () {
+          setMobileDrawerOpen(false, { focus: false });
+          preservePagePosition(function () {
+            open();
+          });
+          mobileTermToggle.setAttribute("aria-expanded", "true");
         });
       }
       mobileDrawer.addEventListener("click", function (event) {
@@ -1606,7 +1665,12 @@
         .forEach(function (button) {
           button.setAttribute("aria-expanded", "true");
         });
-      if (input && focusInput && desktopQuery.matches) {
+      document
+        .querySelectorAll("[data-bs-mobile-term-toggle]")
+        .forEach(function (button) {
+          button.setAttribute("aria-expanded", "true");
+        });
+      if (input && focusInput) {
         input.focus({ preventScroll: true });
       }
     };
@@ -1632,6 +1696,11 @@
         .forEach(function (button) {
           button.setAttribute("aria-expanded", "false");
         });
+      document
+        .querySelectorAll("[data-bs-mobile-term-toggle]")
+        .forEach(function (button) {
+          button.setAttribute("aria-expanded", "false");
+        });
       if (settings.returnFocus && termToggle && !termToggle.hidden) {
         termToggle.focus();
       }
@@ -1639,8 +1708,8 @@
 
     const hideLookupOnMobile = function () {
       if (lookup) {
-        if (lookup.parentElement !== tools) {
-          tools.insertBefore(lookup, marginSidebarToggle || backToTop);
+        if (lookup.parentElement !== document.body) {
+          document.body.appendChild(lookup);
         }
         lookup.classList.remove("bs-term-lookup--floating");
         lookup.hidden = true;
@@ -1699,6 +1768,10 @@
           "bs-toc-collapsed",
           effectivelyCollapsed
         );
+        document.body.classList.toggle(
+          "bs-learn-right-sidebar-collapsed",
+          desktopQuery.matches && tocCollapsed
+        );
         if (tocToggle) {
           tocToggle.hidden = true;
         }
@@ -1722,6 +1795,7 @@
             : "\u25b4";
         return;
       }
+      document.body.classList.remove("bs-learn-right-sidebar-collapsed");
       if (tocHeadingToggle) {
         tocHeadingToggle.hidden = true;
       }
@@ -2167,11 +2241,6 @@
       if (!slug || !lookup || !result) {
         return;
       }
-      if (!desktopQuery.matches) {
-        window.location.href =
-          "/glossary/#" + encodeURIComponent(slug);
-        return;
-      }
       suppressRightRailAutoCollapse = true;
       rightRailScrollCollapsed = false;
       if (marginSidebar) {
@@ -2565,6 +2634,9 @@
     canonicalEntryBySlug: canonicalEntryBySlug,
     canonicalShortDefinition: canonicalShortDefinition,
     groupControlState: groupControlState,
+    initializeLearnLeftSidebarToggle: initializeLearnLeftSidebarToggle,
+    initializeLearnSidebarControls: initializeLearnSidebarControls,
+    initializeTermLookup: initializeTermLookup,
     inlineGlossaryTooltipPosition: inlineGlossaryTooltipPosition,
     isMobileDrawerSwipe: isMobileDrawerSwipe,
     isSamePageTocHref: isSamePageTocHref,
@@ -2578,6 +2650,7 @@
     lookupMatchRank: lookupMatchRank,
     mountLesson: mountLesson,
     parseList: parseList,
+    placeLessonTrackLinks: placeLessonTrackLinks,
     rankLessonItems: rankLessonItems,
     setAllGroupsExpanded: setAllGroupsExpanded
   };

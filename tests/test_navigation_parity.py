@@ -1,4 +1,5 @@
 import hashlib
+import re
 import unittest
 from pathlib import Path
 
@@ -6,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
 ASSETS = SITE / "assets"
+RENDERED = SITE / "_site"
 
 
 def read(path: Path) -> str:
@@ -35,6 +37,53 @@ class NavigationParityTests(unittest.TestCase):
                 name,
             )
 
+    def test_rendered_lessons_have_compatible_dom_and_a_deployed_initializer(self) -> None:
+        if not RENDERED.exists():
+            self.skipTest("site/_site is unavailable until Quarto renders the site")
+        initializer = RENDERED / "assets" / "bs-learn.js"
+        self.assertTrue(initializer.is_file(), "rendered navigation initializer is missing")
+        self.assertGreater(initializer.stat().st_size, 20_000)
+
+        pages = {
+            "DBT": RENDERED / "learn" / "cube" / "tipp.html",
+            "CBT": RENDERED / "learn" / "cbt-anxiety" / "thinking-traps.html",
+            "Mindfulness": RENDERED / "learn" / "mindfulness" / "what-skills.html",
+        }
+        expected_tracks = {
+            "DBT": ("Distress Tolerance", "/learn/cube/"),
+            "CBT": ("CBT Skills", "/learn/cbt-anxiety/"),
+            "Mindfulness": ("Mindfulness", "/learn/mindfulness/"),
+        }
+        for curriculum, page in pages.items():
+            self.assertTrue(page.is_file(), f"missing rendered {curriculum} fixture")
+            html = read(page)
+            self.assertRegex(html, r'<body class="[^"]*\bbs-learn-article\b')
+            for marker in (
+                'id="quarto-sidebar"',
+                'class="sidebar-menu-container"',
+                "sidebar-item-section",
+                "sidebar-item-container",
+                "sidebar-item-toggle",
+                'id="quarto-margin-sidebar"',
+                'id="TOC"',
+                "data-bs-term-lookup",
+                "data-bs-lesson-track-nav",
+            ):
+                self.assertIn(marker, html, f"{curriculum}: {marker}")
+            self.assertRegex(
+                html,
+                r'<script src="\.\./\.\./assets/bs-learn\.js\?v=20260822-visible-navigation" defer',
+            )
+            self.assertEqual(
+                len(re.findall(r"sidebar-item sidebar-item-section", html)),
+                len(re.findall(r'class="sidebar-item-toggle', html)),
+                curriculum,
+            )
+            track_label, track_href = expected_tracks[curriculum]
+            self.assertIn(track_label, html)
+            self.assertIn(f'href="../../{track_href.lstrip("/")}"', html)
+            self.assertIn("Look up a term", html)
+
     def test_left_sidebar_has_section_and_whole_sidebar_controls(self) -> None:
         for token in (
             "initializeLearnSidebarControls",
@@ -49,6 +98,12 @@ class NavigationParityTests(unittest.TestCase):
             'new CustomEvent("bs:left-sidebar-change")',
         ):
             self.assertIn(token, self.learn)
+        for token in (
+            "body.bs-learn-left-sidebar-collapsed",
+            "grid-column-start: page-start",
+            "bs-learn-active-section",
+        ):
+            self.assertIn(token, self.learn + self.learn_css)
 
     def test_sidebar_active_lesson_and_track_follow_continuous_scroll(self) -> None:
         for token in (
@@ -68,11 +123,12 @@ class NavigationParityTests(unittest.TestCase):
             "bs-lesson-track-content",
             "placeLessonRightRailCards",
             "On this page",
-            "Look Up a Term",
+            "Look up a term",
             "data-bs-toc-heading-toggle",
             "Collapse all right sidebar content",
             "Expand all right sidebar content",
             "bs-margin-sidebar-collapsed",
+            "bs-learn-right-sidebar-collapsed",
             "updateRightRailForScroll",
         ):
             self.assertIn(token, self.learn)
@@ -101,10 +157,19 @@ class NavigationParityTests(unittest.TestCase):
             "mobileDrawerEdge.focus()",
             "initializeMobileLessonBar",
             "Expand Lesson Index",
+            "data-bs-mobile-term-toggle",
+            "data-bs-mobile-tools-track",
         ):
             self.assertIn(token, self.learn)
         self.assertRegex(self.config, r"navbar:\s+[\s\S]*?collapse-below: xl")
         self.assertIn("@media (max-width: 991.98px)", self.learn_css)
+        self.assertIn(".bs-mobile-term-lookup", self.learn_css)
+
+    def test_navigation_initializer_is_an_explicit_quarto_resource(self) -> None:
+        self.assertRegex(
+            self.config,
+            r"resources:[\s\S]*?- assets/bs-learn\.js",
+        )
 
     def test_real_links_anchors_and_continuous_scroll_manifests_are_preserved(self) -> None:
         for token in (

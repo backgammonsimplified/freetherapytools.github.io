@@ -96,5 +96,8 @@ assert.match(
 assert.ok(
   helperSource.includes('tab.playwright.locator(".bs-term-lookup-close")')
 );
+assert.ok(canonicalHelperSource.includes("mobile Wise Mind lookup resolves in place"));
+assert.ok(canonicalHelperSource.includes("lesson content reclaims left-rail space"));
+assert.ok(canonicalHelperSource.includes("collapsing the right rail reflows lesson content"));
 
 console.log("UI release browser helper tests passed");

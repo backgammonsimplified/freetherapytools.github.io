@@ -79,11 +79,36 @@ local function difficulty_badges(values)
 end
 
 local function track_label(value)
+  local labels = {
+    ["goal-setting"] = "Goal Setting & Tracking",
+    ["doubling-cube"] = "Distress Tolerance",
+    ["interpersonal-effectiveness"] = "Interpersonal Effectiveness",
+    ["wellness"] = "Wellness",
+    ["emotion-regulation"] = "Emotion Regulation",
+    ["cbt-anxiety"] = "CBT Skills",
+    ["mindfulness"] = "Mindfulness",
+  }
+  if labels[value] then
+    return labels[value]
+  end
   local words = {}
   for word in value:gsub("_", "-"):gmatch("[^%-]+") do
     table.insert(words, word:sub(1, 1):upper() .. word:sub(2))
   end
   return table.concat(words, " ")
+end
+
+local function track_href(value)
+  local routes = {
+    ["goal-setting"] = "/learn/goal-setting/",
+    ["doubling-cube"] = "/learn/cube/",
+    ["interpersonal-effectiveness"] = "/learn/interpersonal-effectiveness/",
+    ["wellness"] = "/learn/wellness/",
+    ["emotion-regulation"] = "/learn/emotion-regulation/",
+    ["cbt-anxiety"] = "/learn/cbt-anxiety/",
+    ["mindfulness"] = "/learn/mindfulness/",
+  }
+  return routes[value] or ("/learn/?track=" .. url_encode(value))
 end
 
 local function track_link(value)
@@ -95,8 +120,8 @@ local function track_link(value)
     '<nav class="bs-lesson-track-nav" data-bs-lesson-track-nav aria-label="Learning tracks">',
     '  <p class="bs-lesson-track-label">Learning track</p>',
     '  <div class="bs-lesson-track-links">',
-    '    <a href="/learn/?track='
-      .. url_encode(value)
+    '    <a href="'
+      .. track_href(value)
       .. '">'
       .. escape_html(track_label(value))
       .. '</a>',

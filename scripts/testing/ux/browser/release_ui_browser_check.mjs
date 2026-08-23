@@ -578,6 +578,22 @@ const interactWithLookup = async (
     "opening term lookup preserves scroll position " +
       `(before=${before}, after=${afterOpen})`
   );
+  const input = await visibleLocator(
+    tab.playwright.locator("#bs-term-lookup-input")
+  );
+  if (input) {
+    await input.fill("Wise Mind");
+    await input.press("Enter");
+    const result = tab.playwright.locator("[data-bs-term-lookup-result]");
+    await result.waitFor({ state: "visible", timeoutMs: 5000 });
+    check(
+      /Wise Mind/.test((await result.textContent()) || ""),
+      context,
+      "Wise Mind resolves inside the lesson lookup"
+    );
+  } else {
+    check(false, context, "term lookup input is visible after opening");
+  }
   const close = await visibleLocator(
     tab.playwright.locator(".bs-term-lookup-close")
   );
@@ -614,10 +630,36 @@ const interactWithMobileDrawer = async (tab, check, context) => {
     "mobile drawer contains visible table-of-contents links"
   );
   check(
-    (await drawer.locator("[data-bs-term-lookup]").count()) === 0,
+    (await countVisible(drawer.locator("[data-bs-lesson-track-nav]"))) === 1,
     context,
-    "mobile drawer omits the compact term search"
+    "mobile drawer contains the current learning track"
   );
+  const termToggle = await visibleLocator(
+    drawer.locator("[data-bs-mobile-term-toggle]")
+  );
+  check(Boolean(termToggle), context, "mobile drawer exposes Look up a term");
+  if (termToggle) {
+    await termToggle.click();
+    const lookup = await visibleLocator(
+      tab.playwright.locator("[data-bs-term-lookup]")
+    );
+    check(Boolean(lookup), context, "mobile term lookup opens without navigation");
+    if (lookup) {
+      const input = lookup.locator("#bs-term-lookup-input");
+      await input.fill("Wise Mind");
+      await input.press("Enter");
+      const result = lookup.locator("[data-bs-term-lookup-result]");
+      await result.waitFor({ state: "visible", timeoutMs: 5000 });
+      check(
+        /Wise Mind/.test((await result.textContent()) || ""),
+        context,
+        "mobile Wise Mind lookup resolves in place"
+      );
+      const lookupClose = lookup.locator("[data-bs-term-lookup-close]");
+      await lookupClose.click();
+    }
+    await edge.click();
+  }
   const close = drawer.locator("[data-bs-mobile-tools-close]");
   await close.click();
   check(
@@ -625,6 +667,59 @@ const interactWithMobileDrawer = async (tab, check, context) => {
     context,
     "mobile page-tools drawer closes"
   );
+};
+
+const interactWithLearnSidebar = async (tab, check, context) => {
+  const sidebar = await visibleLocator(tab.playwright.locator("#quarto-sidebar"));
+  check(Boolean(sidebar), context, "desktop Learn sidebar is visible");
+  if (!sidebar) return;
+
+  const collapseAll = await visibleLocator(
+    sidebar.locator("[data-bs-sidebar-collapse-all]")
+  );
+  const expandAll = await visibleLocator(
+    sidebar.locator("[data-bs-sidebar-expand-all]")
+  );
+  check(Boolean(collapseAll) && Boolean(expandAll), context, "sidebar section actions mount");
+  if (collapseAll && expandAll) {
+    await collapseAll.click();
+    check(
+      (await sidebar.locator(".sidebar-item-toggle[aria-expanded='true']").count()) === 0,
+      context,
+      "Collapse all closes the actual curriculum disclosures"
+    );
+    await expandAll.click();
+    check(
+      (await sidebar.locator(".sidebar-item-toggle[aria-expanded='false']").count()) === 0,
+      context,
+      "Expand all restores the actual curriculum disclosures"
+    );
+  }
+
+  const railToggle = await visibleLocator(
+    tab.playwright.locator("[data-bs-learn-left-sidebar-toggle]")
+  );
+  check(Boolean(railToggle), context, "whole-left-rail control is visible");
+  if (!railToggle) return;
+  const main = tab.playwright.locator("main#quarto-document-content");
+  const beforeWidth = await main.evaluate((element) => element.getBoundingClientRect().width);
+  await railToggle.click();
+  const afterWidth = await main.evaluate((element) => element.getBoundingClientRect().width);
+  check(
+    (await sidebar.getAttribute("hidden")) !== null &&
+      (await tab.playwright.locator("body").getAttribute("class")).includes(
+        "bs-learn-left-sidebar-collapsed"
+      ),
+    context,
+    "whole-left-rail collapse changes the sidebar and layout state"
+  );
+  check(afterWidth > beforeWidth, context, "lesson content reclaims left-rail space");
+  const reopen = await visibleLocator(
+    tab.playwright.locator("[data-bs-learn-left-sidebar-toggle]")
+  );
+  check(Boolean(reopen), context, "whole-left-rail reopen control remains visible");
+  if (reopen) await reopen.click();
+  check(await sidebar.isVisible(), context, "whole-left-rail reopens");
 };
 
 const interactWithMobileNavigation = async (tab, check, context) => {
@@ -715,6 +810,10 @@ const interactWithToc = async (
   if (!initial.available) {
     return;
   }
+  const main = tab.playwright.locator("main#quarto-document-content");
+  const initialMainWidth = await main.evaluate(
+    (element) => element.getBoundingClientRect().width
+  );
   const lessonTrack = collapseLessonTrack
     ? await visibleLocator(
         tab.playwright.locator(".bs-lesson-track-content")
@@ -738,6 +837,14 @@ const interactWithToc = async (
     collapsed.available,
     context,
     "TOC restore control remains available"
+  );
+  const collapsedMainWidth = await main.evaluate(
+    (element) => element.getBoundingClientRect().width
+  );
+  check(
+    collapsedMainWidth > initialMainWidth,
+    context,
+    "collapsing the right rail reflows lesson content"
   );
   if (lessonTrack) {
     check(
@@ -986,6 +1093,9 @@ const runPageInteraction = async ({
     await interactWithLearnIndex(tab, check, context);
   }
   if (page.kind === "learn-lesson") {
+    if (desktop) {
+      await interactWithLearnSidebar(tab, check, context);
+    }
     await interactWithToc(tab, check, context, desktop, true);
     if (desktop) {
       await interactWithLookup(tab, check, context, desktop);

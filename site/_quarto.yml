@@ -12,6 +12,7 @@ project:
     - "assets/icons/**"
     - "assets/social/generated/*.png"
     - assets/bs-glossary.js
+    - assets/bs-learn.js
     - assets/skill-apps.js
     - assets/skill-progress.js
     - assets/skill-finder-apps.js
@@ -74,7 +75,7 @@ website:
     left: |
       Therapy Skill Kit
     center:
-      - text: "Code: AGPL-3.0-only · Educational content: CC BY-SA 4.0 · Licensing"
+      - text: "Code: AGPL-3.0-only \u00b7 Educational content: CC BY-SA 4.0 \u00b7 Licensing"
         href: /licensing.html
 
 format:

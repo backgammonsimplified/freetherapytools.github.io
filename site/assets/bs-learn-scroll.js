@@ -415,6 +415,19 @@
     const section = sectionList
       ? sectionList.closest(".sidebar-item-section")
       : null;
+    sidebar
+      .querySelectorAll(".sidebar-item-section")
+      .forEach(function (candidate) {
+        if (
+          candidate.classList &&
+          typeof candidate.classList.toggle === "function"
+        ) {
+          candidate.classList.toggle(
+            "bs-learn-active-section",
+            candidate === section
+          );
+        }
+      });
     const toggle = section
       ? section.querySelector(
           ":scope > .sidebar-item-container .sidebar-item-toggle"
@@ -436,6 +449,13 @@
       sidebar.scrollTop -= sidebarRect.top - linkRect.top + 8;
     } else if (linkRect.bottom > sidebarRect.bottom) {
       sidebar.scrollTop += linkRect.bottom - sidebarRect.bottom + 8;
+    }
+    if (typeof document !== "undefined") {
+      document.dispatchEvent(
+        new CustomEvent("bs:active-lesson-change", {
+          detail: { route: route }
+        })
+      );
     }
     return activeLink;
   }

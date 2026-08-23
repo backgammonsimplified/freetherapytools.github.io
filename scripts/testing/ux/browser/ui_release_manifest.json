@@ -72,6 +72,20 @@
       "required_markers": ["bs-learn-article"]
     },
     {
+      "id": "dear-man-lesson",
+      "name": "Interpersonal Effectiveness lesson",
+      "route": "/learn/interpersonal-effectiveness/dear-man.html",
+      "kind": "learn-lesson",
+      "required_markers": ["bs-learn-article", "DEAR MAN"]
+    },
+    {
+      "id": "emotion-regulation-lesson",
+      "name": "Emotion Regulation lesson",
+      "route": "/learn/emotion-regulation/what-emotions-do.html",
+      "kind": "learn-lesson",
+      "required_markers": ["bs-learn-article", "What Emotions Do"]
+    },
+    {
       "id": "cbt-index",
       "name": "CBT Skills index",
       "route": "/cbt-skills/",
@@ -81,9 +95,16 @@
     {
       "id": "cbt-lesson",
       "name": "CBT lesson",
-      "route": "/learn/cbt-anxiety/thought-records.html",
+      "route": "/learn/cbt-anxiety/thinking-traps.html",
       "kind": "learn-lesson",
-      "required_markers": ["bs-learn-article", "Thought Record Part 1"]
+      "required_markers": ["bs-learn-article", "Thinking Traps"]
+    },
+    {
+      "id": "cbt-worry-lesson",
+      "name": "CBT worry lesson",
+      "route": "/learn/cbt-anxiety/understanding-worry.html",
+      "kind": "learn-lesson",
+      "required_markers": ["bs-learn-article", "Understanding Worry"]
     },
     {
       "id": "mindfulness-index",
@@ -91,6 +112,27 @@
       "route": "/mindfulness/",
       "kind": "learn-index",
       "required_markers": ["data-bs-learn-filters", "data-bs-learn-list"]
+    },
+    {
+      "id": "mindfulness-observe-lesson",
+      "name": "Mindfulness Observe lesson",
+      "route": "/learn/mindfulness/what-skills.html",
+      "kind": "learn-lesson",
+      "required_markers": ["bs-learn-article", "Observe"]
+    },
+    {
+      "id": "values-app",
+      "name": "Values Skill Finder",
+      "route": "/skill-finder/values/",
+      "kind": "ordinary",
+      "required_markers": ["skill-app", "Save progress"]
+    },
+    {
+      "id": "emotion-explorer-app",
+      "name": "Emotion Explorer Skill Finder",
+      "route": "/skill-finder/emotions/",
+      "kind": "ordinary",
+      "required_markers": ["skill-app", "Save progress"]
     },
     {
       "id": "research-index",

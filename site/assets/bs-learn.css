@@ -684,6 +684,15 @@ body:is(.bs-learn-index, .bs-learn-track-index)
   padding: 0.2rem 0.65rem 0.35rem;
 }
 
+body:is(.bs-learn-index, .bs-learn-article)
+  #quarto-sidebar
+  .sidebar-item-section.bs-learn-active-section
+  > .sidebar-item-container
+  > .sidebar-link {
+  color: var(--bs-link-hover);
+  font-weight: 700;
+}
+
 .bs-learn-catalogue {
   display: grid;
   gap: 0;
@@ -1635,6 +1644,54 @@ body.bs-glossary-index
     outline-offset: 2px;
   }
 
+  body.bs-learn-left-sidebar-collapsed
+    #quarto-content.page-columns
+    > main#quarto-document-content {
+    grid-column-start: page-start;
+  }
+
+  body.bs-learn-left-sidebar-collapsed
+    main#quarto-document-content.page-columns
+    > :not(.column-margin) {
+    grid-column-start: page-start-inset;
+  }
+
+  body.bs-learn-right-sidebar-collapsed
+    #quarto-content.page-columns
+    > main#quarto-document-content {
+    grid-column-end: page-end;
+  }
+
+  body.bs-learn-right-sidebar-collapsed
+    main#quarto-document-content.page-columns
+    > :not(.column-margin) {
+    grid-column-end: page-end-inset;
+  }
+
+  body.bs-learn-right-sidebar-collapsed #quarto-margin-sidebar {
+    width: 0;
+    min-width: 0;
+    overflow: visible;
+  }
+
+  body.bs-learn-right-sidebar-collapsed
+    #quarto-margin-sidebar
+    .bs-toc-toggle-divider {
+    position: fixed;
+    top: 4.85rem;
+    right: 0.5rem;
+    z-index: 1061;
+    margin: 0;
+  }
+
+  body.bs-learn-right-sidebar-collapsed:has(
+      #quarto-header.headroom--unpinned
+    )
+    #quarto-margin-sidebar
+    .bs-toc-toggle-divider {
+    top: 0.5rem;
+  }
+
   body.bs-learn-article #quarto-margin-sidebar {
     width: clamp(10rem, 16vw, 18rem);
     min-width: clamp(10rem, 16vw, 18rem);
@@ -2101,9 +2158,29 @@ body.bs-glossary-index
     padding-left: 1rem;
   }
 
-  .bs-site-tools .bs-term-lookup,
   .bs-site-tools [data-bs-site-term-toggle] {
     display: none !important;
+  }
+
+  .bs-mobile-tools-track .bs-lesson-track-nav {
+    margin: 0 0 0.9rem;
+    padding: 0 0 0.9rem;
+    border-top: 0;
+    border-bottom: 1px solid var(--bs-border);
+  }
+
+  .bs-mobile-term-lookup {
+    width: 100%;
+    min-height: 2.25rem;
+    margin-top: 0.9rem;
+    padding: 0.35rem 0.6rem;
+    border: 1px solid var(--bs-border-strong);
+    border-radius: 5px;
+    background: var(--bs-surface);
+    color: var(--bs-link);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-align: left;
   }
 
   body.bs-mobile-tools-open {

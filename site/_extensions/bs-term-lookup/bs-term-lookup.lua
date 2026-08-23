@@ -31,7 +31,7 @@ local function lookup_html()
   return table.concat({
     '<aside id="bs-term-lookup-panel" class="bs-term-lookup" data-bs-term-lookup hidden>',
     '  <div class="bs-term-lookup-heading">',
-    '    <strong>Look Up a Term</strong>',
+    '    <strong>Look up a term</strong>',
     '    <button type="button" class="bs-term-lookup-close" data-bs-term-lookup-close aria-controls="bs-term-lookup-panel" aria-expanded="true" aria-label="Collapse term lookup to the right"><span aria-hidden="true">&rarr;</span></button>',
     '  </div>',
     '  <form action="/glossary/" method="get" data-bs-term-lookup-form>',
