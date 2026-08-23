@@ -104,6 +104,150 @@
       && keys.every((key) => typeof object[key] === "string");
   }
 
+  const GOAL_FIELD_KEYS = ["direction", "specific", "measurable", "achievable", "relevant", "time", "smallest", "support"];
+
+  function pad(number) { return String(number).padStart(2, "0"); }
+
+  function utcCalendarStamp(date) {
+    return `${date.getUTCFullYear()}${pad(date.getUTCMonth() + 1)}${pad(date.getUTCDate())}T${pad(date.getUTCHours())}${pad(date.getUTCMinutes())}${pad(date.getUTCSeconds())}Z`;
+  }
+
+  function calendarWindow(calendar) {
+    const dateMatch = String(calendar?.date || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    const timeMatch = String(calendar?.startTime || "").match(/^(\d{2}):(\d{2})$/);
+    const duration = Number(calendar?.durationMinutes);
+    if (!dateMatch || !timeMatch || !Number.isInteger(duration) || duration < 1 || duration > 1440) return null;
+    const parts = [...dateMatch.slice(1), ...timeMatch.slice(1)].map(Number);
+    const start = new Date(parts[0], parts[1] - 1, parts[2], parts[3], parts[4], 0, 0);
+    if (start.getFullYear() !== parts[0] || start.getMonth() !== parts[1] - 1 || start.getDate() !== parts[2] || start.getHours() !== parts[3] || start.getMinutes() !== parts[4]) return null;
+    return { start, end: new Date(start.getTime() + duration * 60000) };
+  }
+
+  function escapeIcsText(value) {
+    return String(value || "").replaceAll("\\", "\\\\").replaceAll("\r\n", "\n").replaceAll("\r", "\n").replaceAll("\n", "\\n").replaceAll(",", "\\,").replaceAll(";", "\\;");
+  }
+
+  function buildIcsEvent(options) {
+    const range = calendarWindow(options.calendar);
+    const title = String(options.title || "").trim();
+    if (!range || !title) return null;
+    const now = options.now instanceof Date ? options.now : new Date();
+    const uid = String(options.uid || `goal-${now.getTime()}@therapyskillkit.local`).replace(/[^A-Za-z0-9@._-]/g, "-");
+    return [
+      "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Therapy Skill Kit//SMART Goal Builder//EN", "CALSCALE:GREGORIAN",
+      "BEGIN:VEVENT", `UID:${uid}`, `DTSTAMP:${utcCalendarStamp(now)}`, `DTSTART:${utcCalendarStamp(range.start)}`, `DTEND:${utcCalendarStamp(range.end)}`,
+      `SUMMARY:${escapeIcsText(title)}`, `DESCRIPTION:${escapeIcsText(options.description || "")}`, "END:VEVENT", "END:VCALENDAR", "",
+    ].join("\r\n");
+  }
+
+  function buildGoogleCalendarUrl(options) {
+    const range = calendarWindow(options.calendar);
+    const title = String(options.title || "").trim();
+    if (!range || !title) return null;
+    const timezone = String(options.timezone || "UTC");
+    const params = new URLSearchParams({
+      action: "TEMPLATE",
+      dates: `${utcCalendarStamp(range.start)}/${utcCalendarStamp(range.end)}`,
+      stz: timezone,
+      etz: timezone,
+      text: title,
+      details: String(options.description || ""),
+    });
+    return `https://calendar.google.com/calendar/r/eventedit?${params.toString()}`;
+  }
+
+  function goalBuilderPrefill(payload) {
+    const values = Array.isArray(payload?.values) ? payload.values.filter((value) => typeof value === "string") : [];
+    const domain = typeof payload?.domain === "string" ? payload.domain : "";
+    const valueText = values.join(" and ");
+    const direction = [valueText, domain && `in ${domain}`].filter(Boolean).join(" ");
+    return {
+      fields: {
+        direction,
+        specific: typeof payload?.how === "string" ? payload.how : "",
+        measurable: "",
+        achievable: "",
+        relevant: direction ? `This supports ${direction}.` : "",
+        time: "",
+        smallest: "",
+        support: "",
+      },
+      context: {
+        domain,
+        values,
+        what: typeof payload?.what === "string" ? payload.what : "",
+        how: typeof payload?.how === "string" ? payload.how : "",
+        mission: typeof payload?.mission === "string" ? payload.mission : "",
+      },
+    };
+  }
+
+  function makeGtdIdentity(now = new Date()) {
+    const milliseconds = now.getTime();
+    const suffix = typeof crypto !== "undefined" && crypto.getRandomValues ? crypto.getRandomValues(new Uint16Array(1))[0].toString(16).padStart(4, "0") : "0000";
+    return { taskId: `smart_goal_${milliseconds.toString(36)}_${suffix}`, captureSequence: milliseconds * 1000 + parseInt(suffix, 16) % 1000, createdAt: now.toISOString() };
+  }
+
+  function initialGoalState(now = new Date()) {
+    return {
+      fields: Object.fromEntries(GOAL_FIELD_KEYS.map((key) => [key, ""])),
+      summaryBuilt: false,
+      context: { domain: "", values: [], what: "", how: "", mission: "" },
+      targetDate: "",
+      calendar: { enabled: false, date: "", startTime: "", durationMinutes: "30" },
+      gtd: makeGtdIdentity(now),
+    };
+  }
+
+  function normalizeGoalState(next) {
+    const normalized = initialGoalState();
+    GOAL_FIELD_KEYS.forEach((key) => { normalized.fields[key] = typeof next?.fields?.[key] === "string" ? next.fields[key] : ""; });
+    normalized.summaryBuilt = Boolean(next?.summaryBuilt);
+    if (next?.context) normalized.context = { ...normalized.context, ...next.context, values: Array.isArray(next.context.values) ? [...next.context.values] : [] };
+    normalized.targetDate = typeof next?.targetDate === "string" ? next.targetDate : "";
+    if (next?.calendar) normalized.calendar = { ...normalized.calendar, ...next.calendar, enabled: Boolean(next.calendar.enabled) };
+    if (next?.gtd && typeof next.gtd.taskId === "string" && Number.isSafeInteger(next.gtd.captureSequence) && typeof next.gtd.createdAt === "string") normalized.gtd = { ...next.gtd };
+    return normalized;
+  }
+
+  function goalTitle(state) {
+    return String(state.fields.specific || state.context.how || state.context.what || "Define a concrete next action").replace(/\s+/g, " ").trim().slice(0, 240);
+  }
+
+  function goalDescription(state) {
+    return [state.context.mission && `Mission: ${state.context.mission}`, state.context.what && `What: ${state.context.what}`, ...GOAL_FIELD_KEYS.map((key) => state.fields[key] && `${key[0].toUpperCase()}${key.slice(1)}: ${state.fields[key]}`)].filter(Boolean).join("\n");
+  }
+
+  function goalReadableSummary(state) {
+    const sections = [
+      ["Life Domain", state.context.domain], ["Values", state.context.values.join(", ")], ["Mission", state.context.mission], ["What", state.context.what], ["How", state.context.how],
+      ["Direction or Value", state.fields.direction], ["Specific", state.fields.specific], ["Measurable", state.fields.measurable], ["Achievable", state.fields.achievable],
+      ["Relevant / Realistic", state.fields.relevant], ["Time-Oriented", state.fields.time], ["Target Date", state.targetDate], ["Smallest Useful Version", state.fields.smallest], ["Support", state.fields.support],
+      ["Calendar Commitment", state.calendar.enabled && calendarWindow(state.calendar) ? `${state.calendar.date} at ${state.calendar.startTime} for ${state.calendar.durationMinutes} minutes` : ""],
+    ];
+    if (Progress?.nonEmptySections) return Progress.nonEmptySections(goalTitle(state), sections);
+    const lines = [`# ${goalTitle(state)}`];
+    sections.forEach(([heading, value]) => { if (String(value || "").trim()) lines.push("", `## ${heading}`, "", String(value)); });
+    return lines.join("\n");
+  }
+
+  function yamlString(value) { return JSON.stringify(String(value || "")); }
+
+  function goalGtdMarkdown(record, state) {
+    const title = goalTitle(state);
+    const metadata = JSON.stringify(record, null, 2).replaceAll("--", "\\u002d\\u002d");
+    const tags = state.context.values.map((value) => String(value).toLocaleLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")).filter(Boolean).slice(0, 30);
+    const frontMatter = [
+      "---", "record_version: 1", `task_id: ${state.gtd.taskId}`, `title: ${yamlString(title)}`, "type: capture", "state: inbox",
+      `capture_sequence: ${state.gtd.captureSequence}`, `original_capture: ${yamlString(title)}`, "capture_source: manual",
+      state.context.domain ? `area: ${yamlString(state.context.domain.slice(0, 100))}` : "",
+      state.targetDate ? `due_date: ${state.targetDate}` : "",
+      `priority: none`, `energy: unspecified`, `tags: ${JSON.stringify(tags)}`, `created_at: ${yamlString(state.gtd.createdAt)}`, `updated_at: ${yamlString(record.saved_at)}`, "---",
+    ].filter((line) => line !== "").join("\n");
+    const readable = goalReadableSummary(state);
+    return `${frontMatter}\n\n${readable}\n\n<!-- therapy-skill-kit-progress\n${metadata}\n-->\n`;
+  }
+
   function register(root, config) {
     if (Progress) Progress.registerTool({ schemaVersion: 1, root, ...config });
   }
@@ -143,6 +287,110 @@
       },
       validateState: (next) => Progress.isPlainObject(next) && Object.keys(next).every((key) => ["fields", "summaryBuilt"].includes(key)) && stringsOnly(next.fields, keys) && typeof next.summaryBuilt === "boolean",
       getReadableSummary: (next) => Progress.nonEmptySections(definition.title, definition.fields.map(([key, label]) => [label, next.fields[key]])),
+    });
+  }
+
+  function goalStateValid(next) {
+    if (!Progress?.isPlainObject(next) || !Progress.isPlainObject(next.fields) || typeof next.summaryBuilt !== "boolean") return false;
+    if (!stringsOnly(next.fields, GOAL_FIELD_KEYS)) return false;
+    const keys = Object.keys(next);
+    if (keys.every((key) => ["fields", "summaryBuilt"].includes(key))) return true;
+    if (!keys.every((key) => ["fields", "summaryBuilt", "context", "targetDate", "calendar", "gtd"].includes(key))) return false;
+    return Progress.isPlainObject(next.context)
+      && Object.keys(next.context).every((key) => ["domain", "values", "what", "how", "mission"].includes(key))
+      && ["domain", "what", "how", "mission"].every((key) => typeof next.context[key] === "string")
+      && Array.isArray(next.context.values) && next.context.values.every((value) => typeof value === "string")
+      && typeof next.targetDate === "string"
+      && Progress.isPlainObject(next.calendar)
+      && Object.keys(next.calendar).every((key) => ["enabled", "date", "startTime", "durationMinutes"].includes(key))
+      && typeof next.calendar.enabled === "boolean"
+      && ["date", "startTime", "durationMinutes"].every((key) => typeof next.calendar[key] === "string")
+      && Progress.isPlainObject(next.gtd)
+      && Object.keys(next.gtd).every((key) => ["taskId", "captureSequence", "createdAt"].includes(key))
+      && typeof next.gtd.taskId === "string" && Number.isSafeInteger(next.gtd.captureSequence) && typeof next.gtd.createdAt === "string";
+  }
+
+  function initGoalBuilder(root) {
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "UTC";
+    let state = initialGoalState();
+    const token = new URLSearchParams(window.location.search).get("handoff");
+    if (token && window.TherapySkillHandoff) {
+      const payload = window.TherapySkillHandoff.consumePayload(token);
+      if (payload) {
+        const prefill = goalBuilderPrefill(payload);
+        state.fields = prefill.fields;
+        state.context = prefill.context;
+      }
+      const clean = new URL(window.location.href);
+      clean.searchParams.delete("handoff");
+      window.history.replaceState(null, "", `${clean.pathname}${clean.search}${clean.hash}`);
+    }
+
+    function calendarReady() { return state.calendar.enabled && Boolean(calendarWindow(state.calendar)) && Boolean(goalTitle(state)); }
+
+    function render() {
+      const fields = [
+        ["direction", "Direction or value this goal supports"], ["specific", "Specific — What exactly will I do?"],
+        ["measurable", "Measurable — How will I know it happened?"], ["achievable", "Achievable — What makes this within reach?"],
+        ["relevant", "Relevant / Realistic — Why does it matter, and does it fit current circumstances?"],
+        ["time", "Time-Oriented — What timing, rhythm, or review point matters?"], ["smallest", "Smallest useful version"], ["support", "What could support follow-through?"],
+      ];
+      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>SMART Goal Builder</h2><p>Connect a meaningful direction with an observable next step. A formal goal is optional; use it when structure would help. Your answers stay in this browser unless you save or explicitly open a calendar handoff.</p></header>
+        <form class="skill-app-panel" data-goal-form>${state.context.domain || state.context.what ? `<aside class="skill-app-note"><strong>From your Values plan</strong>${state.context.domain ? `<span>Life Domain: ${escapeHtml(state.context.domain)}</span>` : ""}${state.context.values.length ? `<span>Values: ${escapeHtml(state.context.values.join(", "))}</span>` : ""}${state.context.what ? `<span>What: ${escapeHtml(state.context.what)}</span>` : ""}${state.context.how ? `<span>How: ${escapeHtml(state.context.how)}</span>` : ""}</aside>` : ""}
+          ${fields.map(([key, label]) => `<label for="goal-${key}">${escapeHtml(label)}</label><textarea id="goal-${key}" name="${key}" data-goal-field="${key}">${escapeHtml(state.fields[key])}</textarea>`).join("")}
+          <fieldset class="skill-app-fieldset"><legend>Target date / deadline</legend><p class="skill-app-field-help">This is goal or task metadata. It does not automatically create a calendar event.</p><label for="goal-target-date">Target date</label><input id="goal-target-date" type="date" data-goal-target-date value="${escapeHtml(state.targetDate)}"></fieldset>
+          <fieldset class="skill-app-fieldset"><legend>Specific calendar commitment</legend><label class="skill-app-check"><input type="checkbox" data-calendar-enabled ${state.calendar.enabled ? "checked" : ""}> <span>Schedule a specific action</span></label><p>Use this only for a date-and-time commitment such as a call, meeting, or focused work session.</p>
+            <div data-calendar-fields ${state.calendar.enabled ? "" : "hidden"}><div class="skill-app-inline-fields"><div><label for="goal-calendar-date">Date</label><input id="goal-calendar-date" type="date" data-calendar-field="date" value="${escapeHtml(state.calendar.date)}"></div><div><label for="goal-calendar-time">Start time</label><input id="goal-calendar-time" type="time" data-calendar-field="startTime" value="${escapeHtml(state.calendar.startTime)}"></div><div><label for="goal-calendar-duration">Duration (minutes)</label><input id="goal-calendar-duration" type="number" min="1" max="1440" step="5" inputmode="numeric" data-calendar-field="durationMinutes" value="${escapeHtml(state.calendar.durationMinutes)}"></div></div>
+              <p id="goal-calendar-timezone">Browser-local timezone: <strong>${escapeHtml(timezone)}</strong></p><p id="goal-calendar-help">Enter a date, start time, and duration to enable calendar actions.</p>
+              <div class="skill-app-actions"><button type="button" data-download-ics ${calendarReady() ? "" : "disabled"} aria-describedby="goal-calendar-help">Download calendar event (.ics)</button><button type="button" data-google-calendar ${calendarReady() ? "" : "disabled"} aria-describedby="goal-google-copy">Add to Google Calendar <span class="visually-hidden">(opens in a new tab)</span></button></div>
+              <p id="goal-google-copy">Opens a prefilled Google Calendar event in a new tab. You choose whether to save it. No event details are sent to Google before you click.</p>
+            </div></fieldset>
+          <button type="submit">Build my summary</button></form>
+        <section class="skill-app-panel" data-goal-summary aria-live="polite" tabindex="-1">${state.summaryBuilt ? `<h3>Planning summary</h3><dl class="skill-app-summary">${fields.map(([key, label]) => `<dt>${escapeHtml(label.split(" — ")[0])}</dt><dd>${escapeHtml(state.fields[key] || "Not answered")}</dd>`).join("")}<dt>Target date</dt><dd>${escapeHtml(state.targetDate || "Not set")}</dd></dl>` : ""}</section>
+        <footer class="skill-app-footer"><button type="button" class="secondary" data-clear-goal>Clear</button>${linksMarkup(LINKS.goals)}</footer></div>`;
+      bind();
+    }
+
+    function updateCalendarActions() {
+      const ready = calendarReady();
+      root.querySelector("[data-download-ics]")?.toggleAttribute("disabled", !ready);
+      root.querySelector("[data-google-calendar]")?.toggleAttribute("disabled", !ready);
+    }
+
+    function bind() {
+      root.querySelectorAll("[data-goal-field]").forEach((field) => field.addEventListener("input", () => { state.fields[field.dataset.goalField] = field.value; updateCalendarActions(); }));
+      root.querySelector("[data-goal-target-date]")?.addEventListener("change", (event) => { state.targetDate = event.target.value; });
+      root.querySelector("[data-calendar-enabled]")?.addEventListener("change", (event) => {
+        state.calendar.enabled = event.target.checked;
+        root.querySelector("[data-calendar-fields]").hidden = !event.target.checked;
+        updateCalendarActions();
+      });
+      root.querySelectorAll("[data-calendar-field]").forEach((field) => field.addEventListener("input", () => { state.calendar[field.dataset.calendarField] = field.value; updateCalendarActions(); }));
+      root.querySelector("[data-goal-form]")?.addEventListener("submit", (event) => { event.preventDefault(); state.summaryBuilt = true; render(); root.querySelector("[data-goal-summary]")?.focus(); });
+      root.querySelector("[data-clear-goal]")?.addEventListener("click", () => { state = initialGoalState(); render(); root.querySelector("textarea")?.focus(); });
+      root.querySelector("[data-download-ics]")?.addEventListener("click", () => {
+        const ics = buildIcsEvent({ title: goalTitle(state), description: goalDescription(state), calendar: state.calendar, timezone, uid: `${state.gtd.taskId}@therapyskillkit.local` });
+        if (!ics) return;
+        const url = URL.createObjectURL(new Blob([ics], { type: "text/calendar;charset=utf-8" }));
+        const link = document.createElement("a");
+        link.href = url; link.download = `${state.gtd.taskId}.ics`; link.hidden = true; document.body.append(link); link.click(); link.remove();
+        window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+      });
+      root.querySelector("[data-google-calendar]")?.addEventListener("click", () => {
+        const url = buildGoogleCalendarUrl({ title: goalTitle(state), description: goalDescription(state), calendar: state.calendar, timezone });
+        if (url) window.open(url, "_blank", "noopener");
+      });
+    }
+
+    render();
+    register(root, {
+      toolId: "goal-builder", toolTitle: "SMART Goal Builder", route: Progress.TOOL_ROUTES["goal-builder"],
+      getState: () => state,
+      setState: (next) => { state = normalizeGoalState(next); render(); },
+      validateState: goalStateValid,
+      getReadableSummary: goalReadableSummary,
+      getSaveFilename: () => state.gtd.taskId,
+      serializeMarkdown: (record) => goalGtdMarkdown(record, state),
     });
   }
 
@@ -235,10 +483,11 @@
       const name = root.dataset.practiceApp;
       if (name === "behaviour-chain") initBehaviourChain(root);
       else if (name === "exposure") initExposure(root);
+      else if (name === "goal-builder") initGoalBuilder(root);
       else if (FORM_DEFINITIONS[name]) initGuidedForm(root, FORM_DEFINITIONS[name]);
     });
   }
 
-  if (typeof module !== "undefined" && module.exports) module.exports = { FORM_DEFINITIONS };
+  if (typeof module !== "undefined" && module.exports) module.exports = { FORM_DEFINITIONS, calendarWindow, escapeIcsText, buildIcsEvent, buildGoogleCalendarUrl, goalBuilderPrefill, normalizeGoalState, goalGtdMarkdown, goalTitle };
   if (typeof document !== "undefined") document.addEventListener("DOMContentLoaded", start);
 })();

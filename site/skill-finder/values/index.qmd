@@ -1,6 +1,6 @@
 ---
 title: "Discover and Work Towards Your Values"
-description: "Discover and create a plan to work towards your values and accumulate long term positive emotions."
+description: "Use Values as compass directions, assess life domains, and choose small valued actions."
 sidebar: skill-finder
 page-layout: full
 toc: false
@@ -8,7 +8,7 @@ execute:
   enabled: false
 ---
 
-::: {.skill-app data-skill-app="values" data-values-url="/data/skill-apps/values.json"}
+::: {.skill-app data-skill-app="values" data-values-url="/data/skill-apps/values.json" data-values-actions-url="/data/skill-apps/values-actions.json"}
 <p>Loading the Values & Valued Action tool...</p>
 :::
 

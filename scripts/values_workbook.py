@@ -33,6 +33,27 @@ DOMAINS = [
 
 EXCLUDED_VALUE_NAMES = {"Efficiency"}
 
+# Only high-confidence cleanup is implemented. Removed labels remain available
+# to migrations/search through LEGACY_VALUE_MIGRATIONS and DOMAIN_SEARCH_ALIASES.
+VALUE_MERGES = {
+    "bravery": "courage",
+    "valor": "courage",
+    "dependability": "reliability",
+    "flexibility": "adaptability",
+    "candor": "honesty",
+    "giving": "generosity",
+    "thankfulness": "gratitude",
+    "teamwork": "collaboration",
+}
+DOMAIN_VALUE_IDS = {"health", "family", "friendship", "community", "spirituality"}
+REMOVED_VALUE_IDS = {"perfection"}
+DOMAIN_SEARCH_ALIASES = {
+    "connection": ["Family", "Friendship"],
+    "contribution": ["Community"],
+    "self-care": ["Health"],
+    "meaning": ["Spirituality"],
+}
+
 FIXED_DISPLAY_ORDER = (
     "Acceptance",
     "Authenticity",
@@ -261,6 +282,23 @@ def add_display_ranks(values: list[dict[str, object]]) -> None:
         by_name[name]["display_rank"] = display_rank
 
 
+def consolidate_values(values: list[dict[str, object]]) -> list[dict[str, object]]:
+    """Apply bounded semantic cleanup while retaining legacy vocabulary."""
+    by_id = {str(value["id"]): value for value in values}
+    for alias_id, canonical_id in VALUE_MERGES.items():
+        canonical = by_id[canonical_id]
+        canonical["aliases"] = sorted({*canonical.get("aliases", []), str(by_id[alias_id]["name"])})
+    for canonical_id, aliases in DOMAIN_SEARCH_ALIASES.items():
+        canonical = by_id[canonical_id]
+        canonical["aliases"] = sorted({*canonical.get("aliases", []), *aliases})
+    excluded = set(VALUE_MERGES) | DOMAIN_VALUE_IDS | REMOVED_VALUE_IDS
+    kept = [value for value in values if str(value["id"]) not in excluded]
+    kept.sort(key=lambda value: int(value["display_rank"]))
+    for rank, value in enumerate(kept, 1):
+        value["display_rank"] = rank
+    return kept
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE)
@@ -272,12 +310,19 @@ def main() -> int:
         if str(value["name"]) not in EXCLUDED_VALUE_NAMES
     ]
     add_display_ranks(values)
+    values = consolidate_values(values)
     payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "source_document": args.source.name,
-        "process": ["DISCOVER", "CATEGORIZE", "ASSIGN", "ASSESS", "ACT", "BARRIERS", "MISSION"],
+        "process": ["DISCOVER", "CATEGORIZE", "ASSIGN", "ASSESS", "MISSION", "ACT", "BARRIERS"],
         "domains": [{"id": key, "name": name} for key, name in DOMAINS],
         "values": values,
+        "legacy_value_migrations": VALUE_MERGES,
+        "legacy_noncanonical_values": [
+            {"id": value["id"], "name": value["name"], "definition": value["definition"], "reason": "life-domain" if value["id"] in DOMAIN_VALUE_IDS else "removed-standard"}
+            for value in extract_values(lines)
+            if value["id"] in DOMAIN_VALUE_IDS | REMOVED_VALUE_IDS
+        ],
         "custom_values_allowed": True,
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)

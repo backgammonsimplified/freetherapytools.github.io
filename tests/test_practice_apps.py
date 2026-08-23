@@ -37,7 +37,9 @@ class PracticeAppTests(unittest.TestCase):
 
     def test_no_external_transmission_and_deep_links_resolve(self):
         text = JS.read_text(encoding="utf-8")
-        self.assertNotRegex(text, r"https?://|fetch\(|XMLHttpRequest|sendBeacon")
+        self.assertNotRegex(text, r"fetch\(|XMLHttpRequest|sendBeacon")
+        self.assertIn("https://calendar.google.com/calendar/r/eventedit", text)
+        self.assertIn('root.querySelector("[data-google-calendar]")?.addEventListener("click"', text)
         hrefs = re.findall(r'href:\s*"([^"]+)"', text)
         self.assertTrue(hrefs)
         for href in hrefs:

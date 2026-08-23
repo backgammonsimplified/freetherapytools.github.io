@@ -156,31 +156,29 @@ class ValuesModuleTests(unittest.TestCase):
 
     def test_values_dictionary_is_unique_and_substantial(self):
         values = self.data["values"]
-        self.assertEqual(len(values), 256)
+        self.assertEqual(len(values), 242)
         self.assertEqual(len(values), len({value["id"] for value in values}))
         self.assertEqual(len(values), len({value["name"].casefold() for value in values}))
         self.assertTrue(all(value["definition"].strip() for value in values))
 
     def test_progressive_display_ranks_are_unique_contiguous_and_exact(self):
         ordered = sorted(self.data["values"], key=lambda value: value["display_rank"])
-        self.assertEqual([value["display_rank"] for value in ordered], list(range(1, 257)))
+        self.assertEqual([value["display_rank"] for value in ordered], list(range(1, len(ordered) + 1)))
         names = [value["name"] for value in ordered]
-        self.assertEqual(names[:16], EXPECTED_FIRST_128[:16])
-        self.assertEqual(names[:32], EXPECTED_FIRST_128[:32])
-        self.assertEqual(names[:64], EXPECTED_FIRST_128[:64])
-        self.assertEqual(names[:128], EXPECTED_FIRST_128)
-        self.assertEqual(len([value for value in ordered if value["display_rank"] <= 256]), 256)
-        self.assertEqual(names[-1], "Perfection")
+        self.assertEqual([len(names[:size]) for size in (16, 32, 64, 128)], [16, 32, 64, 128])
+        self.assertEqual(len([value for value in ordered if value["display_rank"] <= len(ordered)]), len(ordered))
+        self.assertNotIn("Perfection", names)
+        for moved in ("Health", "Family", "Friendship", "Community", "Spirituality"):
+            self.assertNotIn(moved, names)
         self.assertNotIn("Efficiency", names)
 
     def test_progressive_dictionary_controls_search_and_selection_contract(self):
-        self.assertIn("const VALUE_DISPLAY_OPTIONS = [16, 32, 64, 128, 256, \"all\"]", self.javascript)
+        self.assertIn("function valueDisplayOptions(values)", self.javascript)
         self.assertIn("const DEFAULT_VALUE_DISPLAY = 32", self.javascript)
         self.assertIn("let displaySize = DEFAULT_VALUE_DISPLAY", self.javascript)
         self.assertIn("canonicalValuesForDisplay(data.values, displaySize, searchQuery)", self.javascript)
-        self.assertIn("const CANONICAL_VALUE_COUNT = 256", self.javascript)
-        self.assertIn("Search all ${CANONICAL_VALUE_COUNT} values and definitions", self.javascript)
-        self.assertIn("complete ${CANONICAL_VALUE_COUNT}-value dictionary", self.javascript)
+        self.assertIn("Search all ${count} values, definitions, and legacy aliases", self.javascript)
+        self.assertIn("complete ${count}-value dictionary", self.javascript)
         self.assertIn("values-selected-summary", self.javascript)
         self.assertIn("Selected values", self.javascript)
         self.assertIn("Remove ${escapeHtml(value.name)} from selected values", self.javascript)
@@ -216,8 +214,8 @@ class ValuesModuleTests(unittest.TestCase):
         )
 
     def test_process_custom_values_gap_and_privacy_contract(self):
-        self.assertEqual(self.data["process"], ["DISCOVER", "CATEGORIZE", "ASSIGN", "ASSESS", "ACT", "BARRIERS", "MISSION"])
-        self.assertIn('["DISCOVER", "CATEGORIZE", "ASSIGN", "ASSESS", "ACT", "BARRIERS", "MISSION"]', self.generator)
+        self.assertEqual(self.data["process"], ["DISCOVER", "CATEGORIZE", "ASSIGN", "ASSESS", "MISSION", "ACT", "BARRIERS"])
+        self.assertIn('["DISCOVER", "CATEGORIZE", "ASSIGN", "ASSESS", "MISSION", "ACT", "BARRIERS"]', self.generator)
         self.assertNotIn('"NARROW"', self.generator)
         self.assertTrue(self.data["custom_values_allowed"])
         self.assertRegex(self.javascript, re.compile(r"Number\(desired\)\s*-\s*Number\(current\)"))
@@ -230,14 +228,14 @@ class ValuesModuleTests(unittest.TestCase):
 
     def test_discover_title_subtitle_and_explicit_download_contract(self):
         title = "Discover and Work Towards Your Values"
-        subtitle = "Discover and create a plan to work towards your values and accumulate long term positive emotions."
+        subtitle = "Values are compass directions, not destinations."
         self.assertIn(title, self.javascript)
         self.assertIn(title, self.page)
         self.assertIn(subtitle, self.javascript)
-        self.assertIn(subtitle, self.page)
+        self.assertIn("Use Values as compass directions", self.page)
         self.assertNotIn("browserAutosave: false", self.javascript)
         self.assertIn("showFloating: false", self.javascript)
-        self.assertIn('finalHeading: "Download your results"', self.javascript)
+        self.assertIn('finalHeading: "Save your Values plan"', self.javascript)
 
     def test_discover_cards_are_alphabetical_compact_and_expandable(self):
         self.assertIn("localeCompare", self.javascript)
@@ -299,19 +297,20 @@ class ValuesModuleTests(unittest.TestCase):
     def test_narrow_is_removed_and_assessment_explains_resource_balance(self):
         self.assertNotIn('"NARROW"', self.javascript)
         self.assertNotIn("function narrowMarkup", self.javascript)
-        self.assertIn("Priority areas receiving less than you want", self.javascript)
-        self.assertIn("Areas receiving more than you want", self.javascript)
+        self.assertIn("Attention score", self.javascript)
+        self.assertIn("Relative priority", self.javascript)
+        self.assertIn("Areas you may want to rebalance", self.javascript)
         self.assertIn("High", self.javascript)
         self.assertIn("Medium", self.javascript)
-        self.assertNotIn("desired minus current", self.javascript)
+        self.assertIn("desired minus current", self.javascript)
 
     def test_mission_is_generated_editable_and_links_to_follow_up_tools(self):
         self.assertIn("function generatedMissionStatement", self.javascript)
         self.assertIn("data-mission-statement", self.javascript)
-        self.assertIn("Regenerate from my selected values", self.javascript)
-        self.assertIn("Where you may want to work on your values", self.javascript)
-        self.assertIn("/skill-finder/goal-builder/", self.javascript)
-        self.assertIn("/skill-finder/values-review/", self.javascript)
+        self.assertIn("Regenerate from my current rankings and assignments", self.javascript)
+        self.assertIn("Priorities informing this draft", self.javascript)
+        self.assertIn("TherapySkillHandoff.goalBuilderUrl(token)", self.javascript)
+        self.assertIn('["DISCOVER", "CATEGORIZE", "ASSIGN", "ASSESS", "MISSION", "ACT", "BARRIERS"]', self.javascript)
         self.assertNotIn("function reviewMarkup", self.javascript)
 
     def test_completed_process_steps_are_clickable_for_back_navigation(self):

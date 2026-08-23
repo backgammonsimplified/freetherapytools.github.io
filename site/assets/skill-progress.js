@@ -153,10 +153,14 @@
   function saveFile(extension) {
     try {
       const record = currentRecord();
-      const base = sanitizeFilename(active.filename.value || localFilename(active.config.toolId));
+      const base = sanitizeFilename(active.config.getSaveFilename?.(record) || active.filename.value || localFilename(active.config.toolId));
       if (extension === "json") download(`${base}.json`, serializeJson(record), "application/json;charset=utf-8");
-      else download(`${base}.md`, serializeMarkdown(record, active.config.getReadableSummary(record.state)), "text/markdown;charset=utf-8");
-      setMessage(`Saved ${base}.${extension} to your computer.`);
+      else {
+        const readable = active.config.getReadableSummary(record.state);
+        const markdown = active.config.serializeMarkdown?.(record, readable) || serializeMarkdown(record, readable);
+        download(`${base}.md`, markdown, "text/markdown;charset=utf-8");
+      }
+      setMessage(`${extension === "json" ? "Exported" : "Saved"} ${base}.${extension} to your computer.`);
     } catch (_error) {
       setMessage("Your progress could not be saved. Please try again.", true);
     }
@@ -235,7 +239,8 @@
 
   function openDrawer(trigger) {
     restoreFocus = trigger || document.activeElement;
-    active.filename.value = localFilename(active.config.toolId);
+    const record = currentRecord();
+    active.filename.value = active.config.getSaveFilename?.(record) || localFilename(active.config.toolId);
     active.backdrop.hidden = false;
     active.drawer.hidden = false;
     document.body.classList.add("skill-progress-dialog-open");
@@ -452,24 +457,26 @@
     const heading = element("h2", { text: "Save progress", attrs: { id: "skill-progress-heading" } });
     const filenameLabel = element("label", { text: "File name", attrs: { for: "skill-progress-filename" } });
     const filename = element("input", { type: "text", attrs: { id: "skill-progress-filename", autocomplete: "off", maxlength: "100" } });
+    if (config.getSaveFilename) filename.readOnly = true;
     const saveActions = element("div", { className: "skill-progress-actions" });
-    const saveMarkdown = element("button", { type: "button", text: "Save Markdown" });
-    const saveJson = element("button", { type: "button", text: "Save JSON" });
-    saveActions.append(saveMarkdown, saveJson);
+    const saveMarkdown = element("button", { type: "button", text: "Save progress (.md)" });
+    saveActions.append(saveMarkdown);
+    const markdownHelp = element("p", { className: "skill-progress-help", text: "Recommended. You can reopen this Markdown file later and continue." });
 
     const openSection = element("section");
     openSection.append(element("h3", { text: "Open previous progress" }));
     const fileLabel = element("label", { text: "Choose progress file", attrs: { for: "skill-progress-file" } });
     const fileInput = element("input", { type: "file", attrs: { id: "skill-progress-file", accept: ".md,.json,text/markdown,application/json" } });
     const wrongTool = element("div", { className: "skill-progress-actions" });
-    openSection.append(fileLabel, fileInput, wrongTool);
+    openSection.append(element("p", { text: "Open a previously saved Markdown progress file. Legacy JSON progress files also remain supported." }), fileLabel, fileInput, wrongTool);
 
     const exportSection = element("section");
     exportSection.append(element("h3", { text: "Export" }));
     const exportActions = element("div", { className: "skill-progress-actions" });
+    const saveJson = element("button", { type: "button", text: "Export JSON" });
     const docx = element("button", { type: "button", text: "Export DOCX" });
     const print = element("button", { type: "button", text: "Print / Save as PDF" });
-    exportActions.append(docx, print);
+    exportActions.append(saveJson, docx, print);
     exportSection.append(exportActions);
 
     let browserSection = null;
@@ -490,7 +497,7 @@
     privacySection.append(element("h3", { text: "Privacy" }), element("p", { className: "skill-progress-privacy", text: config.privacyText || "Your progress stays on this device unless you save a copy to your computer. Nothing you enter here is uploaded." }));
     const message = element("p", { className: "skill-progress-status", attrs: { role: "status", "aria-live": "polite" } });
     const close = element("button", { type: "button", text: "Close" });
-    drawer.append(heading, filenameLabel, filename, saveActions, openSection, exportSection);
+    drawer.append(heading, filenameLabel, filename, saveActions, markdownHelp, openSection, exportSection);
     if (browserSection) drawer.append(browserSection);
     drawer.append(privacySection, message, close);
     document.body.append(backdrop, drawer);
@@ -535,7 +542,7 @@
       const area = element("section", { className: "skill-progress-final", attrs: { "data-skill-progress-final": "" } });
       area.append(element("h3", { text: active.config.finalHeading || "Save your work" }));
       const actions = element("div", { className: "skill-progress-final-actions" });
-      const md = element("button", { type: "button", text: "Save Markdown" });
+      const md = element("button", { type: "button", text: "Save progress (.md)" });
       const docx = element("button", { type: "button", text: "Export DOCX" });
       const print = element("button", { type: "button", text: "Print / Save as PDF" });
       md.addEventListener("click", () => saveFile("md"));
@@ -547,7 +554,7 @@
         restart.addEventListener("click", startOver);
         actions.append(restart);
       }
-      area.append(actions);
+      area.append(element("p", { text: "Recommended. You can reopen this Markdown file later and continue." }), actions);
       footer.append(area);
     }
     const draft = active.config.browserAutosave === false || active.config.showDraftPrompt === false ? null : readDraft();

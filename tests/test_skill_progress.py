@@ -39,7 +39,7 @@ class SkillProgressTests(unittest.TestCase):
         for token in ("registerTool", "getState", "setState", "validateState", "getReadableSummary", "schemaVersion"):
             self.assertIn(token, PROGRESS)
         for label in (
-            "Open previous progress", "Save progress", "Save Markdown", "Save JSON",
+            "Open previous progress", "Save progress", "Save progress (.md)", "Export JSON",
             "Choose progress file", "Export DOCX", "Print / Save as PDF",
             "Clear browser progress", "Start again",
         ):

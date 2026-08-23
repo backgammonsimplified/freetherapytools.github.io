@@ -15,6 +15,7 @@ project:
     - assets/bs-learn.js
     - assets/skill-apps.js
     - assets/skill-progress.js
+    - assets/skill-handoff.js
     - assets/skill-finder-apps.js
     - assets/skill-practice-apps.js
     - "data/skill-apps/**"

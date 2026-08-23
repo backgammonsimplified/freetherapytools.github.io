@@ -502,6 +502,109 @@ body:has(.skill-app[data-skill-app="values"].values-action-bar-collapsed) .bs-si
   margin-bottom: 0.55rem;
 }
 
+.values-attention-ranking {
+  display: grid;
+  gap: 0.75rem;
+  padding-left: 1.5rem;
+}
+
+.values-attention-ranking li,
+.values-shortlist li {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.values-ranking-explanation {
+  margin-block: 1rem;
+}
+
+.values-action-domains {
+  display: grid;
+  gap: 1rem;
+}
+
+.values-action-domain {
+  border: 1px solid var(--bs-border-color, #d9ccc0);
+  border-radius: 0.5rem;
+  background: var(--bs-surface, #fffdfc);
+  overflow: clip;
+}
+
+.values-action-domain > summary {
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.values-action-domain > summary span,
+.values-action-domain > summary small {
+  display: block;
+}
+
+.values-action-domain > summary small {
+  margin-top: 0.25rem;
+  font-weight: 400;
+}
+
+.values-action-domain-body {
+  display: grid;
+  gap: 1rem;
+  padding: 0 1rem 1rem;
+}
+
+.values-assigned-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  list-style: none;
+  padding: 0;
+}
+
+.values-assigned-list li {
+  border: 1px solid var(--bs-border-color, #d9ccc0);
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+}
+
+.values-suggestion-list {
+  display: grid;
+  gap: 0.4rem;
+  margin-block: 0.75rem;
+}
+
+.values-custom-suggestion {
+  margin-top: 1rem;
+}
+
+.values-shortlist {
+  margin-top: 2rem;
+}
+
+.values-shortlist ol {
+  display: grid;
+  gap: 1rem;
+  padding-left: 1.5rem;
+}
+
+.values-shortlist li > button {
+  justify-self: start;
+  margin-top: 0.35rem;
+}
+
+@media (max-width: 575.98px) {
+  .values-action-domain,
+  .values-action-domain-body,
+  .values-shortlist,
+  .values-attention-ranking li {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .values-action-domain > summary,
+  .values-action-domain-body {
+    padding-inline: 0.75rem;
+  }
+}
+
 .values-discover-title {
   align-items: center;
   display: flex;

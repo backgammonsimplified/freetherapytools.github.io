@@ -1,0 +1,257 @@
+current_id,current_label,current_rank,classification,synonym_cluster,proposed_canonical,decision,aliases,reason
+acceptance,Acceptance,1,chosen-value,,Acceptance,KEEP,,Supports an ongoing direction or quality of living.
+authenticity,Authenticity,2,chosen-value,,Authenticity,KEEP,,Supports an ongoing direction or quality of living.
+balance,Balance,3,chosen-value,calmness-peace-harmony-balance-stability-moderation,Balance,KEEP,,Supports an ongoing direction or quality of living.
+care,Care,4,chosen-value,kindness-care-compassion-empathy-friendliness-benevolence,Care,KEEP,,Supports an ongoing direction or quality of living.
+compassion,Compassion,5,chosen-value,kindness-care-compassion-empathy-friendliness-benevolence,Compassion,KEEP,,Supports an ongoing direction or quality of living.
+connection,Connection,6,chosen-value,family-friendship-intimacy-connection,Connection,KEEP,,Supports an ongoing direction or quality of living.
+courage,Courage,7,chosen-value,courage-bravery-boldness-fortitude,Courage,KEEP,,Supports an ongoing direction or quality of living.
+creativity,Creativity,8,chosen-value,,Creativity,KEEP,,Supports an ongoing direction or quality of living.
+curiosity,Curiosity,9,chosen-value,learning-knowledge-curiosity-exploration-insight-wisdom-growth-improvement-mastery,Curiosity,KEEP,,Supports an ongoing direction or quality of living.
+growth,Growth,10,chosen-value,learning-knowledge-curiosity-exploration-insight-wisdom-growth-improvement-mastery,Growth,KEEP,,Supports an ongoing direction or quality of living.
+health,Health,11,life-domain,,,MOVE_TO_DOMAIN,,"Duplicates the existing Health, Self-Care & Vitality life-domain taxonomy."
+honesty,Honesty,12,chosen-value,honesty-candor-integrity-ethics,Honesty,KEEP,,Supports an ongoing direction or quality of living.
+kindness,Kindness,13,chosen-value,kindness-care-compassion-empathy-friendliness-benevolence,Kindness,KEEP,,Supports an ongoing direction or quality of living.
+love,Love,14,chosen-value,,Love,KEEP,,Supports an ongoing direction or quality of living.
+purpose,Purpose,15,chosen-value,,Purpose,KEEP,,Supports an ongoing direction or quality of living.
+responsibility,Responsibility,16,chosen-value,responsibility-accountability,Responsibility,KEEP,,Supports an ongoing direction or quality of living.
+achievement,Achievement,17,chosen-value,achievement-excellence-competence-mastery-effectiveness,Achievement,KEEP,,Supports an ongoing direction or quality of living.
+adventure,Adventure,18,chosen-value,,Adventure,KEEP,,Supports an ongoing direction or quality of living.
+autonomy,Autonomy,19,chosen-value,autonomy-independence-freedom-individuality,Autonomy,KEEP,,Supports an ongoing direction or quality of living.
+commitment,Commitment,20,chosen-value,commitment-dedication-persistence-determination,Commitment,KEEP,,Supports an ongoing direction or quality of living.
+community,Community,21,life-domain,,,MOVE_TO_DOMAIN,,"Duplicates the existing Community, Service & Environment life-domain taxonomy."
+contribution,Contribution,22,chosen-value,community-contribution-service-giving-charity-advocacy,Contribution,KEEP,,Supports an ongoing direction or quality of living.
+family,Family,23,life-domain,,,MOVE_TO_DOMAIN,,"Duplicates the existing Close Relationships, Family & Caregiving life-domain taxonomy."
+freedom,Freedom,24,chosen-value,autonomy-independence-freedom-individuality,Freedom,KEEP,,Supports an ongoing direction or quality of living.
+friendship,Friendship,25,life-domain,,,MOVE_TO_DOMAIN,,Duplicates the existing Friendship & Social Connection life-domain taxonomy.
+gratitude,Gratitude,26,chosen-value,,Gratitude,KEEP,,Supports an ongoing direction or quality of living.
+integrity,Integrity,27,chosen-value,honesty-candor-integrity-ethics,Integrity,KEEP,,Supports an ongoing direction or quality of living.
+joy,Joy,28,chosen-value,joy-enjoyment-fun-playfulness-cheerfulness-recreation,Joy,KEEP,,Supports an ongoing direction or quality of living.
+learning,Learning,29,chosen-value,learning-knowledge-curiosity-exploration-insight-wisdom-growth-improvement-mastery,Learning,KEEP,,Supports an ongoing direction or quality of living.
+mindfulness,Mindfulness,30,chosen-value,mindfulness-presence-awareness-attentiveness-self-awareness-reflectiveness,Mindfulness,KEEP,,Supports an ongoing direction or quality of living.
+respect,Respect,31,chosen-value,,Respect,KEEP,,Supports an ongoing direction or quality of living.
+trust,Trust,32,chosen-value,,Trust,KEEP,,Supports an ongoing direction or quality of living.
+accountability,Accountability,33,chosen-value,responsibility-accountability,Accountability,KEEP,,Supports an ongoing direction or quality of living.
+awareness,Awareness,34,chosen-value,mindfulness-presence-awareness-attentiveness-self-awareness-reflectiveness,Awareness,KEEP,,Supports an ongoing direction or quality of living.
+collaboration,Collaboration,35,chosen-value,,Collaboration,KEEP,,Supports an ongoing direction or quality of living.
+communication,Communication,36,chosen-value,,Communication,KEEP,,Supports an ongoing direction or quality of living.
+competence,Competence,37,chosen-value,achievement-excellence-competence-mastery-effectiveness,Competence,KEEP,,Supports an ongoing direction or quality of living.
+discipline,Discipline,38,chosen-value,,Discipline,KEEP,,Supports an ongoing direction or quality of living.
+empathy,Empathy,39,chosen-value,kindness-care-compassion-empathy-friendliness-benevolence,Empathy,KEEP,,Supports an ongoing direction or quality of living.
+fairness,Fairness,40,chosen-value,fairness-equality-justice,Fairness,KEEP,,Supports an ongoing direction or quality of living.
+flexibility,Flexibility,41,duplicate-near-duplicate,adaptability-flexibility,Adaptability,MERGE_ALIAS,Flexibility,Most users would treat this label as the same practical compass direction in this tool.
+forgiveness,Forgiveness,42,chosen-value,,Forgiveness,KEEP,,Supports an ongoing direction or quality of living.
+generosity,Generosity,43,chosen-value,generosity-giving-charity-benevolence,Generosity,KEEP,,Supports an ongoing direction or quality of living.
+hope,Hope,44,chosen-value,,Hope,KEEP,,Supports an ongoing direction or quality of living.
+humor,Humor,45,chosen-value,,Humor,KEEP,,Supports an ongoing direction or quality of living.
+independence,Independence,46,chosen-value,autonomy-independence-freedom-individuality,Independence,KEEP,,Supports an ongoing direction or quality of living.
+justice,Justice,47,chosen-value,fairness-equality-justice,Justice,KEEP,,Supports an ongoing direction or quality of living.
+loyalty,Loyalty,48,chosen-value,,Loyalty,KEEP,,Supports an ongoing direction or quality of living.
+mastery,Mastery,49,chosen-value,learning-knowledge-curiosity-exploration-insight-wisdom-growth-improvement-mastery,Mastery,KEEP,,Supports an ongoing direction or quality of living.
+meaning,Meaning,50,chosen-value,,Meaning,KEEP,,Supports an ongoing direction or quality of living.
+open-mindedness,Open-Mindedness,51,chosen-value,openness-open-mindedness,Open-Mindedness,KEEP,,Supports an ongoing direction or quality of living.
+patience,Patience,52,chosen-value,,Patience,KEEP,,Supports an ongoing direction or quality of living.
+peace,Peace,53,chosen-value,calmness-peace-harmony-balance-stability-moderation,Peace,KEEP,,Supports an ongoing direction or quality of living.
+persistence,Persistence,54,chosen-value,commitment-dedication-persistence-determination,Persistence,KEEP,,Supports an ongoing direction or quality of living.
+playfulness,Playfulness,55,chosen-value,joy-enjoyment-fun-playfulness-cheerfulness-recreation,Playfulness,KEEP,,Supports an ongoing direction or quality of living.
+reliability,Reliability,56,chosen-value,reliability-dependability-consistency,Reliability,KEEP,,Supports an ongoing direction or quality of living.
+resilience,Resilience,57,chosen-value,,Resilience,KEEP,,Supports an ongoing direction or quality of living.
+safety,Safety,58,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+self-awareness,Self-Awareness,59,chosen-value,mindfulness-presence-awareness-attentiveness-self-awareness-reflectiveness,Self-Awareness,KEEP,,Supports an ongoing direction or quality of living.
+self-care,Self-Care,60,behavior-process,health-fitness-self-care-energy,,REVIEW,,A process label that may still work as a chosen direction; retain for review.
+service,Service,61,chosen-value,community-contribution-service-giving-charity-advocacy,Service,KEEP,,Supports an ongoing direction or quality of living.
+spirituality,Spirituality,62,life-domain,,,MOVE_TO_DOMAIN,,"Duplicates the existing Spirituality, Meaning & Inner Life life-domain taxonomy."
+stability,Stability,63,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+wisdom,Wisdom,64,chosen-value,learning-knowledge-curiosity-exploration-insight-wisdom-growth-improvement-mastery,Wisdom,KEEP,,Supports an ongoing direction or quality of living.
+adaptability,Adaptability,65,chosen-value,adaptability-flexibility,Adaptability,KEEP,,Supports an ongoing direction or quality of living.
+advocacy,Advocacy,66,chosen-value,community-contribution-service-giving-charity-advocacy,Advocacy,KEEP,,Supports an ongoing direction or quality of living.
+appreciation,Appreciation,67,chosen-value,,Appreciation,KEEP,,Supports an ongoing direction or quality of living.
+assertiveness,Assertiveness,68,chosen-value,,Assertiveness,KEEP,,Supports an ongoing direction or quality of living.
+attentiveness,Attentiveness,69,chosen-value,mindfulness-presence-awareness-attentiveness-self-awareness-reflectiveness,Attentiveness,KEEP,,Supports an ongoing direction or quality of living.
+beauty,Beauty,70,chosen-value,,Beauty,KEEP,,Supports an ongoing direction or quality of living.
+benevolence,Benevolence,71,chosen-value,generosity-giving-charity-benevolence,Benevolence,KEEP,,Supports an ongoing direction or quality of living.
+boldness,Boldness,72,chosen-value,courage-bravery-boldness-fortitude,Boldness,KEEP,,Supports an ongoing direction or quality of living.
+bravery,Bravery,73,duplicate-near-duplicate,courage-bravery-boldness-fortitude,Courage,MERGE_ALIAS,Bravery,Most users would treat this label as the same practical compass direction in this tool.
+calmness,Calmness,74,chosen-value,calmness-peace-harmony-balance-stability-moderation,Calmness,KEEP,,Supports an ongoing direction or quality of living.
+candor,Candor,75,duplicate-near-duplicate,honesty-candor-integrity-ethics,Honesty,MERGE_ALIAS,Candor,Most users would treat this label as the same practical compass direction in this tool.
+challenge,Challenge,76,chosen-value,,Challenge,KEEP,,Supports an ongoing direction or quality of living.
+charity,Charity,77,chosen-value,generosity-giving-charity-benevolence,Charity,KEEP,,Supports an ongoing direction or quality of living.
+cheerfulness,Cheerfulness,78,chosen-value,joy-enjoyment-fun-playfulness-cheerfulness-recreation,Cheerfulness,KEEP,,Supports an ongoing direction or quality of living.
+clarity,Clarity,79,chosen-value,,Clarity,KEEP,,Supports an ongoing direction or quality of living.
+cleanliness,Cleanliness,80,preference-standard,,,REVIEW,,May function as a preference or standard; retain for review rather than remove automatically.
+common-sense,Common Sense,81,chosen-value,,Common Sense,KEEP,,Supports an ongoing direction or quality of living.
+consistency,Consistency,82,chosen-value,reliability-dependability-consistency,Consistency,KEEP,,Supports an ongoing direction or quality of living.
+contentment,Contentment,83,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+cooperation,Cooperation,84,chosen-value,,Cooperation,KEEP,,Supports an ongoing direction or quality of living.
+courtesy,Courtesy,85,chosen-value,,Courtesy,KEEP,,Supports an ongoing direction or quality of living.
+decisiveness,Decisiveness,86,chosen-value,,Decisiveness,KEEP,,Supports an ongoing direction or quality of living.
+dedication,Dedication,87,chosen-value,commitment-dedication-persistence-determination,Dedication,KEEP,,Supports an ongoing direction or quality of living.
+dependability,Dependability,88,duplicate-near-duplicate,reliability-dependability-consistency,Reliability,MERGE_ALIAS,Dependability,Most users would treat this label as the same practical compass direction in this tool.
+determination,Determination,89,chosen-value,commitment-dedication-persistence-determination,Determination,KEEP,,Supports an ongoing direction or quality of living.
+dignity,Dignity,90,chosen-value,,Dignity,KEEP,,Supports an ongoing direction or quality of living.
+effectiveness,Effectiveness,91,chosen-value,achievement-excellence-competence-mastery-effectiveness,Effectiveness,KEEP,,Supports an ongoing direction or quality of living.
+encouragement,Encouragement,92,chosen-value,,Encouragement,KEEP,,Supports an ongoing direction or quality of living.
+endurance,Endurance,93,chosen-value,,Endurance,KEEP,,Supports an ongoing direction or quality of living.
+energy,Energy,94,need-condition-outcome,health-fitness-self-care-energy,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+enjoyment,Enjoyment,95,chosen-value,joy-enjoyment-fun-playfulness-cheerfulness-recreation,Enjoyment,KEEP,,Supports an ongoing direction or quality of living.
+equality,Equality,96,chosen-value,fairness-equality-justice,Equality,KEEP,,Supports an ongoing direction or quality of living.
+ethics,Ethics,97,chosen-value,honesty-candor-integrity-ethics,Ethics,KEEP,,Supports an ongoing direction or quality of living.
+excellence,Excellence,98,chosen-value,achievement-excellence-competence-mastery-effectiveness,Excellence,KEEP,,Supports an ongoing direction or quality of living.
+exploration,Exploration,99,chosen-value,learning-knowledge-curiosity-exploration-insight-wisdom-growth-improvement-mastery,Exploration,KEEP,,Supports an ongoing direction or quality of living.
+expressiveness,Expressiveness,100,chosen-value,,Expressiveness,KEEP,,Supports an ongoing direction or quality of living.
+fitness,Fitness,101,need-condition-outcome,health-fitness-self-care-energy,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+focus,Focus,102,chosen-value,,Focus,KEEP,,Supports an ongoing direction or quality of living.
+fortitude,Fortitude,103,chosen-value,courage-bravery-boldness-fortitude,Fortitude,KEEP,,Supports an ongoing direction or quality of living.
+friendliness,Friendliness,104,chosen-value,kindness-care-compassion-empathy-friendliness-benevolence,Friendliness,KEEP,,Supports an ongoing direction or quality of living.
+fun,Fun,105,chosen-value,joy-enjoyment-fun-playfulness-cheerfulness-recreation,Fun,KEEP,,Supports an ongoing direction or quality of living.
+giving,Giving,106,duplicate-near-duplicate,generosity-giving-charity-benevolence,Generosity,MERGE_ALIAS,Giving,Most users would treat this label as the same practical compass direction in this tool.
+grace,Grace,107,chosen-value,,Grace,KEEP,,Supports an ongoing direction or quality of living.
+harmony,Harmony,108,chosen-value,calmness-peace-harmony-balance-stability-moderation,Harmony,KEEP,,Supports an ongoing direction or quality of living.
+hard-work,Hard Work,109,behavior-process,,,REVIEW,,A process label that may still work as a chosen direction; retain for review.
+improvement,Improvement,110,chosen-value,learning-knowledge-curiosity-exploration-insight-wisdom-growth-improvement-mastery,Improvement,KEEP,,Supports an ongoing direction or quality of living.
+inclusiveness,Inclusiveness,111,chosen-value,,Inclusiveness,KEEP,,Supports an ongoing direction or quality of living.
+individuality,Individuality,112,chosen-value,autonomy-independence-freedom-individuality,Individuality,KEEP,,Supports an ongoing direction or quality of living.
+insight,Insight,113,chosen-value,learning-knowledge-curiosity-exploration-insight-wisdom-growth-improvement-mastery,Insight,KEEP,,Supports an ongoing direction or quality of living.
+inspiration,Inspiration,114,chosen-value,,Inspiration,KEEP,,Supports an ongoing direction or quality of living.
+intimacy,Intimacy,115,chosen-value,family-friendship-intimacy-connection,Intimacy,KEEP,,Supports an ongoing direction or quality of living.
+knowledge,Knowledge,116,chosen-value,learning-knowledge-curiosity-exploration-insight-wisdom-growth-improvement-mastery,Knowledge,KEEP,,Supports an ongoing direction or quality of living.
+leadership,Leadership,117,chosen-value,,Leadership,KEEP,,Supports an ongoing direction or quality of living.
+moderation,Moderation,118,chosen-value,calmness-peace-harmony-balance-stability-moderation,Moderation,KEEP,,Supports an ongoing direction or quality of living.
+motivation,Motivation,119,chosen-value,,Motivation,KEEP,,Supports an ongoing direction or quality of living.
+openness,Openness,120,chosen-value,openness-open-mindedness,Openness,KEEP,,Supports an ongoing direction or quality of living.
+optimism,Optimism,121,chosen-value,,Optimism,KEEP,,Supports an ongoing direction or quality of living.
+organization,Organization,122,chosen-value,,Organization,KEEP,,Supports an ongoing direction or quality of living.
+passion,Passion,123,chosen-value,,Passion,KEEP,,Supports an ongoing direction or quality of living.
+presence,Presence,124,chosen-value,mindfulness-presence-awareness-attentiveness-self-awareness-reflectiveness,Presence,KEEP,,Supports an ongoing direction or quality of living.
+recreation,Recreation,125,behavior-process,joy-enjoyment-fun-playfulness-cheerfulness-recreation,,REVIEW,,A process label that may still work as a chosen direction; retain for review.
+reflectiveness,Reflectiveness,126,chosen-value,mindfulness-presence-awareness-attentiveness-self-awareness-reflectiveness,Reflectiveness,KEEP,,Supports an ongoing direction or quality of living.
+self-control,Self-Control,127,chosen-value,,Self-Control,KEEP,,Supports an ongoing direction or quality of living.
+supportiveness,Supportiveness,128,chosen-value,,Supportiveness,KEEP,,Supports an ongoing direction or quality of living.
+accuracy,Accuracy,129,chosen-value,,Accuracy,KEEP,,Supports an ongoing direction or quality of living.
+affection,Affection,130,chosen-value,,Affection,KEEP,,Supports an ongoing direction or quality of living.
+alertness,Alertness,131,chosen-value,,Alertness,KEEP,,Supports an ongoing direction or quality of living.
+altruism,Altruism,132,chosen-value,,Altruism,KEEP,,Supports an ongoing direction or quality of living.
+amusement,Amusement,133,chosen-value,,Amusement,KEEP,,Supports an ongoing direction or quality of living.
+belonging,Belonging,134,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+carefulness,Carefulness,135,chosen-value,,Carefulness,KEEP,,Supports an ongoing direction or quality of living.
+certainty,Certainty,136,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+cleverness,Cleverness,137,chosen-value,,Cleverness,KEEP,,Supports an ongoing direction or quality of living.
+comfort,Comfort,138,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+concentration,Concentration,139,chosen-value,,Concentration,KEEP,,Supports an ongoing direction or quality of living.
+confidence,Confidence,140,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+conformity,Conformity,141,preference-standard,,,REVIEW,,May function as a preference or standard; retain for review rather than remove automatically.
+control,Control,142,preference-standard,,,REVIEW,,May function as a preference or standard; retain for review rather than remove automatically.
+conviction,Conviction,143,chosen-value,,Conviction,KEEP,,Supports an ongoing direction or quality of living.
+credibility,Credibility,144,chosen-value,,Credibility,KEEP,,Supports an ongoing direction or quality of living.
+daring,Daring,145,chosen-value,,Daring,KEEP,,Supports an ongoing direction or quality of living.
+development,Development,146,chosen-value,,Development,KEEP,,Supports an ongoing direction or quality of living.
+devotion,Devotion,147,chosen-value,,Devotion,KEEP,,Supports an ongoing direction or quality of living.
+discovery,Discovery,148,chosen-value,,Discovery,KEEP,,Supports an ongoing direction or quality of living.
+diversity,Diversity,149,chosen-value,,Diversity,KEEP,,Supports an ongoing direction or quality of living.
+drive,Drive,150,chosen-value,,Drive,KEEP,,Supports an ongoing direction or quality of living.
+empowerment,Empowerment,151,chosen-value,,Empowerment,KEEP,,Supports an ongoing direction or quality of living.
+enthusiasm,Enthusiasm,152,chosen-value,,Enthusiasm,KEEP,,Supports an ongoing direction or quality of living.
+excitement,Excitement,153,chosen-value,,Excitement,KEEP,,Supports an ongoing direction or quality of living.
+faith,Faith,154,chosen-value,,Faith,KEEP,,Supports an ongoing direction or quality of living.
+fidelity,Fidelity,155,chosen-value,,Fidelity,KEEP,,Supports an ongoing direction or quality of living.
+foresight,Foresight,156,chosen-value,,Foresight,KEEP,,Supports an ongoing direction or quality of living.
+goodness,Goodness,157,chosen-value,,Goodness,KEEP,,Supports an ongoing direction or quality of living.
+happiness,Happiness,158,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+honor,Honor,159,chosen-value,,Honor,KEEP,,Supports an ongoing direction or quality of living.
+humility,Humility,160,chosen-value,,Humility,KEEP,,Supports an ongoing direction or quality of living.
+imagination,Imagination,161,chosen-value,,Imagination,KEEP,,Supports an ongoing direction or quality of living.
+industry,Industry,162,behavior-process,,,REVIEW,,A process label that may still work as a chosen direction; retain for review.
+innovation,Innovation,163,chosen-value,,Innovation,KEEP,,Supports an ongoing direction or quality of living.
+intelligence,Intelligence,164,chosen-value,,Intelligence,KEEP,,Supports an ongoing direction or quality of living.
+intuition,Intuition,165,chosen-value,,Intuition,KEEP,,Supports an ongoing direction or quality of living.
+lawfulness,Lawfulness,166,chosen-value,,Lawfulness,KEEP,,Supports an ongoing direction or quality of living.
+liberty,Liberty,167,chosen-value,,Liberty,KEEP,,Supports an ongoing direction or quality of living.
+logic,Logic,168,chosen-value,,Logic,KEEP,,Supports an ongoing direction or quality of living.
+making-a-difference,Making a Difference,169,chosen-value,,Making a Difference,KEEP,,Supports an ongoing direction or quality of living.
+maturity,Maturity,170,chosen-value,,Maturity,KEEP,,Supports an ongoing direction or quality of living.
+order,Order,171,preference-standard,,,REVIEW,,May function as a preference or standard; retain for review rather than remove automatically.
+originality,Originality,172,chosen-value,,Originality,KEEP,,Supports an ongoing direction or quality of living.
+pleasure,Pleasure,173,chosen-value,,Pleasure,KEEP,,Supports an ongoing direction or quality of living.
+poise,Poise,174,chosen-value,,Poise,KEEP,,Supports an ongoing direction or quality of living.
+preparedness,Preparedness,175,chosen-value,,Preparedness,KEEP,,Supports an ongoing direction or quality of living.
+proactivity,Proactivity,176,chosen-value,,Proactivity,KEEP,,Supports an ongoing direction or quality of living.
+punctuality,Punctuality,177,chosen-value,,Punctuality,KEEP,,Supports an ongoing direction or quality of living.
+realism,Realism,178,chosen-value,,Realism,KEEP,,Supports an ongoing direction or quality of living.
+reason,Reason,179,chosen-value,,Reason,KEEP,,Supports an ongoing direction or quality of living.
+reciprocity,Reciprocity,180,chosen-value,,Reciprocity,KEEP,,Supports an ongoing direction or quality of living.
+resourcefulness,Resourcefulness,181,chosen-value,,Resourcefulness,KEEP,,Supports an ongoing direction or quality of living.
+restraint,Restraint,182,chosen-value,,Restraint,KEEP,,Supports an ongoing direction or quality of living.
+reverence,Reverence,183,chosen-value,,Reverence,KEEP,,Supports an ongoing direction or quality of living.
+risk-taking,Risk Taking,184,chosen-value,,Risk Taking,KEEP,,Supports an ongoing direction or quality of living.
+romance,Romance,185,chosen-value,,Romance,KEEP,,Supports an ongoing direction or quality of living.
+security,Security,186,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+self-development,Self-Development,187,chosen-value,,Self-Development,KEEP,,Supports an ongoing direction or quality of living.
+self-reliance,Self-Reliance,188,chosen-value,,Self-Reliance,KEEP,,Supports an ongoing direction or quality of living.
+selflessness,Selflessness,189,chosen-value,,Selflessness,KEEP,,Supports an ongoing direction or quality of living.
+sensitivity,Sensitivity,190,chosen-value,,Sensitivity,KEEP,,Supports an ongoing direction or quality of living.
+sensuality,Sensuality,191,chosen-value,,Sensuality,KEEP,,Supports an ongoing direction or quality of living.
+serenity,Serenity,192,chosen-value,,Serenity,KEEP,,Supports an ongoing direction or quality of living.
+sexuality,Sexuality,193,chosen-value,,Sexuality,KEEP,,Supports an ongoing direction or quality of living.
+sharing,Sharing,194,chosen-value,,Sharing,KEEP,,Supports an ongoing direction or quality of living.
+simplicity,Simplicity,195,chosen-value,,Simplicity,KEEP,,Supports an ongoing direction or quality of living.
+sincerity,Sincerity,196,chosen-value,,Sincerity,KEEP,,Supports an ongoing direction or quality of living.
+skilfulness,Skilfulness,197,chosen-value,,Skilfulness,KEEP,,Supports an ongoing direction or quality of living.
+solitude,Solitude,198,chosen-value,,Solitude,KEEP,,Supports an ongoing direction or quality of living.
+spontaneity,Spontaneity,199,chosen-value,,Spontaneity,KEEP,,Supports an ongoing direction or quality of living.
+stewardship,Stewardship,200,chosen-value,,Stewardship,KEEP,,Supports an ongoing direction or quality of living.
+strength,Strength,201,chosen-value,,Strength,KEEP,,Supports an ongoing direction or quality of living.
+structure,Structure,202,preference-standard,,,REVIEW,,May function as a preference or standard; retain for review rather than remove automatically.
+sustainability,Sustainability,203,chosen-value,,Sustainability,KEEP,,Supports an ongoing direction or quality of living.
+teamwork,Teamwork,204,duplicate-near-duplicate,,Collaboration,MERGE_ALIAS,Teamwork,Most users would treat this label as the same practical compass direction in this tool.
+temperance,Temperance,205,chosen-value,,Temperance,KEEP,,Supports an ongoing direction or quality of living.
+thankfulness,Thankfulness,206,duplicate-near-duplicate,,Gratitude,MERGE_ALIAS,Thankfulness,Most users would treat this label as the same practical compass direction in this tool.
+thoroughness,Thoroughness,207,chosen-value,,Thoroughness,KEEP,,Supports an ongoing direction or quality of living.
+thoughtfulness,Thoughtfulness,208,chosen-value,,Thoughtfulness,KEEP,,Supports an ongoing direction or quality of living.
+timeliness,Timeliness,209,chosen-value,,Timeliness,KEEP,,Supports an ongoing direction or quality of living.
+tolerance,Tolerance,210,chosen-value,,Tolerance,KEEP,,Supports an ongoing direction or quality of living.
+toughness,Toughness,211,chosen-value,,Toughness,KEEP,,Supports an ongoing direction or quality of living.
+tradition,Tradition,212,chosen-value,,Tradition,KEEP,,Supports an ongoing direction or quality of living.
+tranquility,Tranquility,213,chosen-value,,Tranquility,KEEP,,Supports an ongoing direction or quality of living.
+transparency,Transparency,214,chosen-value,,Transparency,KEEP,,Supports an ongoing direction or quality of living.
+trustworthiness,Trustworthiness,215,chosen-value,,Trustworthiness,KEEP,,Supports an ongoing direction or quality of living.
+truth,Truth,216,chosen-value,,Truth,KEEP,,Supports an ongoing direction or quality of living.
+understanding,Understanding,217,chosen-value,,Understanding,KEEP,,Supports an ongoing direction or quality of living.
+uniqueness,Uniqueness,218,chosen-value,,Uniqueness,KEEP,,Supports an ongoing direction or quality of living.
+unity,Unity,219,chosen-value,,Unity,KEEP,,Supports an ongoing direction or quality of living.
+usefulness,Usefulness,220,chosen-value,,Usefulness,KEEP,,Supports an ongoing direction or quality of living.
+valor,Valor,221,duplicate-near-duplicate,courage-bravery-boldness-fortitude,Courage,MERGE_ALIAS,Valor,Most users would treat this label as the same practical compass direction in this tool.
+versatility,Versatility,222,chosen-value,,Versatility,KEEP,,Supports an ongoing direction or quality of living.
+vision,Vision,223,chosen-value,,Vision,KEEP,,Supports an ongoing direction or quality of living.
+vitality,Vitality,224,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+warmth,Warmth,225,chosen-value,,Warmth,KEEP,,Supports an ongoing direction or quality of living.
+welcoming,Welcoming,226,chosen-value,,Welcoming,KEEP,,Supports an ongoing direction or quality of living.
+well-being,Well-Being,227,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+wonder,Wonder,228,chosen-value,,Wonder,KEEP,,Supports an ongoing direction or quality of living.
+zeal,Zeal,229,chosen-value,,Zeal,KEEP,,Supports an ongoing direction or quality of living.
+abundance,Abundance,230,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+accomplishment,Accomplishment,231,goal-achievement,,,REVIEW,,May describe an endpoint or achievement more than an ongoing direction; retain for review.
+advancement,Advancement,232,goal-achievement,,,REVIEW,,May describe an endpoint or achievement more than an ongoing direction; retain for review.
+ambition,Ambition,233,chosen-value,,Ambition,KEEP,,Supports an ongoing direction or quality of living.
+attractiveness,Attractiveness,234,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+being-the-best,Being the Best,235,goal-achievement,,,REVIEW,,May describe an endpoint or achievement more than an ongoing direction; retain for review.
+brilliance,Brilliance,236,chosen-value,,Brilliance,KEEP,,Supports an ongoing direction or quality of living.
+competitiveness,Competitiveness,237,chosen-value,,Competitiveness,KEEP,,Supports an ongoing direction or quality of living.
+fame,Fame,238,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+greatness,Greatness,239,goal-achievement,,,REVIEW,,May describe an endpoint or achievement more than an ongoing direction; retain for review.
+influence,Influence,240,chosen-value,,Influence,KEEP,,Supports an ongoing direction or quality of living.
+performance,Performance,241,goal-achievement,,,REVIEW,,May describe an endpoint or achievement more than an ongoing direction; retain for review.
+popularity,Popularity,242,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+power,Power,243,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+productivity,Productivity,244,behavior-process,,,REVIEW,,A process label that may still work as a chosen direction; retain for review.
+professionalism,Professionalism,245,chosen-value,,Professionalism,KEEP,,Supports an ongoing direction or quality of living.
+prosperity,Prosperity,246,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+quality,Quality,247,preference-standard,,,REVIEW,,May function as a preference or standard; retain for review rather than remove automatically.
+recognition,Recognition,248,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+results-orientation,Results Orientation,249,goal-achievement,,,REVIEW,,May describe an endpoint or achievement more than an ongoing direction; retain for review.
+significance,Significance,250,chosen-value,,Significance,KEEP,,Supports an ongoing direction or quality of living.
+status,Status,251,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+success,Success,252,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+talent,Talent,253,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+wealth,Wealth,254,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+winning,Winning,255,need-condition-outcome,,,REVIEW,,May be a desired condition or outcome; retain canonically until editorial review.
+perfection,Perfection,256,preference-standard,,,REMOVE,,"An evaluative endpoint or flawlessness standard, not an ongoing chosen direction."
