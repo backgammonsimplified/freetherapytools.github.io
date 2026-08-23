@@ -32,6 +32,10 @@
   margin-top: 0;
 }
 
+.skill-app[data-skill-app="values"] .skill-app-panel h3 {
+  scroll-margin-top: 5rem;
+}
+
 .skill-app-progress {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -863,6 +867,87 @@ body:has(.skill-app[data-skill-app="values"].values-action-bar-collapsed) .bs-si
   gap: 0.75rem;
 }
 
+.values-priority-figure {
+  margin: 1rem 0 1.25rem;
+}
+
+.values-priority-bar {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  height: 2rem;
+  overflow: hidden;
+  border: 1px solid var(--bs-border-strong, #88786e);
+  border-radius: 0.45rem;
+  background: var(--bs-surface, #fffdfc);
+}
+
+.values-priority-segment {
+  display: grid;
+  flex: 0 1 calc(var(--priority-share) * 1%);
+  min-width: 0;
+  place-items: center;
+  color: var(--bs-text-inverse, #fff);
+  font-size: 0.76rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.values-priority-legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 0.4rem 1rem;
+  padding: 0;
+  margin: 0.7rem 0 0;
+  list-style: none;
+}
+
+.values-priority-legend li {
+  display: flex;
+  min-width: 0;
+  align-items: baseline;
+  gap: 0.45rem;
+  overflow-wrap: anywhere;
+}
+
+.values-priority-key {
+  flex: 0 0 0.8rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 1px solid rgb(0 0 0 / 20%);
+  border-radius: 0.16rem;
+}
+
+.values-priority-color-0 { background: var(--bs-navy, #1b2040); }
+.values-priority-color-1 { background: var(--bs-copper-dark, #915634); }
+.values-priority-color-2 { background: var(--bs-success, #2f6b4f); }
+.values-priority-color-3 { background: var(--bs-info, #3d5f87); }
+.values-priority-color-4 { background: var(--bs-warning-text, #915315); }
+.values-priority-color-5 { background: var(--bs-danger, #923b45); }
+.values-priority-color-6 { background: var(--bs-slate, #39415f); }
+.values-priority-color-7 { background: var(--bs-mistake, #a54c35); }
+.values-priority-color-8 { background: var(--bs-close, #8a6a25); }
+
+.values-mission-directions {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1rem 0 1.25rem;
+  padding: 1rem;
+  border: 1px solid var(--bs-border, #d9ccc0);
+  border-left: 4px solid var(--bs-copper, #ac7652);
+  border-radius: 0.45rem;
+  background: var(--bs-callout-surface, #f8f0e8);
+}
+
+.values-mission-directions h4 {
+  margin: 0;
+}
+
+.values-mission-directions div,
+.values-mission-directions span {
+  display: block;
+}
+
 .goal-calendar-fields {
   align-items: start;
 }
@@ -883,6 +968,87 @@ body:has(.skill-app[data-skill-app="values"].values-action-bar-collapsed) .bs-si
   min-height: 2.15rem;
   padding: 0.3rem 0.6rem;
   font-size: 0.85rem;
+}
+
+.goal-schedule-type,
+.goal-weekdays,
+.goal-calendar-times,
+.goal-recurrence-end {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 0;
+}
+
+.goal-schedule-type legend,
+.goal-weekdays legend,
+.goal-calendar-times legend,
+.goal-recurrence-end legend {
+  width: 100%;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.goal-repeat-every {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.goal-repeat-every input {
+  width: 6rem;
+}
+
+.goal-calendar-times {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.goal-calendar-times > div {
+  display: grid;
+  grid-template-columns: minmax(5rem, 1fr) minmax(8rem, 12rem) auto;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.goal-calendar-times > div label {
+  margin: 0;
+}
+
+.goal-calendar-times button,
+.goal-calendar-actions button {
+  width: auto;
+}
+
+.goal-recurrence-end {
+  align-items: center;
+}
+
+.goal-recurrence-end input[type="date"],
+.goal-recurrence-end input[type="number"] {
+  width: auto;
+  min-width: 9rem;
+}
+
+@media (max-width: 520px) {
+  .goal-calendar-times > div {
+    grid-template-columns: 1fr auto;
+  }
+
+  .goal-calendar-times > div label {
+    grid-column: 1 / -1;
+  }
+
+  .goal-calendar-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .goal-calendar-actions button {
+    width: 100%;
+  }
 }
 
 .skill-app-gap {

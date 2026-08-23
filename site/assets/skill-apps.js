@@ -44,8 +44,33 @@
       || left.stableIndex - right.stableIndex
       || left.domain.name.localeCompare(right.domain.name)
     );
-    const maxScore = Math.max(0, ...ranked.map((item) => item.attentionScore));
-    return ranked.map((item) => ({ ...item, relativeScore: maxScore > 0 ? item.attentionScore / maxScore * 100 : 0 }));
+    const totalPositiveScore = ranked.reduce((sum, item) => sum + Math.max(item.attentionScore, 0), 0);
+    const withShares = ranked.map((item) => ({
+      ...item,
+      relativeScore: totalPositiveScore > 0 ? item.attentionScore / totalPositiveScore * 100 : 0,
+      displayPercent: 0,
+    }));
+    if (!totalPositiveScore) return withShares;
+    const positive = withShares.filter((item) => item.attentionScore > 0);
+    const floors = positive.map((item) => Math.floor(item.relativeScore));
+    let remainder = 100 - floors.reduce((sum, value) => sum + value, 0);
+    const remainderOrder = positive.map((item, index) => ({ index, fraction: item.relativeScore - floors[index] }))
+      .sort((left, right) => right.fraction - left.fraction || left.index - right.index);
+    const allocated = [...floors];
+    for (let index = 0; index < remainder; index += 1) allocated[remainderOrder[index].index] += 1;
+    let positiveIndex = 0;
+    return withShares.map((item) => ({ ...item, displayPercent: item.attentionScore > 0 ? allocated[positiveIndex++] : 0 }));
+  }
+
+  function migrateValuesFurthestStep(next, currentStep = migrateValuesStep(next)) {
+    if (Number.isInteger(next?.furthestStep)) return Math.max(currentStep, Math.min(6, next.furthestStep));
+    let evidence = currentStep;
+    if (Object.values(next?.domains || {}).some((ids) => Array.isArray(ids) && ids.length)) evidence = Math.max(evidence, 2);
+    if (Object.keys(next?.assessments || {}).length) evidence = Math.max(evidence, 3);
+    if (String(next?.mission?.statement || "").trim()) evidence = Math.max(evidence, 4);
+    if ((next?.act?.shortlist || []).length || Object.keys(next?.act?.domains || {}).length) evidence = Math.max(evidence, 5);
+    if (Object.values(next?.barriers || {}).some((value) => String(value || "").trim())) evidence = 6;
+    return evidence;
   }
 
   function stableHash(value) {
@@ -140,6 +165,9 @@
     isCategorizationComplete,
     migrateValueRecords,
     migrateValuesStep,
+    migrateValuesFurthestStep,
+    rankedMissionDirections,
+    generatedMissionStatement,
     calculateGap(current, desired) {
       return Number(desired) - Number(current);
     },
@@ -186,6 +214,7 @@
   function initialValuesState(seed = "values-session") {
     return {
       step: 0,
+      furthestStep: 0,
       selected: {},
       custom: [],
       legacy: [],
@@ -231,12 +260,8 @@
   }
 
   function generatedMissionStatement(data, state) {
-    const selectedDomains = data.domains.filter((domain) => state.selectedDomains.includes(domain.id));
-    const ranked = rankDomainAssessments(selectedDomains, state);
-    const domains = (ranked.some((item) => item.attentionScore > 0) ? ranked.filter((item) => item.attentionScore > 0) : ranked).slice(0, 2);
-    const assignedIds = new Set(domains.flatMap((item) => Object.entries(state.domains)
-      .filter(([, domainIds]) => domainIds.includes(item.domain.id)).map(([valueId]) => valueId)));
-    const assigned = prioritizedValues(data, state).filter((value) => assignedIds.has(value.id)).slice(0, 4);
+    const domains = rankedMissionDirections(data, state).slice(0, 2);
+    const assigned = domains.flatMap((item) => item.values).slice(0, 4);
     const fallback = prioritizedValues(data, state).slice(0, 4);
     const values = assigned.length ? assigned : fallback;
     if (!values.length) return "Select values in Discover to create an editable mission statement.";
@@ -246,9 +271,24 @@
     return `I want to ${verb} ${naturalList(domainNames)}, practicing ${naturalList(values.map((value) => value.name))} through small, repeatable actions.`;
   }
 
-  function progressMarkup(step) {
+  function rankedMissionDirections(data, state) {
+    const selectedDomains = data.domains.filter((domain) => state.selectedDomains.includes(domain.id));
+    const ranked = rankDomainAssessments(selectedDomains, state);
+    const ordered = ranked.some((item) => item.attentionScore > 0) ? ranked.filter((item) => item.attentionScore > 0) : ranked;
+    const credited = new Set();
+    return ordered.map((item) => {
+      const values = assignedValuesForDomain(data, state, item.domain.id).filter((value) => {
+        if (credited.has(value.id)) return false;
+        credited.add(value.id);
+        return true;
+      });
+      return { ...item, values };
+    }).filter((item) => item.values.length);
+  }
+
+  function progressMarkup(step, furthestStep) {
     return `<ol class="skill-app-progress" aria-label="Values process">${STEPS.map((name, index) =>
-      `<li${index === step ? ' aria-current="step"' : ""}><button type="button" data-values-step="${index}" ${index > step ? "disabled" : ""}>${index + 1}. ${name}</button></li>`
+      `<li${index === step ? ' aria-current="step"' : ""}><button type="button" data-values-step="${index}" ${index > furthestStep ? "disabled" : ""}>${index + 1}. ${name}</button></li>`
     ).join("")}</ol>`;
   }
 
@@ -363,10 +403,16 @@
     const incomplete = ranked.filter((item) => item.status === "incomplete");
     if (!ranked.length) return `<section class="values-investment-summary"><h4>${heading}</h4><p>Select life domains in Categorize to see where your resources may need attention.</p></section>`;
     const simpleGroup = (title, items, className, description) => items.length ? `<section class="values-investment-group ${className}"><h5>${title}</h5><p>${description}</p><ul>${items.map((item) => `<li><strong>${escapeHtml(item.domain.name)}</strong> <span>(${escapeHtml(item.importance)} importance; ${item.current} → ${item.desired})</span></li>`).join("")}</ul></section>` : "";
+    const distributionLabel = priority.map((item) => `${item.domain.name}: ${item.displayPercent}%`).join("; ");
+    const distribution = priority.length ? `<figure class="values-priority-figure">
+      <div class="values-priority-bar" role="img" aria-label="Relative attention distribution. ${escapeHtml(distributionLabel)}">${priority.map((item, index) => `<span class="values-priority-segment values-priority-color-${index % 9}" style="--priority-share: ${item.relativeScore}" title="${escapeHtml(item.domain.name)} — ${item.displayPercent}%">${item.relativeScore >= 8 ? `<span>${item.displayPercent}%</span>` : ""}</span>`).join("")}</div>
+      <figcaption><ul class="values-priority-legend">${priority.map((item, index) => `<li><span class="values-priority-key values-priority-color-${index % 9}" aria-hidden="true"></span><span>${escapeHtml(item.domain.name)} — <strong>${item.displayPercent}%</strong></span></li>`).join("")}</ul></figcaption>
+    </figure>` : "";
     return `<section class="values-investment-summary" data-assessment-insights><h4>${heading}</h4>
-      <p>This is a planning aid calculated from your own ratings, not an objective psychological score.</p>
-      ${priority.length ? `<ol class="values-attention-ranking">${priority.map((item) => `<li><strong>${escapeHtml(item.domain.name)}</strong><span>${escapeHtml(item.importance)} importance</span><span>Desired improvement: +${item.positiveGap}</span><span>Attention score: ${item.attentionScore.toFixed(2)}</span><span>Relative priority: ${Math.round(item.relativeScore)}%</span></li>`).join("")}</ol>` : `<p>No selected domain currently has a positive attention score. All selected domains remain available in Act.</p>`}
-      <details class="values-ranking-explanation"><summary>How this ranking is calculated</summary><p>Positive desired improvement (desired minus current, with negative gaps treated as zero) is multiplied by importance: High = 3/3, Medium = 2/3, Low = 1/3. Scores are sorted before rounding. Relative priority compares each positive score with the highest score, which is 100%.</p></details>
+      <p>This is a planning aid calculated from your own ratings, not a clinical score. The attention score is the weighted size of the desired improvement. Relative priority is that domain's share of all positive weighted improvement scores.</p>
+      ${distribution}
+      ${priority.length ? `<ol class="values-attention-ranking">${priority.map((item) => `<li><strong>${escapeHtml(item.domain.name)}</strong><span>${escapeHtml(item.importance)} importance</span><span>Current: ${item.current}</span><span>Desired: ${item.desired}</span><span>Desired improvement: +${item.positiveGap}</span><span>Attention score: ${item.attentionScore.toFixed(2)}</span><span>Relative priority: ${item.displayPercent}%</span></li>`).join("")}</ol>` : `<p>None of the selected domains currently has a positive desired-investment gap, so there is no relative attention distribution to show.</p>`}
+      <details class="values-ranking-explanation"><summary>How this ranking is calculated</summary><p>Positive desired improvement (desired minus current, with negative gaps treated as zero) is multiplied by importance: High = 3/3, Medium = 2/3, Low = 1/3. Each positive attention score is then divided by the total of all positive attention scores. Displayed whole percentages use deterministic largest-remainder allocation so they total exactly 100%.</p></details>
       ${simpleGroup("Areas you may want to rebalance", over, "is-over", "You rated current investment above desired investment. That is not inherently bad; it may simply be worth reviewing how resources are allocated.")}
       ${simpleGroup("Close to your desired investment", balanced, "is-balanced", "Your current time and effort match your desired rating.")}
       ${incomplete.length ? `<p class="skill-app-note">Complete both scores for ${incomplete.length} remaining domain${incomplete.length === 1 ? "" : "s"}.</p>` : ""}
@@ -383,8 +429,8 @@
         return `<fieldset class="skill-app-fieldset" data-assessment-card="${escapeHtml(domain.id)}"><legend>${escapeHtml(domain.name)}</legend>
           <p class="values-domain-priority">${escapeHtml(normalizedValueImportance(state.domainImportance[domain.id]) || "Importance not selected")} importance</p>
           <div class="skill-app-inline-fields">
-            <div><label for="current-${escapeHtml(domain.id)}">Current Score</label><p class="skill-app-field-help">How much time and effort do you put toward this life domain now?</p><input id="current-${escapeHtml(domain.id)}" type="number" min="1" max="10" value="${escapeHtml(a.current)}" data-assess="current"></div>
-            <div><label for="desired-${escapeHtml(domain.id)}">Desired Score</label><p class="skill-app-field-help">How much time and effort do you want to put toward this life domain?</p><input id="desired-${escapeHtml(domain.id)}" type="number" min="1" max="10" value="${escapeHtml(a.desired)}" data-assess="desired"></div>
+            <div><label for="current-${escapeHtml(domain.id)}">Current Score (1-10)</label><p class="skill-app-field-help">How much time and effort do you put toward this life domain now?</p><input id="current-${escapeHtml(domain.id)}" type="number" min="1" max="10" value="${escapeHtml(a.current)}" data-assess="current"></div>
+            <div><label for="desired-${escapeHtml(domain.id)}">Desired Score (1-10)</label><p class="skill-app-field-help">How much time and effort do you want to put toward this life domain?</p><input id="desired-${escapeHtml(domain.id)}" type="number" min="1" max="10" value="${escapeHtml(a.desired)}" data-assess="desired"></div>
           </div><output class="skill-app-gap" data-gap>${escapeHtml(gapDescription(investment))}</output>
         </fieldset>`;
       }).join("")}</div>${assessmentInsightsMarkup(data, state)}`;
@@ -423,7 +469,7 @@
     const howRecord = howPool.find((item) => item.id === explore.selectedHow);
     const howText = explore.selectedHow === "custom" ? explore.customHow.trim() : howRecord?.text || "";
     return `<details class="values-action-domain" data-action-domain="${escapeHtml(domain.id)}" ${explore.open !== false ? "open" : ""}>
-      <summary><span><strong>${escapeHtml(domain.name)}</strong><small>${escapeHtml(rankedItem.importance)} importance · ${rankedItem.complete ? `${rankedItem.current} → ${rankedItem.desired}` : "assessment incomplete"} · Attention ${rankedItem.attentionScore.toFixed(2)} · Relative ${Math.round(rankedItem.relativeScore)}%</small></span></summary>
+      <summary><span><strong>${escapeHtml(domain.name)}</strong><small>${escapeHtml(rankedItem.importance)} importance · ${rankedItem.complete ? `${rankedItem.current} → ${rankedItem.desired}` : "assessment incomplete"} · Attention ${rankedItem.attentionScore.toFixed(2)} · Relative ${rankedItem.displayPercent}%</small></span></summary>
       <div class="values-action-domain-body">
         <section><h4>Values you placed here</h4>${values.length ? `<ul class="values-assigned-list">${values.map((value) => `<li>${escapeHtml(value.name)}</li>`).join("")}</ul>` : `<p>No Values are assigned here yet. You can return to Assign without losing this page.</p>`}</section>
         <fieldset class="skill-app-fieldset values-what-choices"><legend>What could I work on?</legend><p>A WHAT is a meaningful direction, project, problem area, or possibility—not automatically a goal.</p>
@@ -434,9 +480,10 @@
         </fieldset>
         ${whatText ? `<fieldset class="skill-app-fieldset values-how-choices"><legend>How could I start?</legend><p>A HOW is a concrete action that could move you in that direction.</p>
           <div class="values-suggestion-list" aria-live="polite">${howPage.map((item) => `<label class="skill-app-check"><input type="radio" name="how-${escapeHtml(domain.id)}" value="${escapeHtml(item.id)}" data-action-how="${escapeHtml(domain.id)}" ${explore.selectedHow === item.id ? "checked" : ""}> <span>${escapeHtml(item.text)}</span></label>`).join("")}</div>
-          <label class="skill-app-check values-custom-suggestion"><input type="radio" name="how-${escapeHtml(domain.id)}" value="custom" data-action-how="${escapeHtml(domain.id)}" ${explore.selectedHow === "custom" ? "checked" : ""}> <span>Write my own How</span></label>
-          <label for="custom-how-${escapeHtml(domain.id)}">My How</label><textarea id="custom-how-${escapeHtml(domain.id)}" data-custom-how="${escapeHtml(domain.id)}">${escapeHtml(explore.customHow)}</textarea>
-          ${howPool.length > 10 ? `<button type="button" class="secondary" data-another-hows="${escapeHtml(domain.id)}">Another 10 ways to start</button>` : ""}
+           <label class="skill-app-check values-custom-suggestion"><input type="radio" name="how-${escapeHtml(domain.id)}" value="custom" data-action-how="${escapeHtml(domain.id)}" ${explore.selectedHow === "custom" ? "checked" : ""}> <span>Write my own How</span></label>
+           <label for="custom-how-${escapeHtml(domain.id)}">My How</label><textarea id="custom-how-${escapeHtml(domain.id)}" data-custom-how="${escapeHtml(domain.id)}">${escapeHtml(explore.customHow)}</textarea>
+          ${(explore.howPage + 1) * 10 < howPool.length ? `<button type="button" class="secondary" data-another-hows="${escapeHtml(domain.id)}">Another 10 ways to start</button>` : ""}
+          ${(actionData.implementation_supports || []).length ? `<details class="values-implementation-supports"><summary>Make this easier to start</summary><p>These general follow-through supports are separate from the specific ways to do this What.</p><ul>${actionData.implementation_supports.map((item) => `<li>${escapeHtml(item.text)}</li>`).join("")}</ul></details>` : ""}
           <button type="button" data-add-shortlist="${escapeHtml(domain.id)}" ${howText ? "" : "disabled"}>Add this action to my short-term list</button>
         </fieldset>` : ""}
       </div>
@@ -483,7 +530,9 @@
       state.mission.statement = generatedMissionStatement(data, state);
       state.mission.autoGenerated = true;
     }
+    const directions = rankedMissionDirections(data, state).slice(0, 3);
     return `<h3>Mission</h3><p>This draft uses your selected Values, assignments, life-domain importance, and Assessment ranking. Edit it until it sounds like you.</p>
+      ${directions.length ? `<section class="values-mission-directions" aria-labelledby="values-mission-directions-heading"><h4 id="values-mission-directions-heading">Your highest-priority directions</h4>${directions.map((item) => `<div><strong>${escapeHtml(item.domain.name)} — ${item.displayPercent}%</strong><span>${escapeHtml(item.values.map((value) => value.name).join(", "))}</span></div>`).join("")}</section>` : ""}
       <label for="mission-result">Editable mission statement</label><textarea id="mission-result" data-mission-statement>${escapeHtml(state.mission.statement)}</textarea>
       <button type="button" class="secondary" data-regenerate-mission>Regenerate from my current rankings and assignments</button>
       ${assessmentInsightsMarkup(data, state, "Priorities informing this draft")}`;
@@ -564,8 +613,9 @@
       updateActionBar();
     }
 
-    function render() {
+    function render(options = {}) {
       state.step = Math.max(0, Math.min(STEPS.length - 1, Number(state.step) || 0));
+      state.furthestStep = Math.max(state.step, Math.min(STEPS.length - 1, Number(state.furthestStep) || 0));
       const categorizationComplete = isCategorizationComplete(state);
       const continueDisabled = state.step === STEPS.length - 1 || (state.step === 1 && !categorizationComplete);
       let panel;
@@ -577,8 +627,8 @@
       else if (state.step === 5) panel = actMarkup(data, actionData, state);
       else panel = barriersMarkup(data, state);
       root.innerHTML = `<div class="skill-app-shell">
-        <header class="skill-app-header"><h2>Discover and Work Towards Your Values</h2><p>Values are compass directions, not destinations. Use them to choose ongoing practices and optional milestones.</p>${progressMarkup(state.step)}</header>
-        <section class="skill-app-panel" aria-live="polite">${panel}</section>
+        <header class="skill-app-header"><h2>Discover and Work Towards Your Values</h2><p>Values are compass directions, not destinations. Use them to choose ongoing practices and optional milestones.</p>${progressMarkup(state.step, state.furthestStep)}</header>
+        <section class="skill-app-panel" data-values-step-panel="${state.step}" aria-live="polite">${panel}</section>
         <footer class="skill-app-footer" id="values-action-bar"><div><strong data-values-status aria-live="polite">Your entries are not saved on our servers.</strong><br><small>A temporary draft is saved in this browser. You can download partial or completed results below.</small></div>
           <div class="skill-app-actions"><button type="button" class="secondary" data-back ${state.step === 0 ? "disabled" : ""}>Back</button><button type="button" data-next ${continueDisabled ? "disabled" : ""}>Continue</button></div></footer>
         <button type="button" class="secondary values-action-bar-toggle" data-values-action-bar-toggle aria-controls="values-action-bar" aria-expanded="${!actionBarCollapsed}">${actionBarCollapsed ? "Show bottom bar" : "Collapse bar"}</button>
@@ -586,16 +636,33 @@
       setActionBarCollapsed(actionBarCollapsed);
       bind();
       updateActionBar();
-      root.querySelector(".skill-app-panel h3")?.focus?.();
+      if (options.navigation) {
+        global.requestAnimationFrame(() => {
+          const heading = root.querySelector(".skill-app-panel h3");
+          heading?.setAttribute("tabindex", "-1");
+          heading?.focus?.({ preventScroll: true });
+          const reduced = global.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+          const target = heading || root.querySelector("[data-values-step-panel]");
+          const navbar = document.querySelector("#quarto-header, .navbar");
+          const navbarHeight = navbar?.getBoundingClientRect?.().height || 0;
+          if (target) global.scrollTo?.({ top: Math.max(0, global.scrollY + target.getBoundingClientRect().top - navbarHeight - 16), behavior: reduced ? "auto" : "smooth" });
+        });
+      }
+    }
+
+    function navigateValuesStep(targetStep) {
+      const target = Math.max(0, Math.min(STEPS.length - 1, Number(targetStep)));
+      if (!Number.isInteger(target) || target > state.furthestStep + 1) return false;
+      state.step = target;
+      state.furthestStep = Math.max(state.furthestStep, target);
+      render({ navigation: true });
+      return true;
     }
 
     function bind() {
       root.querySelectorAll("[data-values-step]").forEach((button) => button.addEventListener("click", () => {
         const target = Number(button.dataset.valuesStep);
-        if (Number.isInteger(target) && target <= state.step) {
-          state.step = target;
-          render();
-        }
+        if (Number.isInteger(target) && target <= state.furthestStep) navigateValuesStep(target);
       }));
       root.querySelectorAll("[data-values-tier]").forEach((input) => input.addEventListener("change", () => {
         if (!input.checked) return;
@@ -774,8 +841,8 @@
         state.mission.autoGenerated = true;
         render();
       });
-      root.querySelector("[data-back]")?.addEventListener("click", () => { state.step -= 1; render(); });
-      root.querySelector("[data-next]")?.addEventListener("click", () => { state.step += 1; render(); });
+      root.querySelector("[data-back]")?.addEventListener("click", () => { navigateValuesStep(state.step - 1); });
+      root.querySelector("[data-next]")?.addEventListener("click", () => { navigateValuesStep(state.step + 1); });
       root.querySelector("[data-values-action-bar-toggle]")?.addEventListener("click", () => {
         setActionBarCollapsed(!actionBarCollapsed);
       });
@@ -795,7 +862,7 @@
     );
     updateActionBar();
     if (Progress) {
-      const topKeys = ["step", "selected", "custom", "legacy", "selectedDomains", "domainImportance", "domains", "core", "assessments", "focus", "actions", "barriers", "mission", "act", "review"];
+      const topKeys = ["step", "furthestStep", "selected", "custom", "legacy", "selectedDomains", "domainImportance", "domains", "core", "assessments", "focus", "actions", "barriers", "mission", "act", "review"];
       const objectOf = (value, validate) => Progress.isPlainObject(value) && Object.entries(value).every(([id, item]) => typeof id === "string" && validate(item));
       const strings = (value, allowed) => Progress.isPlainObject(value) && Object.keys(value).every((key) => allowed.includes(key)) && Object.values(value).every((item) => typeof item === "string");
       const valueRecord = (item) => Progress.isPlainObject(item) && Object.keys(item).every((key) => ["id", "name", "definition", "suggested_domains", "aliases", "legacy"].includes(key)) && typeof item.id === "string" && typeof item.name === "string" && typeof item.definition === "string" && Array.isArray(item.suggested_domains) && item.suggested_domains.every((value) => typeof value === "string") && Array.isArray(item.aliases) && item.aliases.every((value) => typeof value === "string") && (item.legacy === undefined || typeof item.legacy === "boolean");
@@ -808,6 +875,7 @@
         && typeof act.smartFocusId === "string";
       const validateState = (next) => Progress.isPlainObject(next) && Object.keys(next).every((key) => topKeys.includes(key))
         && Number.isInteger(next.step) && next.step >= 0 && next.step <= 8
+        && (next.furthestStep === undefined || (Number.isInteger(next.furthestStep) && next.furthestStep >= 0 && next.furthestStep <= 8))
         && objectOf(next.selected, (item) => strings(item, ["rating"]))
         && Array.isArray(next.custom) && next.custom.length <= 100 && next.custom.every(valueRecord)
         && (next.legacy === undefined || (Array.isArray(next.legacy) && next.legacy.length <= 100 && next.legacy.every(valueRecord)))
@@ -829,6 +897,7 @@
         const restored = initialValuesState(copied.act?.seed || state.act.seed);
         ["custom", "assessments", "barriers"].forEach((key) => { restored[key] = copied[key]; });
         restored.step = migrateValuesStep(next);
+        restored.furthestStep = migrateValuesFurthestStep(next, restored.step);
         Object.assign(restored, migrateValueRecords(data, copied));
         const validDomains = new Set(data.domains.map((domain) => domain.id));
         const assignedDomains = Object.values(restored.domains).flat().filter((id) => validDomains.has(id));
@@ -906,7 +975,7 @@
                 const ranked = rankDomainAssessments(data.domains.filter((domain) => next.selectedDomains.includes(domain.id)), next).find((item) => item.domain.id === id);
                 lines.push(`- ${gapDescription(investment)}`);
                 lines.push(`- Attention score: ${ranked.attentionScore.toFixed(2)}`);
-                lines.push(`- Relative priority: ${Math.round(ranked.relativeScore)}%`);
+                lines.push(`- Relative priority: ${ranked.displayPercent}%`);
               }
               lines.push("");
             });

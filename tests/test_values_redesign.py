@@ -47,11 +47,19 @@ class ValuesRedesignTests(unittest.TestCase):
         whats = [item for items in ACTIONS["domains"].values() for item in items]
         hows = [how for item in whats for how in item["hows"]]
         self.assertEqual(len(whats), 135)
-        self.assertEqual(len(hows), 2700)
+        self.assertEqual(len(hows), 422)
         self.assertTrue(all(15 <= len(items) <= 25 for items in ACTIONS["domains"].values()))
-        self.assertTrue(all(len(item["hows"]) >= 20 and item["value_tags"] for item in whats))
+        self.assertTrue(all(len(item["hows"]) >= 3 and item["value_tags"] for item in whats))
+        self.assertEqual(len(next(item for item in whats if item["what"] == "Reconnect with an old relationship.")["hows"]), 20)
         self.assertEqual(len({item["id"] for item in whats}), len(whats))
         self.assertEqual(len({how["id"] for how in hows}), len(hows))
+        duplicate_parents = {}
+        for item in whats:
+            for how in item["hows"]:
+                duplicate_parents.setdefault(how["text"], []).append(item["what"])
+        widespread = {text: parents for text, parents in duplicate_parents.items() if len(set(parents)) > 3}
+        self.assertFalse(widespread, f"Excessively reused HOW text: {widespread}")
+        self.assertGreaterEqual(len(ACTIONS["implementation_supports"]), 5)
         self.assertIn("data-values-actions-url", (ROOT / "site/skill-finder/values/index.qmd").read_text(encoding="utf-8"))
 
     def test_workflow_and_accessibility_contracts_are_visible(self):
@@ -64,12 +72,26 @@ class ValuesRedesignTests(unittest.TestCase):
         self.assertIn('render();\n        root.querySelector(`[data-domain-importance=', VALUES_JS)
         self.assertIn("state.act.smartFocusId", VALUES_JS)
 
+    def test_what_specific_hows_are_parent_linked_and_stale_selection_clears(self):
+        whats = [item for items in ACTIONS["domains"].values() for item in items]
+        for item in whats:
+            self.assertTrue(item["hows"])
+            self.assertTrue(all(how["id"].startswith(item["id"] + "-how-") for how in item["hows"]))
+        handler = VALUES_JS.split('root.querySelectorAll("[data-action-what]")', 1)[1].split('root.querySelectorAll("[data-custom-what]")', 1)[0]
+        self.assertIn('explore.selectedWhat = input.value', handler)
+        self.assertIn('explore.selectedHow = ""', handler)
+        self.assertIn('explore.howPage = 0', handler)
+        self.assertNotIn('shortlist =', handler)
+        self.assertIn("Make this easier to start", VALUES_JS)
+        self.assertIn("These general follow-through supports are separate", VALUES_JS)
+
     def test_goal_builder_specialization_and_save_export_wording(self):
         for token in (
             "function initGoalBuilder", "Target date / deadline", "Schedule an event or reminder", "Times use your browser timezone",
             "Event or reminder date", "Starts at", "Duration in minutes", "data-calendar-duration=\"30\"", "step=\"any\"",
+            "Schedule type", "One time", "Recurring", "Selected days of week", "No end date", "After occurrences", "Add another time",
             "Download calendar event (.ics)", "Add to Google Calendar", "No event details are sent to Google before you click",
-            "BEGIN:VCALENDAR", "DTSTART", "DTEND", "goalGtdMarkdown", "due_date", "therapy-skill-kit-progress",
+            "BEGIN:VCALENDAR", "DTSTART", "DURATION", "RRULE", "goalGtdMarkdown", "due_date", "therapy-skill-kit-progress",
         ):
             self.assertIn(token, GOAL_JS)
         for token in ("Save progress (.md)", "Recommended. You can reopen this Markdown file later and continue.", "Export JSON", "Export DOCX", "Print / Save as PDF"):

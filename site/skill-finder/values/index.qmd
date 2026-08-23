@@ -8,7 +8,7 @@ execute:
   enabled: false
 ---
 
-::: {.skill-app data-skill-app="values" data-values-url="/data/skill-apps/values.json" data-values-actions-url="/data/skill-apps/values-actions.json"}
+::: {.skill-app data-skill-app="values" data-values-url="/data/skill-apps/values.json" data-values-actions-url="/data/skill-apps/values-actions.json?v=20260823-specific-hows"}
 <p>Loading the Values & Valued Action tool...</p>
 :::
 

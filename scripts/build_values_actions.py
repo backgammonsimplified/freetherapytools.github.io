@@ -172,7 +172,7 @@ IDEAS = {
     ],
 }
 
-UNIVERSAL_HOWS = [
+IMPLEMENTATION_SUPPORTS = [
     "Set a ten-minute timer and take the smallest visible step toward this.",
     "Write the next action as one sentence starting with a concrete verb, then do only that step.",
     "Choose a specific day and place for one brief first attempt.",
@@ -193,6 +193,32 @@ UNIVERSAL_HOWS = [
 ]
 
 
+SPECIFIC_OVERRIDES = {
+    "Reconnect with an old relationship.": [
+        "Send them a text asking how they have been.",
+        "Send a short voice note saying you would like to reconnect.",
+        "Call and ask whether they have a few minutes to catch up.",
+        "Invite them for coffee at a specific place.",
+        "Invite them for lunch on one of two possible dates.",
+        "Ask them to go for a walk in a familiar place.",
+        "Send a photo or memory you both share.",
+        "Send a song, article, or meme that reminded you of them.",
+        "Write a short email saying you would like to reconnect.",
+        "Send a card with a brief personal note.",
+        "If it fits the relationship, bring or send a small thoughtful gift.",
+        "Invite them to an activity you both used to enjoy.",
+        "Ask whether they would like to schedule a video call.",
+        "Suggest a low-pressure specific date and time to meet.",
+        "Acknowledge that it has been a while and say you would like to catch up.",
+        "Invite them to a group activity if one-to-one contact feels too intense.",
+        "Ask about something important that was happening in their life.",
+        "Offer two possible times for a brief catch-up.",
+        "Ask whether a recurring monthly call would work for both of you.",
+        "After reconnecting once, suggest the next small contact before you part.",
+    ],
+}
+
+
 def slug(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
 
@@ -203,7 +229,7 @@ def main() -> int:
         records = []
         for index, (what, tags, hows) in enumerate(ideas, 1):
             what_id = f"{domain_id}-what-{index:02d}-{slug(what)[:28]}"
-            expanded_hows = [*hows, *UNIVERSAL_HOWS]
+            expanded_hows = SPECIFIC_OVERRIDES.get(what, hows)
             records.append({
                 "id": what_id,
                 "what": what,
@@ -211,7 +237,14 @@ def main() -> int:
                 "hows": [{"id": f"{what_id}-how-{number:02d}", "text": text} for number, text in enumerate(expanded_hows, 1)],
             })
         domains[domain_id] = records
-    payload = {"version": 1, "domains": domains}
+    payload = {
+        "version": 2,
+        "implementation_supports": [
+            {"id": f"implementation-support-{number:02d}", "text": text}
+            for number, text in enumerate(IMPLEMENTATION_SUPPORTS, 1)
+        ],
+        "domains": domains,
+    }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {sum(map(len, domains.values()))} WHAT ideas and {sum(len(item['hows']) for items in domains.values() for item in items)} HOW ideas.")

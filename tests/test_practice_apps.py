@@ -39,7 +39,7 @@ class PracticeAppTests(unittest.TestCase):
         text = JS.read_text(encoding="utf-8")
         self.assertNotRegex(text, r"fetch\(|XMLHttpRequest|sendBeacon")
         self.assertIn("https://calendar.google.com/calendar/r/eventedit", text)
-        self.assertIn('root.querySelector("[data-google-calendar]")?.addEventListener("click"', text)
+        self.assertIn('root.querySelectorAll("[data-google-calendar]").forEach((button) => button.addEventListener("click"', text)
         hrefs = re.findall(r'href:\s*"([^"]+)"', text)
         self.assertTrue(hrefs)
         for href in hrefs:

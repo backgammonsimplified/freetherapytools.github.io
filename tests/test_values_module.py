@@ -286,8 +286,8 @@ class ValuesModuleTests(unittest.TestCase):
         self.assertIn("function assignMarkup", self.javascript)
         self.assertIn("Assign each chosen value", self.javascript)
         self.assertIn("values-assignment-value", self.javascript)
-        self.assertIn("Current Score", self.javascript)
-        self.assertIn("Desired Score", self.javascript)
+        self.assertIn("Current Score (1-10)", self.javascript)
+        self.assertIn("Desired Score (1-10)", self.javascript)
         self.assertIn("How much time and effort do you put toward this life domain now?", self.javascript)
         self.assertIn("How much time and effort do you want to put toward this life domain?", self.javascript)
         self.assertNotIn("Importance 1-10", self.javascript)
@@ -315,10 +315,27 @@ class ValuesModuleTests(unittest.TestCase):
 
     def test_completed_process_steps_are_clickable_for_back_navigation(self):
         self.assertIn('data-values-step="${index}"', self.javascript)
-        self.assertIn('index > step ? "disabled" : ""', self.javascript)
+        self.assertIn('index > furthestStep ? "disabled" : ""', self.javascript)
         self.assertIn('root.querySelectorAll("[data-values-step]")', self.javascript)
-        self.assertIn("target <= state.step", self.javascript)
+        self.assertIn("target <= state.furthestStep", self.javascript)
+        self.assertIn("function navigateValuesStep(targetStep)", self.javascript)
+        self.assertIn("state.furthestStep = Math.max(state.furthestStep, target)", self.javascript)
+        self.assertIn('render({ navigation: true })', self.javascript)
+        self.assertIn('global.scrollTo?.({ top: Math.max(0', self.javascript)
+        self.assertIn('document.querySelector("#quarto-header, .navbar")', self.javascript)
+        self.assertIn('(prefers-reduced-motion: reduce)', self.javascript)
+        self.assertIn("scroll-margin-top: 5rem", self.css)
         self.assertIn('.skill-app[data-skill-app="values"] .skill-app-progress button', self.css)
+
+    def test_assessment_distribution_bar_is_accessible_and_mobile_safe(self):
+        self.assertIn('class="values-priority-bar" role="img"', self.javascript)
+        self.assertIn("values-priority-legend", self.javascript)
+        self.assertIn("item.displayPercent", self.javascript)
+        self.assertIn("--priority-share", self.javascript)
+        self.assertIn("overflow: hidden", self.css)
+        self.assertIn("min-width: 0", self.css)
+        self.assertIn("grid-template-columns: repeat(auto-fit", self.css)
+        self.assertIn("Relative attention distribution", self.javascript)
 
     def test_assign_value_names_are_larger_than_domain_categories(self):
         self.assertIn("font-size: clamp(1.3rem, 1.8vw, 1.55rem)", self.css)
