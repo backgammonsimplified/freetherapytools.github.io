@@ -1,0 +1,17 @@
+---
+title: "Worry Time"
+description: "Defer a worry to an optional planned worry-time window and return to the present."
+sidebar: skill-finder
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+This focused tool follows the site's [Worry Time curriculum](/learn/cbt-anxiety/understanding-worry.html#worry-time). Scheduling is optional and stays browser-local until you explicitly download an ICS file or open Google Calendar.
+
+::: {#worry-time-app .skill-app data-quick-app="worry-time"}
+Loading Worry Time…
+:::
+
+[Back to all Skill Finder tools](/skill-finder/)

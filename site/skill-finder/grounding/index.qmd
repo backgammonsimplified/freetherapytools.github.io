@@ -1,0 +1,17 @@
+---
+title: "Grounding"
+description: "Use a concise guided progression to reconnect with the present environment and body."
+sidebar: skill-finder
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+The repository's [Grounding curriculum](/learn/mindfulness/grounding.html) focuses on immediate sensory information, the body, and the current environment. It does not prescribe a numbered sensory count, so this tool does not invent one.
+
+::: {#grounding-app .skill-app data-quick-app="grounding"}
+Loading Grounding…
+:::
+
+[Back to all Skill Finder tools](/skill-finder/)

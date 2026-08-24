@@ -38,6 +38,22 @@ website:
               href: skill-finder/behavioural-activation/index.qmd
             - text: "Values Review"
               href: skill-finder/values-review/index.qmd
+            - text: "Five Factor Model"
+              href: skill-finder/five-factor-model/index.qmd
+            - text: "Recognizing Thinking Traps"
+              href: skill-finder/thinking-traps/index.qmd
+            - text: "Thought Record"
+              href: skill-finder/thought-record/index.qmd
+            - text: "Worry Time"
+              href: skill-finder/worry-time/index.qmd
+            - text: "Box Breathing"
+              href: skill-finder/box-breathing/index.qmd
+            - text: "Gratitude Journal"
+              href: skill-finder/gratitude-journal/index.qmd
+            - text: "Positive Self-Talk"
+              href: skill-finder/positive-self-talk/index.qmd
+            - text: "Grounding"
+              href: skill-finder/grounding/index.qmd
         - section: "Learn"
           contents:
             - text: "DBT Skills"

@@ -26,6 +26,7 @@ project:
     - assets/skill-handoff.js
     - assets/skill-finder-apps.js
     - assets/skill-practice-apps.js
+    - assets/skill-quick-tools.js
     - "data/skill-apps/**"
     - "data/resource-paraphrases/**"
     - assets/bs-glossary-lookup.json

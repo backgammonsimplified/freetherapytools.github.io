@@ -1727,34 +1727,39 @@ button.values-inline-choice:hover {
 }
 
 .skill-thermometer-skill {
+  display: grid;
+  gap: .25rem;
+  min-height: 100%;
+  padding: .75rem;
   border: 1px solid color-mix(in srgb, var(--zone-color) 30%, #d8cec2);
   border-radius: .5rem;
   background: #fff;
+  color: inherit;
+  text-decoration: none;
 }
 
-.skill-thermometer-skill summary {
-  min-height: 4rem;
-  padding: .65rem .75rem;
-  cursor: pointer;
+.values-inline-calendar {
+  margin-top: .9rem;
+  padding: .9rem;
+  border: 1px solid var(--skill-app-border);
+  border-radius: .65rem;
+  background: color-mix(in srgb, var(--skill-app-soft) 38%, #fff);
 }
+.values-inline-calendar h4 { margin-top: 0; }
 
-.skill-thermometer-skill summary > span {
-  display: grid;
-  gap: .12rem;
-}
-
-.skill-thermometer-skill summary small {
+.skill-thermometer-skill small {
   color: var(--zone-color);
   font-weight: 750;
 }
 
-.skill-thermometer-skill summary span span {
+.skill-thermometer-skill > span {
   color: var(--bs-text-muted, #5f5954);
   font-size: .88rem;
   line-height: 1.3;
 }
 
-.skill-thermometer-skill > div { padding: 0 .75rem .75rem; }
+.skill-thermometer-skill em { margin-top: .25rem; color: var(--zone-color); font-size: .75rem; }
+.skill-thermometer-skill:hover { border-color: var(--zone-color); box-shadow: 0 .2rem .65rem rgb(35 42 48 / 12%); }
 
 .emotion-wheel {
   position: relative;
@@ -1853,18 +1858,98 @@ button.values-inline-choice:hover {
 
 .skill-tree-app {
   min-width: 0;
+  padding: .25rem 0 0;
+  overflow: visible;
+}
+
+/* Focused source-backed Skill Finder tools */
+.quick-tool-shell { max-width: 76rem; }
+.quick-tool-source-links { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.25rem; }
+
+.five-factor-map {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: .8rem;
+  align-items: stretch;
+}
+.five-factor-center {
+  grid-column: 3 / 5;
+  align-self: center;
   padding: 1rem;
-  border: 1px solid var(--bs-border, #d9ccc0);
+  border: 2px solid var(--skill-app-accent);
+  border-radius: 999px;
+  background: var(--skill-app-soft);
+  text-align: center;
+  font-weight: 800;
+}
+.five-factor-card {
+  display: grid !important;
+  grid-column: span 2;
+  gap: .35rem;
+  min-width: 0;
+  margin: 0 !important;
+  padding: .9rem;
+  border: 1px solid var(--skill-app-border);
   border-radius: .7rem;
-  background: var(--bs-surface, #fffdfc);
-  overflow: hidden;
+  background: #fff;
+}
+.five-factor-card > span { color: var(--bs-text-muted, #5f5954); font-weight: 400; }
+.five-factor-card textarea { min-height: 7rem; }
+.five-factor-card--1 { grid-column: 1 / 3; }
+.five-factor-card--2 { grid-column: 5 / 7; }
+
+.thinking-trap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: .7rem; }
+.thinking-trap-card { display: grid !important; gap: .3rem; margin: 0 !important; min-height: 10rem; padding: .8rem; border: 1px solid var(--skill-app-border); border-radius: .6rem; background: #fff; font-weight: 400 !important; }
+.thinking-trap-choice { display: flex; align-items: flex-start; gap: .5rem; }
+.thinking-trap-choice input { width: 1.25rem; height: 1.25rem; flex: 0 0 auto; }
+.thinking-trap-card small { color: var(--bs-text-muted, #5f5954); }
+
+.thought-record-steps { display: grid; gap: 1rem; padding: 0; list-style: none; counter-reset: none; }
+.thought-record-steps > li { padding: clamp(.8rem, 2vw, 1.25rem); border: 1px solid var(--skill-app-border); border-radius: .7rem; background: #fff; }
+.thought-record-steps h3 { margin-top: 0; }
+.thought-record-traps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: .25rem .8rem; }
+
+.box-breathing-tool { display: grid; grid-template-columns: minmax(18rem, 1fr) minmax(18rem, .8fr); gap: 1.5rem; align-items: center; }
+.box-breathing-stage { display: grid; place-items: center; min-height: 25rem; overflow: hidden; }
+.box-breathing-circle { --breath-progress: 0; display: grid; place-content: center; width: 15rem; aspect-ratio: 1; border: 4px solid #416f91; border-radius: 50%; background: color-mix(in srgb, #416f91 16%, #fff); text-align: center; transform: scale(calc(.66 + var(--breath-progress) * .34)); transition: transform 100ms linear, background-color 200ms ease; }
+.box-breathing-circle[data-phase="holdIn"], .box-breathing-circle[data-phase="holdOut"] { background: color-mix(in srgb, #9a6813 16%, #fff); }
+.box-breathing-circle span { font-size: 1.55rem; font-weight: 850; }
+.box-breathing-circle small { display: block; margin-top: .25rem; }
+.box-breathing-settings { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .35rem .8rem; }
+.box-breathing-actions { grid-column: 1 / -1; justify-content: center; }
+
+.gratitude-entries { display: grid; gap: .9rem; }
+.grounding-guide { max-width: 44rem; margin-inline: auto; padding: clamp(1.25rem, 4vw, 2.5rem); border: 1px solid var(--skill-app-border); border-radius: 1rem; background: var(--skill-app-soft); text-align: center; }
+.grounding-guide h3 { font-size: clamp(1.8rem, 6vw, 3rem); }
+.grounding-guide > p:not(.skill-tree-kicker) { font-size: clamp(1.1rem, 3vw, 1.35rem); }
+.grounding-progress { display: flex; justify-content: center; gap: .5rem; margin: 1.5rem 0; }
+.grounding-progress > span { width: 2.25rem; height: .5rem; border-radius: 999px; background: #c9c1ba; }
+.grounding-progress > span.is-complete { background: #416f91; }
+.grounding-actions { justify-content: center; }
+.grounding-actions button { min-width: 7.5rem; min-height: 3rem; }
+
+@media (max-width: 780px) {
+  .five-factor-map { grid-template-columns: 1fr; }
+  .five-factor-center,
+  .five-factor-card,
+  .five-factor-card--1,
+  .five-factor-card--2 { grid-column: 1; }
+  .five-factor-center { grid-row: auto; border-radius: .7rem; }
+  .box-breathing-tool { grid-template-columns: 1fr; }
+  .box-breathing-stage { min-height: 19rem; }
+  .box-breathing-circle { width: min(13rem, 70vw); }
+  .box-breathing-settings { grid-template-columns: 1fr 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .box-breathing-circle { transform: none; transition: background-color 0s; }
 }
 
 .skill-tree-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(19rem, .8fr);
-  gap: .8rem;
-  min-height: 34rem;
+  grid-template-columns: minmax(0, 2.35fr) minmax(20rem, .85fr);
+  gap: 1rem;
+  min-height: clamp(38rem, calc(100vh - 12rem), 54rem);
 }
 
 .skill-tree-viewport {
@@ -1875,7 +1960,7 @@ button.values-inline-choice:hover {
   overflow: hidden;
 }
 
-.skill-tree-canvas { width: 100%; height: 100%; min-height: 34rem; cursor: grab; touch-action: none; user-select: none; }
+.skill-tree-canvas { width: 100%; height: 100%; min-height: clamp(38rem, calc(100vh - 12rem), 54rem); cursor: grab; touch-action: none; user-select: none; }
 .skill-tree-svg { display: block; width: 100%; height: 100%; overflow: hidden; }
 .skill-tree-svg marker path { fill: #697586; }
 .therapy-force-link-tree-future { stroke: #aab2bd; stroke-width: 1.25; opacity: .4; marker-end: var(--tree-arrow); }
@@ -1890,7 +1975,7 @@ button.values-inline-choice:hover {
 
 .skill-tree-editor {
   min-width: 0;
-  max-height: 42rem;
+  max-height: clamp(38rem, calc(100vh - 12rem), 54rem);
   overflow: auto;
   padding: 1rem;
   border: 1px solid var(--bs-border, #d9ccc0);
@@ -1904,6 +1989,35 @@ button.values-inline-choice:hover {
 .skill-tree-editor textarea { width: 100%; min-height: 6rem; }
 .check-facts-editor .skill-app-note { margin-top: 1rem; }
 
+.skill-app[data-skill-app="change-emotion"] .skill-app-shell,
+.skill-app[data-skill-app="worry-tree"] .skill-app-shell,
+.skill-app[data-skill-app="missing-links"] .skill-app-shell {
+  width: 100%;
+  max-width: none;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.skill-app[data-skill-app="change-emotion"] .skill-app-header,
+.skill-app[data-skill-app="worry-tree"] .skill-app-header,
+.skill-app[data-skill-app="missing-links"] .skill-app-header {
+  padding: .8rem clamp(.75rem, 2vw, 1.4rem);
+  border: 1px solid var(--bs-border, #d9ccc0);
+  border-radius: .7rem;
+}
+
+.skill-app[data-skill-app="change-emotion"] .skill-app-footer,
+.skill-app[data-skill-app="worry-tree"] .skill-app-footer,
+.skill-app[data-skill-app="missing-links"] .skill-app-footer {
+  margin-top: .75rem;
+  padding: .75rem 0;
+  border: 0;
+  background: transparent;
+}
+
 [data-force-graph-root]:fullscreen .skill-tree-layout,
 .therapy-graph-fullscreen-fallback .skill-tree-layout { min-height: 0; }
 [data-force-graph-root]:fullscreen .skill-tree-canvas,
@@ -1911,7 +2025,9 @@ button.values-inline-choice:hover {
 
 @media (max-width: 780px) {
   .skill-tree-layout { grid-template-columns: 1fr; }
-  .skill-tree-viewport { min-height: 28rem; }
+  .skill-tree-layout { min-height: 0; }
+  .skill-tree-viewport { min-height: clamp(25rem, 68vh, 32rem); }
+  .skill-tree-canvas { min-height: clamp(25rem, 68vh, 32rem); }
   .skill-tree-editor { max-height: none; }
 }
 

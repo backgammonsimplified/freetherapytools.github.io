@@ -138,6 +138,14 @@ SKILL_FINDER_TOOLS = (
     ("SMART Goal Builder", "skill-finder/goal-builder/index.qmd"),
     ("Behavioural Activation Planner", "skill-finder/behavioural-activation/index.qmd"),
     ("Values Review", "skill-finder/values-review/index.qmd"),
+    ("Five Factor Model", "skill-finder/five-factor-model/index.qmd"),
+    ("Recognizing Thinking Traps", "skill-finder/thinking-traps/index.qmd"),
+    ("Thought Record", "skill-finder/thought-record/index.qmd"),
+    ("Worry Time", "skill-finder/worry-time/index.qmd"),
+    ("Box Breathing", "skill-finder/box-breathing/index.qmd"),
+    ("Gratitude Journal", "skill-finder/gratitude-journal/index.qmd"),
+    ("Positive Self-Talk", "skill-finder/positive-self-talk/index.qmd"),
+    ("Grounding", "skill-finder/grounding/index.qmd"),
 )
 
 SKILL_FINDER_LEARN_LINKS = (

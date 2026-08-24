@@ -16,7 +16,7 @@
 
   function linkCards(links = []) {
     return `<div class="skill-app-result-links">${links.map((link) =>
-      `<a class="skill-app-link-button${link.kind === "app" ? "" : " secondary"}" href="${escapeHtml(link.href)}">${escapeHtml(link.label || link.name)}</a>`
+      `<a class="skill-app-link-button${link.kind === "app" ? "" : " secondary"}" href="${escapeHtml(link.href)}"${link.new_tab || String(link.href).startsWith("/resources/") ? ' target="_blank" rel="noopener"' : ""}>${escapeHtml(link.label || link.name)}${link.new_tab || String(link.href).startsWith("/resources/") ? ' <span class="visually-hidden">(opens in a new tab)</span>' : ""}</a>`
     ).join("")}</div>`;
   }
 
@@ -152,18 +152,22 @@
           <div class="skill-tree-layout"><div class="skill-tree-viewport" data-force-viewport><div class="skill-tree-canvas" data-force-canvas><svg class="skill-tree-svg" role="group" aria-label="Interactive decision tree"><defs><marker id="${arrowId}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs><g data-force-scene><g data-force-links style="--tree-arrow:url(#${arrowId})"></g><g data-force-nodes></g></g></svg></div><p class="visually-hidden" aria-live="polite" data-force-status></p></div><aside class="skill-tree-editor" data-tree-editor tabindex="-1"></aside></div>
         </section><footer class="skill-app-footer"><button type="button" class="secondary" data-tree-back disabled>Back</button><button type="button" class="secondary" data-tree-restart>Start over</button></footer></div>`;
       const container = this.root.querySelector("[data-force-viewport]");
+      const compact = container.getBoundingClientRect().width < 620;
+      this.compact = compact;
       this.graph = global.TherapyForceGraph?.createConstrainedTreeViewport({
         container,
         initialNodeIds: this.flow.nodes.filter((node) => Number(node.level) <= 1).map((node) => node.id),
-        levelGap: 210,
-        laneGap: 128,
+        orientation: compact ? "vertical" : "horizontal",
+        levelGap: compact ? 150 : 210,
+        laneGap: compact ? 108 : 128,
         minZoom: .42,
         maxZoom: 3.2,
         renderNode: (element, node) => {
           const label = node.title || node.prompt;
           const lines = treeLabelLines(label);
           const start = -((lines.length - 1) * 8);
-          element.innerHTML = `<rect class="skill-tree-node-shape" x="-76" y="-38" width="152" height="76" rx="14"></rect><text class="skill-tree-node-label" text-anchor="middle">${lines.map((line, index) => `<tspan x="0" y="${start + index * 16}">${escapeHtml(line)}</tspan>`).join("")}</text>`;
+          const width = compact ? 136 : 152;
+          element.innerHTML = `<rect class="skill-tree-node-shape" x="${-width / 2}" y="-38" width="${width}" height="76" rx="14"></rect><text class="skill-tree-node-label" text-anchor="middle">${lines.map((line, index) => `<tspan x="0" y="${start + index * 16}">${escapeHtml(line)}</tspan>`).join("")}</text>`;
         },
         updateNode: (element, node) => {
           element.classList.toggle("is-current", node.pathState === "current");
@@ -189,9 +193,9 @@
         ...node,
         type: node.type === "result" ? "result" : "question",
         pathState: node.id === this.nodeId ? "current" : visited.has(node.id) ? "visited" : "future",
-        x: Number(node.level || 0) * 210,
-        y: Number(node.lane || 0) * 128,
-        collisionRadius: 82,
+        x: this.compact ? Number(node.lane || 0) * 108 : Number(node.level || 0) * 210,
+        y: this.compact ? Number(node.level || 0) * 150 : Number(node.lane || 0) * 128,
+        collisionRadius: this.compact ? 74 : 82,
       }));
       const links = [];
       this.flow.nodes.forEach((node) => {
@@ -219,7 +223,7 @@
       return `<div class="check-facts-editor"><p>Use the Handout 8 sequence before answering the tree question. Observable facts are different from judgments, absolutes, and black-and-white descriptions.</p>
         ${[["facts-event", "What event prompted the emotion? Describe observable facts."], ["facts-interpretations", "What interpretations, thoughts, and assumptions are present? What other interpretations are possible?"], ["facts-threat", "Am I assuming a threat? What is it, and how likely is it?"], ["facts-catastrophe", "What is the catastrophe? How could I cope through problem solving, coping ahead, or acceptance?"]].map(([field, label]) => `<label for="tree-${field}">${escapeHtml(label)}</label><textarea id="tree-${field}" data-tree-fact="${field}">${escapeHtml(this.answers[field] || "")}</textarea>`).join("")}
         ${emotion ? `<aside class="skill-app-note"><strong>Events that can justify ${escapeHtml(emotion.name)}</strong><ul>${emotion.fit_facts.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul><p>Intensity and duration also depend on likelihood, importance, and effectiveness.</p></aside>` : ""}
-        <p><a href="/learn/emotion-regulation/check-the-facts.html">Review Check the Facts</a> · <a href="/resources/clean/emotion-regulation/emotion-regulation-handout-8a-examples-of-emotions-that-fit-the-facts-clean.pdf">Open Handout 8A examples</a></p></div>`;
+        <p><a href="/learn/emotion-regulation/check-the-facts.html">Review Check the Facts</a> · <a href="/resources/clean/emotion-regulation/emotion-regulation-handout-8a-examples-of-emotions-that-fit-the-facts-clean.pdf" target="_blank" rel="noopener">Open Handout 8A examples <span class="visually-hidden">(opens in a new tab)</span></a></p></div>`;
     }
 
     dynamicResult(node) {
@@ -352,7 +356,7 @@
           <button type="button" data-zone="${escapeHtml(item.id)}" aria-expanded="${selected}" aria-controls="zone-${escapeHtml(item.id)}-skills"><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.description)}</span></button>
           <div id="zone-${escapeHtml(item.id)}-skills" class="skill-thermometer-recommendations" data-zone-result="${escapeHtml(item.id)}" ${selected ? "" : "hidden"} tabindex="-1">
             <h3>Skills that may fit</h3>
-            <div class="skill-thermometer-skill-grid">${item.skills.map((skill) => `<details class="skill-thermometer-skill"><summary><span><strong>${escapeHtml(skill.name)}</strong><small>${escapeHtml(skill.category)}</small><span>${escapeHtml(skill.summary)}</span></span></summary><div><p><strong>Best fit:</strong> ${escapeHtml(skill.best_for)}</p><a class="skill-app-link-button${skill.href.startsWith("/skill-finder") ? "" : " secondary"}" href="${escapeHtml(skill.href)}">Open ${escapeHtml(skill.name)}</a></div></details>`).join("")}</div>
+            <div class="skill-thermometer-skill-grid">${item.skills.map((skill) => `<a class="skill-thermometer-skill" href="${escapeHtml(skill.href)}" target="_blank" rel="noopener"><strong>${escapeHtml(skill.name)}</strong><small>${escapeHtml(skill.category)}</small><span>${escapeHtml(skill.summary)}</span><span><strong>Best for:</strong> ${escapeHtml(skill.best_for)}</span><span>${escapeHtml(skill.description)}</span><em>${skill.provenance === "source-guideline" ? "Original Skills Use Guideline" : "Broader Therapy Skill Kit curriculum"}</em><span class="visually-hidden"> Opens in a new tab.</span></a>`).join("")}</div>
           </div>
         </section>`;
       }).join("")}</div><footer class="skill-app-footer"></footer></div>`;

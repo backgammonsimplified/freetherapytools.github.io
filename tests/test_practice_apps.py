@@ -49,6 +49,13 @@ class PracticeAppTests(unittest.TestCase):
         for token in ("data-activation-event", "Custom activity", "behavioural-activation", "values-review", "SharedCalendar.mountEditor"):
             self.assertIn(token, text)
 
+    def test_behavioural_activation_suppresses_only_the_automatic_draft_prompt(self):
+        text = JS.read_text(encoding="utf-8")
+        registration = re.search(r'register\(root, \{ toolId: "behavioural-activation"[^\n]+', text)
+        self.assertIsNotNone(registration)
+        self.assertIn("showDraftPrompt: false", registration.group(0))
+        self.assertNotIn("browserAutosave: false", registration.group(0))
+
     def test_no_external_transmission_and_deep_links_resolve(self):
         text = JS.read_text(encoding="utf-8")
         self.assertNotRegex(text, r"XMLHttpRequest|sendBeacon")

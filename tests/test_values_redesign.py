@@ -66,7 +66,7 @@ class ValuesRedesignTests(unittest.TestCase):
         for token in (
             "Values are directions for living", "A value can guide an ongoing way of acting", "What could I work on?", "How could I start?",
             "click here for 10 new ideas", "Another 10 ways to start", "Write my own How", "My What:</label><input",
-            "Add to SMART Goal", "Add to Google Calendar", "Add another goal for", "Move to the next life domain",
+            "Add to SMART Goal", "Schedule this action", "Add another goal for", "Move to the next life domain",
             "opens in a new tab", "<details", "<fieldset", "<legend",
         ):
             self.assertIn(token, VALUES_JS)
@@ -74,6 +74,8 @@ class ValuesRedesignTests(unittest.TestCase):
         self.assertNotIn("Add this action to my short-term list", VALUES_JS)
         self.assertNotIn("data-add-shortlist", VALUES_JS)
         self.assertIn("showActionDomain(nextDomainId)", VALUES_JS)
+        self.assertIn("mountValuesCalendars", VALUES_JS)
+        self.assertIn("TherapyCalendar.mountEditor", VALUES_JS)
 
     def test_what_specific_hows_are_parent_linked_and_stale_selection_clears(self):
         whats = [item for items in ACTIONS["domains"].values() for item in items]

@@ -30,7 +30,7 @@ class SkillFinderAppTests(unittest.TestCase):
 
     def test_every_skill_finder_page_uses_the_shared_sidebar(self):
         pages = sorted((SITE / "skill-finder").rglob("index.qmd"))
-        self.assertEqual(len(pages), 15)
+        self.assertEqual(len(pages), 23)
         for page in pages:
             self.assertIn("sidebar: skill-finder", page.read_text(encoding="utf-8"), page)
 
@@ -42,6 +42,8 @@ class SkillFinderAppTests(unittest.TestCase):
             "values", "thermometer", "emotions", "change-emotion", "worry-tree",
             "pleasant-event", "behaviour-chain", "missing-links", "exposure",
             "dear-man", "ask-or-say-no", "goal-builder", "behavioural-activation", "values-review",
+            "five-factor-model", "thinking-traps", "thought-record", "worry-time",
+            "box-breathing", "gratitude-journal", "positive-self-talk", "grounding",
         ):
             self.assertIn(f"skill-finder/{route}/index.qmd", navigation)
         for route in (
@@ -94,13 +96,17 @@ class SkillFinderAppTests(unittest.TestCase):
         thermometer = load("thermometer.json")
         self.assertEqual([zone["id"] for zone in thermometer["zones"]], ["overload", "distressed-wise-mind", "wise-mind", "numbness"])
         self.assertTrue(all(zone["skills"] for zone in thermometer["zones"]))
-        self.assertTrue(all(all(skill.get(key) for key in ("category", "summary", "best_for", "href")) for zone in thermometer["zones"] for skill in zone["skills"]))
+        self.assertTrue(all(all(skill.get(key) for key in ("category", "summary", "best_for", "description", "href", "provenance")) for zone in thermometer["zones"] for skill in zone["skills"]))
+        self.assertTrue(all(skill["provenance"] in {"source-guideline", "therapy-skill-kit"} for zone in thermometer["zones"] for skill in zone["skills"]))
+        names = {skill["name"] for zone in thermometer["zones"] for skill in zone["skills"]}
+        for name in ("Recognizing Thinking Traps", "Worry Time", "Box Breathing", "Gratitude Journal", "Positive Self-Talk", "Grounding", "Behavioural Activation", "Five Factor Model", "Thought Record"):
+            self.assertIn(name, names)
         emotions = load("emotions.json")["emotions"]
         self.assertEqual([item["name"] for item in emotions], ["Anger", "Disgust", "Envy", "Fear", "Happiness", "Jealousy", "Love", "Sadness", "Shame", "Guilt"])
         self.assertTrue(all(item["related_words"] and item["body_changes"] and item["source_reference"] and item["definition"] and item["color"] and item["learn_route"] and item["fit_facts"] for item in emotions))
         source = (SITE / "assets" / "skill-finder-apps.js").read_text(encoding="utf-8")
         css = (SITE / "assets" / "skill-apps.css").read_text(encoding="utf-8")
-        for token in ("skill-thermometer-recommendations", "skill-thermometer-skill-grid", "aria-expanded", "Best fit:"):
+        for token in ("skill-thermometer-recommendations", "skill-thermometer-skill-grid", "aria-expanded", "Best for:", 'target="_blank"', "Broader Therapy Skill Kit curriculum"):
             self.assertIn(token, source)
         for token in ("skill-thermometer-zone--overload", "skill-thermometer-zone--distressed-wise-mind", "skill-thermometer-zone--wise-mind", "skill-thermometer-zone--numbness"):
             self.assertIn(token, css)
@@ -137,9 +143,23 @@ class SkillFinderAppTests(unittest.TestCase):
         self.assertTrue(any(node.get("editor") == "calendar" for node in worry["nodes"]))
         self.assertTrue(any(node.get("calendar", {}).get("label") == "Schedule worry time (optional)" for node in worry["nodes"]))
         self.assertEqual(["knew", "willing", "thought", "immediate-block"], [node["id"] for node in missing["nodes"] if node["id"] in {"knew", "willing", "thought", "immediate-block"}])
+        missing_nodes = {node["id"]: node for node in missing["nodes"]}
+        self.assertEqual({"willing", "knowing-block"}, {choice["next"] for choice in missing_nodes["knew"]["choices"]})
+        self.assertEqual({"thought", "willing-block"}, {choice["next"] for choice in missing_nodes["willing"]["choices"]})
+        self.assertEqual({"immediate-block", "thought-solution"}, {choice["next"] for choice in missing_nodes["thought"]["choices"]})
+        self.assertEqual("text", missing_nodes["immediate-block"]["control"], "source question 4 is a direct follow-up, not an invented yes/no")
         source = (SITE / "assets" / "skill-finder-apps.js").read_text(encoding="utf-8")
         for token in ('"worry-tree": (root) => initConstrainedFlow', '"missing-links": (root) => initConstrainedFlow', "mountCalendar", "data-tree-text", "data-tree-calendar"):
             self.assertIn(token, source)
+
+    def test_tree_workspaces_are_graph_dominant_and_mobile_stack(self):
+        css = (SITE / "assets" / "skill-apps.css").read_text(encoding="utf-8")
+        source = (SITE / "assets" / "skill-finder-apps.js").read_text(encoding="utf-8")
+        for token in ('grid-template-columns: minmax(0, 2.35fr)', 'calc(100vh - 12rem)', '.skill-tree-layout { grid-template-columns: 1fr; }'):
+            self.assertIn(token, css)
+        for token in ('orientation: compact ? "vertical" : "horizontal"', 'this.compact', 'data-tree-editor'):
+            self.assertIn(token, source)
+        self.assertIn('target="_blank" rel="noopener"', source)
 
     def test_pleasant_events_keep_full_source_library_and_calendar(self):
         data = load("pleasant-events.json")

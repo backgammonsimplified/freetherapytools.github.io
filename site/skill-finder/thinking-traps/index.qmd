@@ -1,0 +1,17 @@
+---
+title: "Recognizing Thinking Traps"
+description: "Review and select source-backed thinking-trap patterns that may fit a thought."
+sidebar: skill-finder
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+Thinking traps are habits of interpretation. Naming one creates an opportunity to check it; it does not prove that a thought is wrong.
+
+::: {#thinking-traps-app .skill-app data-quick-app="thinking-traps"}
+Loading Recognizing Thinking Traps…
+:::
+
+[Back to all Skill Finder tools](/skill-finder/)

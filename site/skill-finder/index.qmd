@@ -58,11 +58,79 @@ Browse the curriculum's Pleasant Events List and make one idea easier to follow 
 
 ::: {.skill-app-hub-grid}
 ::: {.skill-app-hub-card}
+#### Five Factor Model
+
+Map a situation through thoughts, emotions, body sensations, and behaviours.
+
+[Open Five Factor Model](/skill-finder/five-factor-model/)
+:::
+
+::: {.skill-app-hub-card}
+#### Recognizing Thinking Traps
+
+Review source-backed thinking patterns and select any that may fit a thought.
+
+[Open Recognizing Thinking Traps](/skill-finder/thinking-traps/)
+:::
+
+::: {.skill-app-hub-card}
+#### Thought Record
+
+Work through one complete CBT Thought Record from situation to balanced alternative.
+
+[Open Thought Record](/skill-finder/thought-record/)
+:::
+
+::: {.skill-app-hub-card}
 #### Worry Tree
 
 Separate an actionable problem from a hypothetical worry and make a grounded plan.
 
 [Open Worry Tree](/skill-finder/worry-tree/)
+:::
+
+::: {.skill-app-hub-card}
+#### Worry Time
+
+Defer a worry to an optional planned window and return attention to the present.
+
+[Open Worry Time](/skill-finder/worry-time/)
+:::
+:::
+
+### In-the-Moment & Reflective Practice
+
+::: {.skill-app-hub-grid}
+::: {.skill-app-hub-card}
+#### Box Breathing
+
+Use a configurable four-phase visual breathing timer.
+
+[Open Box Breathing](/skill-finder/box-breathing/)
+:::
+
+::: {.skill-app-hub-card}
+#### Grounding
+
+Follow a concise, low-typing progression through the present environment and body.
+
+[Open Grounding](/skill-finder/grounding/)
+:::
+
+::: {.skill-app-hub-card}
+#### Gratitude Journal
+
+Record specific things you appreciate and what makes them meaningful.
+
+[Open Gratitude Journal](/skill-finder/gratitude-journal/)
+:::
+
+::: {.skill-app-hub-card}
+#### Positive Self-Talk
+
+Develop a fair, believable, supportive alternative to a difficult thought.
+
+[Open Positive Self-Talk](/skill-finder/positive-self-talk/)
 :::
 :::
 

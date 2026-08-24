@@ -20,6 +20,14 @@
     "goal-builder": "/skill-finder/goal-builder/",
     "behavioural-activation": "/skill-finder/behavioural-activation/",
     "values-review": "/skill-finder/values-review/",
+    "five-factor-model": "/skill-finder/five-factor-model/",
+    "thinking-traps": "/skill-finder/thinking-traps/",
+    "thought-record": "/skill-finder/thought-record/",
+    "worry-time": "/skill-finder/worry-time/",
+    "box-breathing": "/skill-finder/box-breathing/",
+    "gratitude-journal": "/skill-finder/gratitude-journal/",
+    "positive-self-talk": "/skill-finder/positive-self-talk/",
+    "grounding": "/skill-finder/grounding/",
   });
 
   let active = null;

@@ -77,6 +77,18 @@ assert.ok(!map.edges.some((edge) => edge.source === "domain-b" && edge.target ==
 assert.ok(!map.values.some((value) => value.valueId === "ignored"));
 assert.equal(Object.keys(state.selected).filter((id) => id === "shared").length, 1, "derived duplicate nodes must not duplicate source state");
 
+const subsetState = {
+  ...structuredClone(state),
+  selectedDomains: ["a"],
+  domainImportance: { a: "High" },
+  assessments: { a: { current: 2, desired: 8 } },
+  domains: { x: ["a"] },
+};
+const subsetMap = apps.missionMapData(data, subsetState);
+assert.deepEqual(subsetMap.domains.map((domain) => domain.id), ["a", "b", "c"], "the fixed domain ring remains complete when only some domains are prioritized");
+assert.deepEqual(subsetMap.domains.map((domain) => domain.displayPercent), [100, 0, 0]);
+assert.deepEqual(subsetMap.domains.map((domain) => domain.ringIndex), [0, 1, 2]);
+
 assert.ok(map.domains[0].radius > map.domains[1].radius);
 assert.ok(map.domains[1].radius > map.domains[2].radius);
 assert.equal(apps.domainPriorityRadius(0), 38);
@@ -99,6 +111,13 @@ const initial = apps.missionMapVisibleGraph(map);
 assert.deepEqual(initial.nodes.map((node) => node.id), ["you", "domain-a", "domain-b", "domain-c"]);
 assert.equal(initial.nodes.filter((node) => node.type === "value").length, 0, "initial graph must contain no Value nodes");
 assert.equal(initial.links.length, 3);
+assert.equal(initial.nodes.find((node) => node.id === "you").targetX, 0);
+assert.equal(initial.nodes.find((node) => node.id === "you").targetY, 0);
+for (const domain of initial.nodes.filter((node) => node.type === "domain")) {
+  assert.equal(domain.x, domain.targetX);
+  assert.equal(domain.y, domain.targetY);
+  assert.ok(Number.isFinite(domain.angle));
+}
 const compactInitial = apps.missionMapVisibleGraph(map, [], { compact: true });
 assert.equal(compactInitial.nodes.filter((node) => node.type === "value").length, 0);
 assert.ok(compactInitial.nodes.find((node) => node.id === "domain-a").radius > compactInitial.nodes.find((node) => node.id === "domain-b").radius);
@@ -106,6 +125,10 @@ assert.ok(compactInitial.nodes.find((node) => node.id === "domain-b").radius > c
 const domainAOpen = apps.missionMapVisibleGraph(map, ["a"]);
 assert.deepEqual(domainAOpen.nodes.filter((node) => node.type === "value").map((node) => node.id), ["value-a-x", "value-a-shared"]);
 assert.equal(apps.missionMapVisibleGraph(map, []).nodes.filter((node) => node.type === "value").length, 0, "a second toggle can restore the collapsed graph");
+for (const value of domainAOpen.nodes.filter((node) => node.type === "value")) {
+  const parent = domainAOpen.nodes.find((node) => node.domainId === value.domainId && node.type === "domain");
+  assert.ok(Math.hypot(value.targetX - parent.targetX, value.targetY - parent.targetY) > 80, "values use local satellite targets around their own domain");
+}
 const domainsABOpen = apps.missionMapVisibleGraph(map, ["a", "b"]);
 assert.deepEqual(domainsABOpen.nodes.filter((node) => node.type === "value" && node.valueId === "shared").map((node) => node.domainId), ["a", "b"]);
 assert.equal(domainsABOpen.nodes.find((node) => node.id === "domain-a").expanded, true);
@@ -172,6 +195,8 @@ assert.match(action, /Value X/);
 assert.match(action, /Shared Value/);
 assert.match(action, /value="what-a"[^>]*checked/);
 assert.match(action, /value="how-a"[^>]*checked/);
+assert.match(action, /Schedule this action/);
+assert.match(action, /data-action-calendar="a"/);
 assert.equal(actionState.act.domains.a.whatPage, 2);
 assert.equal(actionState.act.domains.a.howPage, 1);
 assert.equal(actionState.act.domains.a.actioned, "smart");

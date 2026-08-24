@@ -3079,3 +3079,96 @@ adapted text. General resource publication gating is unchanged. The generator's
 repeated opening language is now “adapted text” or “adapted worksheet”; review
 status continues to carry the unapproved state without putting “draft” into
 every content heading.
+
+---
+
+# 82. Dedicated Skill Finder workspace and focused tools
+
+The 2026-08-24 workspace pass keeps the Quarto site and its existing Learn,
+progress, force-graph, and calendar authorities. It does not introduce a second
+application shell or client framework.
+
+## Large constrained-tree workspaces
+
+Change Emotion, Worry Tree, and Missing Links use one responsive workspace in
+`site/assets/skill-apps.css` and the shared constrained-tree implementation in
+`site/assets/skill-finder-apps.js`. On desktop the graph receives most of the
+available page width and a viewport-relative height while the active question,
+reflection fields, and contextual actions live in a docked side panel. At narrow
+widths the graph remains full width and the editor stacks below it. The outer
+generic card treatment is suppressed for these three routes so the graph is not
+nested inside several decorative panes. Pan, zoom, drag, Fit, Reset, keyboard
+activation, coherent levels, path emphasis, reduced motion, and fullscreen stay
+available. Source handout links opened from an active tool use a new tab; ordinary
+same-site Learn navigation is unchanged.
+
+Missing Links continues to follow General Worksheet 3 exactly: know, willing,
+remember, then the direct question about what prevented immediate action. The
+last worksheet prompt is intentionally not converted into an invented yes/no
+question. Change Emotion continues to use Emotion Regulation Handouts 8, 8A, 9,
+12, and 22. Worry Tree retains its recognizable actionable versus hypothetical
+structure and delegates Later and Worry Time scheduling to the shared calendar.
+
+## Dedicated focused-tool routes
+
+`site/assets/skill-quick-tools.js` is the small initializer/state layer for these
+new Quarto routes:
+
+- `/skill-finder/five-factor-model/` — the CBT Five Factor source terminology:
+  event or trigger, thoughts, emotions, body sensations, and behaviours;
+- `/skill-finder/thinking-traps/` — the authored twelve-category Thinking Traps
+  lesson, with a session-only handoff to Thought Record;
+- `/skill-finder/thought-record/` — one tool spanning the existing Thought Record
+  Part 1 and Part 2 fields;
+- `/skill-finder/worry-time/` — the Understanding Worry/Worry Time curriculum,
+  with optional calendar scheduling;
+- `/skill-finder/box-breathing/` — a configurable four-phase visual timer based
+  on the curriculum's named Box Breathing practice;
+- `/skill-finder/gratitude-journal/` — a minimal structured journal based on the
+  curriculum's named Gratitude Journaling practice;
+- `/skill-finder/positive-self-talk/` — fair, believable alternative self-talk
+  using the site's evidence and best-friend CBT framing;
+- `/skill-finder/grounding/` — an in-the-moment sensory, body, and environment
+  progression based on the available Grounding material.
+
+The source only names, rather than fully scripts, Box Breathing and Gratitude
+Journaling, and it does not specify a numbered sensory grounding sequence. The
+tools disclose that narrow authority and do not attribute timer defaults,
+journal prompts, or an invented 5-4-3-2-1 sequence to a worksheet. Personal text
+passes from Thinking Traps to Thought Record through `sessionStorage`, never a
+query string. Every tool registers with `TherapySkillProgress`, so browser-local
+autosave, manual reopen, Markdown/JSON compatibility, DOCX, and print stay in the
+single shared progress system.
+
+## Values, Thermometer, calendar, and progress refinements
+
+The Values Mission map now assigns the nine fixed life domains deterministic
+ring slots around central You. Relative Priority still changes domain size.
+Expanded Values use deterministic local satellite targets around their owning
+domain, so one expansion does not rearrange the entire ring and several domains
+can remain open. Physics coordinates remain transient. Values Act also mounts
+the existing `TherapyCalendar` inline for an already-defined concrete action;
+the SMART Goal handoff remains available for elaboration.
+
+The Skill Thermometer still exposes the source guideline's four states directly
+under their selected section. Its data distinguishes original Skills Use
+Guideline recommendations from broader Therapy Skill Kit curriculum navigation.
+The expanded set includes the focused CBT, worry, breathing, journaling,
+self-talk, grounding, and activation tools, and every recommendation opens its
+audited specific destination in a new tab.
+
+`site/assets/therapy-calendar.js` remains the only scheduling implementation.
+Its consumers now include SMART Goal, Worry Tree, Worry Time, Pleasant Event,
+Behavioural Activation, Values, and Values Review. Local wall-clock/DST handling,
+ICS generation, recurrence support where exposed, and explicit-click Google
+Calendar navigation remain centralized. Behavioural Activation now uses the
+progress adapter's per-tool `showDraftPrompt: false` option; autosave, Open
+previous progress, manual restoration, and exports remain enabled.
+
+Focused coverage is in `tests/test_dedicated_skill_tools.py`,
+`tests/test_quick_tools.js`, `tests/test_skill_finder_apps.py`,
+`tests/test_values_mission_map.js`, `tests/test_values_redesign.py`, and
+`tests/test_practice_apps.py`, alongside the existing progress, calendar, Values,
+and Skill Finder suites. Managed Windows may still report the documented Quarto
+`Invalid handle` child-process failure; record that exact result rather than
+changing the static architecture to accommodate the sandbox.

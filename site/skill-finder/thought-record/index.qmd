@@ -1,0 +1,17 @@
+---
+title: "Thought Record"
+description: "Complete the source-backed CBT Thought Record Part 1 and Part 2 progression."
+sidebar: skill-finder
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+This is the single Skill Finder Thought Record. It follows the existing Part 1 and Part 2 curriculum, from situation and hot thought through evidence, a balanced alternative, and re-rating.
+
+::: {#thought-record-app .skill-app data-quick-app="thought-record"}
+Loading Thought Record…
+:::
+
+[Back to all Skill Finder tools](/skill-finder/)

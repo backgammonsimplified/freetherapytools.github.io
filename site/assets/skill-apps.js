@@ -322,17 +322,22 @@
   }
 
   function missionMapData(data, state, rankedDomains = rankedSelectedDomains(data, state)) {
-    const domains = rankedDomains.map((item, index) => ({
-      id: item.domain.id,
-      name: item.domain.name,
-      displayName: compactDomainLabel(item.domain.name),
-      importance: item.importance,
-      relativeScore: item.relativeScore,
-      displayPercent: item.displayPercent,
-      radius: domainPriorityRadius(item.relativeScore),
-      colorIndex: index % 9,
-      valueNodeIds: [],
-    }));
+    const rankedById = new Map(rankedDomains.map((item) => [item.domain.id, item]));
+    const domains = data.domains.map((domain, index) => {
+      const item = rankedById.get(domain.id);
+      return {
+        id: domain.id,
+        name: domain.name,
+        displayName: compactDomainLabel(domain.name),
+        importance: item?.importance || "",
+        relativeScore: item?.relativeScore || 0,
+        displayPercent: item?.displayPercent || 0,
+        radius: domainPriorityRadius(item?.relativeScore || 0),
+        colorIndex: index % 9,
+        ringIndex: index,
+        valueNodeIds: [],
+      };
+    });
     const values = domains.flatMap((domain) => assignedValuesForDomain(data, state, domain.id)
       .sort((left, right) => importanceRank(state.selected?.[left.id]?.rating) - importanceRank(state.selected?.[right.id]?.rating)
         || left.name.localeCompare(right.name, undefined, { sensitivity: "base" }))
@@ -360,7 +365,7 @@
         type: "value",
       }))),
     ];
-    return { center: { id: "you", label: "You" }, domains, values, edges };
+    return { center: { id: "you", label: "You" }, domains, values, edges, domainSlotCount: data.domains.length };
   }
 
   function missionMapVisibleGraph(map, expandedDomainIds = [], options = {}) {
@@ -368,10 +373,12 @@
     const compact = Boolean(options.compact);
     const domainRing = compact ? 138 : map.domains.length <= 5 ? 184 : 214;
     const centerRadius = compact ? 31 : 36;
-    const center = { ...map.center, type: "center", x: 0, y: 0, radius: centerRadius, hitRadius: 34, collisionRadius: centerRadius + 4 };
+    const center = { ...map.center, type: "center", x: 0, y: 0, targetX: 0, targetY: 0, radius: centerRadius, hitRadius: 34, collisionRadius: centerRadius + 4 };
     const domains = map.domains.map((domain, index) => {
-      const angle = -Math.PI / 2 + (index * Math.PI * 2 / Math.max(1, map.domains.length));
+      const angle = -Math.PI / 2 + ((domain.ringIndex ?? index) * Math.PI * 2 / Math.max(1, map.domainSlotCount || map.domains.length));
       const radius = domain.radius * (compact ? 0.72 : 1);
+      const targetX = Math.cos(angle) * domainRing;
+      const targetY = Math.sin(angle) * domainRing;
       return {
         ...domain,
         id: `domain-${domain.id}`,
@@ -379,25 +386,34 @@
         type: "domain",
         expanded: expanded.has(domain.id),
         angle,
-        x: Math.cos(angle) * domainRing,
-        y: Math.sin(angle) * domainRing,
+        x: targetX,
+        y: targetY,
+        targetX,
+        targetY,
         radius,
         hitRadius: Math.max(radius, 34),
         collisionRadius: Math.max(radius + 7, 36),
       };
     });
     const domainNodes = new Map(domains.map((domain) => [domain.domainId, domain]));
-    const values = map.values.filter((value) => expanded.has(value.domainId)).map((value, index) => {
+    const visibleValues = map.values.filter((value) => expanded.has(value.domainId));
+    const values = visibleValues.map((value, index) => {
       const parent = domainNodes.get(value.domainId);
       const linkDistance = value.linkDistance * (compact ? 0.78 : 1);
-      const hashOffset = ((stableHash(`${value.domainId}:${value.valueId}`) % 1000) / 1000 - 0.5) * 0.82;
-      const angle = (parent?.angle || 0) + hashOffset;
+      const siblings = visibleValues.filter((item) => item.domainId === value.domainId);
+      const siblingIndex = siblings.findIndex((item) => item.id === value.id);
+      const startOffset = ((stableHash(value.domainId) % 360) / 360) * Math.PI * 2;
+      const angle = startOffset + (siblingIndex * Math.PI * 2 / Math.max(1, siblings.length));
+      const targetX = (parent?.targetX || 0) + Math.cos(angle) * linkDistance;
+      const targetY = (parent?.targetY || 0) + Math.sin(angle) * linkDistance;
       return {
         ...value,
         linkDistance,
         type: "value",
-        x: (parent?.x || 0) + Math.cos(angle) * linkDistance,
-        y: (parent?.y || 0) + Math.sin(angle) * linkDistance,
+        x: targetX,
+        y: targetY,
+        targetX,
+        targetY,
         hitRadius: Math.max(value.radius, 34),
         collisionRadius: Math.max(value.radius + 5, Math.min(72, 28 + value.name.length * 2.2)),
         order: index,
@@ -603,7 +619,7 @@
   }
 
   function domainExplorerState(state, domainId) {
-    state.act.domains[domainId] = Object.assign({ open: true, whatPage: 0, selectedWhat: "", customWhat: "", howPage: 0, selectedHow: "", customHow: "", actioned: "" }, state.act.domains[domainId]);
+    state.act.domains[domainId] = Object.assign({ open: true, whatPage: 0, selectedWhat: "", customWhat: "", howPage: 0, selectedHow: "", customHow: "", actioned: "", calendarOpen: false, calendar: null }, state.act.domains[domainId]);
     return state.act.domains[domainId];
   }
 
@@ -641,9 +657,10 @@
            <label for="custom-how-${escapeHtml(domain.id)}">My How</label><textarea id="custom-how-${escapeHtml(domain.id)}" data-custom-how="${escapeHtml(domain.id)}">${escapeHtml(explore.customHow)}</textarea>
           ${(explore.howPage + 1) * 10 < howPool.length ? `<button type="button" class="secondary" data-another-hows="${escapeHtml(domain.id)}">Another 10 ways to start</button>` : ""}
           ${(actionData.implementation_supports || []).length ? `<details class="values-implementation-supports"><summary>Make this easier to start</summary><p>These general follow-through supports are separate from the specific ways to do this What.</p><ul>${actionData.implementation_supports.map((item) => `<li>${escapeHtml(item.text)}</li>`).join("")}</ul></details>` : ""}
-          <div class="skill-app-actions values-action-destinations"><button type="button" data-action-smart="${escapeHtml(domain.id)}" ${howText ? "" : "disabled"}>Add to SMART Goal <span class="visually-hidden">(opens in a new tab)</span></button><button type="button" class="secondary" data-action-calendar="${escapeHtml(domain.id)}" ${howText ? "" : "disabled"}>Add to Google Calendar <span class="visually-hidden">(opens scheduling in a new tab)</span></button></div>
-          <p class="skill-app-field-help">The calendar option opens the Goal Builder with this action filled in and its calendar section ready. Choose a date and time there; nothing is sent to Google until you click its Google Calendar button.</p>
-          ${explore.actioned ? `<section class="values-action-followup" aria-live="polite" tabindex="-1"><p><strong>${explore.actioned === "calendar" ? "Calendar scheduling opened." : "SMART Goal Builder opened."}</strong> What would you like to do next?</p><div class="skill-app-actions"><button type="button" class="secondary" data-add-another-domain-goal="${escapeHtml(domain.id)}">Add another goal for ${escapeHtml(domain.name)}</button><button type="button" data-next-action-domain="${escapeHtml(domain.id)}" ${hasNextDomain ? "" : "disabled"}>${hasNextDomain ? "Move to the next life domain" : "All life domains reviewed"}</button></div></section>` : ""}
+          <div class="skill-app-actions values-action-destinations"><button type="button" data-action-smart="${escapeHtml(domain.id)}" ${howText ? "" : "disabled"}>Add to SMART Goal <span class="visually-hidden">(opens in a new tab)</span></button><button type="button" class="secondary" data-action-calendar="${escapeHtml(domain.id)}" aria-expanded="${Boolean(explore.calendarOpen)}" ${howText ? "" : "disabled"}>${explore.calendarOpen ? "Hide calendar" : "Schedule this action"}</button></div>
+          <p class="skill-app-field-help">Schedule the concrete action here, or keep the SMART Goal handoff when more goal elaboration would help. Nothing is sent to Google until you explicitly click its Google Calendar button.</p>
+          ${explore.calendarOpen && howText ? `<section class="values-inline-calendar" aria-label="Schedule ${escapeHtml(howText)}"><h4>Schedule this action</h4><div data-values-calendar="${escapeHtml(domain.id)}"></div></section>` : ""}
+          ${explore.actioned ? `<section class="values-action-followup" aria-live="polite" tabindex="-1"><p><strong>SMART Goal Builder opened.</strong> What would you like to do next?</p><div class="skill-app-actions"><button type="button" class="secondary" data-add-another-domain-goal="${escapeHtml(domain.id)}">Add another goal for ${escapeHtml(domain.name)}</button><button type="button" data-next-action-domain="${escapeHtml(domain.id)}" ${hasNextDomain ? "" : "disabled"}>${hasNextDomain ? "Move to the next life domain" : "All life domains reviewed"}</button></div></section>` : ""}
         </fieldset>` : ""}
       </div>
     </details>`;
@@ -850,12 +867,16 @@
       alphaDecay: 0.055,
       velocityDecay: 0.54,
       linkDistance: (link) => link.distance,
-      linkStrength: (link) => link.type === "domain" ? 0.44 : 0.62,
-      charge: (node) => node.type === "domain" ? -320 : node.type === "center" ? -220 : -115,
+      linkStrength: (link) => link.type === "domain" ? 0.16 : 0.48,
+      charge: (node) => node.type === "domain" ? -110 : node.type === "center" ? -80 : -55,
       collisionRadius: (node) => node.collisionRadius,
+      xTarget: (node) => node.targetX || 0,
+      yTarget: (node) => node.targetY || 0,
+      xStrength: (node) => node.type === "center" ? 0.85 : node.type === "domain" ? 0.52 : 0.26,
+      yStrength: (node) => node.type === "center" ? 0.85 : node.type === "domain" ? 0.52 : 0.26,
       draggable: () => true,
       dragAlphaTarget: (node) => node.type === "center" ? 0.48 : 0.12,
-      persistDrop: (node) => node.type === "center",
+      persistDrop: () => false,
       renderNode,
       updateNode,
       ariaLabel: (node) => {
@@ -1007,6 +1028,7 @@
       </div>`;
       setActionBarCollapsed(actionBarCollapsed);
       bind();
+      if (state.step === 5) mountValuesCalendars();
       if (state.step === 4) missionGraph = initMissionGraph(root, data, actionData, state, expandedMissionDomains, {
         onGoToAct: (domainId, selection) => {
           const explore = domainExplorerState(state, domainId);
@@ -1061,6 +1083,26 @@
         values: assignedValuesForDomain(data, state, domainId).map((value) => value.name),
         what: whatText, how: howText, whatId: what?.id || "", howId: how?.id || "",
       };
+    }
+
+    function mountValuesCalendars() {
+      if (!global.TherapyCalendar) return;
+      root.querySelectorAll("[data-values-calendar]").forEach((container) => {
+        const domainId = container.dataset.valuesCalendar;
+        const item = selectedActionForDomain(domainId);
+        if (!item) return;
+        const explore = domainExplorerState(state, domainId);
+        const calendar = global.TherapyCalendar.normalizeState(explore.calendar || global.TherapyCalendar.initialState({ durationMinutes: "30" }));
+        explore.calendar = calendar;
+        global.TherapyCalendar.mountEditor(container, {
+          id: `values-${domainId}`,
+          state: calendar,
+          title: item.how,
+          description: [`Life domain: ${item.domainName}`, `Values: ${item.values.join(", ")}`, `Direction: ${item.what}`].filter(Boolean).join("\n"),
+          allowRecurrence: true,
+          onChange: (next) => { explore.calendar = JSON.parse(JSON.stringify(next)); },
+        });
+      });
     }
 
     function openActionHandoff(domainId, calendarIntent = false) {
@@ -1241,10 +1283,15 @@
         root.querySelector(`[data-another-hows="${CSS.escape(button.dataset.anotherHows)}"]`)?.focus();
       }));
       root.querySelectorAll("[data-action-smart]").forEach((button) => button.addEventListener("click", () => openActionHandoff(button.dataset.actionSmart, false)));
-      root.querySelectorAll("[data-action-calendar]").forEach((button) => button.addEventListener("click", () => openActionHandoff(button.dataset.actionCalendar, true)));
+      root.querySelectorAll("[data-action-calendar]").forEach((button) => button.addEventListener("click", () => {
+        const explore = domainExplorerState(state, button.dataset.actionCalendar);
+        explore.calendarOpen = !explore.calendarOpen;
+        render();
+        global.requestAnimationFrame(() => root.querySelector(`[data-action-calendar="${CSS.escape(button.dataset.actionCalendar)}"]`)?.focus());
+      }));
       root.querySelectorAll("[data-add-another-domain-goal]").forEach((button) => button.addEventListener("click", () => {
         const explore = domainExplorerState(state, button.dataset.addAnotherDomainGoal);
-        Object.assign(explore, { open: true, whatPage: 0, selectedWhat: "", customWhat: "", howPage: 0, selectedHow: "", customHow: "", actioned: "" });
+        Object.assign(explore, { open: true, whatPage: 0, selectedWhat: "", customWhat: "", howPage: 0, selectedHow: "", customHow: "", actioned: "", calendarOpen: false, calendar: null });
         render();
         root.querySelector(`[data-action-domain="${CSS.escape(button.dataset.addAnotherDomainGoal)}"] [data-action-what]`)?.focus();
       }));
@@ -1424,6 +1471,14 @@
               lines.push(`### ${item.how}`, "", `- Life Domain: ${item.domainName}`, `- Values: ${item.values.join(", ") || "None assigned"}`, `- What: ${item.what}`, `- How: ${item.how}`, "");
             });
           }
+          Object.entries(next.act?.domains || {}).forEach(([domainId, explore]) => {
+            if (!global.TherapyCalendar?.calendarCommitmentValid?.(explore.calendar)) return;
+            const what = (actionData.domains[domainId] || []).find((item) => item.id === explore.selectedWhat);
+            const how = what?.hows?.find((item) => item.id === explore.selectedHow);
+            const action = explore.selectedHow === "custom" ? explore.customHow : how?.text || "Scheduled valued action";
+            const times = global.TherapyCalendar.calendarTimeSlots(explore.calendar).join(", ");
+            lines.push(`## Scheduled Values Action: ${action}`, "", `- Life Domain: ${domainName(domainId)}`, `- Date: ${explore.calendar.date}`, `- Time: ${times}`, `- Duration: ${explore.calendar.durationMinutes} minutes`, "");
+          });
           [["Barriers", next.barriers.notes], ["Barrier Response", next.barriers.response], ["Mission Statement", next.mission.statement]].forEach(([heading, value]) => { if (value) lines.push(`## ${heading}`, "", value, ""); });
           return lines.join("\n").trim();
         },
