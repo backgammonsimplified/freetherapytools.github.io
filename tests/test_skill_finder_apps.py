@@ -21,7 +21,7 @@ class SkillFinderAppTests(unittest.TestCase):
         self.assertIn('"Show Skill Finder navigation"', javascript)
         self.assertIn('"Hide Skill Finder navigation"', javascript)
         self.assertIn('"\\u2192 Show navigation"', javascript)
-        self.assertIn('collapsed &&\n            !manuallyCollapsed', javascript)
+        self.assertIn('const collapsed = autoHidden || manuallyCollapsed', javascript)
         self.assertIn("autoCollapsePending = true", javascript)
         self.assertIn("pageScrollingDown = currentScrollY > lastScrollY", javascript)
         self.assertIn('toggle.style.left = "0.5rem"', javascript)
@@ -61,7 +61,7 @@ class SkillFinderAppTests(unittest.TestCase):
         self.assertTrue((SITE / "assets" / "skill-finder-apps.js").is_file())
 
     def test_flow_definitions_are_complete_and_reachable(self):
-        for filename in ("worry-tree.json", "change-emotion.json"):
+        for filename in ("worry-tree.json", "change-emotion.json", "missing-links.json"):
             flow = load(f"flows/{filename}")
             nodes = {node["id"]: node for node in flow["nodes"]}
             self.assertEqual(len(nodes), len(flow["nodes"]), filename)
@@ -128,6 +128,26 @@ class SkillFinderAppTests(unittest.TestCase):
         self.assertEqual({"mindful-act-problem-solve", "opposite-action-fit", "change-thoughts-opposite", "mindful-act-reconsider"}, {node["id"] for node in flow["nodes"] if node["type"] == "result"})
         source = (SITE / "assets" / "skill-finder-apps.js").read_text(encoding="utf-8")
         for token in ("ConstrainedTreeEngine", "createConstrainedTreeViewport", "facts-event", "facts-interpretations", "facts-threat", "facts-catastrophe", "Handout 8A examples", "tree-chosen", "tree-future"):
+            self.assertIn(token, source)
+
+    def test_worry_tree_and_missing_links_use_shared_constrained_tree(self):
+        worry = load("flows/worry-tree.json")
+        missing = load("flows/missing-links.json")
+        self.assertEqual({"action", "acknowledge"}, {choice["next"] for choice in next(node for node in worry["nodes"] if node["id"] == "actionable")["choices"]})
+        self.assertTrue(any(node.get("editor") == "calendar" for node in worry["nodes"]))
+        self.assertTrue(any(node.get("calendar", {}).get("label") == "Schedule worry time (optional)" for node in worry["nodes"]))
+        self.assertEqual(["knew", "willing", "thought", "immediate-block"], [node["id"] for node in missing["nodes"] if node["id"] in {"knew", "willing", "thought", "immediate-block"}])
+        source = (SITE / "assets" / "skill-finder-apps.js").read_text(encoding="utf-8")
+        for token in ('"worry-tree": (root) => initConstrainedFlow', '"missing-links": (root) => initConstrainedFlow', "mountCalendar", "data-tree-text", "data-tree-calendar"):
+            self.assertIn(token, source)
+
+    def test_pleasant_events_keep_full_source_library_and_calendar(self):
+        data = load("pleasant-events.json")
+        self.assertEqual(225, len(data["events"]))
+        self.assertGreaterEqual(len(data["categories"]), 6)
+        self.assertGreaterEqual(len(data["activation_suggestions"]), 20)
+        source = (SITE / "assets" / "skill-finder-apps.js").read_text(encoding="utf-8")
+        for token in ("pleasant-event-grid", "Custom activity", "TherapyCalendar", "allowRecurrence: true"):
             self.assertIn(token, source)
 
     def test_pleasant_events_and_privacy(self):

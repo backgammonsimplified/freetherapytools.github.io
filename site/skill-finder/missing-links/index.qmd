@@ -8,6 +8,8 @@ toc: false
 
 Missing Links is for an effective behaviour you intended but did not do. To understand an ineffective behaviour that did occur, use the [Behaviour Chain Builder](/skill-finder/behaviour-chain/).
 
-::: {#missing-links-app .skill-app data-practice-app="missing-links"}
+This tree follows [General Worksheet 3: Missing-Links Analysis](/resources/clean/general/general-worksheet-3-missing-links-analysis-clean.pdf).
+
+::: {#missing-links-app .skill-app data-skill-app="missing-links"}
 Loading Missing Links…
 :::

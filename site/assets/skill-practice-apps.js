@@ -5,6 +5,7 @@
     .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;").replaceAll("'", "&#039;");
   const Progress = typeof window !== "undefined" ? window.TherapySkillProgress : null;
+  const SharedCalendar = typeof window !== "undefined" ? window.TherapyCalendar : require("./therapy-calendar.js");
 
   const LINKS = {
     chain: [{ label: "Learn Behaviour Chain Analysis", href: "/learn/wellness/behavior-chain-missing-links.html#behaviour-chain-analysis" }],
@@ -62,8 +63,8 @@
         ["direction", "Direction or value this goal supports"], ["specific", "Specific — What exactly will I do?"],
         ["measurable", "Measurable — How will I know it happened?"], ["achievable", "Achievable — What makes this within reach?"],
         ["relevant", "Relevant / Realistic — Why does it matter, and does it fit current circumstances?"],
-        ["time", "Time-Oriented — By when, or at what time and place?"], ["smallest", "Smallest useful version"],
-        ["support", "What could support follow-through?"],
+        ["time", "Time-Oriented — By when, or at what time and place?"], ["smallest", "Can we simplify the goal?"],
+        ["barrier", "What could get in the way?"], ["support", "What could support follow-through?"],
       ], links: LINKS.goals,
     },
     "behavioural-activation": {
@@ -104,7 +105,7 @@
       && keys.every((key) => typeof object[key] === "string");
   }
 
-  const GOAL_FIELD_KEYS = ["direction", "specific", "measurable", "achievable", "relevant", "time", "smallest", "support"];
+  const GOAL_FIELD_KEYS = ["direction", "specific", "measurable", "achievable", "relevant", "time", "smallest", "barrier", "support"];
 
   function pad(number) { return String(number).padStart(2, "0"); }
 
@@ -305,6 +306,21 @@
     return buildGoogleCalendarUrls(options)[0]?.url || null;
   }
 
+  // Preserve the established SMART Goal surface while sharing the tested
+  // calendar calculations with every scheduling tool.
+  calendarDateFromOffset = SharedCalendar.calendarDateFromOffset;
+  calendarWindow = SharedCalendar.calendarWindow;
+  calendarTimeSlots = SharedCalendar.calendarTimeSlots;
+  recurrenceStartDate = SharedCalendar.recurrenceStartDate;
+  recurrenceRule = SharedCalendar.recurrenceRule;
+  zonedDateTimeToDate = SharedCalendar.zonedDateTimeToDate;
+  calendarHelpText = SharedCalendar.calendarHelpText;
+  calendarCommitmentValid = SharedCalendar.calendarCommitmentValid;
+  escapeIcsText = SharedCalendar.escapeIcsText;
+  buildIcsEvent = SharedCalendar.buildIcsEvent;
+  buildGoogleCalendarUrl = SharedCalendar.buildGoogleCalendarUrl;
+  buildGoogleCalendarUrls = SharedCalendar.buildGoogleCalendarUrls;
+
   function goalBuilderPrefill(payload) {
     const values = Array.isArray(payload?.values) ? payload.values.filter((value) => typeof value === "string") : [];
     const domain = typeof payload?.domain === "string" ? payload.domain : "";
@@ -320,6 +336,7 @@
         relevant: "",
         time: "",
         smallest: "",
+        barrier: "",
         support: "",
       },
       context: {
@@ -382,7 +399,7 @@
     const sections = [
       ["Life Domain", state.context.domain], ["Values", state.context.values.join(", ")], ["Mission", state.context.mission], ["What", state.context.what], ["How", state.context.how],
       ["Direction or Value", state.fields.direction], ["Specific", state.fields.specific], ["Measurable", state.fields.measurable], ["Achievable", state.fields.achievable],
-      ["Relevant / Realistic", state.fields.relevant], ["Time-Oriented", state.fields.time], ["Target Date", state.targetDate], ["Smallest Useful Version", state.fields.smallest], ["Support", state.fields.support],
+      ["Relevant / Realistic", state.fields.relevant], ["Time-Oriented", state.fields.time], ["Target Date", state.targetDate], ["Simplified Goal", state.fields.smallest], ["Possible Barrier", state.fields.barrier], ["Support", state.fields.support],
       ["Calendar Commitment", state.calendar.enabled && calendarCommitmentValid(state.calendar) ? (state.calendar.scheduleType === "recurring" ? `Recurring ${state.calendar.frequency} from ${state.calendar.date} at ${calendarTimeSlots(state.calendar).join(", ")} for ${state.calendar.durationMinutes} minutes` : `${state.calendar.date} at ${state.calendar.startTime} for ${state.calendar.durationMinutes} minutes`) : ""],
     ];
     if (Progress?.nonEmptySections) return Progress.nonEmptySections(goalTitle(state), sections);
@@ -452,7 +469,9 @@
 
   function goalStateValid(next) {
     if (!Progress?.isPlainObject(next) || !Progress.isPlainObject(next.fields) || typeof next.summaryBuilt !== "boolean") return false;
-    if (!stringsOnly(next.fields, GOAL_FIELD_KEYS)) return false;
+    if (!Progress.isPlainObject(next.fields) || !Object.keys(next.fields).every((key) => GOAL_FIELD_KEYS.includes(key))
+      || GOAL_FIELD_KEYS.filter((key) => key !== "barrier").some((key) => typeof next.fields[key] !== "string")
+      || (next.fields.barrier !== undefined && typeof next.fields.barrier !== "string")) return false;
     const keys = Object.keys(next);
     if (keys.every((key) => ["fields", "summaryBuilt"].includes(key))) return true;
     if (!keys.every((key) => ["fields", "summaryBuilt", "context", "targetDate", "calendar", "gtd"].includes(key))) return false;
@@ -502,7 +521,10 @@
         ["direction", "Direction or value this goal supports"], ["specific", "Specific — What exactly will I do?"],
         ["measurable", "Measurable — How will I know it happened?"], ["achievable", "Achievable — What makes this within reach?"],
         ["relevant", "Relevant / Realistic — Why does it matter, and does it fit current circumstances?"],
-        ["time", "Time-Oriented — What timing, rhythm, or review point matters?"], ["smallest", "Smallest useful version"], ["support", "What could support follow-through?"],
+        ["time", "Time-Oriented — What timing, rhythm, or review point matters?"],
+        ["smallest", "Can we simplify the goal?", "What is a smaller thing we could do and still feel satisfied?"],
+        ["barrier", "What could get in the way?", "What could prevent us from completing the goal, and what can we do to reduce or avoid that obstacle?"],
+        ["support", "What could support follow-through?"],
       ];
       const recurring = state.calendar.scheduleType === "recurring";
       const repeatUnit = state.calendar.frequency === "daily" ? "day(s)" : state.calendar.frequency === "monthly" ? "month(s)" : "week(s)";
@@ -510,7 +532,7 @@
       const googleButtonCount = recurring ? googleTimeSlots.length : 1;
       root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>SMART Goal Builder</h2><p>Connect a meaningful direction with an observable next step. A formal goal is optional; use it when structure would help. Your answers stay in this browser unless you save or explicitly open a calendar handoff.</p></header>
         <form class="skill-app-panel" data-goal-form>${state.context.domain || state.context.what ? `<aside class="skill-app-note"><strong>From your Values plan</strong>${state.context.domain ? `<span>Life Domain: ${escapeHtml(state.context.domain)}</span>` : ""}${state.context.values.length ? `<span>Values: ${escapeHtml(state.context.values.join(", "))}</span>` : ""}${state.context.what ? `<span>What: ${escapeHtml(state.context.what)}</span>` : ""}${state.context.how ? `<span>How: ${escapeHtml(state.context.how)}</span>` : ""}</aside>` : ""}
-          ${fields.map(([key, label]) => `<label for="goal-${key}">${escapeHtml(label)}</label><textarea id="goal-${key}" name="${key}" data-goal-field="${key}">${escapeHtml(state.fields[key])}</textarea>`).join("")}
+          ${fields.map(([key, label, help]) => `<label for="goal-${key}">${escapeHtml(label)}</label>${help ? `<p class="skill-app-field-help" id="goal-${key}-help">${escapeHtml(help)}</p>` : ""}<textarea id="goal-${key}" name="${key}" data-goal-field="${key}" ${help ? `aria-describedby="goal-${key}-help"` : ""}>${escapeHtml(state.fields[key])}</textarea>`).join("")}
           <fieldset class="skill-app-fieldset"><legend>Target date / deadline</legend><p class="skill-app-field-help">This is goal or task metadata. It does not automatically create a calendar event.</p><label for="goal-target-date">Target date</label><input id="goal-target-date" type="date" data-goal-target-date value="${escapeHtml(state.targetDate)}"></fieldset>
           <fieldset class="skill-app-fieldset" id="goal-calendar-commitment"><legend>Specific calendar commitment</legend><label class="skill-app-check"><input type="checkbox" data-calendar-enabled ${state.calendar.enabled ? "checked" : ""}> <span>Schedule an event or reminder</span></label><p>A target date is a deadline. This separate calendar commitment is for an action that belongs at a particular local date and time.</p>
             <div data-calendar-fields ${state.calendar.enabled ? "" : "hidden"}>
@@ -644,7 +666,7 @@
     const state = { problem: "", vulnerability: "", prompt: "", links: [{ type: "actions", detail: "" }], consequences: "", skills: "", prevention: "", repair: "" };
     const types = ["actions", "body sensations", "cognitions / thoughts", "environment / events", "feelings"];
     function render(focus = false) {
-      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Behaviour Chain Builder</h2><p>Map what happened without reducing it to one cause. Entries stay on this page.</p></header><section class="skill-app-panel"><label for="chain-problem">Problem behaviour</label><textarea id="chain-problem" data-chain-field="problem">${escapeHtml(state.problem)}</textarea><label for="chain-vulnerability">Vulnerability factors</label><textarea id="chain-vulnerability" data-chain-field="vulnerability">${escapeHtml(state.vulnerability)}</textarea><label for="chain-prompt">Prompting event</label><textarea id="chain-prompt" data-chain-field="prompt">${escapeHtml(state.prompt)}</textarea><h3>Ordered chain links</h3><div data-chain-links>${state.links.map((link, index) => `<fieldset class="skill-app-fieldset"><legend>Link ${index + 1}</legend><label for="chain-type-${index}">Type</label><select id="chain-type-${index}" data-chain-type="${index}">${types.map((type) => `<option ${link.type === type ? "selected" : ""}>${type}</option>`).join("")}</select><label for="chain-detail-${index}">What happened?</label><textarea id="chain-detail-${index}" data-chain-detail="${index}">${escapeHtml(link.detail)}</textarea><div class="skill-app-actions"><button type="button" class="secondary" data-chain-up="${index}" ${index ? "" : "disabled"}>Move up</button><button type="button" class="secondary" data-chain-down="${index}" ${index < state.links.length - 1 ? "" : "disabled"}>Move down</button><button type="button" class="secondary" data-chain-remove="${index}" ${state.links.length > 1 ? "" : "disabled"}>Remove</button></div></fieldset>`).join("")}</div><button type="button" data-chain-add>Add chain link</button><label for="chain-consequences">Consequences</label><textarea id="chain-consequences" data-chain-field="consequences">${escapeHtml(state.consequences)}</textarea><label for="chain-skills">Alternative skills</label><textarea id="chain-skills" data-chain-field="skills">${escapeHtml(state.skills)}</textarea><label for="chain-prevention">Prevention</label><textarea id="chain-prevention" data-chain-field="prevention">${escapeHtml(state.prevention)}</textarea><label for="chain-repair">Repair / solution analysis</label><textarea id="chain-repair" data-chain-field="repair">${escapeHtml(state.repair)}</textarea><h3>Chain view</h3><ol class="skill-app-chain-view">${state.links.map((link) => `<li><strong>${escapeHtml(link.type)}</strong><span>${escapeHtml(link.detail || "Add details above")}</span></li>`).join("")}</ol></section><footer class="skill-app-footer">${linksMarkup(LINKS.chain)}</footer></div>`;
+      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Behaviour Chain Builder</h2><p>Map what happened without reducing it to one cause. Entries stay on this page.</p></header><section class="skill-app-panel"><label for="chain-problem">Problem behaviour</label><textarea id="chain-problem" data-chain-field="problem">${escapeHtml(state.problem)}</textarea><label for="chain-vulnerability">Vulnerability factors</label><textarea id="chain-vulnerability" data-chain-field="vulnerability">${escapeHtml(state.vulnerability)}</textarea><label for="chain-prompt">Prompting event</label><textarea id="chain-prompt" data-chain-field="prompt">${escapeHtml(state.prompt)}</textarea><h3>Ordered chain links</h3><div data-chain-links>${state.links.map((link, index) => `<fieldset class="skill-app-fieldset"><legend>Link ${index + 1}</legend><label for="chain-type-${index}">Type</label><select id="chain-type-${index}" data-chain-type="${index}">${types.map((type) => `<option ${link.type === type ? "selected" : ""}>${type}</option>`).join("")}</select><label for="chain-detail-${index}">What happened?</label><textarea id="chain-detail-${index}" data-chain-detail="${index}">${escapeHtml(link.detail)}</textarea><div class="skill-app-actions"><button type="button" class="secondary" data-chain-up="${index}" ${index ? "" : "disabled"}>Move up</button><button type="button" class="secondary" data-chain-down="${index}" ${index < state.links.length - 1 ? "" : "disabled"}>Move down</button><button type="button" class="secondary" data-chain-remove="${index}" ${state.links.length > 1 ? "" : "disabled"}>Remove</button></div></fieldset>`).join("")}</div><button type="button" data-chain-add>Add another link</button><label for="chain-consequences">Consequences</label><textarea id="chain-consequences" data-chain-field="consequences">${escapeHtml(state.consequences)}</textarea><label for="chain-skills">Alternative skills</label><textarea id="chain-skills" data-chain-field="skills">${escapeHtml(state.skills)}</textarea><label for="chain-prevention">Prevention</label><textarea id="chain-prevention" data-chain-field="prevention">${escapeHtml(state.prevention)}</textarea><label for="chain-repair">Repair / solution analysis</label><textarea id="chain-repair" data-chain-field="repair">${escapeHtml(state.repair)}</textarea><h3>Chain view</h3><ol class="skill-app-chain-view">${state.links.map((link) => `<li><strong>${escapeHtml(link.type)}</strong><span>${escapeHtml(link.detail || "Add details above")}</span></li>`).join("")}</ol></section><footer class="skill-app-footer">${linksMarkup(LINKS.chain)}</footer></div>`;
       bind(); if (focus) root.querySelector("[data-chain-links] fieldset:last-child textarea")?.focus();
     }
     function swap(a, b) { [state.links[a], state.links[b]] = [state.links[b], state.links[a]]; render(); }
@@ -679,6 +701,45 @@
         return lines.join("\n").trim();
       },
     });
+  }
+
+  function initSourceBehaviourChain(root) {
+    const vulnerabilities = ["Unbalanced sleep", "Unbalanced eating", "Unbalanced exercise", "Used mood-altering drugs or prescriptions in a non-prescribed way", "Used alcohol or drugs"];
+    const scalarKeys = ["problem", "prompt", "vulnerabilityOther", "actions", "body", "cognitions", "events", "feelings", "shortPros", "shortCons", "longPros", "longCons", "reduceVulnerability", "copePrompt", "harm", "repair", "skill1", "skill2", "skill3", "rating"];
+    const blank = () => ({ ...Object.fromEntries(scalarKeys.map((key) => [key, ""])), vulnerabilities: [] });
+    let state = blank();
+    const field = (key, label) => `<label for="chain-${key}">${escapeHtml(label)}</label><textarea id="chain-${key}" data-source-chain-field="${key}">${escapeHtml(state[key])}</textarea>`;
+    function render() {
+      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Behaviour Chain Analysis</h2><p>This form follows the source worksheet directly. Use only the sections that help; entries stay on this device.</p></header><section class="skill-app-panel behaviour-chain-source">
+        ${field("problem", "What exactly is the behaviour I am analyzing?")}${field("prompt", "What prompting event in the environment started the chain?")}
+        <fieldset class="skill-app-fieldset"><legend>What were my vulnerability factors? (check all that apply)</legend><div class="behaviour-chain-vulnerabilities">${vulnerabilities.map((item) => `<label class="skill-app-check"><input type="checkbox" data-chain-vulnerability value="${escapeHtml(item)}" ${state.vulnerabilities.includes(item) ? "checked" : ""}> <span>${escapeHtml(item)}</span></label>`).join("")}</div>${field("vulnerabilityOther", "Other vulnerability factor")}</fieldset>
+        <h3>Links between the prompting event and problem behaviour</h3><p class="skill-app-field-help">The source lists actions, body sensations, cognitions/thoughts, events, and feelings as possible link types.</p>
+        <div class="behaviour-chain-link-grid">${field("actions", "Actions")}${field("body", "Body sensations")}${field("cognitions", "Cognitions / thoughts")}${field("events", "Events")}${field("feelings", "Feelings")}</div>
+        <h3>Consequences of engaging in the behaviour</h3><div class="behaviour-chain-link-grid">${field("shortPros", "Short-term pros")}${field("shortCons", "Short-term cons")}${field("longPros", "Long-term pros")}${field("longCons", "Long-term cons")}</div>
+        <h3>Solution analysis</h3>${field("reduceVulnerability", "Things I can do today to reduce vulnerability factors")}${field("copePrompt", "Ways to prevent or cope differently with the prompting event")}${field("harm", "What harm or consequences did the problem behaviour cause?")}${field("repair", "Plans to correct or repair and overcorrect the harm")}
+        <fieldset class="skill-app-fieldset"><legend>Three skills I commit to using when urges happen again</legend>${field("skill1", "Skill 1")}${field("skill2", "Skill 2")}${field("skill3", "Skill 3")}</fieldset>
+        <label for="chain-rating">How helpful was this chain analysis? (0–10)</label><input id="chain-rating" type="number" min="0" max="10" inputmode="numeric" data-source-chain-field="rating" value="${escapeHtml(state.rating)}">
+        <p><a href="/resources/wellness/wellness-p028.jpg">Open source worksheet, page 1</a> · <a href="/resources/wellness/wellness-p029.jpg">page 2</a> · <a href="/resources/wellness/wellness-p030.jpg">page 3</a></p></section><footer class="skill-app-footer">${linksMarkup(LINKS.chain)}</footer></div>`;
+      root.querySelectorAll("[data-source-chain-field]").forEach((control) => control.addEventListener("input", () => { state[control.dataset.sourceChainField] = control.value; }));
+      root.querySelectorAll("[data-chain-vulnerability]").forEach((control) => control.addEventListener("change", () => { state.vulnerabilities = [...root.querySelectorAll("[data-chain-vulnerability]:checked")].map((item) => item.value); }));
+    }
+    function migrate(next) {
+      if (Array.isArray(next?.vulnerabilities)) return { ...blank(), ...next, vulnerabilities: [...next.vulnerabilities] };
+      const migrated = blank();
+      ["problem", "prompt", "repair"].forEach((key) => { migrated[key] = typeof next?.[key] === "string" ? next[key] : ""; });
+      migrated.vulnerabilityOther = typeof next?.vulnerability === "string" ? next.vulnerability : "";
+      migrated.harm = typeof next?.consequences === "string" ? next.consequences : "";
+      migrated.reduceVulnerability = typeof next?.prevention === "string" ? next.prevention : "";
+      migrated.skill1 = typeof next?.skills === "string" ? next.skills : "";
+      (next?.links || []).forEach((link) => { const key = link.type === "actions" ? "actions" : link.type === "body sensations" ? "body" : link.type === "cognitions / thoughts" ? "cognitions" : link.type === "environment / events" ? "events" : link.type === "feelings" ? "feelings" : ""; if (key && link.detail) migrated[key] = [migrated[key], link.detail].filter(Boolean).join("\n"); });
+      return migrated;
+    }
+    function valid(next) {
+      if (Progress.isPlainObject(next) && Array.isArray(next.vulnerabilities)) return Object.keys(next).every((key) => [...scalarKeys, "vulnerabilities"].includes(key)) && scalarKeys.every((key) => typeof next[key] === "string") && next.vulnerabilities.every((item) => vulnerabilities.includes(item));
+      return Progress.isPlainObject(next) && Array.isArray(next.links) && ["problem", "vulnerability", "prompt", "consequences", "skills", "prevention", "repair"].every((key) => typeof next[key] === "string");
+    }
+    render();
+    register(root, { toolId: "behaviour-chain", toolTitle: "Behaviour Chain Analysis", route: Progress.TOOL_ROUTES["behaviour-chain"], getState: () => state, setState: (next) => { state = migrate(next); render(); }, validateState: valid, getReadableSummary: (next) => { const current = migrate(next); return Progress.nonEmptySections("Behaviour Chain Analysis", [["Problem Behaviour", current.problem], ["Prompting Event", current.prompt], ["Vulnerability Factors", [...current.vulnerabilities, current.vulnerabilityOther].filter(Boolean)], ["Actions", current.actions], ["Body Sensations", current.body], ["Cognitions / Thoughts", current.cognitions], ["Events", current.events], ["Feelings", current.feelings], ["Short-Term Pros", current.shortPros], ["Short-Term Cons", current.shortCons], ["Long-Term Pros", current.longPros], ["Long-Term Cons", current.longCons], ["Reduce Vulnerability", current.reduceVulnerability], ["Cope Differently", current.copePrompt], ["Harm", current.harm], ["Repair", current.repair], ["Skills", [current.skill1, current.skill2, current.skill3].filter(Boolean)], ["Helpfulness", current.rating && `${current.rating}/10`]]); } });
   }
 
   function initExposure(root) {
@@ -724,12 +785,48 @@
     });
   }
 
+  async function initBehaviouralActivation(root) {
+    const response = await fetch("/data/skill-apps/pleasant-events.json", { credentials: "same-origin" });
+    if (!response.ok) throw new Error("Could not load pleasant-event suggestions");
+    const data = await response.json();
+    const suggestions = data.activation_suggestions.map((id) => data.events.find((event) => event.id === id)).filter(Boolean);
+    const keys = FORM_DEFINITIONS["behavioural-activation"].fields.map(([key]) => key);
+    let state = { fields: Object.fromEntries(keys.map((key) => [key, ""])), summaryBuilt: false, selected: null, custom: "", calendar: SharedCalendar.initialState({ durationMinutes: "30" }) };
+    function render() {
+      const activity = state.custom.trim() || state.fields.action;
+      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Behavioural Activation Planner</h2><p>Choose one small source-backed activity or write your own. A feeling does not have to change before action begins.</p></header><section class="skill-app-panel"><h3>Activity suggestions</h3><div class="activation-suggestion-grid">${suggestions.map((event) => `<button type="button" class="secondary" data-activation-event="${event.id}" aria-pressed="${state.selected === event.id}">${escapeHtml(event.title)}</button>`).join("")}</div><label for="activation-custom">Custom activity</label><input id="activation-custom" value="${escapeHtml(state.custom)}"><label for="activation-harder">What has become harder to do?</label><textarea id="activation-harder" data-activation-field="harder">${escapeHtml(state.fields.harder)}</textarea><label for="activation-action">Chosen small action</label><textarea id="activation-action" data-activation-field="action">${escapeHtml(state.fields.action)}</textarea>${[["connection","Could it offer pleasure, mastery, self-care, or values connection?"],["barrier","What may get in the way?"],["help","What could help?"],["smallest","What is the smallest version?"]].map(([key,label]) => `<label for="activation-${key}">${escapeHtml(label)}</label><textarea id="activation-${key}" data-activation-field="${key}">${escapeHtml(state.fields[key])}</textarea>`).join("")}<div data-activation-calendar ${activity ? "" : "hidden"}></div>${linksMarkup(LINKS.activation)}</section><footer class="skill-app-footer"></footer></div>`;
+      root.querySelectorAll("[data-activation-event]").forEach((button) => button.addEventListener("click", () => { const event = suggestions.find((item) => item.id === Number(button.dataset.activationEvent)); state.selected = event.id; state.custom = ""; state.fields.action = event.title; render(); }));
+      root.querySelector("#activation-custom")?.addEventListener("change", (event) => { state.custom = event.target.value; if (state.custom.trim()) { state.selected = null; state.fields.action = state.custom.trim(); } render(); });
+      root.querySelectorAll("[data-activation-field]").forEach((field) => field.addEventListener("input", () => { state.fields[field.dataset.activationField] = field.value; }));
+      if (activity) SharedCalendar.mountEditor(root.querySelector("[data-activation-calendar]"), { id: "behavioural-activation", state: state.calendar, title: activity, description: [state.fields.smallest, state.fields.help].filter(Boolean).join("\n"), allowRecurrence: true });
+    }
+    function normalize(next) { return { fields: { ...Object.fromEntries(keys.map((key) => [key, ""])), ...(next?.fields || {}) }, summaryBuilt: Boolean(next?.summaryBuilt), selected: next?.selected ?? null, custom: next?.custom || "", calendar: SharedCalendar.normalizeState(next?.calendar) }; }
+    render();
+    register(root, { toolId: "behavioural-activation", toolTitle: "Behavioural Activation Planner", route: Progress.TOOL_ROUTES["behavioural-activation"], getState: () => state, setState: (next) => { state = normalize(next); render(); }, validateState: (next) => Progress.isPlainObject(next) && Progress.isPlainObject(next.fields) && keys.every((key) => typeof next.fields[key] === "string") && typeof next.summaryBuilt === "boolean" && (next.selected === undefined || next.selected === null || Number.isInteger(next.selected)) && (next.custom === undefined || typeof next.custom === "string") && (next.calendar === undefined || Progress.isPlainObject(next.calendar)), getReadableSummary: (next) => { const current = normalize(next); return Progress.nonEmptySections("Behavioural Activation Planner", [["Activity", current.fields.action], ["What Became Harder", current.fields.harder], ["Purpose", current.fields.connection], ["Barrier", current.fields.barrier], ["Support", current.fields.help], ["Smallest Version", current.fields.smallest], ["Calendar", SharedCalendar.calendarCommitmentValid(current.calendar) ? `${current.calendar.date} at ${SharedCalendar.calendarTimeSlots(current.calendar).join(", ")}` : ""]]); } });
+  }
+
+  function initValuesReview(root) {
+    const definition = FORM_DEFINITIONS["values-review"];
+    const keys = definition.fields.map(([key]) => key);
+    let state = { fields: Object.fromEntries(keys.map((key) => [key, ""])), summaryBuilt: false, calendar: SharedCalendar.initialState({ recurring: true, frequency: "weekly", durationMinutes: "20" }) };
+    function render() {
+      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Values Review</h2><p>Use this as information, not a grade. Entries and schedule details stay on this device.</p></header><section class="skill-app-panel">${definition.fields.map(([key,label,type="textarea",options=[]]) => type === "select" ? `<label for="review-${key}">${escapeHtml(label)}</label><select id="review-${key}" data-review-field="${key}">${options.map(([value,text]) => `<option value="${value}" ${state.fields[key] === value ? "selected" : ""}>${escapeHtml(text)}</option>`).join("")}</select>` : type === "date" ? `<label for="review-${key}">${escapeHtml(label)}</label><input id="review-${key}" type="date" data-review-field="${key}" value="${escapeHtml(state.fields[key])}">` : `<label for="review-${key}">${escapeHtml(label)}</label><textarea id="review-${key}" data-review-field="${key}">${escapeHtml(state.fields[key])}</textarea>`).join("")}<h3>Schedule my next Values review</h3><div data-values-review-calendar></div><div class="skill-app-result-links"><a class="skill-app-link-button" href="/skill-finder/values/">Revisit my Values plan</a></div></section><footer class="skill-app-footer">${linksMarkup(LINKS.review)}</footer></div>`;
+      root.querySelectorAll("[data-review-field]").forEach((field) => field.addEventListener("change", () => { state.fields[field.dataset.reviewField] = field.value; }));
+      SharedCalendar.mountEditor(root.querySelector("[data-values-review-calendar]"), { id: "values-review", state: state.calendar, title: "Values review", description: "Revisit my Therapy Skill Kit Values plan.", allowRecurrence: true, onChange: (calendar) => { state.fields.reviewDate = calendar.date; } });
+    }
+    function normalize(next) { return { fields: { ...Object.fromEntries(keys.map((key) => [key, ""])), ...(next?.fields || {}) }, summaryBuilt: Boolean(next?.summaryBuilt), calendar: SharedCalendar.normalizeState(next?.calendar || { scheduleType: next?.fields?.period === "monthly" ? "recurring" : "recurring", frequency: next?.fields?.period || "weekly", date: next?.fields?.reviewDate || "" }) }; }
+    render();
+    register(root, { toolId: "values-review", toolTitle: "Values Review", route: Progress.TOOL_ROUTES["values-review"], getState: () => state, setState: (next) => { state = normalize(next); render(); }, validateState: (next) => Progress.isPlainObject(next) && Progress.isPlainObject(next.fields) && keys.every((key) => typeof next.fields[key] === "string") && typeof next.summaryBuilt === "boolean" && (next.calendar === undefined || Progress.isPlainObject(next.calendar)), getReadableSummary: (next) => { const current = normalize(next); return Progress.nonEmptySections("Values Review", [...definition.fields.map(([key,label]) => [label, current.fields[key]]), ["Next Review", SharedCalendar.calendarCommitmentValid(current.calendar) ? `${current.calendar.date} at ${SharedCalendar.calendarTimeSlots(current.calendar).join(", ")}` : current.fields.reviewDate]]); } });
+  }
+
   function start() {
     document.querySelectorAll("[data-practice-app]").forEach((root) => {
       const name = root.dataset.practiceApp;
-      if (name === "behaviour-chain") initBehaviourChain(root);
+      if (name === "behaviour-chain") initSourceBehaviourChain(root);
       else if (name === "exposure") initExposure(root);
       else if (name === "goal-builder") initGoalBuilder(root);
+      else if (name === "behavioural-activation") initBehaviouralActivation(root).catch((error) => { root.innerHTML = '<p class="skill-app-note">Activity suggestions could not load. Please refresh this page.</p>'; console.error(error); });
+      else if (name === "values-review") initValuesReview(root);
       else if (FORM_DEFINITIONS[name]) initGuidedForm(root, FORM_DEFINITIONS[name]);
     });
   }

@@ -8,7 +8,7 @@ execute:
   enabled: false
 ---
 
-This is a reflection and planning tool. It cannot promise to remove worry, but it can help clarify whether there is an action to take.
+This is a reflection and planning tool. It cannot promise to remove worry, but it can help clarify whether there is an action to take. Work through the draggable tree, then use the active-step panel to write or schedule only what is useful.
 
 ::: {#worry-tree-app .skill-app data-skill-app="worry-tree"}
 Loading Worry Tree…

@@ -1,5 +1,14 @@
 {
   "source": "Emotion Regulation Handout 16",
+  "categories": [
+    {"id":"social","label":"Social & connection","keywords":["friend","family","party","date","people","club","talk","visit","together","entertain"]},
+    {"id":"movement","label":"Movement & outdoors","keywords":["walk","run","jog","exercise","swim","bike","sport","beach","camp","sail","skate","outdoor","garden"]},
+    {"id":"creative","label":"Creative & hobbies","keywords":["paint","draw","doodl","music","write","craft","needle","collect","hobby","photo","cook"]},
+    {"id":"rest","label":"Rest & sensory comfort","keywords":["relax","quiet","sleep","bath","sun","massage","coffee","tea","read","movie","television"]},
+    {"id":"mastery","label":"Mastery & accomplishment","keywords":["work","plan","repair","organize","learn","class","school","career","finish","clean","build","practice"]},
+    {"id":"meaning","label":"Meaning & reflection","keywords":["remember","think","religion","help","volunteer","appreciat","meditat","pray"]}
+  ],
+  "activation_suggestions": [9, 11, 13, 18, 21, 24, 29, 36, 37, 40, 41, 48, 53, 54, 57, 64, 73, 98, 107, 118, 142, 167, 198, 214],
   "events": [
     {
       "id": 1,

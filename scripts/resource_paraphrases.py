@@ -478,9 +478,9 @@ def plain_heading(heading: str) -> str:
 def build_blocks(row: dict[str, str], text: str, structure: dict[str, Any], classification: str, fields: list[dict[str, Any]]) -> list[dict[str, str]]:
     title = row["resource_title"]
     if classification == "informational":
-        purpose = f"This plain-language draft gives an easier-to-scan explanation of {title}. Use it alongside the printable source while the wording is reviewed."
+        purpose = f"This adapted text gives an easier-to-scan explanation of {title}. Use it alongside the printable source while the wording is reviewed."
     else:
-        purpose = f"This plain-language draft helps you work through {title} step by step. Your answers are for your own reflection and can be skipped or revised."
+        purpose = f"This adapted worksheet helps you work through {title} step by step. Your answers are for your own reflection and can be skipped or revised."
     blocks: list[dict[str, str]] = [{"id": f"{row['id']}-b01", "type": "paragraph", "text": purpose}]
     headings = structure["headings"][:8]
     sentences = content_sentences(text)[:8]

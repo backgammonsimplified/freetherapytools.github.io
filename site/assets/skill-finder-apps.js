@@ -233,13 +233,32 @@
       const node = this.nodes.get(this.nodeId);
       const editor = this.root.querySelector("[data-tree-editor]");
       if (node.type === "result") {
-        editor.innerHTML = `<p class="skill-tree-kicker">Source outcome</p><h3>${escapeHtml(node.title)}</h3><p>${escapeHtml(node.body || "")}</p>${this.dynamicResult(node)}${linkCards(node.links)}`;
+        editor.innerHTML = `<p class="skill-tree-kicker">Source outcome</p><h3>${escapeHtml(node.title)}</h3><p>${escapeHtml(node.body || "")}</p>${this.dynamicResult(node)}${node.calendar ? `<details class="skill-tree-calendar"><summary>${escapeHtml(node.calendar.label)}</summary><div data-tree-calendar></div></details>` : ""}${linkCards(node.links)}`;
+        if (node.calendar) this.mountCalendar(editor.querySelector("[data-tree-calendar]"), node);
         return;
       }
       const choices = node.dynamic_choices === "emotions" ? this.context.emotions.map((emotion) => ({ label: emotion.name, value: emotion.id, next: node.next })) : node.choices || [];
-      editor.innerHTML = `<p class="skill-tree-kicker">Current decision</p><h3>${escapeHtml(node.prompt)}</h3>${node.editor === "check-facts" ? this.checkFactsMarkup(node) : ""}<div class="skill-app-choice-grid">${choices.map((choice) => `<button type="button" data-tree-choice data-value="${escapeHtml(choice.value || choice.label)}" data-next="${escapeHtml(choice.next || node.next)}">${escapeHtml(choice.label)}</button>`).join("")}</div>`;
+      const textEditor = node.control === "text" ? `<form data-tree-text><label for="tree-${escapeHtml(node.field)}">${escapeHtml(node.help || "Write only what is useful here.")}</label><textarea id="tree-${escapeHtml(node.field)}" name="answer">${escapeHtml(this.answers[node.field] || "")}</textarea><button type="submit">Continue</button></form>` : "";
+      const information = node.type === "information" ? `<p>${escapeHtml(node.body || "")}</p><button type="button" data-tree-continue>Continue</button>` : "";
+      editor.innerHTML = `<p class="skill-tree-kicker">Current decision</p><h3>${escapeHtml(node.prompt || node.title)}</h3>${node.editor === "check-facts" ? this.checkFactsMarkup(node) : ""}${textEditor}${information}${node.editor === "calendar" ? `<div data-tree-calendar></div><button type="button" data-tree-calendar-continue>Continue</button>` : ""}<div class="skill-app-choice-grid">${choices.map((choice) => `<button type="button" data-tree-choice data-value="${escapeHtml(choice.value || choice.label)}" data-next="${escapeHtml(choice.next || node.next)}">${escapeHtml(choice.label)}</button>`).join("")}</div>`;
       editor.querySelectorAll("[data-tree-fact]").forEach((field) => field.addEventListener("input", () => { this.answers[field.dataset.treeFact] = field.value; }));
       editor.querySelectorAll("[data-tree-choice]").forEach((control) => control.addEventListener("click", () => this.choose(node, control.dataset.value, control.dataset.next)));
+      editor.querySelector("[data-tree-text]")?.addEventListener("submit", (event) => { event.preventDefault(); this.choose(node, event.currentTarget.elements.answer.value, node.next); });
+      editor.querySelector("[data-tree-continue]")?.addEventListener("click", () => this.choose(node, "continue", node.next));
+      if (node.editor === "calendar") {
+        this.mountCalendar(editor.querySelector("[data-tree-calendar]"), node);
+        editor.querySelector("[data-tree-calendar-continue]")?.addEventListener("click", () => this.choose(node, this.answers[node.field] || "", node.next));
+      }
+    }
+
+    mountCalendar(container, node) {
+      const Calendar = global.TherapyCalendar;
+      if (!container || !Calendar) { if (container) container.innerHTML = '<p class="skill-app-note">Calendar controls are unavailable.</p>'; return; }
+      let state;
+      try { state = Calendar.normalizeState(JSON.parse(this.answers[node.field] || "{}")); } catch (_error) { state = Calendar.initialState({ durationMinutes: node.calendar?.duration || "20", recurring: Boolean(node.calendar?.recurring) }); }
+      const title = node.calendar?.title === "action" ? (this.answers.action || "Worry action plan") : node.calendar?.title || "Worry time";
+      Calendar.mountEditor(container, { id: `${this.flow.id}-${node.id}`, state, title, description: node.calendar?.description || this.answers.worry || "", allowRecurrence: node.calendar?.allow_recurrence !== false, onChange: (next) => { this.answers[node.field] = JSON.stringify(next); } });
+      this.answers[node.field] = JSON.stringify(state);
     }
 
     choose(node, value, next) {
@@ -509,8 +528,33 @@
     });
   }
 
+  async function initPleasantEventRedesign(root) {
+    const data = await getJson("pleasant-events.json");
+    const { events, categories = [] } = data;
+    const Calendar = global.TherapyCalendar;
+    let state = { selected: null, query: "", tag: "", custom: "", plan: { smallest: "", support: "", calendar: Calendar.initialState({ durationMinutes: "30" }) } };
+    const categoryFor = (event) => categories.find((category) => category.keywords.some((keyword) => event.title.toLowerCase().includes(keyword)))?.id || "other";
+    function render(focus = false) {
+      const matches = events.filter((event) => (!state.query || event.title.toLowerCase().includes(state.query.toLowerCase())) && (!state.tag || categoryFor(event) === state.tag));
+      const selected = events.find((event) => event.id === state.selected);
+      const activity = state.custom.trim() || selected?.title || "";
+      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Pleasant Event Planner</h2><p>Browse all ${events.length} activities from Emotion Regulation Handout 16, then make a one-time or recurring plan.</p></header><section class="skill-app-panel"><div class="skill-app-inline-fields"><div><label for="pleasant-search">Search activities</label><input id="pleasant-search" type="search" value="${escapeHtml(state.query)}"></div><div><label for="pleasant-category">Category</label><select id="pleasant-category"><option value="">All categories</option>${categories.map((category) => `<option value="${category.id}" ${state.tag === category.id ? "selected" : ""}>${escapeHtml(category.label)}</option>`).join("")}<option value="other" ${state.tag === "other" ? "selected" : ""}>Other source activities</option></select></div></div><p class="skill-app-field-help">Categories are browsing aids derived from the source list; the handout itself presents one numbered list.</p><div class="skill-app-actions"><button type="button" class="secondary" data-surprise>Surprise me</button><span aria-live="polite">${matches.length} activities shown</span></div><div class="pleasant-event-grid">${matches.map((event) => `<button type="button" class="secondary" data-event-id="${event.id}" aria-pressed="${event.id === state.selected}"><span>${event.id}</span>${escapeHtml(event.title)}</button>`).join("")}</div><label for="pleasant-custom">Custom activity</label><input id="pleasant-custom" value="${escapeHtml(state.custom)}" placeholder="Or write my own activity"><section class="skill-app-plan" ${activity ? "" : "hidden"}><h3>Plan: <span data-pleasant-title>${escapeHtml(activity)}</span></h3><label for="pleasant-smallest">Smallest version I could do</label><input id="pleasant-smallest" data-plan="smallest" value="${escapeHtml(state.plan.smallest)}"><label for="pleasant-support">What would help me follow through?</label><input id="pleasant-support" data-plan="support" value="${escapeHtml(state.plan.support)}"><div data-pleasant-calendar></div><p class="skill-app-note">Be mindful of the pleasant moment: gently return attention to what you see, hear, feel, smell, taste, or appreciate.</p>${linkCards([{ label: "Behavioural Activation", href: "/skill-finder/behavioural-activation/", kind: "app" }, { label: "Values", href: "/skill-finder/values/", kind: "app" }])}</section></section><footer class="skill-app-footer"></footer></div>`;
+      root.querySelector("#pleasant-search")?.addEventListener("change", (event) => { state.query = event.target.value; render(); });
+      root.querySelector("#pleasant-category")?.addEventListener("change", (event) => { state.tag = event.target.value; render(); });
+      root.querySelector("[data-surprise]")?.addEventListener("click", () => { const pool = matches.length ? matches : events; state.selected = pool[Math.floor(Math.random() * pool.length)].id; state.custom = ""; render(true); });
+      root.querySelectorAll("[data-event-id]").forEach((button) => button.addEventListener("click", () => { state.selected = Number(button.dataset.eventId); state.custom = ""; render(true); }));
+      root.querySelector("#pleasant-custom")?.addEventListener("change", (event) => { state.custom = event.target.value; if (state.custom.trim()) state.selected = null; render(true); });
+      root.querySelectorAll("[data-plan]").forEach((field) => field.addEventListener("input", () => { state.plan[field.dataset.plan] = field.value; }));
+      if (activity && Calendar) Calendar.mountEditor(root.querySelector("[data-pleasant-calendar]"), { id: "pleasant-event", state: state.plan.calendar, title: activity, description: [state.plan.smallest, state.plan.support].filter(Boolean).join("\n"), allowRecurrence: true });
+      if (focus) root.querySelector(".skill-app-plan")?.scrollIntoView({ block: "nearest" });
+    }
+    function normalize(next) { const plan = { smallest: next?.plan?.smallest || "", support: next?.plan?.support || "", calendar: Calendar.normalizeState(next?.plan?.calendar || { date: String(next?.plan?.when || "").slice(0, 10), startTime: String(next?.plan?.when || "").slice(11, 16), durationMinutes: next?.plan?.duration || "30" }) }; return { selected: next?.selected ?? null, query: next?.query || "", tag: next?.tag || "", custom: next?.custom || "", plan }; }
+    render();
+    if (Progress) Progress.registerTool({ root, toolId: "pleasant-event", toolTitle: "Pleasant Event Planner", route: Progress.TOOL_ROUTES["pleasant-event"], schemaVersion: 1, getState: () => state, setState: (next) => { state = normalize(next); render(); }, validateState: (next) => Progress.isPlainObject(next) && (next.selected === null || Number.isInteger(next.selected)) && typeof next.query === "string" && typeof next.tag === "string" && Progress.isPlainObject(next.plan), getReadableSummary: (next) => { const current = normalize(next); const selected = events.find((event) => event.id === current.selected); return Progress.nonEmptySections("Pleasant Event Planner", [["Pleasant Event", current.custom || selected?.title], ["Smallest Version", current.plan.smallest], ["Support", current.plan.support], ["Calendar", Calendar.calendarCommitmentValid(current.plan.calendar) ? `${current.plan.calendar.date} at ${Calendar.calendarTimeSlots(current.plan.calendar).join(", ")}` : ""]]); } });
+  }
+
   async function start() {
-    const initializers = { thermometer: initThermometer, emotions: initEmotionExplorer, "change-emotion": (root) => initConstrainedFlow(root, "change-emotion"), "worry-tree": (root) => initFlow(root, "worry-tree"), "pleasant-event": initPleasantEvent };
+    const initializers = { thermometer: initThermometer, emotions: initEmotionExplorer, "change-emotion": (root) => initConstrainedFlow(root, "change-emotion"), "worry-tree": (root) => initConstrainedFlow(root, "worry-tree"), "missing-links": (root) => initConstrainedFlow(root, "missing-links"), "pleasant-event": initPleasantEventRedesign };
     for (const root of document.querySelectorAll("[data-skill-app]")) {
       const initializer = initializers[root.dataset.skillApp];
       if (!initializer) continue;

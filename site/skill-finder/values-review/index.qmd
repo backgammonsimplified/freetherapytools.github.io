@@ -8,6 +8,8 @@ toc: false
 
 Use this review as information, not a grade. You can complete it weekly or monthly and choose one realistic next action.
 
+The schedule is optional and stays local until you explicitly download an ICS file or open Google Calendar.
+
 ::: {#values-review-app .skill-app data-practice-app="values-review"}
 Loading Values Review…
 :::

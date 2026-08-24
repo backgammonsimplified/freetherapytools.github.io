@@ -15,6 +15,7 @@ project:
     - assets/bs-learn.js
     - assets/d3-values-force.min.js
     - assets/therapy-force-graph.js
+    - assets/therapy-calendar.js
     - assets/skill-apps.js
     - assets/skill-progress.js
     - assets/resource-paraphrases.js

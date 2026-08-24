@@ -1,29 +1,18 @@
 {
   "id": "worry-tree",
   "title": "Worry Tree",
+  "source": "Understanding Worry and the existing Therapy Skill Kit Worry Tree source",
   "start": "worry",
   "nodes": [
-    {"id": "worry", "type": "question", "control": "text", "prompt": "What am I worrying about?", "field": "worry", "next": "actionable"},
-    {"id": "actionable", "type": "question", "control": "yesno", "prompt": "Can I do something about this?", "choices": [
-      {"label": "Yes — it is a current, actionable problem", "next": "action"},
-      {"label": "No — it is hypothetical or outside my control", "next": "hypothetical"}
-    ]},
-    {"id": "action", "type": "question", "control": "text", "prompt": "What could I do?", "field": "action", "next": "when"},
-    {"id": "when", "type": "question", "control": "choice", "prompt": "When could I do it?", "field": "timing", "choices": [
-      {"label": "Now", "value": "now", "next": "how"},
-      {"label": "Later — I will schedule it", "value": "later", "next": "schedule"}
-    ]},
-    {"id": "schedule", "type": "question", "control": "text", "prompt": "Choose a realistic time or cue.", "field": "schedule", "next": "how"},
-    {"id": "how", "type": "question", "control": "text", "prompt": "How will I take the first step?", "field": "how", "next": "plan-result"},
-    {"id": "plan-result", "type": "result", "title": "Record the plan, then return attention to the present", "summary_fields": ["worry", "action", "timing", "schedule", "how"], "links": [
-      {"label": "Learn Problem Solving", "href": "/learn/emotion-regulation/opposite-action.html#problem-solving", "kind": "learn"},
-      {"label": "Explore Mindfulness", "href": "/mindfulness/", "kind": "learn"}
-    ]},
-    {"id": "hypothetical", "type": "information", "title": "Acknowledge the worry", "body": "Name this as a hypothetical worry or something outside your current control. If useful, set it aside for a chosen worry period, then gently return attention to what is happening now.", "next": "hypothetical-result"},
-    {"id": "hypothetical-result", "type": "result", "title": "Return attention to the present", "links": [
-      {"label": "Explore Grounding and Mindfulness", "href": "/mindfulness/", "kind": "learn"},
-      {"label": "Choose a Distress Skill", "href": "/skill-finder/thermometer/", "kind": "app"},
-      {"label": "Learn About Worry", "href": "/learn/cbt-anxiety/understanding-worry.html", "kind": "learn"}
-    ]}
+    {"id":"worry","type":"question","control":"text","prompt":"What am I worrying about?","help":"Name the worry briefly. This stays on your device.","field":"worry","next":"actionable","level":0,"lane":0},
+    {"id":"actionable","type":"question","control":"yesno","prompt":"Can I do something about this?","field":"worry-type","level":1,"lane":0,"choices":[{"label":"Yes","value":"actionable","next":"action"},{"label":"No","value":"hypothetical","next":"acknowledge"}]},
+    {"id":"action","type":"question","control":"text","prompt":"What can I do?","help":"Describe a specific action that is within your control.","field":"action","next":"when","level":2,"lane":-1.5},
+    {"id":"when","type":"question","control":"choice","prompt":"When can I do it?","field":"timing","level":3,"lane":-1.5,"choices":[{"label":"Now","value":"now","next":"how-now"},{"label":"Later","value":"later","next":"schedule-action"}]},
+    {"id":"how-now","type":"question","control":"text","prompt":"How will I begin now?","help":"Choose the first small, observable step.","field":"how","next":"plan-result","level":4,"lane":-2.2},
+    {"id":"schedule-action","type":"question","editor":"calendar","prompt":"Schedule the action","field":"schedule","calendar":{"title":"action","duration":"30","allow_recurrence":true},"next":"how-later","level":4,"lane":-0.8},
+    {"id":"how-later","type":"question","control":"text","prompt":"How will I begin when the time comes?","help":"Choose the first small, observable step.","field":"how","next":"plan-result","level":5,"lane":-0.8},
+    {"id":"plan-result","type":"result","title":"Follow the plan, then return attention to the present","body":"Record the plan and gently bring attention back to what is happening now.","summary_fields":["worry","action","timing","schedule","how"],"level":6,"lane":-1.5,"links":[{"label":"Problem Solving","href":"/learn/emotion-regulation/opposite-action.html#problem-solving","kind":"learn"},{"label":"Mindfulness","href":"/mindfulness/","kind":"learn"},{"label":"Grounding","href":"/learn/mindfulness/grounding.html","kind":"learn"}]},
+    {"id":"acknowledge","type":"information","title":"Acknowledge the worry","body":"Name this as a hypothetical worry or something outside your current control. You do not have to solve it right now.","next":"hypothetical-result","level":2,"lane":1.5},
+    {"id":"hypothetical-result","type":"result","title":"Return attention to the present","body":"If it would help, schedule a contained worry period. Otherwise, gently redirect attention to the present.","level":3,"lane":1.5,"calendar":{"label":"Schedule worry time (optional)","title":"Worry time","duration":"20","allow_recurrence":true},"field":"worry-time","links":[{"label":"Worry Time","href":"/learn/cbt-anxiety/understanding-worry.html#worry-time","kind":"learn"},{"label":"Understanding Worry","href":"/learn/cbt-anxiety/understanding-worry.html","kind":"learn"},{"label":"Mindfulness of Thoughts","href":"/mindfulness/","kind":"learn"},{"label":"Grounding","href":"/learn/mindfulness/grounding.html","kind":"learn"},{"label":"Skill Thermometer","href":"/skill-finder/thermometer/","kind":"app"}]}
   ]
 }
