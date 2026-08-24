@@ -1,0 +1,40 @@
+---
+title: "Fear"
+description: "Source-backed words, prompting events, body changes, urges, and effective responses for fear."
+sidebar: learn
+learn-track: emotion-regulation
+categories: [Beginner]
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+---
+
+Fear can arise in response to a threat to your life, health, or well-being, or to that of someone you care about.
+
+## Words describing fear
+
+Anxiety, apprehension, dread, edginess, fright, horror, hysteria, jumpiness, nervousness, overwhelm, panic, shock, tenseness, terror, uneasiness, and worry.
+
+## Prompting events and interpretations
+
+Events can include danger, earlier threat cues, unfamiliar situations, darkness, being alone, public performance, or possible failure. Interpretations may predict harm, rejection, embarrassment, loss, helplessness, incompetence, or inability to cope.
+
+## Body changes, expressions, and action urges
+
+Breathing and heart rate may change; muscles tense; the stomach may feel knotted; you may sweat, shake, feel cold, freeze, scan, seek help, hide, flee, or avoid.
+
+## Aftereffects
+
+Threat cues may remain vivid and the body activated. Relief after escape can reinforce future avoidance.
+
+## When fear fits the facts
+
+Fear fits when there is a threat to life, health, or well-being. If danger is near, protect yourself; if it is not, check the probability and available coping resources.
+
+## Acting on the urge, Opposite Action, and Checking the Facts
+
+When danger is real, freeze or run if needed, remove the threat, and do what gives you control. When fear does not fit, approach what is safe, take in information, use a confident posture and voice, and practise paced breathing.
+
+[Use Emotion Explorer](/skill-finder/emotions/) · [Change an Emotion](/skill-finder/change-emotion/) · [Check the Facts](/learn/emotion-regulation/check-the-facts.html) · [Opposite Action](/learn/emotion-regulation/opposite-action.html#opposite-action) · [Mindfulness of Current Emotions](/learn/emotion-regulation/observing-describing-emotions.html)
+
+[Printable source: Emotion Regulation Handout 6 - Fear](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-fear-clean.pdf) · [Printable source: Handout 11 - Fear](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-fear-clean.pdf)

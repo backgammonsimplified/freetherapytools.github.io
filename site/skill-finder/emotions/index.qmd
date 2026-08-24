@@ -8,7 +8,7 @@ execute:
   enabled: false
 ---
 
-Emotions can carry information, but no list can decide what you feel. Use the wheel or the accessible list to explore what fits your own experience.
+Emotions can carry information, but no graph can decide what you feel. Explore the source-listed emotion families and descriptive words that fit your own experience.
 
 ::: {#emotion-explorer-app .skill-app data-skill-app="emotions"}
 Loading Emotion Explorer…

@@ -1,0 +1,40 @@
+---
+title: "Shame"
+description: "Source-backed words, prompting events, body changes, urges, and effective responses for shame."
+sidebar: learn
+learn-track: emotion-regulation
+categories: [Beginner]
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+---
+
+Shame can arise when you expect rejection if a characteristic of yourself or your behaviour becomes public; it often includes a global judgment about the self.
+
+## Words describing shame
+
+Contrition, culpability, discomposure, embarrassment, humiliation, mortification, self-consciousness, and shyness.
+
+## Prompting events and interpretations
+
+Events include rejection, criticism, exposure, betrayal, failure, invalidation, remembered wrongdoing, or comparison with a standard. Interpretations may label the whole self inferior, bad, immoral, defective, unlovable, or outside the group.
+
+## Body changes, expressions, and action urges
+
+Stomach pain, dread, shrinking, hiding the face or body, avoiding eye contact, lowered posture, halted speech, repeated apologies, appeasing, withdrawing, or disappearing from contact may occur.
+
+## Aftereffects
+
+Self-focus, blocking emotion, impulsive distraction, numbness, isolation, conflict, reduced problem-solving, or attacking yourself or others can follow.
+
+## When shame fits the facts
+
+Shame fits when disclosure of a characteristic or behaviour would lead to rejection by a person or group you care about. Check whether the group and its standards also fit your Wise Mind values.
+
+## Acting on the urge, Opposite Action, and Checking the Facts
+
+When a behaviour violated your values, repair it and change the behaviour without condemning your entire self. When shame does not fit, share safely with accepting people, stop unnecessary apologies, take in all information, lift your head, and use a steady voice.
+
+[Use Emotion Explorer](/skill-finder/emotions/) · [Change an Emotion](/skill-finder/change-emotion/) · [Check the Facts](/learn/emotion-regulation/check-the-facts.html) · [Opposite Action](/learn/emotion-regulation/opposite-action.html#opposite-action) · [Mindfulness of Current Emotions](/learn/emotion-regulation/observing-describing-emotions.html)
+
+[Printable source: Emotion Regulation Handout 6 - Shame](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-shame-clean.pdf) · [Printable source: Handout 11 - Shame](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-shame-clean.pdf)

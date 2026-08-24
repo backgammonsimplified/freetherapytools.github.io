@@ -4,6 +4,10 @@
     {
       "id": "anger",
       "name": "Anger",
+      "color": "#a94843",
+      "definition": "Anger can arise when an important goal is blocked, when you or someone you care about is attacked or threatened, or when power, status, or respect is lost.",
+      "learn_route": "/learn/emotion-regulation/emotions/anger.html",
+      "fit_facts": ["An important goal is blocked or a desired activity is interrupted or prevented.", "You or someone you care about is attacked, hurt, insulted, or threatened.", "The integrity or status of your social group is offended or threatened."],
       "related_words": [
         "aggravation",
         "agitation",
@@ -63,6 +67,10 @@
     {
       "id": "disgust",
       "name": "Disgust",
+      "color": "#6f7138",
+      "definition": "Disgust can arise around possible contamination or around people and actions judged as deeply harmful or violating Wise Mind values.",
+      "learn_route": "/learn/emotion-regulation/emotions/disgust.html",
+      "fit_facts": ["Something you are in contact with could poison or contaminate you.", "A person's behaviour could seriously damage or harm you or a group you belong to."],
       "related_words": [
         "abhorrence",
         "antipathy",
@@ -123,6 +131,10 @@
     {
       "id": "envy",
       "name": "Envy",
+      "color": "#31806f",
+      "definition": "Envy can arise when another person or group has something you want or need and do not have.",
+      "learn_route": "/learn/emotion-regulation/emotions/envy.html",
+      "fit_facts": ["Another person or group gets or has something you want or need and do not have."],
       "related_words": [
         "bitterness",
         "covetous",
@@ -175,6 +187,10 @@
     {
       "id": "fear",
       "name": "Fear",
+      "color": "#b46627",
+      "definition": "Fear can arise in response to a threat to your life, health, or well-being, or to that of someone you care about.",
+      "learn_route": "/learn/emotion-regulation/emotions/fear.html",
+      "fit_facts": ["There is a threat to your life or the life of someone you care about.", "There is a threat to your health or well-being, or to that of someone you care about."],
       "related_words": [
         "anxiety",
         "apprehension",
@@ -231,6 +247,10 @@
     {
       "id": "happiness",
       "name": "Happiness",
+      "color": "#b78a1e",
+      "definition": "Happiness can arise when something wanted or unexpectedly good happens, a goal is achieved, connection is felt, or a pleasant experience is noticed.",
+      "learn_route": "/learn/emotion-regulation/emotions/happiness.html",
+      "fit_facts": ["A wanted or unexpectedly good event occurs, a goal is achieved, or a pleasant connection or sensation is present."],
       "related_words": [
         "bliss",
         "contentment",
@@ -284,6 +304,10 @@
     {
       "id": "jealousy",
       "name": "Jealousy",
+      "color": "#9a3f78",
+      "definition": "Jealousy can arise when a valued relationship or object is in danger of being damaged or lost, especially when a rival seems involved.",
+      "learn_route": "/learn/emotion-regulation/emotions/jealousy.html",
+      "fit_facts": ["A very important and desired relationship or object is in danger of being damaged or lost.", "Someone is threatening to take a valued relationship or object away from you."],
       "related_words": [
         "cautious",
         "clinging",
@@ -336,6 +360,10 @@
     {
       "id": "love",
       "name": "Love",
+      "color": "#b84f69",
+      "definition": "Love can arise through affection, attraction, care, closeness, shared experience, or seeing a person, animal, object, place, or cause as deeply valuable.",
+      "learn_route": "/learn/emotion-regulation/emotions/love.html",
+      "fit_facts": ["Loving a person, animal, or object enhances quality of life for you or people you care about.", "Loving increases your chances of attaining personal goals."],
       "related_words": [
         "adoration",
         "affection",
@@ -392,6 +420,10 @@
     {
       "id": "sadness",
       "name": "Sadness",
+      "color": "#3f6f9a",
+      "definition": "Sadness can arise after an irreversible loss, separation, rejection, or when events are not what you wanted or expected.",
+      "learn_route": "/learn/emotion-regulation/emotions/sadness.html",
+      "fit_facts": ["You have lost something or someone permanently.", "Things are not what you wanted or expected and hoped them to be."],
       "related_words": [
         "alienation",
         "alone",
@@ -454,6 +486,10 @@
     {
       "id": "shame",
       "name": "Shame",
+      "color": "#765184",
+      "definition": "Shame can arise when you expect rejection if a characteristic of yourself or your behaviour becomes public; it often includes a global judgment about the self.",
+      "learn_route": "/learn/emotion-regulation/emotions/shame.html",
+      "fit_facts": ["You will be rejected by a person or group you care about if characteristics of yourself or your behaviour are made public."],
       "related_words": [
         "contrition",
         "culpability",
@@ -499,6 +535,10 @@
     {
       "id": "guilt",
       "name": "Guilt",
+      "color": "#594b8d",
+      "definition": "Guilt can arise when your own behaviour violates your values or moral code; unlike shame's global self-judgment, guilt focuses on an action that may call for repair.",
+      "learn_route": "/learn/emotion-regulation/emotions/guilt.html",
+      "fit_facts": ["Your own behaviour violates your own values or moral code."],
       "related_words": [
         "apologetic",
         "culpability",

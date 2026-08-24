@@ -1,0 +1,40 @@
+---
+title: "Sadness"
+description: "Source-backed words, prompting events, body changes, urges, and effective responses for sadness."
+sidebar: learn
+learn-track: emotion-regulation
+categories: [Beginner]
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+---
+
+Sadness can arise after an irreversible loss, separation, rejection, or when events are not what you wanted or expected.
+
+## Words describing sadness
+
+Agony, alienation, anguish, disappointment, disconnection, despair, distress, grief, homesickness, hurt, insecurity, loneliness, melancholy, misery, neglect, rejection, sorrow, suffering, unhappiness, and woe.
+
+## Prompting events and interpretations
+
+Events include death or permanent loss, separation, not getting what was wanted, rejection, isolation, helplessness, or another person's suffering. Interpretations may predict that separation will not end, needs will not be met, life is hopeless, or you are worthless.
+
+## Body changes, expressions, and action urges
+
+Low energy, heaviness, tears, chest or gut pain, difficulty swallowing, dizziness, lethargy, or breathlessness can occur. Actions and urges include crying, slowing down, withdrawing, avoiding, staying in bed, giving up, or speaking quietly.
+
+## Aftereffects
+
+Happy events may be hard to remember; irritation, yearning, negative outlook, self-blame, rumination, insomnia, or appetite changes can follow.
+
+## When sadness fits the facts
+
+Sadness fits when someone or something has been lost permanently, or events are not what you wanted and hoped they would be.
+
+## Acting on the urge, Opposite Action, and Checking the Facts
+
+When sadness fits, grieve, seek support, accept what cannot be changed, and problem-solve what can. When it does not fit or withdrawal is ineffective, get active, approach, avoid avoiding, build mastery, increase pleasant events, and attend to the present.
+
+[Use Emotion Explorer](/skill-finder/emotions/) · [Change an Emotion](/skill-finder/change-emotion/) · [Check the Facts](/learn/emotion-regulation/check-the-facts.html) · [Opposite Action](/learn/emotion-regulation/opposite-action.html#opposite-action) · [Mindfulness of Current Emotions](/learn/emotion-regulation/observing-describing-emotions.html)
+
+[Printable source: Emotion Regulation Handout 6 - Sadness](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-sadness-clean.pdf) · [Printable source: Handout 11 - Sadness](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-sadness-clean.pdf)

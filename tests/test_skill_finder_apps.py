@@ -97,16 +97,38 @@ class SkillFinderAppTests(unittest.TestCase):
         self.assertTrue(all(all(skill.get(key) for key in ("category", "summary", "best_for", "href")) for zone in thermometer["zones"] for skill in zone["skills"]))
         emotions = load("emotions.json")["emotions"]
         self.assertEqual([item["name"] for item in emotions], ["Anger", "Disgust", "Envy", "Fear", "Happiness", "Jealousy", "Love", "Sadness", "Shame", "Guilt"])
-        self.assertTrue(all(item["related_words"] and item["body_changes"] and item["source_reference"] for item in emotions))
+        self.assertTrue(all(item["related_words"] and item["body_changes"] and item["source_reference"] and item["definition"] and item["color"] and item["learn_route"] and item["fit_facts"] for item in emotions))
         source = (SITE / "assets" / "skill-finder-apps.js").read_text(encoding="utf-8")
         css = (SITE / "assets" / "skill-apps.css").read_text(encoding="utf-8")
         for token in ("skill-thermometer-recommendations", "skill-thermometer-skill-grid", "aria-expanded", "Best fit:"):
             self.assertIn(token, source)
         for token in ("skill-thermometer-zone--overload", "skill-thermometer-zone--distressed-wise-mind", "skill-thermometer-zone--wise-mind", "skill-thermometer-zone--numbness"):
             self.assertIn(token, css)
-        self.assertIn("Clickable body region map", source)
-        self.assertIn("Body region checklist", source)
-        self.assertIn("Accessible emotion list", source)
+        for token in ("createForceViewport", "emotion-force-map", "emotion-node-toggle-badge", "emotion-selected-words", "Explore this emotion", "Full screen", "change-emotion-handoff"):
+            self.assertIn(token, source)
+        self.assertNotIn("?emotion=", source)
+
+    def test_ten_source_backed_emotion_pages_exist(self):
+        emotions = load("emotions.json")["emotions"]
+        self.assertEqual(10, len(emotions))
+        for emotion in emotions:
+            page = SITE / "learn" / "emotion-regulation" / "emotions" / f"{emotion['id']}.qmd"
+            self.assertTrue(page.is_file(), page)
+            text = page.read_text(encoding="utf-8")
+            for heading in ("Words describing", "Prompting events and interpretations", "Body changes, expressions, and action urges", "Aftereffects", "When", "Check the Facts"):
+                self.assertIn(heading, text, page)
+            self.assertIn("/skill-finder/emotions/", text)
+            self.assertIn("/skill-finder/change-emotion/", text)
+            self.assertIn("emotion-regulation-handout-6", text)
+
+    def test_change_emotion_uses_handout_9_tree_and_local_check_facts_editor(self):
+        flow = load("flows/change-emotion.json")
+        nodes = {node["id"]: node for node in flow["nodes"]}
+        self.assertEqual({choice["next"] for choice in nodes["fits-facts"]["choices"]}, {"effective-fit", "effective-no-fit"})
+        self.assertEqual({"mindful-act-problem-solve", "opposite-action-fit", "change-thoughts-opposite", "mindful-act-reconsider"}, {node["id"] for node in flow["nodes"] if node["type"] == "result"})
+        source = (SITE / "assets" / "skill-finder-apps.js").read_text(encoding="utf-8")
+        for token in ("ConstrainedTreeEngine", "createConstrainedTreeViewport", "facts-event", "facts-interpretations", "facts-threat", "facts-catastrophe", "Handout 8A examples", "tree-chosen", "tree-future"):
+            self.assertIn(token, source)
 
     def test_pleasant_events_and_privacy(self):
         events = load("pleasant-events.json")["events"]

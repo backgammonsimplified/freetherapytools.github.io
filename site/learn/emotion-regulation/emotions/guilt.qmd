@@ -1,0 +1,40 @@
+---
+title: "Guilt"
+description: "Source-backed words, prompting events, body changes, urges, and effective responses for guilt."
+sidebar: learn
+learn-track: emotion-regulation
+categories: [Beginner]
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+---
+
+Guilt can arise when your own behaviour violates your values or moral code. Unlike shame's global self-judgment, guilt focuses on an action that may call for repair.
+
+## Words describing guilt
+
+Apologetic, culpability, remorse, regret, and feeling sorry.
+
+## Prompting events and interpretations
+
+Events include doing something you believe is wrong, violating values, breaking a commitment, or causing harm to yourself or another person. Interpretations focus on responsibility, blame for an outcome, behaving badly, or wishing you had acted differently.
+
+## Body changes, expressions, and action urges
+
+A hot or red face, jitteriness, nervousness, or restricted breathing may occur. Urges and actions include apologizing, confessing, asking forgiveness, repairing harm, making amends, giving things up, or changing behaviour.
+
+## Aftereffects
+
+Guilt can lead to resolutions, changed behaviour, repair, or seeking help. When ineffective it can become rumination, avoidance, or self-punishment.
+
+## When guilt fits the facts
+
+Guilt fits when your own behaviour violates your own values or moral code. The focus is the behaviour and its consequences, not a conclusion that your whole self is bad.
+
+## Acting on the urge, Opposite Action, and Checking the Facts
+
+When guilt fits, acknowledge the action, repair what can be repaired, commit to change, and then let the guilt go. When it does not fit, stop unnecessary apologies or repair attempts, take in all information, and use an upright posture and steady voice.
+
+[Use Emotion Explorer](/skill-finder/emotions/) · [Change an Emotion](/skill-finder/change-emotion/) · [Check the Facts](/learn/emotion-regulation/check-the-facts.html) · [Opposite Action](/learn/emotion-regulation/opposite-action.html#opposite-action) · [Mindfulness of Current Emotions](/learn/emotion-regulation/observing-describing-emotions.html)
+
+[Printable source: Emotion Regulation Handout 6 - Guilt](/resources/clean/emotion-regulation/emotion-regulation-handout-6-ways-to-describe-emotions-guilt-clean.pdf) · [Printable source: Handout 11 - Guilt](/resources/clean/emotion-regulation/emotion-regulation-handout-11-figuring-out-opposite-actions-guilt-clean.pdf)
