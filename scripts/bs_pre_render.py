@@ -22,6 +22,7 @@ except ModuleNotFoundError:  # Imported as scripts.bs_pre_render in tests.
 REPO_ROOT = Path(__file__).resolve().parents[1]
 FULL_BUILD_MARKER = REPO_ROOT / "site" / "_site" / ".bs-full-build.json"
 SKIP_SOCIAL_ENV = "BS_SKIP_SOCIAL_CARDS"
+RESOURCE_REVIEW_ENV = "TSK_RESOURCE_REVIEW"
 
 
 def run(command: list[str]) -> None:
@@ -47,6 +48,24 @@ def main() -> int:
 
     if invalidate_full_build_marker():
         print("Invalidated the previous full-build completion marker.")
+
+    print("Generating changed approved resource worksheet exports.")
+    run(
+        [
+            sys.executable,
+            str(REPO_ROOT / "scripts" / "generate-resource-exports.py"),
+            "--changed",
+        ]
+    )
+
+    print("Building publication-gated resource paraphrase assets.")
+    resource_command = [
+        sys.executable,
+        str(REPO_ROOT / "scripts" / "build-resource-paraphrase-assets.py"),
+    ]
+    if os.getenv(RESOURCE_REVIEW_ENV) == "1":
+        resource_command.append("--review")
+    run(resource_command)
 
     # Quarto sets this to "1" only when rendering the complete project.
     if os.getenv("QUARTO_PROJECT_RENDER_ALL") != "1":

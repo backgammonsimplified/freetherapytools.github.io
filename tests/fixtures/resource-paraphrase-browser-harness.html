@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resource Paraphrase Browser Harness</title>
+  <link rel="stylesheet" href="/assets/resource-paraphrases.css">
+  <style>
+    body { max-width: 1200px; margin: 0 auto; padding: 1rem; font-family: Arial, sans-serif; color: #172033; }
+    button, .btn { display: inline-block; min-height: 42px; padding: .5rem .75rem; border: 1px solid #315c85; border-radius: .4rem; background: #fff; color: #14395c; }
+    .bs-practice-resource { margin: 1rem 0; padding: 1rem; border: 1px solid #ccd2da; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Resource paraphrase QA</h1>
+    <section aria-labelledby="pane-heading">
+      <h2 id="pane-heading">Representative resource panes</h2>
+      <article class="bs-practice-resource" data-source-id="distress-tolerance-p016"><h3>TIPP worksheet</h3></article>
+      <article class="bs-practice-resource" data-source-id="wellness-p018"><h3>Informational page</h3></article>
+      <article class="bs-practice-resource" data-source-id="wellness-p020"><h3>Table worksheet</h3></article>
+    </section>
+    <hr>
+    <section aria-labelledby="review-heading">
+      <h2 id="review-heading">Review dashboard</h2>
+      <div id="resource-paraphrase-review-app" class="bs-paraphrase-review-app" aria-live="polite">Loading...</div>
+    </section>
+  </main>
+  <script src="/assets/skill-progress.js"></script>
+  <script src="/assets/resource-paraphrases.js"></script>
+  <script src="/assets/resource-paraphrase-review.js"></script>
+</body>
+</html>
