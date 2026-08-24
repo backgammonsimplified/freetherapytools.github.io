@@ -231,16 +231,16 @@
   function renderGuidance(baseGuidance, record, root) {
     if (!record.guidance?.enabled) return null;
     const details = element("details", { className: "bs-guided-reflection" });
-    details.append(element("summary", { text: "Guided reflection with an AI assistant" }));
+    details.append(element("summary", { text: "Guided reflection prompt" }));
     const body = element("div");
     body.append(element("p", { text: "This creates a prompt you can choose to paste into an AI assistant. Nothing is sent automatically." }));
     const privacy = element("p", { className: "bs-guidance-privacy", text: "Including responses will place your current worksheet responses on your clipboard so you can choose where to paste them." });
     const status = element("p", { attrs: { role: "status", "aria-live": "polite" } });
     const actions = element("div", { className: "bs-guidance-actions" });
-    const copyGuide = element("button", { type: "button", className: "btn btn-outline-primary", text: "Copy guide prompt" });
-    const copyAnswers = element("button", { type: "button", className: "btn btn-outline-secondary", text: "Copy guide prompt + my responses" });
-    copyGuide.addEventListener("click", async () => { await copyText(promptText(baseGuidance, record)); status.textContent = "Guide prompt copied. Nothing was sent."; });
-    copyAnswers.addEventListener("click", async () => { await copyText(promptText(baseGuidance, record, getAnswers(record, root))); status.textContent = "Guide prompt and current responses copied. Nothing was sent."; });
+    const copyGuide = element("button", { type: "button", className: "btn btn-outline-primary", text: "Copy guided reflection prompt" });
+    const copyAnswers = element("button", { type: "button", className: "btn btn-outline-secondary", text: "Copy prompt + my responses" });
+    copyGuide.addEventListener("click", async () => { await copyText(promptText(baseGuidance, record)); status.textContent = "Guided reflection prompt copied. Nothing was sent."; });
+    copyAnswers.addEventListener("click", async () => { await copyText(promptText(baseGuidance, record, getAnswers(record, root))); status.textContent = "Prompt and current responses copied. Nothing was sent."; });
     actions.append(copyGuide, copyAnswers);
     body.append(privacy, actions, status);
     details.append(body);
@@ -301,8 +301,8 @@
 
   function renderDownloads(record) {
     const area = element("div", { className: "bs-worksheet-actions" });
-    const pdf = element("a", { className: "btn btn-outline-primary", text: "Download blank worksheet (PDF)", attrs: { href: record.export.pdf, download: "" } });
-    const docx = element("a", { className: "btn btn-outline-primary", text: "Download blank worksheet (DOCX)", attrs: { href: record.export.docx, download: "" } });
+    const pdf = element("a", { className: "btn btn-outline-primary", text: "Download worksheet (PDF)", attrs: { href: record.export.pdf, download: "" } });
+    const docx = element("a", { className: "btn btn-outline-primary", text: "Download worksheet (DOCX)", attrs: { href: record.export.docx, download: "" } });
     area.append(pdf, docx);
     return area;
   }
@@ -311,14 +311,14 @@
     const card = document.querySelector(`.bs-practice-resource[data-source-id="${CSS.escape(record.resource_id)}"]`);
     if (!card || card.querySelector(".bs-resource-paraphrase")) return;
     const details = element("details", { className: "bs-resource-paraphrase", attrs: { "data-resource-id": record.resource_id } });
-    const label = review && !["approved", "published"].includes(record.status) ? "Paraphrased draft" : "Plain-language version";
+    const label = review && !["approved", "published"].includes(record.status) ? "Adapted version" : "Text version";
     const summary = element("summary", { text: label });
     if (review) summary.append(element("span", { className: "bs-resource-draft-badge", text: record.status.replace("-", " ") }));
     details.append(summary);
     const body = element("div", { className: "bs-resource-paraphrase-body" });
     renderBlocks(record, body);
     const source = element("p");
-    source.append(element("a", { text: "View printable source", attrs: { href: record.source.printable_asset } }));
+    source.append(element("a", { text: "Printable source", attrs: { href: record.source.printable_asset } }));
     body.append(source);
     if (record.specialized_tool) {
       const handoff = element("p", { className: "bs-specialized-tool-handoff" });

@@ -150,17 +150,43 @@ class ResourceParaphraseCorpusTests(unittest.TestCase):
     def test_quarto_copies_all_runtime_assets(self):
         quarto = (SITE / "_quarto.yml").read_text(encoding="utf-8")
         scripts = (SITE / "includes/bs-scripts.html").read_text(encoding="utf-8")
-        for token in ("data/resource-paraphrases/**", "assets/paraphrased-resources/**", "assets/resource-paraphrases.js", "assets/resource-paraphrase-review.js", "assets/resource-paraphrases.css"):
+        for token in ("data/resource-paraphrases/**", "assets/paraphrased-resources/**", "assets/resource-paraphrases.js", "assets/resource-review-app.js", "assets/resource-review-app.css", "assets/resource-paraphrases.css"):
             self.assertIn(token, quarto)
         self.assertLess(scripts.index("skill-progress.js"), scripts.index("resource-paraphrases.js"))
 
     def test_privacy_and_review_mode_contract_is_visible_in_runtime(self):
         runtime = (SITE / "assets/resource-paraphrases.js").read_text(encoding="utf-8")
-        for label in ("Nothing is sent automatically", "Copy guide prompt", "Copy guide prompt + my responses", "Save progress (.md)"):
+        for label in ("Nothing is sent automatically", "Copy guided reflection prompt", "Copy prompt + my responses", "Save progress (.md)"):
             self.assertIn(label, runtime + (SITE / "assets/skill-progress.js").read_text(encoding="utf-8"))
         self.assertNotIn("sendBeacon", runtime)
         self.assertNotIn("XMLHttpRequest", runtime)
         self.assertNotRegex(runtime, r"answers.*location\.(?:search|href)")
+
+    def test_review_route_uses_dedicated_full_viewport_authoring_shell(self):
+        qmd = (SITE / "review/resource-paraphrases.qmd").read_text(encoding="utf-8")
+        css = (SITE / "assets/resource-review-app.css").read_text(encoding="utf-8")
+        runtime = (SITE / "assets/resource-review-app.js").read_text(encoding="utf-8")
+        self.assertIn("resource-review-app.css", qmd)
+        self.assertIn("resource-review-app.js", qmd)
+        self.assertIn(".tsk-review-app", css)
+        self.assertIn("height: 100dvh", css)
+        self.assertIn(".bs-resource-review-page > .navbar", css)
+        self.assertIn("grid-template-columns", css)
+        for label in (
+            "Resource queue", "Source page", "Extracted text", "Adapted version",
+            "Worksheet", "Guided reflection", "Metadata / QA", "Approve & next",
+            "Needs changes & next", "Export review JSON",
+        ):
+            self.assertIn(label, runtime)
+        self.assertNotIn("Plain-language draft", runtime)
+        self.assertNotIn("LLM prompt", runtime)
+
+    def test_public_resource_copy_uses_concise_labels(self):
+        runtime = (SITE / "assets/resource-paraphrases.js").read_text(encoding="utf-8")
+        for label in ("Text version", "Interactive worksheet", "Printable source", "Download worksheet (PDF)", "Download worksheet (DOCX)"):
+            self.assertIn(label, runtime)
+        for deprecated in ("Plain-language version", "Paraphrased draft", "Generated interactive worksheet", "LLM prompt"):
+            self.assertNotIn(deprecated, runtime)
 
 
 class ResourceParaphraseJavaScriptTests(unittest.TestCase):

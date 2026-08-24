@@ -18,7 +18,8 @@ project:
     - assets/skill-apps.js
     - assets/skill-progress.js
     - assets/resource-paraphrases.js
-    - assets/resource-paraphrase-review.js
+    - assets/resource-review-app.js
+    - assets/resource-review-app.css
     - assets/resource-paraphrases.css
     - "assets/paraphrased-resources/**"
     - assets/skill-handoff.js

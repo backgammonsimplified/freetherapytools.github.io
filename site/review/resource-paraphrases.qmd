@@ -1,22 +1,23 @@
 ---
-title: "Resource Paraphrase Review"
-description: "Local author review for plain-language resource drafts, worksheet fields, and guided-reflection prompts."
+title: "Resource Review"
+description: "Local author review for source-backed adapted text, worksheets, and guided reflection prompts."
 toc: false
 search: false
 robots: "noindex, nofollow"
 page-layout: full
 body-classes: bs-resource-review-page
+title-block-banner: false
 format:
   html:
+    css: ../assets/resource-review-app.css
     include-in-header:
       text: |
         <meta name="robots" content="noindex, nofollow">
+    include-after-body:
+      text: |
+        <script src="/assets/resource-review-app.js?v=20260823-author-workspace" defer></script>
 ---
 
-This development-only dashboard compares the retained source, extracted text, paraphrased draft, interactive fields, and guided-reflection prompt without publishing drafts.
-
-::: {#resource-paraphrase-review-app .bs-paraphrase-review-app aria-live="polite"}
+::: {#resource-paraphrase-review-app .tsk-review-app aria-live="polite"}
 Loading the local review corpus...
 :::
-
-To build this dashboard locally, set `TSK_RESOURCE_REVIEW=1` before rendering. The normal production build omits the draft review data asset.
