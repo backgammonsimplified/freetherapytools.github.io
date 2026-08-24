@@ -94,10 +94,16 @@ class SkillFinderAppTests(unittest.TestCase):
         thermometer = load("thermometer.json")
         self.assertEqual([zone["id"] for zone in thermometer["zones"]], ["overload", "distressed-wise-mind", "wise-mind", "numbness"])
         self.assertTrue(all(zone["skills"] for zone in thermometer["zones"]))
+        self.assertTrue(all(all(skill.get(key) for key in ("category", "summary", "best_for", "href")) for zone in thermometer["zones"] for skill in zone["skills"]))
         emotions = load("emotions.json")["emotions"]
         self.assertEqual([item["name"] for item in emotions], ["Anger", "Disgust", "Envy", "Fear", "Happiness", "Jealousy", "Love", "Sadness", "Shame", "Guilt"])
         self.assertTrue(all(item["related_words"] and item["body_changes"] and item["source_reference"] for item in emotions))
         source = (SITE / "assets" / "skill-finder-apps.js").read_text(encoding="utf-8")
+        css = (SITE / "assets" / "skill-apps.css").read_text(encoding="utf-8")
+        for token in ("skill-thermometer-recommendations", "skill-thermometer-skill-grid", "aria-expanded", "Best fit:"):
+            self.assertIn(token, source)
+        for token in ("skill-thermometer-zone--overload", "skill-thermometer-zone--distressed-wise-mind", "skill-thermometer-zone--wise-mind", "skill-thermometer-zone--numbness"):
+            self.assertIn(token, css)
         self.assertIn("Clickable body region map", source)
         self.assertIn("Body region checklist", source)
         self.assertIn("Accessible emotion list", source)

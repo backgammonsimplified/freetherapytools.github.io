@@ -711,6 +711,7 @@
         <button type="button" class="secondary" data-graph-action="zoom-in" aria-label="Zoom in">+</button>
         <button type="button" class="secondary" data-graph-action="fit">Fit</button>
         <button type="button" class="secondary" data-graph-action="reset">Reset</button>
+        <button type="button" class="secondary" data-graph-action="fullscreen" aria-pressed="false">Full screen</button>
       </div>
       <div class="values-map-viewport" data-force-viewport>
         <div class="values-map-canvas" data-force-canvas>
@@ -720,6 +721,7 @@
         </div>
         <p class="visually-hidden" aria-live="polite" data-force-status>Showing You and all selected life domains. No Value nodes are visible.</p>
       </div>
+      <aside class="values-map-action-panel" data-values-map-action-panel aria-live="polite" hidden></aside>
       <div class="visually-hidden" data-values-map-fallback>
         <p>You. You connects to all selected life domains. Each domain lists its Relative Priority and every assigned Value with its importance.</p>
         <ul>${domainFallback}</ul>
@@ -727,7 +729,7 @@
     </section>`;
   }
 
-  function initMissionGraph(root, data, state, expandedDomains) {
+  function initMissionGraph(root, data, actionData, state, expandedDomains, callbacks = {}) {
     const container = root.querySelector("[data-force-viewport]");
     if (!container || !global.TherapyForceGraph) return null;
     const map = missionMapData(data, state);
@@ -735,6 +737,82 @@
     const selectedDomainIds = new Set(map.domains.map((domain) => domain.id));
     [...expandedDomains].forEach((domainId) => { if (!selectedDomainIds.has(domainId)) expandedDomains.delete(domainId); });
     let graph;
+    let selectedValueNode = null;
+    let actionSelection = { whatId: "", howId: "" };
+
+    function relevantWhats(node) {
+      const valueTag = normalizedTag(node.name);
+      const assignedTags = new Set(assignedValuesForDomain(data, state, node.domainId).flatMap((value) => [value.name, ...(value.aliases || [])]).map(normalizedTag));
+      const relevance = (item) => (item.value_tags || []).reduce((score, tag) => {
+        const normalized = normalizedTag(tag);
+        return score + (normalized === valueTag ? 6 : assignedTags.has(normalized) ? 1 : 0);
+      }, 0);
+      return deterministicOrder(actionData.domains[node.domainId] || [], state.act.seed, `${node.domainId}:${node.valueId}:map-what`, relevance).slice(0, 6);
+    }
+
+    function renderValueActionPanel(node) {
+      const panel = root.querySelector("[data-values-map-action-panel]");
+      if (!panel) return;
+      selectedValueNode = node;
+      root.querySelectorAll("[data-map-node]").forEach((element) => {
+        const selected = element.getAttribute("data-map-node") === node.id;
+        element.classList.toggle("is-selected", selected);
+        if (element.__data__?.type === "value") element.setAttribute("aria-pressed", String(selected));
+      });
+      const whats = relevantWhats(node);
+      const what = whats.find((item) => item.id === actionSelection.whatId);
+      const hows = what ? deterministicOrder(what.hows || [], state.act.seed, `${node.domainId}:${what.id}:map-how`).slice(0, 7) : [];
+      if (!what) actionSelection = { whatId: "", howId: "" };
+      const how = hows.find((item) => item.id === actionSelection.howId);
+      panel.hidden = false;
+      panel.innerHTML = `<h4>Act on ${escapeHtml(node.name)}</h4>
+        <div class="values-map-action-context">
+          <div><span>Life domain</span><strong>${escapeHtml(node.domainName)}</strong></div>
+          <div><span>Value</span><strong>${escapeHtml(node.name)}</strong></div>
+          <div><span>Importance</span><strong>${escapeHtml(node.importance || "Not selected")}</strong></div>
+        </div>
+        <fieldset class="skill-app-fieldset"><legend>What could I work on?</legend>
+          <div class="values-suggestion-list">${whats.map((item) => `<label class="skill-app-check"><input type="radio" name="map-what" value="${escapeHtml(item.id)}" ${actionSelection.whatId === item.id ? "checked" : ""}> <span>${escapeHtml(item.what)}</span></label>`).join("")}</div>
+        </fieldset>
+        ${what ? `<fieldset class="skill-app-fieldset"><legend>How could I start?</legend>
+          <div class="values-suggestion-list">${hows.map((item) => `<label class="skill-app-check"><input type="radio" name="map-how" value="${escapeHtml(item.id)}" ${actionSelection.howId === item.id ? "checked" : ""}> <span>${escapeHtml(item.text)}</span></label>`).join("")}</div>
+        </fieldset>` : ""}
+        <div class="skill-app-actions"><button type="button" data-map-add-shortlist ${what && how ? "" : "disabled"}>Add to my short-term list</button><button type="button" class="secondary" data-map-go-act>Go to Act</button></div>
+        <p class="skill-app-field-help" data-map-action-status>${what ? "Choose a specific way to start, or continue in Act for the full list." : "Choose a direction to see specific ways to start."}</p>`;
+      panel.querySelectorAll('input[name="map-what"]').forEach((input) => input.addEventListener("change", () => {
+        actionSelection = { whatId: input.value, howId: "" };
+        renderValueActionPanel(node);
+      }));
+      panel.querySelectorAll('input[name="map-how"]').forEach((input) => input.addEventListener("change", () => {
+        actionSelection.howId = input.value;
+        renderValueActionPanel(node);
+      }));
+      panel.querySelector("[data-map-add-shortlist]")?.addEventListener("click", () => {
+        const selectedWhat = relevantWhats(node).find((item) => item.id === actionSelection.whatId);
+        const selectedHow = selectedWhat?.hows?.find((item) => item.id === actionSelection.howId);
+        if (!selectedWhat || !selectedHow) return;
+        let item = state.act.shortlist.find((candidate) => candidate.domainId === node.domainId && candidate.whatId === selectedWhat.id && candidate.howId === selectedHow.id);
+        if (!item) {
+          item = {
+            id: `action-${Date.now().toString(36)}-${state.act.shortlist.length}`,
+            domainId: node.domainId,
+            domainName: node.domainName,
+            values: [node.name],
+            what: selectedWhat.what,
+            how: selectedHow.text,
+            whatId: selectedWhat.id,
+            howId: selectedHow.id,
+          };
+          state.act.shortlist.push(item);
+        }
+        state.act.smartFocusId = item.id;
+        const status = panel.querySelector("[data-map-action-status]");
+        if (status) status.textContent = "Added to the existing Act short-term list.";
+        callbacks.onShortlistChange?.(item);
+      });
+      panel.querySelector("[data-map-go-act]")?.addEventListener("click", () => callbacks.onGoToAct?.(node.domainId, actionSelection));
+      panel.scrollIntoView({ block: "nearest", behavior: global.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ? "auto" : "smooth" });
+    }
 
     const renderNode = (element, node) => {
       if (node.type === "center") {
@@ -743,7 +821,8 @@
         element.innerHTML = `<circle class="values-map-hit-target" r="${node.hitRadius}"></circle><circle class="values-map-domain values-priority-color-${node.colorIndex}" r="${node.radius.toFixed(2)}"></circle>
           ${svgTextMarkup(node.displayName, 0, -7, "values-map-domain-label", 15, 2)}
           <text class="values-map-domain-percent" x="0" y="22" text-anchor="middle">${node.displayPercent}%</text>
-          <text class="values-map-domain-toggle" x="${(node.radius * 0.68).toFixed(1)}" y="${(-node.radius * 0.62).toFixed(1)}" text-anchor="middle">+</text>`;
+          <circle class="values-map-domain-toggle-badge" cx="${(node.radius * 0.72).toFixed(1)}" cy="${(-node.radius * 0.72).toFixed(1)}" r="17"></circle>
+          <text class="values-map-domain-toggle" x="${(node.radius * 0.72).toFixed(1)}" y="${(-node.radius * 0.72 - 1).toFixed(1)}" dominant-baseline="middle" text-anchor="middle">+</text>`;
       } else {
         const visualLabel = node.name.length > 22 ? `${node.name.slice(0, 21)}…` : node.name;
         const labelWidth = Math.min(154, Math.max(66, visualLabel.length * 7.1 + 18));
@@ -774,15 +853,22 @@
       linkStrength: (link) => link.type === "domain" ? 0.44 : 0.62,
       charge: (node) => node.type === "domain" ? -320 : node.type === "center" ? -220 : -115,
       collisionRadius: (node) => node.collisionRadius,
-      draggable: (node) => node.type !== "center",
+      draggable: () => true,
+      dragAlphaTarget: (node) => node.type === "center" ? 0.48 : 0.12,
+      persistDrop: (node) => node.type === "center",
       renderNode,
       updateNode,
       ariaLabel: (node) => {
         if (node.type === "center") return "You, center of the Values graph";
-        if (node.type === "domain") return `${node.name}, ${node.displayPercent}% Relative Priority, ${node.expanded ? "expanded" : "collapsed"}. Press Enter or Space to ${node.expanded ? "collapse" : "expand"} assigned Values.`;
-        return `${node.name}, ${node.importance} importance, assigned to ${node.domainName}`;
+        if (node.type === "domain") return `${node.expanded ? "Collapse" : "Expand"} values for ${node.name}. ${node.displayPercent}% Relative Priority.`;
+        return `${node.name}, ${node.importance} importance, assigned to ${node.domainName}. Open action suggestions.`;
       },
       onNodeActivate: (node) => {
+        if (node.type === "value") {
+          actionSelection = { whatId: "", howId: "" };
+          renderValueActionPanel(node);
+          return;
+        }
         if (node.type !== "domain") return;
         const opening = !expandedDomains.has(node.domainId);
         if (opening) expandedDomains.add(node.domainId);
@@ -921,7 +1007,22 @@
       </div>`;
       setActionBarCollapsed(actionBarCollapsed);
       bind();
-      if (state.step === 4) missionGraph = initMissionGraph(root, data, state, expandedMissionDomains);
+      if (state.step === 4) missionGraph = initMissionGraph(root, data, actionData, state, expandedMissionDomains, {
+        onGoToAct: (domainId, selection) => {
+          const explore = domainExplorerState(state, domainId);
+          explore.open = true;
+          if (selection.whatId) {
+            explore.selectedWhat = selection.whatId;
+            explore.selectedHow = selection.howId || "";
+            explore.whatPage = 0;
+            explore.howPage = 0;
+          }
+          state.step = 5;
+          state.furthestStep = Math.max(state.furthestStep, 5);
+          render({ navigation: true });
+          showActionDomain(domainId);
+        },
+      });
       updateActionBar();
       if (options.navigation) {
         global.requestAnimationFrame(() => {

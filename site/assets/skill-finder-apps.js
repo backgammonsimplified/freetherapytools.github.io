@@ -131,10 +131,18 @@
     const data = await getJson("thermometer.json");
     const state = { selectedZone: "" };
     function render(focus = false) {
-      const zone = data.zones.find((item) => item.id === state.selectedZone);
-      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Skill Thermometer</h2><p>Choose a zone. The words describe a state, not a diagnosis.</p></header><div class="skill-app-thermometer" role="list">${data.zones.map((item) => `<button type="button" role="listitem" data-zone="${item.id}" aria-pressed="${item.id === state.selectedZone}"><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.description)}</span></button>`).join("")}</div><section class="skill-app-panel" data-zone-result tabindex="-1">${zone ? `<h3>Skills that may fit where you are right now</h3><p>${escapeHtml(zone.description)}</p>${linkCards(zone.skills.map((skill) => ({ ...skill, kind: skill.href.startsWith("/skill-finder") ? "app" : "learn", label: skill.name })))}` : "<p>Choose a zone to see skills that may fit where you are right now.</p>"}</section><footer class="skill-app-footer"></footer></div>`;
+      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Skill Thermometer</h2><p>Choose the state that feels closest right now. The words describe a state, not a diagnosis.</p></header><div class="skill-app-thermometer" role="list">${data.zones.map((item) => {
+        const selected = item.id === state.selectedZone;
+        return `<section class="skill-thermometer-zone skill-thermometer-zone--${escapeHtml(item.id)}" role="listitem">
+          <button type="button" data-zone="${escapeHtml(item.id)}" aria-expanded="${selected}" aria-controls="zone-${escapeHtml(item.id)}-skills"><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.description)}</span></button>
+          <div id="zone-${escapeHtml(item.id)}-skills" class="skill-thermometer-recommendations" data-zone-result="${escapeHtml(item.id)}" ${selected ? "" : "hidden"} tabindex="-1">
+            <h3>Skills that may fit</h3>
+            <div class="skill-thermometer-skill-grid">${item.skills.map((skill) => `<details class="skill-thermometer-skill"><summary><span><strong>${escapeHtml(skill.name)}</strong><small>${escapeHtml(skill.category)}</small><span>${escapeHtml(skill.summary)}</span></span></summary><div><p><strong>Best fit:</strong> ${escapeHtml(skill.best_for)}</p><a class="skill-app-link-button${skill.href.startsWith("/skill-finder") ? "" : " secondary"}" href="${escapeHtml(skill.href)}">Open ${escapeHtml(skill.name)}</a></div></details>`).join("")}</div>
+          </div>
+        </section>`;
+      }).join("")}</div><footer class="skill-app-footer"></footer></div>`;
       root.querySelectorAll("[data-zone]").forEach((button) => button.addEventListener("click", () => { state.selectedZone = button.dataset.zone; render(true); }));
-      if (focus) root.querySelector("[data-zone-result]")?.focus();
+      if (focus) root.querySelector(`[data-zone-result="${global.CSS?.escape ? global.CSS.escape(state.selectedZone) : state.selectedZone}"]`)?.focus();
     }
     render();
     if (Progress) Progress.registerTool({

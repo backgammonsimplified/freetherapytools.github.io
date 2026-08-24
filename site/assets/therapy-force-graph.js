@@ -6,6 +6,49 @@
 
   const clamp = (value, minimum, maximum) => Math.max(minimum, Math.min(maximum, value));
 
+  function graphFullscreenTarget(element) {
+    return element?.closest?.("[data-force-graph-root]") || element;
+  }
+
+  function setFullscreenButtonState(root, active) {
+    root?.querySelectorAll?.('[data-graph-action="fullscreen"]').forEach((control) => {
+      control.textContent = active ? "Exit full screen" : "Full screen";
+      control.setAttribute("aria-pressed", String(active));
+    });
+  }
+
+  function exitFullscreenFallback(root) {
+    if (!root?.classList.contains("therapy-graph-fullscreen-fallback")) return false;
+    root.classList.remove("therapy-graph-fullscreen-fallback");
+    document.documentElement.classList.remove("therapy-graph-fullscreen-open");
+    setFullscreenButtonState(root, false);
+    return true;
+  }
+
+  async function toggleFullscreen(element) {
+    const root = graphFullscreenTarget(element);
+    if (!root) return false;
+    if (document.fullscreenElement) {
+      await document.exitFullscreen?.();
+      return false;
+    }
+    if (root.classList.contains("therapy-graph-fullscreen-fallback")) {
+      exitFullscreenFallback(root);
+      return false;
+    }
+    if (root.requestFullscreen) {
+      try {
+        await root.requestFullscreen();
+        setFullscreenButtonState(root, true);
+        return true;
+      } catch (_error) { /* use fixed-position fallback */ }
+    }
+    root.classList.add("therapy-graph-fullscreen-fallback");
+    document.documentElement.classList.add("therapy-graph-fullscreen-open");
+    setFullscreenButtonState(root, true);
+    return true;
+  }
+
   function createForceViewport(options) {
     const container = options.container;
     const svgElement = container?.querySelector("svg");
@@ -40,8 +83,8 @@
       .force("link", linkForce)
       .force("charge", d3.forceManyBody().strength((node) => options.charge?.(node) ?? -180).distanceMax(620))
       .force("collision", d3.forceCollide().radius((node) => (options.collisionRadius?.(node) ?? 34) + 5).strength(0.9).iterations(2))
-      .force("x", d3.forceX(0).strength((node) => node.type === "center" ? 0.16 : 0.018))
-      .force("y", d3.forceY(0).strength((node) => node.type === "center" ? 0.16 : 0.018))
+      .force("x", d3.forceX((node) => options.xTarget?.(node) ?? 0).strength((node) => options.xStrength?.(node) ?? (node.type === "center" ? 0.16 : 0.018)))
+      .force("y", d3.forceY((node) => options.yTarget?.(node) ?? 0).strength((node) => options.yStrength?.(node) ?? (node.type === "center" ? 0.16 : 0.018)))
       .on("tick", draw);
 
     const zoomBehavior = d3.zoom()
@@ -118,6 +161,14 @@
     }
 
     function resetView(animate = true, announce = true) {
+      nodes.forEach((node) => {
+        if (!node.__transientPinned) return;
+        node.fx = null;
+        node.fy = null;
+        node.__transientPinned = false;
+      });
+      options.onReset?.(nodes);
+      if (!reducedMotion) simulation.alpha(0.55).restart();
       const initialIds = new Set(options.initialNodeIds || []);
       const initialNodes = nodes.filter((node) => initialIds.has(node.id));
       applyTransform(targetTransform(initialNodes.length ? initialNodes : nodes, width < 480 ? 18 : 48, 1.75), animate);
@@ -150,7 +201,8 @@
       .filter((event, node) => options.draggable?.(node) !== false)
       .on("start", (event, node) => {
         event.sourceEvent?.stopPropagation?.();
-        if (!event.active && !reducedMotion) simulation.alphaTarget(0.08).restart();
+        const dragHeat = options.dragAlphaTarget?.(node) ?? (node.type === "center" ? 0.38 : 0.1);
+        if (!event.active && !reducedMotion) simulation.alphaTarget(dragHeat).alpha(Math.max(simulation.alpha(), dragHeat)).restart();
         node.fx = node.x;
         node.fy = node.y;
         container.dataset.dragState = "reheated";
@@ -158,11 +210,16 @@
       .on("drag", (event, node) => {
         node.fx = event.x;
         node.fy = event.y;
+        if (!reducedMotion && node.type === "center") simulation.alpha(Math.max(simulation.alpha(), 0.32)).restart();
       })
       .on("end", (event, node) => {
         if (!event.active) simulation.alphaTarget(0);
-        node.fx = null;
-        node.fy = null;
+        const persist = Boolean(options.persistDrop?.(node));
+        node.__transientPinned = persist;
+        if (!persist) {
+          node.fx = null;
+          node.fy = null;
+        }
         container.dataset.dragState = "released";
         if (reducedMotion) {
           simulation.stop();
@@ -178,6 +235,7 @@
         else if (action === "reset") resetView();
         else if (action === "zoom-in") svg.call(zoomBehavior.scaleBy, 1.25);
         else if (action === "zoom-out") svg.call(zoomBehavior.scaleBy, 0.8);
+        else if (action === "fullscreen") toggleFullscreen(controlsRoot).then(() => global.setTimeout(() => { dimensions(); fitVisible(false); }, 80));
       }));
     }
 
@@ -185,7 +243,7 @@
       const previous = new Map(nodes.map((node) => [node.id, node]));
       nodes = nextNodes.map((node) => {
         const old = previous.get(node.id);
-        return old ? { ...node, x: old.x, y: old.y, vx: old.vx, vy: old.vy } : { ...node };
+        return old ? { ...node, x: old.x, y: old.y, vx: old.vx, vy: old.vy, fx: old.fx, fy: old.fy, __transientPinned: old.__transientPinned } : { ...node };
       });
       links = nextLinks.map((link) => ({ ...link, source: typeof link.source === "object" ? link.source.id : link.source, target: typeof link.target === "object" ? link.target.id : link.target }));
 
@@ -204,7 +262,7 @@
           (exit) => exit.remove()
         )
         .attr("class", (node) => `therapy-force-node therapy-force-node-${node.type}`)
-        .attr("role", (node) => node.type === "domain" ? "button" : "img")
+        .attr("role", (node) => options.nodeRole?.(node) || (["domain", "value", "emotion", "word", "question", "result"].includes(node.type) ? "button" : "img"))
         .attr("tabindex", "0")
         .attr("aria-label", (node) => options.ariaLabel?.(node) || node.label || node.id)
         .attr("aria-expanded", (node) => node.type === "domain" ? String(Boolean(node.expanded)) : null)
@@ -253,10 +311,26 @@
       resizeObserver?.disconnect();
       global.cancelAnimationFrame?.(transformFrame);
       svg.on(".zoom", null);
+      document.removeEventListener("fullscreenchange", fullscreenChange);
+      document.removeEventListener("keydown", escapeFallback);
+      exitFullscreenFallback(controlsRoot);
     }
 
     dimensions();
     bindToolbar();
+    const fullscreenChange = () => {
+      const active = document.fullscreenElement === controlsRoot || Boolean(document.fullscreenElement && controlsRoot.contains(document.fullscreenElement));
+      setFullscreenButtonState(controlsRoot, active || controlsRoot.classList.contains("therapy-graph-fullscreen-fallback"));
+      global.setTimeout(() => { dimensions(); if (active) fitVisible(false); }, 40);
+    };
+    const escapeFallback = (event) => {
+      if (event.key === "Escape" && exitFullscreenFallback(controlsRoot)) {
+        dimensions();
+        fitVisible(false);
+      }
+    };
+    document.addEventListener("fullscreenchange", fullscreenChange);
+    document.addEventListener("keydown", escapeFallback);
     const resizeObserver = typeof ResizeObserver !== "undefined" ? new ResizeObserver(() => dimensions()) : null;
     resizeObserver?.observe(container.querySelector("[data-force-canvas]") || container);
 
@@ -266,5 +340,24 @@
     return api;
   }
 
-  global.TherapyForceGraph = { createForceViewport };
+  function createConstrainedTreeViewport(options) {
+    const horizontal = options.orientation !== "vertical";
+    const levelGap = Number(options.levelGap) || 190;
+    const laneGap = Number(options.laneGap) || 112;
+    return createForceViewport({
+      ...options,
+      linkDistance: options.linkDistance || (() => Math.max(90, levelGap * 0.88)),
+      linkStrength: options.linkStrength || (() => 0.72),
+      charge: options.charge || ((node) => node.type === "question" ? -260 : -180),
+      collisionRadius: options.collisionRadius || ((node) => node.collisionRadius || 58),
+      xTarget: options.xTarget || ((node) => horizontal ? (Number(node.level) || 0) * levelGap : (Number(node.lane) || 0) * laneGap),
+      yTarget: options.yTarget || ((node) => horizontal ? (Number(node.lane) || 0) * laneGap : (Number(node.level) || 0) * levelGap),
+      xStrength: options.xStrength || (() => horizontal ? 0.22 : 0.16),
+      yStrength: options.yStrength || (() => horizontal ? 0.16 : 0.22),
+      alphaDecay: options.alphaDecay ?? 0.07,
+      velocityDecay: options.velocityDecay ?? 0.58,
+    });
+  }
+
+  global.TherapyForceGraph = { createForceViewport, createConstrainedTreeViewport, toggleFullscreen };
 }(typeof window !== "undefined" ? window : globalThis));

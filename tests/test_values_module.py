@@ -348,13 +348,15 @@ class ValuesModuleTests(unittest.TestCase):
         self.assertLess(D3_BUNDLE.stat().st_size, 80_000)
         for token in ("forceSimulation", "forceLink", "forceManyBody", "forceCollide", "forceX", "forceY", "drag", "zoom"):
             self.assertIn(token, self.force_graph)
-        for token in ("fitVisible", "resetView", "ensureVisible", "alphaTarget(0.08)", "node.fx = null", "node.fy = null", "reduced-settled", 'data-graph-action'):
+        for token in ("fitVisible", "resetView", "ensureVisible", "dragAlphaTarget", "persistDrop", "node.fx = null", "node.fy = null", "reduced-settled", 'data-graph-action', "toggleFullscreen", "createConstrainedTreeViewport"):
             self.assertIn(token, self.force_graph)
         self.assertIn('container.closest("[data-force-graph-root]")', self.force_graph)
         self.assertIn('event.key !== "Enter" && event.key !== " "', self.force_graph)
         self.assertIn('aria-expanded', self.force_graph)
+        for token in ('data-graph-action="fullscreen"', "Add to my short-term list", "Go to Act", "data-values-map-action-panel", "values-map-domain-toggle-badge"):
+            self.assertIn(token, self.javascript)
         self.assertIn('d3-values-force.min.js?v=3.0.0-values-graph', self.scripts)
-        self.assertIn('therapy-force-graph.js?v=20260823-values-force', self.scripts)
+        self.assertIn('therapy-force-graph.js?v=20260823-shared-graphs', self.scripts)
         self.assertLess(self.scripts.index("d3-values-force.min.js"), self.scripts.index("therapy-force-graph.js"))
         self.assertLess(self.scripts.index("therapy-force-graph.js"), self.scripts.index("skill-apps.js"))
         self.assertIn("assets/d3-values-force.min.js", self.quarto)

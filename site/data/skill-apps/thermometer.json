@@ -6,12 +6,12 @@
       "name": "Emotional overload",
       "description": "Feelings or urges are very intense, and it may be hard to access Wise Mind.",
       "skills": [
-        {"name": "TIPP", "href": "/learn/cube/tipp.html"},
-        {"name": "ACCEPTS", "href": "/learn/cube/self-soothe.html#wise-mind-accepts"},
-        {"name": "Self-Soothe", "href": "/learn/cube/self-soothe.html#self-soothing-five-senses"},
-        {"name": "STOP", "href": "/learn/cube/stop-crisis-survival.html#stop"},
-        {"name": "IMPROVE", "href": "/learn/cube/improve.html"},
-        {"name": "Opposite Action", "href": "/skill-finder/change-emotion/"}
+        {"name": "TIPP", "category": "Distress Tolerance", "summary": "Quick body-based methods for very high emotional arousal.", "best_for": "Bringing intensity down enough to choose the next effective step.", "href": "/learn/cube/tipp.html"},
+        {"name": "ACCEPTS", "category": "Distress Tolerance", "summary": "Short-term ways to redirect attention during a crisis.", "best_for": "Getting through a peak without making the situation worse.", "href": "/learn/cube/self-soothe.html#wise-mind-accepts"},
+        {"name": "Self-Soothe", "category": "Distress Tolerance", "summary": "Use the senses to offer your body comfort and steadiness.", "best_for": "Reducing distress through safe sensory care.", "href": "/learn/cube/self-soothe.html#self-soothing-five-senses"},
+        {"name": "STOP", "category": "Distress Tolerance", "summary": "Pause, step back, observe, and proceed mindfully.", "best_for": "Interrupting an impulsive reaction before acting.", "href": "/learn/cube/stop-crisis-survival.html#stop"},
+        {"name": "IMPROVE", "category": "Distress Tolerance", "summary": "Make a painful moment more bearable in the short term.", "best_for": "Finding one workable way through a difficult moment.", "href": "/learn/cube/improve.html"},
+        {"name": "Opposite Action", "category": "Emotion Regulation", "summary": "Act opposite to an urge when the emotion does not fit the facts or acting on it would be ineffective.", "best_for": "Changing an emotion by changing action, expression, and posture.", "href": "/skill-finder/change-emotion/"}
       ]
     },
     {
@@ -19,10 +19,10 @@
       "name": "Distressed but in Wise Mind",
       "description": "Distress is present, and there is enough steadiness to reflect and choose deliberately.",
       "skills": [
-        {"name": "Pros & Cons", "href": "/learn/cube/pros-and-cons.html"},
-        {"name": "Problem Solving", "href": "/learn/emotion-regulation/opposite-action.html#problem-solving"},
-        {"name": "Check the Facts", "href": "/learn/emotion-regulation/check-the-facts.html"},
-        {"name": "Cope Ahead", "href": "/learn/emotion-regulation/positive-emotions-mastery-cope-ahead.html#cope-ahead"}
+        {"name": "Pros & Cons", "category": "Distress Tolerance", "summary": "Compare short- and long-term effects of acting on a crisis urge.", "best_for": "Strengthening commitment when two choices are pulling at you.", "href": "/learn/cube/pros-and-cons.html"},
+        {"name": "Problem Solving", "category": "Emotion Regulation", "summary": "Define a changeable problem, choose a solution, and test it.", "best_for": "Emotions that fit a situation you can influence.", "href": "/learn/emotion-regulation/opposite-action.html#problem-solving"},
+        {"name": "Check the Facts", "category": "Emotion Regulation", "summary": "Separate observable facts from assumptions and interpretations.", "best_for": "Checking whether an emotion and its intensity fit what is happening.", "href": "/learn/emotion-regulation/check-the-facts.html"},
+        {"name": "Cope Ahead", "category": "Emotion Regulation", "summary": "Rehearse an effective plan for a difficult situation before it happens.", "best_for": "Preparing for a predictable challenge while you can think clearly.", "href": "/learn/emotion-regulation/positive-emotions-mastery-cope-ahead.html#cope-ahead"}
       ]
     },
     {
@@ -30,10 +30,10 @@
       "name": "Wise Mind",
       "description": "There is room to notice the whole situation and choose a skill intentionally.",
       "skills": [
-        {"name": "Interpersonal Effectiveness", "href": "/learn/interpersonal-effectiveness/"},
-        {"name": "Mindfulness of Emotions", "href": "/learn/emotion-regulation/observing-describing-emotions.html"},
-        {"name": "Radical Acceptance", "href": "/learn/cube/radical-acceptance.html"},
-        {"name": "Pleasant Activities", "href": "/skill-finder/pleasant-event/"}
+        {"name": "Interpersonal Effectiveness", "category": "Interpersonal Effectiveness", "summary": "Choose skills for objectives, relationships, and self-respect.", "best_for": "Making a request, saying no, or navigating a relationship deliberately.", "href": "/learn/interpersonal-effectiveness/"},
+        {"name": "Mindfulness of Emotions", "category": "Mindfulness", "summary": "Observe an emotion without suppressing it or automatically acting on it.", "best_for": "Making space for a current emotion with awareness.", "href": "/learn/emotion-regulation/observing-describing-emotions.html"},
+        {"name": "Radical Acceptance", "category": "Distress Tolerance", "summary": "Acknowledge reality as it is when it cannot be changed right now.", "best_for": "Reducing added suffering from fighting unchangeable facts.", "href": "/learn/cube/radical-acceptance.html"},
+        {"name": "Pleasant Activities", "category": "Emotion Regulation", "summary": "Intentionally make room for safe, realistic pleasant experiences.", "best_for": "Building positive moments without demanding a particular mood.", "href": "/skill-finder/pleasant-event/"}
       ]
     },
     {
@@ -41,9 +41,9 @@
       "name": "Emotional numbness",
       "description": "You feel disconnected, shut down, flat, or far away from emotion.",
       "skills": [
-        {"name": "Build Mastery", "href": "/learn/emotion-regulation/positive-emotions-mastery-cope-ahead.html#build-mastery"},
-        {"name": "PLEASE", "href": "/learn/wellness/sleep.html#please-body-care"},
-        {"name": "Grounding", "href": "/mindfulness/"}
+        {"name": "Build Mastery", "category": "Emotion Regulation", "summary": "Do one achievable activity that builds competence over time.", "best_for": "Creating momentum and a sense of capability in small steps.", "href": "/learn/emotion-regulation/positive-emotions-mastery-cope-ahead.html#build-mastery"},
+        {"name": "PLEASE", "category": "Wellness", "summary": "Support emotional balance by caring for core physical needs.", "best_for": "Checking illness care, eating, substances, sleep, and movement.", "href": "/learn/wellness/sleep.html#please-body-care"},
+        {"name": "Grounding", "category": "Mindfulness", "summary": "Reconnect with immediate sensory information and the present environment.", "best_for": "Feeling disconnected, unreal, shut down, or far away.", "href": "/learn/mindfulness/grounding.html"}
       ]
     }
   ]
