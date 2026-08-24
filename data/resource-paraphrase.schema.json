@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://therapyskillkit.example/schema/resource-paraphrase.schema.json",
+  "title": "Therapy Skill Kit resource paraphrase corpus",
+  "type": "object",
+  "required": ["schema_version", "generator_version", "base_guidance", "records"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "generator_version": {"type": "string", "minLength": 1},
+    "base_guidance": {"type": "object", "required": ["version", "contract"]},
+    "records": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/resource"}
+    }
+  },
+  "$defs": {
+    "block": {
+      "type": "object",
+      "required": ["id", "type", "text"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "type": {"enum": ["heading", "paragraph", "bullet", "numbered", "note"]},
+        "text": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "field": {
+      "type": "object",
+      "required": ["id", "type", "label", "required"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9-]+-(q|table)[0-9]{2}$"},
+        "type": {"enum": ["text", "textarea", "checkbox", "multi-select", "yes-no", "single-choice", "rating-scale", "numeric-rating", "table", "repeating-rows", "date", "time", "planning", "reflection", "other"]},
+        "label": {"type": "string", "minLength": 1},
+        "help": {"type": "string"},
+        "required": {"type": "boolean"},
+        "choices": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "min": {"type": "number"},
+        "max": {"type": "number"},
+        "columns": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "rows": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "resource": {
+      "type": "object",
+      "required": ["resource_id", "title", "section", "lesson_route", "classification", "has_input", "input_types", "status", "source", "blocks", "fields", "guidance", "review", "qa", "export"],
+      "properties": {
+        "resource_id": {"type": "string", "pattern": "^[a-z0-9-]+-p[0-9]{3}$"},
+        "title": {"type": "string", "minLength": 1},
+        "section": {"type": "string", "minLength": 1},
+        "lesson_route": {"type": "string", "pattern": "^/"},
+        "classification": {"enum": ["informational", "interactive", "mixed"]},
+        "has_input": {"type": "boolean"},
+        "input_types": {"type": "array", "items": {"type": "string"}},
+        "status": {"enum": ["draft", "review-needed", "approved", "published"]},
+        "source": {"type": "object"},
+        "blocks": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/block"}},
+        "fields": {"type": "array", "items": {"$ref": "#/$defs/field"}},
+        "guidance": {"type": "object"},
+        "review": {"type": "object"},
+        "qa": {"type": "object"},
+        "export": {"type": "object"},
+        "specialized_tool": {"type": ["object", "null"]}
+      }
+    }
+  }
+}
