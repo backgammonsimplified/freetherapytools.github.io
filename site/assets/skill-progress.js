@@ -26,6 +26,12 @@
   let autosaveTimer = null;
   let restoreFocus = null;
 
+  function routeForTool(toolId, fallbackRoute = "") {
+    if (TOOL_ROUTES[toolId]) return TOOL_ROUTES[toolId];
+    if (typeof toolId === "string" && toolId.startsWith("resource-") && typeof fallbackRoute === "string" && fallbackRoute.startsWith("/")) return fallbackRoute;
+    return null;
+  }
+
   function clone(value) {
     return JSON.parse(JSON.stringify(value));
   }
@@ -295,7 +301,7 @@
     const title = typeof record.tool_title === "string" ? record.tool_title : record.tool_id;
     setMessage(validationMessage("wrong-tool", { title }), false);
     active.wrongTool.replaceChildren();
-    const route = TOOL_ROUTES[record.tool_id];
+    const route = routeForTool(record.tool_id, record.route);
     if (!route || record.schema_version !== 1) return;
     const button = element("button", { type: "button", text: `Open ${title}` });
     button.addEventListener("click", () => {
@@ -573,13 +579,23 @@
 
   function registerTool(config) {
     const required = ["getState", "setState", "validateState", "getReadableSummary"];
-    if (!config || !config.root || !TOOL_ROUTES[config.toolId] || required.some((name) => typeof config[name] !== "function")) {
+    const registeredRoute = config && routeForTool(config.toolId, config.route);
+    if (!config || !config.root || !registeredRoute || required.some((name) => typeof config[name] !== "function")) {
       throw new Error("Invalid Therapy Skill Kit progress adapter");
     }
-    if (!Number.isInteger(config.schemaVersion) || config.schemaVersion < 1 || config.route !== TOOL_ROUTES[config.toolId]) {
+    if (!Number.isInteger(config.schemaVersion) || config.schemaVersion < 1 || config.route !== registeredRoute) {
       throw new Error("Invalid Therapy Skill Kit progress identity");
     }
-    if (active && active.config.root !== config.root) throw new Error("Only one interactive progress tool can be active per page");
+    if (active && active.config.root !== config.root) {
+      global.clearTimeout(autosaveTimer);
+      active.observer?.disconnect();
+      active.floating?.remove();
+      active.backdrop?.remove();
+      active.drawer?.remove();
+      const draftPrompt = active.config.root.previousElementSibling;
+      if (draftPrompt?.matches?.("[data-skill-progress-draft]")) draftPrompt.remove();
+      active = null;
+    }
     if (active?.observer) active.observer.disconnect();
     active = { config, initialState: clone(config.getState()), lastSaved: null, ...buildUi(config) };
     if (config.showFloating !== false) {
@@ -621,7 +637,7 @@
   }
 
   const api = {
-    FORMAT, STORAGE_PREFIX, TOOL_ROUTES, MAX_FILE_SIZE,
+    FORMAT, STORAGE_PREFIX, TOOL_ROUTES, MAX_FILE_SIZE, routeForTool,
     registerTool, makeRecord, serializeJson, serializeMarkdown, parseProgress, validateForTool,
     sanitizeFilename, localFilename, nonEmptySections, makeDocx, isPlainObject,
   };
