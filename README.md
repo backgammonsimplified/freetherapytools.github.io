@@ -416,19 +416,29 @@ Known CLI version during this work:
 codex-cli 0.149.0
 ```
 
-## Preferred profile launch
+## Canonical managed-workspace launch
 
 ```powershell
-Set-Location "C:\Users\andre\Documents\therapy-skill-kit"
+$REPO = "$HOME\Documents\therapy-skill-kit"
+$IMPLEMENTATION_GIT_DIR = (git -C "$REPO" rev-parse --absolute-git-dir).Trim()
+
+Set-Location "$REPO"
 
 codex `
-  --profile therapy-nav `
-  --ask-for-approval never
+  --ask-for-approval never `
+  --sandbox workspace-write `
+  -c sandbox_workspace_write.network_access=true `
+  --add-dir "$IMPLEMENTATION_GIT_DIR" `
+  --add-dir "$HOME\scratch"
 ```
 
 Then paste the focused Codex task prompt.
 
-## Expected profile intent
+This explicit launch is preferred over the older profile-based method. It gives
+the session the repository, the repository's actual Git metadata directory, and
+the scratch workspace without depending on a machine-specific profile name.
+
+## Historical profile intent
 
 The profile should make:
 
@@ -485,7 +495,9 @@ codex `
   -c 'permissions.therapy-skill-kit.network.enabled=true'
 ```
 
-Prefer the existing `therapy-nav` profile when it is working.
+The profile examples above are retained only as historical context. Use the
+canonical managed-workspace command unless the Codex CLI itself requires an
+updated equivalent.
 
 ---
 
@@ -2790,3 +2802,173 @@ Personal Planning + Google Calendar
 ```
 
 That separation prevents architectural drift and keeps the system maintainable.
+
+---
+
+# 80. Resource paraphrase and worksheet pipeline
+
+The published Handouts, Worksheets, Practice Materials, and Reference Materials
+now share one data-driven pipeline. It preserves the printable source while
+adding a project-authored plain-language draft, structured worksheet fields,
+guided-reflection guidance, local progress, review controls, and reproducible
+blank downloads. It does not create a second SPA or a backend.
+
+## Canonical data and classification
+
+`data/resource-paraphrases.json` is the canonical, stably ordered corpus. Its
+records reuse the existing resource IDs and source/lesson mappings. Each record
+contains source identity and hashes, title, informational/interactive/mixed
+classification, plain-language blocks, deterministic field IDs, page-specific
+guided-reflection data, specialized-tool mapping, export metadata, QA flags,
+and review state. The schema is `data/resource-paraphrase.schema.json`.
+
+The generator derives the current published set from repository inventory and
+QMD resource extraction rather than a hard-coded count. Classification combines
+the source's structural cues and semantic prompt language; blank lines alone do
+not create fields. Poor or ambiguous extraction is kept in the complete review
+queue with `review_needed` and source-uncertainty notes. It is never filled in by
+guessing.
+
+Stable worksheet field IDs use `<resource-id>-qNN`, with stable subordinate IDs
+for structured content. Source hashes detect changed extraction. Generator
+updates do not replace author-edited or approved content: the canonical record's
+review provenance remains authoritative and a changed source is flagged for a
+new review.
+
+The maintainable audit outputs are:
+
+- `data/resource-paraphrase-inventory.csv` — full classification and source audit;
+- `data/resource-paraphrase-review.csv` — compact spreadsheet review queue;
+- `data/resource-tool-mapping.csv` — explicit resource-to-Skill-Finder relationships;
+- `RESOURCE-PARAPHRASE-REVIEW.md` — durable counts, QA totals, and exact flagged IDs.
+
+## Publication gate and resource panes
+
+Normal builds write only approved/published records to
+`site/data/resource-paraphrases/index.json`. Draft and review-needed records show
+the existing printable source only. Approved informational records can show a
+Plain-language version; approved interactive/mixed records can additionally show
+the Interactive worksheet, blank downloads, and guided-reflection controls.
+Unapproved text is therefore absent from the normal public data asset and from
+public search indexing.
+
+`?review=1` is an explicit local authoring override. A review build writes the
+gitignored `site/data/resource-paraphrases/review.json` and the dashboard at
+`/review/resource-paraphrases.html?review=1` loads it. Draft badges make that
+context difficult to mistake for production. The dashboard supports section,
+classification, status, QA-confidence, and specialized-tool filters; search;
+counts; source references and extraction; side-by-side paraphrase/form/prompt
+previews; local edits; notes; approval/needs-changes actions; and previous/next
+navigation.
+
+Review edits stay in browser storage until the author exports inspectable JSON.
+The apply script validates schema and inventory version, refuses unknown or
+mismatched IDs, supports dry-run, creates a canonical JSON backup, reports every
+changed resource, and does not approve untouched drafts.
+
+## Interactive worksheets and local progress
+
+`site/assets/resource-paraphrases.js` attaches panes to existing resource markup
+by stable resource ID. Fields use labels, fieldsets, native keyboard controls,
+accessible tables/scales, and mobile stacking. Structured controls cover text,
+long reflection, checklists/multi-select, ratings, dates/times, planning fields,
+tables, and repeating rows. Exact numeric ranges in source-backed rating fields
+are retained. No invented clinical scoring is added.
+
+Resource forms register as dynamic `resource-<resource-id>` tools in the shared
+`site/assets/skill-progress.js` framework. Answers remain browser-local and use
+stable field IDs. Save progress produces readable Markdown with embedded
+structured metadata; reopening validates the resource and uses the existing
+wrong-tool handoff instead of silently applying unrelated answers. JSON export,
+clear-this-worksheet, completion counting, filled DOCX export, and browser
+Print/Save as PDF are local operations. Answers never appear in URLs or static
+download links.
+
+Where a page is the source for a specialized Skill Finder experience, the
+canonical mapping links to the current tool instead of introducing a competing
+progress state. The page-level plain-language draft still remains reviewable.
+
+## Guided reflection and privacy
+
+`data/resource-guided-reflection-base.json` contains the shared safety and style
+contract. Each interactive record adds page-specific purpose, question order,
+optional probes, branches/scales where present, and relevant user-owned summary
+sections. The constructed prompt tells an external assistant to work one primary
+question at a time, accept skip/back/summarize/stop, avoid diagnosis or pressure,
+preserve the person's wording, stay within the worksheet, and label the result
+`Draft summary for me to review`.
+
+`Copy guide prompt` never includes answers. The separate
+`Copy guide prompt + my responses` action explains that current responses will
+be placed on the clipboard. Neither action calls an API or transmits anything;
+the person chooses whether and where to paste.
+
+## Blank and filled exports
+
+`scripts/generate-resource-exports.py` deterministically renders canonical
+approved interactive worksheets to blank DOCX and PDF files in
+`site/assets/paraphrased-resources/`. The blank documents contain paraphrased
+instructions/prompts and response space, not source scans. DOCX uses readable
+OOXML headings, tables, checkbox symbols, and response space. PDF uses Letter
+pages, readable margins/type, tables and lines, and source/adaptation notes.
+
+The artifact manifest hashes canonical worksheet content plus a template
+version, so `--changed` skips unchanged outputs and `--all` performs explicit
+full regeneration. Draft artifact QA uses `--include-drafts` with an output path
+outside the public site. Public pre-render generation never includes drafts.
+Filled DOCX and Print/Save as PDF are produced locally from the person's current
+responses and are clearly separated from blank-download actions.
+
+## Author workflow
+
+Run these commands from the repository root:
+
+```powershell
+# 1. Update/inspect inventory and canonical drafts without replacing reviewed text.
+python scripts/generate-resource-paraphrases.py --dry-run
+python scripts/generate-resource-paraphrases.py --update
+python scripts/generate-resource-paraphrases.py --validate
+
+# 2. Build the local-only review payload, then render/preview the review route.
+python scripts/build-resource-paraphrase-assets.py --review
+$env:TSK_RESOURCE_REVIEW = "1"
+quarto render site
+# Open /review/resource-paraphrases.html?review=1
+
+# 3. Export review JSON in the dashboard, validate it, and apply it.
+python scripts/apply-resource-paraphrase-review.py --dry-run review.json
+python scripts/apply-resource-paraphrase-review.py --apply review.json
+
+# 4. Validate and generate approved blank artifacts incrementally.
+python scripts/generate-resource-paraphrases.py --validate --check-artifacts
+python scripts/generate-resource-exports.py --changed
+# Use --all only for an intentional full artifact rebuild.
+
+# 5. Remove the review-only payload, build production-gated assets, render, test.
+Remove-Item Env:TSK_RESOURCE_REVIEW -ErrorAction SilentlyContinue
+python scripts/build-resource-paraphrase-assets.py
+quarto render site
+python -m unittest tests.test_resource_paraphrases
+node tests/test_resource_paraphrases.js
+node tests/test_skill_progress.js
+```
+
+The standard `scripts/bs_pre_render.py` hook performs changed approved-export
+generation and public asset gating. It creates the review payload only when
+`TSK_RESOURCE_REVIEW=1` is explicitly set.
+
+## QA and maintenance rules
+
+Corpus validation requires one canonical record per published resource, unique
+resource/field IDs, resolvable source references, fields and prompts for every
+interactive record, and export metadata/artifacts for approved interactive
+records. Similarity QA flags long shared strings and close n-grams as editorial
+signals, while allowing canonical skill names. Completeness QA compares headings,
+steps, questions, tables, choices, branches, and scale cues. Question/prompt/field
+counts and documented exceptions are available in the audit data.
+
+All canonical output is stably ordered, IDs and filenames are deterministic, and
+one page failure is reported without aborting the remaining corpus. Generated
+review drafts are not approvals. The author reviews the source comparison,
+corrects uncertain extraction and meaning, and explicitly changes status before
+anything becomes publicly visible.
