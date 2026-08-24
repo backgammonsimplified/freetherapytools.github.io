@@ -3,7 +3,13 @@ title: "Jealousy"
 description: "Source-backed words, prompting events, body changes, urges, and effective responses for jealousy."
 sidebar: learn
 learn-track: emotion-regulation
-categories: [Beginner]
+learn-order: 12
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - describe-emotions
 body-classes: bs-learn-article
 page-layout: article
 toc: true

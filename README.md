@@ -6,7 +6,7 @@ This repository is also the durable implementation handoff for the project. The 
 
 > **Git is authoritative.** Always verify the current branch, remote, HEAD, and worktree before acting. This README records architecture, operating procedures, major decisions, and the latest known implementation plan, but it should not override the actual repository state.
 
-**Last major context update:** 2026-08-23.
+**Last major context update:** 2026-08-24.
 
 ---
 
@@ -1918,7 +1918,8 @@ Core SMART concepts remain:
 - Achievable;
 - Relevant / Realistic;
 - Time-Oriented;
-- Smallest useful version;
+- Can we simplify the goal? (stored as `smallest` for compatibility);
+- Possible barrier;
 - Support.
 
 Keep compatibility with older saved Goal Builder progress.
@@ -2188,7 +2189,8 @@ Possible readable body fields:
 - Achievable;
 - Relevant;
 - Target date;
-- Smallest useful version;
+- Simplified goal (`smallest` in saved data);
+- Possible barrier;
 - Support.
 
 Do not invent unsupported front-matter fields.
@@ -2809,7 +2811,7 @@ That separation prevents architectural drift and keeps the system maintainable.
 
 The published Handouts, Worksheets, Practice Materials, and Reference Materials
 now share one data-driven pipeline. It preserves the printable source while
-adding a project-authored plain-language draft, structured worksheet fields,
+adding project-authored adapted text, structured worksheet fields,
 guided-reflection guidance, local progress, review controls, and reproducible
 blank downloads. It does not create a second SPA or a backend.
 
@@ -2847,19 +2849,30 @@ The maintainable audit outputs are:
 Normal builds write only approved/published records to
 `site/data/resource-paraphrases/index.json`. Draft and review-needed records show
 the existing printable source only. Approved informational records can show a
-Plain-language version; approved interactive/mixed records can additionally show
-the Interactive worksheet, blank downloads, and guided-reflection controls.
+Text version; approved interactive/mixed records can additionally show the
+Interactive worksheet, blank downloads, and guided-reflection controls.
 Unapproved text is therefore absent from the normal public data asset and from
 public search indexing.
 
 `?review=1` is an explicit local authoring override. A review build writes the
-gitignored `site/data/resource-paraphrases/review.json` and the dashboard at
-`/review/resource-paraphrases.html?review=1` loads it. Draft badges make that
-context difficult to mistake for production. The dashboard supports section,
-classification, status, QA-confidence, and specialized-tool filters; search;
-counts; source references and extraction; side-by-side paraphrase/form/prompt
-previews; local edits; notes; approval/needs-changes actions; and previous/next
-navigation.
+gitignored `site/data/resource-paraphrases/review.json`; the dedicated authoring
+application at `/review/resource-paraphrases.html?review=1` loads it. This route
+uses its own namespaced full-viewport shell rather than the public navbar,
+sidebars, article width, title block, or footer. It renders only the compact
+266-record queue and current record, with independent Source and Adapted version
+scrolling, a draggable desktop split, and Queue/Source/Adapted tabs on narrow
+screens. The sticky toolbar supplies search; section, classification, status,
+QA, and specialized-tool filters; counts; previous/next; Approve, Approve &
+next, and Needs changes & next; save state; and review JSON export.
+
+Source page/text tabs and source fit/zoom controls keep the handout readable in
+place. Accessible Text, Worksheet, Guided reflection, and Metadata / QA tabs
+provide direct editing of titles, blocks, worksheet labels/help/choices,
+guidance, review notes, and status. Review terminology is Source, Adapted
+version, Adapted text, Worksheet, Guided reflection, Review status, Not
+reviewed, Needs changes, and Approved. Public terminology is Text version,
+Interactive worksheet, Printable source, Download worksheet (PDF/DOCX), and
+Guided reflection prompt.
 
 Review edits stay in browser storage until the author exports inspectable JSON.
 The apply script validates schema and inventory version, refuses unknown or
@@ -2886,7 +2899,7 @@ download links.
 
 Where a page is the source for a specialized Skill Finder experience, the
 canonical mapping links to the current tool instead of introducing a competing
-progress state. The page-level plain-language draft still remains reviewable.
+progress state. The page-level adapted version still remains reviewable.
 
 ## Guided reflection and privacy
 
@@ -2972,3 +2985,97 @@ one page failure is reported without aborting the remaining corpus. Generated
 review drafts are not approvals. The author reviews the source comparison,
 corrects uncertain extraction and meaning, and explicitly changes status before
 anything becomes publicly visible.
+
+---
+
+# 81. Full-screen authoring and Skill Finder interaction architecture
+
+The 2026-08-24 implementation pass completed the next major authoring and Skill
+Finder redesign while retaining Quarto, QMD lessons, stable routes/resource IDs,
+the single Skill Progress system, local privacy, Markdown save/reopen, and legacy
+JSON migration paths.
+
+## Shared force-network and constrained-tree family
+
+`site/assets/therapy-force-graph.js` remains the small shared interaction layer.
+Force-network consumers are Values and Emotion Explorer. Constrained-tree
+consumers are Change Emotion, Worry Tree, and Missing Links. Both families share
+pan, zoom, node drag, elastic reheating, Fit, Reset, native Fullscreen API with a
+fixed full-window fallback, ESC exit, reduced-motion handling, and accessible
+toolbar/node labels. The tree helper adds level/lane attraction, directional
+edges, current/visited/future states, highlighted chosen paths, branch revision,
+and a separate active-node editor so personal text never sits in SVG nodes.
+
+Values now gives the central You node a stronger network-wide drag response,
+large +/− domain badges, and fullscreen. Activating a Value opens a contextual
+WHAT → HOW panel backed only by `values-actions.json`; adding an item writes to
+the existing Act shortlist, and Go to Act uses the existing Values step/domain
+state rather than parallel storage.
+
+## Skill Finder tools completed in this pass
+
+- Skill Thermometer keeps its four source states, uses accessible red, amber,
+  green, and blue families, and expands compact categorized skill summaries
+  directly under the selected zone.
+- Emotion Explorer renders You plus all ten source emotions as a force network.
+  Each emotion has a distinct data-owned colour and definition, a prominent
+  +/− descriptor branch, removable selected-word chips, a source-backed Learn
+  route, and a session-only handoff to Change Emotion without free text in URLs.
+- Ten Learn pages live under
+  `site/learn/emotion-regulation/emotions/`. They are transcribed from Emotion
+  Regulation Handout 6 and cross-link Emotion Explorer, Change Emotion, Check
+  the Facts, Opposite Action, and Mindfulness of Current Emotions. Handouts 8,
+  8A, 9, 11, 13, and 22 supply the related decision and skill context.
+- Change Emotion uses the exact Handout 9 yes/no branches, a local Handout 8
+  Check the Facts editor, Handout 8A fit-facts context, and source-defined leaves
+  for mindful observation/action, problem solving, changing thoughts, and
+  opposite action.
+- Worry Tree separates actionable and hypothetical/outside-control branches.
+  Later actions and optional worry time use the shared calendar, and outcomes
+  link to Worry Time, Understanding Worry, problem solving, grounding,
+  mindfulness, and the Skill Thermometer.
+- Pleasant Event Planner preserves all 225 Handout 16 activities in a dense
+  searchable/filterable grid, supports a custom activity, and schedules once or
+  recurrently. Browse categories are explicitly described as aids derived from
+  the source list, not source headings.
+- Behavioural Activation reuses a curated subset of that same 225-item source
+  library, permits a custom activity, and supports one-time or recurring plans.
+- Behaviour Chain follows the scanned three-page worksheet directly: problem
+  behaviour, prompting event, source vulnerability checklist, fixed link types,
+  short/long pros and cons, solution analysis, harm/repair, three committed
+  skills, and helpfulness rating. Legacy generic-link state migrates into the
+  source fields when reopened.
+- Missing Links follows General Worksheet 3 in order. Each No branch records its
+  own source follow-up and problem-solving response before the correct stopping
+  leaf; Yes advances through knowing, willingness, remembering, and immediate
+  action. It uses the shared constrained tree and shared progress system.
+- Values Review adds an optional reusable schedule/cadence editor and ends with
+  Revisit my Values plan.
+- SMART Goal Builder displays “Can we simplify the goal?”, the requested smaller
+  action help text, a separate barrier prompt, and the existing follow-through
+  support prompt. The stored `smallest` and `support` keys remain; `barrier` is
+  additive, and validation/normalization accepts older saved progress. Existing
+  recurrence, GTD Markdown, and Values handoff behaviour remains intact.
+
+## Shared calendar
+
+`site/assets/therapy-calendar.js` is the browser-local calendar authority used
+by SMART Goal, Worry Tree, Pleasant Event, Behavioural Activation, and Values
+Review. It owns one-time/recurring state, dates, times, positive duration,
+weekdays, repeat interval, end rules, local timezone, ICS creation, and Google
+Calendar URLs. No network request or OAuth occurs when editing; Google Calendar
+opens only from an explicit click, and ICS is generated locally. SMART Goal's
+existing UI and save/GTD schema delegate calculations to this helper to preserve
+recurrence compatibility.
+
+## Source-pipeline integration and publication
+
+The specialized-tool relationships already present in
+`data/resource-paraphrases.json` remain canonical: Worry Tree, Handout 9,
+Pleasant Events 1–3, Behaviour Chain pages 1–3, Missing Links, SMART Goal, and
+Behavioural Activation source records point at their tool routes. Tools read the
+verified source or shared source data rather than publishing review-needed
+adapted text. General resource publication gating is unchanged. The generator's
+repeated opening language is now “adapted text” or “adapted worksheet”; review
+status continues to carry the unapproved state without putting “draft” into
+every content heading.

@@ -136,6 +136,26 @@ website:
               href: learn/emotion-regulation/abc-please.qmd
             - text: "6. Building Mastery & Cope Ahead"
               href: learn/emotion-regulation/positive-emotions-mastery-cope-ahead.qmd
+            - text: "7. Anger"
+              href: learn/emotion-regulation/emotions/anger.qmd
+            - text: "8. Disgust"
+              href: learn/emotion-regulation/emotions/disgust.qmd
+            - text: "9. Envy"
+              href: learn/emotion-regulation/emotions/envy.qmd
+            - text: "10. Fear"
+              href: learn/emotion-regulation/emotions/fear.qmd
+            - text: "11. Happiness"
+              href: learn/emotion-regulation/emotions/happiness.qmd
+            - text: "12. Jealousy"
+              href: learn/emotion-regulation/emotions/jealousy.qmd
+            - text: "13. Love"
+              href: learn/emotion-regulation/emotions/love.qmd
+            - text: "14. Sadness"
+              href: learn/emotion-regulation/emotions/sadness.qmd
+            - text: "15. Shame"
+              href: learn/emotion-regulation/emotions/shame.qmd
+            - text: "16. Guilt"
+              href: learn/emotion-regulation/emotions/guilt.qmd
     - id: cbt
       title: "CBT Skills"
       style: docked
