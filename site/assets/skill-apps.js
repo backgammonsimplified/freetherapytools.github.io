@@ -170,8 +170,10 @@
     generatedMissionStatement,
     rankedSelectedDomains,
     domainPriorityRadius,
+    valueImportanceRadius,
+    valueImportanceDistance,
     missionMapData,
-    missionMapLayout,
+    missionMapVisibleGraph,
     priorityDistributionMarkup,
     missionCalculationDetailsMarkup,
     missionMapMarkup,
@@ -311,22 +313,15 @@
     return String(name || "").split(/,| & /, 1)[0].trim();
   }
 
+  function valueImportanceRadius(importance) {
+    return { High: 30, Medium: 26, Low: 22 }[normalizedValueImportance(importance)] || 22;
+  }
+
+  function valueImportanceDistance(importance) {
+    return { High: 116, Medium: 154, Low: 192 }[normalizedValueImportance(importance)] || 154;
+  }
+
   function missionMapData(data, state, rankedDomains = rankedSelectedDomains(data, state)) {
-    const domainOrder = new Map(rankedDomains.map((item, index) => [item.domain.id, index]));
-    const selectedDomainIds = new Set(domainOrder.keys());
-    const values = [...data.values, ...(state.legacy || []), ...(state.custom || [])]
-      .filter((value) => state.selected?.[value.id])
-      .map((value) => ({
-        id: value.id,
-        name: value.name,
-        importance: normalizedValueImportance(state.selected[value.id]?.rating),
-        domainIds: [...new Set((state.domains?.[value.id] || []).filter((domainId) => selectedDomainIds.has(domainId)))]
-          .sort((left, right) => domainOrder.get(left) - domainOrder.get(right) || left.localeCompare(right)),
-      }))
-      .filter((value) => value.domainIds.length)
-      .sort((left, right) => importanceRank(left.importance) - importanceRank(right.importance)
-        || left.name.localeCompare(right.name, undefined, { sensitivity: "base" })
-        || left.id.localeCompare(right.id));
     const domains = rankedDomains.map((item, index) => ({
       id: item.domain.id,
       name: item.domain.name,
@@ -336,66 +331,84 @@
       displayPercent: item.displayPercent,
       radius: domainPriorityRadius(item.relativeScore),
       colorIndex: index % 9,
-      valueIds: values.filter((value) => value.domainIds.includes(item.domain.id)).map((value) => value.id),
+      valueNodeIds: [],
     }));
+    const values = domains.flatMap((domain) => assignedValuesForDomain(data, state, domain.id)
+      .sort((left, right) => importanceRank(state.selected?.[left.id]?.rating) - importanceRank(state.selected?.[right.id]?.rating)
+        || left.name.localeCompare(right.name, undefined, { sensitivity: "base" }))
+      .map((value) => {
+        const importance = normalizedValueImportance(state.selected?.[value.id]?.rating);
+        const node = {
+          id: `value-${domain.id}-${value.id}`,
+          valueId: value.id,
+          domainId: domain.id,
+          domainName: domain.name,
+          name: value.name,
+          importance,
+          radius: valueImportanceRadius(importance),
+          linkDistance: valueImportanceDistance(importance),
+        };
+        domain.valueNodeIds.push(node.id);
+        return node;
+      }));
     const edges = [
       ...domains.map((domain) => ({ id: `you-domain-${domain.id}`, source: "you", target: `domain-${domain.id}`, type: "domain" })),
-      ...domains.flatMap((domain) => domain.valueIds.map((valueId) => ({
-        id: `domain-${domain.id}-value-${valueId}`,
+      ...domains.flatMap((domain) => domain.valueNodeIds.map((valueNodeId) => ({
+        id: `domain-${domain.id}-${valueNodeId}`,
         source: `domain-${domain.id}`,
-        target: `value-${valueId}`,
+        target: valueNodeId,
         type: "value",
       }))),
     ];
     return { center: { id: "you", label: "You" }, domains, values, edges };
   }
 
-  function missionMapLayout(map, mode = "desktop") {
-    const anchored = new Map(map.domains.map((domain) => [domain.id, []]));
-    map.values.forEach((value) => anchored.get(value.domainIds[0])?.push(value));
-    if (mode === "mobile") {
-      const width = 390;
-      const center = { id: "you", x: width / 2, y: 46, radius: 30 };
-      const domains = [];
-      const values = [];
-      let cursor = 112;
-      map.domains.forEach((domain) => {
-        const branchValues = anchored.get(domain.id) || [];
-        const branchHeight = Math.max((domain.radius * 2) + 36, Math.max(1, branchValues.length) * 46 + 34);
-        const y = cursor + branchHeight / 2;
-        domains.push({ ...domain, x: 96, y });
-        const firstValueY = y - ((branchValues.length - 1) * 46 / 2);
-        branchValues.forEach((value, index) => values.push({ ...value, x: 292, y: firstValueY + index * 46, width: 150, height: 36 }));
-        cursor += branchHeight + 24;
-      });
-      return { mode, width, height: Math.max(260, cursor + 12), center, domains, values };
-    }
-
-    const capacity = map.domains.length <= 4 ? 6 : map.domains.length <= 6 ? 4 : 3;
-    const maximumRings = Math.max(1, ...map.domains.map((domain) => Math.ceil((anchored.get(domain.id) || []).length / capacity)));
-    const outerRadius = 326 + ((maximumRings - 1) * 54);
-    const size = Math.max(860, Math.ceil((outerRadius + 104) * 2));
-    const center = { id: "you", x: size / 2, y: size / 2, radius: 34 };
-    const domainRing = Math.min(232, size * 0.27);
+  function missionMapVisibleGraph(map, expandedDomainIds = [], options = {}) {
+    const expanded = new Set(expandedDomainIds);
+    const compact = Boolean(options.compact);
+    const domainRing = compact ? 138 : map.domains.length <= 5 ? 184 : 214;
+    const centerRadius = compact ? 31 : 36;
+    const center = { ...map.center, type: "center", x: 0, y: 0, radius: centerRadius, hitRadius: 34, collisionRadius: centerRadius + 4 };
     const domains = map.domains.map((domain, index) => {
       const angle = -Math.PI / 2 + (index * Math.PI * 2 / Math.max(1, map.domains.length));
-      return { ...domain, angle, x: center.x + Math.cos(angle) * domainRing, y: center.y + Math.sin(angle) * domainRing };
+      const radius = domain.radius * (compact ? 0.72 : 1);
+      return {
+        ...domain,
+        id: `domain-${domain.id}`,
+        domainId: domain.id,
+        type: "domain",
+        expanded: expanded.has(domain.id),
+        angle,
+        x: Math.cos(angle) * domainRing,
+        y: Math.sin(angle) * domainRing,
+        radius,
+        hitRadius: Math.max(radius, 34),
+        collisionRadius: Math.max(radius + 7, 36),
+      };
     });
-    const values = [];
-    domains.forEach((domain) => {
-      const branchValues = anchored.get(domain.id) || [];
-      const sector = Math.min(0.72, (Math.PI * 2 / Math.max(1, domains.length)) * 0.78);
-      for (let start = 0, ring = 0; start < branchValues.length; start += capacity, ring += 1) {
-        const row = branchValues.slice(start, start + capacity);
-        row.forEach((value, index) => {
-          const offset = row.length === 1 ? 0 : ((index / (row.length - 1)) - 0.5) * sector;
-          const radius = 326 + ring * 54;
-          const angle = domain.angle + offset;
-          values.push({ ...value, x: center.x + Math.cos(angle) * radius, y: center.y + Math.sin(angle) * radius, width: 126, height: 34 });
-        });
-      }
+    const domainNodes = new Map(domains.map((domain) => [domain.domainId, domain]));
+    const values = map.values.filter((value) => expanded.has(value.domainId)).map((value, index) => {
+      const parent = domainNodes.get(value.domainId);
+      const linkDistance = value.linkDistance * (compact ? 0.78 : 1);
+      const hashOffset = ((stableHash(`${value.domainId}:${value.valueId}`) % 1000) / 1000 - 0.5) * 0.82;
+      const angle = (parent?.angle || 0) + hashOffset;
+      return {
+        ...value,
+        linkDistance,
+        type: "value",
+        x: (parent?.x || 0) + Math.cos(angle) * linkDistance,
+        y: (parent?.y || 0) + Math.sin(angle) * linkDistance,
+        hitRadius: Math.max(value.radius, 34),
+        collisionRadius: Math.max(value.radius + 5, Math.min(72, 28 + value.name.length * 2.2)),
+        order: index,
+      };
     });
-    return { mode, width: size, height: size, center, domains, values };
+    const visibleIds = new Set([center.id, ...domains.map((domain) => domain.id), ...values.map((value) => value.id)]);
+    const links = map.edges.filter((edge) => visibleIds.has(edge.source) && visibleIds.has(edge.target)).map((edge) => ({
+      ...edge,
+      distance: edge.type === "value" ? values.find((value) => value.id === edge.target)?.linkDistance : compact ? 132 : 176,
+    }));
+    return { nodes: [center, ...domains, ...values], links };
   }
 
   function progressMarkup(step, furthestStep) {
@@ -684,59 +697,106 @@
     return `<text class="${className}" x="${x}" y="${start}" text-anchor="middle">${lines.map((line, index) => `<tspan x="${x}" dy="${index ? 14 : 0}">${escapeHtml(line)}</tspan>`).join("")}</text>`;
   }
 
-  function missionMapSvg(map, layout, idPrefix) {
-    const nodes = new Map([
-      ["you", layout.center],
-      ...layout.domains.map((domain) => [`domain-${domain.id}`, domain]),
-      ...layout.values.map((value) => [`value-${value.id}`, value]),
-    ]);
-    const edges = map.edges.map((edge) => {
-      const source = nodes.get(edge.source);
-      const target = nodes.get(edge.target);
-      if (!source || !target) return "";
-      return `<line class="values-map-edge values-map-edge-${edge.type}" data-map-edge="${escapeHtml(edge.id)}" x1="${source.x.toFixed(2)}" y1="${source.y.toFixed(2)}" x2="${target.x.toFixed(2)}" y2="${target.y.toFixed(2)}"><title>${escapeHtml(edge.type === "domain" ? `You to ${target.name}` : `${source.name} to ${target.name}`)}</title></line>`;
-    }).join("");
-    const domains = layout.domains.map((domain) => `<g class="values-map-domain-node" data-map-node="domain-${escapeHtml(domain.id)}" transform="translate(${domain.x.toFixed(2)} ${domain.y.toFixed(2)})">
-      <title>${escapeHtml(`${domain.name} — ${domain.displayPercent}% Relative Priority`)}</title>
-      <circle class="values-map-domain values-priority-color-${domain.colorIndex}" r="${domain.radius.toFixed(2)}"></circle>
-      ${svgTextMarkup(domain.displayName, 0, -5, "values-map-domain-label", 15, 2)}
-      <text class="values-map-domain-percent" x="0" y="22" text-anchor="middle">${domain.displayPercent}%</text>
-    </g>`).join("");
-    const values = layout.values.map((value) => `<g class="values-map-value-node" data-map-node="value-${escapeHtml(value.id)}" transform="translate(${value.x.toFixed(2)} ${value.y.toFixed(2)})">
-      <title>${escapeHtml(`${value.name}${value.importance ? ` — ${value.importance} importance` : ""}; connected to ${value.domainIds.map((domainId) => map.domains.find((domain) => domain.id === domainId)?.name).filter(Boolean).join(", ")}`)}</title>
-      <rect class="values-map-value" x="${(-value.width / 2).toFixed(2)}" y="${(-value.height / 2).toFixed(2)}" width="${value.width}" height="${value.height}" rx="${Math.min(17, value.height / 2)}"></rect>
-      ${svgTextMarkup(value.name, 0, 4, "values-map-value-label", layout.mode === "mobile" ? 20 : 16, 2)}
-    </g>`).join("");
-    return `<svg class="values-map-svg values-map-svg-${layout.mode}" viewBox="0 0 ${layout.width} ${layout.height}" role="img" aria-labelledby="${idPrefix}-title ${idPrefix}-description" preserveAspectRatio="xMidYMid meet">
-      <title id="${idPrefix}-title">My values map</title>
-      <desc id="${idPrefix}-description">You connects to every selected life domain. Domain circle area increases with Relative Priority. Each assigned Value connects to every selected domain where it was placed.</desc>
-      <g class="values-map-edges">${edges}</g>
-      <g class="values-map-center" data-map-node="you" transform="translate(${layout.center.x} ${layout.center.y})"><circle r="${layout.center.radius}"></circle><text x="0" y="5" text-anchor="middle">You</text></g>
-      <g class="values-map-domains">${domains}</g>
-      <g class="values-map-values">${values}</g>
-    </svg>`;
-  }
-
   function missionMapMarkup(data, state, rankedDomains = rankedSelectedDomains(data, state)) {
     const map = missionMapData(data, state, rankedDomains);
-    const desktop = missionMapLayout(map, "desktop");
-    const mobile = missionMapLayout(map, "mobile");
     const domainFallback = map.domains.map((domain) => {
-      const values = domain.valueIds.map((valueId) => map.values.find((value) => value.id === valueId)?.name).filter(Boolean);
-      return `<li><strong>${escapeHtml(domain.name)} — ${domain.displayPercent}%</strong>${values.length ? `<ul>${values.map((value) => `<li>${escapeHtml(value)}</li>`).join("")}</ul>` : "<p>No assigned Values.</p>"}</li>`;
+      const values = map.values.filter((value) => value.domainId === domain.id);
+      return `<li><strong>${escapeHtml(domain.name)} — ${domain.displayPercent}% Relative Priority</strong>${values.length ? `<ul>${values.map((value) => `<li>${escapeHtml(value.name)} — ${escapeHtml(value.importance || "Importance not selected")} importance</li>`).join("")}</ul>` : "<p>No assigned Values.</p>"}</li>`;
     }).join("");
-    const relationshipFallback = map.values.map((value) => `<li>${escapeHtml(value.name)} — connected to ${escapeHtml(naturalList(value.domainIds.map((domainId) => map.domains.find((domain) => domain.id === domainId)?.name).filter(Boolean)))}</li>`).join("");
-    return `<section class="values-map" aria-labelledby="values-map-heading">
+    return `<section class="values-map" aria-labelledby="values-map-heading" data-force-graph-root>
       <h4 id="values-map-heading">My values map</h4>
-      <p class="values-map-intro">Life Domains are sized by Relative Priority; Values connect to every domain where you assigned them.</p>
-      ${missionMapSvg(map, desktop, "values-map-desktop")}
-      ${missionMapSvg(map, mobile, "values-map-mobile")}
+      <p class="values-map-intro">Start with You and your life domains. Select a domain to expand or collapse its assigned Values. Domain area shows Relative Priority; Value size and distance show High, Medium, or Low importance.</p>
+      <div class="values-map-toolbar" role="group" aria-label="Values graph view controls">
+        <button type="button" class="secondary" data-graph-action="zoom-out" aria-label="Zoom out">−</button>
+        <button type="button" class="secondary" data-graph-action="zoom-in" aria-label="Zoom in">+</button>
+        <button type="button" class="secondary" data-graph-action="fit">Fit</button>
+        <button type="button" class="secondary" data-graph-action="reset">Reset</button>
+      </div>
+      <div class="values-map-viewport" data-force-viewport>
+        <div class="values-map-canvas" data-force-canvas>
+          <svg class="values-map-svg" role="group" aria-label="Interactive Values force graph. Use the controls to pan or zoom, and activate a life domain to show its Values.">
+            <g data-force-scene><g data-force-links></g><g data-force-nodes></g></g>
+          </svg>
+        </div>
+        <p class="visually-hidden" aria-live="polite" data-force-status>Showing You and all selected life domains. No Value nodes are visible.</p>
+      </div>
       <div class="visually-hidden" data-values-map-fallback>
-        <p>You connects to all selected life domains. Each domain lists its Relative Priority and assigned Values.</p>
+        <p>You. You connects to all selected life domains. Each domain lists its Relative Priority and every assigned Value with its importance.</p>
         <ul>${domainFallback}</ul>
-        <p>Value relationships:</p><ul>${relationshipFallback}</ul>
       </div>
     </section>`;
+  }
+
+  function initMissionGraph(root, data, state, expandedDomains) {
+    const container = root.querySelector("[data-force-viewport]");
+    if (!container || !global.TherapyForceGraph) return null;
+    const map = missionMapData(data, state);
+    const compact = container.getBoundingClientRect().width < 480;
+    const selectedDomainIds = new Set(map.domains.map((domain) => domain.id));
+    [...expandedDomains].forEach((domainId) => { if (!selectedDomainIds.has(domainId)) expandedDomains.delete(domainId); });
+    let graph;
+
+    const renderNode = (element, node) => {
+      if (node.type === "center") {
+        element.innerHTML = `<circle class="values-map-hit-target" r="${node.hitRadius}"></circle><circle class="values-map-center" r="${node.radius}"></circle><text class="values-map-center-label" x="0" y="5" text-anchor="middle">You</text>`;
+      } else if (node.type === "domain") {
+        element.innerHTML = `<circle class="values-map-hit-target" r="${node.hitRadius}"></circle><circle class="values-map-domain values-priority-color-${node.colorIndex}" r="${node.radius.toFixed(2)}"></circle>
+          ${svgTextMarkup(node.displayName, 0, -7, "values-map-domain-label", 15, 2)}
+          <text class="values-map-domain-percent" x="0" y="22" text-anchor="middle">${node.displayPercent}%</text>
+          <text class="values-map-domain-toggle" x="${(node.radius * 0.68).toFixed(1)}" y="${(-node.radius * 0.62).toFixed(1)}" text-anchor="middle">+</text>`;
+      } else {
+        const visualLabel = node.name.length > 22 ? `${node.name.slice(0, 21)}…` : node.name;
+        const labelWidth = Math.min(154, Math.max(66, visualLabel.length * 7.1 + 18));
+        element.innerHTML = `<circle class="values-map-hit-target" r="${node.hitRadius}"></circle><circle class="values-map-value values-map-value-${node.importance.toLowerCase()}" r="${node.radius}"></circle>
+          <rect class="values-map-value-label-bg" x="${(-labelWidth / 2).toFixed(1)}" y="${node.radius + 7}" width="${labelWidth.toFixed(1)}" height="24" rx="12"></rect>
+          <text class="values-map-value-label values-map-value-label-${node.importance.toLowerCase()}" x="0" y="${node.radius + 23}" text-anchor="middle">${escapeHtml(visualLabel)}</text>`;
+      }
+    };
+    const updateNode = (element, node) => {
+      element.setAttribute("data-map-node", node.id);
+      if (node.type !== "domain") return;
+      element.classList.toggle("is-expanded", node.expanded);
+      const indicator = element.querySelector(".values-map-domain-toggle");
+      if (indicator) indicator.textContent = node.expanded ? "−" : "+";
+    };
+    const updateGraph = (newNodeIds = []) => {
+      const visible = missionMapVisibleGraph(map, expandedDomains, { compact });
+      graph.update(visible.nodes, visible.links, { newNodeIds, reheat: 0.58 });
+    };
+    graph = global.TherapyForceGraph.createForceViewport({
+      container,
+      initialNodeIds: ["you", ...map.domains.map((domain) => `domain-${domain.id}`)],
+      minZoom: 0.45,
+      maxZoom: 3.2,
+      alphaDecay: 0.055,
+      velocityDecay: 0.54,
+      linkDistance: (link) => link.distance,
+      linkStrength: (link) => link.type === "domain" ? 0.44 : 0.62,
+      charge: (node) => node.type === "domain" ? -320 : node.type === "center" ? -220 : -115,
+      collisionRadius: (node) => node.collisionRadius,
+      draggable: (node) => node.type !== "center",
+      renderNode,
+      updateNode,
+      ariaLabel: (node) => {
+        if (node.type === "center") return "You, center of the Values graph";
+        if (node.type === "domain") return `${node.name}, ${node.displayPercent}% Relative Priority, ${node.expanded ? "expanded" : "collapsed"}. Press Enter or Space to ${node.expanded ? "collapse" : "expand"} assigned Values.`;
+        return `${node.name}, ${node.importance} importance, assigned to ${node.domainName}`;
+      },
+      onNodeActivate: (node) => {
+        if (node.type !== "domain") return;
+        const opening = !expandedDomains.has(node.domainId);
+        if (opening) expandedDomains.add(node.domainId);
+        else expandedDomains.delete(node.domainId);
+        const newNodeIds = opening ? map.values.filter((value) => value.domainId === node.domainId).map((value) => value.id) : [];
+        updateGraph(newNodeIds);
+        const count = map.values.filter((value) => value.domainId === node.domainId).length;
+        const status = container.querySelector("[data-force-status]");
+        if (status) status.textContent = `${opening ? "Expanded" : "Collapsed"} ${node.name}. ${opening ? `${count} assigned Value${count === 1 ? " is" : "s are"} visible.` : "Its assigned Values are hidden."}`;
+      },
+    });
+    if (!graph) return null;
+    updateGraph();
+    return graph;
   }
 
   function missionMarkup(data, state) {
@@ -823,6 +883,8 @@
     let searchQuery = "";
     let actionBarCollapsed = false;
     let updateActionBar = () => {};
+    const expandedMissionDomains = new Set();
+    let missionGraph = null;
 
     function setActionBarCollapsed(collapsed) {
       actionBarCollapsed = Boolean(collapsed);
@@ -836,6 +898,8 @@
     }
 
     function render(options = {}) {
+      missionGraph?.destroy?.();
+      missionGraph = null;
       state.step = Math.max(0, Math.min(STEPS.length - 1, Number(state.step) || 0));
       state.furthestStep = Math.max(state.step, Math.min(STEPS.length - 1, Number(state.furthestStep) || 0));
       const categorizationComplete = isCategorizationComplete(state);
@@ -857,6 +921,7 @@
       </div>`;
       setActionBarCollapsed(actionBarCollapsed);
       bind();
+      if (state.step === 4) missionGraph = initMissionGraph(root, data, state, expandedMissionDomains);
       updateActionBar();
       if (options.navigation) {
         global.requestAnimationFrame(() => {

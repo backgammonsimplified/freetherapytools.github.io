@@ -8,6 +8,10 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "site" / "data" / "skill-apps" / "values.json"
 APP = ROOT / "site" / "assets" / "skill-apps.js"
 CSS = ROOT / "site" / "assets" / "skill-apps.css"
+FORCE_GRAPH = ROOT / "site" / "assets" / "therapy-force-graph.js"
+D3_BUNDLE = ROOT / "site" / "assets" / "d3-values-force.min.js"
+SCRIPTS = ROOT / "site" / "includes" / "bs-scripts.html"
+QUARTO = ROOT / "site" / "_quarto.yml"
 LEARN_CSS = ROOT / "site" / "assets" / "bs-learn.css"
 LEARN_JS = ROOT / "site" / "assets" / "bs-learn.js"
 PAGE = ROOT / "site" / "skill-finder" / "values" / "index.qmd"
@@ -149,6 +153,9 @@ class ValuesModuleTests(unittest.TestCase):
         cls.data = json.loads(DATA.read_text(encoding="utf-8"))
         cls.javascript = APP.read_text(encoding="utf-8")
         cls.css = CSS.read_text(encoding="utf-8")
+        cls.force_graph = FORCE_GRAPH.read_text(encoding="utf-8")
+        cls.scripts = SCRIPTS.read_text(encoding="utf-8")
+        cls.quarto = QUARTO.read_text(encoding="utf-8")
         cls.learn_css = LEARN_CSS.read_text(encoding="utf-8")
         cls.learn_javascript = LEARN_JS.read_text(encoding="utf-8")
         cls.page = PAGE.read_text(encoding="utf-8")
@@ -321,18 +328,38 @@ class ValuesModuleTests(unittest.TestCase):
 
     def test_mission_map_and_compact_act_context_contracts(self):
         for token in (
-            "function missionMapData", "function missionMapLayout", "function domainPriorityRadius",
-            'data-map-node="you"', "values-map-svg-${layout.mode}",
-            'role="img" aria-labelledby=', "data-values-map-fallback", "connected to",
-            "Math.sqrt((minimum * minimum)", "Math.PI * 2", 'mode === "mobile"',
+            "function missionMapData", "function missionMapVisibleGraph", "function domainPriorityRadius",
+            "function valueImportanceRadius", "function valueImportanceDistance",
+            'data-force-viewport', 'data-force-scene', 'data-values-map-fallback',
+            "Math.sqrt((minimum * minimum)", "Math.PI * 2", "expandedDomains",
+            'id: `value-${domain.id}-${value.id}`', "Importance not selected",
         ):
             self.assertIn(token, self.javascript)
         self.assertNotIn("Math.random", self.javascript)
         self.assertIn('<details class="values-assigned-values"><summary>Values for this domain (${values.length})</summary>', self.javascript)
         self.assertNotIn("<h4>Values you placed here</h4>", self.javascript)
         self.assertIn("No Values are assigned to this domain yet", self.javascript)
-        self.assertIn(".values-map-svg-mobile", self.css)
+        self.assertIn(".values-map-viewport", self.css)
+        self.assertIn("touch-action: none", self.css)
         self.assertIn(".values-assigned-values", self.css)
+
+    def test_force_graph_dependency_viewport_and_accessibility_wiring(self):
+        self.assertTrue(D3_BUNDLE.is_file())
+        self.assertLess(D3_BUNDLE.stat().st_size, 80_000)
+        for token in ("forceSimulation", "forceLink", "forceManyBody", "forceCollide", "forceX", "forceY", "drag", "zoom"):
+            self.assertIn(token, self.force_graph)
+        for token in ("fitVisible", "resetView", "ensureVisible", "alphaTarget(0.08)", "node.fx = null", "node.fy = null", "reduced-settled", 'data-graph-action'):
+            self.assertIn(token, self.force_graph)
+        self.assertIn('container.closest("[data-force-graph-root]")', self.force_graph)
+        self.assertIn('event.key !== "Enter" && event.key !== " "', self.force_graph)
+        self.assertIn('aria-expanded', self.force_graph)
+        self.assertIn('d3-values-force.min.js?v=3.0.0-values-graph', self.scripts)
+        self.assertIn('therapy-force-graph.js?v=20260823-values-force', self.scripts)
+        self.assertLess(self.scripts.index("d3-values-force.min.js"), self.scripts.index("therapy-force-graph.js"))
+        self.assertLess(self.scripts.index("therapy-force-graph.js"), self.scripts.index("skill-apps.js"))
+        self.assertIn("assets/d3-values-force.min.js", self.quarto)
+        self.assertIn("assets/therapy-force-graph.js", self.quarto)
+        self.assertTrue((ROOT / "LICENSES" / "D3-ISC.txt").is_file())
 
     def test_completed_process_steps_are_clickable_for_back_navigation(self):
         self.assertIn('data-values-step="${index}"', self.javascript)

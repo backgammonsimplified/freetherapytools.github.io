@@ -13,6 +13,8 @@ project:
     - "assets/social/generated/*.png"
     - assets/bs-glossary.js
     - assets/bs-learn.js
+    - assets/d3-values-force.min.js
+    - assets/therapy-force-graph.js
     - assets/skill-apps.js
     - assets/skill-progress.js
     - assets/skill-handoff.js

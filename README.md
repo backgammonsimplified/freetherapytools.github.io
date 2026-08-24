@@ -1589,10 +1589,18 @@ The map is derived view state and is not added to saved-progress schemas:
 ```text
 You
   -> selected Life Domains (circle area sized by normalized Relative Priority)
-       -> all Values assigned to each domain
+       -> assigned Values revealed for each expanded domain
 ```
 
-It uses deterministic SVG rather than a graph dependency. Desktop uses a ranked radial layout; narrow screens use a taller deterministic domain/value branch layout. Each Value is one visual node per rendered map. A Value assigned to several domains receives an edge from every one of those domains. Zero-score domains remain visible at the minimum circle size while retaining a truthful `0%` label. Full domain names, percentages, and relationships are also exposed through SVG descriptions and structured assistive text.
+The Values map is an interactive force graph. Its initial focused view contains only `You` and every selected life domain; no Value nodes are visible until a domain is activated. Clicking a domain, or focusing it and pressing Enter/Space, independently expands or collapses that domain's assigned Values. Several domains can remain expanded at once.
+
+Life-domain circle area continues to encode the shared normalized Relative Priority calculation, including a visible minimum size and truthful `0%` for zero-score domains. Domain colors use the same nine identities as the segmented priority bar. Value circle size encodes existing H/M/L importance (High largest, Medium middle, Low smallest), and spring target distance communicates the same rating (High closest, Medium middle, Low furthest). Text labels and the assistive relationship list state the ratings explicitly, so size, color, and distance are not the only representations.
+
+A Value assigned to several domains is rendered as a separate derived visual node under every assigned domain. Those nodes retain the same underlying Value identity; assignments and saved state are not duplicated. Physics coordinates, velocity, camera transform, and open branches are transient view state and are not persisted.
+
+The graph supports background pan, wheel/trackpad/pinch zoom, elastic node drag, visible-node Fit, and a Reset camera action that returns to the initial `You` + life-domain framing without closing expanded branches. D3's focused `force`, `selection`, `drag`, and `zoom` modules are vendored locally in `site/assets/d3-values-force.min.js`; there is no runtime CDN or other network dependency. `site/assets/therapy-force-graph.js` holds small reusable viewport, camera, drag, simulation reheat/settle, and reduced-motion primitives. These lightweight primitives are intended for the later Emotion Explorer graph and constrained Worry Tree / Change Emotion / Missing Links tools, without putting those tools' domain logic into Values.
+
+The D3 subset is built locally from `d3-force@3.0.0`, `d3-selection@3.0.0`, `d3-drag@3.0.0`, and `d3-zoom@3.0.0`; its ISC notice is recorded in `LICENSES/D3-ISC.txt` and `THIRD_PARTY_NOTICES.md`. Quarto explicitly copies both graph assets so rendered Values remains self-contained and works offline.
 
 The generated Mission text remains editable. Manual edits persist. Only explicit Regenerate replaces a manual draft; opening or closing either disclosure does not regenerate it.
 

@@ -1124,39 +1124,93 @@ button.values-inline-choice:hover {
   color: var(--bs-text-muted, #5f5954);
 }
 
+.values-map-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  margin-bottom: 0.55rem;
+}
+
+.values-map-toolbar button {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0.45rem 0.7rem;
+}
+
+.values-map-viewport {
+  position: relative;
+  min-width: 0;
+  border: 1px solid var(--bs-border, #d9ccc0);
+  border-radius: 0.7rem;
+  background:
+    radial-gradient(circle at 50% 47%, rgb(172 118 82 / 9%), transparent 34%),
+    var(--skill-app-soft, #f8f0e8);
+  overflow: hidden;
+}
+
+.values-map-canvas {
+  width: 100%;
+  height: clamp(31.25rem, 58vw, 42rem);
+  min-width: 0;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.values-map-canvas:active {
+  cursor: grabbing;
+}
+
 .values-map-svg {
   display: block;
   width: 100%;
-  max-width: 64rem;
-  height: auto;
-  margin-inline: auto;
-  overflow: visible;
+  height: 100%;
+  overflow: hidden;
 }
 
-.values-map-svg-mobile {
-  display: none;
-}
-
-.values-map-edge {
+.therapy-force-link {
   stroke: var(--bs-border-strong, #88786e);
   stroke-linecap: round;
   stroke-width: 2;
   vector-effect: non-scaling-stroke;
 }
 
-.values-map-edge-value {
+.therapy-force-link-value {
   stroke: var(--bs-border-color, #b8aaa0);
   stroke-width: 1.25;
 }
 
-.values-map-center circle {
+.therapy-force-node {
+  cursor: grab;
+  outline: none;
+}
+
+.therapy-force-node:active {
+  cursor: grabbing;
+}
+
+.therapy-force-node:focus-visible .values-map-center,
+.therapy-force-node:focus-visible .values-map-domain,
+.therapy-force-node:focus-visible .values-map-value {
+  stroke: var(--bs-focus, #f0a43c);
+  stroke-width: 5;
+}
+
+.values-map-hit-target {
+  fill: transparent;
+  stroke: none;
+  pointer-events: all;
+}
+
+.values-map-center {
   fill: var(--bs-copper, #ac7652);
   stroke: var(--bs-text, #24202b);
   stroke-width: 2;
   vector-effect: non-scaling-stroke;
 }
 
-.values-map-center text,
+.values-map-center-label,
 .values-map-domain-label,
 .values-map-domain-percent {
   fill: var(--bs-text-inverse, #fff);
@@ -1166,8 +1220,9 @@ button.values-inline-choice:hover {
   stroke-width: 1px;
 }
 
-.values-map-center text {
+.values-map-center-label {
   font-size: 16px;
+  font-weight: 750;
 }
 
 .values-map-domain {
@@ -1186,12 +1241,27 @@ button.values-inline-choice:hover {
 .values-map-domain.values-priority-color-7 { fill: var(--values-priority-8); }
 .values-map-domain.values-priority-color-8 { fill: var(--values-priority-9); }
 
+.therapy-force-node-domain.is-expanded .values-map-domain {
+  stroke: var(--bs-copper-dark, #6f422c);
+  stroke-width: 4;
+  filter: drop-shadow(0 3px 4px rgb(36 32 43 / 18%));
+}
+
 .values-map-domain-label {
   font-size: 13px;
 }
 
 .values-map-domain-percent {
   font-size: 14px;
+}
+
+.values-map-domain-toggle {
+  fill: var(--bs-text-inverse, #fff);
+  font-size: 22px;
+  font-weight: 800;
+  paint-order: stroke;
+  stroke: rgb(0 0 0 / 38%);
+  stroke-width: 1px;
 }
 
 .values-map-value {
@@ -1201,10 +1271,40 @@ button.values-inline-choice:hover {
   vector-effect: non-scaling-stroke;
 }
 
+.values-map-value-high {
+  fill: var(--bs-copper-pale, #ead7c8);
+  stroke-width: 2.4;
+}
+
+.values-map-value-medium {
+  fill: var(--bs-callout-surface, #f8f0e8);
+}
+
+.values-map-value-low {
+  fill: var(--bs-surface, #fffdfc);
+  stroke: var(--bs-text-muted, #5f5954);
+}
+
+.values-map-value-label-bg {
+  fill: rgb(255 253 252 / 94%);
+  stroke: var(--bs-border, #d9ccc0);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
 .values-map-value-label {
   fill: var(--bs-text, #24202b);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 650;
+}
+
+.values-map-value-label-high {
+  font-weight: 800;
+}
+
+.values-map-value-label-low {
+  fill: var(--bs-text-muted, #5f5954);
+  font-weight: 550;
 }
 
 .values-mission-statement {
@@ -1222,12 +1322,43 @@ button.values-inline-choice:hover {
     margin-inline: 0.65rem;
   }
 
-  .values-map-svg-desktop {
-    display: none;
+  .values-map-toolbar {
+    justify-content: center;
+    margin-inline: 0.5rem;
   }
 
-  .values-map-svg-mobile {
-    display: block;
+  .values-map-canvas {
+    height: 36rem;
+  }
+
+  .values-map-center-label {
+    font-size: 18px;
+  }
+
+  .values-map-domain-label {
+    font-size: 18px;
+  }
+
+  .values-map-domain-percent {
+    font-size: 17px;
+  }
+
+  .values-map-domain-toggle {
+    font-size: 28px;
+  }
+
+  .values-map-value-label {
+    font-size: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .values-map *,
+  .values-map *::before,
+  .values-map *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }
 

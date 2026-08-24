@@ -23,6 +23,17 @@ The following tools and libraries are build dependencies and are not incorporate
 | fontTools | 4.63.0 | MIT | <https://fonttools.readthedocs.io/> |
 | R yaml | installed build dependency | BSD-3-Clause | <https://cran.r-project.org/package=yaml> |
 
+## D3 Values graph modules
+
+- Projects: `d3-force`, `d3-selection`, `d3-drag`, and `d3-zoom`
+- Version: 3.0.0 for each module
+- Copyright: 2010-2021 Mike Bostock
+- Licence: ISC
+- File: focused local browser bundle at `site/assets/d3-values-force.min.js`
+- Modifications: modules bundled and minified together; application behavior remains in project-owned `site/assets/therapy-force-graph.js`
+- Runtime loading: local static asset only; no CDN or other runtime network dependency
+- Licence text: `LICENSES/D3-ISC.txt`
+
 ## Project-owned visual assets
 
 The favicon, logo, app-icon, and generated social-preview assets are project-owned Backgammon Simplified branding, not third-party material. Their inclusion does not grant trademark rights. See `LICENSE.md` and `docs/ASSET_PROVENANCE.md`.

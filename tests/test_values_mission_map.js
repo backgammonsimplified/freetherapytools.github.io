@@ -14,6 +14,7 @@ const data = {
     { id: "x", name: "Value X", definition: "", aliases: [] },
     { id: "shared", name: "Shared Value", definition: "", aliases: [] },
     { id: "unassigned", name: "Unassigned Value", definition: "", aliases: [] },
+    { id: "ignored", name: "Ignored Value", definition: "", aliases: [] },
   ],
 };
 const custom = { id: "custom-1", name: "My custom Value", definition: "Mine", aliases: [] };
@@ -38,7 +39,7 @@ const state = {
   domains: {
     x: ["a"],
     shared: ["a", "b"],
-    unassigned: [],
+    unassigned: ["c"],
     "custom-1": ["c"],
   },
   focus: [],
@@ -63,17 +64,18 @@ const map = apps.missionMapData(data, state, ranked);
 assert.equal(map.center.label, "You");
 assert.deepEqual(map.domains.map((domain) => domain.id), ["a", "b", "c"]);
 assert.deepEqual(map.domains.map((domain) => domain.displayPercent), [60, 30, 10]);
-assert.deepEqual(map.values.map((value) => value.id), ["custom-1", "x", "shared"]);
-assert.equal(map.values.filter((value) => value.id === "shared").length, 1);
-assert.deepEqual(map.values.find((value) => value.id === "shared").domainIds, ["a", "b"]);
+assert.deepEqual(map.values.map((value) => value.id), ["value-a-x", "value-a-shared", "value-b-shared", "value-c-custom-1", "value-c-unassigned"]);
+assert.equal(map.values.filter((value) => value.valueId === "shared").length, 2);
+assert.deepEqual(map.values.filter((value) => value.valueId === "shared").map((value) => value.domainId), ["a", "b"]);
 assert.deepEqual(
-  map.edges.filter((edge) => edge.target === "value-shared").map((edge) => edge.source),
+  map.edges.filter((edge) => edge.target.endsWith("-shared")).map((edge) => edge.source),
   ["domain-a", "domain-b"],
 );
-assert.ok(map.edges.some((edge) => edge.source === "domain-a" && edge.target === "value-x"));
-assert.ok(map.edges.some((edge) => edge.source === "domain-c" && edge.target === "value-custom-1"));
-assert.ok(!map.edges.some((edge) => edge.source === "domain-b" && edge.target === "value-x"));
-assert.ok(!map.values.some((value) => value.id === "unassigned"));
+assert.ok(map.edges.some((edge) => edge.source === "domain-a" && edge.target === "value-a-x"));
+assert.ok(map.edges.some((edge) => edge.source === "domain-c" && edge.target === "value-c-custom-1"));
+assert.ok(!map.edges.some((edge) => edge.source === "domain-b" && edge.target === "value-a-x"));
+assert.ok(!map.values.some((value) => value.valueId === "ignored"));
+assert.equal(Object.keys(state.selected).filter((id) => id === "shared").length, 1, "derived duplicate nodes must not duplicate source state");
 
 assert.ok(map.domains[0].radius > map.domains[1].radius);
 assert.ok(map.domains[1].radius > map.domains[2].radius);
@@ -93,20 +95,42 @@ const zeroMap = apps.missionMapData(data, zeroState);
 assert.deepEqual(zeroMap.domains.map((domain) => domain.displayPercent), [0, 0, 0]);
 assert.deepEqual(zeroMap.domains.map((domain) => domain.radius), [38, 38, 38]);
 
-for (const mode of ["desktop", "mobile"]) {
-  const first = apps.missionMapLayout(map, mode);
-  const second = apps.missionMapLayout(apps.missionMapData(data, state), mode);
-  assert.deepEqual(first, second, `${mode} layout must be deterministic`);
-  assert.equal(first.domains.length, 3);
-  assert.equal(first.values.length, 3);
-}
+const initial = apps.missionMapVisibleGraph(map);
+assert.deepEqual(initial.nodes.map((node) => node.id), ["you", "domain-a", "domain-b", "domain-c"]);
+assert.equal(initial.nodes.filter((node) => node.type === "value").length, 0, "initial graph must contain no Value nodes");
+assert.equal(initial.links.length, 3);
+const compactInitial = apps.missionMapVisibleGraph(map, [], { compact: true });
+assert.equal(compactInitial.nodes.filter((node) => node.type === "value").length, 0);
+assert.ok(compactInitial.nodes.find((node) => node.id === "domain-a").radius > compactInitial.nodes.find((node) => node.id === "domain-b").radius);
+assert.ok(compactInitial.nodes.find((node) => node.id === "domain-b").radius > compactInitial.nodes.find((node) => node.id === "domain-c").radius);
+const domainAOpen = apps.missionMapVisibleGraph(map, ["a"]);
+assert.deepEqual(domainAOpen.nodes.filter((node) => node.type === "value").map((node) => node.id), ["value-a-x", "value-a-shared"]);
+assert.equal(apps.missionMapVisibleGraph(map, []).nodes.filter((node) => node.type === "value").length, 0, "a second toggle can restore the collapsed graph");
+const domainsABOpen = apps.missionMapVisibleGraph(map, ["a", "b"]);
+assert.deepEqual(domainsABOpen.nodes.filter((node) => node.type === "value" && node.valueId === "shared").map((node) => node.domainId), ["a", "b"]);
+assert.equal(domainsABOpen.nodes.find((node) => node.id === "domain-a").expanded, true);
+assert.equal(domainsABOpen.nodes.find((node) => node.id === "domain-b").expanded, true);
+assert.equal(domainsABOpen.nodes.find((node) => node.id === "domain-c").expanded, false);
+assert.deepEqual(apps.missionMapVisibleGraph(map, ["a", "b"]), apps.missionMapVisibleGraph(apps.missionMapData(data, state), ["a", "b"]), "derived starting positions must be deterministic");
 assert.deepEqual(apps.missionMapData(data, state).edges, apps.missionMapData(data, state).edges);
+
+assert.ok(apps.valueImportanceRadius("High") > apps.valueImportanceRadius("Medium"));
+assert.ok(apps.valueImportanceRadius("Medium") > apps.valueImportanceRadius("Low"));
+assert.ok(apps.valueImportanceDistance("High") < apps.valueImportanceDistance("Medium"));
+assert.ok(apps.valueImportanceDistance("Medium") < apps.valueImportanceDistance("Low"));
+assert.equal(map.values.find((value) => value.valueId === "x").radius, apps.valueImportanceRadius("High"));
+assert.equal(map.values.find((value) => value.valueId === "unassigned").linkDistance, apps.valueImportanceDistance("Low"));
+const compactAll = apps.missionMapVisibleGraph(map, ["a", "c"], { compact: true });
+assert.ok(compactAll.nodes.find((node) => node.valueId === "x").linkDistance < compactAll.nodes.find((node) => node.valueId === "unassigned").linkDistance);
 
 const config = { toolId: "values", toolTitle: "Values", route: "/skill-finder/values/", schemaVersion: 1 };
 const record = progress.makeRecord(config, state, new Date("2026-08-23T15:00:00Z"));
 for (const serialized of [progress.serializeMarkdown(record, "# Values"), progress.serializeJson(record)]) {
   const restored = progress.parseProgress(serialized).record.state;
   assert.deepEqual(apps.missionMapData(data, restored), map, "saved source state must reproduce the same map");
+  assert.ok(!("graph" in restored), "physics and camera data must not enter Values progress");
+  assert.equal(restored.mission.statement, "Manual mission");
+  assert.equal(restored.mission.autoGenerated, false);
 }
 
 const mission = apps.missionMarkup(data, structuredClone(state));
@@ -125,9 +149,12 @@ assert.doesNotMatch(mission, /<details class="values-calculation-details"[^>]*\s
 for (const token of ["Current Score (1-10)", "Desired Score (1-10)", "Gap (desired - current)", "Raw Attention Score", "Relative Priority", "positive gap = max(desired - current, 0)", "High = 3/3", "attention score = positive gap × importance weight"]) {
   assert.ok(mission.includes(token), token);
 }
-assert.match(mission, /role="img" aria-labelledby="values-map-desktop-title values-map-desktop-description"/);
+assert.match(mission, /class="values-map-svg" role="group" aria-label="Interactive Values force graph/);
 assert.match(mission, /data-values-map-fallback/);
-assert.match(mission, /Shared Value — connected to Domain A, Full Canonical Name and Domain B &amp; Full Canonical Name/);
+assert.match(mission, /Domain A, Full Canonical Name — 60% Relative Priority[\s\S]*Shared Value — Medium importance/);
+assert.match(mission, /Domain B &amp; Full Canonical Name — 30% Relative Priority[\s\S]*Shared Value — Medium importance/);
+for (const action of ["zoom-out", "zoom-in", "fit", "reset"]) assert.match(mission, new RegExp(`data-graph-action="${action}"`));
+assert.match(mission, /No Value nodes are visible/);
 
 const actionData = {
   domains: {
