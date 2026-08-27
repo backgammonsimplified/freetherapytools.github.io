@@ -58,6 +58,14 @@ Browse the curriculum's Pleasant Events List and make one idea easier to follow 
 
 ::: {.skill-app-hub-grid}
 ::: {.skill-app-hub-card}
+#### Case Map
+
+Organize a broader recurring problem across behaviours, physical concerns, thoughts, emotions, stressors, and strengths.
+
+[Open Case Map](/skill-finder/case-map/)
+:::
+
+::: {.skill-app-hub-card}
 #### Five Factor Model
 
 Map a situation through thoughts, emotions, body sensations, and behaviours.
@@ -176,7 +184,7 @@ Make one small action more specific and easier to start.
 ::: {.skill-app-hub-card}
 #### DEAR MAN Builder
 
-Organize your own words into DEAR MAN, with optional GIVE and FAST prompts.
+Organize your own words through the DEAR MAN structure.
 
 [Open DEAR MAN Builder](/skill-finder/dear-man/)
 :::
@@ -187,6 +195,14 @@ Organize your own words into DEAR MAN, with optional GIVE and FAST prompts.
 Think through priorities, intensity, and troubleshooting without an automatic score.
 
 [Open Ask or Say No Planner](/skill-finder/ask-or-say-no/)
+:::
+
+::: {.skill-app-hub-card}
+#### The Dime Game
+
+Use the source's ten factors and dime scoring to decide how strongly to ask for something or say No.
+
+[Open The Dime Game](/skill-finder/dime-game/)
 :::
 :::
 

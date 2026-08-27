@@ -8,7 +8,27 @@
     {"id":"mastery","label":"Mastery & accomplishment","keywords":["work","plan","repair","organize","learn","class","school","career","finish","clean","build","practice"]},
     {"id":"meaning","label":"Meaning & reflection","keywords":["remember","think","religion","help","volunteer","appreciat","meditat","pray"]}
   ],
-  "activation_suggestions": [9, 11, 13, 18, 21, 24, 29, 36, 37, 40, 41, 48, 53, 54, 57, 64, 73, 98, 107, 118, 142, 167, 198, 214],
+  "activation_suggestions": [9, 11, 13, 18, 21, 24, 29, 36, 37, 40, 48, 53, 81, 92, 98, 103, 104, 107, 112, 114, 116, 118, 119, 120, 127, 137, 140, 151, 157, 158, 169, 171, 172, 173, 175, 177, 178, 180, 185, 191, 193, 207, 208, 213, 215, 218, 219, 221],
+  "activation_micro_activities": [
+    {"id":"micro-step-outside","title":"Step outside for a few minutes","category":"outdoors"},
+    {"id":"micro-window","title":"Sit near a window for a few minutes","category":"outdoors"},
+    {"id":"micro-water","title":"Drink a glass of water","category":"self-care"},
+    {"id":"micro-tea","title":"Make tea or coffee","category":"pleasure"},
+    {"id":"micro-shower","title":"Take a shower","category":"self-care"},
+    {"id":"micro-clothes","title":"Change into clean or comfortable clothes","category":"self-care"},
+    {"id":"micro-curtains","title":"Open the curtains","category":"home"},
+    {"id":"micro-stretch","title":"Stretch for a few minutes","category":"movement"},
+    {"id":"micro-short-walk","title":"Walk to the end of the street or hallway","category":"movement"},
+    {"id":"micro-song","title":"Listen to one song","category":"pleasure"},
+    {"id":"micro-surface","title":"Tidy one small surface","category":"accomplishment"},
+    {"id":"micro-dishes","title":"Wash a few dishes","category":"home"},
+    {"id":"micro-message","title":"Send one message to someone","category":"connection"},
+    {"id":"micro-pages","title":"Read a few pages","category":"pleasure"},
+    {"id":"micro-plant","title":"Water a plant","category":"home"},
+    {"id":"micro-snack","title":"Prepare a simple snack","category":"basic routine"},
+    {"id":"micro-seat","title":"Sit somewhere different","category":"basic routine"},
+    {"id":"micro-put-away","title":"Put one item away","category":"accomplishment"}
+  ],
   "events": [
     {
       "id": 1,

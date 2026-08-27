@@ -1,0 +1,18 @@
+---
+title: "The Dime Game"
+description: "Use the source's ten factors to decide how strongly to ask for something or say No."
+sidebar: skill-finder
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+This guided tool follows **Interpersonal Effectiveness Worksheet 6: The Dime Game—Figuring Out How Strongly to Ask or Say No** and [Interpersonal Effectiveness Handout 8](/learn/interpersonal-effectiveness/saying-no.html#ask-say-no-intensity). Each source question stays visible after you answer it.
+
+::: {#dime-game-app .skill-app data-skill-app="dime-game"}
+Loading The Dime Game…
+:::
+
+[Back to all Skill Finder tools](/skill-finder/)
+

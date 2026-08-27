@@ -21,6 +21,7 @@
     "behavioural-activation": "/skill-finder/behavioural-activation/",
     "values-review": "/skill-finder/values-review/",
     "five-factor-model": "/skill-finder/five-factor-model/",
+    "case-map": "/skill-finder/case-map/",
     "thinking-traps": "/skill-finder/thinking-traps/",
     "thought-record": "/skill-finder/thought-record/",
     "worry-time": "/skill-finder/worry-time/",
@@ -28,6 +29,7 @@
     "gratitude-journal": "/skill-finder/gratitude-journal/",
     "positive-self-talk": "/skill-finder/positive-self-talk/",
     "grounding": "/skill-finder/grounding/",
+    "dime-game": "/skill-finder/dime-game/",
   });
 
   let active = null;
@@ -511,7 +513,9 @@
     privacySection.append(element("h3", { text: "Privacy" }), element("p", { className: "skill-progress-privacy", text: config.privacyText || "Your progress stays on this device unless you save a copy to your computer. Nothing you enter here is uploaded." }));
     const message = element("p", { className: "skill-progress-status", attrs: { role: "status", "aria-live": "polite" } });
     const close = element("button", { type: "button", text: "Close" });
-    drawer.append(heading, filenameLabel, filename, saveActions, markdownHelp, openSection, exportSection);
+    drawer.append(heading, filenameLabel, filename, saveActions, markdownHelp);
+    if (config.showOpenPreviousProgress !== false) drawer.append(openSection);
+    drawer.append(exportSection);
     if (browserSection) drawer.append(browserSection);
     drawer.append(privacySection, message, close);
     document.body.append(backdrop, drawer);
@@ -540,7 +544,7 @@
   function ensurePageControls() {
     if (!active) return;
     const header = active.config.root.querySelector(".skill-app-header");
-    if (header && !header.querySelector("[data-skill-progress-open]")) {
+    if (active.config.showOpenPreviousProgress !== false && header && !header.querySelector("[data-skill-progress-open]")) {
       const heading = header.querySelector("h2");
       if (heading) {
         const row = element("div", { className: "skill-progress-title-row" });

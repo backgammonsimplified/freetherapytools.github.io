@@ -1,12 +1,12 @@
 ---
 title: "DEAR MAN Builder"
-description: "Organize your own request or boundary into DEAR MAN, with optional GIVE and FAST prompts."
+description: "Organize your own request or boundary through the DEAR MAN structure."
 sidebar: skill-finder
 page-layout: full
 toc: false
 ---
 
-This tool organizes only the words you enter. Aim for clarity and respect; it does not generate pressure tactics or manipulative wording.
+This interactive tool focuses only on DEAR MAN. It organizes only the words you enter and does not generate pressure tactics or manipulative wording. GIVE and FAST remain available as separate educational lessons elsewhere in the curriculum.
 
 ::: {#dear-man-app .skill-app data-practice-app="dear-man"}
 Loading DEAR MAN Builder…

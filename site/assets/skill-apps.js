@@ -171,6 +171,7 @@
     rankedSelectedDomains,
     domainPriorityRadius,
     valueImportanceRadius,
+    valueVisualRadius,
     valueImportanceDistance,
     missionMapData,
     missionMapVisibleGraph,
@@ -317,6 +318,12 @@
     return { High: 30, Medium: 26, Low: 22 }[normalizedValueImportance(importance)] || 22;
   }
 
+  function valueVisualRadius(importance, domainCount = 1) {
+    const base = valueImportanceRadius(importance);
+    const count = Math.max(1, Number(domainCount) || 1);
+    return Math.min(base + 8, base + (Math.min(count, 4) - 1) * 3);
+  }
+
   function valueImportanceDistance(importance) {
     return { High: 116, Medium: 154, Low: 192 }[normalizedValueImportance(importance)] || 154;
   }
@@ -338,6 +345,8 @@
         valueNodeIds: [],
       };
     });
+    const assignmentCounts = new Map();
+    domains.forEach((domain) => assignedValuesForDomain(data, state, domain.id).forEach((value) => assignmentCounts.set(value.id, (assignmentCounts.get(value.id) || 0) + 1)));
     const values = domains.flatMap((domain) => assignedValuesForDomain(data, state, domain.id)
       .sort((left, right) => importanceRank(state.selected?.[left.id]?.rating) - importanceRank(state.selected?.[right.id]?.rating)
         || left.name.localeCompare(right.name, undefined, { sensitivity: "base" }))
@@ -350,7 +359,8 @@
           domainName: domain.name,
           name: value.name,
           importance,
-          radius: valueImportanceRadius(importance),
+          assignmentCount: assignmentCounts.get(value.id) || 1,
+          radius: valueVisualRadius(importance, assignmentCounts.get(value.id) || 1),
           linkDistance: valueImportanceDistance(importance),
         };
         domain.valueNodeIds.push(node.id);
@@ -786,8 +796,10 @@
         <div class="values-map-action-context">
           <div><span>Life domain</span><strong>${escapeHtml(node.domainName)}</strong></div>
           <div><span>Value</span><strong>${escapeHtml(node.name)}</strong></div>
-          <div><span>Importance</span><strong>${escapeHtml(node.importance || "Not selected")}</strong></div>
+          <div><span>Current importance</span><strong>${escapeHtml(node.importance || "Not selected")}</strong></div>
+          <div><span>Assigned to</span><strong>${node.assignmentCount} life domain${node.assignmentCount === 1 ? "" : "s"}</strong></div>
         </div>
+        <div class="skill-app-actions values-map-importance-action"><button type="button" data-map-mark-important ${node.importance === "High" ? "disabled" : ""}>${node.importance === "High" ? "Marked important (High)" : "Mark important"}</button><span class="skill-app-field-help">Mark important uses the existing High importance setting for this Value across its domain assignments.</span></div>
         <fieldset class="skill-app-fieldset"><legend>What could I work on?</legend>
           <div class="values-suggestion-list">${whats.map((item) => `<label class="skill-app-check"><input type="radio" name="map-what" value="${escapeHtml(item.id)}" ${actionSelection.whatId === item.id ? "checked" : ""}> <span>${escapeHtml(item.what)}</span></label>`).join("")}</div>
         </fieldset>
@@ -804,6 +816,15 @@
         actionSelection.howId = input.value;
         renderValueActionPanel(node);
       }));
+      panel.querySelector("[data-map-mark-important]")?.addEventListener("click", () => {
+        if (!state.selected[node.valueId]) return;
+        state.selected[node.valueId].rating = "High";
+        map.values.filter((value) => value.valueId === node.valueId).forEach((value) => { value.importance = "High"; value.radius = valueVisualRadius("High", value.assignmentCount); });
+        node.importance = "High";
+        node.radius = valueVisualRadius("High", node.assignmentCount);
+        updateGraph();
+        renderValueActionPanel(node);
+      });
       panel.querySelector("[data-map-add-shortlist]")?.addEventListener("click", () => {
         const selectedWhat = relevantWhats(node).find((item) => item.id === actionSelection.whatId);
         const selectedHow = selectedWhat?.hows?.find((item) => item.id === actionSelection.howId);

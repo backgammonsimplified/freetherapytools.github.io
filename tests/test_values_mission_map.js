@@ -142,6 +142,13 @@ assert.ok(apps.valueImportanceRadius("Medium") > apps.valueImportanceRadius("Low
 assert.ok(apps.valueImportanceDistance("High") < apps.valueImportanceDistance("Medium"));
 assert.ok(apps.valueImportanceDistance("Medium") < apps.valueImportanceDistance("Low"));
 assert.equal(map.values.find((value) => value.valueId === "x").radius, apps.valueImportanceRadius("High"));
+const sharedRepresentations = map.values.filter((value) => value.valueId === "shared");
+assert.ok(sharedRepresentations.every((value) => value.assignmentCount === 2));
+assert.ok(sharedRepresentations.every((value) => value.radius > apps.valueImportanceRadius("Medium")), "multi-domain Values are visibly larger");
+assert.equal(apps.valueVisualRadius("Medium", 1), apps.valueImportanceRadius("Medium"));
+assert.ok(apps.valueVisualRadius("Medium", 2) > apps.valueVisualRadius("Medium", 1));
+assert.ok(apps.valueVisualRadius("Medium", 3) > apps.valueVisualRadius("Medium", 2));
+assert.equal(apps.valueVisualRadius("Medium", 99), apps.valueImportanceRadius("Medium") + 8, "multi-domain sizing is capped");
 assert.equal(map.values.find((value) => value.valueId === "unassigned").linkDistance, apps.valueImportanceDistance("Low"));
 const compactAll = apps.missionMapVisibleGraph(map, ["a", "c"], { compact: true });
 assert.ok(compactAll.nodes.find((node) => node.valueId === "x").linkDistance < compactAll.nodes.find((node) => node.valueId === "unassigned").linkDistance);

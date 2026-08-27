@@ -1862,9 +1862,64 @@ button.values-inline-choice:hover {
   overflow: visible;
 }
 
+.skill-guided-tree { padding-top: .75rem; }
+.skill-guided-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(17rem, 23rem);
+  gap: 1.25rem;
+  align-items: start;
+}
+.skill-guided-layout.is-roadmap-hidden { grid-template-columns: minmax(0, 1fr); }
+.skill-guided-history { display: grid; gap: 1rem; min-width: 0; }
+.skill-guided-step {
+  padding: clamp(1rem, 2.5vw, 1.6rem);
+  border: 1px solid var(--skill-app-border);
+  border-radius: .65rem;
+  background: #fff;
+}
+.skill-guided-step.is-complete { border-left: .35rem solid #6e8798; background: #f8fafb; }
+.skill-guided-step.is-current { border: 2px solid #416f91; box-shadow: 0 .35rem 1rem rgb(45 62 77 / 10%); }
+.skill-guided-step h3 { margin: 0 0 .8rem; font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.2; }
+.skill-guided-step textarea { width: 100%; min-height: 8rem; }
+.skill-guided-step blockquote { margin: .65rem 0; padding: .7rem 1rem; border-left: .25rem solid #9aabb7; background: #fff; white-space: pre-wrap; }
+.skill-guided-answer { display: inline-block; margin: .4rem 0 .8rem; padding: .5rem .8rem; border-radius: .45rem; background: #e9eef2; font-weight: 800; }
+.skill-guided-answer--yes { background: #dcefe2; color: #155b32; }
+.skill-guided-answer--no { background: #f7dfdf; color: #7b2929; }
+.skill-guided-choices { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1rem; }
+.skill-guided-choice { min-width: 8rem; min-height: 3.5rem; padding: .8rem 1.35rem; font-size: 1.05rem; }
+.skill-app .skill-guided-choice--yes { background: #237846; border-color: #185c34; color: #fff; }
+.skill-app .skill-guided-choice--no { background: #a83b3b; border-color: #812b2b; color: #fff; }
+.skill-guided-roadmap { position: sticky; top: 5rem; max-height: calc(100vh - 6rem); overflow: auto; padding: .9rem; border-left: 1px solid var(--skill-app-border); background: #faf8f5; }
+.skill-guided-roadmap-header { display: flex; align-items: center; justify-content: space-between; gap: .6rem; }
+.skill-guided-roadmap-header h3 { margin: 0; }
+.skill-guided-roadmap-list { display: grid; gap: .35rem; margin: .8rem 0 0; padding: 0; list-style: none; }
+.skill-guided-roadmap-list li { position: relative; padding-left: calc(.65rem + min(var(--roadmap-level), 4) * .45rem); border-left: 3px solid #c3cbd1; }
+.skill-guided-roadmap-list li.is-visited { border-color: #6e8798; }
+.skill-guided-roadmap-list li.is-current { border-color: #b87710; font-weight: 800; }
+.skill-guided-roadmap-list li.is-future { opacity: .56; }
+.skill-guided-roadmap-list button,
+.skill-guided-roadmap-list span { display: block; width: 100%; padding: .35rem .25rem; border: 0; background: transparent; color: inherit; text-align: left; font: inherit; }
+.skill-guided-roadmap-list button { text-decoration: underline; text-underline-offset: .15em; }
+.skill-guided-roadmap-show { justify-self: end; }
+.dime-result { padding: 1rem; border-left: .4rem solid #416f91; background: #eef4f7; }
+.dime-total { font-size: 1.25rem; }
+
 /* Focused source-backed Skill Finder tools */
 .quick-tool-shell { max-width: 76rem; }
 .quick-tool-source-links { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.25rem; }
+
+.pleasant-event-grid .is-selected { outline: 3px solid #2c6b4a; outline-offset: 2px; background: #e0f0e6; color: #174b31; }
+.pleasant-custom-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .6rem; }
+.pleasant-planning-area { margin-top: 1.5rem; scroll-margin-top: 5rem; }
+.pleasant-list-add-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+.pleasant-plan-lists { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; margin-top: 1rem; }
+.pleasant-plan-list { min-width: 0; padding: .8rem; border: 1px solid var(--skill-app-border); border-radius: .55rem; background: #fff; }
+.pleasant-plan-list h4 { margin-top: 0; }
+.pleasant-plan-list ol { display: grid; gap: .55rem; padding-left: 1.35rem; }
+.pleasant-plan-list li > span { overflow-wrap: anywhere; }
+.pleasant-plan-list-actions { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .25rem; }
+.pleasant-plan-list-actions button { min-height: 2rem; padding: .25rem .5rem; }
+.pleasant-optional-schedule { margin-top: 1rem; }
 
 .five-factor-map {
   display: grid;
@@ -1898,16 +1953,31 @@ button.values-inline-choice:hover {
 .five-factor-card--1 { grid-column: 1 / 3; }
 .five-factor-card--2 { grid-column: 5 / 7; }
 
-.thinking-trap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: .7rem; }
-.thinking-trap-card { display: grid !important; gap: .3rem; margin: 0 !important; min-height: 10rem; padding: .8rem; border: 1px solid var(--skill-app-border); border-radius: .6rem; background: #fff; font-weight: 400 !important; }
+.thinking-trap-grid { display: grid; grid-template-columns: 1fr; gap: .7rem; }
+.thinking-trap-card { display: grid !important; gap: .3rem; margin: 0 !important; min-height: 0; padding: .8rem; border: 1px solid var(--skill-app-border); border-radius: .6rem; background: #fff; font-weight: 400 !important; }
 .thinking-trap-choice { display: flex; align-items: flex-start; gap: .5rem; }
 .thinking-trap-choice input { width: 1.25rem; height: 1.25rem; flex: 0 0 auto; }
 .thinking-trap-card small { color: var(--bs-text-muted, #5f5954); }
+.challenge-thought { margin-top: 1.25rem; padding-top: 1rem; border-top: 2px solid var(--skill-app-border); }
+.challenge-thought h3 { font-size: clamp(1.45rem, 3vw, 2rem); }
 
 .thought-record-steps { display: grid; gap: 1rem; padding: 0; list-style: none; counter-reset: none; }
 .thought-record-steps > li { padding: clamp(.8rem, 2vw, 1.25rem); border: 1px solid var(--skill-app-border); border-radius: .7rem; background: #fff; }
 .thought-record-steps h3 { margin-top: 0; }
 .thought-record-traps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: .25rem .8rem; }
+.thought-emotion-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; }
+.thought-emotion-card { display: grid; gap: .3rem; min-width: 0; padding: .7rem; border: 1px solid var(--skill-app-border); border-radius: .55rem; background: #fff; }
+.thought-emotion-card h4 { margin: 0; }
+.thought-emotion-card textarea { min-height: 4.5rem; }
+.automatic-thought-list { display: grid; gap: .7rem; margin-bottom: .7rem; }
+.automatic-thought-row { display: grid; gap: .35rem; padding: .7rem; border-left: .3rem solid #6e8798; background: #f8fafb; }
+.hot-thought-fieldset { margin-top: 1rem; }
+.thought-rerating-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
+.thought-rerating { display: grid; grid-template-columns: minmax(0, 1fr) 6rem; align-items: center; gap: .6rem; margin: 0 !important; }
+.case-map-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+.case-map-field { display: grid !important; gap: .35rem; margin: 0 !important; padding: .9rem; border: 1px solid var(--skill-app-border); border-radius: .6rem; background: #fff; }
+.case-map-field > span { color: var(--bs-text-muted, #5f5954); font-weight: 400; }
+.box-breathing-safety { grid-column: 1 / -1; }
 
 .box-breathing-tool { display: grid; grid-template-columns: minmax(18rem, 1fr) minmax(18rem, .8fr); gap: 1.5rem; align-items: center; }
 .box-breathing-stage { display: grid; place-items: center; min-height: 25rem; overflow: hidden; }
@@ -1991,7 +2061,8 @@ button.values-inline-choice:hover {
 
 .skill-app[data-skill-app="change-emotion"] .skill-app-shell,
 .skill-app[data-skill-app="worry-tree"] .skill-app-shell,
-.skill-app[data-skill-app="missing-links"] .skill-app-shell {
+.skill-app[data-skill-app="missing-links"] .skill-app-shell,
+.skill-app[data-skill-app="dime-game"] .skill-app-shell {
   width: 100%;
   max-width: none;
   border: 0;
@@ -2003,7 +2074,8 @@ button.values-inline-choice:hover {
 
 .skill-app[data-skill-app="change-emotion"] .skill-app-header,
 .skill-app[data-skill-app="worry-tree"] .skill-app-header,
-.skill-app[data-skill-app="missing-links"] .skill-app-header {
+.skill-app[data-skill-app="missing-links"] .skill-app-header,
+.skill-app[data-skill-app="dime-game"] .skill-app-header {
   padding: .8rem clamp(.75rem, 2vw, 1.4rem);
   border: 1px solid var(--bs-border, #d9ccc0);
   border-radius: .7rem;
@@ -2011,7 +2083,8 @@ button.values-inline-choice:hover {
 
 .skill-app[data-skill-app="change-emotion"] .skill-app-footer,
 .skill-app[data-skill-app="worry-tree"] .skill-app-footer,
-.skill-app[data-skill-app="missing-links"] .skill-app-footer {
+.skill-app[data-skill-app="missing-links"] .skill-app-footer,
+.skill-app[data-skill-app="dime-game"] .skill-app-footer {
   margin-top: .75rem;
   padding: .75rem 0;
   border: 0;
@@ -2024,6 +2097,15 @@ button.values-inline-choice:hover {
 .therapy-graph-fullscreen-fallback .skill-tree-canvas { height: 100%; min-height: 20rem; }
 
 @media (max-width: 780px) {
+  .thought-emotion-grid,
+  .thought-rerating-grid,
+  .case-map-fields { grid-template-columns: 1fr; }
+  .pleasant-plan-lists { grid-template-columns: 1fr; }
+  .pleasant-custom-row { grid-template-columns: 1fr; }
+  .skill-guided-layout { grid-template-columns: 1fr; }
+  .skill-guided-roadmap { position: static; max-height: none; border: 1px solid var(--skill-app-border); border-radius: .6rem; }
+  .skill-guided-choices { display: grid; grid-template-columns: 1fr 1fr; }
+  .skill-guided-choice { min-width: 0; width: 100%; }
   .skill-tree-layout { grid-template-columns: 1fr; }
   .skill-tree-layout { min-height: 0; }
   .skill-tree-viewport { min-height: clamp(25rem, 68vh, 32rem); }
@@ -2224,6 +2306,17 @@ button.values-inline-choice:hover {
 }
 
 @media print {
+  .skill-app[data-quick-app="five-factor-model"] .skill-app-header,
+  .skill-app[data-quick-app="five-factor-model"] .skill-app-footer,
+  .skill-app[data-quick-app="five-factor-model"] .quick-tool-source-links,
+  .skill-app[data-quick-app="five-factor-model"] .skill-progress-final,
+  .skill-progress-floating { display: none !important; }
+  .skill-app[data-quick-app="five-factor-model"] .five-factor-map { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .35in; }
+  .skill-app[data-quick-app="five-factor-model"] .five-factor-center { grid-column: 1 / -1; border-radius: .2in; color: #000; background: #fff; }
+  .skill-app[data-quick-app="five-factor-model"] .five-factor-card,
+  .skill-app[data-quick-app="five-factor-model"] .five-factor-card--1,
+  .skill-app[data-quick-app="five-factor-model"] .five-factor-card--2 { grid-column: auto; break-inside: avoid; border: 1pt solid #444; box-shadow: none; }
+  .skill-app[data-quick-app="five-factor-model"] textarea { min-height: 1.1in; border: 1pt solid #777; color: #000; background: #fff; font: 11pt/1.35 sans-serif; }
   .skill-app[data-skill-app="values"] {
     padding-bottom: 0;
   }

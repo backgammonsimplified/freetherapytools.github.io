@@ -11,8 +11,8 @@
     chain: [{ label: "Learn Behaviour Chain Analysis", href: "/learn/wellness/behavior-chain-missing-links.html#behaviour-chain-analysis" }],
     missing: [{ label: "Learn Missing-Links Analysis", href: "/learn/wellness/behavior-chain-missing-links.html#missing-links-analysis" }],
     exposure: [{ label: "Learn Safety Behaviours & Exposure", href: "/learn/cbt-anxiety/safety-behaviours-exposure.html" }],
-    dear: [{ label: "Learn DEAR MAN", href: "/learn/interpersonal-effectiveness/dear-man.html" }, { label: "Learn GIVE", href: "/learn/interpersonal-effectiveness/give.html" }, { label: "Learn FAST", href: "/learn/interpersonal-effectiveness/fast.html" }],
-    ask: [{ label: "Learn How to Ask & Say No", href: "/learn/interpersonal-effectiveness/saying-no.html" }],
+    dear: [{ label: "Learn DEAR MAN", href: "/learn/interpersonal-effectiveness/dear-man.html" }],
+    ask: [{ label: "Learn How to Ask & Say No", href: "/learn/interpersonal-effectiveness/saying-no.html" }, { label: "Open The Dime Game", href: "/skill-finder/dime-game/" }],
     goals: [{ label: "Values", href: "/skill-finder/values/" }, { label: "Behavioural Activation", href: "/skill-finder/behavioural-activation/" }, { label: "Build Mastery", href: "/learn/emotion-regulation/positive-emotions-mastery-cope-ahead.html#build-mastery" }, { label: "Pleasant Event Planner", href: "/skill-finder/pleasant-event/" }],
     activation: [{ label: "Pleasant Event Planner", href: "/skill-finder/pleasant-event/" }, { label: "Values", href: "/skill-finder/values/" }, { label: "SMART Goal Builder", href: "/skill-finder/goal-builder/" }, { label: "Learn Behavioural Activation", href: "/learn/wellness/behavioral-activation.html" }],
     review: [{ label: "Values & Valued Action", href: "/skill-finder/values/" }, { label: "SMART Goal Builder", href: "/skill-finder/goal-builder/" }],
@@ -39,11 +39,10 @@
         ["describe", "Describe — What are the observable facts?"], ["express", "Express — What do I feel or think?"],
         ["assert", "Assert — What am I asking for or saying no to?"], ["reinforce", "Reinforce — What positive outcome could follow?"],
         ["mindful", "Mindful — What will help me stay with my objective?"], ["appear", "Appear Confident — What posture or tone fits?"],
-        ["negotiate", "Negotiate — Where can I be flexible?"], ["gentle", "GIVE: Gentle"],
-        ["interested", "GIVE: Interested"], ["validate", "GIVE: Validate"], ["easy", "GIVE: Easy Manner"],
-        ["fair", "FAST: Fair"], ["apologies", "FAST: No Unnecessary Apologies"],
-        ["values", "FAST: Stick to Values"], ["truthful", "FAST: Truthful"],
-      ], links: LINKS.dear,
+        ["negotiate", "Negotiate — Where can I be flexible?"],
+      ],
+      legacyKeys: ["gentle", "interested", "validate", "easy", "fair", "apologies", "values", "truthful"],
+      links: LINKS.dear,
     },
     "ask-or-say-no": {
       title: "Ask or Say No Planner",
@@ -462,7 +461,11 @@
         if (summaryBuilt) form.requestSubmit();
         else root.querySelector("[data-guided-summary]").replaceChildren();
       },
-      validateState: (next) => Progress.isPlainObject(next) && Object.keys(next).every((key) => ["fields", "summaryBuilt"].includes(key)) && stringsOnly(next.fields, keys) && typeof next.summaryBuilt === "boolean",
+      validateState: (next) => {
+        if (!Progress.isPlainObject(next) || !Object.keys(next).every((key) => ["fields", "summaryBuilt"].includes(key)) || !Progress.isPlainObject(next.fields) || typeof next.summaryBuilt !== "boolean") return false;
+        const allowedKeys = [...keys, ...(definition.legacyKeys || [])];
+        return Object.keys(next.fields).every((key) => allowedKeys.includes(key) && typeof next.fields[key] === "string") && keys.every((key) => typeof next.fields[key] === "string");
+      },
       getReadableSummary: (next) => Progress.nonEmptySections(definition.title, definition.fields.map(([key, label]) => [label, next.fields[key]])),
     });
   }
@@ -789,20 +792,23 @@
     const response = await fetch("/data/skill-apps/pleasant-events.json", { credentials: "same-origin" });
     if (!response.ok) throw new Error("Could not load pleasant-event suggestions");
     const data = await response.json();
-    const suggestions = data.activation_suggestions.map((id) => data.events.find((event) => event.id === id)).filter(Boolean);
+    const suggestions = [
+      ...data.activation_suggestions.map((id) => data.events.find((event) => event.id === id)).filter(Boolean).map((event) => ({ ...event, category: "Source pleasant event" })),
+      ...(data.activation_micro_activities || []),
+    ];
     const keys = FORM_DEFINITIONS["behavioural-activation"].fields.map(([key]) => key);
     let state = { fields: Object.fromEntries(keys.map((key) => [key, ""])), summaryBuilt: false, selected: null, custom: "", calendar: SharedCalendar.initialState({ durationMinutes: "30" }) };
     function render() {
       const activity = state.custom.trim() || state.fields.action;
-      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Behavioural Activation Planner</h2><p>Choose one small source-backed activity or write your own. A feeling does not have to change before action begins.</p></header><section class="skill-app-panel"><h3>Activity suggestions</h3><div class="activation-suggestion-grid">${suggestions.map((event) => `<button type="button" class="secondary" data-activation-event="${event.id}" aria-pressed="${state.selected === event.id}">${escapeHtml(event.title)}</button>`).join("")}</div><label for="activation-custom">Custom activity</label><input id="activation-custom" value="${escapeHtml(state.custom)}"><label for="activation-harder">What has become harder to do?</label><textarea id="activation-harder" data-activation-field="harder">${escapeHtml(state.fields.harder)}</textarea><label for="activation-action">Chosen small action</label><textarea id="activation-action" data-activation-field="action">${escapeHtml(state.fields.action)}</textarea>${[["connection","Could it offer pleasure, mastery, self-care, or values connection?"],["barrier","What may get in the way?"],["help","What could help?"],["smallest","What is the smallest version?"]].map(([key,label]) => `<label for="activation-${key}">${escapeHtml(label)}</label><textarea id="activation-${key}" data-activation-field="${key}">${escapeHtml(state.fields[key])}</textarea>`).join("")}<div data-activation-calendar ${activity ? "" : "hidden"}></div>${linksMarkup(LINKS.activation)}</section><footer class="skill-app-footer"></footer></div>`;
-      root.querySelectorAll("[data-activation-event]").forEach((button) => button.addEventListener("click", () => { const event = suggestions.find((item) => item.id === Number(button.dataset.activationEvent)); state.selected = event.id; state.custom = ""; state.fields.action = event.title; render(); }));
+      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Behavioural Activation Planner</h2><p>Choose one small, realistic activity or write your own. A feeling does not have to change before action begins.</p></header><section class="skill-app-panel"><h3>Activity suggestions</h3><div class="activation-suggestion-grid">${suggestions.map((event) => `<button type="button" class="secondary" data-activation-event="${event.id}" aria-pressed="${state.selected === event.id}">${escapeHtml(event.title)}</button>`).join("")}</div><label for="activation-custom">Custom activity</label><input id="activation-custom" value="${escapeHtml(state.custom)}"><label for="activation-harder">What has become harder to do?</label><textarea id="activation-harder" data-activation-field="harder">${escapeHtml(state.fields.harder)}</textarea><label for="activation-action">Chosen small action</label><textarea id="activation-action" data-activation-field="action">${escapeHtml(state.fields.action)}</textarea>${[["connection","Could it offer pleasure, mastery, self-care, or values connection?"],["barrier","What may get in the way?"],["help","What could help?"],["smallest","What is the smallest version?"]].map(([key,label]) => `<label for="activation-${key}">${escapeHtml(label)}</label><textarea id="activation-${key}" data-activation-field="${key}">${escapeHtml(state.fields[key])}</textarea>`).join("")}<div data-activation-calendar ${activity ? "" : "hidden"}></div>${linksMarkup(LINKS.activation)}</section><footer class="skill-app-footer"></footer></div>`;
+      root.querySelectorAll("[data-activation-event]").forEach((button) => button.addEventListener("click", () => { const event = suggestions.find((item) => String(item.id) === button.dataset.activationEvent); state.selected = event.id; state.custom = ""; state.fields.action = event.title; render(); }));
       root.querySelector("#activation-custom")?.addEventListener("change", (event) => { state.custom = event.target.value; if (state.custom.trim()) { state.selected = null; state.fields.action = state.custom.trim(); } render(); });
       root.querySelectorAll("[data-activation-field]").forEach((field) => field.addEventListener("input", () => { state.fields[field.dataset.activationField] = field.value; }));
-      if (activity) SharedCalendar.mountEditor(root.querySelector("[data-activation-calendar]"), { id: "behavioural-activation", state: state.calendar, title: activity, description: [state.fields.smallest, state.fields.help].filter(Boolean).join("\n"), allowRecurrence: true });
+      if (activity) SharedCalendar.mountEditor(root.querySelector("[data-activation-calendar]"), { id: "behavioural-activation", state: state.calendar, title: activity, description: [state.fields.smallest, state.fields.help].filter(Boolean).join("\n"), allowRecurrence: true, onChange: (next) => { state.calendar = { ...next, times: [...next.times], weekdays: [...next.weekdays] }; } });
     }
     function normalize(next) { return { fields: { ...Object.fromEntries(keys.map((key) => [key, ""])), ...(next?.fields || {}) }, summaryBuilt: Boolean(next?.summaryBuilt), selected: next?.selected ?? null, custom: next?.custom || "", calendar: SharedCalendar.normalizeState(next?.calendar) }; }
     render();
-    register(root, { toolId: "behavioural-activation", toolTitle: "Behavioural Activation Planner", route: Progress.TOOL_ROUTES["behavioural-activation"], showDraftPrompt: false, getState: () => state, setState: (next) => { state = normalize(next); render(); }, validateState: (next) => Progress.isPlainObject(next) && Progress.isPlainObject(next.fields) && keys.every((key) => typeof next.fields[key] === "string") && typeof next.summaryBuilt === "boolean" && (next.selected === undefined || next.selected === null || Number.isInteger(next.selected)) && (next.custom === undefined || typeof next.custom === "string") && (next.calendar === undefined || Progress.isPlainObject(next.calendar)), getReadableSummary: (next) => { const current = normalize(next); return Progress.nonEmptySections("Behavioural Activation Planner", [["Activity", current.fields.action], ["What Became Harder", current.fields.harder], ["Purpose", current.fields.connection], ["Barrier", current.fields.barrier], ["Support", current.fields.help], ["Smallest Version", current.fields.smallest], ["Calendar", SharedCalendar.calendarCommitmentValid(current.calendar) ? `${current.calendar.date} at ${SharedCalendar.calendarTimeSlots(current.calendar).join(", ")}` : ""]]); } });
+    register(root, { toolId: "behavioural-activation", toolTitle: "Behavioural Activation Planner", route: Progress.TOOL_ROUTES["behavioural-activation"], showDraftPrompt: false, getState: () => state, setState: (next) => { state = normalize(next); render(); }, validateState: (next) => Progress.isPlainObject(next) && Progress.isPlainObject(next.fields) && keys.every((key) => typeof next.fields[key] === "string") && typeof next.summaryBuilt === "boolean" && (next.selected === undefined || next.selected === null || Number.isInteger(next.selected) || typeof next.selected === "string") && (next.custom === undefined || typeof next.custom === "string") && (next.calendar === undefined || Progress.isPlainObject(next.calendar)), getReadableSummary: (next) => { const current = normalize(next); return Progress.nonEmptySections("Behavioural Activation Planner", [["Activity", current.fields.action], ["What Became Harder", current.fields.harder], ["Purpose", current.fields.connection], ["Barrier", current.fields.barrier], ["Support", current.fields.help], ["Smallest Version", current.fields.smallest], ["Calendar", SharedCalendar.calendarCommitmentValid(current.calendar) ? `${current.calendar.date} at ${SharedCalendar.calendarTimeSlots(current.calendar).join(", ")}` : ""]]); } });
   }
 
   function initValuesReview(root) {
