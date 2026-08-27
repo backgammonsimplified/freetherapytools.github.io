@@ -24,15 +24,29 @@ class PracticeAppTests(unittest.TestCase):
         for token in ("Add safe step", "Move easier", "Move harder", "Before rating 0-100", "After rating 0-100", "objectively safe"):
             self.assertIn(token, text)
 
-    def test_dear_man_give_fast_and_goal_components_complete(self):
+    def test_dear_man_contains_only_dear_man_and_goal_components_remain_complete(self):
         text = JS.read_text(encoding="utf-8")
-        for component in ("Describe", "Express", "Assert", "Reinforce", "Mindful", "Appear Confident", "Negotiate", "Gentle", "Interested", "Validate", "Easy Manner", "Fair", "No Unnecessary Apologies", "Stick to Values", "Truthful"):
-            self.assertIn(component, text)
+        dear_definition = re.search(r'"dear-man": \{(?P<body>.*?)\n    \},\n    "ask-or-say-no"', text, re.DOTALL).group("body")
+        for component in ("Describe", "Express", "Assert", "Reinforce", "Mindful", "Appear Confident", "Negotiate"):
+            self.assertIn(component, dear_definition)
+        for component in ("Gentle", "Interested", "Validate", "Easy Manner", "Fair", "No Unnecessary Apologies", "Stick to Values", "Truthful"):
+            self.assertNotIn(component, dear_definition)
+        for legacy_key in ("gentle", "interested", "validate", "easy", "fair", "apologies", "values", "truthful"):
+            self.assertIn(legacy_key, dear_definition)
         for component in ("Specific", "Measurable", "Achievable", "Relevant / Realistic", "Time-Oriented"):
             self.assertIn(component, text)
         for component in ("Can we simplify the goal?", "What is a smaller thing we could do and still feel satisfied?", "What could get in the way?", "What could prevent us from completing the goal", "What could support follow-through?"):
             self.assertIn(component, text)
         self.assertNotIn("Smallest useful version", text)
+
+    def test_behavioural_activation_uses_low_barrier_library_without_horseback_riding(self):
+        data = (SITE / "data" / "skill-apps" / "pleasant-events.json").read_text(encoding="utf-8")
+        self.assertIn('"activation_micro_activities"', data)
+        for activity in ("Step outside for a few minutes", "Drink a glass of water", "Tidy one small surface", "Send one message to someone"):
+            self.assertIn(activity, data)
+        suggestions = re.search(r'"activation_suggestions"\s*:\s*\[(.*?)\]', data, re.DOTALL).group(1)
+        self.assertNotRegex(suggestions, r'\b167\b')
+        self.assertIn("Choose one small, realistic activity", JS.read_text(encoding="utf-8"))
 
     def test_values_review_supports_weekly_and_monthly_check_ins(self):
         text = JS.read_text(encoding="utf-8")

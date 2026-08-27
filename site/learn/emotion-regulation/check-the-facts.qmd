@@ -30,6 +30,8 @@ Check the Facts asks whether an emotion, its intensity, and its duration fit the
 
 If the emotion or its intensity does not fit the facts, consider Opposite Action. If it fits and the situation can be changed, consider Problem Solving. If it fits but cannot be changed now, use acceptance, mindfulness, or crisis-survival skills.
 
+[Read Examples of Emotions That Fit the Facts](/learn/emotion-regulation/examples-emotions-fit-facts.html), a normal web reference based on Handout 8A, or [open the printable Handout 8A PDF](/resources/clean/emotion-regulation/emotion-regulation-handout-8a-examples-of-emotions-that-fit-the-facts-clean.pdf){target="_blank" rel="noopener"}.
+
 <!-- section-scan-resources:start -->
 
 ## Handouts & Worksheets {#handouts-worksheets}

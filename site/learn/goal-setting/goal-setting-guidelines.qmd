@@ -69,6 +69,8 @@ Use the case map to gather information without treating any one part as the whol
 - **Environmental stressors:** relationships, work, finances, loss, housing, or physical-health demands.
 - **Strengths and resources:** determination, resilience, hope, values, beliefs, people, services, and practical supports.
 
+[Open the interactive Case Map](/skill-finder/case-map/) or compare it with the situation-focused [Five Factor Model](/skill-finder/five-factor-model/).
+
 <!-- section-scan-resources:start -->
 
 ## Handouts & Worksheets {#handouts-worksheets}

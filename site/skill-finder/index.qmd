@@ -58,6 +58,14 @@ Browse the curriculum's Pleasant Events List and make one idea easier to follow 
 
 ::: {.skill-app-hub-grid}
 ::: {.skill-app-hub-card}
+#### Case Map
+
+Organize a broader recurring problem across behaviours, physical concerns, thoughts, emotions, stressors, and strengths.
+
+[Open Case Map](/skill-finder/case-map/)
+:::
+
+::: {.skill-app-hub-card}
 #### Five Factor Model
 
 Map a situation through thoughts, emotions, body sensations, and behaviours.
@@ -176,7 +184,7 @@ Make one small action more specific and easier to start.
 ::: {.skill-app-hub-card}
 #### DEAR MAN Builder
 
-Organize your own words into DEAR MAN, with optional GIVE and FAST prompts.
+Organize your own words through the DEAR MAN structure.
 
 [Open DEAR MAN Builder](/skill-finder/dear-man/)
 :::

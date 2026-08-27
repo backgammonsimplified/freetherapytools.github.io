@@ -1,0 +1,64 @@
+---
+title: "Examples of Emotions That Fit the Facts"
+description: "Readable reference for Emotion Regulation Handout 8A."
+sidebar: learn
+learn-track: emotion-regulation
+categories:
+  - Beginner
+tags:
+  - Checker Play
+terms:
+  - check-the-facts
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 2
+execute:
+  enabled: false
+---
+
+Emotion Regulation Handout 8A gives examples of events in which particular emotions can fit the facts. These are examples for checking an emotion, not diagnoses or rules about what anyone must feel.
+
+[Open printable Handout 8A (PDF)](/resources/clean/emotion-regulation/emotion-regulation-handout-8a-examples-of-emotions-that-fit-the-facts-clean.pdf){target="_blank" rel="noopener"}
+
+## Fear
+
+Fear can fit when there is a threat to your life, health, or well-being, or to the life, health, or well-being of someone you care about.
+
+## Anger
+
+Anger can fit when an important goal is blocked or a desired activity is interrupted; when you or someone you care about is attacked, hurt, insulted, or threatened; or when the integrity or status of your social group is offended or threatened.
+
+## Disgust
+
+Disgust can fit when something could poison or contaminate you; when somebody you deeply dislike touches you or someone you care about; or when a person's or group's behaviour or thinking could seriously damage or harmfully influence you or your group.
+
+## Envy
+
+Envy can fit when another person or group has something you do not have that you want or need.
+
+## Jealousy
+
+Jealousy can fit when a very important relationship or valued object is in danger of being damaged or lost, or when someone threatens to take it away.
+
+## Love
+
+Love can fit when loving a person, animal, or object enhances quality of life for you or those you care about, or increases your chances of attaining personal goals.
+
+## Sadness
+
+Sadness can fit when you have lost someone or something permanently, or when things are not as you wanted, expected, or hoped.
+
+## Shame
+
+Shame can fit when characteristics of you or your behaviour, if made public, would lead to rejection by a person or group you care about.
+
+## Guilt
+
+Guilt can fit when your own behaviour violates your own values or moral code.
+
+## Intensity and duration
+
+The handout asks you to consider how likely the expected outcomes are, how great or important they are, and how effective the emotion is in your life now.
+
+[Use Check the Facts](/learn/emotion-regulation/check-the-facts.html#check-the-facts) · [Return to Change an Emotion](/skill-finder/change-emotion/)

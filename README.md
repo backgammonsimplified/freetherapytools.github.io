@@ -3172,3 +3172,72 @@ Focused coverage is in `tests/test_dedicated_skill_tools.py`,
 and Skill Finder suites. Managed Windows may still report the documented Quarto
 `Invalid handle` child-process failure; record that exact result rather than
 changing the static architecture to accommodate the sandbox.
+
+---
+
+# 83. Browser-QA correction architecture
+
+The 2026-08-27 manual-QA pass supersedes the graph-dominant interaction described
+above without removing its implementation history. Change Emotion, Worry Tree,
+and Missing Links now use the shared `ConstrainedTreeEngine` in
+`site/assets/skill-finder-apps.js` as a vertical guided worksheet: the current
+question is large, completed questions and answers remain above it, and changing
+an earlier answer removes incompatible downstream answers. A compact
+top-to-bottom roadmap remains secondary and can be hidden to give the worksheet
+the full width. Grounding remains the reference interaction and was not changed
+into a graph tool.
+
+## Source-backed additions
+
+- `/skill-finder/case-map/` follows the six-part Case Map in the Goal Setting
+  source: Behaviours; Body and physical concerns; Thoughts; Emotions;
+  Environmental stressors; and Strengths and resources. It is explicitly
+  distinct from the situation-focused Five Factor Model and uses shared
+  progress/export.
+- `/learn/emotion-regulation/examples-emotions-fit-facts.html` is the readable
+  Handout 8A reference. Change Emotion and Check the Facts link to it and to the
+  printable PDF; PDF links from interactive tools open safely in a new tab.
+## Tool state and export changes
+
+Pleasant Event Planner stores three ordered personal lists (`now`, `worked`, and
+`try`) in its existing progress record. Source and custom activities can be
+added, removed, or moved in any list; Surprise Me updates the same selected
+activity state as a manual selection, and scheduling stays optional.
+
+Values retains the stable domain ring and local satellites. Each derived Value
+node also grows by a capped amount based on the number of assigned life domains.
+The selected Value panel displays the Value, domain, current importance, and
+assignment count. “Mark important” maps to the existing underlying Value's High
+importance rating, so no parallel importance state was introduced.
+
+Thought Record loads the same ten emotion families as Emotion Explorer and
+stores intensity, notes/sensations, and optional after-rating for each. It also
+stores an ordered list of automatic thoughts plus either a selected or custom
+hot thought, while retaining the CBT 3/CBT 4 evidence, thinking-trap, balanced
+thought, belief, and re-rating progression. Its readable, Markdown, DOCX, and
+print exports are all driven by that complete shared summary. Gratitude Journal
+similarly includes every populated date, gratitude item, and reflection in its
+shared summary.
+
+The interactive DEAR MAN route now renders only Describe, Express, Assert,
+Reinforce, Mindful, Appear Confident, and Negotiate. Older saved GIVE/FAST keys
+are accepted during validation and ignored during rendering/export; educational
+GIVE and FAST Learn pages are unchanged. Behavioural Activation removes
+horseback riding from its recommendation subset and combines the existing source
+list with ordinary low-barrier micro-activities across self-care, home,
+movement, connection, pleasure, accomplishment, outdoors, and routine. Custom,
+one-time, recurring, and shared-calendar behaviour remains.
+
+## Per-tool progress controls and print
+
+`TherapySkillProgress.registerTool` now accepts the backward-compatible
+`showOpenPreviousProgress: false` option. Skill Thermometer and Positive
+Self-Talk use it to suppress the intrusive visible opener while retaining the
+same autosave and export authority. Behavioural Activation retains
+`showDraftPrompt: false` and browser autosave. No progress component was forked.
+
+Five Factor browser printing uses live HTML textareas and a dedicated CSS print
+layout; it does not rasterize the worksheet. Box Breathing permits either hold
+to be zero and skips zero-length phases while retaining start, pause, reset, and
+reduced-motion support. The safety guidance beside its timing controls is part
+of the tool surface.

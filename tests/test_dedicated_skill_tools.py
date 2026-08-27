@@ -7,7 +7,7 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
 ROUTES = (
-    "five-factor-model", "thinking-traps", "thought-record", "worry-time",
+    "five-factor-model", "case-map", "thinking-traps", "thought-record", "worry-time",
     "box-breathing", "gratitude-journal", "positive-self-talk", "grounding",
 )
 
@@ -56,6 +56,41 @@ class DedicatedSkillToolTests(unittest.TestCase):
             self.assertIn(token, css)
         self.assertIn("@media (max-width: 780px)", css)
         self.assertIn("@media (prefers-reduced-motion: reduce)", css)
+
+    def test_five_factor_print_uses_live_text_and_css_not_raster_capture(self):
+        quick = (SITE / "assets" / "skill-quick-tools.js").read_text(encoding="utf-8")
+        css = (SITE / "assets" / "skill-apps.css").read_text(encoding="utf-8")
+        self.assertIn('data-quick-app="five-factor-model"', (SITE / "skill-finder" / "five-factor-model" / "index.qmd").read_text(encoding="utf-8"))
+        self.assertIn("@media print", css)
+        self.assertIn('.skill-app[data-quick-app="five-factor-model"] textarea', css)
+        for raster_token in ("html2canvas", "toDataURL", "canvas.toBlob"):
+            self.assertNotIn(raster_token, quick)
+
+    def test_manual_qa_tool_contracts(self):
+        quick = (SITE / "assets" / "skill-quick-tools.js").read_text(encoding="utf-8")
+        css = (SITE / "assets" / "skill-apps.css").read_text(encoding="utf-8")
+
+        # Thinking Traps is one card per row and uses the curriculum's challenge prompts.
+        self.assertRegex(css, r"\.thinking-trap-grid\s*\{[^}]*grid-template-columns:\s*1fr", "Thinking Trap cards must stack")
+        for prompt in ("Challenge the thought", "What evidence supports this thought?", "What evidence does not support it?", "Is there another way of seeing the situation?", "What would I say to a close friend in the same situation?", "What is a more balanced thought?"):
+            self.assertIn(prompt, quick)
+        self.assertIn("Continue in Thought Record", quick)
+        self.assertNotRegex(quick, r"thought-record/\?(?:thought|context)=")
+
+        # Worry Time stays inline and returns to the tree without URL-encoded worry text.
+        for token in ("Optional worry-time window", "data-worry-time-calendar", "When the thought returns:", "Open Worry Tree"):
+            self.assertIn(token, quick)
+        self.assertNotRegex(quick, r"worry-tree/\?worry=")
+
+        # Breath holds can be zero and the user-facing safety note remains close to timing controls.
+        for text in ("Please consult your doctor or health care practitioner before holding your breath", "Everyone has different breathing needs", "Be mindful of what feels safe and works for you"):
+            self.assertIn(text, quick)
+        self.assertIn('["holdIn", "Hold after inhale", 0]', quick)
+        self.assertIn('["holdOut", "Hold after exhale", 0]', quick)
+        self.assertIn("prefers-reduced-motion", quick + css)
+
+        # Compact tools can suppress only the intrusive open-progress control.
+        self.assertRegex(quick, r'toolId: "positive-self-talk"[^\n]+showOpenPreviousProgress: false')
 
     def test_all_quick_tool_destinations_resolve(self):
         quick = (SITE / "assets" / "skill-quick-tools.js").read_text(encoding="utf-8")

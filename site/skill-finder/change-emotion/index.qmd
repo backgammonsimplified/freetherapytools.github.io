@@ -8,7 +8,7 @@ execute:
   enabled: false
 ---
 
-This tool follows Emotion Regulation Handouts 8, 8A, and 9. It supports reflection; it does not decide whether an emotion is valid or tell you what you must do. [Mindfulness of Current Emotions](/learn/emotion-regulation/observing-describing-emotions.html) remains an available outcome from Handout 22.
+This tool follows Emotion Regulation Handouts 8, 8A, and 9. It supports reflection; it does not decide whether an emotion is valid or tell you what you must do. [Examples of Emotions That Fit the Facts](/learn/emotion-regulation/examples-emotions-fit-facts.html) provides a readable Handout 8A reference, and [Mindfulness of Current Emotions](/learn/emotion-regulation/observing-describing-emotions.html) remains an available outcome from Handout 22.
 
 ::: {#change-emotion-app .skill-app data-skill-app="change-emotion"}
 Loading Change an Emotion…

@@ -40,6 +40,8 @@ website:
               href: skill-finder/values-review/index.qmd
             - text: "Five Factor Model"
               href: skill-finder/five-factor-model/index.qmd
+            - text: "Case Map"
+              href: skill-finder/case-map/index.qmd
             - text: "Recognizing Thinking Traps"
               href: skill-finder/thinking-traps/index.qmd
             - text: "Thought Record"
@@ -146,6 +148,8 @@ website:
               href: learn/emotion-regulation/observing-describing-emotions.qmd
             - text: "3. Check the Facts"
               href: learn/emotion-regulation/check-the-facts.qmd
+            - text: "Examples of Emotions That Fit the Facts"
+              href: learn/emotion-regulation/examples-emotions-fit-facts.qmd
             - text: "4. Opposite Action & Problem Solving"
               href: learn/emotion-regulation/opposite-action.qmd
             - text: "5. Accumulating Positive Emotions"

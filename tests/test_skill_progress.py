@@ -14,6 +14,7 @@ TOOLS = {
     "values": "values",
     "thermometer": "thermometer",
     "emotion-explorer": "emotions",
+    "case-map": "case-map",
     "change-emotion": "change-emotion",
     "worry-tree": "worry-tree",
     "pleasant-event": "pleasant-event",
@@ -46,6 +47,7 @@ class SkillProgressTests(unittest.TestCase):
             self.assertIn(label, PROGRESS)
         self.assertIn("Your progress stays on this device unless you save a copy to your computer.", PROGRESS)
         self.assertIn("Nothing you enter here is uploaded.", PROGRESS)
+        self.assertGreaterEqual(PROGRESS.count("showOpenPreviousProgress !== false"), 2)
 
     def test_every_app_family_registers_validated_state_and_readable_export(self):
         values = (ASSETS / "skill-apps.js").read_text(encoding="utf-8")

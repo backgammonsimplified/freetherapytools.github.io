@@ -30,7 +30,7 @@ class SkillFinderAppTests(unittest.TestCase):
 
     def test_every_skill_finder_page_uses_the_shared_sidebar(self):
         pages = sorted((SITE / "skill-finder").rglob("index.qmd"))
-        self.assertEqual(len(pages), 23)
+        self.assertEqual(len(pages), 24)
         for page in pages:
             self.assertIn("sidebar: skill-finder", page.read_text(encoding="utf-8"), page)
 
@@ -39,7 +39,7 @@ class SkillFinderAppTests(unittest.TestCase):
         self.assertIn('        - section: "Interactive Tools"', navigation)
         self.assertIn('        - section: "Learn"', navigation)
         for route in (
-            "values", "thermometer", "emotions", "change-emotion", "worry-tree",
+            "values", "thermometer", "emotions", "case-map", "change-emotion", "worry-tree",
             "pleasant-event", "behaviour-chain", "missing-links", "exposure",
             "dear-man", "ask-or-say-no", "goal-builder", "behavioural-activation", "values-review",
             "five-factor-model", "thinking-traps", "thought-record", "worry-time",
@@ -108,6 +108,10 @@ class SkillFinderAppTests(unittest.TestCase):
         css = (SITE / "assets" / "skill-apps.css").read_text(encoding="utf-8")
         for token in ("skill-thermometer-recommendations", "skill-thermometer-skill-grid", "aria-expanded", "Best for:", 'target="_blank"', "Broader Therapy Skill Kit curriculum"):
             self.assertIn(token, source)
+        self.assertIn("Choose the emotional state of mind that feels closest right now to find a skill or tool to try.", source)
+        self.assertIn('showOpenPreviousProgress: false', source)
+        self.assertIn('state.selectedZone = closing ? "" : button.dataset.zone', source)
+        self.assertIn('aria-label="${selected ? "Collapse" : "Expand"} ${escapeHtml(item.name)}"', source)
         for token in ("skill-thermometer-zone--overload", "skill-thermometer-zone--distressed-wise-mind", "skill-thermometer-zone--wise-mind", "skill-thermometer-zone--numbness"):
             self.assertIn(token, css)
         for token in ("createForceViewport", "emotion-force-map", "emotion-node-toggle-badge", "emotion-selected-words", "Explore this emotion", "Full screen", "change-emotion-handoff"):
@@ -133,8 +137,11 @@ class SkillFinderAppTests(unittest.TestCase):
         self.assertEqual({choice["next"] for choice in nodes["fits-facts"]["choices"]}, {"effective-fit", "effective-no-fit"})
         self.assertEqual({"mindful-act-problem-solve", "opposite-action-fit", "change-thoughts-opposite", "mindful-act-reconsider"}, {node["id"] for node in flow["nodes"] if node["type"] == "result"})
         source = (SITE / "assets" / "skill-finder-apps.js").read_text(encoding="utf-8")
-        for token in ("ConstrainedTreeEngine", "createConstrainedTreeViewport", "facts-event", "facts-interpretations", "facts-threat", "facts-catastrophe", "Handout 8A examples", "tree-chosen", "tree-future"):
+        for token in ("class ConstrainedTreeEngine", "skill-guided-history", "facts-event", "facts-interpretations", "facts-threat", "facts-catastrophe", "Examples of Emotions That Fit the Facts", "data-tree-revisit", "removed.forEach"):
             self.assertIn(token, source)
+        handout_page = SITE / "learn" / "emotion-regulation" / "examples-emotions-fit-facts.qmd"
+        self.assertTrue(handout_page.is_file())
+        self.assertIn('target="_blank"', handout_page.read_text(encoding="utf-8"))
 
     def test_worry_tree_and_missing_links_use_shared_constrained_tree(self):
         worry = load("flows/worry-tree.json")
@@ -152,12 +159,12 @@ class SkillFinderAppTests(unittest.TestCase):
         for token in ('"worry-tree": (root) => initConstrainedFlow', '"missing-links": (root) => initConstrainedFlow', "mountCalendar", "data-tree-text", "data-tree-calendar"):
             self.assertIn(token, source)
 
-    def test_tree_workspaces_are_graph_dominant_and_mobile_stack(self):
+    def test_tree_workspaces_use_guided_vertical_history_and_optional_roadmap(self):
         css = (SITE / "assets" / "skill-apps.css").read_text(encoding="utf-8")
         source = (SITE / "assets" / "skill-finder-apps.js").read_text(encoding="utf-8")
-        for token in ('grid-template-columns: minmax(0, 2.35fr)', 'calc(100vh - 12rem)', '.skill-tree-layout { grid-template-columns: 1fr; }'):
+        for token in (".skill-guided-history", ".skill-guided-step.is-current", ".skill-guided-layout.is-roadmap-hidden", "grid-template-columns: minmax(0, 1fr) minmax(17rem, 23rem)"):
             self.assertIn(token, css)
-        for token in ('orientation: compact ? "vertical" : "horizontal"', 'this.compact', 'data-tree-editor'):
+        for token in ("Completed", "Change this answer", "Hide roadmap", "Show roadmap", "removed.forEach", "data-tree-text"):
             self.assertIn(token, source)
         self.assertIn('target="_blank" rel="noopener"', source)
 
@@ -167,8 +174,15 @@ class SkillFinderAppTests(unittest.TestCase):
         self.assertGreaterEqual(len(data["categories"]), 6)
         self.assertGreaterEqual(len(data["activation_suggestions"]), 20)
         source = (SITE / "assets" / "skill-finder-apps.js").read_text(encoding="utf-8")
-        for token in ("pleasant-event-grid", "Custom activity", "TherapyCalendar", "allowRecurrence: true"):
+        for token in ("pleasant-event-grid", "Custom activity", "TherapyCalendar", "allowRecurrence: true", "What I can do now", "Things I know worked in the past", "Things I want to try", "data-add-list", "data-remove-item"):
             self.assertIn(token, source)
+
+    def test_case_map_route_uses_source_backed_model(self):
+        case_page = (SITE / "skill-finder" / "case-map" / "index.qmd").read_text(encoding="utf-8")
+        quick_tools = (SITE / "assets" / "skill-quick-tools.js").read_text(encoding="utf-8")
+        for field in ("Behaviours", "Body and physical concerns", "Thoughts", "Emotions", "Environmental stressors", "Strengths and resources"):
+            self.assertIn(field, quick_tools)
+        self.assertIn('data-quick-app="case-map"', case_page)
 
     def test_pleasant_events_and_privacy(self):
         events = load("pleasant-events.json")["events"]
@@ -193,7 +207,9 @@ class SkillFinderAppTests(unittest.TestCase):
             relative = path.strip("/")
             if not relative:
                 continue
-            if relative.endswith(".html"):
+            if relative.startswith("resources/"):
+                source = SITE / relative
+            elif relative.endswith(".html"):
                 source = SITE / (relative[:-5] + ".qmd")
             else:
                 source = SITE / relative / "index.qmd"

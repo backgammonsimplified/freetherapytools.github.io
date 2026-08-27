@@ -8,7 +8,7 @@ toc: false
 
 Missing Links is for an effective behaviour you intended but did not do. To understand an ineffective behaviour that did occur, use the [Behaviour Chain Builder](/skill-finder/behaviour-chain/).
 
-This tree follows [General Worksheet 3: Missing-Links Analysis](/resources/clean/general/general-worksheet-3-missing-links-analysis-clean.pdf){target="_blank" rel="noopener"}.
+This guided worksheet follows [General Worksheet 3: Missing-Links Analysis](/resources/clean/general/general-worksheet-3-missing-links-analysis-clean.pdf){target="_blank" rel="noopener"}. Completed questions remain visible, and the final direct prompt is not changed into a Yes/No question.
 
 ::: {#missing-links-app .skill-app data-skill-app="missing-links"}
 Loading Missing Links…
