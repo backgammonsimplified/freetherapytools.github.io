@@ -25,7 +25,42 @@
     return Progress.isPlainObject(value) && Object.keys(value).every((key) => keys.includes(key));
   }
 
+  function dimeFactors(flow) {
+    return flow.nodes.filter((node) => node.dime_factor);
+  }
+
+  function dimeScore(flow, answers = {}) {
+    const mode = answers.mode;
+    if (!["ask", "say-no"].includes(mode)) return 0;
+    return dimeFactors(flow).reduce((score, node) => score + (answers[node.field] === node.dime_for?.[mode] ? 1 : 0), 0);
+  }
+
+  function dimeMoney(score) {
+    return `$${(Math.max(0, Math.min(10, Number(score) || 0)) / 10).toFixed(2)}`;
+  }
+
+  function dimeGuidance(flow, answers = {}) {
+    const mode = answers.mode === "say-no" ? "say-no" : "ask";
+    return flow.guidance?.[mode]?.[dimeScore(flow, answers)] || "Choose a response intensity with Wise Mind.";
+  }
+
+  function dimeModeLabel(mode) {
+    return mode === "say-no" ? "Saying No" : mode === "ask" ? "Asking" : "Not selected";
+  }
+
   function flowSummary(flow, state) {
+    if (flow.id === "dime-game") {
+      const score = dimeScore(flow, state.answers);
+      return Progress.nonEmptySections("The DIME Game", [
+        ["Decision", dimeModeLabel(state.answers.mode)],
+        ["Situation", state.answers.situation],
+        ...dimeFactors(flow).map((node) => [node.heading, state.answers[node.field] === "yes" ? "Yes" : state.answers[node.field] === "no" ? "No" : "Not answered"]),
+        ["Dimes", `${score} / 10`],
+        ["Intensity", `${dimeMoney(score)} / $1.00`],
+        ["Source-Backed Result Guidance", dimeGuidance(flow, state.answers)],
+        ["Source Note", score === 0 ? flow.zero_guidance_note : ""],
+      ]);
+    }
     if (flow.id === "worry-tree") {
       const type = state.history.includes("action") || ["action", "when", "schedule", "how", "plan-result"].includes(state.nodeId)
         ? "Current actionable problem"
@@ -328,13 +363,14 @@
       this.nodeId = flow.start;
       this.history = [];
       this.answers = {};
+      this.dimeResume = null;
       this.roadmapHidden = false;
       this.mount();
       this.registerProgress();
     }
 
     mount() {
-      this.root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>${escapeHtml(this.flow.title)}</h2><p>${escapeHtml(this.flow.source || "Source-backed decision process")} · Your entries stay on this device.</p></header>
+      this.root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>${escapeHtml(this.flow.title)}</h2>${this.flow.subtitle ? `<p class="skill-app-subtitle">${escapeHtml(this.flow.subtitle)}</p>` : ""}<p>${escapeHtml(this.flow.source || "Source-backed decision process")} · Your entries stay on this device.</p>${this.flow.id === "dime-game" ? '<div data-dime-running></div>' : ""}</header>
         <section class="skill-guided-tree"><div class="skill-guided-layout"><main class="skill-guided-history" data-guided-history aria-live="polite"></main><aside class="skill-guided-roadmap" data-guided-roadmap><div class="skill-guided-roadmap-header"><h3>Roadmap</h3><button type="button" class="secondary" data-roadmap-toggle aria-expanded="true">Hide roadmap</button></div><div data-roadmap-list></div></aside><button type="button" class="secondary skill-guided-roadmap-show" data-roadmap-show hidden>Show roadmap</button></div></section>
         <footer class="skill-app-footer"><button type="button" class="secondary" data-tree-restart>Start over</button></footer></div>`;
       this.root.querySelector("[data-roadmap-toggle]").addEventListener("click", () => { this.roadmapHidden = true; this.render(); });
@@ -344,8 +380,13 @@
     }
 
     promptFor(node) {
-      if (node.prompt_by_mode) return node.prompt_by_mode[this.answers.mode] || node.prompt || node.title;
-      return node.prompt || node.title;
+      if (node.prompt_by_mode) return node.prompt_by_mode[this.answers.mode] || node.prompt || node.heading || node.title;
+      return node.prompt || node.heading || node.title;
+    }
+
+    helpFor(node) {
+      if (node.help_by_mode) return node.help_by_mode[this.answers.mode] || node.help || "Write only what is useful here.";
+      return node.help || "Write only what is useful here.";
     }
 
     choiceLabel(node, value) {
@@ -362,10 +403,28 @@
     }
 
     dynamicResult(node) {
+      if (node.dynamic_result === "dime-game") return this.dimeResultMarkup();
       if (node.dynamic_result !== "opposite-action") return "";
       const emotion = this.context.emotions.find((item) => item.id === this.answers.emotion);
       if (!emotion) return "";
       return `<section class="skill-app-note"><h4>${escapeHtml(emotion.name)}</h4><p><strong>Common action urges:</strong> ${escapeHtml(emotion.action_urges.join(", "))}</p>${emotion.opposite_actions.length ? `<p><strong>Source-backed opposite actions to consider:</strong></p><ul>${emotion.opposite_actions.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>` : "<p>The source set does not list a standard opposite action for this emotion.</p>"}</section>`;
+    }
+
+    dimeScaleMarkup(score) {
+      const cents = score * 10;
+      return `<div class="dime-scale" role="img" aria-label="${score} out of 10 dimes; ${cents} cents out of one dollar."><div class="dime-scale-labels" aria-hidden="true"><span>$0.00<small>Less intense</small></span><span>$1.00<small>More intense</small></span></div><div class="dime-scale-dimes" aria-hidden="true">${Array.from({ length: 10 }, (_item, index) => `<span class="${index < score ? "is-collected" : ""}">${index + 1}</span>`).join("")}</div></div>`;
+    }
+
+    dimeResultMarkup() {
+      const score = dimeScore(this.flow, this.answers);
+      const note = score === 0 ? `<p class="skill-app-note">${escapeHtml(this.flow.zero_guidance_note)}</p>` : "";
+      return `<section class="dime-result"><p>Based on your answers, you've got:</p><p class="dime-result-total"><strong>${score} Dime${score === 1 ? "" : "s"}</strong><span>${dimeMoney(score)} of $1.00</span></p>${this.dimeScaleMarkup(score)}<h4>${escapeHtml(dimeGuidance(this.flow, this.answers))}</h4>${note}<p>Check with your Wise Mind before acting. You can replay the game or change an answer to see how one dime changes the result.</p></section>`;
+    }
+
+    dimeRunningMarkup() {
+      if (this.flow.id !== "dime-game" || !this.answers.mode) return "";
+      const score = dimeScore(this.flow, this.answers);
+      return `<p class="dime-running-score" aria-live="polite"><span>Dimes collected: <strong>${score} / 10</strong></span><span>Intensity: <strong>${dimeMoney(score)} / $1.00</strong></span><span class="visually-hidden">${score} out of 10 dimes; ${score * 10} cents out of one dollar.</span></p>`;
     }
 
     completedMarkup(node) {
@@ -374,21 +433,23 @@
         : node.editor === "calendar" ? '<p class="skill-guided-answer">Schedule recorded</p>'
           : node.type === "information" ? `<p>${escapeHtml(node.body || "")}</p>`
             : `<p class="skill-guided-answer skill-guided-answer--${value === "yes" ? "yes" : value === "no" ? "no" : "choice"}">${escapeHtml(this.choiceLabel(node, value))}</p>`;
-      return `<article class="skill-guided-step is-complete" data-guided-step="${escapeHtml(node.id)}"><p class="skill-tree-kicker">Completed</p><h3>${escapeHtml(this.promptFor(node))}</h3>${answer}<button type="button" class="secondary" data-tree-revisit="${escapeHtml(node.id)}">Change this answer</button></article>`;
+      return `<article class="skill-guided-step is-complete" data-guided-step="${escapeHtml(node.id)}"><p class="skill-tree-kicker">Completed${node.heading ? ` · ${escapeHtml(node.heading)}` : ""}</p><h3>${escapeHtml(this.promptFor(node))}</h3>${answer}<button type="button" class="secondary" data-tree-revisit="${escapeHtml(node.id)}">Change this answer</button></article>`;
     }
 
     currentMarkup(node) {
       if (node.type === "result") return `<article class="skill-guided-step is-current is-result" data-guided-current tabindex="-1"><p class="skill-tree-kicker">Result</p><h3>${escapeHtml(node.title)}</h3><p>${escapeHtml(node.body || "")}</p>${this.dynamicResult(node)}${node.calendar ? `<details class="skill-tree-calendar"><summary>${escapeHtml(node.calendar.label)}</summary><div data-tree-calendar></div></details>` : ""}${linkCards(node.links)}</article>`;
       const choices = node.dynamic_choices === "emotions" ? this.context.emotions.map((emotion) => ({ label: emotion.name, value: emotion.id, next: node.next })) : node.choices || [];
-      const textEditor = node.control === "text" ? `<form data-tree-text><label for="tree-${escapeHtml(node.field)}">${escapeHtml(node.help || "Write only what is useful here.")}</label><textarea id="tree-${escapeHtml(node.field)}" name="answer">${escapeHtml(this.answers[node.field] || "")}</textarea><button type="submit">Continue</button></form>` : "";
+      const textEditor = node.control === "text" ? `<form data-tree-text><label for="tree-${escapeHtml(node.field)}">${escapeHtml(this.helpFor(node))}</label><textarea id="tree-${escapeHtml(node.field)}" name="answer">${escapeHtml(this.answers[node.field] || "")}</textarea><button type="submit">Continue</button></form>` : "";
       const information = node.type === "information" ? `<p>${escapeHtml(node.body || "")}</p><button type="button" data-tree-continue>Continue</button>` : "";
-      return `<article class="skill-guided-step is-current" data-guided-current tabindex="-1"><p class="skill-tree-kicker">Current question</p><h3>${escapeHtml(this.promptFor(node))}</h3>${node.editor === "check-facts" ? this.checkFactsMarkup() : ""}${textEditor}${information}${node.editor === "calendar" ? `<div data-tree-calendar></div><button type="button" data-tree-calendar-continue>Continue</button>` : ""}<div class="skill-guided-choices">${choices.map((choice) => { const value = String(choice.value || choice.label); const family = value === "yes" ? "yes" : value === "no" ? "no" : "choice"; return `<button type="button" class="skill-guided-choice skill-guided-choice--${family}" data-tree-choice data-value="${escapeHtml(value)}" data-next="${escapeHtml(choice.next || node.next)}">${escapeHtml(choice.label)}</button>`; }).join("")}</div></article>`;
+      return `<article class="skill-guided-step is-current${node.field === "mode" ? " is-mode-choice" : ""}" data-guided-current tabindex="-1"><p class="skill-tree-kicker">Current question${node.heading ? ` · ${escapeHtml(node.heading)}` : ""}</p><h3>${escapeHtml(this.promptFor(node))}</h3>${node.editor === "check-facts" ? this.checkFactsMarkup() : ""}${textEditor}${information}${node.editor === "calendar" ? `<div data-tree-calendar></div><button type="button" data-tree-calendar-continue>Continue</button>` : ""}<div class="skill-guided-choices">${choices.map((choice) => { const value = String(choice.value || choice.label); const family = value === "yes" ? "yes" : value === "no" ? "no" : "choice"; return `<button type="button" class="skill-guided-choice skill-guided-choice--${family}" data-tree-choice data-value="${escapeHtml(value)}" data-next="${escapeHtml(choice.next || node.next)}">${escapeHtml(choice.label)}</button>`; }).join("")}</div></article>`;
     }
 
     render(focus = false) {
       const container = this.root.querySelector("[data-guided-history]");
       const current = this.nodes.get(this.nodeId);
       container.innerHTML = `${this.history.map((id) => this.completedMarkup(this.nodes.get(id))).join("")}${this.currentMarkup(current)}`;
+      const running = this.root.querySelector("[data-dime-running]");
+      if (running) running.innerHTML = this.dimeRunningMarkup();
       container.querySelectorAll("[data-tree-revisit]").forEach((button) => button.addEventListener("click", () => this.revisit(button.dataset.treeRevisit)));
       container.querySelectorAll("[data-tree-fact]").forEach((field) => field.addEventListener("input", () => { this.answers[field.dataset.treeFact] = field.value; }));
       container.querySelectorAll("[data-tree-choice]").forEach((control) => control.addEventListener("click", () => this.choose(current, control.dataset.value, control.dataset.next)));
@@ -430,6 +491,14 @@
 
     choose(node, value, next) {
       if (node.field) this.answers[node.field] = value;
+      if (this.flow.id === "dime-game" && node.dime_factor && this.dimeResume) {
+        const resume = this.dimeResume;
+        this.dimeResume = null;
+        this.history = resume.history;
+        this.nodeId = resume.nodeId;
+        this.render(true);
+        return;
+      }
       if (!this.nodes.has(next)) return;
       this.history.push(this.nodeId);
       this.nodeId = next;
@@ -440,6 +509,13 @@
       if (id === this.nodeId) return this.render(true);
       const index = this.history.indexOf(id);
       if (index < 0) return;
+      if (this.flow.id === "dime-game" && this.nodes.get(id)?.dime_factor) {
+        this.dimeResume = { history: [...this.history], nodeId: this.nodeId };
+        this.history = this.history.slice(0, index);
+        this.nodeId = id;
+        this.render(true);
+        return;
+      }
       const removed = this.history.slice(index + 1).concat(this.nodeId);
       removed.forEach((nodeId) => { const field = this.nodes.get(nodeId)?.field; if (field) delete this.answers[field]; });
       this.history = this.history.slice(0, index);
@@ -455,7 +531,7 @@
       this.render(true);
     }
 
-    restart() { this.nodeId = this.flow.start; this.history = []; this.answers = {}; this.render(true); }
+    restart() { this.nodeId = this.flow.start; this.history = []; this.answers = {}; this.dimeResume = null; this.render(true); }
 
     registerProgress() {
       if (!Progress) return;
@@ -463,7 +539,7 @@
       Progress.registerTool({
         root: this.root, toolId: this.flow.id, toolTitle: this.flow.title, route: Progress.TOOL_ROUTES[this.flow.id], schemaVersion: 1,
         getState: () => ({ nodeId: this.nodeId, history: this.history, answers: this.answers }),
-        setState: (state) => { this.nodeId = state.nodeId; this.history = [...state.history]; this.answers = { ...state.answers }; this.render(); },
+        setState: (state) => { this.nodeId = state.nodeId; this.history = [...state.history]; this.answers = { ...state.answers }; this.dimeResume = null; this.render(); },
         validateState: (state) => plainObjectWithKeys(state, ["nodeId", "history", "answers"]) && this.nodes.has(state.nodeId) && Array.isArray(state.history) && state.history.every((id) => this.nodes.has(id)) && Progress.isPlainObject(state.answers) && Object.entries(state.answers).every(([key, value]) => allowed.has(key) && typeof value === "string"),
         getReadableSummary: (state) => flowSummary(this.flow, state),
       });
@@ -779,7 +855,7 @@
   }
 
   async function start() {
-    const initializers = { thermometer: initThermometer, emotions: initEmotionExplorer, "change-emotion": (root) => initConstrainedFlow(root, "change-emotion"), "worry-tree": (root) => initConstrainedFlow(root, "worry-tree"), "missing-links": (root) => initConstrainedFlow(root, "missing-links"), "pleasant-event": initPleasantEventRedesign };
+    const initializers = { thermometer: initThermometer, emotions: initEmotionExplorer, "change-emotion": (root) => initConstrainedFlow(root, "change-emotion"), "worry-tree": (root) => initConstrainedFlow(root, "worry-tree"), "missing-links": (root) => initConstrainedFlow(root, "missing-links"), "dime-game": (root) => initConstrainedFlow(root, "dime-game"), "pleasant-event": initPleasantEventRedesign };
     for (const root of document.querySelectorAll("[data-skill-app]")) {
       const initializer = initializers[root.dataset.skillApp];
       if (!initializer) continue;
@@ -789,6 +865,6 @@
 
   global.SkillFinderFlowEngine = FlowEngine;
   global.SkillFinderConstrainedTreeEngine = ConstrainedTreeEngine;
-  if (typeof module !== "undefined" && module.exports) module.exports = { FlowEngine, ConstrainedTreeEngine, BODY_REGIONS };
+  if (typeof module !== "undefined" && module.exports) module.exports = { FlowEngine, ConstrainedTreeEngine, BODY_REGIONS, dimeScore, dimeMoney, dimeGuidance, flowSummary };
   if (typeof document !== "undefined") document.addEventListener("DOMContentLoaded", start);
 })(typeof window === "undefined" ? globalThis : window);

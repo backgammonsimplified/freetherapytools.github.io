@@ -29,6 +29,7 @@
     "gratitude-journal": "/skill-finder/gratitude-journal/",
     "positive-self-talk": "/skill-finder/positive-self-talk/",
     "grounding": "/skill-finder/grounding/",
+    "dime-game": "/skill-finder/dime-game/",
   });
 
   let active = null;

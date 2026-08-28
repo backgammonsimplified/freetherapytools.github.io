@@ -1901,8 +1901,42 @@ button.values-inline-choice:hover {
 .skill-guided-roadmap-list span { display: block; width: 100%; padding: .35rem .25rem; border: 0; background: transparent; color: inherit; text-align: left; font: inherit; }
 .skill-guided-roadmap-list button { text-decoration: underline; text-underline-offset: .15em; }
 .skill-guided-roadmap-show { justify-self: end; }
-.dime-result { padding: 1rem; border-left: .4rem solid #416f91; background: #eef4f7; }
-.dime-total { font-size: 1.25rem; }
+.dime-running-score {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem 1.25rem;
+  margin: .65rem 0 0;
+  padding-top: .65rem;
+  border-top: 1px solid var(--skill-app-border);
+  color: var(--bs-text-muted, #5f5954);
+  font-size: .92rem;
+}
+.skill-guided-step.is-mode-choice .skill-guided-choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.skill-guided-step.is-mode-choice .skill-guided-choice { min-height: 7rem; font-size: clamp(1.1rem, 2.3vw, 1.4rem); text-align: left; }
+.dime-result { padding: clamp(1rem, 3vw, 1.5rem); border-left: .4rem solid #416f91; background: #eef4f7; }
+.dime-result > :first-child { margin-top: 0; }
+.dime-result-total { display: grid; gap: .15rem; margin: .5rem 0 1.25rem; }
+.dime-result-total strong { font-size: clamp(1.8rem, 5vw, 2.8rem); line-height: 1; }
+.dime-result-total span { font-size: clamp(1.2rem, 3vw, 1.65rem); font-weight: 750; }
+.dime-scale { max-width: 46rem; margin: 1rem 0 1.35rem; }
+.dime-scale-labels { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: .55rem; font-weight: 800; }
+.dime-scale-labels span { display: grid; }
+.dime-scale-labels span:last-child { text-align: right; }
+.dime-scale-labels small { font-weight: 500; }
+.dime-scale-dimes { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: .25rem; }
+.dime-scale-dimes span {
+  display: grid;
+  min-width: 0;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 2px solid #73808b;
+  border-radius: 50%;
+  background: #fff;
+  color: #4e5b65;
+  font-size: clamp(.65rem, 2vw, .82rem);
+  font-weight: 800;
+}
+.dime-scale-dimes span.is-collected { border-color: #356b4b; background: #dcefe2; color: #155b32; }
 
 /* Focused source-backed Skill Finder tools */
 .quick-tool-shell { max-width: 76rem; }
@@ -2061,7 +2095,8 @@ button.values-inline-choice:hover {
 
 .skill-app[data-skill-app="change-emotion"] .skill-app-shell,
 .skill-app[data-skill-app="worry-tree"] .skill-app-shell,
-.skill-app[data-skill-app="missing-links"] .skill-app-shell {
+.skill-app[data-skill-app="missing-links"] .skill-app-shell,
+.skill-app[data-skill-app="dime-game"] .skill-app-shell {
   width: 100%;
   max-width: none;
   border: 0;
@@ -2073,7 +2108,8 @@ button.values-inline-choice:hover {
 
 .skill-app[data-skill-app="change-emotion"] .skill-app-header,
 .skill-app[data-skill-app="worry-tree"] .skill-app-header,
-.skill-app[data-skill-app="missing-links"] .skill-app-header {
+.skill-app[data-skill-app="missing-links"] .skill-app-header,
+.skill-app[data-skill-app="dime-game"] .skill-app-header {
   padding: .8rem clamp(.75rem, 2vw, 1.4rem);
   border: 1px solid var(--bs-border, #d9ccc0);
   border-radius: .7rem;
@@ -2081,7 +2117,8 @@ button.values-inline-choice:hover {
 
 .skill-app[data-skill-app="change-emotion"] .skill-app-footer,
 .skill-app[data-skill-app="worry-tree"] .skill-app-footer,
-.skill-app[data-skill-app="missing-links"] .skill-app-footer {
+.skill-app[data-skill-app="missing-links"] .skill-app-footer,
+.skill-app[data-skill-app="dime-game"] .skill-app-footer {
   margin-top: .75rem;
   padding: .75rem 0;
   border: 0;
@@ -2102,6 +2139,7 @@ button.values-inline-choice:hover {
   .skill-guided-layout { grid-template-columns: 1fr; }
   .skill-guided-roadmap { position: static; max-height: none; border: 1px solid var(--skill-app-border); border-radius: .6rem; }
   .skill-guided-choices { display: grid; grid-template-columns: 1fr 1fr; }
+  .skill-app[data-skill-app="dime-game"] .skill-guided-choices { grid-template-columns: 1fr; }
   .skill-guided-choice { min-width: 0; width: 100%; }
   .skill-tree-layout { grid-template-columns: 1fr; }
   .skill-tree-layout { min-height: 0; }

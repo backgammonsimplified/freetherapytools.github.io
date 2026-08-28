@@ -3,6 +3,7 @@ title: "Examples of Emotions That Fit the Facts"
 description: "Readable reference for Emotion Regulation Handout 8A."
 sidebar: learn
 learn-track: emotion-regulation
+learn-order: 17
 categories:
   - Beginner
 tags:

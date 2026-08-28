@@ -30,7 +30,7 @@ class SkillFinderAppTests(unittest.TestCase):
 
     def test_every_skill_finder_page_uses_the_shared_sidebar(self):
         pages = sorted((SITE / "skill-finder").rglob("index.qmd"))
-        self.assertEqual(len(pages), 24)
+        self.assertEqual(len(pages), 25)
         for page in pages:
             self.assertIn("sidebar: skill-finder", page.read_text(encoding="utf-8"), page)
 
@@ -43,7 +43,7 @@ class SkillFinderAppTests(unittest.TestCase):
             "pleasant-event", "behaviour-chain", "missing-links", "exposure",
             "dear-man", "ask-or-say-no", "goal-builder", "behavioural-activation", "values-review",
             "five-factor-model", "thinking-traps", "thought-record", "worry-time",
-            "box-breathing", "gratitude-journal", "positive-self-talk", "grounding",
+            "box-breathing", "gratitude-journal", "positive-self-talk", "grounding", "dime-game",
         ):
             self.assertIn(f"skill-finder/{route}/index.qmd", navigation)
         for route in (
@@ -63,7 +63,7 @@ class SkillFinderAppTests(unittest.TestCase):
         self.assertTrue((SITE / "assets" / "skill-finder-apps.js").is_file())
 
     def test_flow_definitions_are_complete_and_reachable(self):
-        for filename in ("worry-tree.json", "change-emotion.json", "missing-links.json"):
+        for filename in ("worry-tree.json", "change-emotion.json", "missing-links.json", "dime-game.json"):
             flow = load(f"flows/{filename}")
             nodes = {node["id"]: node for node in flow["nodes"]}
             self.assertEqual(len(nodes), len(flow["nodes"]), filename)

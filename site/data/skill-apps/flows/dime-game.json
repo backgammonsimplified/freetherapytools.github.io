@@ -1,0 +1,231 @@
+{
+  "id": "dime-game",
+  "title": "The DIME Game",
+  "subtitle": "Determining Intensity in Asking or Saying No",
+  "source": "Interpersonal Effectiveness Worksheet 6 and Handout 8",
+  "start": "mode",
+  "guidance": {
+    "ask": [
+      "Very low intensity: consider letting go or not asking.",
+      "Don't ask; don't hint.",
+      "Hint indirectly; take no.",
+      "Hint openly; take no.",
+      "Ask tentatively, and accept no.",
+      "Ask gracefully, but take no.",
+      "Ask confidently; take no.",
+      "Ask confidently; resist no.",
+      "Ask firmly; resist no.",
+      "Ask firmly; insist; negotiate; keep trying.",
+      "Ask and don't take no for an answer."
+    ],
+    "say-no": [
+      "Very low intensity: consider saying yes or letting go.",
+      "Do what the other person wants without being asked.",
+      "Don't complain; do it cheerfully.",
+      "Do it, even if you're not cheerful about it.",
+      "Do it, but show that you'd rather not.",
+      "Say you'd rather not, but do it gracefully.",
+      "Say no confidently, but reconsider.",
+      "Say no confidently; resist saying yes.",
+      "Say no firmly; resist saying yes.",
+      "Say no firmly; resist; negotiate; keep trying.",
+      "Don't do it."
+    ]
+  },
+  "zero_guidance_note": "Handout 8's exact response table begins at level 1. The 0-dime result therefore uses a neutral low-intensity descriptor rather than inventing an exact DBT instruction.",
+  "nodes": [
+    {
+      "id": "mode",
+      "type": "question",
+      "control": "choice",
+      "prompt": "What are you deciding?",
+      "field": "mode",
+      "choices": [
+        {"label": "A. Asking for something", "value": "ask", "next": "situation"},
+        {"label": "B. Saying No", "value": "say-no", "next": "situation"}
+      ],
+      "level": 0
+    },
+    {
+      "id": "situation",
+      "type": "question",
+      "control": "text",
+      "prompt_by_mode": {
+        "ask": "Briefly describe the situation in which you must decide on the intensity of asking for something.",
+        "say-no": "Briefly describe the situation in which you must decide on how strongly to say no — and when to say yes."
+      },
+      "help_by_mode": {
+        "ask": "Who is involved, and what are you considering asking for?",
+        "say-no": "Who is involved, and what are you considering refusing?"
+      },
+      "field": "situation",
+      "next": "capability",
+      "level": 1
+    },
+    {
+      "id": "capability",
+      "type": "question",
+      "control": "yesno",
+      "heading": "Capability",
+      "field": "capability",
+      "dime_factor": true,
+      "dime_for": {"ask": "yes", "say-no": "no"},
+      "prompt_by_mode": {
+        "ask": "Is this person capable of giving or doing what you want?",
+        "say-no": "Can you give this person what is wanted?"
+      },
+      "choices": [{"label": "Yes", "value": "yes", "next": "priorities"}, {"label": "No", "value": "no", "next": "priorities"}],
+      "level": 2
+    },
+    {
+      "id": "priorities",
+      "type": "question",
+      "control": "yesno",
+      "heading": "Priorities",
+      "field": "priorities",
+      "dime_factor": true,
+      "dime_for": {"ask": "yes", "say-no": "no"},
+      "prompt_by_mode": {
+        "ask": "Is getting your objective more important than maintaining your relationship with this person?",
+        "say-no": "Is your relationship more important than saying no?"
+      },
+      "choices": [{"label": "Yes", "value": "yes", "next": "self-respect"}, {"label": "No", "value": "no", "next": "self-respect"}],
+      "level": 3
+    },
+    {
+      "id": "self-respect",
+      "type": "question",
+      "control": "yesno",
+      "heading": "Self-respect",
+      "field": "self-respect",
+      "dime_factor": true,
+      "dime_for": {"ask": "yes", "say-no": "no"},
+      "prompt_by_mode": {
+        "ask": "Will asking help you feel competent and self-respecting?",
+        "say-no": "Will saying no make you feel bad about yourself?"
+      },
+      "choices": [{"label": "Yes", "value": "yes", "next": "rights"}, {"label": "No", "value": "no", "next": "rights"}],
+      "level": 4
+    },
+    {
+      "id": "rights",
+      "type": "question",
+      "control": "yesno",
+      "heading": "Rights",
+      "field": "rights",
+      "dime_factor": true,
+      "dime_for": {"ask": "yes", "say-no": "no"},
+      "prompt_by_mode": {
+        "ask": "Is the person legally or morally obliged to do or give you what you want?",
+        "say-no": "Are you legally or morally obliged to give or do what is wanted, or does saying no violate this person's rights?"
+      },
+      "choices": [{"label": "Yes", "value": "yes", "next": "authority"}, {"label": "No", "value": "no", "next": "authority"}],
+      "level": 5
+    },
+    {
+      "id": "authority",
+      "type": "question",
+      "control": "yesno",
+      "heading": "Authority",
+      "field": "authority",
+      "dime_factor": true,
+      "dime_for": {"ask": "yes", "say-no": "no"},
+      "prompt_by_mode": {
+        "ask": "Are you in a position of responsibility or authority to tell the person what to do?",
+        "say-no": "Is this other person in a position of responsibility or authority to tell you what to do?"
+      },
+      "choices": [{"label": "Yes", "value": "yes", "next": "relationship"}, {"label": "No", "value": "no", "next": "relationship"}],
+      "level": 6
+    },
+    {
+      "id": "relationship",
+      "type": "question",
+      "control": "yesno",
+      "heading": "Relationship",
+      "field": "relationship",
+      "dime_factor": true,
+      "dime_for": {"ask": "yes", "say-no": "no"},
+      "prompt_by_mode": {
+        "ask": "Is what you want appropriate and reasonable within the context of this relationship?",
+        "say-no": "Is what the person is requesting of you appropriate and reasonable within the context of your relationship?"
+      },
+      "choices": [{"label": "Yes", "value": "yes", "next": "goals"}, {"label": "No", "value": "no", "next": "goals"}],
+      "level": 7
+    },
+    {
+      "id": "goals",
+      "type": "question",
+      "control": "yesno",
+      "heading": "Goals",
+      "field": "goals",
+      "dime_factor": true,
+      "dime_for": {"ask": "yes", "say-no": "no"},
+      "prompt_by_mode": {
+        "ask": "Is asking important to achieving a long-term goal of yours?",
+        "say-no": "In the long term, will you regret saying no?"
+      },
+      "choices": [{"label": "Yes", "value": "yes", "next": "give-take"}, {"label": "No", "value": "no", "next": "give-take"}],
+      "level": 8
+    },
+    {
+      "id": "give-take",
+      "type": "question",
+      "control": "yesno",
+      "heading": "Give and Take",
+      "field": "give-take",
+      "dime_factor": true,
+      "dime_for": {"ask": "yes", "say-no": "no"},
+      "prompt_by_mode": {
+        "ask": "Do you generally give as much as you get in this relationship?",
+        "say-no": "Do you owe this person a favor — does this person do a lot for you when you ask and need something?"
+      },
+      "choices": [{"label": "Yes", "value": "yes", "next": "homework"}, {"label": "No", "value": "no", "next": "homework"}],
+      "level": 9
+    },
+    {
+      "id": "homework",
+      "type": "question",
+      "control": "yesno",
+      "heading": "Homework",
+      "field": "homework",
+      "dime_factor": true,
+      "dime_for": {"ask": "yes", "say-no": "no"},
+      "prompt_by_mode": {
+        "ask": "Have you done your research on what the request entails?",
+        "say-no": "Are you well-informed about what you are saying no to? Is the other person clear about what is being asked for?"
+      },
+      "choices": [{"label": "Yes", "value": "yes", "next": "timing"}, {"label": "No", "value": "no", "next": "timing"}],
+      "level": 10
+    },
+    {
+      "id": "timing",
+      "type": "question",
+      "control": "yesno",
+      "heading": "Timing",
+      "field": "timing",
+      "dime_factor": true,
+      "dime_for": {"ask": "yes", "say-no": "no"},
+      "prompt_by_mode": {
+        "ask": "Is this an opportune moment to ask — is the person likely in the right mood?",
+        "say-no": "Is it good timing for the request?"
+      },
+      "choices": [{"label": "Yes", "value": "yes", "next": "result"}, {"label": "No", "value": "no", "next": "result"}],
+      "level": 11
+    },
+    {
+      "id": "result",
+      "type": "result",
+      "title": "Your DIME Game result",
+      "body": "The closer the DIME total is to $1.00, the more intensely or firmly the source recommends responding.",
+      "dynamic_result": "dime-game",
+      "level": 12,
+      "links": [
+        {"label": "Learn: How to Ask & Say No", "href": "/learn/interpersonal-effectiveness/saying-no.html#ask-say-no-intensity"},
+        {"label": "DEAR MAN Builder", "href": "/skill-finder/dear-man/", "kind": "app"},
+        {"label": "Printable Handout 8, Part 1", "href": "/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-8-evaluating-options-for-whether-or-how-intensely-to-ask-or-say-no-1-of-3-clean.pdf", "new_tab": true},
+        {"label": "Printable Handout 8, Part 2", "href": "/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-8-factors-to-consider-2-of-3-clean.pdf", "new_tab": true},
+        {"label": "Printable Handout 8, Part 3", "href": "/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-8-factors-to-consider-3-of-3-clean.pdf", "new_tab": true}
+      ]
+    }
+  ]
+}

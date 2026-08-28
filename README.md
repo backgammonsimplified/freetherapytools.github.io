@@ -3241,3 +3241,30 @@ layout; it does not rasterize the worksheet. Box Breathing permits either hold
 to be zero and skips zero-length phases while retaining start, pause, reset, and
 reduced-motion support. The safety guidance beside its timing controls is part
 of the tool surface.
+
+---
+
+# 84. The DIME Game
+
+`/skill-finder/dime-game/` implements the Interpersonal Effectiveness Worksheet
+6 / Handout 8 decision tool as **The DIME Game: Determining Intensity in Asking
+or Saying No**. It uses the shared guided vertical tree: the current question is
+large, completed questions and their Yes/No answers remain visible, earlier
+answers can be revised, and the compact roadmap is secondary and collapsible.
+
+The two modes use the source's ten factors. In Asking mode, each Yes earns one
+dime. In Saying-No mode, each No earns one dime, including the source-supported
+Timing interpretation. The total runs from 0 to 10 dimes, displayed through the
+DIME metaphor as $0.00 to $1.00; a higher total means greater suggested response
+intensity. Handout 8 supplies the exact 1–10 Asking and Saying-No response table.
+Because that table begins at 1, the 0-dime result is explicitly presented as a
+neutral low-intensity descriptor rather than an invented exact DBT instruction.
+
+The tool uses the existing `TherapySkillProgress` authority. Mode, situation,
+and all ten answers are stored; score, dollar display, and guidance are derived
+from those answers for browser autosave, Markdown/JSON reopen, readable export,
+DOCX, and print. Printable Handout 8 links open in a new tab.
+
+The Five Factor Model's live-HTML browser worksheet and print layout remain
+crisp. The original source scan quality is intentionally unchanged pending a
+replacement source from the user.

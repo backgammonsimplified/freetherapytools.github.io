@@ -196,6 +196,14 @@ Think through priorities, intensity, and troubleshooting without an automatic sc
 
 [Open Ask or Say No Planner](/skill-finder/ask-or-say-no/)
 :::
+
+::: {.skill-app-hub-card}
+#### The DIME Game
+
+Use ten source-backed Yes/No factors and the $0.00–$1.00 dime metaphor to consider how intensely to ask or say no.
+
+[Open The DIME Game](/skill-finder/dime-game/)
+:::
 :::
 
 ### Goals & Values

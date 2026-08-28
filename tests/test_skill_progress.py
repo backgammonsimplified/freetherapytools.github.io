@@ -26,6 +26,7 @@ TOOLS = {
     "goal-builder": "goal-builder",
     "behavioural-activation": "behavioural-activation",
     "values-review": "values-review",
+    "dime-game": "dime-game",
 }
 
 
