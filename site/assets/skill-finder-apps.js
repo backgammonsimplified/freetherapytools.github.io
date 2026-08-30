@@ -582,38 +582,30 @@
 
   async function initThermometer(root) {
     const data = await getJson("thermometer.json");
-    const state = { selectedZone: "" };
-    function render(focus = false) {
+    const openZones = new Set();
+    function render() {
       root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Skill Thermometer</h2><p>Choose the emotional state of mind that feels closest right now to find a skill or tool to try.</p></header><div class="skill-app-thermometer" role="list">${data.zones.map((item) => {
-        const selected = item.id === state.selectedZone;
         return `<section class="skill-thermometer-zone skill-thermometer-zone--${escapeHtml(item.id)}" role="listitem">
-          <button type="button" data-zone="${escapeHtml(item.id)}" aria-expanded="${selected}" aria-label="${selected ? "Collapse" : "Expand"} ${escapeHtml(item.name)}" aria-controls="zone-${escapeHtml(item.id)}-skills"><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.description)}</span><span class="skill-thermometer-toggle" aria-hidden="true">${selected ? "−" : "+"}</span></button>
-          <div id="zone-${escapeHtml(item.id)}-skills" class="skill-thermometer-recommendations" data-zone-result="${escapeHtml(item.id)}" ${selected ? "" : "hidden"} tabindex="-1">
+          <button type="button" data-zone="${escapeHtml(item.id)}" aria-expanded="false" aria-label="Expand ${escapeHtml(item.name)}" aria-controls="zone-${escapeHtml(item.id)}-skills"><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.description)}</span><span class="skill-thermometer-toggle" aria-hidden="true">+</span></button>
+          <div id="zone-${escapeHtml(item.id)}-skills" class="skill-thermometer-recommendations" data-zone-result="${escapeHtml(item.id)}" hidden>
             <h3>Skills that may fit</h3>
             <div class="skill-thermometer-skill-grid">${item.skills.map((skill) => `<a class="skill-thermometer-skill" href="${escapeHtml(skill.href)}" target="_blank" rel="noopener"><strong>${escapeHtml(skill.name)}</strong><small>${escapeHtml(skill.category)}</small><span>${escapeHtml(skill.summary)}</span><span><strong>Best for:</strong> ${escapeHtml(skill.best_for)}</span><span>${escapeHtml(skill.description)}</span><em>${skill.provenance === "source-guideline" ? "Original Skills Use Guideline" : "Broader Therapy Skill Kit curriculum"}</em><span class="visually-hidden"> Opens in a new tab.</span></a>`).join("")}</div>
           </div>
         </section>`;
-      }).join("")}</div><footer class="skill-app-footer"></footer></div>`;
+      }).join("")}</div></div>`;
       root.querySelectorAll("[data-zone]").forEach((button) => button.addEventListener("click", () => {
-        const closing = state.selectedZone === button.dataset.zone;
-        state.selectedZone = closing ? "" : button.dataset.zone;
-        render(!closing);
-        if (closing) root.querySelector(`[data-zone="${escapeHtml(button.dataset.zone)}"]`)?.focus();
+        const zoneId = button.dataset.zone;
+        const result = root.querySelector(`[data-zone-result="${global.CSS?.escape ? global.CSS.escape(zoneId) : zoneId}"]`);
+        const opening = !openZones.has(zoneId);
+        if (opening) openZones.add(zoneId); else openZones.delete(zoneId);
+        button.setAttribute("aria-expanded", String(opening));
+        button.setAttribute("aria-label", `${opening ? "Collapse" : "Expand"} ${button.querySelector("strong").textContent}`);
+        button.querySelector(".skill-thermometer-toggle").textContent = opening ? "−" : "+";
+        result.hidden = !opening;
+        button.focus({ preventScroll: true });
       }));
-      if (focus && state.selectedZone) root.querySelector(`[data-zone-result="${global.CSS?.escape ? global.CSS.escape(state.selectedZone) : state.selectedZone}"]`)?.focus();
     }
     render();
-    if (Progress) Progress.registerTool({
-      root, toolId: "thermometer", toolTitle: "Skill Thermometer", route: Progress.TOOL_ROUTES.thermometer, schemaVersion: 1,
-      showOpenPreviousProgress: false,
-      getState: () => state,
-      setState: (next) => { state.selectedZone = next.selectedZone; render(); },
-      validateState: (next) => plainObjectWithKeys(next, ["selectedZone"]) && typeof next.selectedZone === "string" && (!next.selectedZone || data.zones.some((zone) => zone.id === next.selectedZone)),
-      getReadableSummary: (next) => {
-        const zone = data.zones.find((item) => item.id === next.selectedZone);
-        return Progress.nonEmptySections("Skill Thermometer", [["Selected Zone", zone?.name], ["Description", zone?.description], ["Skills to Consider", zone?.skills.map((skill) => skill.name) || []]]);
-      },
-    });
   }
 
   async function initEmotionExplorer(root) {
@@ -839,7 +831,7 @@
     function render(focus = false) {
       const matches = events.filter((event) => (!state.query || event.title.toLowerCase().includes(state.query.toLowerCase())) && (!state.tag || categoryFor(event) === state.tag));
       const activity = activityTitle();
-      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Pleasant Event Planner</h2><p>Browse all ${events.length} activities from Emotion Regulation Handout 16. Keep ideas in any of three personal lists; scheduling is optional.</p></header><section class="skill-app-panel"><div class="skill-app-inline-fields"><div><label for="pleasant-search">Search activities</label><input id="pleasant-search" type="search" value="${escapeHtml(state.query)}"></div><div><label for="pleasant-category">Category</label><select id="pleasant-category"><option value="">All categories</option>${categories.map((category) => `<option value="${category.id}" ${state.tag === category.id ? "selected" : ""}>${escapeHtml(category.label)}</option>`).join("")}<option value="other" ${state.tag === "other" ? "selected" : ""}>Other source activities</option></select></div></div><p class="skill-app-field-help">Categories are browsing aids derived from the source list.</p><div class="skill-app-actions"><button type="button" class="secondary" data-surprise>Surprise me</button><span>${matches.length} activities shown</span></div><p class="skill-app-status" aria-live="polite">${escapeHtml(feedback)}</p><div class="pleasant-event-grid">${matches.map((event) => `<button type="button" class="secondary ${event.id === state.selected && !state.custom.trim() ? "is-selected" : ""}" data-event-id="${event.id}" aria-pressed="${event.id === state.selected && !state.custom.trim()}"><span>${event.id}</span>${escapeHtml(event.title)}</button>`).join("")}</div><label for="pleasant-custom">Custom activity</label><div class="pleasant-custom-row"><input id="pleasant-custom" value="${escapeHtml(state.custom)}" placeholder="Write my own activity"><button type="button" class="secondary" data-use-custom>Use custom activity</button></div>
+      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><p class="skill-tree-kicker">Accumulating Short-Term Positive Emotions</p><h2>Pleasant Event Planner</h2><p>Browse all ${events.length} activities from Emotion Regulation Handout 16. Keep ideas in any of three personal lists; scheduling is optional.</p></header><section class="skill-app-panel"><div class="skill-app-inline-fields"><div><label for="pleasant-search">Search activities</label><input id="pleasant-search" type="search" value="${escapeHtml(state.query)}"></div><div><label for="pleasant-category">Category</label><select id="pleasant-category"><option value="">All categories</option>${categories.map((category) => `<option value="${category.id}" ${state.tag === category.id ? "selected" : ""}>${escapeHtml(category.label)}</option>`).join("")}<option value="other" ${state.tag === "other" ? "selected" : ""}>Other source activities</option></select></div></div><p class="skill-app-field-help">Categories are browsing aids derived from the source list.</p><div class="skill-app-actions"><button type="button" class="secondary" data-surprise>Surprise me</button><span>${matches.length} activities shown</span></div><p class="skill-app-status" aria-live="polite">${escapeHtml(feedback)}</p><div class="pleasant-event-grid">${matches.map((event) => `<button type="button" class="secondary ${event.id === state.selected && !state.custom.trim() ? "is-selected" : ""}" data-event-id="${event.id}" aria-pressed="${event.id === state.selected && !state.custom.trim()}"><span>${event.id}</span>${escapeHtml(event.title)}</button>`).join("")}</div><label for="pleasant-custom">Custom activity</label><div class="pleasant-custom-row"><input id="pleasant-custom" value="${escapeHtml(state.custom)}" placeholder="Write my own activity"><button type="button" class="secondary" data-use-custom>Use custom activity</button></div>
         <section class="skill-app-plan pleasant-planning-area" ${activity ? "" : "hidden"} tabindex="-1"><p class="skill-tree-kicker">Selected activity</p><h3 data-pleasant-title>${escapeHtml(activity || "Choose an activity")}</h3><div class="pleasant-list-add-actions"><button type="button" data-add-list="now">Add to “What I can do now”</button><button type="button" data-add-list="worked">Add to “Worked in the past”</button><button type="button" data-add-list="try">Add to “Want to try”</button></div><div class="pleasant-plan-lists">${listMarkup("now")}${listMarkup("worked")}${listMarkup("try")}</div><details class="pleasant-optional-schedule"><summary>Plan or schedule this activity (optional)</summary><label for="pleasant-smallest">Smallest version I could do</label><input id="pleasant-smallest" data-plan="smallest" value="${escapeHtml(state.plan.smallest)}"><label for="pleasant-support">What would help me follow through?</label><input id="pleasant-support" data-plan="support" value="${escapeHtml(state.plan.support)}"><div data-pleasant-calendar></div></details><p class="skill-app-note">Be mindful of the pleasant moment: gently return attention to what you see, hear, feel, smell, taste, or appreciate.</p>${linkCards([{ label: "Behavioural Activation", href: "/tool-finder/behavioural-activation/", kind: "app" }, { label: "Values", href: "/tool-finder/values/", kind: "app" }])}</section></section><footer class="skill-app-footer"></footer></div>`;
       root.querySelector("#pleasant-search")?.addEventListener("change", (event) => { state.query = event.target.value; render(); });
       root.querySelector("#pleasant-category")?.addEventListener("change", (event) => { state.tag = event.target.value; render(); });

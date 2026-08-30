@@ -18,9 +18,15 @@
     const search = document.querySelector("[data-tool-finder-search]");
     const count = document.querySelector("[data-tool-finder-count]");
     const empty = document.querySelector("[data-tool-finder-empty]");
+    const results = document.querySelector("[data-tool-finder-results]");
+    const thermometer = document.querySelector(".tool-finder-featured-thermometer");
     let kind = "all";
     function render() {
       const query = normalize(search.value.trim());
+      if (results && thermometer) {
+        if (query) thermometer.before(results);
+        else thermometer.after(results);
+      }
       let shown = 0;
       host.innerHTML = catalogue.topics.map((topic) => {
         const entries = catalogue.entries.filter((entry) => !entry.featured_on_home && entry.official_topic === topic && (kind === "all" || entry.kind === kind) && (!query || searchable(entry).includes(query)));

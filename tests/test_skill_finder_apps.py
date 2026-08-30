@@ -103,9 +103,11 @@ class SkillFinderAppTests(unittest.TestCase):
         for token in ("skill-thermometer-recommendations", "skill-thermometer-skill-grid", "aria-expanded", "Best for:", 'target="_blank"', "Broader Therapy Skill Kit curriculum"):
             self.assertIn(token, source)
         self.assertIn("Choose the emotional state of mind that feels closest right now to find a skill or tool to try.", source)
-        self.assertIn('showOpenPreviousProgress: false', source)
-        self.assertIn('state.selectedZone = closing ? "" : button.dataset.zone', source)
-        self.assertIn('aria-label="${selected ? "Collapse" : "Expand"} ${escapeHtml(item.name)}"', source)
+        self.assertNotIn('toolId: "thermometer"', source)
+        self.assertIn("const openZones = new Set()", source)
+        self.assertIn('button.focus({ preventScroll: true })', source)
+        self.assertIn('result.hidden = !opening', source)
+        self.assertNotIn('tabindex="-1"', source.split("async function initThermometer", 1)[1].split("async function initEmotionExplorer", 1)[0])
         for token in ("skill-thermometer-zone--overload", "skill-thermometer-zone--distressed-wise-mind", "skill-thermometer-zone--wise-mind", "skill-thermometer-zone--numbness"):
             self.assertIn(token, css)
         for token in ("createForceViewport", "emotion-force-map", "emotion-node-toggle-badge", "emotion-selected-words", "Explore this emotion", "Full screen", "change-emotion-handoff"):

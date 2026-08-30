@@ -27,8 +27,10 @@ Interactive **tools** help you fill in a worksheet, make a plan, follow guided s
   <div class="skill-app" data-skill-app="thermometer">Loading Skill Thermometer…</div>
 </section>
 
-<div data-tool-finder-catalogue aria-busy="true"></div>
-<p class="tool-finder-empty" data-tool-finder-empty hidden>No tools or skills match this search.</p>
+<div class="tool-finder-results" data-tool-finder-results>
+  <div data-tool-finder-catalogue aria-busy="true"></div>
+  <p class="tool-finder-empty" data-tool-finder-empty hidden>No tools or skills match this search.</p>
+</div>
 ```
 
 Tool Finder is educational and does not replace individualized professional care. If a situation involves immediate danger, prioritize safety and appropriate real-world support.

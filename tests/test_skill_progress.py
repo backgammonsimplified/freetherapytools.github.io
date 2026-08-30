@@ -12,7 +12,6 @@ CSS = (ASSETS / "skill-progress.css").read_text(encoding="utf-8")
 
 TOOLS = {
     "values": "values",
-    "thermometer": "thermometer",
     "emotion-explorer": "emotions",
     "case-map": "case-map",
     "change-emotion": "change-emotion",
@@ -59,8 +58,9 @@ class SkillProgressTests(unittest.TestCase):
                 self.assertIn(token, source)
         for tool_id in ("missing-links", "dear-man", "ask-or-say-no", "goal-builder", "behavioural-activation", "values-review"):
             self.assertRegex(practice, rf'"{re.escape(tool_id)}"\s*:\s*\{{')
-        for tool_id in ("thermometer", "emotion-explorer", "pleasant-event"):
+        for tool_id in ("emotion-explorer", "pleasant-event"):
             self.assertIn(f'toolId: "{tool_id}"', finder)
+        self.assertNotIn('toolId: "thermometer"', finder)
         for tool_id in ("behaviour-chain", "exposure"):
             self.assertIn(f'toolId: "{tool_id}"', practice)
         self.assertNotIn("browserAutosave: false", values)

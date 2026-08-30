@@ -3393,3 +3393,24 @@ uses minutes since the urge started on the x-axis and user-entered intensity fro
 0–100 on the y-axis. Initial, later, and optional added checkpoints update the
 graph immediately, remain in the shared schema-v1 progress state, and are listed
 in readable exports. The graph makes no assumption that an urge must decrease.
+
+## 88. Thermometer disclosure and search-result placement (2026-08-30)
+
+Skill Thermometer is a discovery control rather than a worksheet, so it does not
+register with `TherapySkillProgress` and shows no Save Your Work panel. Its four
+states use independent in-place disclosure controls: opening a recommendation
+panel does not rebuild or focus a different element, the clicked button retains
+focus without scrolling, and more than one state can remain open.
+
+Thought Record appears only in Wise Mind, not Distressed but in Wise Mind.
+Emotional Numbness includes **Accumulating Long-Term Positive Emotions (Values)**
+and the Pleasant Event Planner under its curriculum label **Accumulating
+Short-Term Positive Emotions**. The Learn page exposes durable short- and
+long-term anchors. The Pleasant Event route keeps its established name while the
+label appears in its page subtitle, app header, thermometer record, and catalogue
+record.
+
+On `/tool-finder/`, the complete topic catalogue remains below Skill Thermometer
+when search is empty. As soon as a text query is present, the filtered result
+container moves directly below the search controls and above Skill Thermometer;
+clearing the query restores the normal curriculum order.

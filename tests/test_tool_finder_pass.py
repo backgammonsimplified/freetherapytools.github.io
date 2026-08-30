@@ -56,8 +56,11 @@ class ToolFinderPassTests(unittest.TestCase):
         self.assertIn("data-tool-finder-kind", home)
         self.assertIn('data-skill-app="thermometer"', home)
         self.assertIn("tool-finder-featured-thermometer", home)
+        self.assertIn("data-tool-finder-results", home)
         self.assertNotIn('/tool-finder/thermometer/', home)
         self.assertNotIn("data-tool-finder-thermometer", runtime)
+        self.assertIn("thermometer.before(results)", runtime)
+        self.assertIn("thermometer.after(results)", runtime)
         self.assertIn('getJson("thermometer.json")', shared_apps)
         thermometer = next(entry for entry in self.entries if entry["id"] == "thermometer")
         self.assertTrue(thermometer["featured_on_home"])
@@ -66,8 +69,33 @@ class ToolFinderPassTests(unittest.TestCase):
     def test_wise_mind_includes_thought_record(self):
         thermometer = json.loads((SITE / "data/skill-apps/thermometer.json").read_text(encoding="utf-8"))
         wise_mind = next(zone for zone in thermometer["zones"] if zone["id"] == "wise-mind")
+        distressed = next(zone for zone in thermometer["zones"] if zone["id"] == "distressed-wise-mind")
+        numbness = next(zone for zone in thermometer["zones"] if zone["id"] == "numbness")
         thought_record = next(skill for skill in wise_mind["skills"] if skill["name"] == "Thought Record")
         self.assertEqual(thought_record["href"], "/tool-finder/thought-record/")
+        self.assertNotIn("Thought Record", {skill["name"] for skill in distressed["skills"]})
+        numbness_names = {skill["name"] for skill in numbness["skills"]}
+        self.assertIn("Accumulating Long-Term Positive Emotions (Values)", numbness_names)
+        self.assertIn("Accumulating Short-Term Positive Emotions", numbness_names)
+
+    def test_thermometer_has_no_save_panel_and_stable_disclosures(self):
+        runtime = (SITE / "assets/skill-finder-apps.js").read_text(encoding="utf-8")
+        thermometer_runtime = runtime.split("async function initThermometer", 1)[1].split("async function initEmotionExplorer", 1)[0]
+        self.assertNotIn("Progress.registerTool", thermometer_runtime)
+        self.assertNotIn("skill-app-footer", thermometer_runtime)
+        self.assertIn("const openZones = new Set()", thermometer_runtime)
+        self.assertIn("preventScroll: true", thermometer_runtime)
+        self.assertIn("result.hidden = !opening", thermometer_runtime)
+
+    def test_pleasant_event_uses_short_term_positive_emotions_label(self):
+        page = (SITE / "tool-finder/pleasant-event/index.qmd").read_text(encoding="utf-8")
+        runtime = (SITE / "assets/skill-finder-apps.js").read_text(encoding="utf-8")
+        entry = next(entry for entry in self.entries if entry["id"] == "pleasant-event")
+        self.assertIn("Accumulating Short-Term Positive Emotions", page)
+        self.assertIn("Accumulating Short-Term Positive Emotions", runtime)
+        self.assertEqual(entry["name"], "Accumulating Short-Term Positive Emotions")
+        self.assertEqual(entry["subtopic"], "Pleasant Event Planner")
+        self.assertEqual(entry["learn_href"], "/learn/emotion-regulation/abc-please.html#accumulating-short-term-positive-emotions")
 
     def test_strengths_are_merged_alphabetically_into_goal_guidelines(self):
         guidelines = (SITE / "learn/goal-setting/goal-setting-guidelines.qmd").read_text(encoding="utf-8")
