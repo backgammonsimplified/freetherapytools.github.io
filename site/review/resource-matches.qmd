@@ -147,7 +147,7 @@ Review controls appear on localhost, 127.0.0.1, or when `?review=1` is present. 
 ### General Skills
 
 <ul class="bs-review-link-list">
-<li><a href="/tool-finder/index.html?review=1#resource-general-p002">Skills &amp; Strengths List</a> <small class="bs-review-meta">general-p002 - Higher-resolution copy</small></li>
+<li><a href="/learn/goal-setting/goal-setting-guidelines.html?review=1#resource-general-p002">Skills &amp; Strengths List</a> <small class="bs-review-meta">general-p002 - Higher-resolution copy</small></li>
 <li><a href="/tool-finder/index.html?review=1#resource-general-p005">Skills Use Guideline</a> <small class="bs-review-meta">general-p005 - Higher-resolution copy</small></li>
 </ul>
 

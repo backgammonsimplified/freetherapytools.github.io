@@ -3,7 +3,7 @@ title: "Values & Valued Action"
 description: "Clarify what matters and translate valued directions into small, repeatable actions."
 sidebar: learn
 learn-track: goal-setting
-learn-order: 3
+learn-order: 2
 categories:
   - Beginner
 tags:

@@ -24,6 +24,12 @@ legacy-dispositions:
       mechanism: static-client-redirect
       canonical: false
       indexing: "noindex, follow"
+    - source: "/learn/goal-setting/strengths.html"
+      target: "/learn/goal-setting/goal-setting-guidelines.html#strengths"
+      disposition: redirect
+      mechanism: static-client-redirect
+      canonical: false
+      indexing: "noindex, follow"
     - {source: "/skill-finder/ask-or-say-no/", target: "/tool-finder/ask-or-say-no/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
     - {source: "/skill-finder/behavioural-activation/", target: "/tool-finder/behavioural-activation/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
     - {source: "/skill-finder/behaviour-chain/", target: "/tool-finder/behaviour-chain/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}

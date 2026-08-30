@@ -23,11 +23,9 @@ Interactive **tools** help you fill in a worksheet, make a plan, follow guided s
   <p class="tool-finder-count" aria-live="polite" data-tool-finder-count>Loading catalogue…</p>
 </section>
 
-<details class="tool-finder-thermometer">
-  <summary><strong>Skill Thermometer</strong><span>Choose the state that feels closest right now and see skills that may fit.</span></summary>
-  <div data-tool-finder-thermometer></div>
-  <p><a class="btn btn-outline-primary" href="/tool-finder/thermometer/">Open the full Skill Thermometer</a></p>
-</details>
+<section class="tool-finder-featured-thermometer" aria-label="Skill Thermometer">
+  <div class="skill-app" data-skill-app="thermometer">Loading Skill Thermometer…</div>
+</section>
 
 <div data-tool-finder-catalogue aria-busy="true"></div>
 <p class="tool-finder-empty" data-tool-finder-empty hidden>No tools or skills match this search.</p>

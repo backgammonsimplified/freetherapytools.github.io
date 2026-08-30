@@ -50,12 +50,43 @@ class ToolFinderPassTests(unittest.TestCase):
     def test_home_search_thermometer_and_topics(self):
         home = (SITE / "tool-finder/index.qmd").read_text(encoding="utf-8")
         runtime = (SITE / "assets/tool-finder.js").read_text(encoding="utf-8")
+        shared_apps = (SITE / "assets/skill-finder-apps.js").read_text(encoding="utf-8")
         self.assertIn('title: "Tool Finder"', home)
         self.assertIn("data-tool-finder-search", home)
         self.assertIn("data-tool-finder-kind", home)
-        self.assertIn("data-tool-finder-thermometer", home)
-        self.assertIn('/data/skill-apps/thermometer.json', runtime)
+        self.assertIn('data-skill-app="thermometer"', home)
+        self.assertIn("tool-finder-featured-thermometer", home)
+        self.assertNotIn('/tool-finder/thermometer/', home)
+        self.assertNotIn("data-tool-finder-thermometer", runtime)
+        self.assertIn('getJson("thermometer.json")', shared_apps)
+        thermometer = next(entry for entry in self.entries if entry["id"] == "thermometer")
+        self.assertTrue(thermometer["featured_on_home"])
         self.assertEqual(self.catalogue["topics"], ["Goal Setting", "Distress Tolerance", "Mindfulness", "Emotional Regulation", "CBT and Managing Anxiety", "Interpersonal Effectiveness", "Wellness (Actions & Patterns)"])
+
+    def test_wise_mind_includes_thought_record(self):
+        thermometer = json.loads((SITE / "data/skill-apps/thermometer.json").read_text(encoding="utf-8"))
+        wise_mind = next(zone for zone in thermometer["zones"] if zone["id"] == "wise-mind")
+        thought_record = next(skill for skill in wise_mind["skills"] if skill["name"] == "Thought Record")
+        self.assertEqual(thought_record["href"], "/tool-finder/thought-record/")
+
+    def test_strengths_are_merged_alphabetically_into_goal_guidelines(self):
+        guidelines = (SITE / "learn/goal-setting/goal-setting-guidelines.qmd").read_text(encoding="utf-8")
+        self.assertFalse((SITE / "learn/goal-setting/strengths.qmd").exists())
+        self.assertIn('class="strengths-grid"', guidelines)
+        strengths = re.findall(r"<li>([^<]+)</li>", guidelines.split('class="strengths-grid"', 1)[1].split("</ul>", 1)[0])
+        self.assertGreater(len(strengths), 1)
+        self.assertEqual(strengths, sorted(strengths, key=str.casefold))
+        catalogue_entry = next(entry for entry in self.entries if entry["id"] == "strengths-focus")
+        self.assertEqual(catalogue_entry["learn_href"], "/learn/goal-setting/goal-setting-guidelines.html#strengths")
+        legacy = (SITE / "legacy-dispositions.yml").read_text(encoding="utf-8")
+        self.assertIn('/learn/goal-setting/strengths.html', legacy)
+
+    def test_automatic_previous_browser_progress_banner_is_removed_globally(self):
+        progress = (SITE / "assets/skill-progress.js").read_text(encoding="utf-8")
+        self.assertNotIn("Previous browser progress found", progress)
+        self.assertNotIn("data-skill-progress-draft", progress)
+        self.assertIn("Browser progress", progress)
+        self.assertIn("saveDraftNow", progress)
 
     def test_required_concepts_are_searchable(self):
         required = ["STOP", "Pros and Cons", "TIPP", "Temperature", "Intense Exercise", "Progressive Muscle Relaxation", "Paced Breathing", "Wise Mind ACCEPTS", "Activities", "Contributing", "Comparisons", "Opposite Emotion", "Pushing Away", "Thoughts", "Sensations", "Self-Soothe", "IMPROVE", "Imagery", "Meaning", "Prayer", "Relaxation", "One Thing in the Moment", "Vacation", "Self-Encouragement", "Radical Acceptance", "Willingness", "Recognizing States of Mind", "Wise Mind", "WHAT Skills", "Observe", "Describe", "Participate", "HOW Skills", "Non-Judgmentally", "One-Mindfully", "Effectively", "Positive Self-Talk", "Grounding", "Mindfulness of Current Emotions", "Emotion Surfing", "ABC PLEASE", "Accumulating Positive Emotions", "Build Mastery", "Cope Ahead", "Treat Physical Illness", "Balanced Eating", "Avoid Mood-Altering Substances", "Balanced Sleep", "Exercise", "Observing and Describing Emotions", "Check the Facts", "Opposite Action", "Problem Solving", "Pleasant Events", "Thought Records", "Facing Fears", "Fear Ladder", "Challenging Negative Thoughts", "Recognizing Thinking Traps", "Worry Time", "Worry Tree", "Box Breathing", "Five Factor Model", "Case Map", "Clarifying Priorities", "DEAR MAN", "GIVE", "FAST", "Boundaries", "Walking the Middle Path", "DIME Game", "Ask / Say No", "Sleep Hygiene", "Behavioural Activation", "Behaviour Chain Analysis", "Gratitude Journaling", "Stages of Change", "Urge Surfing", "Determination", "Medication Adherence"]

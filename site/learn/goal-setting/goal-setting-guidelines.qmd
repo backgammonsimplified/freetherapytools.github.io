@@ -139,3 +139,53 @@ This handout's educational content is integrated into the anchored skill section
 ::::
 
 <!-- section-scan-resources:end -->
+
+<!-- native-resource-content:general-p002:start -->
+
+```{=html}
+<span id="resource-general-p002"></span>
+```
+
+## Strengths and Focus {#strengths}
+
+Strengths are qualities and practices you can draw on while working toward change. This source-backed list is arranged alphabetically so it is easier to scan.
+
+```{=html}
+<ul class="strengths-grid" aria-label="Skills and strengths in alphabetical order">
+  <li>Asking for Help</li>
+  <li>Commitment</li>
+  <li>Compassion</li>
+  <li>Confidence</li>
+  <li>Courage</li>
+  <li>Determination</li>
+  <li>Discipline</li>
+  <li>Empathy</li>
+  <li>Flexibility</li>
+  <li>Focus</li>
+  <li>Forgiveness of Others</li>
+  <li>Forgiveness of Self</li>
+  <li>Honesty</li>
+  <li>Hopefulness</li>
+  <li>Humour</li>
+  <li>Kindness</li>
+  <li>Medication Adherence</li>
+  <li>Motivation</li>
+  <li>Objectivity</li>
+  <li>Open-Mindedness</li>
+  <li>Patience</li>
+  <li>Persistence</li>
+  <li>Self-Awareness</li>
+  <li>Sensitivity</li>
+</ul>
+```
+
+The [Skills & Strengths List printable copy](/resources/general/general-p002.jpg) brings the curriculum's skills and strengths together in one quick reference.
+
+::: {.bs-resource-match data-match-id="php-high-res:general-p002:php-p0143" data-source-id="general-p002" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0143.pdf"}
+[Open the higher-resolution printable copy](/resources/high-res/php/php-p0143.pdf)
+
+<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
+<span class="bs-match-review-status" aria-live="polite"></span>
+:::
+
+<!-- native-resource-content:general-p002:end -->

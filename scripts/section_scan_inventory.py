@@ -91,7 +91,6 @@ ROTATE_CLOCKWISE = {
 LESSON_FILES = {
     "tool-finder": "tool-finder/index.qmd",
     "goal-guidelines": "learn/goal-setting/goal-setting-guidelines.qmd",
-    "skills-strengths": "learn/goal-setting/strengths.qmd",
     "weekly-goal-worksheets": "learn/goal-setting/weekly-goals-home-practice.qmd",
     "weekly-home-practice": "learn/goal-setting/daily-tracking.qmd",
     "dt-stop": "learn/distress-tolerance/stop-crisis-survival.qmd",
@@ -143,7 +142,7 @@ SPECS: dict[str, list[tuple[str, str, str, str, str]]] = {}
 
 SPECS["general"] = [
     row("section-cover", "", "General Handouts", "structural", "Cover metadata only."),
-    row("reference", "tool-finder", "Skills & Strengths List", "reference"),
+    row("reference", "goal-guidelines", "Skills & Strengths List", "reference"),
     row("reference", "tool-finder", "Skills Overview", "reference"),
     row("reference", "tool-finder", "Emotional Overload & Emotional Numbness Skills Guide", "reference", "The general scan cover lists a Feeling Wheel, but this physical page contains a skills-selection guide."),
     row("reference", "tool-finder", "Skills Use Guideline", "reference"),
@@ -649,6 +648,11 @@ def attach_resources(records: list[dict[str, object]]) -> None:
     for lesson, relative in LESSON_FILES.items():
         qmd = SITE / relative
         source = qmd.read_text(encoding="utf-8").rstrip()
+        resource_match = re.search(
+            r"\n<!-- section-scan-resources:start -->.*?<!-- section-scan-resources:end -->",
+            source,
+            flags=re.DOTALL,
+        )
         native_content = {
             match.group("source_id"): match.group(0).strip()
             for match in re.finditer(
@@ -657,8 +661,16 @@ def attach_resources(records: list[dict[str, object]]) -> None:
                 source,
                 flags=re.DOTALL,
             )
+            if resource_match and resource_match.start() <= match.start() < resource_match.end()
         }
-        source = re.sub(r"\n<!-- section-scan-resources:start -->.*?<!-- section-scan-resources:end -->\s*\Z", "", source, flags=re.DOTALL).rstrip()
+        resource_slot = "\n<!-- section-scan-resources:slot -->"
+        source = re.sub(
+            r"\n<!-- section-scan-resources:start -->.*?<!-- section-scan-resources:end -->",
+            resource_slot,
+            source,
+            count=1,
+            flags=re.DOTALL,
+        ).rstrip()
         blocks = ["<!-- section-scan-resources:start -->"]
         for kind in order:
             matching = [record for record in by_lesson[lesson] if record["resource_kind"] == kind]
@@ -675,7 +687,12 @@ def attach_resources(records: list[dict[str, object]]) -> None:
                 for record in matching
             )
         blocks.append("<!-- section-scan-resources:end -->")
-        qmd.write_text(source + "\n\n" + "\n\n".join(blocks) + "\n", encoding="utf-8", newline="\n")
+        resource_block = "\n\n".join(blocks)
+        if resource_slot in source:
+            output = source.replace(resource_slot, "\n" + resource_block, 1)
+        else:
+            output = source + "\n\n" + resource_block
+        qmd.write_text(output.rstrip() + "\n", encoding="utf-8", newline="\n")
 
 
 def main() -> int:

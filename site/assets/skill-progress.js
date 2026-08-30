@@ -231,18 +231,6 @@
     setMessage("Browser progress cleared.");
   }
 
-  function continueDraft() {
-    const draft = readDraft();
-    if (!draft) {
-      setMessage("No usable browser progress was found.", true);
-      return;
-    }
-    active.config.setState(clone(draft.state));
-    active.lastSaved = new Date(draft.record.saved_at);
-    updateDraftUi();
-    setMessage("Previous browser progress restored.");
-  }
-
   function startOver() {
     if (!global.confirm("Start over and clear browser progress for this tool?")) return;
     active.config.setState(clone(active.initialState));
@@ -585,18 +573,6 @@
       area.append(element("p", { text: "Recommended. You can reopen this Markdown file later and continue." }), actions);
       footer.append(area);
     }
-    const draft = active.config.browserAutosave === false || active.config.showDraftPrompt === false ? null : readDraft();
-    let prompt = active.config.root.previousElementSibling;
-    if (draft && !prompt?.matches?.("[data-skill-progress-draft]")) {
-      prompt = element("aside", { className: "skill-progress-draft-prompt", attrs: { "data-skill-progress-draft": "", "aria-label": "Previous browser progress" } });
-      const text = element("p", { text: "Previous browser progress found" });
-      const resume = element("button", { type: "button", text: "Continue" });
-      const start = element("button", { className: "secondary", type: "button", text: "Start over" });
-      resume.addEventListener("click", continueDraft);
-      start.addEventListener("click", startOver);
-      prompt.append(text, resume, start);
-      active.config.root.before(prompt);
-    } else if (!draft && prompt?.matches?.("[data-skill-progress-draft]")) prompt.remove();
   }
 
   function registerTool(config) {
@@ -614,8 +590,6 @@
       active.floating?.remove();
       active.backdrop?.remove();
       active.drawer?.remove();
-      const draftPrompt = active.config.root.previousElementSibling;
-      if (draftPrompt?.matches?.("[data-skill-progress-draft]")) draftPrompt.remove();
       active = null;
     }
     if (active?.observer) active.observer.disconnect();

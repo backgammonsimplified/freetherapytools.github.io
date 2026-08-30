@@ -3,7 +3,7 @@ title: "Weekly Goal Worksheets"
 description: "Translate priorities into goals and review progress across the week."
 sidebar: learn
 learn-track: goal-setting
-learn-order: 4
+learn-order: 3
 categories:
   - Beginner
 tags:

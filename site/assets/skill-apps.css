@@ -2388,11 +2388,15 @@ button.values-inline-choice:hover {
 .tool-finder-filters button { min-height: 2.5rem; padding: .4rem .85rem; border: 1px solid #46758d; border-radius: 999px; background: #fff; color: #234b60; }
 .tool-finder-filters button[aria-pressed="true"] { background: #234b60; color: #fff; }
 .tool-finder-count { margin: .65rem 0 0; }
-.tool-finder-thermometer { margin: 0 0 1.5rem; padding: .8rem 1rem; border: 1px solid #c9d5dd; border-radius: .75rem; }
-.tool-finder-thermometer summary { cursor: pointer; }
-.tool-finder-thermometer summary span { display: block; font-weight: 400; }
-.tool-finder-thermometer section { margin-top: 1rem; }
-.tool-finder-thermometer section h3 { font-size: 1.05rem; }
+.tool-finder-featured-thermometer {
+  margin: 0 0 2rem;
+  padding: clamp(.75rem, 2vw, 1.25rem);
+  border: 2px solid #6b8d7a;
+  border-radius: 1rem;
+  background: linear-gradient(145deg, #f1f8f4, #f7fafc);
+  box-shadow: 0 .55rem 1.4rem rgb(45 77 61 / 12%);
+}
+.tool-finder-featured-thermometer .skill-app-shell { max-width: none; }
 .tool-finder-topic { margin: 2rem 0; }
 .tool-finder-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: .8rem; }
 .tool-finder-card { padding: .9rem; border: 1px solid #ced8df; border-radius: .65rem; background: #fff; }
@@ -2400,7 +2404,27 @@ button.values-inline-choice:hover {
 .tool-finder-card-heading { display: flex; gap: .5rem; justify-content: space-between; align-items: start; }
 .tool-finder-card-heading span, .tool-finder-planned { font-size: .78rem; color: #566773; }
 .tool-finder-subtopic { margin: .25rem 0; font-size: .84rem; font-weight: 700; color: #566773; }
-@media (max-width: 430px) { .tool-finder-search, .tool-finder-thermometer, .tool-finder-card { padding: .75rem; } .tool-finder-actions .btn { min-height: 2.75rem; display: inline-flex; align-items: center; } }
+@media (max-width: 430px) { .tool-finder-search, .tool-finder-featured-thermometer, .tool-finder-card { padding: .75rem; } .tool-finder-actions .btn { min-height: 2.75rem; display: inline-flex; align-items: center; } }
+
+/* Goal-setting strengths overview */
+.strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: .55rem .75rem;
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+.strengths-grid li {
+  padding: .55rem .7rem;
+  border: 1px solid #cbd8d0;
+  border-radius: .55rem;
+  background: #f5faf7;
+}
+@media (max-width: 480px) {
+  .strengths-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .strengths-grid li { padding: .5rem; font-size: .9rem; overflow-wrap: anywhere; }
+}
 .therapy-audio-block { margin: 1rem 0; padding: 1rem; border: 1px solid #cbd6dc; border-radius: .6rem; background: #f8fafb; }
 .therapy-audio-block audio { display: block; width: 100%; max-width: 36rem; }
 .therapy-audio-source { overflow-wrap: anywhere; font-size: .9rem; }

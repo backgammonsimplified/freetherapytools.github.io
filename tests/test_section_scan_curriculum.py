@@ -116,7 +116,6 @@ class SectionScanCurriculumTests(unittest.TestCase):
             {
                 "goal-setting": [
                     "Goal Setting Guidelines",
-                    "Skills & Strengths List",
                     "Values & Valued Action",
                     "Weekly Goal Worksheets",
                     "Weekly Home Practice Trackers",
@@ -241,7 +240,12 @@ class SectionScanCurriculumTests(unittest.TestCase):
         general = [
             row for row in self.rows if row["lesson"] == "tool-finder" and row["publish"] == "true"
         ]
-        self.assertEqual(len(general), 5)
+        self.assertEqual(len(general), 4)
+        goal_guidelines = [
+            row for row in self.rows
+            if row["lesson"] == "goal-guidelines" and row["resource_title"] == "Skills & Strengths List"
+        ]
+        self.assertEqual(len(goal_guidelines), 1)
         source = (SITE / "data" / "tool-finder" / "catalogue.json").read_text(encoding="utf-8")
         for title in ("STOP", "Wise Mind", "ABC PLEASE", "DEAR MAN", "Strengths & Focus"):
             self.assertIn(title, source)

@@ -826,10 +826,9 @@ Tool Finder | DBT Skills | CBT Skills | Mindfulness
 ## Goal Setting & Tracking
 
 1. Goal Setting Guidelines
-2. Skills & Strengths List
-3. Values & Valued Action
-4. Weekly Goal Worksheets
-5. Weekly Home Practice Trackers
+2. Values & Valued Action
+3. Weekly Goal Worksheets
+4. Weekly Home Practice Trackers
 
 ## Distress Tolerance
 
@@ -3283,7 +3282,7 @@ aliases, and related Learn destinations. The official sidebar and catalogue
 topic order is: Goal Setting; Distress Tolerance; Mindfulness; Emotional
 Regulation; CBT and Managing Anxiety; Interpersonal Effectiveness; Wellness
 (Actions & Patterns). Search filters immediately across names, aliases,
-subskills, topics, summaries, and search terms. The compact home thermometer
+subskills, topics, summaries, and search terms. The home thermometer
 reuses `site/data/skill-apps/thermometer.json`; it does not duplicate the
 recommendation data. Every available interactive tool must have a resolvable
 `learn_href` under `/learn/`. Planned records have no fabricated `tool_href`.
@@ -3343,3 +3342,28 @@ when these runtimes change. On the managed Windows checkout, Git metadata and
 Quarto/Python spawning may still fail with the documented ACL/invalid-handle
 errors; use the exact-baseline disposable-clone workflow for non-force commits
 and push.
+
+## 86. Tool Finder thermometer, global progress banner, and Goal Setting strengths (2026-08-30)
+
+The Tool Finder home mounts the same `data-skill-app="thermometer"` component as
+the dedicated compatibility route. It is a prominent bordered feature directly
+below search, retains the four coloured expandable states and every recommendation,
+and does not link away to the dedicated thermometer page. The thermometer remains
+in `site/data/tool-finder/catalogue.json` for route/progress validation but is
+marked `featured_on_home` so the catalogue does not show a redundant Open Tool
+card. `site/data/skill-apps/thermometer.json` remains the recommendation authority;
+Wise Mind now also includes Thought Record.
+
+The automatic `Previous browser progress found` prompt has been removed from the
+shared `TherapySkillProgress` runtime for every tool. Browser autosave, the Browser
+progress section, clear-progress control, file restore, and exports remain intact.
+Per-tool `showDraftPrompt` fields are accepted as harmless backward-compatible
+configuration but no longer create a page banner.
+
+The former standalone Skills & Strengths lesson is merged into the bottom of the
+authored Goal Setting Guidelines content at
+`/learn/goal-setting/goal-setting-guidelines.html#strengths`. Its entries are
+alphabetical and use a responsive multi-column grid (two columns at phone width).
+The old `/learn/goal-setting/strengths.html` URL is a static compatibility redirect
+to that anchor. Values & Valued Action and the two tracking lessons are renumbered
+2–4, and catalogue/source-inventory links now use the combined lesson.
