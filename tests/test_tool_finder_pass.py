@@ -50,6 +50,7 @@ class ToolFinderPassTests(unittest.TestCase):
     def test_home_search_thermometer_and_topics(self):
         home = (SITE / "tool-finder/index.qmd").read_text(encoding="utf-8")
         runtime = (SITE / "assets/tool-finder.js").read_text(encoding="utf-8")
+        styles = (SITE / "assets/skill-apps.css").read_text(encoding="utf-8")
         shared_apps = (SITE / "assets/skill-finder-apps.js").read_text(encoding="utf-8")
         self.assertIn('title: "Tool Finder"', home)
         self.assertIn("data-tool-finder-search", home)
@@ -62,6 +63,9 @@ class ToolFinderPassTests(unittest.TestCase):
         self.assertIn("thermometer.before(results)", runtime)
         self.assertIn("thermometer.after(results)", runtime)
         self.assertIn('getJson("thermometer.json")', shared_apps)
+        featured_styles = styles.split(".tool-finder-featured-thermometer {", 1)[1].split("}", 1)[0]
+        self.assertNotIn("border:", featured_styles)
+        self.assertNotIn("background:", featured_styles)
         thermometer = next(entry for entry in self.entries if entry["id"] == "thermometer")
         self.assertTrue(thermometer["featured_on_home"])
         self.assertEqual(self.catalogue["topics"], ["Goal Setting", "Distress Tolerance", "Mindfulness", "Emotional Regulation", "CBT and Managing Anxiety", "Interpersonal Effectiveness", "Wellness (Actions & Patterns)"])
