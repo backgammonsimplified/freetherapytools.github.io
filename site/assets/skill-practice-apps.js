@@ -6,6 +6,7 @@
     .replaceAll('"', "&quot;").replaceAll("'", "&#039;");
   const Progress = typeof window !== "undefined" ? window.TherapySkillProgress : null;
   const SharedCalendar = typeof window !== "undefined" ? window.TherapyCalendar : require("./therapy-calendar.js");
+  const Site = typeof window !== "undefined" && window.TherapySite ? window.TherapySite : { path: (value) => value };
 
   const LINKS = {
     chain: [{ label: "Learn Behaviour Chain Analysis", href: "/learn/wellness/behavior-chain-missing-links.html#behaviour-chain-analysis" }],
@@ -95,7 +96,7 @@
   };
 
   function linksMarkup(links) {
-    return `<div class="skill-app-result-links">${links.map((link) => `<a class="skill-app-link-button secondary" href="${escapeHtml(link.href)}">${escapeHtml(link.label)}</a>`).join("")}</div>`;
+    return `<div class="skill-app-result-links">${links.map((link) => `<a class="skill-app-link-button secondary" href="${escapeHtml(Site.path(link.href))}">${escapeHtml(link.label)}</a>`).join("")}</div>`;
   }
 
   function stringsOnly(object, keys) {
@@ -277,7 +278,7 @@
       return ["BEGIN:VEVENT", `UID:${index ? `${uid}-${index + 1}` : uid}`, `DTSTAMP:${utcCalendarStamp(now)}`, `DTSTART;TZID=${timezone}:${start}`, `DURATION:${duration}`,
         ...(rule ? [`RRULE:${rule}`] : []), `SUMMARY:${escapeIcsText(title)}`, `DESCRIPTION:${escapeIcsText(options.description || "")}`, "END:VEVENT"];
     });
-    return ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Therapy Skill Kit//SMART Goal Builder//EN", "CALSCALE:GREGORIAN", `X-WR-TIMEZONE:${timezone}`, ...events, "END:VCALENDAR", ""].join("\r\n");
+    return ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Free Therapy Tools//SMART Goal Builder//EN", "CALSCALE:GREGORIAN", `X-WR-TIMEZONE:${timezone}`, ...events, "END:VCALENDAR", ""].join("\r\n");
   }
 
   function buildGoogleCalendarUrls(options) {
@@ -789,7 +790,7 @@
   }
 
   async function initBehaviouralActivation(root) {
-    const response = await fetch("/data/skill-apps/pleasant-events.json", { credentials: "same-origin" });
+    const response = await fetch(Site.path("/data/skill-apps/pleasant-events.json"), { credentials: "same-origin" });
     if (!response.ok) throw new Error("Could not load pleasant-event suggestions");
     const data = await response.json();
     const suggestions = [

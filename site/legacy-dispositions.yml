@@ -1,6 +1,6 @@
 legacy-dispositions:
-  schema-id: "https://backgammonsimplified.github.io/schemas/legacy-dispositions-v1"
-  canonical-origin: "https://backgammonsimplified.github.io"
+  schema-id: "https://backgammonsimplified.github.io/freetherapytools.github.io/schemas/legacy-dispositions-v1"
+  canonical-origin: "https://backgammonsimplified.github.io/freetherapytools.github.io"
   hosts:
     - origin: "https://backgammon-made-simple.github.io"
       disposition: legacy

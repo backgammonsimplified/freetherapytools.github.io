@@ -1,194 +1,36 @@
 ---
-title: "About Backgammon Simplified"
+title: "About Free Therapy Tools"
+description: "About the educational skills, privacy approach, and development status of Free Therapy Tools."
 page-layout: full
-toc: false
+toc: true
 format:
   html:
     title-block-style: plain
     body-classes: bs-about-page
 ---
 
-:::::: bs-page-shell
-::::: bs-reading-column
-Backgammon Simplified is an open-source project for understanding the game and making better decisions.
+Free Therapy Tools is an open-source collection of practical lessons, worksheets, and browser-based tools for learning and practising DBT, CBT, mindfulness, goal-setting, emotional-regulation, distress-tolerance, interpersonal-effectiveness, and wellness skills.
 
-The idea is simple:
-
-> **Come with a question. Leave with a clear mental model you can use at the board.**
-
-We try to make difficult ideas clearer, build useful tools, and help more people get excited about backgammon.
-
-## Why We Built This
-
-I started this project while trying to understand my own blunders. The engine gave me the best moves. A friend who is a great player said, "Eventually, you'll start to see it."
-
-I wanted to know what I was supposed to see, as I asked questions like:
-
-::: bs-question-examples
-[\>]{.bs-code-prefix aria-hidden="true"} *Why is 25% often called the take point... and yet it rarely ever is?*
-
-[\>]{.bs-code-prefix aria-hidden="true"} *When should I run a lone back checker, move it up, or leave it where it is?*
-
-[\>]{.bs-code-prefix aria-hidden="true"} *Why is breaking an anchor brilliant one game and a blunder the next?*
-
-[\>]{.bs-code-prefix aria-hidden="true"} *What can one position teach me about the thousands I'll see later?*
-
-[// goal: clarity over perfection]{.bs-code-note}
+::: {.callout-note title="Development preview"}
+**Free Therapy Tools is under active development.** Content and interactions may change as the project is reviewed and improved.
 :::
 
-Backgammon Simplified is my attempt to answer questions with real positions, clear explanations, and evidence instead of folklore.
+## What this site is for
 
-::: bs-section-heading
-## Introducing Marty Gale
+Use the [Tool Finder](tool-finder/index.qmd) to find a focused exercise, or browse [Learn](learn/index.qmd) for the surrounding skill and context. The tools are designed for education, reflection, and practice. They do not diagnose conditions or replace care from a qualified professional.
 
-[ROLE: AUTHOR :: RESEARCHER :: PLAYER]{.bs-heading-meta}
-:::
+If you or someone else may be in immediate danger, use appropriate local emergency or crisis services rather than relying on this website.
 
-Hi, I'm **Marty Gale, PhD**.[^1]
+## Privacy
 
-I research the intersection of dice rigging, probability, and questionable doubling decisions.
+Interactive answers stay in your browser unless you explicitly save or export a copy. Free Therapy Tools does not put personal worksheet text into page URLs. Some tools can open an external service, such as a prefilled Google Calendar page, only after you choose that action.
 
-Behind the joke, Marty Gale is the public author identity for this project.
+## Audio and source materials
 
-I am not presenting myself as one of the world's great backgammon players. I am a curious player learning in public: asking questions, testing ideas, making mistakes, and trying to leave behind explanations that are more useful than a table of rollout results.
+Intentionally published recordings and printable resources are served from this site and retain their stated attribution. External-only resources remain links to their providers when local redistribution is not permitted. See [Licensing and Attribution](licensing.qmd) for the project's licence summary and third-party notices.
 
-## Open Source Tools for the Game
+## Open development
 
-Backgammon Simplified is also a home for useful technology around the game:
+The development source is public at [backgammonsimplified/freetherapytools.github.io](https://github.com/backgammonsimplified/freetherapytools.github.io). This repository is a temporary development home; a formal release will later move to the maintainer's personal repository with fresh Git history.
 
-
-
-::::::: {.bs-section}
-::: {.bs-eyebrow}
-OPEN SOURCE
-:::
-
-## Tools you can inspect and reuse
-
-::: {.bs-section-lead}
-The website and tools behind it are open source. Inspect the code, check the methods, report a problem, or reuse parts of the work.
-:::
-
-:::::: {.bs-repository-grid aria-label="Open-source project repositories"}
-::::: {.bs-card .bs-repository-card}
-::: {.bs-repository-mark aria-hidden="true"}
-&lt;/&gt;
-:::
-
-::: {.bs-repository-copy}
-<span class="bs-repository-label">QUARTO :: R :: SHINY</span>
-
-### Backgammon Simplified
-
-The website, lessons, analyzer frontend, research articles, and public site data.
-:::
-
-::: {.bs-repository-action}
-[View source](https://github.com/backgammonsimplified/backgammonsimplified.github.io)
-:::
-:::::
-
-::::: {.bs-card .bs-repository-card}
-::: {.bs-repository-mark aria-hidden="true"}
-[Py]
-:::
-
-::: {.bs-repository-copy}
-<span class="bs-repository-label">PYTHON :: ENGINE INTEGRATION</span>
-
-### Backgammon Engine Kit
-
-Analyzer backend and other Python tools for running backgammon engines and turning their output into consistent, structured results.
-:::
-
-::: {.bs-repository-action}
-[View repository](https://github.com/backgammonsimplified/backgammon-engine-kit)
-:::
-:::::
-
-::::: {.bs-card .bs-repository-card}
-::: {.bs-repository-mark aria-hidden="true"}
-[⚔]
-:::
-
-::: {.bs-repository-copy}
-<span class="bs-repository-label"> PYTHON  :: BENCHMARKING</span>
-
-### Backgammon Engine Benchmark
-
-Tools for running reproducible engine-versus-engine matches, checking the results, and publishing the evidence.
-:::
-
-::: {.bs-repository-action}
-[View repository](https://github.com/backgammonsimplified/backgammon-engine-benchmark)
-:::
-:::::
-
-::::: {.bs-card .bs-repository-card}
-::: {.bs-repository-mark aria-hidden="true"}
-[R]
-:::
-
-::: {.bs-repository-copy}
-<span class="bs-repository-label">R :: BOARD RENDERING</span>
-
-### backgammonboard
-
-[R] library for drawing backgammon boards and creating clear position and analysis figures.
-:::
-
-::: {.bs-repository-action}
-[View repository](https://github.com/backgammonsimplified/backgammonboard)
-:::
-:::::
-
-::::: {.bs-card .bs-repository-card}
-::: {.bs-repository-mark aria-hidden="true"}
-[R]
-:::
-
-::: {.bs-repository-copy}
-<span class="bs-repository-label">R :: ANALYSIS</span>
-
-### backgammoncalculator
-
-[R] library for calculating backgammon measures and supporting reproducible analysis.
-:::
-
-::: {.bs-repository-action}
-[View repository](https://github.com/backgammonsimplified/backgammoncalculator)
-:::
-:::::
-::::::
-:::::::
-
-## Built to Be Useful
-
-This is just the start!  We want to build tools and articles which are useuful for you! 
-[Read what I am building ->](/research/)
-
-
-::::::: {.bs-section .bs-section--compact .bs-section--ruled-top}
-::: {.bs-eyebrow}
-FEEDBACK
-:::
-
-## Help make it better
-
-::: {.bs-section-lead}
-Found a mistake, have a question, or see something that could be clearer? If you are technical you can share feedback by opening an issue on GitHub.
-:::
-
-::: {.bs-button-row}
-[Give feedback on GitHub](https://github.com/backgammonsimplified/backgammonsimplified.github.io/issues/new?template=feedback.yml){.bs-button-primary}
-:::
-:::::::
-
-
-
-
-
-:::::
-::::::
-
-[^1]: **PhD:** Probably has Doubled
+[Give feedback on GitHub](https://github.com/backgammonsimplified/freetherapytools.github.io/issues/new){.bs-button-primary}

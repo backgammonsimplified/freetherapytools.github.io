@@ -77,6 +77,10 @@ Change often works more like a cycle than a straight line. A person may move for
 
 The Stages of Change model is a way to think about readiness for a particular change. It is not a test or diagnosis, and someone does not need to be pushed into a stage they are not ready for.
 
+![A horizontal overview of precontemplation, contemplation, preparation, action, and maintenance, with a brief description and useful task for each stage.](/resources/wellness/stages-of-change/stages-of-change.png){.img-fluid fig-alt="A horizontal overview of five stages of change and the useful task at each stage."}
+
+The overview above introduces the main forward-moving stages. The accessible Change Path below also includes returning to an old pattern as a place to learn and restart.
+
 ```{=html}
 <div class="change-path-graphic change-path-graphic--learn" aria-labelledby="change-path-caption">
   <svg class="change-path-arrows" viewBox="0 0 900 620" role="img" aria-labelledby="change-path-svg-title change-path-svg-desc">
@@ -137,6 +141,10 @@ The useful task is strengthening successful strategies and preparing for situati
 A return to an earlier behaviour does not erase the work that came before it. It can provide useful information about triggers, barriers, supports, expectations, and parts of the plan that need to change.
 
 The useful task is to review what happened without turning it into a judgment about the person: What contributed? What did I learn? What would help me get back on track?
+
+![A circular Stages of Change diagram showing precontemplation, contemplation, preparation, action, maintenance, and relapse, with learning from each cycle at the centre.](/resources/wellness/stages-of-change/stages-of-change-cycle.png){.img-fluid fig-alt="A six-stage cycle of change that loops through returning to an old pattern and learning from each cycle."}
+
+This second view emphasizes that change is a process rather than a straight line. The wording *returning to an old pattern* used in the lesson keeps the focus on learning and restarting rather than labeling the person.
 
 [Use the Stages of Change reflection tool](/tool-finder/stages-of-change/) or continue to [Urge Surfing](/learn/wellness/urge-surfing.html), which applies mindful observation to an urge without treating it as a command.
 

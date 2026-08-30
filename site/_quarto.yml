@@ -1,18 +1,28 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - "**/*.qmd"
+    - "!analyze/"
+    - "!engine-benchmark/"
+    - "!match-predictor/"
+    - "!posts/"
+    - "!research/"
+    - "!updates/"
   pre-render:
   - python ../scripts/bs_pre_render.py
   - python ../scripts/page_publication.py validate-source
   post-render:
   - python ../scripts/bs_post_render.py
   - python ../scripts/page_publication.py apply
+  - python ../scripts/site_base_paths.py
   resources:
     - assets/logo.svg
     - "assets/icons/**"
     - "assets/social/generated/*.png"
     - assets/bs-glossary.js
     - assets/bs-learn.js
+    - assets/site-path.js
     - assets/d3-values-force.min.js
     - assets/therapy-force-graph.js
     - assets/therapy-calendar.js
@@ -34,6 +44,7 @@ project:
     - "resources/audio/**"
     - "resources/mindfulness/**"
     - "resources/wellness/urge-surfing/**"
+    - "resources/wellness/stages-of-change/**"
     - "data/skill-apps/**"
     - "data/resource-paraphrases/**"
     - assets/bs-glossary-lookup.json
@@ -42,16 +53,6 @@ project:
     - assets/bs-cbt-sequence.json
     - assets/bs-mindfulness-sequence.json
     - assets/bs-research-sequence.json
-    - "assets/positions/**"
-    - data/lesson-analysis-svg-mvp.json
-    - data/checker-sage-gnu-disagreement-001.json
-    - "data/engine-benchmark/**"
-    - "engine-benchmark/**/figures/**"
-    - "engine-benchmark/**/tables/**"
-    - "engine-benchmark/**/data/**"
-    - "engine-benchmark/**/captions.yml"
-    - "engine-benchmark/**/PUBLICATION_MANIFEST.yml"
-    - "engine-benchmark/**/checksums.sha256"
 
 filters:
   - bs-link-policy
@@ -61,19 +62,19 @@ metadata-files:
   - _learn-navigation.yml
 
 website:
-  title: "Therapy Skill Kit"
+  title: "Free Therapy Tools"
   description: "A practical curriculum of DBT, CBT, and mindfulness skills."
   search:
     location: navbar
     type: overlay
   favicon: assets/icons/favicon.ico
-  image: /assets/social/generated/social-default.png
+  image: assets/social/generated/social-default.png
   open-graph: true
   twitter-card:
     card-style: summary_large_image
   navbar:
     logo: assets/logo.svg
-    logo-alt: "Therapy Skill Kit"
+    logo-alt: "Free Therapy Tools"
     collapse-below: xl
     left:
       - text: Tool Finder
@@ -91,10 +92,10 @@ website:
         text: About
   page-footer:
     left: |
-      Therapy Skill Kit
+      Free Therapy Tools · Under active development
     center:
       - text: "Code: AGPL-3.0-only \u00b7 Educational content: CC BY-SA 4.0 \u00b7 Licensing"
-        href: /licensing.html
+        href: licensing.qmd
 
 format:
   html:

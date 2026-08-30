@@ -1,7 +1,8 @@
 (function (global) {
   "use strict";
 
-  const DATA_ROOT = "/data/skill-apps";
+  const Site = global.TherapySite || { path: (value) => value };
+  const DATA_ROOT = Site.path("/data/skill-apps");
   const BODY_REGIONS = ["head / face", "jaw", "throat", "neck / shoulders", "chest / heart", "stomach / gut", "back", "arms", "hands", "legs", "feet", "whole body", "other"];
   const Progress = global.TherapySkillProgress;
   const escapeHtml = (value) => String(value ?? "")
@@ -17,7 +18,7 @@
 
   function linkCards(links = []) {
     return `<div class="skill-app-result-links">${links.map((link) =>
-      `<a class="skill-app-link-button${link.kind === "app" ? "" : " secondary"}" href="${escapeHtml(link.href)}"${link.new_tab || String(link.href).startsWith("/resources/") ? ' target="_blank" rel="noopener"' : ""}>${escapeHtml(link.label || link.name)}${link.new_tab || String(link.href).startsWith("/resources/") ? ' <span class="visually-hidden">(opens in a new tab)</span>' : ""}</a>`
+      `<a class="skill-app-link-button${link.kind === "app" ? "" : " secondary"}" href="${escapeHtml(Site.path(link.href))}"${link.new_tab || String(link.href).startsWith("/resources/") ? ' target="_blank" rel="noopener"' : ""}>${escapeHtml(link.label || link.name)}${link.new_tab || String(link.href).startsWith("/resources/") ? ' <span class="visually-hidden">(opens in a new tab)</span>' : ""}</a>`
     ).join("")}</div>`;
   }
 
@@ -657,7 +658,7 @@
       }));
       context.querySelector("[data-change-emotion]")?.addEventListener("click", () => {
         try { global.sessionStorage.setItem("therapy-skill-kit.change-emotion-handoff", JSON.stringify({ emotion: emotion.id })); } catch (_error) { /* direct selection remains available */ }
-        global.location.href = "/tool-finder/change-emotion/";
+        global.location.href = Site.path("/tool-finder/change-emotion/");
       });
     }
 

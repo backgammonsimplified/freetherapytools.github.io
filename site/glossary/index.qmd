@@ -1,11 +1,11 @@
 ---
 title: "Therapy Skills Glossary"
-description: "A searchable glossary for concepts used throughout Therapy Skill Kit."
+description: "A searchable glossary for concepts used throughout Free Therapy Tools."
 sidebar: false
 page-layout: article
 body-classes: bs-glossary-index
 toc: false
-canonical-url: "https://backgammonsimplified.github.io/glossary/"
+canonical-url: "https://backgammonsimplified.github.io/freetherapytools.github.io/glossary/"
 image: /assets/social/generated/social-glossary.png
 social-card: true
 social-card-slug: glossary

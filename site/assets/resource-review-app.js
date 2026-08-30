@@ -1,6 +1,8 @@
 (function (global) {
   "use strict";
 
+  const Site = global.TherapySite || { path: (value) => value };
+
   const ROOT_ID = "resource-paraphrase-review-app";
   const STORAGE_KEY = "therapy-skill-kit.resource-paraphrase-review.v1";
   const QA_LABELS = {
@@ -668,7 +670,7 @@
     if (!root) return;
     root.classList.add("tsk-review-app");
     try {
-      corpus = await fetch("/data/resource-paraphrases/review.json", { cache: "no-store", credentials: "same-origin" }).then((response) => {
+      corpus = await fetch(Site.path("/data/resource-paraphrases/review.json"), { cache: "no-store", credentials: "same-origin" }).then((response) => {
         if (!response.ok) throw new Error(String(response.status));
         return response.json();
       });

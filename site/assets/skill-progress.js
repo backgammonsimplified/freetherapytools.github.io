@@ -5,6 +5,7 @@
   const STORAGE_PREFIX = "therapy-skill-kit:progress:";
   const HANDOFF_KEY = "therapy-skill-kit:progress-handoff";
   const MAX_FILE_SIZE = 2 * 1024 * 1024;
+  const Site = global.TherapySite || { path: (value) => value };
   const TOOL_ROUTES = Object.freeze({
     values: "/tool-finder/values/",
     thermometer: "/tool-finder/thermometer/",
@@ -125,10 +126,10 @@
   }
 
   function validationMessage(code, details = {}) {
-    if (code === "not-progress") return "This isn't a Therapy Skill Kit progress file.";
+    if (code === "not-progress") return "This isn't a Free Therapy Tools progress file.";
     if (code === "future-version") return "This progress file was created by a newer version of this tool.";
     if (code === "damaged") return "This progress file appears to be damaged or incomplete.";
-    if (code === "too-large") return "This file is too large to be a Therapy Skill Kit progress file.";
+    if (code === "too-large") return "This file is too large to be a Free Therapy Tools progress file.";
     if (code === "wrong-tool") return `This file contains ${details.title || "another tool's"} progress.`;
     return "This progress file could not be opened.";
   }
@@ -315,7 +316,7 @@
     button.addEventListener("click", () => {
       try {
         sessionStorage.setItem(HANDOFF_KEY, JSON.stringify(record));
-        global.location.assign(route);
+        global.location.assign(Site.path(route));
       } catch (_error) {
         setMessage("This progress could not be handed off to the other tool.", true);
       }

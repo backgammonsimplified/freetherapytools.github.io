@@ -56,7 +56,7 @@ assert.match(goal.calendarHelpText({ ...calendar, durationMinutes: "0" }), /any 
 assert.match(goal.calendarHelpText(calendar), /^Ready\./);
 assert.equal(goal.calendarDateFromOffset(1, new Date(2026, 7, 23, 23, 30)), "2026-08-24");
 const ics = goal.buildIcsEvent({ title: "Call, Sam; check in", description: "Line 1\nPath C:\\Temp", calendar, timezone: "America/Toronto", now: new Date("2026-08-23T12:00:00Z"), uid: "smart@example" });
-for (const line of ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Therapy Skill Kit//SMART Goal Builder//EN", "BEGIN:VEVENT", "UID:smart@example", "DTSTAMP:20260823T120000Z", "DTSTART;TZID=America/Toronto:20260915T190000", "DURATION:PT30M", "SUMMARY:Call\\, Sam\\; check in", "DESCRIPTION:Line 1\\nPath C:\\\\Temp", "END:VEVENT", "END:VCALENDAR"]) assert.ok(ics.includes(line), line);
+for (const line of ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Free Therapy Tools//SMART Goal Builder//EN", "BEGIN:VEVENT", "UID:smart@example", "DTSTAMP:20260823T120000Z", "DTSTART;TZID=America/Toronto:20260915T190000", "DURATION:PT30M", "SUMMARY:Call\\, Sam\\; check in", "DESCRIPTION:Line 1\\nPath C:\\\\Temp", "END:VEVENT", "END:VCALENDAR"]) assert.ok(ics.includes(line), line);
 assert.equal(goal.buildIcsEvent({ title: "Call Sam", calendar: { ...calendar, startTime: "" } }), null);
 
 const google = new URL(goal.buildGoogleCalendarUrl({ title: "Call Sam", description: "Private details", calendar, timezone: "America/Toronto" }));

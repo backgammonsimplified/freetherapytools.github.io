@@ -1,5 +1,5 @@
 ---
-title: "Therapy Skill Kit"
+title: "Free Therapy Tools"
 description: "Browse practical DBT, CBT, and mindfulness skills in an educational curriculum."
 page-layout: full
 toc: false
@@ -12,7 +12,7 @@ format:
 
 :::::: {.bs-hero .bs-hero--editorial}
 ::: {.bs-eyebrow}
-THERAPY SKILL KIT
+FREE THERAPY TOOLS
 :::
 
 <h1>Find a skill,<br class="bs-home-desktop-break">then practise it.</h1>

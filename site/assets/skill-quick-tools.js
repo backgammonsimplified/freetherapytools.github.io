@@ -3,6 +3,7 @@
 
   const Progress = global.TherapySkillProgress;
   const Calendar = global.TherapyCalendar;
+  const Site = global.TherapySite || { path: (value) => value };
   const HANDOFF_KEY = "therapy-skill-kit:thought-record-handoff";
   const escapeHtml = (value) => String(value ?? "")
     .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
@@ -52,7 +53,7 @@
   }
 
   function learnLinks(items) {
-    return `<nav class="quick-tool-source-links" aria-label="Learn and source links">${items.map(([label, href, external]) => `<a class="skill-app-link-button secondary" href="${escapeHtml(href)}"${external ? ' target="_blank" rel="noopener"' : ""}>${escapeHtml(label)}${external ? ' <span class="visually-hidden">(opens in a new tab)</span>' : ""}</a>`).join("")}</nav>`;
+    return `<nav class="quick-tool-source-links" aria-label="Learn and source links">${items.map(([label, href, external]) => `<a class="skill-app-link-button secondary" href="${escapeHtml(Site.path(href))}"${external ? ' target="_blank" rel="noopener"' : ""}>${escapeHtml(label)}${external ? ' <span class="visually-hidden">(opens in a new tab)</span>' : ""}</a>`).join("")}</nav>`;
   }
 
   function stringsOnly(object, keys) {
@@ -90,7 +91,7 @@
       root.querySelectorAll("[data-trap]").forEach((field) => field.addEventListener("change", () => { state.selected = [...root.querySelectorAll("[data-trap]:checked")].map((item) => item.dataset.trap); }));
       root.querySelector("[data-start-thought-record]")?.addEventListener("click", () => {
         try { global.sessionStorage.setItem(HANDOFF_KEY, JSON.stringify(state)); } catch (_error) { /* direct navigation still works */ }
-        global.location.href = "/tool-finder/thought-record/";
+        global.location.href = Site.path("/tool-finder/thought-record/");
       });
     }
     render();
@@ -156,7 +157,7 @@
   }
 
   async function initThoughtRecord(root) {
-    const response = await fetch("/data/skill-apps/emotions.json", { credentials: "same-origin" });
+    const response = await fetch(Site.path("/data/skill-apps/emotions.json"), { credentials: "same-origin" });
     if (!response.ok) throw new Error("Could not load the canonical emotion families");
     const emotions = (await response.json()).emotions.filter((emotion) => CANONICAL_EMOTION_IDS.includes(emotion.id));
     let state = initialThoughtRecord();

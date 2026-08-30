@@ -1,8 +1,12 @@
 (function () {
   "use strict";
 
+  const Site = typeof window !== "undefined" && window.TherapySite
+    ? window.TherapySite
+    : { path: (value) => value, canonicalPath: (value) => value };
+
   function isToolFinderPage() {
-    return /^\/tool-finder(?:\/|$)/.test(window.location.pathname);
+    return /^\/tool-finder(?:\/|$)/.test(Site.canonicalPath(window.location.pathname));
   }
 
   const DIFFICULTY_SELECTOR = "[data-bs-filter-difficulty]";
@@ -256,7 +260,7 @@
   function loadGlossaryLookupEntries() {
     if (!glossaryLookupEntriesPromise) {
       glossaryLookupEntriesPromise = fetch(
-        "/assets/bs-glossary-lookup.json",
+        Site.path("/assets/bs-glossary-lookup.json"),
         { credentials: "same-origin" }
       )
         .then(function (response) {

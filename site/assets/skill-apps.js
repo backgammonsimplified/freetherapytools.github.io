@@ -1,6 +1,8 @@
 (function (global) {
   "use strict";
 
+  const Site = global.TherapySite || { path: (value) => value };
+
   const DEFAULT_VALUE_DISPLAY = 32;
 
   function valueDisplayOptions(values) {
@@ -998,8 +1000,8 @@
 
   async function initValues(root) {
     const [response, actionResponse] = await Promise.all([
-      fetch(root.dataset.valuesUrl, { credentials: "same-origin" }),
-      fetch(root.dataset.valuesActionsUrl, { credentials: "same-origin" }),
+      fetch(Site.path(root.dataset.valuesUrl), { credentials: "same-origin" }),
+      fetch(Site.path(root.dataset.valuesActionsUrl), { credentials: "same-origin" }),
     ]);
     if (!response.ok || !actionResponse.ok) throw new Error("Values data could not be loaded");
     const data = await response.json();

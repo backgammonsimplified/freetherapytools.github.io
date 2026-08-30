@@ -56,6 +56,7 @@ CANONICAL_LINK_PATTERN = re.compile(
 )
 GLOSSARY_CANONICAL_URL = CANONICAL_ORIGIN + "/glossary/"
 GLOSSARY_FEED_URL_PREFIX = GLOSSARY_CANONICAL_URL + "#"
+PAGES_PROJECT_SEGMENT = "freetherapytools.github.io"
 RSS_NAMESPACES = {
     "atom": "http://www.w3.org/2005/Atom",
     "content": "http://purl.org/rss/1.0/modules/content/",
@@ -69,6 +70,7 @@ def legacy_glossary_redirect_text(
     indexing: str = "noindex, follow",
 ) -> str:
     canonical = CANONICAL_ORIGIN + target
+    target_js = json.dumps(target)
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -78,7 +80,12 @@ def legacy_glossary_redirect_text(
   <meta http-equiv="refresh" content="0; url={target}">
   <title>Glossary moved</title>
   <script>
-    window.location.replace("{target}" + window.location.search + window.location.hash);
+    const target = {target_js};
+    const firstPath = window.location.pathname.split("/").filter(Boolean)[0] || "";
+    const basePath = window.location.hostname === "backgammonsimplified.github.io" && firstPath === "{PAGES_PROJECT_SEGMENT}"
+      ? "/{PAGES_PROJECT_SEGMENT}"
+      : "";
+    window.location.replace(basePath + target + window.location.search + window.location.hash);
   </script>
 </head>
 <body>

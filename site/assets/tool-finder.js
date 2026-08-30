@@ -1,9 +1,10 @@
 (function () {
   "use strict";
+  const Site = window.TherapySite || { path: (value) => value };
   const esc = (value) => String(value ?? "").replace(/[&<>"']/g, (character) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[character]));
   const normalize = (value) => String(value || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase();
   const searchable = (entry) => normalize([entry.name, ...(entry.aliases || []), entry.official_topic, entry.subtopic, entry.summary, ...(entry.search_terms || [])].filter(Boolean).join(" "));
-  const button = (href, label, primary) => `<a class="btn btn-sm ${primary ? "btn-primary" : "btn-outline-primary"}" href="${esc(href)}">${esc(label)}</a>`;
+  const button = (href, label, primary) => `<a class="btn btn-sm ${primary ? "btn-primary" : "btn-outline-primary"}" href="${esc(Site.path(href))}">${esc(label)}</a>`;
   function card(entry) {
     const availableTool = entry.kind === "tool" && entry.status === "available" && entry.tool_href;
     const badge = entry.kind === "tool" ? (entry.tool_type || "tool") : "skill";
@@ -12,7 +13,7 @@
   async function init() {
     const host = document.querySelector("[data-tool-finder-catalogue]");
     if (!host) return;
-    const catalogueResponse = await fetch("/data/tool-finder/catalogue.json");
+    const catalogueResponse = await fetch(Site.path("/data/tool-finder/catalogue.json"));
     if (!catalogueResponse.ok) throw new Error("Tool Finder data could not be loaded");
     const catalogue = await catalogueResponse.json();
     const search = document.querySelector("[data-tool-finder-search]");

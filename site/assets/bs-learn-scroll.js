@@ -1,8 +1,12 @@
 (function () {
   "use strict";
 
+  const Site = typeof window !== "undefined" && window.TherapySite
+    ? window.TherapySite
+    : { path: (value) => value, canonicalPath: (value) => value };
+
   function manifestRoute(pathname) {
-    const route = String(pathname || "").replace(/\\/g, "/");
+    const route = Site.canonicalPath(String(pathname || "").replace(/\\/g, "/"));
     if (route.startsWith("/learn/cbt-anxiety/") || route.startsWith("/cbt-skills/")) {
       return "/assets/bs-cbt-sequence.json";
     }
@@ -48,7 +52,7 @@
     } catch (_error) {
       // Retain the supplied route when it cannot be decoded.
     }
-    route = route.split(/[?#]/, 1)[0].replace(/\\/g, "/");
+    route = Site.canonicalPath(route.split(/[?#]/, 1)[0].replace(/\\/g, "/"));
     route = (route.startsWith("/") ? route : "/" + route).replace(/\/{2,}/g, "/");
     route = route.replace(/\/index\.html$/i, "/");
     route = route.replace(/\.html\/+$/i, ".html");
@@ -261,7 +265,7 @@
 
   function sameOriginUrl(route, origin) {
     try {
-      const url = new URL(route, origin);
+      const url = new URL(Site.path(route), origin);
       return url.origin === origin ? url : null;
     } catch (_error) {
       return null;
@@ -696,7 +700,7 @@
       return;
     }
 
-    fetch(manifestRoute(window.location.pathname), {
+    fetch(Site.path(manifestRoute(window.location.pathname)), {
       cache: "no-store",
       credentials: "same-origin"
     })

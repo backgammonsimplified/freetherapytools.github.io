@@ -4,6 +4,7 @@
   const INDEX_URL = "/data/resource-paraphrases/index.json";
   const REVIEW_URL = "/data/resource-paraphrases/review.json";
   const REVIEW_PARAM = "review";
+  const Site = global.TherapySite || { path: (value) => value, canonicalPath: (value) => value };
 
   function element(tag, options = {}) {
     const node = document.createElement(tag);
@@ -15,7 +16,7 @@
   }
 
   function currentRoute() {
-    let path = global.location?.pathname || "/";
+    let path = Site.canonicalPath(global.location?.pathname || "/");
     if (path.endsWith("/")) path += "index.html";
     return path;
   }
@@ -25,7 +26,7 @@
   }
 
   async function fetchJson(url) {
-    const response = await fetch(url, { credentials: "same-origin", cache: "no-store" });
+    const response = await fetch(Site.path(url), { credentials: "same-origin", cache: "no-store" });
     if (!response.ok) throw new Error(`${response.status} ${url}`);
     return response.json();
   }

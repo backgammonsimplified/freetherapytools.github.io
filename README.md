@@ -1,12 +1,32 @@
-# Therapy Skill Kit
+# Free Therapy Tools
 
-Therapy Skill Kit is a **Quarto-based learning site and local-first interactive skills toolkit** focused on DBT, CBT, mindfulness, goal setting, wellness, emotional regulation, distress tolerance, interpersonal effectiveness, and valued action.
+Free Therapy Tools is a **Quarto-based learning site and local-first interactive skills toolkit** focused on DBT, CBT, mindfulness, goal setting, wellness, emotional regulation, distress tolerance, interpersonal effectiveness, and valued action.
 
 This repository is also the durable implementation handoff for the project. The documentation below is intentionally detailed so a future ChatGPT/Codex session can safely continue if conversation context is lost.
 
 > **Git is authoritative.** Always verify the current branch, remote, HEAD, and worktree before acting. This README records architecture, operating procedures, major decisions, and the latest known implementation plan, but it should not override the actual repository state.
 
 **Last major context update:** 2026-08-24.
+
+## Development preview and deployment
+
+- **Source:** `master`
+- **Deployment:** GitHub Actions → GitHub Pages
+- **Expected preview:** <https://backgammonsimplified.github.io/freetherapytools.github.io/>
+
+Every push to `master` runs `.github/workflows/pages.yml`, renders `site` on a GitHub Linux runner, uploads `site/_site`, and deploys it with GitHub Pages. Rendered `_site` files are not committed to `master`.
+
+Local preview remains useful for QA:
+
+```bash
+export BS_SKIP_SOCIAL_CARDS=1
+quarto render site
+bash scripts/preview-site.sh 8766
+```
+
+Managed Codex Windows sessions may fail to spawn Python or Dart Sass. The GitHub Actions render is the authoritative reproducible deployment build.
+
+This public repository is a temporary development home. The project will eventually move to the maintainer's personal repository with fresh Git history; that future move does not change current preview routing.
 
 ---
 
@@ -53,7 +73,7 @@ return and reassess
 
 # 2. Repository authority
 
-## Therapy Skill Kit — writable authority
+## Free Therapy Tools — writable authority
 
 Local path:
 
@@ -64,13 +84,13 @@ C:\Users\andre\Documents\therapy-skill-kit
 GitHub:
 
 ```text
-backgammonsimplified/therapyskillkit.github.io
+backgammonsimplified/freetherapytools.github.io
 ```
 
 Preferred origin:
 
 ```text
-git@github.com:backgammonsimplified/therapyskillkit.github.io.git
+git@github.com:backgammonsimplified/freetherapytools.github.io.git
 ```
 
 Authoritative branch:
