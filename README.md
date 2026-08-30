@@ -3414,3 +3414,43 @@ On `/tool-finder/`, the complete topic catalogue remains below Skill Thermometer
 when search is empty. As soon as a text query is present, the filtered result
 container moves directly below the search controls and above Skill Thermometer;
 clearing the query restores the normal curriculum order.
+
+## 89. Maladaptive coping signs and full Stages of Change reflection (2026-08-30)
+
+`/learn/wellness/maladaptive-coping.html#signs-maladaptive-coping` presents the
+nine signs from source record `wellness-p035` as accessible disclosure tiles in
+a responsive 3-by-3 grid. They provide reflection and context only: the page
+does not use checkboxes, add selections into a score, or describe the tiles as a
+diagnostic screen. The original p035 image remains linked as the printable
+source copy.
+
+The Stages of Change Learn section now uses an original responsive Change Path,
+with six authored HTML stage nodes and SVG arrows that visibly loop back. Its
+caption is “Change can move forward, pause, or loop back.” The design does not
+reproduce the photographed S-T-A-G-E path or oval source graphic. The expanded
+public prose treats readiness as flexible and describes returning to an old
+pattern as learning and restarting rather than personal failure.
+
+Source records `wellness-p035` through `wellness-p039` remain available in the
+Learn resource area. The native text versions for p035 and worksheet pages
+p037–p039 are hand-repaired source transcriptions; do not replace them with the
+previous generated OCR. The surrounding Learn explanations and tool prompts are
+original Therapy Skill Kit adaptations based on those concepts. P036 retains
+the source's stage terminology and image as a printable source record.
+
+The existing `/tool-finder/stages-of-change/` tool now covers all substantive
+questions across worksheet pages p037, p038, and p039. It offers a six-stage
+Change Path chooser and 19 prompts grouped in editable disclosures, plus
+Expand all, Collapse all, an optional date, and Additional notes. A selected
+stage is only “Feels closest right now”; the tool neither calculates nor
+diagnoses a stage. It continues to use the shared schema-v1
+`TherapySkillProgress` architecture. `normalizeStagesOfChangeState()` accepts
+the earlier seven-field state object and preserves its behaviour, readiness,
+benefit, cost, ambivalence, next-step, and support text in the expanded state.
+Readable Markdown, DOCX, and print exports group answered prompts by stage and
+omit empty administrative placeholders.
+
+Focused contracts are in `tests/test_maladaptive_coping_stages.py` and
+`tests/test_wellness_tools.js`; they cover the nine signs, clean source text,
+original Change Path, six-stage/19-prompt tool, old-state normalization,
+round-trip progress, and readable export.

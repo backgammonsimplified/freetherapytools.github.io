@@ -1,13 +1,15 @@
 ---
 title: "Stages of Change"
-description: "Reflect on readiness, ambivalence, and one possible next step."
+description: "Reflect on one change across six possible stages without a score or diagnosis."
 sidebar: tool-finder
 page-layout: full
 toc: false
 execute: {enabled: false}
 ---
 
-This reflection follows the [Stages of Change curriculum](/learn/wellness/maladaptive-coping.html#stages-of-change). It does not calculate or diagnose a stage.
+Use this reflection to explore what you notice, both sides of change, preparation, action, maintenance, and what you can learn after returning to an old pattern. It does not calculate or diagnose a stage.
+
+[Learn about the Stages of Change](/learn/wellness/maladaptive-coping.html#stages-of-change)
 
 ::: {#stages-of-change-app .skill-app data-quick-app="stages-of-change"}
 Loading Stages of Change…

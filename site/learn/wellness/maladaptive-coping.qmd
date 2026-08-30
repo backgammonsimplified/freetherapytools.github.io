@@ -20,22 +20,123 @@ execute:
 
 The aim is to understand the function of a coping behaviour and build safer alternatives.
 
+## Signs a Coping Pattern May Be Becoming Harmful {#signs-maladaptive-coping}
+
+The signs below are prompts for noticing patterns. Select any tile to read its explanation.
+
+```{=html}
+<div class="maladaptive-signs-grid">
+  <details class="maladaptive-sign">
+    <summary aria-expanded="false">Continuing despite consequences</summary>
+    <p>You keep returning to the behaviour even though it is creating noticeable problems or costs.</p>
+  </details>
+  <details class="maladaptive-sign">
+    <summary aria-expanded="false">Avoiding situations where it is unavailable</summary>
+    <p>You start skipping social situations, activities, or places because you would not be able to engage in the coping behaviour there.</p>
+  </details>
+  <details class="maladaptive-sign">
+    <summary aria-expanded="false">Feeling withdrawal or strong discomfort when stopping</summary>
+    <p>Cutting back or stopping leads to noticeable physical or emotional discomfort. For some substances, stopping suddenly can carry medical risks, so appropriate health-care guidance may be important.</p>
+  </details>
+  <details class="maladaptive-sign">
+    <summary aria-expanded="false">Keeping it secret</summary>
+    <p>You hide, minimize, or avoid talking honestly about how often or how much you engage in the behaviour.</p>
+  </details>
+  <details class="maladaptive-sign">
+    <summary aria-expanded="false">Needing more for the same effect</summary>
+    <p>What used to feel sufficient no longer has the same effect, so the amount, frequency, or intensity increases.</p>
+  </details>
+  <details class="maladaptive-sign">
+    <summary aria-expanded="false">Finding it difficult to stop</summary>
+    <p>You intend to cut back or stop but repeatedly find yourself returning to the behaviour.</p>
+  </details>
+  <details class="maladaptive-sign">
+    <summary aria-expanded="false">Taking larger risks or making larger sacrifices</summary>
+    <p>More time, money, safety, responsibilities, relationships, or other important parts of life are being traded for the behaviour.</p>
+  </details>
+  <details class="maladaptive-sign">
+    <summary aria-expanded="false">Explaining away other people's concern</summary>
+    <p>When people express concern, you find yourself dismissing, minimizing, or repeatedly finding reasons why their concern does not apply.</p>
+  </details>
+  <details class="maladaptive-sign">
+    <summary aria-expanded="false">Relying on it to handle problems</summary>
+    <p>The behaviour begins to feel necessary for managing stress, emotions, difficult situations, or everyday problems.</p>
+  </details>
+</div>
+```
+
+These are signs to notice, not a diagnostic checklist. One sign does not establish an addiction, and the tiles should not be added together into a score. The purpose is to notice patterns and decide whether further reflection, change, or support would be useful.
+
+[View the Signs of Maladaptive Coping source/printable copy](/resources/wellness/wellness-p035.jpg)
+
+Want to think about changing a coping pattern? [Use the Stages of Change reflection](/tool-finder/stages-of-change/).
+
 ## Stages of Change {#stages-of-change}
 
-- **Precontemplation:** You are not currently considering change or do not yet see a need for it.
-- **Contemplation:** You recognize reasons to change and also feel ambivalent.
-- **Preparation:** You intend to act and begin making a specific plan or small changes.
-- **Action:** You actively change the behaviour and environment.
-- **Maintenance:** You strengthen the new pattern and prepare for high-risk situations.
-- **Return to an old pattern:** A lapse can happen at any stage. Treat it as information for a new chain analysis and plan, not proof that change is impossible.
+Change often works more like a cycle than a straight line. A person may move forward, remain at one stage for a while, revisit an earlier stage, or return to an old pattern and begin again with more information about what helped and what got in the way.
 
-### Change Worksheet Prompts
+The Stages of Change model is a way to think about readiness for a particular change. It is not a test or diagnosis, and someone does not need to be pushed into a stage they are not ready for.
 
-- What behaviour are you considering changing?
-- What do you get from it in the short term, and what does it cost in the short and long term?
-- What stage best describes your position today?
-- What would move you one step forward?
-- Who, what, or which service could support that step?
+```{=html}
+<div class="change-path-graphic change-path-graphic--learn" aria-labelledby="change-path-caption">
+  <svg class="change-path-arrows" viewBox="0 0 900 620" role="img" aria-labelledby="change-path-svg-title change-path-svg-desc">
+    <title id="change-path-svg-title">A flexible path through six stages of change</title>
+    <desc id="change-path-svg-desc">Curved arrows connect six stage nodes and loop from learning and restarting toward earlier parts of the path.</desc>
+    <defs><marker id="change-path-arrow-learn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs>
+    <path d="M520 105 C630 105 705 145 740 205" marker-end="url(#change-path-arrow-learn)"></path>
+    <path d="M770 270 C790 335 775 390 735 430" marker-end="url(#change-path-arrow-learn)"></path>
+    <path d="M660 500 C590 540 530 550 500 550" marker-end="url(#change-path-arrow-learn)"></path>
+    <path d="M385 550 C300 540 240 505 210 470" marker-end="url(#change-path-arrow-learn)"></path>
+    <path d="M145 395 C110 340 105 290 125 250" marker-end="url(#change-path-arrow-learn)"></path>
+    <path d="M175 165 C240 105 310 90 390 100" marker-end="url(#change-path-arrow-learn)"></path>
+  </svg>
+  <ol class="change-path-stages">
+    <li class="change-path-node change-path-node--precontemplation"><strong>Noticing</strong><span>Precontemplation</span></li>
+    <li class="change-path-node change-path-node--contemplation"><strong>Weighing it up</strong><span>Contemplation</span></li>
+    <li class="change-path-node change-path-node--preparation"><strong>Getting ready</strong><span>Preparation</span></li>
+    <li class="change-path-node change-path-node--action"><strong>Doing</strong><span>Action</span></li>
+    <li class="change-path-node change-path-node--maintenance"><strong>Keeping it going</strong><span>Maintenance</span></li>
+    <li class="change-path-node change-path-node--return-old-pattern"><strong>Learn &amp; restart</strong><span>Return to old pattern</span></li>
+  </ol>
+  <p class="change-path-caption" id="change-path-caption">Change can move forward, pause, or loop back.</p>
+</div>
+```
+
+### Precontemplation — Not Considering Change Yet
+
+A need for change may not feel clear yet, or the person may not be planning to change soon. They may see few problems with the current pattern, feel that other people are more concerned than they are, or simply not feel ready.
+
+The useful task at this stage is noticing: What is happening? What effects is the pattern having? What do I make of other people's concerns?
+
+### Contemplation — Thinking It Over
+
+Change has become something worth considering, but there may be strong reasons both for changing and for staying the same. This mixed feeling is part of contemplation rather than evidence that someone is failing to make a decision.
+
+The useful task here is exploring both sides honestly: What might improve if I changed? What would I miss, lose, or find difficult?
+
+### Preparation — Getting Ready
+
+The person is moving from thinking about change toward making a plan. They may already be trying small changes, identifying obstacles, deciding what support would help, or choosing a first concrete step.
+
+The useful task is turning intention into a realistic plan.
+
+### Action — Making the Change
+
+The person is actively changing what they do, their routines, or parts of their environment. New behaviour requires practice, and obstacles may become clearer once the plan is being used in real life.
+
+The useful task is following the plan, using support, responding to roadblocks, and adjusting what is not working.
+
+### Maintenance — Keeping the Change Going
+
+The focus shifts from starting the change to sustaining it. The person can look at what has worked, what remains difficult, and what will help make the new pattern more durable.
+
+The useful task is strengthening successful strategies and preparing for situations that could pull the person back toward an old pattern.
+
+### Returning to an Old Pattern — Learning and Restarting
+
+A return to an earlier behaviour does not erase the work that came before it. It can provide useful information about triggers, barriers, supports, expectations, and parts of the plan that need to change.
+
+The useful task is to review what happened without turning it into a judgment about the person: What contributed? What did I learn? What would help me get back on track?
 
 [Use the Stages of Change reflection tool](/tool-finder/stages-of-change/) or continue to [Urge Surfing](/learn/wellness/urge-surfing.html), which applies mindful observation to an urge without treating it as a command.
 
@@ -78,47 +179,16 @@ This handout's educational content is integrated into the anchored skill section
 
 #### Text Version
 
-##### Nark
+##### Precontemplation
 
-##### Precon
+- Do you find yourself ignoring or denying a problem in your life? If yes, explain.
+- Is this problem affecting others or yourself negatively?
 
-##### Relagse
+##### Contemplation
 
-##### häTkiq
-
-p.ller:-w; o!
-
-##### Precontempiatiaa
-
-reilå; C. cntemßat:on A which individua! Ecarns
-
-##### Maintenance
-
-##### Creair.Q
-
-tn lhe chsnc,e5 from each new eyele
-
-##### Preparation
-
-makg
-
-##### Acüon
-
-##### Mgve
-
-Do you yourseil or denying e problem in your life? Ef yes,
-
-##### negetive]Wi
-
-##### Contemplaüon
-
-Why should you makg Io 3*Eoviatg this Gcobegmq
-
-**WHY pö&itiue changes this protiem?**
-
-How are yoo (igih
-
-##### hktp://CaI'epatron.Corg
+- Why should you make positive changes to alleviate this problem?
+- Why shouldn't you make positive changes to alleviate this problem?
+- How are you feeling right now?
 
 <!-- native-resource-content:wellness-p037:end -->
 ::::
@@ -135,13 +205,22 @@ How are yoo (igih
 
 #### Text Version
 
-What chR"enge; yoo Fee# Io
+##### Preparation
 
-**sisps should wau take dinke a change?**
+- What challenges do you need to overcome?
+- What steps should you take to make a change?
 
-##### Attion
+##### Action
 
-Deschbe your {'fan e' action OD you Eave a supparr yes, p*ease you How Fiee you Noedino veuesett Me ictenä'ite steps What action step5 €ldn'q httpd?Parepatronx•.01i1 oarepatron
+- Describe your plan of action.
+- Do you have a support system? If yes, please elaborate.
+- What will you do if you encounter roadblocks?
+- How are you holding yourself accountable?
+
+##### Maintenance
+
+- What action steps worked?
+- What action steps didn't work?
 
 <!-- native-resource-content:wellness-p038:end -->
 ::::
@@ -158,25 +237,19 @@ Deschbe your {'fan e' action OD you Eave a supparr yes, p*ease you How Fiee you 
 
 #### Text Version
 
-##### Maintenance (Conqinued)
+##### Maintenance (Continued)
 
-**What havo you Ghanenging?**
-
-**Haw *Oil you sustaia your evenime?**
+- What have you found challenging?
+- How will you sustain your changes over time?
 
 ##### Relapse
 
-Why do you 2hinl( vou relapsed 7
+- Why do you think you relapsed?
+- How do you feel about your relapse?
+- What can you learn from your relapse?
+- What is your plan of action to get back on track?
 
-**do 'Ga Tcae about your tc'apse?**
-
-**What you iea:a ticm your w'apse?**
-
-**What ag yaur ot aot*on Io get cn track?**
-
-##### Addftiønal Note
-
-r.atgrc _hup.'/(Ca renatron.com carspatron
+##### Additional Note
 
 <!-- native-resource-content:wellness-p039:end -->
 ::::
@@ -262,29 +335,15 @@ Legal chaf$s
 
 #### Text Version
 
-##### 9 Sige You're Engagng
-
-##### in Maladaptive Coping
-
-##### AiiåTcluaÉ
-
-##### , YOU: Attempt
-
-##### To Keep;your
-
-##### Pissu•ö
-
-sociål$itüatgdns.
-
-##### YOüt Make
-
-##### E*cuses When
-
-##### Concerödd
-
-##### Wiih: Y,ötir;;•
-
-##### Pfoblems
+1. You Keep Doing It Even Though There Are Clear Negative Consequences
+2. You Pass Up Social Situations Where You Can't Partake
+3. You Suffer Withdrawal If You Attempt To Stop
+4. You Attempt To Keep Your Use Secret
+5. Your Tolerance Is Increasing
+6. You Can't Seem To Stop Yourself
+7. You Take Risks And Make Disproportionate Sacrifices For It
+8. You Make Excuses When Other People Act Concerned
+9. You Feel You Need It To Deal With Your Problems
 
 <!-- native-resource-content:wellness-p035:end -->
 ::::

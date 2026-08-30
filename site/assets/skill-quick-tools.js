@@ -354,17 +354,157 @@
     register(root, { toolId: "sleep-hygiene", toolTitle: "Sleep Hygiene Planner / Checklist", route: Progress.TOOL_ROUTES["sleep-hygiene"], getState: () => state, setState: (next) => { state = clone(next); render(); }, validateState: (next) => isObject(next) && Array.isArray(next.checks) && next.checks.every((id) => habits.some(([valid]) => valid === id)) && ["pattern","change","support"].every((key) => typeof next[key] === "string"), getReadableSummary: (next) => Progress.nonEmptySections("Sleep Hygiene Planner / Checklist", [["Areas selected", next.checks.map((id) => habits.find(([key]) => key === id)[1])],["Pattern noticed",next.pattern],["One realistic change",next.change],["Support",next.support]]) });
   }
 
+  const STAGES_OF_CHANGE = Object.freeze([
+    { id: "precontemplation", name: "Precontemplation", label: "Noticing", heading: "What am I noticing?", prompts: [
+      ["pre_minimizing", "Is there a problem or coping pattern you may be minimizing, avoiding, or not yet ready to change? What do you notice about it?"],
+      ["pre_effects", "In what ways, if any, is this pattern affecting you or other people?"],
+    ] },
+    { id: "contemplation", name: "Contemplation", label: "Weighing it up", heading: "What are both sides of this?", prompts: [
+      ["cont_reasons_change", "What are your reasons for wanting to make a change?"],
+      ["cont_reasons_same", "What are your reasons for not wanting to change yet, or for wanting things to stay as they are?"],
+      ["cont_feelings", "What feelings come up when you think about making this change?"],
+    ] },
+    { id: "preparation", name: "Preparation", label: "Getting ready", heading: "How could I get ready?", prompts: [
+      ["prep_barriers", "What challenges or barriers would you need to work through?"],
+      ["prep_steps", "What practical steps could help you begin?"],
+    ] },
+    { id: "action", name: "Action", label: "Doing", heading: "What is my plan?", prompts: [
+      ["action_plan", "Describe your current plan of action."],
+      ["action_support", "Who or what could support you? How could that support help?"],
+      ["action_roadblock", "If you encounter a roadblock, what will you do next?"],
+      ["action_accountability", "How will you keep track of your follow-through or hold yourself accountable in a useful way?"],
+    ] },
+    { id: "maintenance", name: "Maintenance", label: "Keeping it going", heading: "What helps me keep going?", prompts: [
+      ["maintenance_worked", "Which action steps have worked well?"],
+      ["maintenance_adjust", "Which action steps have not worked, or need to be adjusted?"],
+      ["maintenance_challenging", "What has been most challenging about maintaining the change?"],
+      ["maintenance_sustain", "How do you plan to sustain the changes over time?"],
+    ] },
+    { id: "return-old-pattern", name: "Return to an old pattern", label: "Learn & restart", heading: "What can I learn?", prompts: [
+      ["return_contributed", "What do you think contributed to returning to the old pattern?"],
+      ["return_feelings", "How are you feeling about what happened?"],
+      ["return_learn", "What can you learn from what happened?"],
+      ["return_plan", "What is your plan for getting back on track or choosing your next step?"],
+    ] },
+  ]);
+  const STAGES_RESPONSE_KEYS = Object.freeze(STAGES_OF_CHANGE.flatMap((stage) => stage.prompts.map(([key]) => key)));
+  const LEGACY_STAGES_FIELDS = Object.freeze(["behaviour", "readiness", "benefits", "costs", "ambivalence", "nextStep", "support"]);
+  const legacyStageIds = Object.freeze({
+    Precontemplation: "precontemplation",
+    Contemplation: "contemplation",
+    Preparation: "preparation",
+    Action: "action",
+    Maintenance: "maintenance",
+    "Return to an old pattern / lapse": "return-old-pattern",
+    "Return to an old pattern": "return-old-pattern",
+  });
+  function initialStagesOfChangeState() {
+    return { change: "", date: "", stage: "", responses: Object.fromEntries(STAGES_RESPONSE_KEYS.map((key) => [key, ""])), additionalNotes: "" };
+  }
+  function normalizeStagesOfChangeState(next) {
+    const source = isObject(next) ? next : {};
+    const current = initialStagesOfChangeState();
+    if (isObject(source.responses)) {
+      current.change = typeof source.change === "string" ? source.change : "";
+      current.date = typeof source.date === "string" ? source.date : "";
+      current.stage = STAGES_OF_CHANGE.some((stage) => stage.id === source.stage) ? source.stage : (legacyStageIds[source.stage] || "");
+      STAGES_RESPONSE_KEYS.forEach((key) => { current.responses[key] = typeof source.responses[key] === "string" ? source.responses[key] : ""; });
+      current.additionalNotes = typeof source.additionalNotes === "string" ? source.additionalNotes : "";
+      return current;
+    }
+    current.change = typeof source.behaviour === "string" ? source.behaviour : "";
+    current.stage = legacyStageIds[source.stage] || "";
+    current.responses.pre_minimizing = typeof source.readiness === "string" ? source.readiness : "";
+    current.responses.cont_reasons_same = typeof source.benefits === "string" ? source.benefits : "";
+    current.responses.cont_reasons_change = typeof source.costs === "string" ? source.costs : "";
+    current.responses.cont_feelings = typeof source.ambivalence === "string" ? source.ambivalence : "";
+    current.responses.prep_steps = typeof source.nextStep === "string" ? source.nextStep : "";
+    current.responses.action_support = typeof source.support === "string" ? source.support : "";
+    return current;
+  }
+  function validateStagesOfChangeState(next) {
+    if (!isObject(next)) return false;
+    const isLegacy = LEGACY_STAGES_FIELDS.every((key) => typeof next[key] === "string")
+      && typeof next.stage === "string" && (next.stage === "" || Object.prototype.hasOwnProperty.call(legacyStageIds, next.stage));
+    if (isLegacy) return true;
+    return typeof next.change === "string" && typeof next.date === "string" && typeof next.additionalNotes === "string"
+      && (next.stage === "" || STAGES_OF_CHANGE.some((stage) => stage.id === next.stage))
+      && isObject(next.responses) && STAGES_RESPONSE_KEYS.every((key) => typeof next.responses[key] === "string");
+  }
+  function selectStagesOfChangeStage(next, stageId) {
+    const current = normalizeStagesOfChangeState(next);
+    if (STAGES_OF_CHANGE.some((stage) => stage.id === stageId)) current.stage = stageId;
+    return current;
+  }
+  function stagesOfChangeSummary(next) {
+    const current = normalizeStagesOfChangeState(next);
+    const lines = ["# Stages of Change Reflection"];
+    if (current.change.trim()) lines.push("", "## Change or coping pattern:", "", current.change.trim());
+    if (current.date.trim()) lines.push("", "## Date", "", current.date.trim());
+    const selected = STAGES_OF_CHANGE.find((stage) => stage.id === current.stage);
+    if (selected) lines.push("", "## Current stage that feels closest:", "", selected.name);
+    STAGES_OF_CHANGE.forEach((stage) => {
+      const answered = stage.prompts.filter(([key]) => current.responses[key].trim());
+      if (!answered.length) return;
+      lines.push("", `## ${stage.name}`, "");
+      answered.forEach(([key, prompt]) => lines.push(`- **${prompt}**`, `  ${current.responses[key].trim()}`));
+    });
+    if (current.additionalNotes.trim()) lines.push("", "## Additional notes", "", current.additionalNotes.trim());
+    return lines.join("\n");
+  }
+  function stagesChangePathMarkup(selectedStage = "") {
+    const arrows = [
+      "M520 105 C630 105 705 145 740 205",
+      "M770 270 C790 335 775 390 735 430",
+      "M660 500 C590 540 530 550 500 550",
+      "M385 550 C300 540 240 505 210 470",
+      "M145 395 C110 340 105 290 125 250",
+      "M175 165 C240 105 310 90 390 100"
+    ].map((path) => `<path d="${path}" marker-end="url(#change-path-arrow-tool)"></path>`).join("");
+    return `<div class="change-path-graphic change-path-chooser" aria-labelledby="stages-change-path-caption"><svg class="change-path-arrows" viewBox="0 0 900 620" role="img" aria-labelledby="stages-change-path-title stages-change-path-desc"><title id="stages-change-path-title">Choose from six stages on a flexible change path</title><desc id="stages-change-path-desc">Curved arrows connect six stages and loop from learning and restarting toward earlier parts of the path.</desc><defs><marker id="change-path-arrow-tool" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs>${arrows}</svg><ol class="change-path-stages">${STAGES_OF_CHANGE.map((stage) => `<li class="change-path-node change-path-node--${stage.id}"><button type="button" class="change-path-choice ${selectedStage === stage.id ? "is-selected" : ""}" data-stage-choice="${stage.id}" aria-pressed="${selectedStage === stage.id}"><strong>${escapeHtml(stage.label)}</strong><span>${escapeHtml(stage.name)}</span>${selectedStage === stage.id ? "<small>Feels closest right now</small>" : ""}</button></li>`).join("")}</ol><p class="change-path-caption" id="stages-change-path-caption">Change can move forward, pause, or loop back.</p></div>`;
+  }
+
   function initStagesOfChange(root) {
-    const stages = ["Precontemplation", "Contemplation", "Preparation", "Action", "Maintenance", "Return to an old pattern / lapse"];
-    const fields = [["behaviour","Behaviour or change I am considering"],["readiness","Which description feels closest today, and why?"],["benefits","What does the current behaviour provide in the short term?"],["costs","What does it cost in the short or long term?"],["ambivalence","What are both sides of my ambivalence?"],["nextStep","One possible next step"],["support","People, services, or practical support"]];
-    let state = { stage: "", ...Object.fromEntries(fields.map(([key]) => [key, ""])) };
-    function render() {
-      root.innerHTML = pageShell("Stages of Change", "Reflect on readiness without turning it into a diagnostic score.", `<label for="stage-choice">Current readiness description</label><select id="stage-choice" data-stage-choice><option value="">Choose if useful</option>${stages.map((stage) => `<option ${state.stage === stage ? "selected" : ""}>${escapeHtml(stage)}</option>`).join("")}</select>${fields.map(([key,label]) => `<label for="stage-${key}">${escapeHtml(label)}</label><textarea id="stage-${key}" data-stage-field="${key}">${escapeHtml(state[key])}</textarea>`).join("")}<p class="skill-app-note">Stages are descriptions for reflection, not a test or diagnosis. Readiness can shift by behaviour and over time.</p>`, learnLinks([["Learn the Stages of Change", "/learn/wellness/maladaptive-coping.html#stages-of-change"],["Learn Urge Surfing", "/learn/wellness/urge-surfing.html"]]));
-      root.querySelector("[data-stage-choice]").addEventListener("change", (event) => { state.stage = event.target.value; });
-      root.querySelectorAll("[data-stage-field]").forEach((field) => field.addEventListener("input", () => { state[field.dataset.stageField] = field.value; }));
+    let state = initialStagesOfChangeState();
+    const openSections = new Set();
+    function sectionStatus(stage) {
+      const answered = stage.prompts.filter(([key]) => state.responses[key].trim()).length;
+      if (answered === stage.prompts.length) return "Completed";
+      return answered ? "In progress" : "";
+    }
+    function updateSectionStatus(stageId) {
+      const stage = STAGES_OF_CHANGE.find((item) => item.id === stageId);
+      const section = root.querySelector(`[data-stage-section="${stageId}"]`);
+      const badge = section?.querySelector("[data-stage-status]");
+      if (!stage || !section || !badge) return;
+      const status = sectionStatus(stage);
+      badge.textContent = status;
+      badge.hidden = !status;
+      section.classList.toggle("is-complete", status === "Completed");
+    }
+    function render(scrollStage = "") {
+      const sections = STAGES_OF_CHANGE.map((stage) => {
+        const status = sectionStatus(stage);
+        const selected = state.stage === stage.id;
+        return `<details class="stages-reflection-section ${selected ? "is-selected" : ""} ${status === "Completed" ? "is-complete" : ""}" data-stage-section="${stage.id}" ${openSections.has(stage.id) ? "open" : ""}><summary><span><strong>${escapeHtml(stage.name)}</strong><small>${escapeHtml(stage.heading)}</small></span><span class="stages-section-status" data-stage-status ${status ? "" : "hidden"}>${status}</span></summary><div class="stages-reflection-fields">${stage.prompts.map(([key, prompt]) => `<label for="stages-${key}"><span>${STAGES_RESPONSE_KEYS.indexOf(key) + 1}. ${escapeHtml(prompt)}</span><textarea id="stages-${key}" data-stage-response="${key}" data-stage-owner="${stage.id}">${escapeHtml(state.responses[key])}</textarea></label>`).join("")}</div></details>`;
+      }).join("");
+      root.innerHTML = pageShell("Stages of Change Reflection", "Explore readiness for one particular change without calculating or diagnosing a stage.", `<label for="stages-change"><strong>What change or coping pattern are you thinking about?</strong></label><p class="skill-app-field-help">Describe it in your own words.</p><textarea id="stages-change" data-stages-change>${escapeHtml(state.change)}</textarea><label for="stages-date">Date (optional)</label><input id="stages-date" type="date" data-stages-date value="${escapeHtml(state.date)}"><section class="stages-change-chooser" aria-labelledby="stages-choice-heading"><h3 id="stages-choice-heading">Which stage feels closest to where you are with this particular change right now?</h3>${stagesChangePathMarkup(state.stage)}<p class="skill-app-note">This choice is a personal reflection, not a calculated result or diagnosis. You can change it without losing any responses.</p></section><div class="skill-app-actions stages-expand-actions"><button type="button" class="secondary" data-stages-expand>Expand all</button><button type="button" class="secondary" data-stages-collapse>Collapse all</button></div><div class="stages-reflection-sections">${sections}</div><label for="stages-additional-notes"><strong>Additional notes</strong></label><textarea id="stages-additional-notes" data-stages-notes>${escapeHtml(state.additionalNotes)}</textarea>`, learnLinks([["Learn about the Stages of Change", "/learn/wellness/maladaptive-coping.html#stages-of-change"],["Learn Urge Surfing", "/learn/wellness/urge-surfing.html"]]));
+      root.querySelector("[data-stages-change]").addEventListener("input", (event) => { state.change = event.target.value; });
+      root.querySelector("[data-stages-date]").addEventListener("input", (event) => { state.date = event.target.value; });
+      root.querySelector("[data-stages-notes]").addEventListener("input", (event) => { state.additionalNotes = event.target.value; });
+      root.querySelectorAll("[data-stage-response]").forEach((field) => field.addEventListener("input", () => { state.responses[field.dataset.stageResponse] = field.value; updateSectionStatus(field.dataset.stageOwner); }));
+      root.querySelectorAll("[data-stage-choice]").forEach((button) => button.addEventListener("click", () => { state = selectStagesOfChangeStage(state, button.dataset.stageChoice); openSections.add(state.stage); render(state.stage); }));
+      root.querySelectorAll("[data-stage-section]").forEach((section) => section.addEventListener("toggle", () => { if (section.open) openSections.add(section.dataset.stageSection); else openSections.delete(section.dataset.stageSection); }));
+      root.querySelector("[data-stages-expand]").addEventListener("click", () => { STAGES_OF_CHANGE.forEach((stage) => openSections.add(stage.id)); render(); });
+      root.querySelector("[data-stages-collapse]").addEventListener("click", () => { openSections.clear(); render(); });
+      if (scrollStage) global.requestAnimationFrame(() => {
+        const section = root.querySelector(`[data-stage-section="${scrollStage}"]`);
+        section?.querySelector(":scope > summary")?.focus({ preventScroll: true });
+        section?.scrollIntoView({ behavior: global.matchMedia?.("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
     }
     render();
-    register(root, { toolId: "stages-of-change", toolTitle: "Stages of Change", route: Progress.TOOL_ROUTES["stages-of-change"], getState: () => state, setState: (next) => { state = clone(next); render(); }, validateState: (next) => isObject(next) && (next.stage === "" || stages.includes(next.stage)) && fields.every(([key]) => typeof next[key] === "string"), getReadableSummary: (next) => Progress.nonEmptySections("Stages of Change", [["Current readiness description",next.stage], ...fields.map(([key,label]) => [label,next[key]])]) });
+    register(root, { toolId: "stages-of-change", toolTitle: "Stages of Change Reflection", route: Progress.TOOL_ROUTES["stages-of-change"], getState: () => clone(state), setState: (next) => { state = normalizeStagesOfChangeState(next); openSections.clear(); if (state.stage) openSections.add(state.stage); render(); }, validateState: validateStagesOfChangeState, getReadableSummary: stagesOfChangeSummary });
   }
 
   const validUrgeRating = (value) => typeof value === "string" && (value === "" || (/^\d{1,3}$/.test(value) && Number(value) >= 0 && Number(value) <= 100));
@@ -467,14 +607,25 @@
     "urge-surfing": initUrgeSurfing,
   };
 
+  function initMaladaptiveSignDisclosures() {
+    document.querySelectorAll("details.maladaptive-sign").forEach((details) => {
+      const summary = details.querySelector(":scope > summary");
+      if (!summary) return;
+      const syncExpanded = () => summary.setAttribute("aria-expanded", String(details.open));
+      syncExpanded();
+      details.addEventListener("toggle", syncExpanded);
+    });
+  }
+
   async function start() {
+    initMaladaptiveSignDisclosures();
     for (const root of document.querySelectorAll("[data-quick-app]")) {
       try { await INITIALIZERS[root.dataset.quickApp]?.(root); }
       catch (error) { root.innerHTML = '<p class="skill-app-note">This tool could not load. Please refresh the page or use the linked Learn material.</p>'; global.console?.error(error); }
     }
   }
 
-  const api = { FIVE_FACTORS, CASE_MAP_FIELDS, THINKING_TRAPS, THOUGHT_FIELDS, CANONICAL_EMOTION_IDS, GROUNDING_STEPS, BoxBreathingMachine, initialThoughtRecord, normalizeThoughtRecord, validateThoughtRecordState, thoughtRecordSummarySections, gratitudeSummarySections, validUrgeCheckpoint, urgeGraphPoints, urgeGraphMarkup };
+  const api = { FIVE_FACTORS, CASE_MAP_FIELDS, THINKING_TRAPS, THOUGHT_FIELDS, CANONICAL_EMOTION_IDS, GROUNDING_STEPS, STAGES_OF_CHANGE, STAGES_RESPONSE_KEYS, BoxBreathingMachine, initialThoughtRecord, normalizeThoughtRecord, validateThoughtRecordState, thoughtRecordSummarySections, gratitudeSummarySections, initialStagesOfChangeState, normalizeStagesOfChangeState, validateStagesOfChangeState, selectStagesOfChangeStage, stagesOfChangeSummary, stagesChangePathMarkup, validUrgeCheckpoint, urgeGraphPoints, urgeGraphMarkup };
   global.TherapyQuickTools = api;
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   if (typeof document !== "undefined") {
