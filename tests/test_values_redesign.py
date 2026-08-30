@@ -60,7 +60,7 @@ class ValuesRedesignTests(unittest.TestCase):
         widespread = {text: parents for text, parents in duplicate_parents.items() if len(set(parents)) > 3}
         self.assertFalse(widespread, f"Excessively reused HOW text: {widespread}")
         self.assertGreaterEqual(len(ACTIONS["implementation_supports"]), 5)
-        self.assertIn("data-values-actions-url", (ROOT / "site/skill-finder/values/index.qmd").read_text(encoding="utf-8"))
+        self.assertIn("data-values-actions-url", (ROOT / "site/tool-finder/values/index.qmd").read_text(encoding="utf-8"))
 
     def test_workflow_and_accessibility_contracts_are_visible(self):
         for token in (

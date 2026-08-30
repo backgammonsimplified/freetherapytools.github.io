@@ -389,3 +389,6 @@ This handout's educational content is integrated into the anchored skill section
 ::::
 
 <!-- section-scan-resources:end -->
+## Box Breathing {#box-breathing}
+
+Box Breathing is a structured attention practice with four adjustable phases. Use comfortable timings; holds can be set to zero. Stop or change the pattern if it causes discomfort. The [Box Breathing tool](/tool-finder/box-breathing/) works offline and does not require a fixed count.

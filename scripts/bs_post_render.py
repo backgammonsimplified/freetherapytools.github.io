@@ -108,7 +108,7 @@ def write_legacy_route_redirects(output_root: Path = OUTPUT_ROOT) -> int:
     changed = 0
     for route in LEGACY_DISPOSITIONS["routes"]:
         source = route["source"].strip("/")
-        path = output_root / source / "index.html"
+        path = output_root / source if source.endswith(".html") else output_root / source / "index.html"
         content = legacy_glossary_redirect_text(
             target=route["target"],
             indexing=route["indexing"],

@@ -28,7 +28,7 @@ class ResourceMatchReviewTests(unittest.TestCase):
     def setUpClass(cls):
         cls.book_rows = rows(BOOK_MATCHES)
         cls.php_rows = rows(PHP_MATCHES)
-        cls.lesson_files = list((SITE / "learn").rglob("*.qmd")) + [SITE / "skill-finder/index.qmd"]
+        cls.lesson_files = list((SITE / "learn").rglob("*.qmd")) + [SITE / "tool-finder/index.qmd"]
         cls.lesson_text = "\n".join(path.read_text(encoding="utf-8") for path in cls.lesson_files)
         cls.dashboard = DASHBOARD.read_text(encoding="utf-8")
         cls.unmatched = UNMATCHED.read_text(encoding="utf-8")

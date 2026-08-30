@@ -17,9 +17,9 @@ def load(name):
 class SkillFinderAppTests(unittest.TestCase):
     def test_skill_finder_sidebar_uses_shared_scroll_and_arrow_controls(self):
         javascript = (SITE / "assets" / "bs-learn.js").read_text(encoding="utf-8")
-        self.assertIn("const skillFinderPage = isSkillFinderPage()", javascript)
-        self.assertIn('"Show Skill Finder navigation"', javascript)
-        self.assertIn('"Hide Skill Finder navigation"', javascript)
+        self.assertIn("const skillFinderPage = isToolFinderPage()", javascript)
+        self.assertIn('"Show Tool Finder navigation"', javascript)
+        self.assertIn('"Hide Tool Finder navigation"', javascript)
         self.assertIn('"\\u2192 Show navigation"', javascript)
         self.assertIn('const collapsed = autoHidden || manuallyCollapsed', javascript)
         self.assertIn("autoCollapsePending = true", javascript)
@@ -29,35 +29,29 @@ class SkillFinderAppTests(unittest.TestCase):
         self.assertIn('window.dispatchEvent(new CustomEvent("bs:left-sidebar-change"))', javascript)
 
     def test_every_skill_finder_page_uses_the_shared_sidebar(self):
-        pages = sorted((SITE / "skill-finder").rglob("index.qmd"))
-        self.assertEqual(len(pages), 25)
+        pages = sorted((SITE / "tool-finder").rglob("index.qmd"))
+        self.assertEqual(len(pages), 29)
         for page in pages:
-            self.assertIn("sidebar: skill-finder", page.read_text(encoding="utf-8"), page)
+            self.assertIn("sidebar: tool-finder", page.read_text(encoding="utf-8"), page)
 
         navigation = (SITE / "_learn-navigation.yml").read_text(encoding="utf-8")
-        self.assertIn("    - id: skill-finder", navigation)
-        self.assertIn('        - section: "Interactive Tools"', navigation)
-        self.assertIn('        - section: "Learn"', navigation)
+        self.assertIn("    - id: tool-finder", navigation)
+        for heading in ("Goal Setting", "Distress Tolerance", "Mindfulness", "Emotional Regulation", "CBT and Managing Anxiety", "Interpersonal Effectiveness", "Wellness (Actions & Patterns)"):
+            self.assertIn(f'        - section: "{heading}"', navigation)
         for route in (
             "values", "thermometer", "emotions", "case-map", "change-emotion", "worry-tree",
             "pleasant-event", "behaviour-chain", "missing-links", "exposure",
             "dear-man", "ask-or-say-no", "goal-builder", "behavioural-activation", "values-review",
             "five-factor-model", "thinking-traps", "thought-record", "worry-time",
             "box-breathing", "gratitude-journal", "positive-self-talk", "grounding", "dime-game",
+            "stop", "sleep-hygiene", "stages-of-change", "urge-surfing",
         ):
-            self.assertIn(f"skill-finder/{route}/index.qmd", navigation)
-        for route in (
-            "learn/index.qmd", "learn/goal-setting/index.qmd", "learn/cube/index.qmd",
-            "learn/interpersonal-effectiveness/index.qmd", "learn/wellness/index.qmd",
-            "learn/emotion-regulation/index.qmd", "cbt-skills/index.qmd",
-            "mindfulness/index.qmd",
-        ):
-            self.assertIn(f"href: {route}", navigation)
+            self.assertIn(f"tool-finder/{route}/index.qmd", navigation)
 
     def test_flagship_routes_and_assets_exist(self):
         routes = ["values", "thermometer", "emotions", "change-emotion", "worry-tree", "pleasant-event"]
         for route in routes:
-            page = SITE / "skill-finder" / route / "index.qmd"
+            page = SITE / "tool-finder" / route / "index.qmd"
             self.assertTrue(page.is_file(), route)
             self.assertIn("data-skill-app", page.read_text(encoding="utf-8"), route)
         self.assertTrue((SITE / "assets" / "skill-finder-apps.js").is_file())
@@ -127,8 +121,8 @@ class SkillFinderAppTests(unittest.TestCase):
             text = page.read_text(encoding="utf-8")
             for heading in ("Words describing", "Prompting events and interpretations", "Body changes, expressions, and action urges", "Aftereffects", "When", "Check the Facts"):
                 self.assertIn(heading, text, page)
-            self.assertIn("/skill-finder/emotions/", text)
-            self.assertIn("/skill-finder/change-emotion/", text)
+            self.assertIn("/tool-finder/emotions/", text)
+            self.assertIn("/tool-finder/change-emotion/", text)
             self.assertIn("emotion-regulation-handout-6", text)
 
     def test_change_emotion_uses_handout_9_tree_and_local_check_facts_editor(self):
@@ -178,7 +172,7 @@ class SkillFinderAppTests(unittest.TestCase):
             self.assertIn(token, source)
 
     def test_case_map_route_uses_source_backed_model(self):
-        case_page = (SITE / "skill-finder" / "case-map" / "index.qmd").read_text(encoding="utf-8")
+        case_page = (SITE / "tool-finder" / "case-map" / "index.qmd").read_text(encoding="utf-8")
         quick_tools = (SITE / "assets" / "skill-quick-tools.js").read_text(encoding="utf-8")
         for field in ("Behaviours", "Body and physical concerns", "Thoughts", "Emotions", "Environmental stressors", "Strengths and resources"):
             self.assertIn(field, quick_tools)

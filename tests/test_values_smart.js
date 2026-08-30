@@ -18,7 +18,7 @@ const personal = { domain: "Close Relationships", values: ["Connection", "Courag
 const token = handoff.storePayload(personal, { storage, cryptoObject, now: () => 1000, ttlMs: 5000 });
 assert.match(token, /^[a-f0-9]{32}$/);
 const route = handoff.goalBuilderUrl(token);
-assert.equal(route, `/skill-finder/goal-builder/?handoff=${token}`);
+assert.equal(route, `/tool-finder/goal-builder/?handoff=${token}`);
 for (const text of Object.values(personal).flat()) assert.equal(route.includes(String(text)), false);
 assert.deepEqual(handoff.consumePayload(token, { storage, now: () => 2000 }), personal);
 assert.equal(handoff.consumePayload(token, { storage, now: () => 2000 }), null, "handoff is consumed once");
@@ -116,7 +116,7 @@ const state = {
   calendar,
   gtd: { taskId: "smart_goal_test_001", captureSequence: 1787500000000001, createdAt: "2026-08-23T12:00:00.000Z" },
 };
-const config = { toolId: "goal-builder", toolTitle: "SMART Goal Builder", route: "/skill-finder/goal-builder/", schemaVersion: 1 };
+const config = { toolId: "goal-builder", toolTitle: "SMART Goal Builder", route: "/tool-finder/goal-builder/", schemaVersion: 1 };
 const record = progress.makeRecord(config, state, new Date("2026-08-23T12:30:00Z"));
 const markdown = goal.goalGtdMarkdown(record, state);
 assert.match(markdown, /^---\nrecord_version: 1/);

@@ -4,7 +4,7 @@
   "schema_version": 1,
   "tool_id": "resource-distress-tolerance-p016",
   "tool_title": "Changing Body Chemistry with TIPP Skills",
-  "route": "/learn/cube/tipp.html",
+  "route": "/learn/distress-tolerance/tipp.html",
   "saved_at": "2026-08-23T12:00:00.000Z",
   "state": {
     "resource_id": "distress-tolerance-p016",

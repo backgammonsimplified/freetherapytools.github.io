@@ -34,8 +34,8 @@ class SkillProgressTests(unittest.TestCase):
     def test_all_interactive_tools_have_unique_stable_ids_and_routes(self):
         self.assertEqual(len(TOOLS), len(set(TOOLS)))
         for tool_id, route in TOOLS.items():
-            self.assertTrue((SITE / "skill-finder" / route / "index.qmd").is_file(), tool_id)
-            self.assertRegex(PROGRESS, rf'(?:"{re.escape(tool_id)}"|{re.escape(tool_id)}): "/skill-finder/{re.escape(route)}/"')
+            self.assertTrue((SITE / "tool-finder" / route / "index.qmd").is_file(), tool_id)
+            self.assertRegex(PROGRESS, rf'(?:"{re.escape(tool_id)}"|{re.escape(tool_id)}): "/tool-finder/{re.escape(route)}/"')
 
     def test_shared_framework_contract_and_ui(self):
         for token in ("registerTool", "getState", "setState", "validateState", "getReadableSummary", "schemaVersion"):

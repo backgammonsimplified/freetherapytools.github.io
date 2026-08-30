@@ -1,0 +1,17 @@
+---
+title: "Skill Thermometer"
+description: "Find skills that may fit your current level of emotional activation or numbness."
+sidebar: tool-finder
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+This is an educational reflection tool, not a diagnosis. Choose the state that feels closest right now; you can change it at any time.
+
+::: {#skill-thermometer-app .skill-app data-skill-app="thermometer"}
+Loading Skill Thermometer…
+:::
+
+[Back to all Tool Finder tools](/tool-finder/)

@@ -14,7 +14,7 @@ SCRIPTS = ROOT / "site" / "includes" / "bs-scripts.html"
 QUARTO = ROOT / "site" / "_quarto.yml"
 LEARN_CSS = ROOT / "site" / "assets" / "bs-learn.css"
 LEARN_JS = ROOT / "site" / "assets" / "bs-learn.js"
-PAGE = ROOT / "site" / "skill-finder" / "values" / "index.qmd"
+PAGE = ROOT / "site" / "tool-finder" / "values" / "index.qmd"
 GENERATOR = ROOT / "scripts" / "values_workbook.py"
 
 EXPECTED_FIRST_128 = """Acceptance
@@ -457,7 +457,7 @@ class ValuesModuleTests(unittest.TestCase):
         self.assertIn('"bs:left-sidebar-change"', self.learn_javascript)
 
     def test_values_routes_exist(self):
-        self.assertTrue((ROOT / "site" / "skill-finder" / "values" / "index.qmd").is_file())
+        self.assertTrue((ROOT / "site" / "tool-finder" / "values" / "index.qmd").is_file())
         self.assertTrue((ROOT / "site" / "learn" / "goal-setting" / "values-valued-action.qmd").is_file())
 
 

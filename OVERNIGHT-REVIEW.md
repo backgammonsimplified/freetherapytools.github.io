@@ -44,7 +44,7 @@ The searchable reference-book PDF was found. The expected separate reference-boo
 ## Values review
 
 - Learn lesson: `/learn/goal-setting/values-valued-action.html`
-- App: `/skill-finder/values/`
+- App: `/tool-finder/values/`
 - Workbook found: `Core_Values_and_Valued_Action_Workbook_v0.2.docx`
 - Dictionary: 257 unique workbook values and definitions
 - App: Discover, Sort, Narrow, Assess, Act, Barriers, Mission, and Review
@@ -87,22 +87,22 @@ Known limitations:
 
 Open these in order after running the normal local preview:
 
-1. `/skill-finder/`
+1. `/tool-finder/`
 2. `/learn/goal-setting/values-valued-action.html`
-3. `/skill-finder/values/`
-4. `/skill-finder/thermometer/`
-5. `/skill-finder/emotions/`
-6. `/skill-finder/change-emotion/?emotion=fear`
-7. `/skill-finder/worry-tree/`
-8. `/skill-finder/pleasant-event/`
-9. `/skill-finder/behaviour-chain/`
-10. `/skill-finder/missing-links/`
-11. `/skill-finder/exposure/`
-12. `/skill-finder/dear-man/`
-13. `/skill-finder/ask-or-say-no/`
-14. `/skill-finder/goal-builder/`
-15. `/skill-finder/behavioural-activation/`
-16. `/learn/cube/stop-crisis-survival.html` (clean-copy comparison)
+3. `/tool-finder/values/`
+4. `/tool-finder/thermometer/`
+5. `/tool-finder/emotions/`
+6. `/tool-finder/change-emotion/?emotion=fear`
+7. `/tool-finder/worry-tree/`
+8. `/tool-finder/pleasant-event/`
+9. `/tool-finder/behaviour-chain/`
+10. `/tool-finder/missing-links/`
+11. `/tool-finder/exposure/`
+12. `/tool-finder/dear-man/`
+13. `/tool-finder/ask-or-say-no/`
+14. `/tool-finder/goal-builder/`
+15. `/tool-finder/behavioural-activation/`
+16. `/learn/distress-tolerance/stop-crisis-survival.html` (clean-copy comparison)
 17. `/learn/emotion-regulation/observing-describing-emotions.html` (clean-copy comparison)
 18. `/learn/`, `/cbt-skills/`, `/mindfulness/`, and `/glossary/`
 

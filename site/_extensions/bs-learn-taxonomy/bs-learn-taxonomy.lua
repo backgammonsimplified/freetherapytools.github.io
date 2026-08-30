@@ -101,7 +101,7 @@ end
 local function track_href(value)
   local routes = {
     ["goal-setting"] = "/learn/goal-setting/",
-    ["doubling-cube"] = "/learn/cube/",
+    ["doubling-cube"] = "/learn/distress-tolerance/",
     ["interpersonal-effectiveness"] = "/learn/interpersonal-effectiveness/",
     ["wellness"] = "/learn/wellness/",
     ["emotion-regulation"] = "/learn/emotion-regulation/",

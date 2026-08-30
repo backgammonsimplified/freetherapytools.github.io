@@ -21,7 +21,7 @@ execute:
 
 Values are ongoing directions for how you want to live and behave. Goals are concrete outcomes or milestones that can move you in those directions. You can complete a goal; a value continues to guide what comes next.
 
-[Open the interactive Values & Valued Action tool](/skill-finder/values/){.btn .btn-primary}
+[Open the interactive Values & Valued Action tool](/tool-finder/values/){.btn .btn-primary}
 
 ## Values vs. Goals {#values-vs-goals}
 
@@ -81,7 +81,7 @@ A value-aligned goal can still bring fear, shame, boredom, uncertainty, frustrat
 
 - Use [Problem Solving](/learn/emotion-regulation/opposite-action.html#problem-solving) for practical barriers.
 - Consider [Opposite Action](/learn/emotion-regulation/opposite-action.html#opposite-action) when an emotion-driven urge pulls away from what matters and acting opposite is safe and effective.
-- Use [Radical Acceptance and Willingness](/learn/cube/radical-acceptance.html#willingness) when fighting reality is adding suffering.
+- Use [Radical Acceptance and Willingness](/learn/distress-tolerance/radical-acceptance.html#willingness) when fighting reality is adding suffering.
 - Make the step more specific with [SMART Goals](/learn/goal-setting/goal-setting-guidelines.html#smart-goals).
 - Use [Behavioural Activation](/learn/wellness/behavioral-activation.html) when a small scheduled action can help restore movement.
 

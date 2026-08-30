@@ -45,7 +45,7 @@ class AuthoredSocialCardTests(unittest.TestCase):
     def test_authored_cards_use_source_metadata_and_expected_outputs(self) -> None:
         cases = {
             "why-is-25-percent-the-take-point": {
-                "source": "site/learn/cube/why-is-25-percent-the-take-point.qmd",
+                "source": "site/learn/distress-tolerance/why-is-25-percent-the-take-point.qmd",
                 "kind": "article",
                 "category": "Learn",
                 "pill": "Learn Article",

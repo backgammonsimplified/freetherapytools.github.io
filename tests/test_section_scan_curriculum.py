@@ -144,6 +144,7 @@ class SectionScanCurriculumTests(unittest.TestCase):
                     "Addictions",
                     "Balanced Eating",
                     "Medication & Doctor's Visits",
+                    "Urge Surfing",
                 ],
                 "emotion-regulation": [
                     "What Emotions Do for You",
@@ -185,7 +186,7 @@ class SectionScanCurriculumTests(unittest.TestCase):
                 "Engage in behavioural activation",
                 "developing a life worth living",
             ],
-            "learn/cube/index.qmd": [
+            "learn/distress-tolerance/index.qmd": [
                 "Survive crisis situations",
                 "Accept reality",
                 "Become free",
@@ -238,17 +239,17 @@ class SectionScanCurriculumTests(unittest.TestCase):
 
     def test_skill_finder_and_mindfulness_status(self) -> None:
         general = [
-            row for row in self.rows if row["lesson"] == "skill-finder" and row["publish"] == "true"
+            row for row in self.rows if row["lesson"] == "tool-finder" and row["publish"] == "true"
         ]
         self.assertEqual(len(general), 5)
-        source = (SITE / "skill-finder" / "index.qmd").read_text(encoding="utf-8")
-        for title in ("Dialectics", "Emotional Overload", "Skills Use Guideline", "Skills Overview"):
+        source = (SITE / "data" / "tool-finder" / "catalogue.json").read_text(encoding="utf-8")
+        for title in ("STOP", "Wise Mind", "ABC PLEASE", "DEAR MAN", "Strengths & Focus"):
             self.assertIn(title, source)
         mindfulness_text = "\n".join(
             path.read_text(encoding="utf-8")
             for path in (SITE / "learn" / "mindfulness").glob("*.qmd")
         )
-        self.assertNotIn("/resources/", mindfulness_text)
+        self.assertIn("/resources/mindfulness/", mindfulness_text)
 
 
 if __name__ == "__main__":

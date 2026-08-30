@@ -474,3 +474,6 @@ vaoes
 ::::
 
 <!-- section-scan-resources:end -->
+## Gratitude Journaling {#gratitude-journaling}
+
+Gratitude journaling can be a small noticing activity: record something specific you appreciate and what makes it meaningful. It should not be used to deny difficulty or demand a mood change. [Open the Gratitude Journal](/tool-finder/gratitude-journal/).

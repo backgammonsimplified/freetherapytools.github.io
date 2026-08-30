@@ -153,7 +153,7 @@ assert.equal(map.values.find((value) => value.valueId === "unassigned").linkDist
 const compactAll = apps.missionMapVisibleGraph(map, ["a", "c"], { compact: true });
 assert.ok(compactAll.nodes.find((node) => node.valueId === "x").linkDistance < compactAll.nodes.find((node) => node.valueId === "unassigned").linkDistance);
 
-const config = { toolId: "values", toolTitle: "Values", route: "/skill-finder/values/", schemaVersion: 1 };
+const config = { toolId: "values", toolTitle: "Values", route: "/tool-finder/values/", schemaVersion: 1 };
 const record = progress.makeRecord(config, state, new Date("2026-08-23T15:00:00Z"));
 for (const serialized of [progress.serializeMarkdown(record, "# Values"), progress.serializeJson(record)]) {
   const restored = progress.parseProgress(serialized).record.state;

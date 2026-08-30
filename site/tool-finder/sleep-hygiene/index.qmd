@@ -1,0 +1,16 @@
+---
+title: "Sleep Hygiene Planner / Checklist"
+description: "Review sleep-supporting patterns and plan one realistic change."
+sidebar: tool-finder
+page-layout: full
+toc: false
+execute: {enabled: false}
+---
+
+This checklist uses the site's [Sleep curriculum](/learn/wellness/sleep.html) and sleep practice sheet. It helps you choose an experiment; it is not a sleep diagnosis.
+
+::: {#sleep-hygiene-app .skill-app data-quick-app="sleep-hygiene"}
+Loading Sleep Hygiene Planner…
+:::
+
+[Back to Tool Finder](/tool-finder/)

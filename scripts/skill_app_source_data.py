@@ -1,4 +1,4 @@
-"""Build source-supported data used by the interactive Skill Finder tools.
+"""Build source-supported data used by the interactive Tool Finder tools.
 
 The reference book is used only as a text index for material already selected by
 the section-scan curriculum. This script extracts the three-page Pleasant Events

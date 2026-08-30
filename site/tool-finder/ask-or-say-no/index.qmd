@@ -1,0 +1,15 @@
+---
+title: "Ask or Say No Planner"
+description: "Reflect on priorities, intensity, and troubleshooting before making a request or saying no."
+sidebar: tool-finder
+page-layout: full
+toc: false
+---
+
+The source factors support reflection, not an automatic clinical score. You decide what fits the relationship, your values, safety, and the situation.
+
+For the source's structured ten-factor intensity exercise, use [The DIME Game](/tool-finder/dime-game/).
+
+::: {#ask-no-app .skill-app data-practice-app="ask-or-say-no"}
+Loading Ask or Say No Planner…
+:::

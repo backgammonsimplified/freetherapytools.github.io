@@ -60,14 +60,14 @@
     {
       "id": "distress-tolerance-index",
       "name": "Distress Tolerance track index",
-      "route": "/learn/cube/",
+      "route": "/learn/distress-tolerance/",
       "kind": "learn-index",
       "required_markers": ["data-bs-learn-filters", "data-bs-learn-list"]
     },
     {
       "id": "cube-lesson",
       "name": "DBT lesson",
-      "route": "/learn/cube/tipp.html",
+      "route": "/learn/distress-tolerance/tipp.html",
       "kind": "learn-lesson",
       "required_markers": ["bs-learn-article"]
     },
@@ -122,15 +122,15 @@
     },
     {
       "id": "values-app",
-      "name": "Values Skill Finder",
-      "route": "/skill-finder/values/",
+      "name": "Values Tool Finder",
+      "route": "/tool-finder/values/",
       "kind": "ordinary",
       "required_markers": ["skill-app", "Save progress"]
     },
     {
       "id": "emotion-explorer-app",
-      "name": "Emotion Explorer Skill Finder",
-      "route": "/skill-finder/emotions/",
+      "name": "Emotion Explorer Tool Finder",
+      "route": "/tool-finder/emotions/",
       "kind": "ordinary",
       "required_markers": ["skill-app", "Save progress"]
     },

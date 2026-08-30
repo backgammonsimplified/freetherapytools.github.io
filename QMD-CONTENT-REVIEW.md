@@ -41,35 +41,35 @@ These items are present natively but remain review-needed because their text or 
 
 ### Distress Tolerance
 
-- `distress-tolerance-p003` — How Can I Make a Distress Crisis Worse? ([site/learn/cube/stop-crisis-survival.qmd](site/learn/cube/stop-crisis-survival.qmd)) — section-scan; low structure confidence
-- `distress-tolerance-p004` — When to Use Crisis Survival Skills ([site/learn/cube/stop-crisis-survival.qmd](site/learn/cube/stop-crisis-survival.qmd)) — searchable-dbt-book; medium structure confidence
-- `distress-tolerance-p008` — Turning the Mind, Willingness, and Willfulness ([site/learn/cube/radical-acceptance.qmd](site/learn/cube/radical-acceptance.qmd)) — searchable-dbt-book; medium structure confidence
-- `distress-tolerance-p009` — Using the STOP Skill ([site/learn/cube/stop-crisis-survival.qmd](site/learn/cube/stop-crisis-survival.qmd)) — section-scan; medium structure confidence
-- `distress-tolerance-p013` — Using Cold Water, Step by Step ([site/learn/cube/tipp.qmd](site/learn/cube/tipp.qmd)) — searchable-dbt-book; medium structure confidence
-- `distress-tolerance-p014` — Paired Muscle Relaxation, Step by Step ([site/learn/cube/tipp.qmd](site/learn/cube/tipp.qmd)) — searchable-dbt-book; medium structure confidence
-- `distress-tolerance-p016` — Changing Body Chemistry with TIPP Skills ([site/learn/cube/tipp.qmd](site/learn/cube/tipp.qmd)) — searchable-dbt-book; medium structure confidence
-- `distress-tolerance-p019` — Wise Mind ACCEPTS Overview ([site/learn/cube/self-soothe.qmd](site/learn/cube/self-soothe.qmd)) — section-scan; low structure confidence
-- `distress-tolerance-p021` — Self-Soothing Practice ([site/learn/cube/self-soothe.qmd](site/learn/cube/self-soothe.qmd)) — php-high-res; medium structure confidence
-- `distress-tolerance-p022` — Distracting with Wise Mind ACCEPTS ([site/learn/cube/self-soothe.qmd](site/learn/cube/self-soothe.qmd)) — searchable-dbt-book; medium structure confidence
-- `distress-tolerance-p023` — Creating a Self-Soothing Kit ([site/learn/cube/self-soothe.qmd](site/learn/cube/self-soothe.qmd)) — section-scan; medium structure confidence
-- `distress-tolerance-p026` — One Thing in the Moment ([site/learn/cube/improve.qmd](site/learn/cube/improve.qmd)) — section-scan; low structure confidence
-- `distress-tolerance-p027` — Peaceful Place Meditation ([site/learn/cube/improve.qmd](site/learn/cube/improve.qmd)) — section-scan; medium structure confidence
-- `distress-tolerance-p028` — IMPROVE Practice ([site/learn/cube/improve.qmd](site/learn/cube/improve.qmd)) — section-scan; medium structure confidence
-- `distress-tolerance-p030` — Pros and Cons ([site/learn/cube/pros-and-cons.qmd](site/learn/cube/pros-and-cons.qmd)) — searchable-dbt-book; medium structure confidence
-- `distress-tolerance-p031` — Pros and Cons: How To ([site/learn/cube/pros-and-cons.qmd](site/learn/cube/pros-and-cons.qmd)) — php-high-res; medium structure confidence
-- `distress-tolerance-p032` — Pros and Cons of Acting on Crisis Urges ([site/learn/cube/pros-and-cons.qmd](site/learn/cube/pros-and-cons.qmd)) — searchable-dbt-book; medium structure confidence
-- `distress-tolerance-p033` — Pros and Cons Practice ([site/learn/cube/pros-and-cons.qmd](site/learn/cube/pros-and-cons.qmd)) — section-scan; medium structure confidence
-- `distress-tolerance-p035` — Dandelions ([site/learn/cube/radical-acceptance.qmd](site/learn/cube/radical-acceptance.qmd)) — section-scan; medium structure confidence
-- `distress-tolerance-p036` — Developing the Skill of Radical Acceptance ([site/learn/cube/radical-acceptance.qmd](site/learn/cube/radical-acceptance.qmd)) — section-scan; medium structure confidence
-- `distress-tolerance-p037` — Radical Acceptance ([site/learn/cube/radical-acceptance.qmd](site/learn/cube/radical-acceptance.qmd)) — searchable-dbt-book; medium structure confidence
-- `distress-tolerance-p038` — Radical Acceptance: Factors That Interfere ([site/learn/cube/radical-acceptance.qmd](site/learn/cube/radical-acceptance.qmd)) — searchable-dbt-book; medium structure confidence
-- `distress-tolerance-p039` — Radical Acceptance Quick Reference ([site/learn/cube/radical-acceptance.qmd](site/learn/cube/radical-acceptance.qmd)) — section-scan; medium structure confidence
-- `distress-tolerance-p040` — Practicing Radical Acceptance Step by Step ([site/learn/cube/radical-acceptance.qmd](site/learn/cube/radical-acceptance.qmd)) — searchable-dbt-book; medium structure confidence
-- `distress-tolerance-p043` — How to Solve a Problem ([site/learn/cube/radical-acceptance.qmd](site/learn/cube/radical-acceptance.qmd)) — section-scan; medium structure confidence
-- `distress-tolerance-p044` — Three Parts of Radical Acceptance ([site/learn/cube/radical-acceptance.qmd](site/learn/cube/radical-acceptance.qmd)) — section-scan; medium structure confidence
-- `distress-tolerance-p046` — Radical Acceptance Practice ([site/learn/cube/radical-acceptance.qmd](site/learn/cube/radical-acceptance.qmd)) — searchable-dbt-book; medium structure confidence
-- `distress-tolerance-p047` — Practicing Half-Smiling and Willing Hands, Part 1 ([site/learn/cube/radical-acceptance.qmd](site/learn/cube/radical-acceptance.qmd)) — searchable-dbt-book; medium structure confidence
-- `distress-tolerance-p048` — Practicing Half-Smiling and Willing Hands, Part 2 ([site/learn/cube/radical-acceptance.qmd](site/learn/cube/radical-acceptance.qmd)) — searchable-dbt-book; medium structure confidence
+- `distress-tolerance-p003` — How Can I Make a Distress Crisis Worse? ([site/learn/distress-tolerance/stop-crisis-survival.qmd](site/learn/distress-tolerance/stop-crisis-survival.qmd)) — section-scan; low structure confidence
+- `distress-tolerance-p004` — When to Use Crisis Survival Skills ([site/learn/distress-tolerance/stop-crisis-survival.qmd](site/learn/distress-tolerance/stop-crisis-survival.qmd)) — searchable-dbt-book; medium structure confidence
+- `distress-tolerance-p008` — Turning the Mind, Willingness, and Willfulness ([site/learn/distress-tolerance/radical-acceptance.qmd](site/learn/distress-tolerance/radical-acceptance.qmd)) — searchable-dbt-book; medium structure confidence
+- `distress-tolerance-p009` — Using the STOP Skill ([site/learn/distress-tolerance/stop-crisis-survival.qmd](site/learn/distress-tolerance/stop-crisis-survival.qmd)) — section-scan; medium structure confidence
+- `distress-tolerance-p013` — Using Cold Water, Step by Step ([site/learn/distress-tolerance/tipp.qmd](site/learn/distress-tolerance/tipp.qmd)) — searchable-dbt-book; medium structure confidence
+- `distress-tolerance-p014` — Paired Muscle Relaxation, Step by Step ([site/learn/distress-tolerance/tipp.qmd](site/learn/distress-tolerance/tipp.qmd)) — searchable-dbt-book; medium structure confidence
+- `distress-tolerance-p016` — Changing Body Chemistry with TIPP Skills ([site/learn/distress-tolerance/tipp.qmd](site/learn/distress-tolerance/tipp.qmd)) — searchable-dbt-book; medium structure confidence
+- `distress-tolerance-p019` — Wise Mind ACCEPTS Overview ([site/learn/distress-tolerance/self-soothe.qmd](site/learn/distress-tolerance/self-soothe.qmd)) — section-scan; low structure confidence
+- `distress-tolerance-p021` — Self-Soothing Practice ([site/learn/distress-tolerance/self-soothe.qmd](site/learn/distress-tolerance/self-soothe.qmd)) — php-high-res; medium structure confidence
+- `distress-tolerance-p022` — Distracting with Wise Mind ACCEPTS ([site/learn/distress-tolerance/self-soothe.qmd](site/learn/distress-tolerance/self-soothe.qmd)) — searchable-dbt-book; medium structure confidence
+- `distress-tolerance-p023` — Creating a Self-Soothing Kit ([site/learn/distress-tolerance/self-soothe.qmd](site/learn/distress-tolerance/self-soothe.qmd)) — section-scan; medium structure confidence
+- `distress-tolerance-p026` — One Thing in the Moment ([site/learn/distress-tolerance/improve.qmd](site/learn/distress-tolerance/improve.qmd)) — section-scan; low structure confidence
+- `distress-tolerance-p027` — Peaceful Place Meditation ([site/learn/distress-tolerance/improve.qmd](site/learn/distress-tolerance/improve.qmd)) — section-scan; medium structure confidence
+- `distress-tolerance-p028` — IMPROVE Practice ([site/learn/distress-tolerance/improve.qmd](site/learn/distress-tolerance/improve.qmd)) — section-scan; medium structure confidence
+- `distress-tolerance-p030` — Pros and Cons ([site/learn/distress-tolerance/pros-and-cons.qmd](site/learn/distress-tolerance/pros-and-cons.qmd)) — searchable-dbt-book; medium structure confidence
+- `distress-tolerance-p031` — Pros and Cons: How To ([site/learn/distress-tolerance/pros-and-cons.qmd](site/learn/distress-tolerance/pros-and-cons.qmd)) — php-high-res; medium structure confidence
+- `distress-tolerance-p032` — Pros and Cons of Acting on Crisis Urges ([site/learn/distress-tolerance/pros-and-cons.qmd](site/learn/distress-tolerance/pros-and-cons.qmd)) — searchable-dbt-book; medium structure confidence
+- `distress-tolerance-p033` — Pros and Cons Practice ([site/learn/distress-tolerance/pros-and-cons.qmd](site/learn/distress-tolerance/pros-and-cons.qmd)) — section-scan; medium structure confidence
+- `distress-tolerance-p035` — Dandelions ([site/learn/distress-tolerance/radical-acceptance.qmd](site/learn/distress-tolerance/radical-acceptance.qmd)) — section-scan; medium structure confidence
+- `distress-tolerance-p036` — Developing the Skill of Radical Acceptance ([site/learn/distress-tolerance/radical-acceptance.qmd](site/learn/distress-tolerance/radical-acceptance.qmd)) — section-scan; medium structure confidence
+- `distress-tolerance-p037` — Radical Acceptance ([site/learn/distress-tolerance/radical-acceptance.qmd](site/learn/distress-tolerance/radical-acceptance.qmd)) — searchable-dbt-book; medium structure confidence
+- `distress-tolerance-p038` — Radical Acceptance: Factors That Interfere ([site/learn/distress-tolerance/radical-acceptance.qmd](site/learn/distress-tolerance/radical-acceptance.qmd)) — searchable-dbt-book; medium structure confidence
+- `distress-tolerance-p039` — Radical Acceptance Quick Reference ([site/learn/distress-tolerance/radical-acceptance.qmd](site/learn/distress-tolerance/radical-acceptance.qmd)) — section-scan; medium structure confidence
+- `distress-tolerance-p040` — Practicing Radical Acceptance Step by Step ([site/learn/distress-tolerance/radical-acceptance.qmd](site/learn/distress-tolerance/radical-acceptance.qmd)) — searchable-dbt-book; medium structure confidence
+- `distress-tolerance-p043` — How to Solve a Problem ([site/learn/distress-tolerance/radical-acceptance.qmd](site/learn/distress-tolerance/radical-acceptance.qmd)) — section-scan; medium structure confidence
+- `distress-tolerance-p044` — Three Parts of Radical Acceptance ([site/learn/distress-tolerance/radical-acceptance.qmd](site/learn/distress-tolerance/radical-acceptance.qmd)) — section-scan; medium structure confidence
+- `distress-tolerance-p046` — Radical Acceptance Practice ([site/learn/distress-tolerance/radical-acceptance.qmd](site/learn/distress-tolerance/radical-acceptance.qmd)) — searchable-dbt-book; medium structure confidence
+- `distress-tolerance-p047` — Practicing Half-Smiling and Willing Hands, Part 1 ([site/learn/distress-tolerance/radical-acceptance.qmd](site/learn/distress-tolerance/radical-acceptance.qmd)) — searchable-dbt-book; medium structure confidence
+- `distress-tolerance-p048` — Practicing Half-Smiling and Willing Hands, Part 2 ([site/learn/distress-tolerance/radical-acceptance.qmd](site/learn/distress-tolerance/radical-acceptance.qmd)) — searchable-dbt-book; medium structure confidence
 
 ### Emotion Regulation
 
@@ -241,11 +241,11 @@ These items are present natively but remain review-needed because their text or 
 
 ### General Skills
 
-- `general-p002` — Skills & Strengths List ([site/skill-finder/index.qmd](site/skill-finder/index.qmd)) — php-high-res; medium structure confidence
-- `general-p003` — Skills Overview ([site/skill-finder/index.qmd](site/skill-finder/index.qmd)) — section-scan; medium structure confidence
-- `general-p004` — Emotional Overload & Emotional Numbness Skills Guide ([site/skill-finder/index.qmd](site/skill-finder/index.qmd)) — section-scan; medium structure confidence
-- `general-p005` — Skills Use Guideline ([site/skill-finder/index.qmd](site/skill-finder/index.qmd)) — php-high-res; medium structure confidence
-- `general-p006` — Dialectics: Acceptance and Change ([site/skill-finder/index.qmd](site/skill-finder/index.qmd)) — section-scan; medium structure confidence
+- `general-p002` — Skills & Strengths List ([site/tool-finder/index.qmd](site/tool-finder/index.qmd)) — php-high-res; medium structure confidence
+- `general-p003` — Skills Overview ([site/tool-finder/index.qmd](site/tool-finder/index.qmd)) — section-scan; medium structure confidence
+- `general-p004` — Emotional Overload & Emotional Numbness Skills Guide ([site/tool-finder/index.qmd](site/tool-finder/index.qmd)) — section-scan; medium structure confidence
+- `general-p005` — Skills Use Guideline ([site/tool-finder/index.qmd](site/tool-finder/index.qmd)) — php-high-res; medium structure confidence
+- `general-p006` — Dialectics: Acceptance and Change ([site/tool-finder/index.qmd](site/tool-finder/index.qmd)) — section-scan; medium structure confidence
 
 ## Visuals Worth Recreating Natively Later
 

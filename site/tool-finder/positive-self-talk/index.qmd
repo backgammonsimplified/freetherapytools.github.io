@@ -1,0 +1,17 @@
+---
+title: "Positive Self-Talk"
+description: "Develop a fair, believable, supportive alternative to a difficult thought."
+sidebar: tool-finder
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+This exercise uses the [Mindfulness Positive Self-Talk lesson](/learn/mindfulness/loving-kindness-self-compassion.html#positive-self-talk) together with the useful [CBT balanced-thought](/learn/cbt-anxiety/thought-records-part-2.html#balanced-alternatives) relationship. It does not use “positive affirmations fix everything” framing.
+
+::: {#positive-self-talk-app .skill-app data-quick-app="positive-self-talk"}
+Loading Positive Self-Talk…
+:::
+
+[Back to all Tool Finder tools](/tool-finder/)

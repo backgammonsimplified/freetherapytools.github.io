@@ -23,7 +23,7 @@ import yaml
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 SITE_ROOT = REPOSITORY_ROOT / "site"
 LEARN_ROOT = SITE_ROOT / "learn"
-CUBE_ROOT = LEARN_ROOT / "cube"
+CUBE_ROOT = LEARN_ROOT / "distress-tolerance"
 RESEARCH_ROOT = SITE_ROOT / "research"
 GLOSSARY_ROOT = SITE_ROOT / "glossary"
 LEGACY_GLOSSARY_ROOT = LEARN_ROOT / "glossary"
@@ -60,9 +60,9 @@ RENDERED_CORE_PATHS = (
     "learn/index.html",
     "learn/start-here/index.html",
     "glossary/index.html",
-    "learn/cube/index.html",
+    "learn/distress-tolerance/index.html",
     "learn/opening-play/index.html",
-    "learn/cube/why-is-25-percent-the-basic-take-point.html",
+    "learn/distress-tolerance/why-is-25-percent-the-basic-take-point.html",
     "research/index.html",
     "research/sage-vs-gnu-additional-details.html",
     "updates/index.html",
@@ -71,7 +71,7 @@ RSS_FOOTER_REPRESENTATIVE_PATHS = (
     "index.html",
     "about.html",
     "learn/index.html",
-    "learn/cube/index.html",
+    "learn/distress-tolerance/index.html",
     "glossary/index.html",
     "research/index.html",
     "updates/index.html",
@@ -123,43 +123,50 @@ LEARN_SECTIONS = {
     },
 }
 
-SKILL_FINDER_TOOLS = (
-    ("Values & Valued Action", "skill-finder/values/index.qmd"),
-    ("Skill Thermometer", "skill-finder/thermometer/index.qmd"),
-    ("Emotion Explorer", "skill-finder/emotions/index.qmd"),
-    ("Change an Emotion", "skill-finder/change-emotion/index.qmd"),
-    ("Worry Tree", "skill-finder/worry-tree/index.qmd"),
-    ("Pleasant Event Planner", "skill-finder/pleasant-event/index.qmd"),
-    ("Behaviour Chain Builder", "skill-finder/behaviour-chain/index.qmd"),
-    ("Missing Links", "skill-finder/missing-links/index.qmd"),
-    ("Exposure Ladder", "skill-finder/exposure/index.qmd"),
-    ("DEAR MAN Builder", "skill-finder/dear-man/index.qmd"),
-    ("Ask or Say No Planner", "skill-finder/ask-or-say-no/index.qmd"),
-    ("The DIME Game", "skill-finder/dime-game/index.qmd"),
-    ("SMART Goal Builder", "skill-finder/goal-builder/index.qmd"),
-    ("Behavioural Activation Planner", "skill-finder/behavioural-activation/index.qmd"),
-    ("Values Review", "skill-finder/values-review/index.qmd"),
-    ("Five Factor Model", "skill-finder/five-factor-model/index.qmd"),
-    ("Case Map", "skill-finder/case-map/index.qmd"),
-    ("Recognizing Thinking Traps", "skill-finder/thinking-traps/index.qmd"),
-    ("Thought Record", "skill-finder/thought-record/index.qmd"),
-    ("Worry Time", "skill-finder/worry-time/index.qmd"),
-    ("Box Breathing", "skill-finder/box-breathing/index.qmd"),
-    ("Gratitude Journal", "skill-finder/gratitude-journal/index.qmd"),
-    ("Positive Self-Talk", "skill-finder/positive-self-talk/index.qmd"),
-    ("Grounding", "skill-finder/grounding/index.qmd"),
-)
-
-SKILL_FINDER_LEARN_LINKS = (
-    ("DBT Skills", "learn/index.qmd"),
-    ("Goal Setting & Tracking", "learn/goal-setting/index.qmd"),
-    ("Distress Tolerance", "learn/cube/index.qmd"),
-    ("Interpersonal Effectiveness", "learn/interpersonal-effectiveness/index.qmd"),
-    ("Wellness", "learn/wellness/index.qmd"),
-    ("Emotion Regulation", "learn/emotion-regulation/index.qmd"),
-    ("CBT Skills", "cbt-skills/index.qmd"),
-    ("Mindfulness", "mindfulness/index.qmd"),
-)
+TOOL_FINDER_GROUPS = {
+    "Goal Setting": (
+        ("SMART Goal Builder", "tool-finder/goal-builder/index.qmd"),
+        ("Values & Valued Action", "tool-finder/values/index.qmd"),
+        ("Values Review", "tool-finder/values-review/index.qmd"),
+        ("Skill Thermometer", "tool-finder/thermometer/index.qmd"),
+    ),
+    "Distress Tolerance": (
+        ("STOP", "tool-finder/stop/index.qmd"),
+    ),
+    "Mindfulness": (
+        ("Grounding", "tool-finder/grounding/index.qmd"),
+        ("Positive Self-Talk", "tool-finder/positive-self-talk/index.qmd"),
+    ),
+    "Emotional Regulation": (
+        ("Emotion Explorer", "tool-finder/emotions/index.qmd"),
+        ("Change an Emotion", "tool-finder/change-emotion/index.qmd"),
+        ("Pleasant Event Planner", "tool-finder/pleasant-event/index.qmd"),
+    ),
+    "CBT and Managing Anxiety": (
+        ("Box Breathing", "tool-finder/box-breathing/index.qmd"),
+        ("Case Map", "tool-finder/case-map/index.qmd"),
+        ("Exposure Ladder", "tool-finder/exposure/index.qmd"),
+        ("Five Factor Model", "tool-finder/five-factor-model/index.qmd"),
+        ("Recognizing Thinking Traps", "tool-finder/thinking-traps/index.qmd"),
+        ("Thought Record", "tool-finder/thought-record/index.qmd"),
+        ("Worry Time", "tool-finder/worry-time/index.qmd"),
+        ("Worry Tree", "tool-finder/worry-tree/index.qmd"),
+    ),
+    "Interpersonal Effectiveness": (
+        ("Ask or Say No Planner", "tool-finder/ask-or-say-no/index.qmd"),
+        ("DEAR MAN Builder", "tool-finder/dear-man/index.qmd"),
+        ("The DIME Game", "tool-finder/dime-game/index.qmd"),
+    ),
+    "Wellness (Actions & Patterns)": (
+        ("Behaviour Chain Builder", "tool-finder/behaviour-chain/index.qmd"),
+        ("Behavioural Activation Planner", "tool-finder/behavioural-activation/index.qmd"),
+        ("Gratitude Journal", "tool-finder/gratitude-journal/index.qmd"),
+        ("Missing Links", "tool-finder/missing-links/index.qmd"),
+        ("Sleep Hygiene Planner / Checklist", "tool-finder/sleep-hygiene/index.qmd"),
+        ("Stages of Change", "tool-finder/stages-of-change/index.qmd"),
+        ("Urge Surfing", "tool-finder/urge-surfing/index.qmd"),
+    ),
+}
 GLOSSARY_CATEGORIES = (
     "Checker Play",
     "Cube Action",
@@ -1085,7 +1092,7 @@ def discover_cube_lessons() -> list[dict[str, object]]:
             {
                 **lesson,
                 "relative_path": Path(str(lesson["relative_path"]))
-                .relative_to("cube")
+                .relative_to("distress-tolerance")
                 .as_posix(),
                 "cube-order": lesson["order"],
             }
@@ -1506,37 +1513,19 @@ def build_navigation_yaml(curriculum: list[dict[str, object]]) -> str:
     ]
     lines.extend(
         [
-            "    - id: skill-finder",
-            '      title: "Skill Finder"',
+            "    - id: tool-finder",
+            '      title: "Tool Finder"',
             "      style: docked",
             "      collapse-level: 1",
             "      contents:",
-            '        - text: "Skill Finder Home"',
-            "          href: skill-finder/index.qmd",
-            '        - section: "Interactive Tools"',
-            "          contents:",
+            '        - text: "Tool Finder Home"',
+            "          href: tool-finder/index.qmd",
         ]
     )
-    for title, source_path in SKILL_FINDER_TOOLS:
-        lines.extend(
-            [
-                f'            - text: "{title}"',
-                f"              href: {source_path}",
-            ]
-        )
-    lines.extend(
-        [
-            '        - section: "Learn"',
-            "          contents:",
-        ]
-    )
-    for title, source_path in SKILL_FINDER_LEARN_LINKS:
-        lines.extend(
-            [
-                f'            - text: "{title}"',
-                f"              href: {source_path}",
-            ]
-        )
+    for group, tools in TOOL_FINDER_GROUPS.items():
+        lines.extend([f'        - section: "{group}"', "          contents:"])
+        for title, source_path in tools:
+            lines.extend([f'            - text: "{title}"', f"              href: {source_path}"])
     for section_id, section in LEARN_SECTIONS.items():
         lines.extend(
             [

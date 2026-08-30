@@ -45,7 +45,7 @@
 
   function goalBuilderUrl(token) {
     if (!TOKEN_PATTERN.test(String(token || ""))) throw new Error("Invalid handoff token");
-    return `/skill-finder/goal-builder/?handoff=${encodeURIComponent(token)}`;
+    return `/tool-finder/goal-builder/?handoff=${encodeURIComponent(token)}`;
   }
 
   const api = { STORAGE_PREFIX, DEFAULT_TTL_MS, TOKEN_PATTERN, randomToken, storePayload, consumePayload, goalBuilderUrl };

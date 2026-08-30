@@ -1,0 +1,15 @@
+---
+title: "Discover and Work Towards Your Values"
+description: "Use Values as compass directions, assess life domains, and choose small valued actions."
+sidebar: tool-finder
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+::: {.skill-app data-skill-app="values" data-values-url="/data/skill-apps/values.json" data-values-actions-url="/data/skill-apps/values-actions.json?v=20260823-specific-hows"}
+<p>Loading the Values & Valued Action tool...</p>
+:::
+
+<noscript>This tool requires JavaScript. The complete educational process is also available in [Values & Valued Action](/learn/goal-setting/values-valued-action.html).</noscript>

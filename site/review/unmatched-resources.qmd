@@ -19,21 +19,21 @@ This development-only gallery contains every published resource with no high-con
 
 <div class="bs-review-gallery">
 <div class="bs-review-card">
-<a href="/skill-finder/index.html?review=1#resource-general-p003"><img src="/resources/general/general-p003.jpg" alt="Skills Overview"></a>
+<a href="/tool-finder/index.html?review=1#resource-general-p003"><img src="/resources/general/general-p003.jpg" alt="Skills Overview"></a>
 <h3>Skills Overview</h3>
-<p><a href="/skill-finder/index.html?review=1#resource-general-p003">Open actual lesson</a></p>
+<p><a href="/tool-finder/index.html?review=1#resource-general-p003">Open actual lesson</a></p>
 <p class="bs-review-meta">general-p003 - no high-confidence better copy</p>
 </div>
 <div class="bs-review-card">
-<a href="/skill-finder/index.html?review=1#resource-general-p004"><img src="/resources/general/general-p004.jpg" alt="Emotional Overload &amp; Emotional Numbness Skills Guide"></a>
+<a href="/tool-finder/index.html?review=1#resource-general-p004"><img src="/resources/general/general-p004.jpg" alt="Emotional Overload &amp; Emotional Numbness Skills Guide"></a>
 <h3>Emotional Overload &amp; Emotional Numbness Skills Guide</h3>
-<p><a href="/skill-finder/index.html?review=1#resource-general-p004">Open actual lesson</a></p>
+<p><a href="/tool-finder/index.html?review=1#resource-general-p004">Open actual lesson</a></p>
 <p class="bs-review-meta">general-p004 - no high-confidence better copy</p>
 </div>
 <div class="bs-review-card">
-<a href="/skill-finder/index.html?review=1#resource-general-p006"><img src="/resources/general/general-p006.jpg" alt="Dialectics: Acceptance and Change"></a>
+<a href="/tool-finder/index.html?review=1#resource-general-p006"><img src="/resources/general/general-p006.jpg" alt="Dialectics: Acceptance and Change"></a>
 <h3>Dialectics: Acceptance and Change</h3>
-<p><a href="/skill-finder/index.html?review=1#resource-general-p006">Open actual lesson</a></p>
+<p><a href="/tool-finder/index.html?review=1#resource-general-p006">Open actual lesson</a></p>
 <p class="bs-review-meta">general-p006 - no high-confidence better copy</p>
 </div>
 </div>
@@ -83,87 +83,87 @@ This development-only gallery contains every published resource with no high-con
 
 <div class="bs-review-gallery">
 <div class="bs-review-card">
-<a href="/learn/cube/stop-crisis-survival.html?review=1#resource-distress-tolerance-p003"><img src="/resources/distress-tolerance/distress-tolerance-p003.jpg" alt="How Can I Make a Distress Crisis Worse?"></a>
+<a href="/learn/distress-tolerance/stop-crisis-survival.html?review=1#resource-distress-tolerance-p003"><img src="/resources/distress-tolerance/distress-tolerance-p003.jpg" alt="How Can I Make a Distress Crisis Worse?"></a>
 <h3>How Can I Make a Distress Crisis Worse?</h3>
-<p><a href="/learn/cube/stop-crisis-survival.html?review=1#resource-distress-tolerance-p003">Open actual lesson</a></p>
+<p><a href="/learn/distress-tolerance/stop-crisis-survival.html?review=1#resource-distress-tolerance-p003">Open actual lesson</a></p>
 <p class="bs-review-meta">distress-tolerance-p003 - no high-confidence better copy</p>
 </div>
 <div class="bs-review-card">
-<a href="/learn/cube/stop-crisis-survival.html?review=1#resource-distress-tolerance-p009"><img src="/resources/distress-tolerance/distress-tolerance-p009.jpg" alt="Using the STOP Skill"></a>
+<a href="/learn/distress-tolerance/stop-crisis-survival.html?review=1#resource-distress-tolerance-p009"><img src="/resources/distress-tolerance/distress-tolerance-p009.jpg" alt="Using the STOP Skill"></a>
 <h3>Using the STOP Skill</h3>
-<p><a href="/learn/cube/stop-crisis-survival.html?review=1#resource-distress-tolerance-p009">Open actual lesson</a></p>
+<p><a href="/learn/distress-tolerance/stop-crisis-survival.html?review=1#resource-distress-tolerance-p009">Open actual lesson</a></p>
 <p class="bs-review-meta">distress-tolerance-p009 - no high-confidence better copy</p>
 </div>
 <div class="bs-review-card">
-<a href="/learn/cube/tipp.html?review=1#resource-distress-tolerance-p015"><img src="/resources/distress-tolerance/distress-tolerance-p015.jpg" alt="Progressive Muscle Relaxation: Nose to Toes"></a>
+<a href="/learn/distress-tolerance/tipp.html?review=1#resource-distress-tolerance-p015"><img src="/resources/distress-tolerance/distress-tolerance-p015.jpg" alt="Progressive Muscle Relaxation: Nose to Toes"></a>
 <h3>Progressive Muscle Relaxation: Nose to Toes</h3>
-<p><a href="/learn/cube/tipp.html?review=1#resource-distress-tolerance-p015">Open actual lesson</a></p>
+<p><a href="/learn/distress-tolerance/tipp.html?review=1#resource-distress-tolerance-p015">Open actual lesson</a></p>
 <p class="bs-review-meta">distress-tolerance-p015 - no high-confidence better copy</p>
 </div>
 <div class="bs-review-card">
-<a href="/learn/cube/self-soothe.html?review=1#resource-distress-tolerance-p019"><img src="/resources/distress-tolerance/distress-tolerance-p019.jpg" alt="Wise Mind ACCEPTS Overview"></a>
+<a href="/learn/distress-tolerance/self-soothe.html?review=1#resource-distress-tolerance-p019"><img src="/resources/distress-tolerance/distress-tolerance-p019.jpg" alt="Wise Mind ACCEPTS Overview"></a>
 <h3>Wise Mind ACCEPTS Overview</h3>
-<p><a href="/learn/cube/self-soothe.html?review=1#resource-distress-tolerance-p019">Open actual lesson</a></p>
+<p><a href="/learn/distress-tolerance/self-soothe.html?review=1#resource-distress-tolerance-p019">Open actual lesson</a></p>
 <p class="bs-review-meta">distress-tolerance-p019 - no high-confidence better copy</p>
 </div>
 <div class="bs-review-card">
-<a href="/learn/cube/self-soothe.html?review=1#resource-distress-tolerance-p023"><img src="/resources/distress-tolerance/distress-tolerance-p023.jpg" alt="Creating a Self-Soothing Kit"></a>
+<a href="/learn/distress-tolerance/self-soothe.html?review=1#resource-distress-tolerance-p023"><img src="/resources/distress-tolerance/distress-tolerance-p023.jpg" alt="Creating a Self-Soothing Kit"></a>
 <h3>Creating a Self-Soothing Kit</h3>
-<p><a href="/learn/cube/self-soothe.html?review=1#resource-distress-tolerance-p023">Open actual lesson</a></p>
+<p><a href="/learn/distress-tolerance/self-soothe.html?review=1#resource-distress-tolerance-p023">Open actual lesson</a></p>
 <p class="bs-review-meta">distress-tolerance-p023 - no high-confidence better copy</p>
 </div>
 <div class="bs-review-card">
-<a href="/learn/cube/improve.html?review=1#resource-distress-tolerance-p026"><img src="/resources/distress-tolerance/distress-tolerance-p026.jpg" alt="One Thing in the Moment"></a>
+<a href="/learn/distress-tolerance/improve.html?review=1#resource-distress-tolerance-p026"><img src="/resources/distress-tolerance/distress-tolerance-p026.jpg" alt="One Thing in the Moment"></a>
 <h3>One Thing in the Moment</h3>
-<p><a href="/learn/cube/improve.html?review=1#resource-distress-tolerance-p026">Open actual lesson</a></p>
+<p><a href="/learn/distress-tolerance/improve.html?review=1#resource-distress-tolerance-p026">Open actual lesson</a></p>
 <p class="bs-review-meta">distress-tolerance-p026 - no high-confidence better copy</p>
 </div>
 <div class="bs-review-card">
-<a href="/learn/cube/improve.html?review=1#resource-distress-tolerance-p027"><img src="/resources/distress-tolerance/distress-tolerance-p027.jpg" alt="Peaceful Place Meditation"></a>
+<a href="/learn/distress-tolerance/improve.html?review=1#resource-distress-tolerance-p027"><img src="/resources/distress-tolerance/distress-tolerance-p027.jpg" alt="Peaceful Place Meditation"></a>
 <h3>Peaceful Place Meditation</h3>
-<p><a href="/learn/cube/improve.html?review=1#resource-distress-tolerance-p027">Open actual lesson</a></p>
+<p><a href="/learn/distress-tolerance/improve.html?review=1#resource-distress-tolerance-p027">Open actual lesson</a></p>
 <p class="bs-review-meta">distress-tolerance-p027 - no high-confidence better copy</p>
 </div>
 <div class="bs-review-card">
-<a href="/learn/cube/improve.html?review=1#resource-distress-tolerance-p028"><img src="/resources/distress-tolerance/distress-tolerance-p028.jpg" alt="IMPROVE Practice"></a>
+<a href="/learn/distress-tolerance/improve.html?review=1#resource-distress-tolerance-p028"><img src="/resources/distress-tolerance/distress-tolerance-p028.jpg" alt="IMPROVE Practice"></a>
 <h3>IMPROVE Practice</h3>
-<p><a href="/learn/cube/improve.html?review=1#resource-distress-tolerance-p028">Open actual lesson</a></p>
+<p><a href="/learn/distress-tolerance/improve.html?review=1#resource-distress-tolerance-p028">Open actual lesson</a></p>
 <p class="bs-review-meta">distress-tolerance-p028 - no high-confidence better copy</p>
 </div>
 <div class="bs-review-card">
-<a href="/learn/cube/pros-and-cons.html?review=1#resource-distress-tolerance-p033"><img src="/resources/distress-tolerance/distress-tolerance-p033.jpg" alt="Pros and Cons Practice"></a>
+<a href="/learn/distress-tolerance/pros-and-cons.html?review=1#resource-distress-tolerance-p033"><img src="/resources/distress-tolerance/distress-tolerance-p033.jpg" alt="Pros and Cons Practice"></a>
 <h3>Pros and Cons Practice</h3>
-<p><a href="/learn/cube/pros-and-cons.html?review=1#resource-distress-tolerance-p033">Open actual lesson</a></p>
+<p><a href="/learn/distress-tolerance/pros-and-cons.html?review=1#resource-distress-tolerance-p033">Open actual lesson</a></p>
 <p class="bs-review-meta">distress-tolerance-p033 - no high-confidence better copy</p>
 </div>
 <div class="bs-review-card">
-<a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p035"><img src="/resources/distress-tolerance/distress-tolerance-p035.jpg" alt="Dandelions"></a>
+<a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p035"><img src="/resources/distress-tolerance/distress-tolerance-p035.jpg" alt="Dandelions"></a>
 <h3>Dandelions</h3>
-<p><a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p035">Open actual lesson</a></p>
+<p><a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p035">Open actual lesson</a></p>
 <p class="bs-review-meta">distress-tolerance-p035 - no high-confidence better copy</p>
 </div>
 <div class="bs-review-card">
-<a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p036"><img src="/resources/distress-tolerance/distress-tolerance-p036.jpg" alt="Developing the Skill of Radical Acceptance"></a>
+<a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p036"><img src="/resources/distress-tolerance/distress-tolerance-p036.jpg" alt="Developing the Skill of Radical Acceptance"></a>
 <h3>Developing the Skill of Radical Acceptance</h3>
-<p><a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p036">Open actual lesson</a></p>
+<p><a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p036">Open actual lesson</a></p>
 <p class="bs-review-meta">distress-tolerance-p036 - no high-confidence better copy</p>
 </div>
 <div class="bs-review-card">
-<a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p039"><img src="/resources/distress-tolerance/distress-tolerance-p039.jpg" alt="Radical Acceptance Quick Reference"></a>
+<a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p039"><img src="/resources/distress-tolerance/distress-tolerance-p039.jpg" alt="Radical Acceptance Quick Reference"></a>
 <h3>Radical Acceptance Quick Reference</h3>
-<p><a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p039">Open actual lesson</a></p>
+<p><a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p039">Open actual lesson</a></p>
 <p class="bs-review-meta">distress-tolerance-p039 - no high-confidence better copy</p>
 </div>
 <div class="bs-review-card">
-<a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p043"><img src="/resources/distress-tolerance/distress-tolerance-p043.jpg" alt="How to Solve a Problem"></a>
+<a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p043"><img src="/resources/distress-tolerance/distress-tolerance-p043.jpg" alt="How to Solve a Problem"></a>
 <h3>How to Solve a Problem</h3>
-<p><a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p043">Open actual lesson</a></p>
+<p><a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p043">Open actual lesson</a></p>
 <p class="bs-review-meta">distress-tolerance-p043 - no high-confidence better copy</p>
 </div>
 <div class="bs-review-card">
-<a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p044"><img src="/resources/distress-tolerance/distress-tolerance-p044.jpg" alt="Three Parts of Radical Acceptance"></a>
+<a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p044"><img src="/resources/distress-tolerance/distress-tolerance-p044.jpg" alt="Three Parts of Radical Acceptance"></a>
 <h3>Three Parts of Radical Acceptance</h3>
-<p><a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p044">Open actual lesson</a></p>
+<p><a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p044">Open actual lesson</a></p>
 <p class="bs-review-meta">distress-tolerance-p044 - no high-confidence better copy</p>
 </div>
 </div>

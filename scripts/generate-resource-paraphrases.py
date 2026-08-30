@@ -88,7 +88,7 @@ def render_report(corpus: dict) -> str:
         f"- Completeness flags: **{counts['completeness_flags']}**\n\n",
         "## Generated systems\n\n",
         f"- Guided-reflection prompt drafts: **{counts['guided_prompts']}**\n",
-        f"- Specialized Skill Finder overlaps: **{counts['specialized_tools']}**\n",
+        f"- Specialized Tool Finder overlaps: **{counts['specialized_tools']}**\n",
         "- Blank DOCX/PDF artifacts are generated only for approved/published interactive records.\n",
         "- Draft exports remain available in review mode as local browser-generated previews and are never copied into public asset paths.\n\n",
         "## Field types\n\n",

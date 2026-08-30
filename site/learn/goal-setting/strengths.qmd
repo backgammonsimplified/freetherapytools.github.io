@@ -18,6 +18,8 @@ execute:
   enabled: false
 ---
 
+## Strengths and Focus {#strengths}
+
 Strengths are qualities and practices you can draw on while working toward change.
 
 - Determination
@@ -26,14 +28,15 @@ Strengths are qualities and practices you can draw on while working toward chang
 - Hopefulness
 - Honesty
 - Kindness
-- Open-Minded
+- Open-Mindedness
 - Self-Awareness
 - Motivation
 - Courage
 - Confidence
 - Focus
 - Flexibility
-- Forgiveness (self / others)
+- Forgiveness of Self
+- Forgiveness of Others
 - Persistence
 - Humour
 - Objectivity

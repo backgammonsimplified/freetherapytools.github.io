@@ -1,0 +1,30 @@
+---
+title: "Urge Surfing"
+description: "Observe an urge, anchor attention, and ride the wave without treating the urge as a command."
+sidebar: tool-finder
+page-layout: full
+toc: true
+execute: {enabled: false}
+---
+
+This original exercise combines the overlapping observation, body-awareness, intensity-check, breathing-anchor, practice, and reflection structure in the linked source worksheets. [Learn the skill first](/learn/wellness/urge-surfing.html).
+
+::: {#urge-surfing-app .skill-app data-quick-app="urge-surfing"}
+Loading Urge Surfing…
+:::
+
+## Guided recordings
+
+::: {data-therapy-audio="urge-surfing-jason-dean"}
+Loading audio…
+:::
+
+::: {data-therapy-audio="urge-surfing-uw-mbrp"}
+Loading audio…
+:::
+
+::: {data-therapy-audio="urge-surfing-russ-harris"}
+Loading audio…
+:::
+
+[Back to Tool Finder](/tool-finder/)

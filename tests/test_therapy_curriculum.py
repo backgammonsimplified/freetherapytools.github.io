@@ -30,8 +30,8 @@ class TherapyCurriculumTests(unittest.TestCase):
                 "CBT Skills",
             ],
         )
-        self.assertEqual(len(lessons), 58)
-        expected_counts = {"dbt": 40, "cbt": 6, "mindfulness": 12}
+        self.assertEqual(len(lessons), 59)
+        expected_counts = {"dbt": 41, "cbt": 6, "mindfulness": 12}
         for section_id, expected_count in expected_counts.items():
             section = learn_glossary.curriculum_for_section(curriculum, section_id)
             sequence = learn_glossary.build_learn_sequence(section)
@@ -49,13 +49,13 @@ class TherapyCurriculumTests(unittest.TestCase):
 
     def test_multipart_skill_anchors_are_authored_as_visible_headings(self) -> None:
         expected = {
-            "cube/tipp.qmd": [
+            "distress-tolerance/tipp.qmd": [
                 "temperature",
                 "intense-exercise",
                 "progressive-muscle-relaxation",
                 "paced-breathing",
             ],
-            "cube/self-soothe.qmd": [
+            "distress-tolerance/self-soothe.qmd": [
                 "activities",
                 "contributing",
                 "comparisons",
@@ -69,7 +69,7 @@ class TherapyCurriculumTests(unittest.TestCase):
                 "smell",
                 "touch",
             ],
-            "cube/improve.qmd": [
+            "distress-tolerance/improve.qmd": [
                 "imagery",
                 "meaning",
                 "prayer",
@@ -78,7 +78,7 @@ class TherapyCurriculumTests(unittest.TestCase):
                 "vacation",
                 "self-encouragement",
             ],
-            "cube/radical-acceptance.qmd": [
+            "distress-tolerance/radical-acceptance.qmd": [
                 "turning-the-mind",
                 "willingness",
                 "willing-hands",
@@ -138,7 +138,7 @@ class TherapyCurriculumTests(unittest.TestCase):
         self.assertIn('id: cbt', navigation)
         self.assertIn('id: mindfulness', navigation)
         expected = {
-            "bs-learn-sequence.json": 40,
+            "bs-learn-sequence.json": 41,
             "bs-cbt-sequence.json": 6,
             "bs-mindfulness-sequence.json": 12,
         }
@@ -180,7 +180,7 @@ class TherapyCurriculumTests(unittest.TestCase):
         left = config["website"]["navbar"]["left"]
         self.assertEqual(
             [item["text"] for item in left],
-            ["Skill Finder", "DBT Skills", "CBT Skills", "Mindfulness"],
+            ["Tool Finder", "DBT Skills", "CBT Skills", "Mindfulness"],
         )
         self.assertEqual(
             [item["text"] for item in config["website"]["navbar"]["right"]],

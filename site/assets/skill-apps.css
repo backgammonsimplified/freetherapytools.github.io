@@ -1938,7 +1938,7 @@ button.values-inline-choice:hover {
 }
 .dime-scale-dimes span.is-collected { border-color: #356b4b; background: #dcefe2; color: #155b32; }
 
-/* Focused source-backed Skill Finder tools */
+/* Focused source-backed Tool Finder tools */
 .quick-tool-shell { max-width: 76rem; }
 .quick-tool-source-links { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.25rem; }
 
@@ -2379,3 +2379,37 @@ button.values-inline-choice:hover {
     transform: none;
   }
 }
+/* Tool Finder catalogue */
+.tool-finder-search { margin: 1rem 0 1.25rem; padding: 1rem; border: 1px solid #c9d5dd; border-radius: .75rem; background: #f7fafc; }
+.tool-finder-search label { display: block; margin-bottom: .35rem; font-weight: 700; }
+.tool-finder-search input { width: 100%; min-height: 2.75rem; padding: .55rem .7rem; border: 1px solid #8b9ba7; border-radius: .4rem; font-size: 1rem; }
+.tool-finder-filters, .tool-finder-actions { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.tool-finder-filters { margin-top: .7rem; }
+.tool-finder-filters button { min-height: 2.5rem; padding: .4rem .85rem; border: 1px solid #46758d; border-radius: 999px; background: #fff; color: #234b60; }
+.tool-finder-filters button[aria-pressed="true"] { background: #234b60; color: #fff; }
+.tool-finder-count { margin: .65rem 0 0; }
+.tool-finder-thermometer { margin: 0 0 1.5rem; padding: .8rem 1rem; border: 1px solid #c9d5dd; border-radius: .75rem; }
+.tool-finder-thermometer summary { cursor: pointer; }
+.tool-finder-thermometer summary span { display: block; font-weight: 400; }
+.tool-finder-thermometer section { margin-top: 1rem; }
+.tool-finder-thermometer section h3 { font-size: 1.05rem; }
+.tool-finder-topic { margin: 2rem 0; }
+.tool-finder-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: .8rem; }
+.tool-finder-card { padding: .9rem; border: 1px solid #ced8df; border-radius: .65rem; background: #fff; }
+.tool-finder-card h3 { margin: 0; font-size: 1.05rem; }
+.tool-finder-card-heading { display: flex; gap: .5rem; justify-content: space-between; align-items: start; }
+.tool-finder-card-heading span, .tool-finder-planned { font-size: .78rem; color: #566773; }
+.tool-finder-subtopic { margin: .25rem 0; font-size: .84rem; font-weight: 700; color: #566773; }
+@media (max-width: 430px) { .tool-finder-search, .tool-finder-thermometer, .tool-finder-card { padding: .75rem; } .tool-finder-actions .btn { min-height: 2.75rem; display: inline-flex; align-items: center; } }
+.therapy-audio-block { margin: 1rem 0; padding: 1rem; border: 1px solid #cbd6dc; border-radius: .6rem; background: #f8fafb; }
+.therapy-audio-block audio { display: block; width: 100%; max-width: 36rem; }
+.therapy-audio-source { overflow-wrap: anywhere; font-size: .9rem; }
+.urge-wave { margin: 1rem 0; padding: 1rem; border-radius: .7rem; background: linear-gradient(135deg, #edf8fb, #f5f0fb); overflow: hidden; }
+.urge-wave > span { display: block; font-size: 1.25rem; font-weight: 800; letter-spacing: .06em; }
+.urge-timer { margin: 1rem 0; padding: .9rem; border: 1px solid #cbd6dc; border-radius: .6rem; }
+.urge-timer output { display: block; margin: .5rem 0; font-size: 2rem; font-variant-numeric: tabular-nums; }
+@media (prefers-reduced-motion: reduce) { .urge-wave, .urge-wave * { animation: none !important; transition: none !important; } }
+.skill-guided-layout.is-dime-linear { grid-template-columns: minmax(0, 1fr); }
+.skill-guided-step.is-dime-complete { border-color: #a7b0b7; border-left-color: #7a858d; background: #eef1f3; }
+.skill-guided-step.is-dime-complete .skill-guided-choice { opacity: .62; }
+.skill-guided-step.is-dime-complete .skill-guided-choice.is-selected { opacity: 1; outline: 3px solid rgba(44, 54, 60, .22); }

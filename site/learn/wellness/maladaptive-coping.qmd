@@ -37,6 +37,8 @@ The aim is to understand the function of a coping behaviour and build safer alte
 - What would move you one step forward?
 - Who, what, or which service could support that step?
 
+[Use the Stages of Change reflection tool](/tool-finder/stages-of-change/) or continue to [Urge Surfing](/learn/wellness/urge-surfing.html), which applies mindful observation to an urge without treating it as a command.
+
 ::: {.callout-caution title="Urgent overdose risk"}
 The visual overdose and naloxone resources below contain emergency material and are retained for review. If an overdose may be happening, use local emergency services and follow current instructions from trained emergency or public-health professionals.
 :::

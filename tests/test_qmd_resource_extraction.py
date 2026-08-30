@@ -171,17 +171,17 @@ class QmdResourceExtractionTests(unittest.TestCase):
 
     def test_representative_stable_anchors_and_native_headings_remain(self) -> None:
         checks = {
-            "site/learn/cube/tipp.qmd": (
+            "site/learn/distress-tolerance/tipp.qmd": (
                 "## Temperature {#temperature}",
                 "## Intense Exercise {#intense-exercise}",
                 "## Paced Breathing {#paced-breathing}",
                 "## Paired / Progressive Muscle Relaxation {#progressive-muscle-relaxation}",
             ),
-            "site/learn/cube/self-soothe.qmd": (
+            "site/learn/distress-tolerance/self-soothe.qmd": (
                 "### Activities {#activities}",
                 "### Contributing {#contributing}",
             ),
-            "site/learn/cube/improve.qmd": ("## Imagery {#imagery}",),
+            "site/learn/distress-tolerance/improve.qmd": ("## Imagery {#imagery}",),
             "site/learn/emotion-regulation/check-the-facts.qmd": (
                 "## Check the Facts {#check-the-facts}",
             ),

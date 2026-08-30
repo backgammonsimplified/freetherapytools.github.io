@@ -49,7 +49,7 @@ const state = { nodeId: "result", history: flow.nodes.slice(0, -1).map((node) =>
 const config = {
   toolId: "dime-game",
   toolTitle: "The DIME Game",
-  route: "/skill-finder/dime-game/",
+  route: "/tool-finder/dime-game/",
   schemaVersion: 1,
   validateState: (value) => progress.isPlainObject(value) && typeof value.nodeId === "string" && Array.isArray(value.history) && progress.isPlainObject(value.answers),
 };

@@ -252,7 +252,7 @@ global.CustomEvent = class CustomEvent {
   }
 };
 global.window = {
-  location: { pathname: "/learn/cube/tipp.html" },
+  location: { pathname: "/learn/distress-tolerance/tipp.html" },
   scrollY: 0,
   addEventListener(name, callback) {
     const callbacks = windowListeners.get(name) || [];
@@ -275,7 +275,7 @@ global.window = {
 };
 
 for (const relativePath of [
-  "learn/cube/tipp.html",
+  "learn/distress-tolerance/tipp.html",
   "learn/cbt-anxiety/thinking-traps.html",
   "learn/mindfulness/what-skills.html"
 ]) {
@@ -316,7 +316,7 @@ for (const relativePath of [
   );
 }
 
-const leftFixture = renderedSidebarFixture("learn/cube/tipp.html");
+const leftFixture = renderedSidebarFixture("learn/distress-tolerance/tipp.html");
 activeSidebar = leftFixture.sidebar;
 learn.initializeLearnLeftSidebarToggle();
 const wholeRailToggle = fakeBody.children.find((child) =>

@@ -13,13 +13,13 @@
 ## Website result
 
 The cube lesson at
-`/learn/cube/what-the-cube-is-asking.html` has two independent cube-decision
+`/learn/distress-tolerance/what-the-cube-is-asking.html` has two independent cube-decision
 instances. The main path accepts Roll or Double, then Pass or Take when a
 double is offered. The second instance is inside a disclosure and confirms
 that repeated components retain independent state and unique runtime IDs.
 
 The companion cube-track lesson at
-`/learn/cube/why-is-25-percent-the-basic-take-point.html` has a reusable
+`/learn/distress-tolerance/why-is-25-percent-the-basic-take-point.html` has a reusable
 three-candidate checker interaction. Selecting a candidate swaps only the
 supplied SVG, metrics, and explanation. Missing probabilities are displayed
 as `Not supplied`.

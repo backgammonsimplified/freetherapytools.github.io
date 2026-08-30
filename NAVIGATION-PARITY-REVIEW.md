@@ -64,13 +64,13 @@ Exact commit `6ce883106715d42594a8013e3c31eb8f50aa5e73`: `_quarto.yml`, `_learn-
 
 ## Manual acceptance routes
 
-- `/learn/cube/tipp.html`
+- `/learn/distress-tolerance/tipp.html`
 - `/learn/interpersonal-effectiveness/dear-man.html`
 - `/learn/emotion-regulation/what-emotions-do.html`
 - `/learn/cbt-anxiety/thinking-traps.html`
 - `/learn/cbt-anxiety/understanding-worry.html`
 - `/learn/mindfulness/what-skills.html`
-- `/skill-finder/values/`
-- `/skill-finder/emotions/`
+- `/tool-finder/values/`
+- `/tool-finder/emotions/`
 
 At desktop width, exercise both section controls, both whole-rail controls, lookup, scrolling, active lesson changes, anchors, and Back to top. Repeat at approximately 390 px and through `390 -> 1200 -> 390 -> 1200`, checking for duplicate controls and horizontal overflow. On the two Skill Finder routes, verify shared controls do not overlap Save progress.

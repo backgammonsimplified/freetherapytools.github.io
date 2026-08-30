@@ -35,7 +35,7 @@ const state = {
   calendar: { enabled: true, date: '2026-08-25', startTime: '19:00', durationMinutes: '30' },
   gtd: { taskId: 'smart_goal_runtime_test', captureSequence: 1787500000000001, createdAt: '2026-08-23T12:00:00.000Z' }
 };
-const record = progress.makeRecord({toolId:'goal-builder',toolTitle:'SMART Goal Builder',route:'/skill-finder/goal-builder/',schemaVersion:1}, state, new Date('2026-08-23T12:30:00Z'));
+const record = progress.makeRecord({toolId:'goal-builder',toolTitle:'SMART Goal Builder',route:'/tool-finder/goal-builder/',schemaVersion:1}, state, new Date('2026-08-23T12:30:00Z'));
 process.stdout.write(goal.goalGtdMarkdown(record, state));
 """
     return subprocess.run(["node", "-e", script], cwd=ROOT, check=True, capture_output=True, text=True).stdout

@@ -916,7 +916,7 @@ assert.equal(
 assert.equal(
   glossary.samePageFragmentUrl(
     currentGlossaryUrl,
-    "/learn/cube/#take-point"
+    "/learn/distress-tolerance/#take-point"
   ),
   "",
   "a fragment on another page is not treated as glossary navigation"

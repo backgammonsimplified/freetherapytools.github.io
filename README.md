@@ -619,8 +619,8 @@ http://127.0.0.1:8766/
 Key current routes:
 
 ```text
-http://127.0.0.1:8766/skill-finder/values/
-http://127.0.0.1:8766/skill-finder/goal-builder/
+http://127.0.0.1:8766/tool-finder/values/
+http://127.0.0.1:8766/tool-finder/goal-builder/
 ```
 
 Preview wrapper requires `site/_site/index.html`, so render first.
@@ -820,7 +820,7 @@ No dedicated Mindfulness scan exists; keep the authored Mindfulness curriculum.
 Primary navigation:
 
 ```text
-Skill Finder | DBT Skills | CBT Skills | Mindfulness
+Tool Finder | DBT Skills | CBT Skills | Mindfulness
 ```
 
 ## Goal Setting & Tracking
@@ -1076,12 +1076,12 @@ Earlier checkpoint:
 
 ---
 
-# 22. Skill Finder applications
+# 22. Tool Finder applications
 
 Route:
 
 ```text
-/skill-finder/
+/tool-finder/
 ```
 
 Known apps:
@@ -1844,7 +1844,7 @@ Flow:
 4. open:
 
 ```text
-/skill-finder/goal-builder/?handoff=<opaque-token>
+/tool-finder/goal-builder/?handoff=<opaque-token>
 ```
 
 5. SMART Goal consumes payload;
@@ -1905,7 +1905,7 @@ Context is not an answer to Relevant.
 Route:
 
 ```text
-/skill-finder/goal-builder/
+/tool-finder/goal-builder/
 ```
 
 The tool now has a dedicated initializer because it needs Values handoff, calendar scheduling, ICS, Google Calendar, and GTD Markdown.
@@ -2239,7 +2239,7 @@ Do not redo:
 - resource matching;
 - OCR;
 - glossary;
-- unrelated Skill Finder tools;
+- unrelated Tool Finder tools;
 - Personal Planning architecture.
 
 Implemented scope:
@@ -2642,8 +2642,8 @@ bash scripts/preview-site.sh 8766
 Review:
 
 ```text
-http://127.0.0.1:8766/skill-finder/values/
-http://127.0.0.1:8766/skill-finder/goal-builder/
+http://127.0.0.1:8766/tool-finder/values/
+http://127.0.0.1:8766/tool-finder/goal-builder/
 ```
 
 Then:
@@ -2897,7 +2897,7 @@ clear-this-worksheet, completion counting, filled DOCX export, and browser
 Print/Save as PDF are local operations. Answers never appear in URLs or static
 download links.
 
-Where a page is the source for a specialized Skill Finder experience, the
+Where a page is the source for a specialized Tool Finder experience, the
 canonical mapping links to the current tool instead of introducing a competing
 progress state. The page-level adapted version still remains reviewable.
 
@@ -2988,7 +2988,7 @@ anything becomes publicly visible.
 
 ---
 
-# 81. Full-screen authoring and Skill Finder interaction architecture
+# 81. Full-screen authoring and Tool Finder interaction architecture
 
 The 2026-08-24 implementation pass completed the next major authoring and Skill
 Finder redesign while retaining Quarto, QMD lessons, stable routes/resource IDs,
@@ -3012,7 +3012,7 @@ WHAT → HOW panel backed only by `values-actions.json`; adding an item writes t
 the existing Act shortlist, and Go to Act uses the existing Values step/domain
 state rather than parallel storage.
 
-## Skill Finder tools completed in this pass
+## Tool Finder tools completed in this pass
 
 - Skill Thermometer keeps its four source states, uses accessible red, amber,
   green, and blue families, and expands compact categorized skill summaries
@@ -3082,7 +3082,7 @@ every content heading.
 
 ---
 
-# 82. Dedicated Skill Finder workspace and focused tools
+# 82. Dedicated Tool Finder workspace and focused tools
 
 The 2026-08-24 workspace pass keeps the Quarto site and its existing Learn,
 progress, force-graph, and calendar authorities. It does not introduce a second
@@ -3114,21 +3114,21 @@ structure and delegates Later and Worry Time scheduling to the shared calendar.
 `site/assets/skill-quick-tools.js` is the small initializer/state layer for these
 new Quarto routes:
 
-- `/skill-finder/five-factor-model/` — the CBT Five Factor source terminology:
+- `/tool-finder/five-factor-model/` — the CBT Five Factor source terminology:
   event or trigger, thoughts, emotions, body sensations, and behaviours;
-- `/skill-finder/thinking-traps/` — the authored twelve-category Thinking Traps
+- `/tool-finder/thinking-traps/` — the authored twelve-category Thinking Traps
   lesson, with a session-only handoff to Thought Record;
-- `/skill-finder/thought-record/` — one tool spanning the existing Thought Record
+- `/tool-finder/thought-record/` — one tool spanning the existing Thought Record
   Part 1 and Part 2 fields;
-- `/skill-finder/worry-time/` — the Understanding Worry/Worry Time curriculum,
+- `/tool-finder/worry-time/` — the Understanding Worry/Worry Time curriculum,
   with optional calendar scheduling;
-- `/skill-finder/box-breathing/` — a configurable four-phase visual timer based
+- `/tool-finder/box-breathing/` — a configurable four-phase visual timer based
   on the curriculum's named Box Breathing practice;
-- `/skill-finder/gratitude-journal/` — a minimal structured journal based on the
+- `/tool-finder/gratitude-journal/` — a minimal structured journal based on the
   curriculum's named Gratitude Journaling practice;
-- `/skill-finder/positive-self-talk/` — fair, believable alternative self-talk
+- `/tool-finder/positive-self-talk/` — fair, believable alternative self-talk
   using the site's evidence and best-friend CBT framing;
-- `/skill-finder/grounding/` — an in-the-moment sensory, body, and environment
+- `/tool-finder/grounding/` — an in-the-moment sensory, body, and environment
   progression based on the available Grounding material.
 
 The source only names, rather than fully scripts, Box Breathing and Gratitude
@@ -3169,7 +3169,7 @@ Focused coverage is in `tests/test_dedicated_skill_tools.py`,
 `tests/test_quick_tools.js`, `tests/test_skill_finder_apps.py`,
 `tests/test_values_mission_map.js`, `tests/test_values_redesign.py`, and
 `tests/test_practice_apps.py`, alongside the existing progress, calendar, Values,
-and Skill Finder suites. Managed Windows may still report the documented Quarto
+and Tool Finder suites. Managed Windows may still report the documented Quarto
 `Invalid handle` child-process failure; record that exact result rather than
 changing the static architecture to accommodate the sandbox.
 
@@ -3189,7 +3189,7 @@ into a graph tool.
 
 ## Source-backed additions
 
-- `/skill-finder/case-map/` follows the six-part Case Map in the Goal Setting
+- `/tool-finder/case-map/` follows the six-part Case Map in the Goal Setting
   source: Behaviours; Body and physical concerns; Thoughts; Emotions;
   Environmental stressors; and Strengths and resources. It is explicitly
   distinct from the situation-focused Five Factor Model and uses shared
@@ -3246,7 +3246,7 @@ of the tool surface.
 
 # 84. The DIME Game
 
-`/skill-finder/dime-game/` implements the Interpersonal Effectiveness Worksheet
+`/tool-finder/dime-game/` implements the Interpersonal Effectiveness Worksheet
 6 / Handout 8 decision tool as **The DIME Game: Determining Intensity in Asking
 or Saying No**. It uses the shared guided vertical tree: the current question is
 large, completed questions and their Yes/No answers remain visible, earlier
@@ -3268,3 +3268,78 @@ DOCX, and print. Printable Handout 8 links open in a new tab.
 The Five Factor Model's live-HTML browser worksheet and print layout remain
 crisp. The original source scan quality is intentionally unchanged pending a
 replacement source from the user.
+## 85. Tool Finder, Distress Tolerance, Mindfulness, audio, and Wellness handoff (2026-08-29)
+
+The public discovery area is **Tool Finder**. Its canonical landing route is
+`/tool-finder/`, and every interactive route is `/tool-finder/<tool>/`. The old
+`/skill-finder/` landing and previously published `/skill-finder/<tool>/` URLs
+are compatibility routes in `site/legacy-dispositions.yml`; post-render creates
+noindex static redirect pages with canonical and meta-refresh targets. Do not
+restore public “Skill Finder” labels or create a parallel route tree.
+
+`site/data/tool-finder/catalogue.json` is the single catalogue authority for
+the Tool Finder home, search, topic grouping, tool/skill distinction, status,
+aliases, and related Learn destinations. The official sidebar and catalogue
+topic order is: Goal Setting; Distress Tolerance; Mindfulness; Emotional
+Regulation; CBT and Managing Anxiety; Interpersonal Effectiveness; Wellness
+(Actions & Patterns). Search filters immediately across names, aliases,
+subskills, topics, summaries, and search terms. The compact home thermometer
+reuses `site/data/skill-apps/thermometer.json`; it does not duplicate the
+recommendation data. Every available interactive tool must have a resolvable
+`learn_href` under `/learn/`. Planned records have no fabricated `tool_href`.
+Balanced Eating and Medication Checklist remain Planned/TBD and link to their
+current Learn material.
+
+Distress Tolerance is canonical at `/learn/distress-tolerance/`. The former
+`/learn/cube/` landing and lesson HTML routes are explicit compatibility
+redirects in `site/legacy-dispositions.yml`. Current QMD, generated sequence,
+thermometer, and tool links must never point to `/learn/cube/`.
+
+The Mindfulness source-coverage authority is
+`site/data/mindfulness-source-audit.json`, generated and checked by
+`scripts/mindfulness_source_audit.py`. It accounts for source PDF pages 63–132:
+70 identified pages, 63 mapped to topic-specific Learn pages, and seven blank
+reverse/structural pages documented as exclusions. Printable extracts live in
+`site/resources/mindfulness/`; the assigned pages link the PDF and provide an
+original readable adaptation. Positive Self-Talk is primarily Mindfulness
+lesson 8 while retaining its CBT balanced-alternative cross-link. Grounding is
+Mindfulness lesson 11. Emotion Surfing is on Mindfulness of Current Emotions,
+with a reciprocal Urge Surfing link.
+
+Educational audio uses `site/data/audio/recordings.json`, local versioned files
+under `site/resources/audio/`, and the reusable `site/assets/therapy-audio.js`
+block. Local recordings render native controls with `preload="none"`, no
+autoplay, a local download, a description, and the visible original provider
+URL. STOP and its Learn lesson use the local SOBER Space recording. Urge
+Surfing uses the local urgesurfing.com and UW MBRP recordings. Emotion Surfing
+uses its local urgesurfing.com recording only on Mindfulness of Current
+Emotions. The Psychwire/Russ Harris resource remains an attributed external
+link: the provider's displayed terms prohibit reproduction without prior
+written permission, so the supplied download is intentionally not published.
+
+New source-backed tools are `/tool-finder/stop/`,
+`/tool-finder/sleep-hygiene/`, `/tool-finder/stages-of-change/`, and
+`/tool-finder/urge-surfing/`. They use the one `TherapySkillProgress` schema and
+readable export system. Sleep Hygiene is a curriculum checklist plus one-change
+plan. Stages of Change is a non-diagnostic readiness and ambivalence reflection.
+Urge Surfing combines the overlapping source worksheet structure into original
+prompts, uses 0–100 ratings, an optional offline Start/Pause/Reset timer, a
+reduced-motion-safe wave, nonjudgmental follow-up, a concise immediate-danger
+scope note, and complete progress exports. Its Learn authority is
+`/learn/wellness/urge-surfing.html`.
+
+The DIME Game keeps its ten questions, Ask-Yes/Say-No-No scoring, 0–10 dimes,
+and source result table, but has no roadmap. Completed questions remain visible
+as subdued grey editable sections; Yes stays green, No stays red, and inline
+changes recalculate without discarding later answers. Five Factor keeps browser
+autosave but suppresses both the normal draft banner and open-previous control;
+its original scan is intentionally unchanged.
+
+Route/catalogue/audio/Mindfulness regressions live in
+`tests/test_tool_finder_pass.py`, with legacy progress coverage in
+`tests/test_skill_progress.js` and DIME coverage in the existing JS/Python
+suites. Asset query versions in `site/includes/bs-scripts.html` must be bumped
+when these runtimes change. On the managed Windows checkout, Git metadata and
+Quarto/Python spawning may still fail with the documented ACL/invalid-handle
+errors; use the exact-baseline disposable-clone workflow for non-force commits
+and push.

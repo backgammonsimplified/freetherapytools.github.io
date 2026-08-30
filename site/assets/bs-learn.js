@@ -1,8 +1,8 @@
 (function () {
   "use strict";
 
-  function isSkillFinderPage() {
-    return /^\/skill-finder(?:\/|$)/.test(window.location.pathname);
+  function isToolFinderPage() {
+    return /^\/tool-finder(?:\/|$)/.test(window.location.pathname);
   }
 
   const DIFFICULTY_SELECTOR = "[data-bs-filter-difficulty]";
@@ -1143,7 +1143,7 @@
     const glossaryIndexPage = document.body.classList.contains(
       "bs-glossary-index"
     );
-    const skillFinderPage = isSkillFinderPage();
+    const skillFinderPage = isToolFinderPage();
     const lookupDisabled =
       isMainSiteIndex() ||
       document.body.classList.contains("bs-learn-index") ||
@@ -2430,10 +2430,10 @@
         "aria-label",
         active
           ? skillFinderPage
-            ? "Show Skill Finder navigation"
+            ? "Show Tool Finder navigation"
             : "Show Learn table of contents"
           : skillFinderPage
-            ? "Hide Skill Finder navigation"
+            ? "Hide Tool Finder navigation"
             : "Hide Learn table of contents"
       );
       toggle.textContent = active
@@ -2684,7 +2684,7 @@
         return;
       }
       document.documentElement.dataset.bsLearnInitialized = "true";
-      document.body.classList.toggle("bs-skill-finder-page", isSkillFinderPage());
+      document.body.classList.toggle("bs-skill-finder-page", isToolFinderPage());
       initializeLearnFilters();
       initializeLearnSidebarControls();
       initializeInlineGlossary();

@@ -6,7 +6,7 @@ const progress = require("../site/assets/skill-progress.js");
 const config = {
   toolId: "worry-tree",
   toolTitle: "Worry Tree",
-  route: "/skill-finder/worry-tree/",
+  route: "/tool-finder/worry-tree/",
   schemaVersion: 1,
   validateState: (state) => progress.isPlainObject(state)
     && typeof state.nodeId === "string"
@@ -29,6 +29,7 @@ assert.match(markdown, /# Worry Tree/);
 assert.match(markdown, /## Action Plan/);
 assert.deepEqual(progress.parseProgress(markdown).record, record, "Markdown metadata should round-trip");
 assert.deepEqual(progress.validateForTool(record, config).state, state);
+assert.deepEqual(progress.validateForTool({ ...record, route: "/skill-finder/worry-tree/" }, config).state, state, "legacy Skill Finder route should normalize to the canonical Tool Finder route");
 
 const wrong = progress.validateForTool({ ...record, tool_id: "values", tool_title: "Values & Valued Action" }, config);
 assert.equal(wrong.code, "wrong-tool");

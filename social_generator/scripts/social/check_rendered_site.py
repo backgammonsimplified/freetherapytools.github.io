@@ -8,7 +8,7 @@ from playwright.sync_api import sync_playwright
 
 PAGES = [
     "/",
-    "/learn/cube/why-is-25-percent-the-basic-take-point.html",
+    "/learn/distress-tolerance/why-is-25-percent-the-basic-take-point.html",
     "/research/",
     "/licensing.html",
 ]

@@ -17,7 +17,7 @@ class DimeGameTests(unittest.TestCase):
         cls.css = (SITE / "assets" / "skill-apps.css").read_text(encoding="utf-8")
 
     def test_route_exists_and_uses_shared_guided_app(self):
-        route = SITE / "skill-finder" / "dime-game" / "index.qmd"
+        route = SITE / "tool-finder" / "dime-game" / "index.qmd"
         self.assertTrue(route.is_file())
         page = route.read_text(encoding="utf-8")
         self.assertIn('title: "The DIME Game"', page)
@@ -29,9 +29,9 @@ class DimeGameTests(unittest.TestCase):
         progress = (SITE / "assets" / "skill-progress.js").read_text(encoding="utf-8")
         navigation = (SITE / "_learn-navigation.yml").read_text(encoding="utf-8")
         generator = (ROOT / "scripts" / "learn_glossary.py").read_text(encoding="utf-8")
-        self.assertIn('"dime-game": "/skill-finder/dime-game/"', progress)
-        self.assertIn("skill-finder/dime-game/index.qmd", navigation)
-        self.assertIn("skill-finder/dime-game/index.qmd", generator)
+        self.assertIn('"dime-game": "/tool-finder/dime-game/"', progress)
+        self.assertIn("tool-finder/dime-game/index.qmd", navigation)
+        self.assertIn("tool-finder/dime-game/index.qmd", generator)
 
     def test_landing_choice_precedes_mode_specific_situation(self):
         self.assertEqual(self.flow["start"], "mode")
@@ -98,22 +98,28 @@ class DimeGameTests(unittest.TestCase):
         self.assertNotIn("horizontal", json.dumps(self.flow).lower())
 
     def test_previous_answers_revision_and_derived_summary_contract(self):
-        for token in ("Change this answer", "removed.forEach", "dimeScore(this.flow, this.answers)", "Source-Backed Result Guidance", "getReadableSummary"):
+        for token in ("data-dime-edit", "is-dime-complete", "dimeScore(this.flow, this.answers)", "Source-Backed Result Guidance", "getReadableSummary"):
             self.assertIn(token, self.javascript)
         self.assertNotIn("score:", self.javascript, "score must remain derived rather than stored independently")
+
+    def test_dime_has_no_roadmap_and_keeps_editable_grey_history(self):
+        self.assertIn('this.flow.id === "dime-game" ? ""', self.javascript)
+        self.assertIn("is-dime-linear", self.javascript)
+        self.assertIn(".skill-guided-step.is-dime-complete", self.css)
+        self.assertIn('aria-pressed="${value === "yes"}"', self.javascript)
 
     def test_source_links_are_complete_and_printables_open_new_tab(self):
         result = self.flow["nodes"][-1]
         hrefs = [link["href"] for link in result["links"]]
         self.assertIn("/learn/interpersonal-effectiveness/saying-no.html#ask-say-no-intensity", hrefs)
-        self.assertIn("/skill-finder/dear-man/", hrefs)
+        self.assertIn("/tool-finder/dear-man/", hrefs)
         pdfs = [link for link in result["links"] if link["href"].endswith(".pdf")]
         self.assertEqual(len(pdfs), 3)
         self.assertTrue(all(link.get("new_tab") is True for link in pdfs))
         self.assertTrue(all((SITE / link["href"].lstrip("/")).is_file() for link in pdfs))
 
     def test_no_template_markers(self):
-        combined = FLOW_PATH.read_text(encoding="utf-8") + self.javascript + (SITE / "skill-finder" / "dime-game" / "index.qmd").read_text(encoding="utf-8")
+        combined = FLOW_PATH.read_text(encoding="utf-8") + self.javascript + (SITE / "tool-finder" / "dime-game" / "index.qmd").read_text(encoding="utf-8")
         self.assertNotIn("{{var:", combined)
         self.assertNotIn("{{", combined)
 

@@ -12,3 +12,45 @@ legacy-dispositions:
       mechanism: static-client-redirect
       canonical: false
       indexing: "noindex, follow"
+    - source: "/skill-finder/"
+      target: "/tool-finder/"
+      disposition: redirect
+      mechanism: static-client-redirect
+      canonical: false
+      indexing: "noindex, follow"
+    - source: "/learn/cube/"
+      target: "/learn/distress-tolerance/"
+      disposition: redirect
+      mechanism: static-client-redirect
+      canonical: false
+      indexing: "noindex, follow"
+    - {source: "/skill-finder/ask-or-say-no/", target: "/tool-finder/ask-or-say-no/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/behavioural-activation/", target: "/tool-finder/behavioural-activation/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/behaviour-chain/", target: "/tool-finder/behaviour-chain/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/box-breathing/", target: "/tool-finder/box-breathing/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/case-map/", target: "/tool-finder/case-map/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/change-emotion/", target: "/tool-finder/change-emotion/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/dear-man/", target: "/tool-finder/dear-man/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/dime-game/", target: "/tool-finder/dime-game/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/emotions/", target: "/tool-finder/emotions/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/exposure/", target: "/tool-finder/exposure/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/five-factor-model/", target: "/tool-finder/five-factor-model/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/goal-builder/", target: "/tool-finder/goal-builder/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/gratitude-journal/", target: "/tool-finder/gratitude-journal/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/grounding/", target: "/tool-finder/grounding/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/missing-links/", target: "/tool-finder/missing-links/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/pleasant-event/", target: "/tool-finder/pleasant-event/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/positive-self-talk/", target: "/tool-finder/positive-self-talk/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/thermometer/", target: "/tool-finder/thermometer/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/thinking-traps/", target: "/tool-finder/thinking-traps/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/thought-record/", target: "/tool-finder/thought-record/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/values/", target: "/tool-finder/values/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/values-review/", target: "/tool-finder/values-review/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/worry-time/", target: "/tool-finder/worry-time/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/worry-tree/", target: "/tool-finder/worry-tree/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/learn/cube/stop-crisis-survival.html", target: "/learn/distress-tolerance/stop-crisis-survival.html", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/learn/cube/tipp.html", target: "/learn/distress-tolerance/tipp.html", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/learn/cube/self-soothe.html", target: "/learn/distress-tolerance/self-soothe.html", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/learn/cube/improve.html", target: "/learn/distress-tolerance/improve.html", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/learn/cube/pros-and-cons.html", target: "/learn/distress-tolerance/pros-and-cons.html", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/learn/cube/radical-acceptance.html", target: "/learn/distress-tolerance/radical-acceptance.html", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}

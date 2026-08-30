@@ -562,3 +562,6 @@ Health Connect is A that a health rare provider find thee•r tomrnunäty_ The i
 ::::
 
 <!-- section-scan-resources:end -->
+## Medication Adherence {#medication-adherence}
+
+Medication adherence means following the plan agreed with a qualified prescriber, keeping an accurate medication record, and raising concerns or side effects with the prescriber or pharmacist rather than making unsupported changes alone. The interactive Medication Checklist remains planned/TBD; the source material below is available now.

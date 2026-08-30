@@ -1,0 +1,115 @@
+import json
+import re
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+SITE = ROOT / "site"
+
+
+class ToolFinderPassTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.catalogue = json.loads((SITE / "data/tool-finder/catalogue.json").read_text(encoding="utf-8"))
+        cls.entries = cls.catalogue["entries"]
+
+    def test_canonical_routes_and_legacy_redirects(self):
+        self.assertTrue((SITE / "tool-finder/index.qmd").exists())
+        self.assertFalse((SITE / "skill-finder").exists())
+        legacy = (SITE / "legacy-dispositions.yml").read_text(encoding="utf-8")
+        for page in (SITE / "tool-finder").glob("*/index.qmd"):
+            route = f"/tool-finder/{page.parent.name}/"
+            self.assertIn(route, {entry.get("tool_href") for entry in self.entries})
+            if page.parent.name not in {"stop", "sleep-hygiene", "stages-of-change", "urge-surfing"}:
+                self.assertIn(route.replace("/tool-finder/", "/skill-finder/"), legacy)
+        self.assertTrue((SITE / "learn/distress-tolerance/stop-crisis-survival.qmd").exists())
+        self.assertIn('/learn/cube/stop-crisis-survival.html', legacy)
+
+    def test_static_redirect_pages_include_non_javascript_meta_refresh(self):
+        from scripts import bs_post_render
+        tool_redirect = bs_post_render.legacy_glossary_redirect_text("/tool-finder/dime-game/", "noindex, follow")
+        lesson_redirect = bs_post_render.legacy_glossary_redirect_text("/learn/distress-tolerance/tipp.html", "noindex, follow")
+        self.assertIn('http-equiv="refresh"', tool_redirect)
+        self.assertIn('/tool-finder/dime-game/', tool_redirect)
+        self.assertIn('/learn/distress-tolerance/tipp.html', lesson_redirect)
+        writer = (ROOT / "scripts/bs_post_render.py").read_text(encoding="utf-8")
+        self.assertIn('source.endswith(".html")', writer)
+
+    def test_no_current_source_links_use_legacy_routes(self):
+        offenders = []
+        for path in SITE.rglob("*"):
+            if not path.is_file() or path.suffix.lower() not in {".qmd", ".js", ".json", ".yml", ".yaml"}:
+                continue
+            if path.name == "legacy-dispositions.yml" or "_site" in path.parts or ".quarto" in path.parts or path.name == "skill-progress.js":
+                continue
+            text = path.read_text(encoding="utf-8", errors="replace")
+            if "/skill-finder/" in text or "/learn/cube/" in text:
+                offenders.append(str(path.relative_to(ROOT)))
+        self.assertEqual(offenders, [])
+
+    def test_home_search_thermometer_and_topics(self):
+        home = (SITE / "tool-finder/index.qmd").read_text(encoding="utf-8")
+        runtime = (SITE / "assets/tool-finder.js").read_text(encoding="utf-8")
+        self.assertIn('title: "Tool Finder"', home)
+        self.assertIn("data-tool-finder-search", home)
+        self.assertIn("data-tool-finder-kind", home)
+        self.assertIn("data-tool-finder-thermometer", home)
+        self.assertIn('/data/skill-apps/thermometer.json', runtime)
+        self.assertEqual(self.catalogue["topics"], ["Goal Setting", "Distress Tolerance", "Mindfulness", "Emotional Regulation", "CBT and Managing Anxiety", "Interpersonal Effectiveness", "Wellness (Actions & Patterns)"])
+
+    def test_required_concepts_are_searchable(self):
+        required = ["STOP", "Pros and Cons", "TIPP", "Temperature", "Intense Exercise", "Progressive Muscle Relaxation", "Paced Breathing", "Wise Mind ACCEPTS", "Activities", "Contributing", "Comparisons", "Opposite Emotion", "Pushing Away", "Thoughts", "Sensations", "Self-Soothe", "IMPROVE", "Imagery", "Meaning", "Prayer", "Relaxation", "One Thing in the Moment", "Vacation", "Self-Encouragement", "Radical Acceptance", "Willingness", "Recognizing States of Mind", "Wise Mind", "WHAT Skills", "Observe", "Describe", "Participate", "HOW Skills", "Non-Judgmentally", "One-Mindfully", "Effectively", "Positive Self-Talk", "Grounding", "Mindfulness of Current Emotions", "Emotion Surfing", "ABC PLEASE", "Accumulating Positive Emotions", "Build Mastery", "Cope Ahead", "Treat Physical Illness", "Balanced Eating", "Avoid Mood-Altering Substances", "Balanced Sleep", "Exercise", "Observing and Describing Emotions", "Check the Facts", "Opposite Action", "Problem Solving", "Pleasant Events", "Thought Records", "Facing Fears", "Fear Ladder", "Challenging Negative Thoughts", "Recognizing Thinking Traps", "Worry Time", "Worry Tree", "Box Breathing", "Five Factor Model", "Case Map", "Clarifying Priorities", "DEAR MAN", "GIVE", "FAST", "Boundaries", "Walking the Middle Path", "DIME Game", "Ask / Say No", "Sleep Hygiene", "Behavioural Activation", "Behaviour Chain Analysis", "Gratitude Journaling", "Stages of Change", "Urge Surfing", "Determination", "Medication Adherence"]
+        haystack = json.dumps(self.catalogue, ensure_ascii=False).casefold()
+        self.assertEqual([term for term in required if term.casefold() not in haystack], [])
+
+    def test_tool_learn_links_and_planned_routes(self):
+        for entry in self.entries:
+            self.assertRegex(entry["learn_href"], r"^/learn/")
+            source = SITE / (entry["learn_href"].split("#", 1)[0].strip("/").replace(".html", ".qmd"))
+            if source.is_dir():
+                source = source / "index.qmd"
+            self.assertTrue(source.exists(), (entry["id"], source))
+            if "#" in entry["learn_href"]:
+                anchor = entry["learn_href"].split("#", 1)[1]
+                self.assertIn(f"{{#{anchor}}}", source.read_text(encoding="utf-8"), (entry["id"], anchor))
+            if entry["kind"] == "tool" and entry["status"] == "available":
+                self.assertTrue(entry.get("tool_href"))
+            if entry["status"] == "planned":
+                self.assertFalse(entry.get("tool_href"), entry["id"])
+
+    def test_audio_is_local_and_attributed(self):
+        data = json.loads((SITE / "data/audio/recordings.json").read_text(encoding="utf-8"))
+        for record in data["recordings"]:
+            self.assertTrue(record["source_url"].startswith("http"))
+            if record["availability"] == "local":
+                self.assertTrue((SITE / record["local_href"].lstrip("/")).exists())
+        pages = "\n".join(path.read_text(encoding="utf-8") for path in [SITE / "learn/distress-tolerance/stop-crisis-survival.qmd", SITE / "learn/wellness/urge-surfing.qmd", SITE / "tool-finder/urge-surfing/index.qmd", SITE / "learn/mindfulness/mindfulness-of-emotions.qmd"])
+        self.assertIn('data-therapy-audio="sober-space"', pages)
+        self.assertIn('data-therapy-audio="emotion-surfing-jason-dean"', pages)
+        runtime = (SITE / "assets/therapy-audio.js").read_text(encoding="utf-8")
+        self.assertIn("<audio controls preload=", runtime)
+        self.assertNotIn("autoplay", runtime)
+        self.assertNotRegex(pages, r"<audio[^>]+src=[\"']https?://")
+        self.assertNotIn("file:///", pages)
+
+    def test_mindfulness_audit_complete(self):
+        audit = json.loads((SITE / "data/mindfulness-source-audit.json").read_text(encoding="utf-8"))
+        self.assertEqual(audit["scope"], {"first_page": 63, "last_page": 132, "identified_pages": 70, "mapped_pages": 63, "excluded_pages": 7})
+        self.assertEqual([row["source_page"] for row in audit["records"]], list(range(63, 133)))
+        for row in audit["records"]:
+            if row["excluded"]:
+                self.assertTrue(row["exclusion_reason"])
+            else:
+                self.assertTrue(row["pdf_linked"] and row["adapted_text_present"])
+
+    def test_dime_and_five_factor_flags(self):
+        guided = (SITE / "assets/skill-finder-apps.js").read_text(encoding="utf-8")
+        quick = (SITE / "assets/skill-quick-tools.js").read_text(encoding="utf-8")
+        self.assertIn('this.flow.id === "dime-game" ? ""', guided)
+        self.assertIn("is-dime-complete", guided)
+        self.assertIn("data-dime-edit", guided)
+        self.assertIn("showDraftPrompt: false, showOpenPreviousProgress: false", quick)
+
+
+if __name__ == "__main__":
+    unittest.main()

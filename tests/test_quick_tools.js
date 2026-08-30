@@ -75,7 +75,7 @@ for (const entered of ["2026-08-27", "A quiet cup of tea", "I slowed down", "A h
   assert.ok(gratitudeSummary.includes(entered), `Gratitude summary includes ${entered}`);
 }
 
-const config = { toolId: "thought-record", toolTitle: "Thought Record", route: "/skill-finder/thought-record/", schemaVersion: 1 };
+const config = { toolId: "thought-record", toolTitle: "Thought Record", route: "/tool-finder/thought-record/", schemaVersion: 1 };
 const record = progress.makeRecord(config, thought, new Date("2026-08-24T15:00:00Z"));
 for (const serialized of [progress.serializeMarkdown(record, "# Thought Record"), progress.serializeJson(record)]) {
   const restored = progress.parseProgress(serialized).record.state;
@@ -84,7 +84,7 @@ for (const serialized of [progress.serializeMarkdown(record, "# Thought Record")
 }
 
 const caseState = Object.fromEntries(tools.CASE_MAP_FIELDS.map(([id, label]) => [id, `${label} entry`]));
-const caseConfig = { toolId: "case-map", toolTitle: "Case Map", route: "/skill-finder/case-map/", schemaVersion: 1 };
+const caseConfig = { toolId: "case-map", toolTitle: "Case Map", route: "/tool-finder/case-map/", schemaVersion: 1 };
 const caseRecord = progress.makeRecord(caseConfig, caseState, new Date("2026-08-27T15:00:00Z"));
 assert.deepEqual(progress.parseProgress(progress.serializeJson(caseRecord)).record.state, caseState);
 

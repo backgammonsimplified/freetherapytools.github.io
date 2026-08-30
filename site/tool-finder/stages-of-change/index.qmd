@@ -1,0 +1,16 @@
+---
+title: "Stages of Change"
+description: "Reflect on readiness, ambivalence, and one possible next step."
+sidebar: tool-finder
+page-layout: full
+toc: false
+execute: {enabled: false}
+---
+
+This reflection follows the [Stages of Change curriculum](/learn/wellness/maladaptive-coping.html#stages-of-change). It does not calculate or diagnose a stage.
+
+::: {#stages-of-change-app .skill-app data-quick-app="stages-of-change"}
+Loading Stages of Change…
+:::
+
+[Back to Tool Finder](/tool-finder/)

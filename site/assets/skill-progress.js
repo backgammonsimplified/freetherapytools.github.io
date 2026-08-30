@@ -6,31 +6,41 @@
   const HANDOFF_KEY = "therapy-skill-kit:progress-handoff";
   const MAX_FILE_SIZE = 2 * 1024 * 1024;
   const TOOL_ROUTES = Object.freeze({
-    values: "/skill-finder/values/",
-    thermometer: "/skill-finder/thermometer/",
-    "emotion-explorer": "/skill-finder/emotions/",
-    "change-emotion": "/skill-finder/change-emotion/",
-    "worry-tree": "/skill-finder/worry-tree/",
-    "pleasant-event": "/skill-finder/pleasant-event/",
-    "behaviour-chain": "/skill-finder/behaviour-chain/",
-    "missing-links": "/skill-finder/missing-links/",
-    exposure: "/skill-finder/exposure/",
-    "dear-man": "/skill-finder/dear-man/",
-    "ask-or-say-no": "/skill-finder/ask-or-say-no/",
-    "goal-builder": "/skill-finder/goal-builder/",
-    "behavioural-activation": "/skill-finder/behavioural-activation/",
-    "values-review": "/skill-finder/values-review/",
-    "five-factor-model": "/skill-finder/five-factor-model/",
-    "case-map": "/skill-finder/case-map/",
-    "thinking-traps": "/skill-finder/thinking-traps/",
-    "thought-record": "/skill-finder/thought-record/",
-    "worry-time": "/skill-finder/worry-time/",
-    "box-breathing": "/skill-finder/box-breathing/",
-    "gratitude-journal": "/skill-finder/gratitude-journal/",
-    "positive-self-talk": "/skill-finder/positive-self-talk/",
-    "grounding": "/skill-finder/grounding/",
-    "dime-game": "/skill-finder/dime-game/",
+    values: "/tool-finder/values/",
+    thermometer: "/tool-finder/thermometer/",
+    "emotion-explorer": "/tool-finder/emotions/",
+    "change-emotion": "/tool-finder/change-emotion/",
+    "worry-tree": "/tool-finder/worry-tree/",
+    "pleasant-event": "/tool-finder/pleasant-event/",
+    "behaviour-chain": "/tool-finder/behaviour-chain/",
+    "missing-links": "/tool-finder/missing-links/",
+    exposure: "/tool-finder/exposure/",
+    "dear-man": "/tool-finder/dear-man/",
+    "ask-or-say-no": "/tool-finder/ask-or-say-no/",
+    "goal-builder": "/tool-finder/goal-builder/",
+    "behavioural-activation": "/tool-finder/behavioural-activation/",
+    "values-review": "/tool-finder/values-review/",
+    "five-factor-model": "/tool-finder/five-factor-model/",
+    "case-map": "/tool-finder/case-map/",
+    "thinking-traps": "/tool-finder/thinking-traps/",
+    "thought-record": "/tool-finder/thought-record/",
+    "worry-time": "/tool-finder/worry-time/",
+    "box-breathing": "/tool-finder/box-breathing/",
+    "gratitude-journal": "/tool-finder/gratitude-journal/",
+    "positive-self-talk": "/tool-finder/positive-self-talk/",
+    "grounding": "/tool-finder/grounding/",
+    "dime-game": "/tool-finder/dime-game/",
+    stop: "/tool-finder/stop/",
+    "sleep-hygiene": "/tool-finder/sleep-hygiene/",
+    "stages-of-change": "/tool-finder/stages-of-change/",
+    "urge-surfing": "/tool-finder/urge-surfing/",
   });
+
+  function canonicalProgressRoute(route) {
+    return typeof route === "string" && route.startsWith("/skill-finder/")
+      ? route.replace("/skill-finder/", "/tool-finder/")
+      : route;
+  }
 
   let active = null;
   let autosaveTimer = null;
@@ -127,7 +137,7 @@
     if (record.tool_id !== config.toolId) return { ok: false, code: "wrong-tool", record };
     if (record.schema_version > config.schemaVersion) return { ok: false, code: "future-version" };
     try {
-      if (record.schema_version !== config.schemaVersion || record.route !== config.route || !config.validateState(record.state)) return { ok: false, code: "damaged" };
+      if (record.schema_version !== config.schemaVersion || canonicalProgressRoute(record.route) !== config.route || !config.validateState(record.state)) return { ok: false, code: "damaged" };
     } catch (_error) {
       return { ok: false, code: "damaged" };
     }

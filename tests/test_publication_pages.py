@@ -130,7 +130,7 @@ class PagePublicationTests(unittest.TestCase):
     def test_authored_json_ld_social_and_date_contracts(self) -> None:
         cases = (
             (
-                "/learn/cube/why-is-25-percent-the-take-point.html",
+                "/learn/distress-tolerance/why-is-25-percent-the-take-point.html",
                 "Article",
                 "why-is-25-percent-the-take-point",
                 None,
@@ -218,7 +218,7 @@ class PagePublicationTests(unittest.TestCase):
 
     def test_draft_and_preliminary_authored_pages_do_not_invent_dates(self) -> None:
         for route in (
-            "/learn/cube/why-is-25-percent-the-take-point.html",
+            "/learn/distress-tolerance/why-is-25-percent-the-take-point.html",
             "/research/sage-vs-gnu-additional-details.html",
             "/engine-benchmark/sage-vs-gnu-stage1/index.html",
         ):
@@ -287,11 +287,11 @@ class PagePublicationTests(unittest.TestCase):
 
     def test_rss_excludes_preliminary_and_uses_stable_authored_guid(self) -> None:
         policy = copy.deepcopy(self.policy)
-        authored_route = "/learn/cube/why-is-25-percent-the-take-point.html"
+        authored_route = "/learn/distress-tolerance/why-is-25-percent-the-take-point.html"
         policy["routes"][authored_route]["status"] = "published"
         source = """<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel>
-<item><title>Learn</title><link>https://backgammonsimplified.github.io/learn/cube/why-is-25-percent-the-take-point.html</link><guid>https://backgammonsimplified.github.io/learn/cube/why-is-25-percent-the-take-point.html</guid></item>
+<item><title>Learn</title><link>https://backgammonsimplified.github.io/learn/distress-tolerance/why-is-25-percent-the-take-point.html</link><guid>https://backgammonsimplified.github.io/learn/distress-tolerance/why-is-25-percent-the-take-point.html</guid></item>
 <item><title>Landing</title><link>https://backgammonsimplified.github.io/learn/index.html</link><guid>landing</guid></item>
 <item><title>Preliminary</title><link>https://backgammonsimplified.github.io/engine-benchmark/sage-vs-gnu-stage1/index.html</link><guid>old</guid></item>
 <item><title>Glossary</title><link>https://backgammonsimplified.github.io/glossary/#take</link><guid isPermaLink="true">https://backgammonsimplified.github.io/glossary/#take</guid></item>
@@ -307,7 +307,7 @@ class PagePublicationTests(unittest.TestCase):
         self.assertEqual(stabilized, 1)
         self.assertIn(
             "urn:backgammonsimplified:route:"
-            "/learn/cube/why-is-25-percent-the-take-point.html",
+            "/learn/distress-tolerance/why-is-25-percent-the-take-point.html",
             updated,
         )
         self.assertIn(

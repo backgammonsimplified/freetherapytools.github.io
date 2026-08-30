@@ -1,0 +1,13 @@
+---
+title: "Behaviour Chain Builder"
+description: "Map an ineffective behaviour, the links that led to it, consequences, and possible solutions."
+sidebar: tool-finder
+page-layout: full
+toc: false
+---
+
+A Behaviour Chain helps understand a behaviour that occurred. It is different from Missing Links, which asks why an intended effective behaviour did not occur.
+
+::: {#behaviour-chain-app .skill-app data-practice-app="behaviour-chain"}
+Loading Behaviour Chain Builder…
+:::

@@ -89,17 +89,17 @@ ROTATE_CLOCKWISE = {
 
 
 LESSON_FILES = {
-    "skill-finder": "skill-finder/index.qmd",
+    "tool-finder": "tool-finder/index.qmd",
     "goal-guidelines": "learn/goal-setting/goal-setting-guidelines.qmd",
     "skills-strengths": "learn/goal-setting/strengths.qmd",
     "weekly-goal-worksheets": "learn/goal-setting/weekly-goals-home-practice.qmd",
     "weekly-home-practice": "learn/goal-setting/daily-tracking.qmd",
-    "dt-stop": "learn/cube/stop-crisis-survival.qmd",
-    "dt-tipp": "learn/cube/tipp.qmd",
-    "dt-distraction": "learn/cube/self-soothe.qmd",
-    "dt-improve": "learn/cube/improve.qmd",
-    "dt-pros-cons": "learn/cube/pros-and-cons.qmd",
-    "dt-radical-acceptance": "learn/cube/radical-acceptance.qmd",
+    "dt-stop": "learn/distress-tolerance/stop-crisis-survival.qmd",
+    "dt-tipp": "learn/distress-tolerance/tipp.qmd",
+    "dt-distraction": "learn/distress-tolerance/self-soothe.qmd",
+    "dt-improve": "learn/distress-tolerance/improve.qmd",
+    "dt-pros-cons": "learn/distress-tolerance/pros-and-cons.qmd",
+    "dt-radical-acceptance": "learn/distress-tolerance/radical-acceptance.qmd",
     "ie-boundaries": "learn/interpersonal-effectiveness/boundaries.qmd",
     "ie-priorities": "learn/interpersonal-effectiveness/clarifying-priorities.qmd",
     "ie-dear-man": "learn/interpersonal-effectiveness/dear-man.qmd",
@@ -143,11 +143,11 @@ SPECS: dict[str, list[tuple[str, str, str, str, str]]] = {}
 
 SPECS["general"] = [
     row("section-cover", "", "General Handouts", "structural", "Cover metadata only."),
-    row("reference", "skill-finder", "Skills & Strengths List", "reference"),
-    row("reference", "skill-finder", "Skills Overview", "reference"),
-    row("reference", "skill-finder", "Emotional Overload & Emotional Numbness Skills Guide", "reference", "The general scan cover lists a Feeling Wheel, but this physical page contains a skills-selection guide."),
-    row("reference", "skill-finder", "Skills Use Guideline", "reference"),
-    row("content-handout", "skill-finder", "Dialectics: Acceptance and Change", "handout"),
+    row("reference", "tool-finder", "Skills & Strengths List", "reference"),
+    row("reference", "tool-finder", "Skills Overview", "reference"),
+    row("reference", "tool-finder", "Emotional Overload & Emotional Numbness Skills Guide", "reference", "The general scan cover lists a Feeling Wheel, but this physical page contains a skills-selection guide."),
+    row("reference", "tool-finder", "Skills Use Guideline", "reference"),
+    row("content-handout", "tool-finder", "Dialectics: Acceptance and Change", "handout"),
 ]
 
 SPECS["goal-setting"] = [

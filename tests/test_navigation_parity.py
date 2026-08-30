@@ -50,7 +50,7 @@ class NavigationParityTests(unittest.TestCase):
             "Mindfulness": RENDERED / "learn" / "mindfulness" / "what-skills.html",
         }
         expected_tracks = {
-            "DBT": ("Distress Tolerance", "/learn/cube/"),
+            "DBT": ("Distress Tolerance", "/learn/distress-tolerance/"),
             "CBT": ("CBT Skills", "/learn/cbt-anxiety/"),
             "Mindfulness": ("Mindfulness", "/learn/mindfulness/"),
         }
@@ -193,10 +193,10 @@ class NavigationParityTests(unittest.TestCase):
         self.assertNotIn("pushState", self.scroll)
 
     def test_skill_finder_sidebar_contains_every_tool_and_learn_area(self) -> None:
-        tool_pages = sorted((SITE / "skill-finder").glob("*/index.qmd"))
+        tool_pages = sorted((SITE / "tool-finder").glob("*/index.qmd"))
         self.assertGreaterEqual(len(tool_pages), 14)
         for page in tool_pages:
-            self.assertIn(f"skill-finder/{page.parent.name}/index.qmd", self.navigation)
+            self.assertIn(f"tool-finder/{page.parent.name}/index.qmd", self.navigation)
         for text in (
             'section: "Interactive Tools"',
             'section: "Learn"',

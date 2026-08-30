@@ -1231,7 +1231,7 @@ const clickThroughNavigation = async ({
   await cubeLink.click();
   await delay(300);
   check(
-    new URL(await cubeTab.url()).pathname === "/learn/cube/",
+    new URL(await cubeTab.url()).pathname === "/learn/distress-tolerance/",
     "desktop/click-through",
     "Learn click reaches the Cube track"
   );

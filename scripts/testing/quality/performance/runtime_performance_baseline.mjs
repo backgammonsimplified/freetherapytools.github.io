@@ -250,7 +250,7 @@ const measureGlossaryInteractions = async ({ tab, baseUrl }) => {
   measurements.glossary_anchor_ms = Date.now() - started;
 
   await tab.goto(
-    new URL("/learn/cube/what-the-cube-is-asking.html", baseUrl).href
+    new URL("/learn/distress-tolerance/what-the-cube-is-asking.html", baseUrl).href
   );
   const inlineLink = await visibleLocator(
     tab.playwright.locator("main .bs-inline-glossary[data-bs-glossary-slug]")

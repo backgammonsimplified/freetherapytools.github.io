@@ -1,0 +1,24 @@
+---
+title: "STOP"
+description: "Pause, step back, observe, and proceed mindfully."
+sidebar: tool-finder
+page-layout: full
+toc: false
+execute: {enabled: false}
+---
+
+Use this short guided tool to create a pause before acting. [Learn the STOP skill](/learn/distress-tolerance/stop-crisis-survival.html#stop).
+
+::: {#stop-app .skill-app data-quick-app="stop"}
+Loading STOP…
+:::
+
+## SOBER Space audio
+
+The related SOBER Space practice offers another structured way to pause and respond with awareness.
+
+::: {data-therapy-audio="sober-space"}
+Loading audio…
+:::
+
+[Back to Tool Finder](/tool-finder/)

@@ -1,0 +1,65 @@
+---
+title: "Urge Surfing"
+description: "Practise noticing an urge as a changing experience without automatically acting on it."
+sidebar: learn
+learn-track: wellness
+learn-order: 7
+categories:
+  - Intermediate
+tags:
+  - Checker Play
+terms:
+  - coping
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+execute: {enabled: false}
+---
+
+Urge Surfing is a mindfulness-based way of relating to an urge. The purpose is to practise noticing the urge without immediately obeying, suppressing, or arguing with it. It is a skill practice, not a promise that a particular urge will disappear on a schedule and not a cure for addiction.
+
+## The wave metaphor
+
+An urge can be experienced as changing rather than fixed: sensations and intensity may rise, crest, fall, return, or change shape. “Riding the wave” means allowing the present experience to be there while observing what it does over time. Acceptance here means acknowledging what is present; it does not mean approving of harmful action.
+
+## A practice sequence
+
+1. **Name the urge.** Complete the sentence, “I have the urge to…”
+2. **Notice context.** What happened just before it appeared?
+3. **Check intensity.** Use a rating if it helps you compare moments rather than judge success.
+4. **Notice the body.** Locate pressure, heat, movement, tension, restlessness, or other sensations.
+5. **Notice thoughts and emotions.** Observe images, predictions, feelings, and stories as experiences rather than commands.
+6. **Anchor attention.** Let a comfortable breath, the feet, or another present sensation be an anchor. Breath-holding is not required.
+7. **Ride and allow time.** Keep returning to noticing. A timer is optional.
+8. **Check again and reflect.** What changed, if anything? What helped? If you acted on the urge, describe it without judgment and decide what support or repair fits next.
+
+If an urge involves immediate danger to you or another person, prioritize safety and appropriate real-world support rather than relying on this exercise alone.
+
+[Open the Urge Surfing tool](/tool-finder/urge-surfing/)
+
+## Source / printable copies
+
+- [Therapist Aid: Urge Surfing Handout (local printable copy)](/resources/wellness/urge-surfing/therapist-aid-urge-surfing-handout.pdf) — [original provider page](https://www.therapistaid.com/worksheets/urge-surfing-handout)
+- [Carepatron: Urge Surfing Worksheet (local printable copy)](/resources/wellness/urge-surfing/carepatron-urge-surfing-worksheet.pdf) — [original provider](https://www.carepatron.com/files/urge-surfing-worksheet.pdf)
+- [DBT practice worksheet (local printable copy)](/resources/wellness/urge-surfing/dbt-urge-surfing-practice.pdf) — [original provider](https://dialecticalbehaviortherapy.com/distress-tolerance/urge-surfing/)
+- [Choosing Therapy: Urge Surfing Worksheet (local printable copy)](/resources/wellness/urge-surfing/choosing-therapy-urge-surfing-worksheet.pdf) — [original provider](https://www.choosingtherapy.com/therapy-worksheets/urge-surfing-worksheet/)
+
+The readable text above is an original Therapy Skill Kit adaptation of shared concepts across these sources. It does not reproduce the worksheets' full text.
+
+## Guided recordings
+
+::: {data-therapy-audio="urge-surfing-jason-dean"}
+Loading audio…
+:::
+
+::: {data-therapy-audio="urge-surfing-uw-mbrp"}
+Loading audio…
+:::
+
+::: {data-therapy-audio="urge-surfing-russ-harris"}
+Loading audio…
+:::
+
+## Related skill: Emotion Surfing
+
+[Mindfulness of Current Emotions / Emotion Surfing](/learn/mindfulness/mindfulness-of-emotions.html#emotion-surfing) uses related noticing and wave imagery with an emotion rather than an action urge.

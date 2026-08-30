@@ -27,8 +27,8 @@ Clear lessons, handouts, worksheets, and exercises for DBT, CBT, and mindfulness
 
 ::::: {.bs-home-explore-list}
 [<span class="bs-home-explore-icon" aria-hidden="true"></span>
-<span class="bs-home-explore-copy"><span class="bs-home-explore-title">Skill Finder</span><span class="bs-home-explore-description">A placeholder for the future guided skill-matching experience.</span></span>
-<span class="bs-home-explore-chevron" aria-hidden="true">›</span>](skill-finder/index.qmd){.bs-home-explore-link .bs-home-explore-link--learn}
+<span class="bs-home-explore-copy"><span class="bs-home-explore-title">Tool Finder</span><span class="bs-home-explore-description">Search interactive tools and the related Learn curriculum.</span></span>
+<span class="bs-home-explore-chevron" aria-hidden="true">›</span>](tool-finder/index.qmd){.bs-home-explore-link .bs-home-explore-link--learn}
 
 [<span class="bs-home-explore-icon" aria-hidden="true"></span>
 <span class="bs-home-explore-copy"><span class="bs-home-explore-title">DBT Skills</span><span class="bs-home-explore-description">Goal setting, distress tolerance, interpersonal effectiveness, wellness, and emotion regulation.</span></span>

@@ -1,0 +1,17 @@
+---
+title: "Five Factor Model"
+description: "Map a situation through thoughts, emotions, body sensations, and behaviours."
+sidebar: tool-finder
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+This tool uses the site's source-backed [Five Factor Model curriculum](/learn/cbt-anxiety/introduction-to-cbt.html#five-factor-model) and Five Factor Model Worksheet.
+
+::: {#five-factor-model-app .skill-app data-quick-app="five-factor-model"}
+Loading Five Factor Model…
+:::
+
+[Back to all Tool Finder tools](/tool-finder/)

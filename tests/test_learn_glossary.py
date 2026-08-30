@@ -1001,7 +1001,7 @@ private code phrase
             encoding="utf-8"
         )
         sidebar_paths = [
-            f"learn/cube/{lesson['relative_path']}"
+            f"learn/distress-tolerance/{lesson['relative_path']}"
             for lesson in self.cube_lessons
         ]
         self.assertTrue(

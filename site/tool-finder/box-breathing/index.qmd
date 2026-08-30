@@ -1,0 +1,17 @@
+---
+title: "Box Breathing"
+description: "Use a configurable four-phase visual breathing timer."
+sidebar: tool-finder
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+Box Breathing appears in the Therapy Skill Kit source list. The source does not prescribe timings, so this tool's equal four-second defaults are adjustable.
+
+::: {#box-breathing-app .skill-app data-quick-app="box-breathing"}
+Loading Box Breathing…
+:::
+
+[Back to all Tool Finder tools](/tool-finder/)

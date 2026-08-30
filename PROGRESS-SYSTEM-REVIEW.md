@@ -10,20 +10,20 @@ No Learn lesson source, Learn JavaScript, continuous-scroll code, resource-match
 
 | Tool ID | Route | Autosave | Markdown / JSON restore | Readable export |
 |---|---|---:|---:|---:|
-| `values` | `/skill-finder/values/` | Yes | Yes | Yes |
-| `thermometer` | `/skill-finder/thermometer/` | Yes | Yes | Yes |
-| `emotion-explorer` | `/skill-finder/emotions/` | Yes | Yes | Yes |
-| `change-emotion` | `/skill-finder/change-emotion/` | Yes | Yes | Yes |
-| `worry-tree` | `/skill-finder/worry-tree/` | Yes | Yes | Yes |
-| `pleasant-event` | `/skill-finder/pleasant-event/` | Yes | Yes | Yes |
-| `behaviour-chain` | `/skill-finder/behaviour-chain/` | Yes | Yes | Yes |
-| `missing-links` | `/skill-finder/missing-links/` | Yes | Yes | Yes |
-| `exposure` | `/skill-finder/exposure/` | Yes | Yes | Yes |
-| `dear-man` | `/skill-finder/dear-man/` | Yes | Yes | Yes |
-| `ask-or-say-no` | `/skill-finder/ask-or-say-no/` | Yes | Yes | Yes |
-| `goal-builder` | `/skill-finder/goal-builder/` | Yes | Yes | Yes |
-| `behavioural-activation` | `/skill-finder/behavioural-activation/` | Yes | Yes | Yes |
-| `values-review` | `/skill-finder/values-review/` | Yes | Yes | Yes |
+| `values` | `/tool-finder/values/` | Yes | Yes | Yes |
+| `thermometer` | `/tool-finder/thermometer/` | Yes | Yes | Yes |
+| `emotion-explorer` | `/tool-finder/emotions/` | Yes | Yes | Yes |
+| `change-emotion` | `/tool-finder/change-emotion/` | Yes | Yes | Yes |
+| `worry-tree` | `/tool-finder/worry-tree/` | Yes | Yes | Yes |
+| `pleasant-event` | `/tool-finder/pleasant-event/` | Yes | Yes | Yes |
+| `behaviour-chain` | `/tool-finder/behaviour-chain/` | Yes | Yes | Yes |
+| `missing-links` | `/tool-finder/missing-links/` | Yes | Yes | Yes |
+| `exposure` | `/tool-finder/exposure/` | Yes | Yes | Yes |
+| `dear-man` | `/tool-finder/dear-man/` | Yes | Yes | Yes |
+| `ask-or-say-no` | `/tool-finder/ask-or-say-no/` | Yes | Yes | Yes |
+| `goal-builder` | `/tool-finder/goal-builder/` | Yes | Yes | Yes |
+| `behavioural-activation` | `/tool-finder/behavioural-activation/` | Yes | Yes | Yes |
+| `values-review` | `/tool-finder/values-review/` | Yes | Yes | Yes |
 
 ## Shared save and load support
 
@@ -102,13 +102,13 @@ The managed browser declined permission to select a local progress file. It was 
 
 Review these local routes after running the normal preview command:
 
-1. `/skill-finder/values/` — Discover, choose 2–4 suggested life domains with H/M/L importance, assign values, compare current and desired effort, review natural-language under/over-investment guidance, edit the generated Mission, use temporary browser drafts, and save/load Markdown, DOCX, or print.
-2. `/skill-finder/values-review/` — complete the separate weekly/monthly values review and verify save/restore/export controls.
-3. `/skill-finder/emotions/` — selected emotion, words, body regions, details, and stage.
-4. `/skill-finder/worry-tree/` — partial branch state and current text.
-5. `/skill-finder/behaviour-chain/` — ordered links.
-6. `/skill-finder/exposure/` — ordered steps and ratings.
-7. `/skill-finder/dear-man/` — readable DEAR/GIVE/FAST summary.
+1. `/tool-finder/values/` — Discover, choose 2–4 suggested life domains with H/M/L importance, assign values, compare current and desired effort, review natural-language under/over-investment guidance, edit the generated Mission, use temporary browser drafts, and save/load Markdown, DOCX, or print.
+2. `/tool-finder/values-review/` — complete the separate weekly/monthly values review and verify save/restore/export controls.
+3. `/tool-finder/emotions/` — selected emotion, words, body regions, details, and stage.
+4. `/tool-finder/worry-tree/` — partial branch state and current text.
+5. `/tool-finder/behaviour-chain/` — ordered links.
+6. `/tool-finder/exposure/` — ordered steps and ratings.
+7. `/tool-finder/dear-man/` — readable DEAR/GIVE/FAST summary.
 8. Any tool route — wrong-tool file handoff, corrupt file, unsupported schema, confirmation-based clear, and print preview.
 
 ## Known limitations

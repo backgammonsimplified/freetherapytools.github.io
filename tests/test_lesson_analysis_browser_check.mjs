@@ -6,8 +6,8 @@ import {
 } from "../scripts/lesson_analysis_browser_check.mjs";
 
 assert.deepEqual(LESSON_ANALYSIS_ROUTES, {
-  cube: "/learn/cube/what-the-cube-is-asking.html",
-  checker: "/learn/cube/why-is-25-percent-the-basic-take-point.html"
+  cube: "/learn/distress-tolerance/what-the-cube-is-asking.html",
+  checker: "/learn/distress-tolerance/why-is-25-percent-the-basic-take-point.html"
 });
 
 assert.deepEqual(

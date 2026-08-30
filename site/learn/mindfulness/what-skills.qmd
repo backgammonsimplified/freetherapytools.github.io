@@ -21,3 +21,17 @@ execute:
 Observe is the first WHAT skill: intentionally notice sensations, thoughts, emotions, and events as they arise.
 
 ## Observe {#observe}
+## Source / Printable Copies
+
+- [Observe source pages](/resources/mindfulness/mindfulness-observe-source.pdf)
+- [WHAT skills practice worksheets](/resources/mindfulness/mindfulness-what-practice-source.pdf)
+
+## Text Version / Adapted Text
+
+The WHAT skills describe what you do in mindfulness: **observe**, **describe**, and **participate**. They can be practised separately or together.
+
+### Observe {#observe}
+
+Attend to sensations, thoughts, feelings, and events as they occur. Notice the experience without immediately pushing it away, holding onto it, or turning it into a conclusion.
+
+[Grounding](/learn/mindfulness/grounding.html) applies observation to present sensory and body information, and the [Grounding tool](/tool-finder/grounding/) provides a concise guided practice.

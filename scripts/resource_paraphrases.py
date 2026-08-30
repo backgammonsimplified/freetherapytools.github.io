@@ -52,19 +52,19 @@ SCALE_PATTERN = re.compile(r"(?<!\d)(0|1)\s*(?:-|to|through|–|—)\s*(5|7|10|1
 NATIVE_PLACEHOLDER = "This handout's educational content is integrated into the anchored skill sections above."
 
 TOOL_RULES = [
-    (re.compile(r"\bvalues? (?:and priorities|worksheet|list|review)|priorit", re.I), "values", "/skill-finder/values/"),
-    (re.compile(r"\bopposite action|check the facts|change emotions?\b", re.I), "change-emotion", "/skill-finder/change-emotion/"),
-    (re.compile(r"\bworry tree\b", re.I), "worry-tree", "/skill-finder/worry-tree/"),
-    (re.compile(r"\bpleasant (?:event|moment)|positive experience", re.I), "pleasant-event", "/skill-finder/pleasant-event/"),
-    (re.compile(r"\bbehaviou?r chain\b", re.I), "behaviour-chain", "/skill-finder/behaviour-chain/"),
-    (re.compile(r"\bmissing[- ]links?\b", re.I), "missing-links", "/skill-finder/missing-links/"),
-    (re.compile(r"\bbehaviou?ral activation|activity (?:monitoring|planning)\b", re.I), "behavioural-activation", "/skill-finder/behavioural-activation/"),
-    (re.compile(r"\bSMART goal|daily goal worksheet|case map\b", re.I), "goal-builder", "/skill-finder/goal-builder/"),
-    (re.compile(r"\bthermometer|emotion intensity\b", re.I), "thermometer", "/skill-finder/thermometer/"),
-    (re.compile(r"\bemotion diary|describing emotions|learning about emotions\b", re.I), "emotion-explorer", "/skill-finder/emotions/"),
-    (re.compile(r"\bexposure|fear ladder|fear hierarchy\b", re.I), "exposure", "/skill-finder/exposure/"),
-    (re.compile(r"\bDEAR MAN|DEAR \+", re.I), "dear-man", "/skill-finder/dear-man/"),
-    (re.compile(r"\bask or say no|ask, say no|intensely to ask|saying no\b", re.I), "ask-or-say-no", "/skill-finder/ask-or-say-no/"),
+    (re.compile(r"\bvalues? (?:and priorities|worksheet|list|review)|priorit", re.I), "values", "/tool-finder/values/"),
+    (re.compile(r"\bopposite action|check the facts|change emotions?\b", re.I), "change-emotion", "/tool-finder/change-emotion/"),
+    (re.compile(r"\bworry tree\b", re.I), "worry-tree", "/tool-finder/worry-tree/"),
+    (re.compile(r"\bpleasant (?:event|moment)|positive experience", re.I), "pleasant-event", "/tool-finder/pleasant-event/"),
+    (re.compile(r"\bbehaviou?r chain\b", re.I), "behaviour-chain", "/tool-finder/behaviour-chain/"),
+    (re.compile(r"\bmissing[- ]links?\b", re.I), "missing-links", "/tool-finder/missing-links/"),
+    (re.compile(r"\bbehaviou?ral activation|activity (?:monitoring|planning)\b", re.I), "behavioural-activation", "/tool-finder/behavioural-activation/"),
+    (re.compile(r"\bSMART goal|daily goal worksheet|case map\b", re.I), "goal-builder", "/tool-finder/goal-builder/"),
+    (re.compile(r"\bthermometer|emotion intensity\b", re.I), "thermometer", "/tool-finder/thermometer/"),
+    (re.compile(r"\bemotion diary|describing emotions|learning about emotions\b", re.I), "emotion-explorer", "/tool-finder/emotions/"),
+    (re.compile(r"\bexposure|fear ladder|fear hierarchy\b", re.I), "exposure", "/tool-finder/exposure/"),
+    (re.compile(r"\bDEAR MAN|DEAR \+", re.I), "dear-man", "/tool-finder/dear-man/"),
+    (re.compile(r"\bask or say no|ask, say no|intensely to ask|saying no\b", re.I), "ask-or-say-no", "/tool-finder/ask-or-say-no/"),
 ]
 
 

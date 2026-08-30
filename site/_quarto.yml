@@ -27,6 +27,13 @@ project:
     - assets/skill-finder-apps.js
     - assets/skill-practice-apps.js
     - assets/skill-quick-tools.js
+    - assets/tool-finder.js
+    - assets/therapy-audio.js
+    - "data/tool-finder/**"
+    - "data/audio/**"
+    - "resources/audio/**"
+    - "resources/mindfulness/**"
+    - "resources/wellness/urge-surfing/**"
     - "data/skill-apps/**"
     - "data/resource-paraphrases/**"
     - assets/bs-glossary-lookup.json
@@ -69,8 +76,8 @@ website:
     logo-alt: "Therapy Skill Kit"
     collapse-below: xl
     left:
-      - text: Skill Finder
-        href: skill-finder/index.qmd
+      - text: Tool Finder
+        href: tool-finder/index.qmd
       - text: DBT Skills
         href: learn/index.qmd
       - text: CBT Skills

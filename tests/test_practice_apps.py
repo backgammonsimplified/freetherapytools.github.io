@@ -13,7 +13,7 @@ class PracticeAppTests(unittest.TestCase):
     def test_routes_render_app_containers(self):
         routes = ["behaviour-chain", "missing-links", "exposure", "dear-man", "ask-or-say-no", "goal-builder", "behavioural-activation", "values-review"]
         for route in routes:
-            text = (SITE / "skill-finder" / route / "index.qmd").read_text(encoding="utf-8")
+            text = (SITE / "tool-finder" / route / "index.qmd").read_text(encoding="utf-8")
             self.assertRegex(text, r"data-(?:practice|skill)-app", route)
 
     def test_behaviour_chain_and_exposure_have_keyboard_controls(self):

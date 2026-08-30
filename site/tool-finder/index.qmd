@@ -1,0 +1,36 @@
+---
+title: "Tool Finder"
+description: "Search interactive therapy tools and the skills taught in the Learn curriculum."
+sidebar: tool-finder
+page-layout: article
+body-classes: tool-finder-home
+toc: false
+execute:
+  enabled: false
+---
+
+Interactive **tools** help you fill in a worksheet, make a plan, follow guided steps, or practise. **Skills** are the theory and instructions taught in [Learn](/learn/). Your entries stay in this browser unless you choose to export them.
+
+```{=html}
+<section class="tool-finder-search" aria-label="Search and filter Tool Finder">
+  <label for="tool-finder-search">Search tools and skills</label>
+  <input id="tool-finder-search" type="search" autocomplete="off" spellcheck="false" placeholder="Try worry, breathing, DEAR, urge, sleep, or grounding" data-tool-finder-search>
+  <div class="tool-finder-filters" role="group" aria-label="Filter results by kind">
+    <button type="button" aria-pressed="true" data-tool-finder-kind="all">All</button>
+    <button type="button" aria-pressed="false" data-tool-finder-kind="tool">Tools</button>
+    <button type="button" aria-pressed="false" data-tool-finder-kind="skill">Skills</button>
+  </div>
+  <p class="tool-finder-count" aria-live="polite" data-tool-finder-count>Loading catalogue…</p>
+</section>
+
+<details class="tool-finder-thermometer">
+  <summary><strong>Skill Thermometer</strong><span>Choose the state that feels closest right now and see skills that may fit.</span></summary>
+  <div data-tool-finder-thermometer></div>
+  <p><a class="btn btn-outline-primary" href="/tool-finder/thermometer/">Open the full Skill Thermometer</a></p>
+</details>
+
+<div data-tool-finder-catalogue aria-busy="true"></div>
+<p class="tool-finder-empty" data-tool-finder-empty hidden>No tools or skills match this search.</p>
+```
+
+Tool Finder is educational and does not replace individualized professional care. If a situation involves immediate danger, prioritize safety and appropriate real-world support.

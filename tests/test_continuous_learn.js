@@ -92,7 +92,7 @@ const manifest = {
 };
 
 assert.equal(
-  scroll.manifestRoute("/learn/cube/tipp.html"),
+  scroll.manifestRoute("/learn/distress-tolerance/tipp.html"),
   "/assets/bs-learn-sequence.json"
 );
 assert.equal(
@@ -242,8 +242,8 @@ assert.equal(
 assert.equal(scroll.findPrimaryToc(null), null);
 
 assert.equal(
-  scroll.idPrefixForRoute("/learn/cube/what-the-cube-is-asking.html"),
-  "bs-learn-scroll-cube-what-the-cube-is-asking-"
+  scroll.idPrefixForRoute("/learn/distress-tolerance/what-the-cube-is-asking.html"),
+  "bs-learn-scroll-distress-tolerance-what-the-cube-is-asking-"
 );
 assert.equal(
   scroll.idPrefixForRoute("/learn/game-plans/"),
@@ -254,7 +254,7 @@ assert.notEqual(
     "/learn/start-here/foundation-01.html"
   ),
   scroll.idPrefixForRoute(
-    "/learn/cube/foundation-01.html"
+    "/learn/distress-tolerance/foundation-01.html"
   ),
   "the full route keeps repeated lesson filenames collision-free"
 );

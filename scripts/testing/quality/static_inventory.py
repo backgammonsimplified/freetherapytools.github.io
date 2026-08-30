@@ -79,7 +79,7 @@ GENERATED_SOURCE_HTML_ALLOWLIST = {
     "site/includes/site-head.html",
     "site/includes/subscribe.html",
     "site/learn/_lesson-catalogue.html",
-    "site/learn/cube/_lesson-index.html",
+    "site/learn/distress-tolerance/_lesson-index.html",
     "site/learn/opening-play/_lesson-index.html",
     "site/learn/start-here/_lesson-index.html",
 }

@@ -56,31 +56,31 @@ Review controls appear on localhost, 127.0.0.1, or when `?review=1` is present. 
 ### Distress Tolerance
 
 <ul class="bs-review-link-list">
-<li><a href="/learn/cube/improve.html?review=1#resource-distress-tolerance-p025">Improving the Moment</a> <small class="bs-review-meta">distress-tolerance-p025 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/pros-and-cons.html?review=1#resource-distress-tolerance-p030">Pros and Cons</a> <small class="bs-review-meta">distress-tolerance-p030 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/pros-and-cons.html?review=1#resource-distress-tolerance-p031">Pros and Cons: How To</a> <small class="bs-review-meta">distress-tolerance-p031 - Higher-resolution copy</small></li>
-<li><a href="/learn/cube/pros-and-cons.html?review=1#resource-distress-tolerance-p032">Pros and Cons of Acting on Crisis Urges</a> <small class="bs-review-meta">distress-tolerance-p032 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p005">Turning the Mind</a> <small class="bs-review-meta">distress-tolerance-p005 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p006">Willingness</a> <small class="bs-review-meta">distress-tolerance-p006 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p008">Turning the Mind, Willingness, and Willfulness</a> <small class="bs-review-meta">distress-tolerance-p008 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p037">Radical Acceptance</a> <small class="bs-review-meta">distress-tolerance-p037 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p038">Radical Acceptance: Factors That Interfere</a> <small class="bs-review-meta">distress-tolerance-p038 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p040">Practicing Radical Acceptance Step by Step</a> <small class="bs-review-meta">distress-tolerance-p040 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p041">Half-Smiling and Willing Hands</a> <small class="bs-review-meta">distress-tolerance-p041 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p046">Radical Acceptance Practice</a> <small class="bs-review-meta">distress-tolerance-p046 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p047">Practicing Half-Smiling and Willing Hands, Part 1</a> <small class="bs-review-meta">distress-tolerance-p047 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/radical-acceptance.html?review=1#resource-distress-tolerance-p048">Practicing Half-Smiling and Willing Hands, Part 2</a> <small class="bs-review-meta">distress-tolerance-p048 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/self-soothe.html?review=1#resource-distress-tolerance-p018">Distracting with Wise Mind ACCEPTS</a> <small class="bs-review-meta">distress-tolerance-p018 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/self-soothe.html?review=1#resource-distress-tolerance-p020">Self-Soothing</a> <small class="bs-review-meta">distress-tolerance-p020 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/self-soothe.html?review=1#resource-distress-tolerance-p021">Self-Soothing Practice</a> <small class="bs-review-meta">distress-tolerance-p021 - Higher-resolution copy</small></li>
-<li><a href="/learn/cube/self-soothe.html?review=1#resource-distress-tolerance-p022">Distracting with Wise Mind ACCEPTS</a> <small class="bs-review-meta">distress-tolerance-p022 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/stop-crisis-survival.html?review=1#resource-distress-tolerance-p004">When to Use Crisis Survival Skills</a> <small class="bs-review-meta">distress-tolerance-p004 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/stop-crisis-survival.html?review=1#resource-distress-tolerance-p007">STOP Skill</a> <small class="bs-review-meta">distress-tolerance-p007 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/tipp.html?review=1#resource-distress-tolerance-p011">Window of Tolerance</a> <small class="bs-review-meta">distress-tolerance-p011 - Higher-resolution copy</small></li>
-<li><a href="/learn/cube/tipp.html?review=1#resource-distress-tolerance-p012">Changing Your Body Chemistry with TIPP</a> <small class="bs-review-meta">distress-tolerance-p012 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/tipp.html?review=1#resource-distress-tolerance-p013">Using Cold Water, Step by Step</a> <small class="bs-review-meta">distress-tolerance-p013 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/tipp.html?review=1#resource-distress-tolerance-p014">Paired Muscle Relaxation, Step by Step</a> <small class="bs-review-meta">distress-tolerance-p014 - Linehan clean copy</small></li>
-<li><a href="/learn/cube/tipp.html?review=1#resource-distress-tolerance-p016">Changing Body Chemistry with TIPP Skills</a> <small class="bs-review-meta">distress-tolerance-p016 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/improve.html?review=1#resource-distress-tolerance-p025">Improving the Moment</a> <small class="bs-review-meta">distress-tolerance-p025 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/pros-and-cons.html?review=1#resource-distress-tolerance-p030">Pros and Cons</a> <small class="bs-review-meta">distress-tolerance-p030 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/pros-and-cons.html?review=1#resource-distress-tolerance-p031">Pros and Cons: How To</a> <small class="bs-review-meta">distress-tolerance-p031 - Higher-resolution copy</small></li>
+<li><a href="/learn/distress-tolerance/pros-and-cons.html?review=1#resource-distress-tolerance-p032">Pros and Cons of Acting on Crisis Urges</a> <small class="bs-review-meta">distress-tolerance-p032 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p005">Turning the Mind</a> <small class="bs-review-meta">distress-tolerance-p005 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p006">Willingness</a> <small class="bs-review-meta">distress-tolerance-p006 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p008">Turning the Mind, Willingness, and Willfulness</a> <small class="bs-review-meta">distress-tolerance-p008 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p037">Radical Acceptance</a> <small class="bs-review-meta">distress-tolerance-p037 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p038">Radical Acceptance: Factors That Interfere</a> <small class="bs-review-meta">distress-tolerance-p038 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p040">Practicing Radical Acceptance Step by Step</a> <small class="bs-review-meta">distress-tolerance-p040 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p041">Half-Smiling and Willing Hands</a> <small class="bs-review-meta">distress-tolerance-p041 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p046">Radical Acceptance Practice</a> <small class="bs-review-meta">distress-tolerance-p046 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p047">Practicing Half-Smiling and Willing Hands, Part 1</a> <small class="bs-review-meta">distress-tolerance-p047 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/radical-acceptance.html?review=1#resource-distress-tolerance-p048">Practicing Half-Smiling and Willing Hands, Part 2</a> <small class="bs-review-meta">distress-tolerance-p048 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/self-soothe.html?review=1#resource-distress-tolerance-p018">Distracting with Wise Mind ACCEPTS</a> <small class="bs-review-meta">distress-tolerance-p018 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/self-soothe.html?review=1#resource-distress-tolerance-p020">Self-Soothing</a> <small class="bs-review-meta">distress-tolerance-p020 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/self-soothe.html?review=1#resource-distress-tolerance-p021">Self-Soothing Practice</a> <small class="bs-review-meta">distress-tolerance-p021 - Higher-resolution copy</small></li>
+<li><a href="/learn/distress-tolerance/self-soothe.html?review=1#resource-distress-tolerance-p022">Distracting with Wise Mind ACCEPTS</a> <small class="bs-review-meta">distress-tolerance-p022 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/stop-crisis-survival.html?review=1#resource-distress-tolerance-p004">When to Use Crisis Survival Skills</a> <small class="bs-review-meta">distress-tolerance-p004 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/stop-crisis-survival.html?review=1#resource-distress-tolerance-p007">STOP Skill</a> <small class="bs-review-meta">distress-tolerance-p007 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/tipp.html?review=1#resource-distress-tolerance-p011">Window of Tolerance</a> <small class="bs-review-meta">distress-tolerance-p011 - Higher-resolution copy</small></li>
+<li><a href="/learn/distress-tolerance/tipp.html?review=1#resource-distress-tolerance-p012">Changing Your Body Chemistry with TIPP</a> <small class="bs-review-meta">distress-tolerance-p012 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/tipp.html?review=1#resource-distress-tolerance-p013">Using Cold Water, Step by Step</a> <small class="bs-review-meta">distress-tolerance-p013 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/tipp.html?review=1#resource-distress-tolerance-p014">Paired Muscle Relaxation, Step by Step</a> <small class="bs-review-meta">distress-tolerance-p014 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/tipp.html?review=1#resource-distress-tolerance-p016">Changing Body Chemistry with TIPP Skills</a> <small class="bs-review-meta">distress-tolerance-p016 - Linehan clean copy</small></li>
 </ul>
 
 ### Emotion Regulation
@@ -147,8 +147,8 @@ Review controls appear on localhost, 127.0.0.1, or when `?review=1` is present. 
 ### General Skills
 
 <ul class="bs-review-link-list">
-<li><a href="/skill-finder/index.html?review=1#resource-general-p002">Skills &amp; Strengths List</a> <small class="bs-review-meta">general-p002 - Higher-resolution copy</small></li>
-<li><a href="/skill-finder/index.html?review=1#resource-general-p005">Skills Use Guideline</a> <small class="bs-review-meta">general-p005 - Higher-resolution copy</small></li>
+<li><a href="/tool-finder/index.html?review=1#resource-general-p002">Skills &amp; Strengths List</a> <small class="bs-review-meta">general-p002 - Higher-resolution copy</small></li>
+<li><a href="/tool-finder/index.html?review=1#resource-general-p005">Skills Use Guideline</a> <small class="bs-review-meta">general-p005 - Higher-resolution copy</small></li>
 </ul>
 
 ### Goal Setting & Tracking

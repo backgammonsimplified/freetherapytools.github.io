@@ -30,14 +30,14 @@
     {
       "id": "cube-index",
       "name": "Cube track index",
-      "route": "/learn/cube/",
+      "route": "/learn/distress-tolerance/",
       "kind": "learn-index",
       "required_markers": ["data-bs-learn-filters", "data-bs-learn-list"]
     },
     {
       "id": "cube-lesson",
       "name": "Cube lesson",
-      "route": "/learn/cube/what-the-cube-is-asking.html",
+      "route": "/learn/distress-tolerance/what-the-cube-is-asking.html",
       "kind": "learn-lesson",
       "required_markers": ["data-bs-cube-decision"]
     },

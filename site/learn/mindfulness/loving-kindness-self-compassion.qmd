@@ -1,6 +1,6 @@
 ---
-title: "Self-Compassion and Loving Kindness"
-description: "Practise warmth, kindness, and a more supportive response to suffering."
+title: "Positive Self-Talk, Self-Compassion and Loving Kindness"
+description: "Practise fair supportive self-talk, warmth, and caring responses to suffering."
 sidebar: mindfulness
 learn-track: mindfulness
 learn-order: 8
@@ -18,4 +18,20 @@ execute:
   enabled: false
 ---
 
-Loving kindness and self-compassion can be practised through intention, language, and small caring actions.
+## Positive Self-Talk {#positive-self-talk}
+
+Positive self-talk does not require forced optimism. Start by noticing the words, tone, emotion, and body response that show up. Ask what you would say to a close friend in the same circumstances and what relevant evidence the difficult thought leaves out. Aim for a response that is fair, specific, believable, and supportive of effective action.
+
+[Open the Positive Self-Talk tool](/tool-finder/positive-self-talk/). The [CBT balanced-alternatives lesson](/learn/cbt-anxiety/thought-records-part-2.html#balanced-alternatives) remains useful when the thought needs a more structured evidence review.
+
+## Self-Compassion and Loving Kindness
+
+Loving kindness and self-compassion can be practised through intention, language, and small caring actions. They make room for difficulty while reducing avoidable self-attack.
+
+## Source / Printable Copy
+
+[Other mindfulness perspectives: spiritual Wise Mind, loving kindness, and being/doing mind](/resources/mindfulness/mindfulness-other-perspectives-source.pdf)
+
+## Text Version / Adapted Text
+
+The source presents several perspectives rather than one required belief system. Loving-kindness practice intentionally wishes safety, health, ease, and wellbeing for oneself and others. Being Mind emphasizes awareness and presence; Doing Mind emphasizes goal-directed action. Wise Mind can hold both.

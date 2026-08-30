@@ -696,7 +696,7 @@
       <div class="skill-app-card-grid">
         <a class="skill-app-link-button secondary" href="/learn/emotion-regulation/opposite-action.html#problem-solving">Problem Solving</a>
         <a class="skill-app-link-button secondary" href="/learn/emotion-regulation/opposite-action.html#opposite-action">Opposite Action</a>
-        <a class="skill-app-link-button secondary" href="/learn/cube/radical-acceptance.html#willingness">Radical Acceptance / Willingness</a>
+        <a class="skill-app-link-button secondary" href="/learn/distress-tolerance/radical-acceptance.html#willingness">Radical Acceptance / Willingness</a>
         <a class="skill-app-link-button secondary" href="/learn/goal-setting/goal-setting-guidelines.html#smart-goals">SMART Goal Builder</a>
         <a class="skill-app-link-button secondary" href="/learn/wellness/behavioral-activation.html">Behavioural Activation</a>
       </div>`;
