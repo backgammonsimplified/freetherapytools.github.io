@@ -3,7 +3,8 @@ title: "Urge Surfing"
 description: "Practise noticing an urge as a changing experience without automatically acting on it."
 sidebar: learn
 learn-track: wellness
-learn-order: 7
+learn-order: 5
+learn-parent: wellness/maladaptive-coping
 categories:
   - Intermediate
 tags:
@@ -22,6 +23,8 @@ Urge Surfing is a mindfulness-based way of relating to an urge. The purpose is t
 
 An urge can be experienced as changing rather than fixed: sensations and intensity may rise, crest, fall, return, or change shape. “Riding the wave” means allowing the present experience to be there while observing what it does over time. Acceptance here means acknowledging what is present; it does not mean approving of harmful action.
 
+![Urge Surfing diagram showing a trigger, a rising and changing wave, and an eight-step practice sequence.](/resources/wellness/urge-surfing/urge-surfing-wave.png){.img-fluid width="900" fig-alt="Urge Surfing diagram. Urge intensity rises from a trigger, reaches a peak, changes and falls, and may return or shift. The practice sequence is: name the urge, notice context, check intensity, notice the body, notice thoughts and emotions, anchor attention, ride and allow time, then check again and reflect."}
+
 ## A practice sequence
 
 1. **Name the urge.** Complete the sentence, “I have the urge to…”
@@ -39,7 +42,7 @@ If an urge involves immediate danger to you or another person, prioritize safety
 
 ## Source / printable copies
 
-- [Therapist Aid: Urge Surfing Handout (local printable copy)](/resources/wellness/urge-surfing/therapist-aid-urge-surfing-handout.pdf) — [original provider page](https://www.therapistaid.com/worksheets/urge-surfing-handout)
+- [Therapist Aid: Urge Surfing Handout (view or download the local printable copy)](/resources/wellness/urge-surfing/therapist-aid-urge-surfing-handout.pdf) — [original provider page](https://www.therapistaid.com/worksheets/urge-surfing-handout)
 - [Carepatron: Urge Surfing Worksheet (local printable copy)](/resources/wellness/urge-surfing/carepatron-urge-surfing-worksheet.pdf) — [original provider](https://www.carepatron.com/files/urge-surfing-worksheet.pdf)
 - [DBT practice worksheet (local printable copy)](/resources/wellness/urge-surfing/dbt-urge-surfing-practice.pdf) — [original provider](https://dialecticalbehaviortherapy.com/distress-tolerance/urge-surfing/)
 - [Choosing Therapy: Urge Surfing Worksheet (local printable copy)](/resources/wellness/urge-surfing/choosing-therapy-urge-surfing-worksheet.pdf) — [original provider](https://www.choosingtherapy.com/therapy-worksheets/urge-surfing-worksheet/)

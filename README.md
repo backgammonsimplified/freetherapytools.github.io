@@ -3367,3 +3367,29 @@ alphabetical and use a responsive multi-column grid (two columns at phone width)
 The old `/learn/goal-setting/strengths.html` URL is a static compatibility redirect
 to that anchor. Values & Valued Action and the two tracking lessons are renumbered
 2–4, and catalogue/source-inventory links now use the combined lesson.
+
+## 87. Urge Surfing Learn placement and illustration (2026-08-30)
+
+The Wellness lesson formerly titled `Addictions` is now **Facing Urges,
+Addictions and Maladaptive Coping Behaviours**. Urge Surfing is lesson 5,
+immediately after and nested beneath that lesson in the generated Learn sidebar;
+`learn-parent: wellness/maladaptive-coping` is the source metadata for this
+relationship. Balanced Eating and Medication & Doctor's Visits follow as lessons
+6 and 7. The routes remain `/learn/wellness/maladaptive-coping.html` and
+`/learn/wellness/urge-surfing.html`.
+
+The shared local illustration is
+`site/resources/wellness/urge-surfing/urge-surfing-wave.png`. Both the Urge
+Surfing Learn page and `/tool-finder/urge-surfing/` render it responsively with
+descriptive alternative text. The supplied design was retained while its
+unsupported fixed-time guarantee was replaced with the curriculum's neutral
+rise/peak/fall/return-or-shift wording and the existing immediate-danger scope
+note. The Therapist Aid PDF remains a clearly attributed local printable-copy
+link on the Learn page; it is not embedded in an iframe.
+
+Inside the Urge Surfing tool, a compact accessible wave labels Trigger, Rise,
+Peak, and Fall above the practice tracking controls. The separate progress graph
+uses minutes since the urge started on the x-axis and user-entered intensity from
+0–100 on the y-axis. Initial, later, and optional added checkpoints update the
+graph immediately, remain in the shared schema-v1 progress state, and are listed
+in readable exports. The graph makes no assumption that an urge must decrease.

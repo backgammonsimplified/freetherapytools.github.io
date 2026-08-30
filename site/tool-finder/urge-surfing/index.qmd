@@ -9,6 +9,8 @@ execute: {enabled: false}
 
 This original exercise combines the overlapping observation, body-awareness, intensity-check, breathing-anchor, practice, and reflection structure in the linked source worksheets. [Learn the skill first](/learn/wellness/urge-surfing.html).
 
+![Urge Surfing diagram showing a trigger, a rising and changing wave, and an eight-step practice sequence.](/resources/wellness/urge-surfing/urge-surfing-wave.png){.img-fluid width="900" fig-alt="Urge Surfing diagram. Urge intensity rises from a trigger, reaches a peak, changes and falls, and may return or shift. The practice sequence is: name the urge, notice context, check intensity, notice the body, notice thoughts and emotions, anchor attention, ride and allow time, then check again and reflect."}
+
 ::: {#urge-surfing-app .skill-app data-quick-app="urge-surfing"}
 Loading Urge Surfing…
 :::

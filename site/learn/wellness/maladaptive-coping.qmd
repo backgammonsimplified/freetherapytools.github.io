@@ -1,6 +1,6 @@
 ---
-title: "Addictions"
-description: "Understand change, reduce harm, and notice coping patterns that create longer-term costs."
+title: "Facing Urges, Addictions and Maladaptive Coping Behaviours"
+description: "Understand urges and change, reduce harm, and notice coping patterns that create longer-term costs."
 sidebar: learn
 learn-track: wellness
 learn-order: 4

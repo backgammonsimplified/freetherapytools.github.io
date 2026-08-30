@@ -2428,10 +2428,37 @@ button.values-inline-choice:hover {
 .therapy-audio-block { margin: 1rem 0; padding: 1rem; border: 1px solid #cbd6dc; border-radius: .6rem; background: #f8fafb; }
 .therapy-audio-block audio { display: block; width: 100%; max-width: 36rem; }
 .therapy-audio-source { overflow-wrap: anywhere; font-size: .9rem; }
-.urge-wave { margin: 1rem 0; padding: 1rem; border-radius: .7rem; background: linear-gradient(135deg, #edf8fb, #f5f0fb); overflow: hidden; }
-.urge-wave > span { display: block; font-size: 1.25rem; font-weight: 800; letter-spacing: .06em; }
+.urge-wave { margin: 1rem 0; padding: clamp(.5rem, 2vw, 1rem); border-radius: .7rem; background: linear-gradient(135deg, #edf8fb, #f5f0fb); overflow: hidden; }
+.urge-wave svg { display: block; width: 100%; height: auto; }
+.urge-wave figcaption { margin-top: .35rem; color: var(--bs-text-muted, #5f5954); font-size: .9rem; }
+.urge-wave-fill { fill: url(#urge-wave-fill); opacity: .9; }
+.urge-wave-line { fill: none; stroke: #174f7a; stroke-width: 7; stroke-linecap: round; }
+.urge-wave-marker circle { fill: #d78b00; stroke: #173b63; stroke-width: 3; }
+.urge-wave-marker text { fill: #173b63; font-size: 20px; font-weight: 800; }
 .urge-timer { margin: 1rem 0; padding: .9rem; border: 1px solid #cbd6dc; border-radius: .6rem; }
 .urge-timer output { display: block; margin: .5rem 0; font-size: 2rem; font-variant-numeric: tabular-nums; }
+.urge-rating-pair,
+.urge-checkpoint-panel { margin: 1rem 0; padding: 1rem; border: 1px solid #cbd6dc; border-radius: .7rem; background: #fff; }
+.urge-rating-pair h3,
+.urge-checkpoint-panel h3 { margin-top: 0; }
+.urge-checkpoint-list { display: grid; gap: .65rem; margin: .8rem 0; }
+.urge-checkpoint { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; gap: .65rem; align-items: end; padding: .75rem; border-radius: .55rem; background: #f4f7f9; }
+.urge-checkpoint label { margin: 0; }
+.urge-checkpoint input { width: 100%; }
+.urge-graph-wrap { margin-top: 1rem; min-width: 0; }
+.urge-progress-graph { display: block; width: 100%; height: auto; max-height: 31rem; overflow: visible; }
+.urge-progress-graph text { fill: #34465a; font-size: 14px; }
+.urge-graph-grid { stroke: #d7e0e7; stroke-width: 1; }
+.urge-graph-axis { stroke: #34465a; stroke-width: 2; }
+.urge-graph-axis-label { font-size: 17px !important; font-weight: 800; }
+.urge-graph-line { fill: none; stroke: #2776aa; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.urge-graph-point { fill: #d78b00; stroke: #173b63; stroke-width: 3; }
+.urge-graph-data { columns: 2 14rem; margin-bottom: 0; }
+@media (max-width: 560px) {
+  .urge-checkpoint { grid-template-columns: 1fr 1fr; }
+  .urge-checkpoint button { grid-column: 1 / -1; justify-self: start; }
+  .urge-graph-data { columns: 1; }
+}
 @media (prefers-reduced-motion: reduce) { .urge-wave, .urge-wave * { animation: none !important; transition: none !important; } }
 .skill-guided-layout.is-dime-linear { grid-template-columns: minmax(0, 1fr); }
 .skill-guided-step.is-dime-complete { border-color: #a7b0b7; border-left-color: #7a858d; background: #eef1f3; }

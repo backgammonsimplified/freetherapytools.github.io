@@ -123,6 +123,35 @@ class ToolFinderPassTests(unittest.TestCase):
         self.assertNotRegex(pages, r"<audio[^>]+src=[\"']https?://")
         self.assertNotIn("file:///", pages)
 
+    def test_urge_surfing_image_and_learn_grouping(self):
+        image = SITE / "resources/wellness/urge-surfing/urge-surfing-wave.png"
+        lesson_path = SITE / "learn/wellness/urge-surfing.qmd"
+        tool_path = SITE / "tool-finder/urge-surfing/index.qmd"
+        parent_path = SITE / "learn/wellness/maladaptive-coping.qmd"
+        lesson = lesson_path.read_text(encoding="utf-8")
+        tool = tool_path.read_text(encoding="utf-8")
+        parent = parent_path.read_text(encoding="utf-8")
+        image_href = "/resources/wellness/urge-surfing/urge-surfing-wave.png"
+        self.assertTrue(image.exists())
+        self.assertIn(image_href, lesson)
+        self.assertIn(image_href, tool)
+        self.assertNotIn("<iframe", lesson.casefold())
+        self.assertNotIn("<iframe", tool.casefold())
+        self.assertIn("therapist-aid-urge-surfing-handout.pdf", lesson)
+        self.assertIn("https://www.therapistaid.com/worksheets/urge-surfing-handout", lesson)
+        self.assertIn('title: "Facing Urges, Addictions and Maladaptive Coping Behaviours"', parent)
+        self.assertIn("learn-parent: wellness/maladaptive-coping", lesson)
+        quick = (SITE / "assets/skill-quick-tools.js").read_text(encoding="utf-8")
+        for label in ("Trigger", "Rise", "Peak", "Fall", "Minutes since urge started", "Urge intensity"):
+            self.assertIn(label, quick)
+        self.assertIn("data-add-urge-checkpoint", quick)
+        self.assertIn("urgeGraphPoints", quick)
+        navigation = (SITE / "_learn-navigation.yml").read_text(encoding="utf-8")
+        self.assertRegex(
+            navigation,
+            r'section: "4\. Facing Urges, Addictions and Maladaptive Coping Behaviours"[\s\S]+contents:[\s\S]+text: "5\. Urge Surfing"',
+        )
+
     def test_mindfulness_audit_complete(self):
         audit = json.loads((SITE / "data/mindfulness-source-audit.json").read_text(encoding="utf-8"))
         self.assertEqual(audit["scope"], {"first_page": 63, "last_page": 132, "identified_pages": 70, "mapped_pages": 63, "excluded_pages": 7})

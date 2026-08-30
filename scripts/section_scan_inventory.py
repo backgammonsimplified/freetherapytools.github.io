@@ -315,7 +315,7 @@ SPECS["wellness"] = [
     row("worksheet", "wellness-bca", "Behaviour Chain Analysis Worksheet, Part 3", "worksheet"),
     row("worksheet", "wellness-bca", "Behaviour Chain Analysis Map", "worksheet"),
     row("worksheet", "wellness-bca", "Missing-Links Analysis", "worksheet"),
-    divider("Session 4: Addictions"),
+    divider("Session 4: Facing Urges, Addictions and Maladaptive Coping Behaviours"),
     row("reference", "wellness-addictions", "Effects of Substance Use", "reference"),
     row("reference", "wellness-addictions", "Signs of Maladaptive Coping", "reference"),
     row("content-handout", "wellness-addictions", "Stages of Change", "handout"),

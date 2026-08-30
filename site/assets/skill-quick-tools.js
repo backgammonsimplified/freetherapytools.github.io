@@ -367,24 +367,88 @@
     register(root, { toolId: "stages-of-change", toolTitle: "Stages of Change", route: Progress.TOOL_ROUTES["stages-of-change"], getState: () => state, setState: (next) => { state = clone(next); render(); }, validateState: (next) => isObject(next) && (next.stage === "" || stages.includes(next.stage)) && fields.every(([key]) => typeof next[key] === "string"), getReadableSummary: (next) => Progress.nonEmptySections("Stages of Change", [["Current readiness description",next.stage], ...fields.map(([key,label]) => [label,next[key]])]) });
   }
 
+  const validUrgeRating = (value) => typeof value === "string" && (value === "" || (/^\d{1,3}$/.test(value) && Number(value) >= 0 && Number(value) <= 100));
+  const validUrgeMinutes = (value) => typeof value === "string" && (value === "" || (/^\d{1,4}(?:\.\d{1,2})?$/.test(value) && Number(value) >= 0 && Number(value) <= 1440));
+  function validUrgeCheckpoint(point) {
+    return isObject(point) && typeof point.id === "string" && validUrgeMinutes(point.minutes) && validUrgeRating(point.intensity);
+  }
+  function urgeGraphPoints(input) {
+    const points = [];
+    if (validUrgeRating(input?.intensity) && input.intensity !== "") {
+      const minutes = validUrgeMinutes(input.initialMinutes) && input.initialMinutes !== "" ? Number(input.initialMinutes) : 0;
+      points.push({ minutes, intensity: Number(input.intensity), label: "Initial" });
+    }
+    if (Array.isArray(input?.checkpoints)) {
+      input.checkpoints.forEach((point, index) => {
+        if (validUrgeCheckpoint(point) && point.minutes !== "" && point.intensity !== "") {
+          points.push({ minutes: Number(point.minutes), intensity: Number(point.intensity), label: `Checkpoint ${index + 1}` });
+        }
+      });
+    }
+    if (validUrgeMinutes(input?.afterMinutes) && input.afterMinutes !== "" && validUrgeRating(input?.afterIntensity) && input.afterIntensity !== "") {
+      points.push({ minutes: Number(input.afterMinutes), intensity: Number(input.afterIntensity), label: "Later check" });
+    }
+    return points.sort((left, right) => left.minutes - right.minutes);
+  }
+  function urgeGraphMarkup(input) {
+    const points = urgeGraphPoints(input);
+    const maxMinutes = Math.max(5, ...points.map((point) => point.minutes));
+    const left = 64;
+    const right = 610;
+    const top = 22;
+    const bottom = 252;
+    const x = (minutes) => left + ((right - left) * minutes / maxMinutes);
+    const y = (intensity) => bottom - ((bottom - top) * intensity / 100);
+    const grid = [0,25,50,75,100].map((value) => `<g><line x1="${left}" y1="${y(value)}" x2="${right}" y2="${y(value)}" class="urge-graph-grid"/><text x="${left - 10}" y="${y(value) + 5}" text-anchor="end">${value}</text></g>`).join("");
+    const xTicks = [0, maxMinutes / 2, maxMinutes].map((value) => `<g><line x1="${x(value)}" y1="${bottom}" x2="${x(value)}" y2="${bottom + 7}" class="urge-graph-axis"/><text x="${x(value)}" y="${bottom + 24}" text-anchor="middle">${Number(value.toFixed(2))}</text></g>`).join("");
+    const line = points.length > 1 ? `<polyline class="urge-graph-line" points="${points.map((point) => `${x(point.minutes)},${y(point.intensity)}`).join(" ")}"/>` : "";
+    const dots = points.map((point) => `<circle class="urge-graph-point" cx="${x(point.minutes)}" cy="${y(point.intensity)}" r="6"><title>${escapeHtml(point.label)}: ${point.minutes} minutes, intensity ${point.intensity} out of 100</title></circle>`).join("");
+    const summary = points.length
+      ? `<ol class="urge-graph-data">${points.map((point) => `<li>${escapeHtml(point.label)}: ${point.minutes} minutes — ${point.intensity}/100</li>`).join("")}</ol>`
+      : '<p class="skill-app-field-help">Enter an intensity and time to add the first point to the graph.</p>';
+    return `<svg class="urge-progress-graph" viewBox="0 0 680 320" role="img" aria-labelledby="urge-progress-title urge-progress-desc"><title id="urge-progress-title">Urge intensity over time</title><desc id="urge-progress-desc">A graph with minutes since the urge started on the horizontal axis and urge intensity from zero to one hundred on the vertical axis.</desc>${grid}<line x1="${left}" y1="${top}" x2="${left}" y2="${bottom}" class="urge-graph-axis"/><line x1="${left}" y1="${bottom}" x2="${right}" y2="${bottom}" class="urge-graph-axis"/>${xTicks}${line}${dots}<text class="urge-graph-axis-label" x="${(left + right) / 2}" y="310" text-anchor="middle">Minutes since urge started</text><text class="urge-graph-axis-label" x="18" y="${(top + bottom) / 2}" text-anchor="middle" transform="rotate(-90 18 ${(top + bottom) / 2})">Urge intensity</text></svg>${summary}`;
+  }
+
+  function urgeWaveMarkup() {
+    return `<figure class="urge-wave"><svg viewBox="0 0 680 250" role="img" aria-labelledby="urge-wave-title urge-wave-desc"><title id="urge-wave-title">The shape of an urge wave</title><desc id="urge-wave-desc">A wave starts at a trigger, rises, reaches a peak, and falls. An urge may later return or shift.</desc><defs><linearGradient id="urge-wave-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4f9ed8"/><stop offset="1" stop-color="#d9eefb"/></linearGradient></defs><path class="urge-wave-fill" d="M45 205 C145 202 165 174 225 125 C285 76 330 45 385 58 C445 73 455 165 540 195 L540 215 L45 215 Z"/><path class="urge-wave-line" d="M45 205 C145 202 165 174 225 125 C285 76 330 45 385 58 C445 73 455 165 540 195"/><g class="urge-wave-marker"><circle cx="55" cy="203" r="7"/><text x="55" y="235" text-anchor="middle">Trigger</text></g><g class="urge-wave-marker"><circle cx="225" cy="125" r="7"/><text x="205" y="105" text-anchor="middle">Rise</text></g><g class="urge-wave-marker"><circle cx="385" cy="58" r="7"/><text x="385" y="34" text-anchor="middle">Peak</text></g><g class="urge-wave-marker"><circle cx="505" cy="180" r="7"/><text x="530" y="160" text-anchor="middle">Fall</text></g></svg><figcaption>An urge may rise, peak, fall, return, or shift. The shape is a metaphor, not a promised timeline.</figcaption></figure>`;
+  }
+
   function initUrgeSurfing(root) {
     const fields = [["urge","I have the urge to…"],["trigger","Context or trigger"],["body","Body sensations"],["thoughts","Thoughts, images, emotions, or stories"],["observe","How I can acknowledge this urge without treating it as a command"],["noticed","What I noticed"],["changed","How the urge changed, if at all"],["helped","What helped me stay with it"],["acted","Did I act on it? What happened?"],["nextTime","What I would try next time"],["nextAction","Optional safe or value-aligned next action"]];
-    let state = { ...Object.fromEntries(fields.map(([key]) => [key, ""])), intensity: "", afterIntensity: "", checkpoints: [], timer: { duration: 120, remaining: 120, running: false } };
+    const initialState = { ...Object.fromEntries(fields.map(([key]) => [key, ""])), intensity: "", initialMinutes: "0", afterIntensity: "", afterMinutes: "", checkpoints: [], timer: { duration: 120, remaining: 120, running: false } };
+    let state = clone(initialState);
     let timerId = null;
+    let checkpointCounter = 0;
     function stopTimer() { if (timerId) global.clearInterval(timerId); timerId = null; state.timer.running = false; }
+    function nextCheckpointId() {
+      checkpointCounter += 1;
+      return `checkpoint-${checkpointCounter}`;
+    }
+    function updateGraph() {
+      const graph = root.querySelector("[data-urge-graph]");
+      if (graph) graph.innerHTML = urgeGraphMarkup(state);
+    }
     function render() {
       const before = fields.slice(0,5).map(([key,label]) => `<label for="urge-${key}">${escapeHtml(label)}</label><textarea id="urge-${key}" data-urge-field="${key}">${escapeHtml(state[key])}</textarea>`).join("");
       const after = fields.slice(5).map(([key,label]) => `<label for="urge-${key}">${escapeHtml(label)}</label><textarea id="urge-${key}" data-urge-field="${key}">${escapeHtml(state[key])}</textarea>`).join("");
-      root.innerHTML = pageShell("Urge Surfing", "Notice the urge, anchor attention, and ride the wave without treating it as a command.", `${before}<label for="urge-intensity">Current intensity (0–100)</label><input id="urge-intensity" type="number" min="0" max="100" inputmode="numeric" data-urge-rating="intensity" value="${escapeHtml(state.intensity)}"><section class="urge-wave" aria-label="Accessible wave illustration"><span aria-hidden="true">rise → crest → change</span><p>Urges can change like a wave. Notice the experience, allow time, and return to a comfortable breath as an anchor. You do not have to use the timer.</p></section><div class="urge-timer"><label for="urge-duration">Optional practice timer</label><select id="urge-duration" data-urge-duration>${[120,180,240,300].map((seconds) => `<option value="${seconds}" ${state.timer.duration === seconds ? "selected" : ""}>${seconds/60} minutes</option>`).join("")}</select><output aria-live="polite" data-urge-clock>${Math.floor(state.timer.remaining/60)}:${String(state.timer.remaining%60).padStart(2,"0")}</output><div class="skill-app-actions"><button type="button" data-urge-start>Start</button><button type="button" class="secondary" data-urge-pause>Pause</button><button type="button" class="secondary" data-urge-reset>Reset</button></div></div><label for="urge-after">Check the wave again (0–100, optional)</label><input id="urge-after" type="number" min="0" max="100" inputmode="numeric" data-urge-rating="afterIntensity" value="${escapeHtml(state.afterIntensity)}">${after}<p class="skill-app-note">If an urge involves immediate danger to you or another person, prioritize safety and appropriate real-world support rather than relying on this exercise alone.</p>`, learnLinks([["Learn Urge Surfing", "/learn/wellness/urge-surfing.html"],["Mindfulness of Emotions", "/learn/mindfulness/mindfulness-of-emotions.html#emotion-surfing"]]));
+      const checkpoints = state.checkpoints.map((point, index) => `<div class="urge-checkpoint" data-urge-checkpoint="${escapeHtml(point.id)}"><label for="urge-minutes-${escapeHtml(point.id)}">Minutes since start<input id="urge-minutes-${escapeHtml(point.id)}" type="number" min="0" max="1440" step="0.5" inputmode="decimal" data-urge-checkpoint-field="minutes" value="${escapeHtml(point.minutes)}"></label><label for="urge-point-${escapeHtml(point.id)}">Intensity (0–100)<input id="urge-point-${escapeHtml(point.id)}" type="number" min="0" max="100" inputmode="numeric" data-urge-checkpoint-field="intensity" value="${escapeHtml(point.intensity)}"></label><button type="button" class="secondary" data-remove-urge-checkpoint aria-label="Remove checkpoint ${index + 1}">Remove</button></div>`).join("");
+      root.innerHTML = pageShell("Urge Surfing", "Notice the urge, anchor attention, and ride the wave without treating it as a command.", `${before}${urgeWaveMarkup()}<section class="urge-rating-pair" aria-labelledby="urge-initial-heading"><h3 id="urge-initial-heading">First intensity check</h3><label for="urge-initial-minutes">Minutes since the urge started</label><input id="urge-initial-minutes" type="number" min="0" max="1440" step="0.5" inputmode="decimal" data-urge-minutes="initialMinutes" value="${escapeHtml(state.initialMinutes)}"><label for="urge-intensity">Urge intensity (0–100)</label><input id="urge-intensity" type="number" min="0" max="100" inputmode="numeric" data-urge-rating="intensity" value="${escapeHtml(state.intensity)}"></section><div class="urge-timer"><label for="urge-duration">Optional practice timer</label><select id="urge-duration" data-urge-duration>${[120,180,240,300].map((seconds) => `<option value="${seconds}" ${state.timer.duration === seconds ? "selected" : ""}>${seconds/60} minutes</option>`).join("")}</select><output aria-live="polite" data-urge-clock>${Math.floor(state.timer.remaining/60)}:${String(state.timer.remaining%60).padStart(2,"0")}</output><div class="skill-app-actions"><button type="button" data-urge-start>Start</button><button type="button" class="secondary" data-urge-pause>Pause</button><button type="button" class="secondary" data-urge-reset>Reset</button></div></div><section class="urge-checkpoint-panel" aria-labelledby="urge-tracker-heading"><h3 id="urge-tracker-heading">Track urge intensity over time</h3><p>Add as many observations as are useful. The graph updates from the minutes and intensity you enter; it does not assume that intensity must go down.</p><div class="urge-checkpoint-list" data-urge-checkpoints>${checkpoints}</div><button type="button" class="secondary" data-add-urge-checkpoint>Add a checkpoint</button><div class="urge-graph-wrap" data-urge-graph>${urgeGraphMarkup(state)}</div></section><section class="urge-rating-pair" aria-labelledby="urge-later-heading"><h3 id="urge-later-heading">Later intensity check</h3><label for="urge-after-minutes">Minutes since the urge started</label><input id="urge-after-minutes" type="number" min="0" max="1440" step="0.5" inputmode="decimal" data-urge-minutes="afterMinutes" value="${escapeHtml(state.afterMinutes)}"><label for="urge-after">Urge intensity (0–100, optional)</label><input id="urge-after" type="number" min="0" max="100" inputmode="numeric" data-urge-rating="afterIntensity" value="${escapeHtml(state.afterIntensity)}"></section>${after}<p class="skill-app-note">If an urge involves immediate danger to you or another person, prioritize safety and appropriate real-world support rather than relying on this exercise alone.</p>`, learnLinks([["Learn Urge Surfing", "/learn/wellness/urge-surfing.html"],["Mindfulness of Emotions", "/learn/mindfulness/mindfulness-of-emotions.html#emotion-surfing"]]));
       root.querySelectorAll("[data-urge-field]").forEach((field) => field.addEventListener("input", () => { state[field.dataset.urgeField] = field.value; }));
-      root.querySelectorAll("[data-urge-rating]").forEach((field) => field.addEventListener("input", () => { state[field.dataset.urgeRating] = field.value; }));
+      root.querySelectorAll("[data-urge-rating]").forEach((field) => field.addEventListener("input", () => { state[field.dataset.urgeRating] = field.value; updateGraph(); }));
+      root.querySelectorAll("[data-urge-minutes]").forEach((field) => field.addEventListener("input", () => { state[field.dataset.urgeMinutes] = field.value; updateGraph(); }));
+      root.querySelectorAll("[data-urge-checkpoint]").forEach((row) => {
+        const point = state.checkpoints.find((item) => item.id === row.dataset.urgeCheckpoint);
+        row.querySelectorAll("[data-urge-checkpoint-field]").forEach((field) => field.addEventListener("input", () => { point[field.dataset.urgeCheckpointField] = field.value; updateGraph(); }));
+        row.querySelector("[data-remove-urge-checkpoint]").addEventListener("click", () => { state.checkpoints = state.checkpoints.filter((item) => item.id !== row.dataset.urgeCheckpoint); render(); });
+      });
+      root.querySelector("[data-add-urge-checkpoint]").addEventListener("click", () => { state.checkpoints.push({ id: nextCheckpointId(), minutes: "", intensity: "" }); render(); });
       root.querySelector("[data-urge-duration]").addEventListener("change", (event) => { stopTimer(); state.timer.duration = Number(event.target.value); state.timer.remaining = state.timer.duration; render(); });
       root.querySelector("[data-urge-start]").addEventListener("click", () => { if (state.timer.running) return; state.timer.running = true; timerId = global.setInterval(() => { state.timer.remaining = Math.max(0, state.timer.remaining - 1); const out = root.querySelector("[data-urge-clock]"); if (out) out.textContent = `${Math.floor(state.timer.remaining/60)}:${String(state.timer.remaining%60).padStart(2,"0")}`; if (!state.timer.remaining) stopTimer(); }, 1000); });
       root.querySelector("[data-urge-pause]").addEventListener("click", stopTimer);
       root.querySelector("[data-urge-reset]").addEventListener("click", () => { stopTimer(); state.timer.remaining = state.timer.duration; render(); });
     }
     render();
-    register(root, { toolId: "urge-surfing", toolTitle: "Urge Surfing", route: Progress.TOOL_ROUTES["urge-surfing"], getState: () => ({...state, timer: {...state.timer, running: false}}), setState: (next) => { stopTimer(); state = clone(next); state.timer.running = false; render(); }, validateState: (next) => isObject(next) && fields.every(([key]) => typeof next[key] === "string") && [next.intensity,next.afterIntensity].every((value) => value === "" || (/^\d{1,3}$/.test(value) && Number(value) >= 0 && Number(value) <= 100)) && isObject(next.timer) && [120,180,240,300].includes(next.timer.duration) && Number.isInteger(next.timer.remaining) && next.timer.remaining >= 0 && next.timer.remaining <= next.timer.duration, getReadableSummary: (next) => Progress.nonEmptySections("Urge Surfing", [["Initial intensity",next.intensity && `${next.intensity}/100`], ...fields.map(([key,label]) => [label,next[key]]), ["Later intensity",next.afterIntensity && `${next.afterIntensity}/100`]]) });
+    register(root, { toolId: "urge-surfing", toolTitle: "Urge Surfing", route: Progress.TOOL_ROUTES["urge-surfing"], getState: () => ({...state, timer: {...state.timer, running: false}}), setState: (next) => { stopTimer(); state = { ...clone(initialState), ...clone(next), initialMinutes: typeof next.initialMinutes === "string" ? next.initialMinutes : "0", afterMinutes: typeof next.afterMinutes === "string" ? next.afterMinutes : "", checkpoints: Array.isArray(next.checkpoints) ? clone(next.checkpoints) : [] }; checkpointCounter = state.checkpoints.reduce((largest, point) => Math.max(largest, Number(String(point.id).match(/\d+$/)?.[0] || 0)), 0); state.timer.running = false; render(); }, validateState: (next) => isObject(next) && fields.every(([key]) => typeof next[key] === "string") && [next.intensity,next.afterIntensity].every(validUrgeRating) && (next.initialMinutes === undefined || validUrgeMinutes(next.initialMinutes)) && (next.afterMinutes === undefined || validUrgeMinutes(next.afterMinutes)) && Array.isArray(next.checkpoints) && next.checkpoints.every(validUrgeCheckpoint) && isObject(next.timer) && [120,180,240,300].includes(next.timer.duration) && Number.isInteger(next.timer.remaining) && next.timer.remaining >= 0 && next.timer.remaining <= next.timer.duration, getReadableSummary: (next) => Progress.nonEmptySections("Urge Surfing", [["Initial intensity",next.intensity && `${next.intensity}/100 at ${next.initialMinutes || 0} minutes`], ["Intensity checkpoints", urgeGraphPoints(next).map((point) => `${point.label}: ${point.intensity}/100 at ${point.minutes} minutes`)], ...fields.map(([key,label]) => [label,next[key]]), ["Later intensity",next.afterIntensity && `${next.afterIntensity}/100${next.afterMinutes ? ` at ${next.afterMinutes} minutes` : ""}`]]) });
   }
 
   const INITIALIZERS = {
@@ -410,7 +474,7 @@
     }
   }
 
-  const api = { FIVE_FACTORS, CASE_MAP_FIELDS, THINKING_TRAPS, THOUGHT_FIELDS, CANONICAL_EMOTION_IDS, GROUNDING_STEPS, BoxBreathingMachine, initialThoughtRecord, normalizeThoughtRecord, validateThoughtRecordState, thoughtRecordSummarySections, gratitudeSummarySections };
+  const api = { FIVE_FACTORS, CASE_MAP_FIELDS, THINKING_TRAPS, THOUGHT_FIELDS, CANONICAL_EMOTION_IDS, GROUNDING_STEPS, BoxBreathingMachine, initialThoughtRecord, normalizeThoughtRecord, validateThoughtRecordState, thoughtRecordSummarySections, gratitudeSummarySections, validUrgeCheckpoint, urgeGraphPoints, urgeGraphMarkup };
   global.TherapyQuickTools = api;
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   if (typeof document !== "undefined") {

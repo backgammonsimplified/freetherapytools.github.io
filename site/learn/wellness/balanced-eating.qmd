@@ -3,7 +3,7 @@ title: "Balanced Eating"
 description: "Use regular, flexible nourishment to support physical and emotional stability."
 sidebar: learn
 learn-track: wellness
-learn-order: 5
+learn-order: 6
 categories:
   - Beginner
 tags:

@@ -198,11 +198,13 @@ class NavigationParityTests(unittest.TestCase):
         for page in tool_pages:
             self.assertIn(f"tool-finder/{page.parent.name}/index.qmd", self.navigation)
         for text in (
-            'section: "Interactive Tools"',
-            'section: "Learn"',
-            'text: "DBT Skills"',
-            'text: "CBT Skills"',
-            'text: "Mindfulness"',
+            'section: "Goal Setting"',
+            'section: "Distress Tolerance"',
+            'section: "Mindfulness"',
+            'section: "Emotional Regulation"',
+            'section: "CBT and Managing Anxiety"',
+            'section: "Interpersonal Effectiveness"',
+            'section: "Wellness (Actions & Patterns)"',
         ):
             self.assertIn(text, self.navigation)
 

@@ -135,14 +135,15 @@ website:
               href: learn/wellness/behavioral-activation.qmd
             - text: "3. Behaviour Chain Analysis and Missing Links"
               href: learn/wellness/behavior-chain-missing-links.qmd
-            - text: "4. Addictions"
+            - section: "4. Facing Urges, Addictions and Maladaptive Coping Behaviours"
               href: learn/wellness/maladaptive-coping.qmd
-            - text: "5. Balanced Eating"
+              contents:
+                - text: "5. Urge Surfing"
+                  href: learn/wellness/urge-surfing.qmd
+            - text: "6. Balanced Eating"
               href: learn/wellness/balanced-eating.qmd
-            - text: "6. Medication & Doctor's Visits"
+            - text: "7. Medication & Doctor's Visits"
               href: learn/wellness/medication-doctor-visits.qmd
-            - text: "7. Urge Surfing"
-              href: learn/wellness/urge-surfing.qmd
         - section: "Emotion Regulation"
           href: learn/emotion-regulation/index.qmd
           contents:

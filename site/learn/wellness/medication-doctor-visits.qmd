@@ -3,7 +3,7 @@ title: "Medication & Doctor's Visits"
 description: "Prepare for appointments and track medication information clearly."
 sidebar: learn
 learn-track: wellness
-learn-order: 6
+learn-order: 7
 categories:
   - Beginner
 tags:

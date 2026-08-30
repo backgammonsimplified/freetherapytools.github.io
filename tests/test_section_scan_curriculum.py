@@ -140,10 +140,10 @@ class SectionScanCurriculumTests(unittest.TestCase):
                     "Sleep",
                     "Behaviour Activation",
                     "Behaviour Chain Analysis and Missing Links",
-                    "Addictions",
+                    "Facing Urges, Addictions and Maladaptive Coping Behaviours",
+                    "Urge Surfing",
                     "Balanced Eating",
                     "Medication & Doctor's Visits",
-                    "Urge Surfing",
                 ],
                 "emotion-regulation": [
                     "What Emotions Do for You",

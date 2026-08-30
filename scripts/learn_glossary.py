@@ -894,6 +894,7 @@ def discover_lessons() -> list[dict[str, object]]:
         )
 
         lesson: dict[str, object] = {
+            "id": relative.with_suffix("").as_posix(),
             "path": path,
             "relative_path": relative.as_posix(),
             "source_path": path.relative_to(SITE_ROOT).as_posix(),
@@ -902,6 +903,13 @@ def discover_lessons() -> list[dict[str, object]]:
             "track_id": track_id.strip(),
             "order": order,
         }
+        parent = complete_metadata.get("learn-parent")
+        if parent is not None:
+            if not isinstance(parent, str) or not parent.strip():
+                raise ValidationError(
+                    f"Lesson {relative.as_posix()} learn-parent must be a lesson id"
+                )
+            lesson["parent_id"] = parent.strip()
         description = complete_metadata.get("description")
         if not isinstance(description, str) or not description.strip():
             raise ValidationError(
@@ -961,6 +969,24 @@ def build_curriculum(
             raise ValidationError(
                 f"Learn track {track['id']!r} lesson orders must be contiguous from 1"
             )
+        lessons_by_id = {str(lesson["id"]): lesson for lesson in track_lessons}
+        for lesson in track_lessons:
+            parent_id = lesson.get("parent_id")
+            if parent_id is None:
+                continue
+            parent = lessons_by_id.get(str(parent_id))
+            if parent is None:
+                raise ValidationError(
+                    f"Lesson {lesson['relative_path']} uses unknown learn-parent {parent_id!r}"
+                )
+            if parent.get("parent_id") is not None:
+                raise ValidationError(
+                    f"Lesson {lesson['relative_path']} cannot nest below a nested lesson"
+                )
+            if int(lesson["order"]) != int(parent["order"]) + 1:
+                raise ValidationError(
+                    f"Lesson {lesson['relative_path']} must immediately follow its learn-parent"
+                )
         curriculum.append({**track, "lessons": track_lessons})
     return curriculum
 
@@ -1550,15 +1576,41 @@ def build_navigation_yaml(curriculum: list[dict[str, object]]) -> str:
                 raise ValidationError(f"Track {track['id']} has invalid lessons")
             if track_lessons:
                 lines.append("          contents:")
+                children_by_parent: dict[str, list[dict[str, object]]] = defaultdict(list)
                 for lesson in track_lessons:
+                    parent_id = lesson.get("parent_id")
+                    if parent_id is not None:
+                        children_by_parent[str(parent_id)].append(lesson)
+                for lesson in track_lessons:
+                    if lesson.get("parent_id") is not None:
+                        continue
                     lesson_prefix = int(lesson["order"])
                     lesson_title = str(lesson["title"]).replace('"', "'")
-                    lines.extend(
-                        [
-                            f'            - text: "{lesson_prefix}. {lesson_title}"',
-                            f"              href: {lesson['source_path']}",
-                        ]
-                    )
+                    child_lessons = children_by_parent.get(str(lesson["id"]), [])
+                    if child_lessons:
+                        lines.extend(
+                            [
+                                f'            - section: "{lesson_prefix}. {lesson_title}"',
+                                f"              href: {lesson['source_path']}",
+                                "              contents:",
+                            ]
+                        )
+                        for child in child_lessons:
+                            child_prefix = int(child["order"])
+                            child_title = str(child["title"]).replace('"', "'")
+                            lines.extend(
+                                [
+                                    f'                - text: "{child_prefix}. {child_title}"',
+                                    f"                  href: {child['source_path']}",
+                                ]
+                            )
+                    else:
+                        lines.extend(
+                            [
+                                f'            - text: "{lesson_prefix}. {lesson_title}"',
+                                f"              href: {lesson['source_path']}",
+                            ]
+                        )
             else:
                 lines.append("          contents: []")
     return "\n".join(lines) + "\n"
