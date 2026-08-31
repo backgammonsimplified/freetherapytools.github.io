@@ -18,4 +18,37 @@ execute:
   enabled: false
 ---
 
-Mindfulness of thoughts creates space between having a thought and deciding how to respond.
+Thoughts continually arise and pass. A thought is a mental event, not automatically a fact, command, prediction, or part of your identity.
+
+## Cognitive defusion {#cognitive-defusion}
+
+Cognitive defusion is an approach associated especially with Acceptance and Commitment Therapy (ACT). It creates enough distance to notice a thought rather than automatically following it. Trying to force an unwanted thought away can sometimes make attention stick to it more strongly.
+
+Useful ways to practise distance include:
+
+- add the phrase *I'm having the thought that...*;
+- imagine thoughts as leaves moving along a stream;
+- picture them on cards, pop-up windows, or items passing on a train;
+- notice a familiar thought and silently thank the mind for trying to help; or
+- hear the words in a different voice to notice them as words.
+
+The metaphor is optional. Choose one that clarifies the relationship to the thought rather than making the exercise distracting.
+
+## A six-step practice {#six-step-practice}
+
+1. Notice and name the thought.
+2. Do not make suppression the goal.
+3. Create a little distance from it.
+4. Become curious rather than immediately evaluating it.
+5. Remember that you are not your thoughts.
+6. Return attention to a meaningful present activity.
+
+## Mindfulness and CBT are different tools {#mindfulness-and-cbt}
+
+Mindfulness and defusion change the relationship to a thought. CBT tools may also examine the thought's evidence, accuracy, usefulness, and possible alternatives. These approaches can complement each other without being treated as identical.
+
+[Recognize Thinking Traps](/tool-finder/thinking-traps/) when you want to identify a thinking pattern, or use the [Thought Record](/tool-finder/thought-record/) when you want a structured evidence review.
+
+## Source approach {#source-approach}
+
+This lesson is original adapted educational HTML. The supplied session includes ACT and cognitive-defusion material from supplementary sources; those pages are not presented as DBT-original and their graphics are not republished here.

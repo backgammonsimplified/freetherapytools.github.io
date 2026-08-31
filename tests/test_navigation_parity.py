@@ -72,7 +72,7 @@ class NavigationParityTests(unittest.TestCase):
                 self.assertIn(marker, html, f"{curriculum}: {marker}")
             self.assertRegex(
                 html,
-                r'<script src="\.\./\.\./assets/bs-learn\.js\?v=20260822-visible-navigation" defer',
+                r'<script src="\.\./\.\./assets/bs-learn\.js\?v=20260830-mindfulness-emotion-pass" defer',
             )
             self.assertEqual(
                 len(re.findall(r"sidebar-item sidebar-item-section", html)),
@@ -93,11 +93,16 @@ class NavigationParityTests(unittest.TestCase):
             "bs-learn-left-sidebar-collapsed",
             'toggle.style.left = "0.5rem"',
             "pageScrollingDown = currentScrollY > lastScrollY",
-            "!scrollingDown &&",
-            "manuallyCollapsed",
+            "let collapsed = false",
+            'sidebar.hidden = active',
+            '"\\u2192 Show Lessons"',
+            '"\\u2190 Hide"',
             'new CustomEvent("bs:left-sidebar-change")',
         ):
             self.assertIn(token, self.learn)
+        self.assertNotIn("manuallyCollapsed", self.learn)
+        self.assertNotIn("autoHidden", self.learn)
+        self.assertNotIn("bs-learn-left-sidebar-auto-hidden", self.learn + self.learn_css)
         for token in (
             "body.bs-learn-left-sidebar-collapsed",
             "grid-column-start: page-start",

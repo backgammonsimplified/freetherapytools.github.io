@@ -18,15 +18,50 @@ execute:
   enabled: false
 ---
 
-One-mindfully is the second HOW skill. Put your attention on this activity and this moment, returning gently when attention moves away.
+One-Mindfully is the second HOW skill: do one thing at a time and return attention to what is happening now.
 
-## One-Mindfully {#one-mindfully}
+## One thing at a time {#one-mindfully}
 
-Do one thing at a time. When you are worrying, worry; when you are planning, plan; when you are listening, listen.
-## Source / Printable Copy
+Thoughts about the past or future can still be present. The practice is not to erase them, but to avoid turning every thought into the current task. When planning, plan. When listening, listen. When washing one dish, wash that dish.
 
-[One-Mindfully source page](/resources/mindfulness/mindfulness-one-mindfully-source.pdf)
+Attention will wander. Notice where it went and return without framing ordinary distraction as failure. Simplifying the task or reducing interruptions can help, but the essential skill is the return.
 
-## Text Version / Adapted Text
+## Ordinary activities as practice {#ordinary-activities}
 
-One-Mindfully means doing one thing at a time with full attention. When attention divides or wanders, notice it and return to the chosen activity. Simplify the task or the environment when that supports effective focus.
+Choose one familiar activity:
+
+- making tea or coffee;
+- washing dishes or hands;
+- cleaning one small area;
+- showering or bathing;
+- walking;
+- having a conversation; or
+- sitting for a brief meditation.
+
+Notice the next concrete action and its sensory details. When the mind leaves, come back to this action in this moment.
+
+## Handouts & Worksheets {#handouts-worksheets}
+
+### Original Source teaching pages
+
+[![Original Source: One-Mindfully teaching pages](/resources/mindfulness/program-source/mindfulness-one-mindfully-program-teaching.jpg){.img-fluid fig-alt="Original Source: One-Mindfully teaching pages"}](/resources/mindfulness/program-source/mindfulness-one-mindfully-program-teaching.pdf){target="_blank" rel="noopener"}
+
+[Open original source teaching pages](/resources/mindfulness/program-source/mindfulness-one-mindfully-program-teaching.pdf){target="_blank" rel="noopener"}
+
+:::: {.bs-practice-resource #resource-mindfulness-program-p051 data-source-id="mindfulness-program-p051"}
+**Mindfulness Handout 5B - Ideas for Practicing One-Mindfulness**
+
+**Original Source**
+
+[![Original Source: Ideas for Practicing One-Mindfulness](/resources/mindfulness/program-source/mindfulness-handout-5b-practicing-one-mindfulness-original.jpg){.img-fluid fig-alt="Original Source: Ideas for Practicing One-Mindfulness"}](/resources/mindfulness/program-source/mindfulness-handout-5b-practicing-one-mindfulness-original.pdf){target="_blank" rel="noopener"}
+
+[Open original source](/resources/mindfulness/program-source/mindfulness-handout-5b-practicing-one-mindfulness-original.pdf){target="_blank" rel="noopener"}
+
+::: {.bs-resource-match data-match-id="linehan-book:mindfulness-program-p051" data-source-id="mindfulness-program-p051" data-match-source="linehan-book" data-candidate-asset="/resources/clean/mindfulness/mindfulness-handout-5b-practicing-one-mindfulness-clean.pdf"}
+**Clean Printable Copy**
+
+[![Clean Printable Copy: Ideas for Practicing One-Mindfulness](/resources/clean/mindfulness/mindfulness-handout-5b-practicing-one-mindfulness-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ideas for Practicing One-Mindfulness"}](/resources/clean/mindfulness/mindfulness-handout-5b-practicing-one-mindfulness-clean.pdf){target="_blank" rel="noopener"}
+
+[Open printable copy](/resources/clean/mindfulness/mindfulness-handout-5b-practicing-one-mindfulness-clean.pdf){target="_blank" rel="noopener"}
+:::
+::::

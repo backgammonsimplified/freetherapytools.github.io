@@ -18,15 +18,42 @@ execute:
   enabled: false
 ---
 
-Participate is the third WHAT skill. Bring yourself fully into what you are doing instead of standing outside the experience and judging each step.
+Participate is the third WHAT skill. Enter fully into the current activity instead of remaining only an observer of yourself.
 
-## Participate {#participate}
+## Participate in this moment {#participate}
 
-Practise joining the moment with attention, adjusting when observation or description is needed, and then returning to full participation.
-## Source / Printable Copy
+Participation is present-moment involvement: joining the conversation, movement, task, play, creative work, or ordinary routine you are actually doing. Flexible, spontaneous responding becomes more possible when attention is with the activity rather than constantly monitoring every step. Sometimes immersion or flow occurs, but flow is not a requirement.
 
-[Participate source page](/resources/mindfulness/mindfulness-participate-source.pdf)
+Participation does not mean losing awareness. It means acting with awareness rather than staying outside the experience.
 
-## Text Version / Adapted Text
+## When participating is difficult {#when-participating-is-difficult}
 
-Participate means entering the current activity fully enough to do it, rather than watching yourself from a distance or rehearsing every move. Let attention return to the activity and respond to what is actually happening.
+Observe and Describe can come first. Pause, notice what is happening, put useful words to it, and then re-enter the activity. Use the mindfulness skill that fits the moment rather than forcing Observe, Describe, and Participate simultaneously.
+
+Representative practices include joining a conversation, singing or dancing, playing a game or sport, cooking, making something, doing a household task, or following the movements of a familiar routine with full attention.
+
+## Handouts & Worksheets {#handouts-worksheets}
+
+### Original Source teaching pages
+
+[![Original Source: Participate teaching pages](/resources/mindfulness/program-source/mindfulness-participate-program-teaching.jpg){.img-fluid fig-alt="Original Source: Participate teaching pages"}](/resources/mindfulness/program-source/mindfulness-participate-program-teaching.pdf){target="_blank" rel="noopener"}
+
+[Open original source teaching pages](/resources/mindfulness/program-source/mindfulness-participate-program-teaching.pdf){target="_blank" rel="noopener"}
+
+:::: {.bs-practice-resource #resource-mindfulness-program-p039 data-source-id="mindfulness-program-p039"}
+**Mindfulness Handout 4C - Ideas for Practicing Participating**
+
+**Original Source**
+
+[![Original Source: Ideas for Practicing Participating](/resources/mindfulness/program-source/mindfulness-handout-4c-practicing-participating-original.jpg){.img-fluid fig-alt="Original Source: Ideas for Practicing Participating"}](/resources/mindfulness/program-source/mindfulness-handout-4c-practicing-participating-original.pdf){target="_blank" rel="noopener"}
+
+[Open original source](/resources/mindfulness/program-source/mindfulness-handout-4c-practicing-participating-original.pdf){target="_blank" rel="noopener"}
+
+::: {.bs-resource-match data-match-id="linehan-book:mindfulness-program-p039" data-source-id="mindfulness-program-p039" data-match-source="linehan-book" data-candidate-asset="/resources/clean/mindfulness/mindfulness-handout-4c-practicing-participating-clean.pdf"}
+**Clean Printable Copy**
+
+[![Clean Printable Copy: Ideas for Practicing Participating](/resources/clean/mindfulness/mindfulness-handout-4c-practicing-participating-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ideas for Practicing Participating"}](/resources/clean/mindfulness/mindfulness-handout-4c-practicing-participating-clean.pdf){target="_blank" rel="noopener"}
+
+[Open printable copy](/resources/clean/mindfulness/mindfulness-handout-4c-practicing-participating-clean.pdf){target="_blank" rel="noopener"}
+:::
+::::

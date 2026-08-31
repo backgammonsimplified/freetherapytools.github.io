@@ -241,10 +241,18 @@ class QmdResourceExtractionTests(unittest.TestCase):
             for path in SITE.rglob("*.qmd")
             if "review" not in path.relative_to(SITE).parts
         )
-        self.assertEqual(141, len(re.findall(r"data-match-id=", lessons)))
-        self.assertEqual(141, lessons.count(">Incorrect match</button>"))
+        match_count = len(re.findall(r"data-match-id=", lessons))
+        review_control_count = lessons.count(">Incorrect match</button>")
+        self.assertGreaterEqual(match_count, 141)
         self.assertIn("php-high-res:distress-tolerance-p011:php-p0126", lessons)
         self.assertIn("linehan-book:distress-tolerance-p012", lessons)
+        mindfulness_audit = json.loads(
+            (SITE / "data" / "mindfulness-source-audit.json").read_text(encoding="utf-8")
+        )
+        for record in mindfulness_audit["exact_matches"]:
+            first_page = record["program_source_pages"][0]
+            self.assertIn(f'linehan-book:mindfulness-program-p{first_page:03d}', lessons)
+        self.assertEqual(match_count, review_control_count + len(mindfulness_audit["exact_matches"]))
 
 
 if __name__ == "__main__":

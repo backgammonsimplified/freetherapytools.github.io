@@ -8,10 +8,12 @@ execute:
   enabled: false
 ---
 
-Emotions can carry information, but no graph can decide what you feel. Explore the source-listed emotion families and descriptive words that fit your own experience.
+Start with words, body sensations, events, thoughts, urges, actions, or aftereffects. The explorer compares those clues with ten source descriptions without assigning a diagnosis. The existing emotion graph remains available in **Explore an emotion** mode.
 
 ::: {#emotion-explorer-app .skill-app data-skill-app="emotions"}
 Loading Emotion Explorer…
 :::
 
 [Back to all Tool Finder tools](/tool-finder/)
+
+[Learn about observing and describing emotions](/learn/emotion-regulation/observing-describing-emotions.html)

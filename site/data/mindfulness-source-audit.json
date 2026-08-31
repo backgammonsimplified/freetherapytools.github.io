@@ -1,5 +1,25 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
+  "sources": {
+    "dbt_book": {
+      "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+      "sha256": "5638f76999ffb3d19a6eee3b4404f71a82e85676d7d237baa0782defb28b132e",
+      "role": "existing clean-printable and curriculum authority"
+    },
+    "mindfulness_program": {
+      "source_file": "3-mindfulness.pdf",
+      "sha256": "04b7a5746ae9aec78d683d337015d75e4d28ad9191b4613dda318eba1162ec26",
+      "page_count": 104,
+      "role": "private authoring and provenance source",
+      "whole_pdf_published": false
+    },
+    "older_scan": {
+      "source_file": "3 Mindfullness.pdf",
+      "sha256": "04b7a5746ae9aec78d683d337015d75e4d28ad9191b4613dda318eba1162ec26",
+      "same_binary_as_program_source": true,
+      "higher_resolution": false
+    }
+  },
   "scope": {
     "first_page": 63,
     "last_page": 132,
@@ -7,6 +27,378 @@
     "mapped_pages": 63,
     "excluded_pages": 7
   },
+  "program_scope": {
+    "first_page": 1,
+    "last_page": 104,
+    "identified_pages": 104,
+    "substantive_pages": 80,
+    "excluded_pages": 24,
+    "sessions": 12
+  },
+  "session_map": [
+    {
+      "session": 1,
+      "title": "Introduction & States of Mind",
+      "program_source_pages": [
+        6,
+        20
+      ],
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html"
+    },
+    {
+      "session": 2,
+      "title": "Observe",
+      "program_source_pages": [
+        21,
+        28
+      ],
+      "assigned_source_qmd": "site/learn/mindfulness/what-skills.qmd",
+      "assigned_learn_href": "/learn/mindfulness/what-skills.html"
+    },
+    {
+      "session": 3,
+      "title": "Describe",
+      "program_source_pages": [
+        29,
+        34
+      ],
+      "assigned_source_qmd": "site/learn/mindfulness/describe.qmd",
+      "assigned_learn_href": "/learn/mindfulness/describe.html"
+    },
+    {
+      "session": 4,
+      "title": "Participate",
+      "program_source_pages": [
+        35,
+        40
+      ],
+      "assigned_source_qmd": "site/learn/mindfulness/participate.qmd",
+      "assigned_learn_href": "/learn/mindfulness/participate.html"
+    },
+    {
+      "session": 5,
+      "title": "Non-Judgmentally",
+      "program_source_pages": [
+        41,
+        47
+      ],
+      "assigned_source_qmd": "site/learn/mindfulness/how-skills.qmd",
+      "assigned_learn_href": "/learn/mindfulness/how-skills.html"
+    },
+    {
+      "session": 6,
+      "title": "One-Mindfully",
+      "program_source_pages": [
+        48,
+        51
+      ],
+      "assigned_source_qmd": "site/learn/mindfulness/one-mindfully.qmd",
+      "assigned_learn_href": "/learn/mindfulness/one-mindfully.html"
+    },
+    {
+      "session": 7,
+      "title": "Effectively",
+      "program_source_pages": [
+        52,
+        57
+      ],
+      "assigned_source_qmd": "site/learn/mindfulness/effectively.qmd",
+      "assigned_learn_href": "/learn/mindfulness/effectively.html"
+    },
+    {
+      "session": 8,
+      "title": "Self-Compassion & Loving Kindness",
+      "program_source_pages": [
+        58,
+        74
+      ],
+      "assigned_source_qmd": "site/learn/mindfulness/loving-kindness-self-compassion.qmd",
+      "assigned_learn_href": "/learn/mindfulness/loving-kindness-self-compassion.html"
+    },
+    {
+      "session": 9,
+      "title": "Mindfulness of Emotions",
+      "program_source_pages": [
+        75,
+        78
+      ],
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-of-emotions.qmd",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-of-emotions.html"
+    },
+    {
+      "session": 10,
+      "title": "Mindfulness of Thoughts",
+      "program_source_pages": [
+        79,
+        82
+      ],
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-of-thoughts.qmd",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-of-thoughts.html"
+    },
+    {
+      "session": 11,
+      "title": "Grounding",
+      "program_source_pages": [
+        83,
+        94
+      ],
+      "assigned_source_qmd": "site/learn/mindfulness/grounding.qmd",
+      "assigned_learn_href": "/learn/mindfulness/grounding.html"
+    },
+    {
+      "session": 12,
+      "title": "Being & Doing Mind",
+      "program_source_pages": [
+        95,
+        102
+      ],
+      "assigned_source_qmd": "site/learn/mindfulness/being-mind-doing-mind.qmd",
+      "assigned_learn_href": "/learn/mindfulness/being-mind-doing-mind.html"
+    }
+  ],
+  "exact_matches": [
+    {
+      "handout_number": "Mindfulness Handout 1A",
+      "program_source_pages": [
+        8
+      ],
+      "dbt_source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+      "dbt_source_pages": [
+        70
+      ],
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-1a-definitions-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-1a-definitions-clean.pdf",
+      "exact_match": true,
+      "verified_by": [
+        "handout_or_worksheet_number",
+        "exact_title",
+        "internal_wording",
+        "visual_layout"
+      ]
+    },
+    {
+      "handout_number": "Mindfulness Handout 3",
+      "program_source_pages": [
+        9
+      ],
+      "dbt_source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+      "dbt_source_pages": [
+        74
+      ],
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-3-wise-mind-states-of-mind-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-3-wise-mind-states-of-mind-clean.pdf",
+      "exact_match": true,
+      "verified_by": [
+        "handout_or_worksheet_number",
+        "exact_title",
+        "internal_wording",
+        "visual_layout"
+      ]
+    },
+    {
+      "handout_number": "Mindfulness Handout 3A",
+      "program_source_pages": [
+        12,
+        13
+      ],
+      "dbt_source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+      "dbt_source_pages": [
+        75,
+        76
+      ],
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-3a-practicing-wise-mind-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-3a-practicing-wise-mind-clean.pdf",
+      "exact_match": true,
+      "verified_by": [
+        "handout_or_worksheet_number",
+        "exact_title",
+        "internal_wording",
+        "visual_layout"
+      ]
+    },
+    {
+      "handout_number": "Mindfulness Handout 4A",
+      "program_source_pages": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "dbt_source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+      "dbt_source_pages": [
+        78,
+        79,
+        80,
+        81
+      ],
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-4a-practicing-observing-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-4a-practicing-observing-clean.pdf",
+      "exact_match": true,
+      "verified_by": [
+        "handout_or_worksheet_number",
+        "exact_title",
+        "internal_wording",
+        "visual_layout"
+      ]
+    },
+    {
+      "handout_number": "Mindfulness Handout 4B",
+      "program_source_pages": [
+        33
+      ],
+      "dbt_source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+      "dbt_source_pages": [
+        82
+      ],
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-4b-practicing-describing-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-4b-practicing-describing-clean.pdf",
+      "exact_match": true,
+      "verified_by": [
+        "handout_or_worksheet_number",
+        "exact_title",
+        "internal_wording",
+        "visual_layout"
+      ]
+    },
+    {
+      "handout_number": "Mindfulness Handout 4C",
+      "program_source_pages": [
+        39
+      ],
+      "dbt_source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+      "dbt_source_pages": [
+        83
+      ],
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-4c-practicing-participating-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-4c-practicing-participating-clean.pdf",
+      "exact_match": true,
+      "verified_by": [
+        "handout_or_worksheet_number",
+        "exact_title",
+        "internal_wording",
+        "visual_layout"
+      ]
+    },
+    {
+      "handout_number": "Mindfulness Handout 5A",
+      "program_source_pages": [
+        47
+      ],
+      "dbt_source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+      "dbt_source_pages": [
+        85
+      ],
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-5a-practicing-nonjudgmentalness-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-5a-practicing-nonjudgmentalness-clean.pdf",
+      "exact_match": true,
+      "verified_by": [
+        "handout_or_worksheet_number",
+        "exact_title",
+        "internal_wording",
+        "visual_layout"
+      ]
+    },
+    {
+      "handout_number": "Mindfulness Handout 5B",
+      "program_source_pages": [
+        51
+      ],
+      "dbt_source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+      "dbt_source_pages": [
+        86
+      ],
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-5b-practicing-one-mindfulness-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-5b-practicing-one-mindfulness-clean.pdf",
+      "exact_match": true,
+      "verified_by": [
+        "handout_or_worksheet_number",
+        "exact_title",
+        "internal_wording",
+        "visual_layout"
+      ]
+    },
+    {
+      "handout_number": "Mindfulness Handout 5C",
+      "program_source_pages": [
+        56
+      ],
+      "dbt_source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+      "dbt_source_pages": [
+        87
+      ],
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-5c-practicing-effectiveness-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-5c-practicing-effectiveness-clean.pdf",
+      "exact_match": true,
+      "verified_by": [
+        "handout_or_worksheet_number",
+        "exact_title",
+        "internal_wording",
+        "visual_layout"
+      ]
+    },
+    {
+      "handout_number": "Emotion Regulation Handout 22",
+      "program_source_pages": [
+        77
+      ],
+      "dbt_source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+      "dbt_source_pages": [
+        288
+      ],
+      "original_source_public_asset": "/resources/mindfulness/program-source/emotion-regulation-handout-22-mindfulness-current-emotions-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/emotion-regulation-handout-22-mindfulness-current-emotions-clean.pdf",
+      "exact_match": true,
+      "verified_by": [
+        "handout_or_worksheet_number",
+        "exact_title",
+        "internal_wording",
+        "visual_layout"
+      ]
+    },
+    {
+      "handout_number": "Mindfulness Handout 9A",
+      "program_source_pages": [
+        99,
+        100
+      ],
+      "dbt_source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+      "dbt_source_pages": [
+        96,
+        97
+      ],
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-9a-balancing-doing-being-mind-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-9a-balancing-doing-being-mind-clean.pdf",
+      "exact_match": true,
+      "verified_by": [
+        "handout_or_worksheet_number",
+        "exact_title",
+        "internal_wording",
+        "visual_layout"
+      ]
+    },
+    {
+      "handout_number": "Mindfulness Worksheet 7A",
+      "program_source_pages": [
+        101,
+        102
+      ],
+      "dbt_source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+      "dbt_source_pages": [
+        123,
+        124
+      ],
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-worksheet-7a-being-doing-calendar-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-worksheet-7a-being-doing-calendar-clean.pdf",
+      "exact_match": true,
+      "verified_by": [
+        "handout_or_worksheet_number",
+        "exact_title",
+        "internal_wording",
+        "visual_layout"
+      ]
+    }
+  ],
   "records": [
     {
       "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
@@ -516,7 +908,7 @@
       "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
       "source_page": 99,
       "source_title": "Core mindfulness practice worksheets",
-      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html#practice",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html#practising-wise-mind",
       "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
       "pdf_href": "/resources/mindfulness/mindfulness-core-practice-source.pdf",
       "pdf_linked": true,
@@ -544,7 +936,7 @@
       "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
       "source_page": 101,
       "source_title": "Core mindfulness practice worksheets",
-      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html#practice",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html#practising-wise-mind",
       "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
       "pdf_href": "/resources/mindfulness/mindfulness-core-practice-source.pdf",
       "pdf_linked": true,
@@ -558,7 +950,7 @@
       "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
       "source_page": 102,
       "source_title": "Core mindfulness practice worksheets",
-      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html#practice",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html#practising-wise-mind",
       "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
       "pdf_href": "/resources/mindfulness/mindfulness-core-practice-source.pdf",
       "pdf_linked": true,
@@ -572,7 +964,7 @@
       "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
       "source_page": 103,
       "source_title": "Core mindfulness practice worksheets",
-      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html#practice",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html#practising-wise-mind",
       "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
       "pdf_href": "/resources/mindfulness/mindfulness-core-practice-source.pdf",
       "pdf_linked": true,
@@ -586,7 +978,7 @@
       "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
       "source_page": 104,
       "source_title": "Core mindfulness practice worksheets",
-      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html#practice",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html#practising-wise-mind",
       "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
       "pdf_href": "/resources/mindfulness/mindfulness-core-practice-source.pdf",
       "pdf_linked": true,
@@ -600,7 +992,7 @@
       "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
       "source_page": 105,
       "source_title": "Core mindfulness practice worksheets",
-      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html#practice",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html#practising-wise-mind",
       "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
       "pdf_href": "/resources/mindfulness/mindfulness-core-practice-source.pdf",
       "pdf_linked": true,
@@ -614,7 +1006,7 @@
       "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
       "source_page": 106,
       "source_title": "Core mindfulness practice worksheets",
-      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html#practice",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html#practising-wise-mind",
       "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
       "pdf_href": "/resources/mindfulness/mindfulness-core-practice-source.pdf",
       "pdf_linked": true,
@@ -628,7 +1020,7 @@
       "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
       "source_page": 107,
       "source_title": "Core mindfulness practice worksheets",
-      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html#practice",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html#practising-wise-mind",
       "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
       "pdf_href": "/resources/mindfulness/mindfulness-core-practice-source.pdf",
       "pdf_linked": true,
@@ -987,6 +1379,2634 @@
       "interactive_tool_linked": false,
       "excluded": false,
       "exclusion_reason": null
+    }
+  ],
+  "program_records": [
+    {
+      "program_source_page": 1,
+      "program_source_title": "Mindfulness objectives and twelve-session contents",
+      "session": 1,
+      "topic": "Introduction & States of Mind",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 1,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-foundations-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 2,
+      "program_source_title": "Blank page",
+      "session": null,
+      "topic": "Curriculum boundary",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 2,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Blank page; no educational content."
+    },
+    {
+      "program_source_page": 3,
+      "program_source_title": "Mindfulness summary sheet and States of Mind",
+      "session": 1,
+      "topic": "Introduction & States of Mind",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 3,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-foundations-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 4,
+      "program_source_title": "WHAT and HOW skills summary",
+      "session": 1,
+      "topic": "Introduction & States of Mind",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 4,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-foundations-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 5,
+      "program_source_title": "Blank page",
+      "session": null,
+      "topic": "Curriculum boundary",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 5,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Blank page; no educational content."
+    },
+    {
+      "program_source_page": 6,
+      "program_source_title": "Introduction & States of Mind supplementary material",
+      "session": 1,
+      "topic": "Introduction & States of Mind",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 6,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Session cover/structural page; the session is mapped without separate Learn content."
+    },
+    {
+      "program_source_page": 7,
+      "program_source_title": "How Mindful Am I? reflection",
+      "session": 1,
+      "topic": "Introduction & States of Mind",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 7,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 8,
+      "program_source_title": "Mindfulness Handout 1A - Mindfulness Definitions",
+      "session": 1,
+      "topic": "Introduction & States of Mind",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
+      "dbt_match": {
+        "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+        "page": 70,
+        "handout_number": "Mindfulness Handout 1A",
+        "exact_match": true,
+        "verified_by": [
+          "handout_or_worksheet_number",
+          "exact_title",
+          "internal_wording",
+          "visual_layout"
+        ],
+        "original_asset": "/resources/mindfulness/program-source/mindfulness-handout-1a-definitions-original.pdf",
+        "clean_asset": "/resources/clean/mindfulness/mindfulness-handout-1a-definitions-clean.pdf"
+      },
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 8,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-1a-definitions-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-1a-definitions-clean.pdf",
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "exact-clean-match",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 9,
+      "program_source_title": "Mindfulness Handout 3 - Wise Mind: States of Mind",
+      "session": 1,
+      "topic": "Introduction & States of Mind",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
+      "dbt_match": {
+        "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+        "page": 74,
+        "handout_number": "Mindfulness Handout 3",
+        "exact_match": true,
+        "verified_by": [
+          "handout_or_worksheet_number",
+          "exact_title",
+          "internal_wording",
+          "visual_layout"
+        ],
+        "original_asset": "/resources/mindfulness/program-source/mindfulness-handout-3-wise-mind-states-of-mind-original.pdf",
+        "clean_asset": "/resources/clean/mindfulness/mindfulness-handout-3-wise-mind-states-of-mind-clean.pdf"
+      },
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 9,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-3-wise-mind-states-of-mind-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-3-wise-mind-states-of-mind-clean.pdf",
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "exact-clean-match",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 10,
+      "program_source_title": "States of Mind reflection",
+      "session": 1,
+      "topic": "Introduction & States of Mind",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 10,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-foundations-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 11,
+      "program_source_title": "Ten Steps to Mindfulness Meditation",
+      "session": 1,
+      "topic": "Introduction & States of Mind",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 11,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 12,
+      "program_source_title": "Mindfulness Handout 3A - Ideas for Practicing Wise Mind (1 of 2)",
+      "session": 1,
+      "topic": "Introduction & States of Mind",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
+      "dbt_match": {
+        "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+        "page": 75,
+        "handout_number": "Mindfulness Handout 3A",
+        "exact_match": true,
+        "verified_by": [
+          "handout_or_worksheet_number",
+          "exact_title",
+          "internal_wording",
+          "visual_layout"
+        ],
+        "original_asset": "/resources/mindfulness/program-source/mindfulness-handout-3a-practicing-wise-mind-original.pdf",
+        "clean_asset": "/resources/clean/mindfulness/mindfulness-handout-3a-practicing-wise-mind-clean.pdf"
+      },
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 12,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-3a-practicing-wise-mind-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-3a-practicing-wise-mind-clean.pdf",
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "exact-clean-match",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 13,
+      "program_source_title": "Mindfulness Handout 3A - Ideas for Practicing Wise Mind (2 of 2)",
+      "session": 1,
+      "topic": "Introduction & States of Mind",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
+      "dbt_match": {
+        "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+        "page": 76,
+        "handout_number": "Mindfulness Handout 3A",
+        "exact_match": true,
+        "verified_by": [
+          "handout_or_worksheet_number",
+          "exact_title",
+          "internal_wording",
+          "visual_layout"
+        ],
+        "original_asset": "/resources/mindfulness/program-source/mindfulness-handout-3a-practicing-wise-mind-original.pdf",
+        "clean_asset": "/resources/clean/mindfulness/mindfulness-handout-3a-practicing-wise-mind-clean.pdf"
+      },
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 13,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-3a-practicing-wise-mind-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-3a-practicing-wise-mind-clean.pdf",
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "exact-clean-match",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 14,
+      "program_source_title": "Introduction & States of Mind supplementary material",
+      "session": 1,
+      "topic": "Introduction & States of Mind",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 14,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 15,
+      "program_source_title": "Introduction & States of Mind supplementary material",
+      "session": 1,
+      "topic": "Introduction & States of Mind",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 15,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 16,
+      "program_source_title": "Introduction & States of Mind supplementary material",
+      "session": 1,
+      "topic": "Introduction & States of Mind",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 16,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 17,
+      "program_source_title": "Introduction & States of Mind supplementary material",
+      "session": 1,
+      "topic": "Introduction & States of Mind",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 17,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 18,
+      "program_source_title": "Introduction & States of Mind supplementary material",
+      "session": 1,
+      "topic": "Introduction & States of Mind",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 18,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 19,
+      "program_source_title": "Introduction & States of Mind supplementary material",
+      "session": 1,
+      "topic": "Introduction & States of Mind",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-foundations.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-foundations.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 19,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 20,
+      "program_source_title": "Introduction & States of Mind supplementary material",
+      "session": 1,
+      "topic": "Introduction & States of Mind",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 20,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Blank page; no educational content."
+    },
+    {
+      "program_source_page": 21,
+      "program_source_title": "Observe supplementary material",
+      "session": 2,
+      "topic": "Observe",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 21,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Session cover/structural page; the session is mapped without separate Learn content."
+    },
+    {
+      "program_source_page": 22,
+      "program_source_title": "Observe teaching (1 of 2)",
+      "session": 2,
+      "topic": "Observe",
+      "assigned_learn_href": "/learn/mindfulness/what-skills.html",
+      "assigned_source_qmd": "site/learn/mindfulness/what-skills.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 22,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-observe-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 23,
+      "program_source_title": "Observe teaching (2 of 2)",
+      "session": 2,
+      "topic": "Observe",
+      "assigned_learn_href": "/learn/mindfulness/what-skills.html",
+      "assigned_source_qmd": "site/learn/mindfulness/what-skills.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 23,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-observe-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 24,
+      "program_source_title": "Mindfulness Handout 4A - Ideas for Practicing Observing (1 of 4)",
+      "session": 2,
+      "topic": "Observe",
+      "assigned_learn_href": "/learn/mindfulness/what-skills.html",
+      "assigned_source_qmd": "site/learn/mindfulness/what-skills.qmd",
+      "dbt_match": {
+        "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+        "page": 78,
+        "handout_number": "Mindfulness Handout 4A",
+        "exact_match": true,
+        "verified_by": [
+          "handout_or_worksheet_number",
+          "exact_title",
+          "internal_wording",
+          "visual_layout"
+        ],
+        "original_asset": "/resources/mindfulness/program-source/mindfulness-handout-4a-practicing-observing-original.pdf",
+        "clean_asset": "/resources/clean/mindfulness/mindfulness-handout-4a-practicing-observing-clean.pdf"
+      },
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 24,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-4a-practicing-observing-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-4a-practicing-observing-clean.pdf",
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "exact-clean-match",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 25,
+      "program_source_title": "Mindfulness Handout 4A - Ideas for Practicing Observing (2 of 4)",
+      "session": 2,
+      "topic": "Observe",
+      "assigned_learn_href": "/learn/mindfulness/what-skills.html",
+      "assigned_source_qmd": "site/learn/mindfulness/what-skills.qmd",
+      "dbt_match": {
+        "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+        "page": 79,
+        "handout_number": "Mindfulness Handout 4A",
+        "exact_match": true,
+        "verified_by": [
+          "handout_or_worksheet_number",
+          "exact_title",
+          "internal_wording",
+          "visual_layout"
+        ],
+        "original_asset": "/resources/mindfulness/program-source/mindfulness-handout-4a-practicing-observing-original.pdf",
+        "clean_asset": "/resources/clean/mindfulness/mindfulness-handout-4a-practicing-observing-clean.pdf"
+      },
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 25,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-4a-practicing-observing-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-4a-practicing-observing-clean.pdf",
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "exact-clean-match",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 26,
+      "program_source_title": "Mindfulness Handout 4A - Ideas for Practicing Observing (3 of 4)",
+      "session": 2,
+      "topic": "Observe",
+      "assigned_learn_href": "/learn/mindfulness/what-skills.html",
+      "assigned_source_qmd": "site/learn/mindfulness/what-skills.qmd",
+      "dbt_match": {
+        "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+        "page": 80,
+        "handout_number": "Mindfulness Handout 4A",
+        "exact_match": true,
+        "verified_by": [
+          "handout_or_worksheet_number",
+          "exact_title",
+          "internal_wording",
+          "visual_layout"
+        ],
+        "original_asset": "/resources/mindfulness/program-source/mindfulness-handout-4a-practicing-observing-original.pdf",
+        "clean_asset": "/resources/clean/mindfulness/mindfulness-handout-4a-practicing-observing-clean.pdf"
+      },
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 26,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-4a-practicing-observing-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-4a-practicing-observing-clean.pdf",
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "exact-clean-match",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 27,
+      "program_source_title": "Mindfulness Handout 4A - Ideas for Practicing Observing (4 of 4)",
+      "session": 2,
+      "topic": "Observe",
+      "assigned_learn_href": "/learn/mindfulness/what-skills.html",
+      "assigned_source_qmd": "site/learn/mindfulness/what-skills.qmd",
+      "dbt_match": {
+        "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+        "page": 81,
+        "handout_number": "Mindfulness Handout 4A",
+        "exact_match": true,
+        "verified_by": [
+          "handout_or_worksheet_number",
+          "exact_title",
+          "internal_wording",
+          "visual_layout"
+        ],
+        "original_asset": "/resources/mindfulness/program-source/mindfulness-handout-4a-practicing-observing-original.pdf",
+        "clean_asset": "/resources/clean/mindfulness/mindfulness-handout-4a-practicing-observing-clean.pdf"
+      },
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 27,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-4a-practicing-observing-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-4a-practicing-observing-clean.pdf",
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "exact-clean-match",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 28,
+      "program_source_title": "Observe supplementary material",
+      "session": 2,
+      "topic": "Observe",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 28,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Blank page; no educational content."
+    },
+    {
+      "program_source_page": 29,
+      "program_source_title": "Describe supplementary material",
+      "session": 3,
+      "topic": "Describe",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 29,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Session cover/structural page; the session is mapped without separate Learn content."
+    },
+    {
+      "program_source_page": 30,
+      "program_source_title": "Describe teaching (1 of 3)",
+      "session": 3,
+      "topic": "Describe",
+      "assigned_learn_href": "/learn/mindfulness/describe.html",
+      "assigned_source_qmd": "site/learn/mindfulness/describe.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 30,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-describe-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 31,
+      "program_source_title": "Describe teaching (2 of 3)",
+      "session": 3,
+      "topic": "Describe",
+      "assigned_learn_href": "/learn/mindfulness/describe.html",
+      "assigned_source_qmd": "site/learn/mindfulness/describe.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 31,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-describe-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 32,
+      "program_source_title": "Describe teaching (3 of 3)",
+      "session": 3,
+      "topic": "Describe",
+      "assigned_learn_href": "/learn/mindfulness/describe.html",
+      "assigned_source_qmd": "site/learn/mindfulness/describe.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 32,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-describe-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 33,
+      "program_source_title": "Mindfulness Handout 4B - Ideas for Practicing Describing",
+      "session": 3,
+      "topic": "Describe",
+      "assigned_learn_href": "/learn/mindfulness/describe.html",
+      "assigned_source_qmd": "site/learn/mindfulness/describe.qmd",
+      "dbt_match": {
+        "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+        "page": 82,
+        "handout_number": "Mindfulness Handout 4B",
+        "exact_match": true,
+        "verified_by": [
+          "handout_or_worksheet_number",
+          "exact_title",
+          "internal_wording",
+          "visual_layout"
+        ],
+        "original_asset": "/resources/mindfulness/program-source/mindfulness-handout-4b-practicing-describing-original.pdf",
+        "clean_asset": "/resources/clean/mindfulness/mindfulness-handout-4b-practicing-describing-clean.pdf"
+      },
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 33,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-4b-practicing-describing-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-4b-practicing-describing-clean.pdf",
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "exact-clean-match",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 34,
+      "program_source_title": "Describe supplementary material",
+      "session": 3,
+      "topic": "Describe",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 34,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Blank page; no educational content."
+    },
+    {
+      "program_source_page": 35,
+      "program_source_title": "Participate supplementary material",
+      "session": 4,
+      "topic": "Participate",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 35,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Session cover/structural page; the session is mapped without separate Learn content."
+    },
+    {
+      "program_source_page": 36,
+      "program_source_title": "Participate teaching (1 of 3)",
+      "session": 4,
+      "topic": "Participate",
+      "assigned_learn_href": "/learn/mindfulness/participate.html",
+      "assigned_source_qmd": "site/learn/mindfulness/participate.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 36,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-participate-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 37,
+      "program_source_title": "Participate teaching (2 of 3)",
+      "session": 4,
+      "topic": "Participate",
+      "assigned_learn_href": "/learn/mindfulness/participate.html",
+      "assigned_source_qmd": "site/learn/mindfulness/participate.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 37,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-participate-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 38,
+      "program_source_title": "Participate teaching (3 of 3)",
+      "session": 4,
+      "topic": "Participate",
+      "assigned_learn_href": "/learn/mindfulness/participate.html",
+      "assigned_source_qmd": "site/learn/mindfulness/participate.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 38,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-participate-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 39,
+      "program_source_title": "Mindfulness Handout 4C - Ideas for Practicing Participating",
+      "session": 4,
+      "topic": "Participate",
+      "assigned_learn_href": "/learn/mindfulness/participate.html",
+      "assigned_source_qmd": "site/learn/mindfulness/participate.qmd",
+      "dbt_match": {
+        "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+        "page": 83,
+        "handout_number": "Mindfulness Handout 4C",
+        "exact_match": true,
+        "verified_by": [
+          "handout_or_worksheet_number",
+          "exact_title",
+          "internal_wording",
+          "visual_layout"
+        ],
+        "original_asset": "/resources/mindfulness/program-source/mindfulness-handout-4c-practicing-participating-original.pdf",
+        "clean_asset": "/resources/clean/mindfulness/mindfulness-handout-4c-practicing-participating-clean.pdf"
+      },
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 39,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-4c-practicing-participating-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-4c-practicing-participating-clean.pdf",
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "exact-clean-match",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 40,
+      "program_source_title": "Participate supplementary material",
+      "session": 4,
+      "topic": "Participate",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 40,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Blank page; no educational content."
+    },
+    {
+      "program_source_page": 41,
+      "program_source_title": "Non-Judgmentally supplementary material",
+      "session": 5,
+      "topic": "Non-Judgmentally",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 41,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Session cover/structural page; the session is mapped without separate Learn content."
+    },
+    {
+      "program_source_page": 42,
+      "program_source_title": "Non-Judgmentally teaching (1 of 3)",
+      "session": 5,
+      "topic": "Non-Judgmentally",
+      "assigned_learn_href": "/learn/mindfulness/how-skills.html",
+      "assigned_source_qmd": "site/learn/mindfulness/how-skills.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 42,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-nonjudgmentally-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 43,
+      "program_source_title": "Non-Judgmentally teaching (2 of 3)",
+      "session": 5,
+      "topic": "Non-Judgmentally",
+      "assigned_learn_href": "/learn/mindfulness/how-skills.html",
+      "assigned_source_qmd": "site/learn/mindfulness/how-skills.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 43,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-nonjudgmentally-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 44,
+      "program_source_title": "Non-Judgmentally teaching (3 of 3)",
+      "session": 5,
+      "topic": "Non-Judgmentally",
+      "assigned_learn_href": "/learn/mindfulness/how-skills.html",
+      "assigned_source_qmd": "site/learn/mindfulness/how-skills.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 44,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-nonjudgmentally-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 45,
+      "program_source_title": "Observation, description, and judgment example",
+      "session": 5,
+      "topic": "Non-Judgmentally",
+      "assigned_learn_href": "/learn/mindfulness/how-skills.html",
+      "assigned_source_qmd": "site/learn/mindfulness/how-skills.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 45,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 46,
+      "program_source_title": "Reframing judgments exercise",
+      "session": 5,
+      "topic": "Non-Judgmentally",
+      "assigned_learn_href": "/learn/mindfulness/how-skills.html",
+      "assigned_source_qmd": "site/learn/mindfulness/how-skills.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 46,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-nonjudgmentally-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 47,
+      "program_source_title": "Mindfulness Handout 5A - Ideas for Practicing Nonjudgmentalness",
+      "session": 5,
+      "topic": "Non-Judgmentally",
+      "assigned_learn_href": "/learn/mindfulness/how-skills.html",
+      "assigned_source_qmd": "site/learn/mindfulness/how-skills.qmd",
+      "dbt_match": {
+        "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+        "page": 85,
+        "handout_number": "Mindfulness Handout 5A",
+        "exact_match": true,
+        "verified_by": [
+          "handout_or_worksheet_number",
+          "exact_title",
+          "internal_wording",
+          "visual_layout"
+        ],
+        "original_asset": "/resources/mindfulness/program-source/mindfulness-handout-5a-practicing-nonjudgmentalness-original.pdf",
+        "clean_asset": "/resources/clean/mindfulness/mindfulness-handout-5a-practicing-nonjudgmentalness-clean.pdf"
+      },
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 47,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-5a-practicing-nonjudgmentalness-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-5a-practicing-nonjudgmentalness-clean.pdf",
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "exact-clean-match",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 48,
+      "program_source_title": "One-Mindfully supplementary material",
+      "session": 6,
+      "topic": "One-Mindfully",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 48,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Session cover/structural page; the session is mapped without separate Learn content."
+    },
+    {
+      "program_source_page": 49,
+      "program_source_title": "One-Mindfully teaching (1 of 2)",
+      "session": 6,
+      "topic": "One-Mindfully",
+      "assigned_learn_href": "/learn/mindfulness/one-mindfully.html",
+      "assigned_source_qmd": "site/learn/mindfulness/one-mindfully.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 49,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-one-mindfully-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 50,
+      "program_source_title": "One-Mindfully teaching (2 of 2)",
+      "session": 6,
+      "topic": "One-Mindfully",
+      "assigned_learn_href": "/learn/mindfulness/one-mindfully.html",
+      "assigned_source_qmd": "site/learn/mindfulness/one-mindfully.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 50,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-one-mindfully-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 51,
+      "program_source_title": "Mindfulness Handout 5B - Ideas for Practicing One-Mindfulness",
+      "session": 6,
+      "topic": "One-Mindfully",
+      "assigned_learn_href": "/learn/mindfulness/one-mindfully.html",
+      "assigned_source_qmd": "site/learn/mindfulness/one-mindfully.qmd",
+      "dbt_match": {
+        "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+        "page": 86,
+        "handout_number": "Mindfulness Handout 5B",
+        "exact_match": true,
+        "verified_by": [
+          "handout_or_worksheet_number",
+          "exact_title",
+          "internal_wording",
+          "visual_layout"
+        ],
+        "original_asset": "/resources/mindfulness/program-source/mindfulness-handout-5b-practicing-one-mindfulness-original.pdf",
+        "clean_asset": "/resources/clean/mindfulness/mindfulness-handout-5b-practicing-one-mindfulness-clean.pdf"
+      },
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 51,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-5b-practicing-one-mindfulness-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-5b-practicing-one-mindfulness-clean.pdf",
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "exact-clean-match",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 52,
+      "program_source_title": "Effectively supplementary material",
+      "session": 7,
+      "topic": "Effectively",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 52,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Session cover/structural page; the session is mapped without separate Learn content."
+    },
+    {
+      "program_source_page": 53,
+      "program_source_title": "Effectively teaching (1 of 2)",
+      "session": 7,
+      "topic": "Effectively",
+      "assigned_learn_href": "/learn/mindfulness/effectively.html",
+      "assigned_source_qmd": "site/learn/mindfulness/effectively.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 53,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-effectively-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 54,
+      "program_source_title": "Effectively teaching (2 of 2)",
+      "session": 7,
+      "topic": "Effectively",
+      "assigned_learn_href": "/learn/mindfulness/effectively.html",
+      "assigned_source_qmd": "site/learn/mindfulness/effectively.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 54,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-effectively-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 55,
+      "program_source_title": "Effectiveness reflection",
+      "session": 7,
+      "topic": "Effectively",
+      "assigned_learn_href": "/learn/mindfulness/effectively.html",
+      "assigned_source_qmd": "site/learn/mindfulness/effectively.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 55,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-effectively-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 56,
+      "program_source_title": "Mindfulness Handout 5C - Ideas for Practicing Effectiveness",
+      "session": 7,
+      "topic": "Effectively",
+      "assigned_learn_href": "/learn/mindfulness/effectively.html",
+      "assigned_source_qmd": "site/learn/mindfulness/effectively.qmd",
+      "dbt_match": {
+        "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+        "page": 87,
+        "handout_number": "Mindfulness Handout 5C",
+        "exact_match": true,
+        "verified_by": [
+          "handout_or_worksheet_number",
+          "exact_title",
+          "internal_wording",
+          "visual_layout"
+        ],
+        "original_asset": "/resources/mindfulness/program-source/mindfulness-handout-5c-practicing-effectiveness-original.pdf",
+        "clean_asset": "/resources/clean/mindfulness/mindfulness-handout-5c-practicing-effectiveness-clean.pdf"
+      },
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 56,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-5c-practicing-effectiveness-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-5c-practicing-effectiveness-clean.pdf",
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "exact-clean-match",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 57,
+      "program_source_title": "Effectively supplementary material",
+      "session": 7,
+      "topic": "Effectively",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 57,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Blank page; no educational content."
+    },
+    {
+      "program_source_page": 58,
+      "program_source_title": "Self-Compassion & Loving Kindness supplementary material",
+      "session": 8,
+      "topic": "Self-Compassion & Loving Kindness",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 58,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Session cover/structural page; the session is mapped without separate Learn content."
+    },
+    {
+      "program_source_page": 59,
+      "program_source_title": "Discovering Self-Compassion",
+      "session": 8,
+      "topic": "Self-Compassion & Loving Kindness",
+      "assigned_learn_href": "/learn/mindfulness/loving-kindness-self-compassion.html",
+      "assigned_source_qmd": "site/learn/mindfulness/loving-kindness-self-compassion.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 59,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 60,
+      "program_source_title": "Common Myths About Self-Compassion",
+      "session": 8,
+      "topic": "Self-Compassion & Loving Kindness",
+      "assigned_learn_href": "/learn/mindfulness/loving-kindness-self-compassion.html",
+      "assigned_source_qmd": "site/learn/mindfulness/loving-kindness-self-compassion.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 60,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 61,
+      "program_source_title": "Three parts of self-compassion",
+      "session": 8,
+      "topic": "Self-Compassion & Loving Kindness",
+      "assigned_learn_href": "/learn/mindfulness/loving-kindness-self-compassion.html",
+      "assigned_source_qmd": "site/learn/mindfulness/loving-kindness-self-compassion.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 61,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 62,
+      "program_source_title": "Self-Compassion Break",
+      "session": 8,
+      "topic": "Self-Compassion & Loving Kindness",
+      "assigned_learn_href": "/learn/mindfulness/loving-kindness-self-compassion.html",
+      "assigned_source_qmd": "site/learn/mindfulness/loving-kindness-self-compassion.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 62,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 63,
+      "program_source_title": "Rephrase inner criticisms",
+      "session": 8,
+      "topic": "Self-Compassion & Loving Kindness",
+      "assigned_learn_href": "/learn/mindfulness/loving-kindness-self-compassion.html",
+      "assigned_source_qmd": "site/learn/mindfulness/loving-kindness-self-compassion.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 63,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 64,
+      "program_source_title": "Self-compassionate statements",
+      "session": 8,
+      "topic": "Self-Compassion & Loving Kindness",
+      "assigned_learn_href": "/learn/mindfulness/loving-kindness-self-compassion.html",
+      "assigned_source_qmd": "site/learn/mindfulness/loving-kindness-self-compassion.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 64,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 65,
+      "program_source_title": "Loving Kindness: what, how, and why",
+      "session": 8,
+      "topic": "Self-Compassion & Loving Kindness",
+      "assigned_learn_href": "/learn/mindfulness/loving-kindness-self-compassion.html",
+      "assigned_source_qmd": "site/learn/mindfulness/loving-kindness-self-compassion.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 65,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 66,
+      "program_source_title": "Loving Kindness practice",
+      "session": 8,
+      "topic": "Self-Compassion & Loving Kindness",
+      "assigned_learn_href": "/learn/mindfulness/loving-kindness-self-compassion.html",
+      "assigned_source_qmd": "site/learn/mindfulness/loving-kindness-self-compassion.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 66,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 67,
+      "program_source_title": "Practicing Self-Kindness (1 of 5)",
+      "session": 8,
+      "topic": "Self-Compassion & Loving Kindness",
+      "assigned_learn_href": "/learn/mindfulness/loving-kindness-self-compassion.html",
+      "assigned_source_qmd": "site/learn/mindfulness/loving-kindness-self-compassion.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 67,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 68,
+      "program_source_title": "Practicing Self-Kindness (2 of 5)",
+      "session": 8,
+      "topic": "Self-Compassion & Loving Kindness",
+      "assigned_learn_href": "/learn/mindfulness/loving-kindness-self-compassion.html",
+      "assigned_source_qmd": "site/learn/mindfulness/loving-kindness-self-compassion.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 68,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 69,
+      "program_source_title": "Practicing Self-Kindness (3 of 5)",
+      "session": 8,
+      "topic": "Self-Compassion & Loving Kindness",
+      "assigned_learn_href": "/learn/mindfulness/loving-kindness-self-compassion.html",
+      "assigned_source_qmd": "site/learn/mindfulness/loving-kindness-self-compassion.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 69,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 70,
+      "program_source_title": "Practicing Self-Kindness (4 of 5)",
+      "session": 8,
+      "topic": "Self-Compassion & Loving Kindness",
+      "assigned_learn_href": "/learn/mindfulness/loving-kindness-self-compassion.html",
+      "assigned_source_qmd": "site/learn/mindfulness/loving-kindness-self-compassion.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 70,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 71,
+      "program_source_title": "Practicing Self-Kindness (5 of 5)",
+      "session": 8,
+      "topic": "Self-Compassion & Loving Kindness",
+      "assigned_learn_href": "/learn/mindfulness/loving-kindness-self-compassion.html",
+      "assigned_source_qmd": "site/learn/mindfulness/loving-kindness-self-compassion.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 71,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 72,
+      "program_source_title": "Self-Compassion & Loving Kindness supplementary material",
+      "session": 8,
+      "topic": "Self-Compassion & Loving Kindness",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 72,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Blank page; no educational content."
+    },
+    {
+      "program_source_page": 73,
+      "program_source_title": "Self-compassion source and video links",
+      "session": 8,
+      "topic": "Self-Compassion & Loving Kindness",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 73,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Reference/link-list page; source leads were reviewed but are not republished as curriculum content."
+    },
+    {
+      "program_source_page": 74,
+      "program_source_title": "Self-Compassion & Loving Kindness supplementary material",
+      "session": 8,
+      "topic": "Self-Compassion & Loving Kindness",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 74,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Blank page; no educational content."
+    },
+    {
+      "program_source_page": 75,
+      "program_source_title": "Mindfulness of Emotions supplementary material",
+      "session": 9,
+      "topic": "Mindfulness of Emotions",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 75,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Session cover/structural page; the session is mapped without separate Learn content."
+    },
+    {
+      "program_source_page": 76,
+      "program_source_title": "Mindfulness of Emotions summary",
+      "session": 9,
+      "topic": "Mindfulness of Emotions",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-of-emotions.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-of-emotions.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 76,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 77,
+      "program_source_title": "Emotion Regulation Handout 22 - Mindfulness of Current Emotions",
+      "session": 9,
+      "topic": "Mindfulness of Emotions",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-of-emotions.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-of-emotions.qmd",
+      "dbt_match": {
+        "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+        "page": 288,
+        "handout_number": "Emotion Regulation Handout 22",
+        "exact_match": true,
+        "verified_by": [
+          "handout_or_worksheet_number",
+          "exact_title",
+          "internal_wording",
+          "visual_layout"
+        ],
+        "original_asset": "/resources/mindfulness/program-source/emotion-regulation-handout-22-mindfulness-current-emotions-original.pdf",
+        "clean_asset": "/resources/clean/mindfulness/emotion-regulation-handout-22-mindfulness-current-emotions-clean.pdf"
+      },
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 77,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/emotion-regulation-handout-22-mindfulness-current-emotions-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/emotion-regulation-handout-22-mindfulness-current-emotions-clean.pdf",
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "exact-clean-match",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 78,
+      "program_source_title": "Practicing Mindfulness of Emotions at Home",
+      "session": 9,
+      "topic": "Mindfulness of Emotions",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-of-emotions.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-of-emotions.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 78,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-emotions-program-practice.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 79,
+      "program_source_title": "Mindfulness of Thoughts supplementary material",
+      "session": 10,
+      "topic": "Mindfulness of Thoughts",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 79,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Session cover/structural page; the session is mapped without separate Learn content."
+    },
+    {
+      "program_source_page": 80,
+      "program_source_title": "Mindfulness of Current Thoughts and Cognitive Defusion",
+      "session": 10,
+      "topic": "Mindfulness of Thoughts",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-of-thoughts.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-of-thoughts.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 80,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 81,
+      "program_source_title": "Cognitive defusion practices",
+      "session": 10,
+      "topic": "Mindfulness of Thoughts",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-of-thoughts.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-of-thoughts.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 81,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 82,
+      "program_source_title": "Mindfulness of Thoughts: How To",
+      "session": 10,
+      "topic": "Mindfulness of Thoughts",
+      "assigned_learn_href": "/learn/mindfulness/mindfulness-of-thoughts.html",
+      "assigned_source_qmd": "site/learn/mindfulness/mindfulness-of-thoughts.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 82,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 83,
+      "program_source_title": "Grounding supplementary material",
+      "session": 11,
+      "topic": "Grounding",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 83,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Session cover/structural page; the session is mapped without separate Learn content."
+    },
+    {
+      "program_source_page": 84,
+      "program_source_title": "Grounding overview",
+      "session": 11,
+      "topic": "Grounding",
+      "assigned_learn_href": "/learn/mindfulness/grounding.html",
+      "assigned_source_qmd": "site/learn/mindfulness/grounding.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 84,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-grounding-program-overview.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 85,
+      "program_source_title": "Breathing-oriented grounding (1 of 3)",
+      "session": 11,
+      "topic": "Grounding",
+      "assigned_learn_href": "/learn/mindfulness/grounding.html",
+      "assigned_source_qmd": "site/learn/mindfulness/grounding.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 85,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 86,
+      "program_source_title": "Breathing-oriented grounding (2 of 3)",
+      "session": 11,
+      "topic": "Grounding",
+      "assigned_learn_href": "/learn/mindfulness/grounding.html",
+      "assigned_source_qmd": "site/learn/mindfulness/grounding.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 86,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 87,
+      "program_source_title": "Breathing-oriented grounding (3 of 3)",
+      "session": 11,
+      "topic": "Grounding",
+      "assigned_learn_href": "/learn/mindfulness/grounding.html",
+      "assigned_source_qmd": "site/learn/mindfulness/grounding.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 87,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 88,
+      "program_source_title": "Tactile grounding",
+      "session": 11,
+      "topic": "Grounding",
+      "assigned_learn_href": "/learn/mindfulness/grounding.html",
+      "assigned_source_qmd": "site/learn/mindfulness/grounding.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 88,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 89,
+      "program_source_title": "Sensory grounding (1 of 2)",
+      "session": 11,
+      "topic": "Grounding",
+      "assigned_learn_href": "/learn/mindfulness/grounding.html",
+      "assigned_source_qmd": "site/learn/mindfulness/grounding.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 89,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 90,
+      "program_source_title": "Sensory and cognitive grounding (2 of 2)",
+      "session": 11,
+      "topic": "Grounding",
+      "assigned_learn_href": "/learn/mindfulness/grounding.html",
+      "assigned_source_qmd": "site/learn/mindfulness/grounding.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 90,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 91,
+      "program_source_title": "Social grounding",
+      "session": 11,
+      "topic": "Grounding",
+      "assigned_learn_href": "/learn/mindfulness/grounding.html",
+      "assigned_source_qmd": "site/learn/mindfulness/grounding.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 91,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 92,
+      "program_source_title": "Body scan",
+      "session": 11,
+      "topic": "Grounding",
+      "assigned_learn_href": "/learn/mindfulness/grounding.html",
+      "assigned_source_qmd": "site/learn/mindfulness/grounding.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 92,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 93,
+      "program_source_title": "Short-term intense exercise",
+      "session": 11,
+      "topic": "Grounding",
+      "assigned_learn_href": "/learn/mindfulness/grounding.html",
+      "assigned_source_qmd": "site/learn/mindfulness/grounding.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 93,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 94,
+      "program_source_title": "Supportive self-talk",
+      "session": 11,
+      "topic": "Grounding",
+      "assigned_learn_href": "/learn/mindfulness/grounding.html",
+      "assigned_source_qmd": "site/learn/mindfulness/grounding.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 94,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": true,
+      "status": "adapted-only-rights-unconfirmed",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 95,
+      "program_source_title": "Being & Doing Mind supplementary material",
+      "session": 12,
+      "topic": "Being & Doing Mind",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 95,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Session cover/structural page; the session is mapped without separate Learn content."
+    },
+    {
+      "program_source_page": 96,
+      "program_source_title": "Balancing Doing Mind and Being Mind",
+      "session": 12,
+      "topic": "Being & Doing Mind",
+      "assigned_learn_href": "/learn/mindfulness/being-mind-doing-mind.html",
+      "assigned_source_qmd": "site/learn/mindfulness/being-mind-doing-mind.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 96,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-being-doing-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 97,
+      "program_source_title": "Doing Mind",
+      "session": 12,
+      "topic": "Being & Doing Mind",
+      "assigned_learn_href": "/learn/mindfulness/being-mind-doing-mind.html",
+      "assigned_source_qmd": "site/learn/mindfulness/being-mind-doing-mind.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 97,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-being-doing-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 98,
+      "program_source_title": "Being Mind",
+      "session": 12,
+      "topic": "Being & Doing Mind",
+      "assigned_learn_href": "/learn/mindfulness/being-mind-doing-mind.html",
+      "assigned_source_qmd": "site/learn/mindfulness/being-mind-doing-mind.qmd",
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 98,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-being-doing-program-teaching.pdf",
+      "clean_printable_public_asset": null,
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "original-and-adapted",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 99,
+      "program_source_title": "Mindfulness Handout 9A - Balancing Doing and Being (1 of 2)",
+      "session": 12,
+      "topic": "Being & Doing Mind",
+      "assigned_learn_href": "/learn/mindfulness/being-mind-doing-mind.html",
+      "assigned_source_qmd": "site/learn/mindfulness/being-mind-doing-mind.qmd",
+      "dbt_match": {
+        "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+        "page": 96,
+        "handout_number": "Mindfulness Handout 9A",
+        "exact_match": true,
+        "verified_by": [
+          "handout_or_worksheet_number",
+          "exact_title",
+          "internal_wording",
+          "visual_layout"
+        ],
+        "original_asset": "/resources/mindfulness/program-source/mindfulness-handout-9a-balancing-doing-being-mind-original.pdf",
+        "clean_asset": "/resources/clean/mindfulness/mindfulness-handout-9a-balancing-doing-being-mind-clean.pdf"
+      },
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 99,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-9a-balancing-doing-being-mind-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-9a-balancing-doing-being-mind-clean.pdf",
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "exact-clean-match",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 100,
+      "program_source_title": "Mindfulness Handout 9A - Balancing Doing and Being (2 of 2)",
+      "session": 12,
+      "topic": "Being & Doing Mind",
+      "assigned_learn_href": "/learn/mindfulness/being-mind-doing-mind.html",
+      "assigned_source_qmd": "site/learn/mindfulness/being-mind-doing-mind.qmd",
+      "dbt_match": {
+        "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+        "page": 97,
+        "handout_number": "Mindfulness Handout 9A",
+        "exact_match": true,
+        "verified_by": [
+          "handout_or_worksheet_number",
+          "exact_title",
+          "internal_wording",
+          "visual_layout"
+        ],
+        "original_asset": "/resources/mindfulness/program-source/mindfulness-handout-9a-balancing-doing-being-mind-original.pdf",
+        "clean_asset": "/resources/clean/mindfulness/mindfulness-handout-9a-balancing-doing-being-mind-clean.pdf"
+      },
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 100,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-handout-9a-balancing-doing-being-mind-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-handout-9a-balancing-doing-being-mind-clean.pdf",
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "exact-clean-match",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 101,
+      "program_source_title": "Mindfulness Worksheet 7A - Being and Doing Calendar (1 of 2)",
+      "session": 12,
+      "topic": "Being & Doing Mind",
+      "assigned_learn_href": "/learn/mindfulness/being-mind-doing-mind.html",
+      "assigned_source_qmd": "site/learn/mindfulness/being-mind-doing-mind.qmd",
+      "dbt_match": {
+        "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+        "page": 123,
+        "handout_number": "Mindfulness Worksheet 7A",
+        "exact_match": true,
+        "verified_by": [
+          "handout_or_worksheet_number",
+          "exact_title",
+          "internal_wording",
+          "visual_layout"
+        ],
+        "original_asset": "/resources/mindfulness/program-source/mindfulness-worksheet-7a-being-doing-calendar-original.pdf",
+        "clean_asset": "/resources/clean/mindfulness/mindfulness-worksheet-7a-being-doing-calendar-clean.pdf"
+      },
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 101,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-worksheet-7a-being-doing-calendar-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-worksheet-7a-being-doing-calendar-clean.pdf",
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "exact-clean-match",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 102,
+      "program_source_title": "Mindfulness Worksheet 7A - Being and Doing Calendar (2 of 2)",
+      "session": 12,
+      "topic": "Being & Doing Mind",
+      "assigned_learn_href": "/learn/mindfulness/being-mind-doing-mind.html",
+      "assigned_source_qmd": "site/learn/mindfulness/being-mind-doing-mind.qmd",
+      "dbt_match": {
+        "source_file": "dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf",
+        "page": 124,
+        "handout_number": "Mindfulness Worksheet 7A",
+        "exact_match": true,
+        "verified_by": [
+          "handout_or_worksheet_number",
+          "exact_title",
+          "internal_wording",
+          "visual_layout"
+        ],
+        "original_asset": "/resources/mindfulness/program-source/mindfulness-worksheet-7a-being-doing-calendar-original.pdf",
+        "clean_asset": "/resources/clean/mindfulness/mindfulness-worksheet-7a-being-doing-calendar-clean.pdf"
+      },
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 102,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": "/resources/mindfulness/program-source/mindfulness-worksheet-7a-being-doing-calendar-original.pdf",
+      "clean_printable_public_asset": "/resources/clean/mindfulness/mindfulness-worksheet-7a-being-doing-calendar-clean.pdf",
+      "adapted_text_present": true,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "exact-clean-match",
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "program_source_page": 103,
+      "program_source_title": "Interpersonal Effectiveness begins",
+      "session": null,
+      "topic": "Curriculum boundary",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 103,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Interpersonal Effectiveness begins on this page; outside the Mindfulness curriculum."
+    },
+    {
+      "program_source_page": 104,
+      "program_source_title": "Blank page",
+      "session": null,
+      "topic": "Curriculum boundary",
+      "assigned_learn_href": null,
+      "assigned_source_qmd": null,
+      "dbt_match": null,
+      "older_scan_match": {
+        "source_file": "3 Mindfullness.pdf",
+        "page": 104,
+        "exact_match": true,
+        "same_binary_as_program_source": true,
+        "higher_resolution": false
+      },
+      "original_source_public_asset": null,
+      "clean_printable_public_asset": null,
+      "adapted_text_present": false,
+      "third_party_redistribution_unconfirmed": false,
+      "status": "excluded",
+      "excluded": true,
+      "exclusion_reason": "Blank page; no educational content."
     }
   ]
 }

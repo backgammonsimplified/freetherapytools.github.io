@@ -1631,10 +1631,10 @@ private code phrase
             "const keepExpandedWhileScrolling =",
             "!keepExpandedWhileScrolling &&",
             "sidebarScroller.addEventListener",
-            "let autoCollapsePending = true",
-            "if (!keepExpandedWhileScrolling && collapsed && !manuallyCollapsed)",
-            "keepExpandedWhileScrolling === false",
-            "!manuallyCollapsed",
+            "let autoCollapsePending = window.scrollY <= 32",
+            "if (!keepExpandedWhileScrolling && collapsed)",
+            "const active = desktopQuery.matches && collapsed",
+            "sidebar.hidden = active",
             "collapsed = false",
             "lastScrollY = currentScrollY",
             "autoCollapsePending &&",
@@ -1649,7 +1649,7 @@ private code phrase
         ]
         self.assertEqual(
             left_sidebar_toggle.count("!keepExpandedWhileScrolling &&"),
-            3,
+            2,
         )
         glossary_scroll = javascript[
             javascript.index("    const updateGlossaryLookupForScroll") :

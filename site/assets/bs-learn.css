@@ -1644,18 +1644,6 @@ body.bs-glossary-index
     outline-offset: 2px;
   }
 
-  /*
-   * Scroll auto-hide is visual only: keep the left rail's grid footprint so
-   * the lesson and right rail retain their exact desktop geometry. The
-   * explicit whole-rail toggle below remains free to reclaim that space.
-   */
-  body.bs-learn-left-sidebar-auto-hidden #quarto-sidebar {
-    transform: translateX(calc(-100% - 1rem));
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-  }
-
   body.bs-learn-left-sidebar-collapsed
     #quarto-content.page-columns
     > main#quarto-document-content {

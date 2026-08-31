@@ -18,17 +18,59 @@ execute:
   enabled: false
 ---
 
-Describe is the second WHAT skill. Use clear words for what you directly notice, separating observations from interpretations.
+Describe is the second WHAT skill. It puts words to experience while keeping observation separate from interpretation, assumption, and judgment.
 
-## Describe {#describe}
+## Thoughts are not facts {#thoughts-are-not-facts}
 
-Name sensations, emotions, thoughts, and events in simple language. When an interpretation appears, label it as a thought rather than a fact.
-## Source / Printable Copy
+A thought may be meaningful, plausible, or important to investigate without being a direct observation. Description helps clarify which part of an account was observed and which part is an inference.
 
-[Describe source page](/resources/mindfulness/mindfulness-describe-source.pdf)
+You can directly describe:
 
-## Text Version / Adapted Text
+- what you saw or heard;
+- what you physically felt; and
+- your own thoughts, emotions, and urges as internal experiences.
 
-Describe by putting words on what you directly notice. Separate an observable fact (“my shoulders tightened”) from an interpretation (“this will be a disaster”). Use simple language for thoughts, feelings, sensations, and urges without insisting that the label is the whole experience.
+You generally cannot directly observe another person's private thoughts, intentions, motives, emotions, or the hidden cause of an event. You may infer them, and the inference may later prove accurate, but it remains different from what was observed.
 
-[Emotion Explorer](/tool-finder/emotions/) can support observing and describing emotions.
+## Describe what happened {#describe}
+
+Instead of: *They don't care about me.*
+
+Try: *They did not respond to my message today. I noticed sadness and the thought that I am not important to them.*
+
+The first statement is not declared impossible. The second simply separates the observable event from the feeling and interpretation, making it easier to check facts, communicate, or decide what to do next.
+
+Another compact pattern is:
+
+1. What did I see or hear?
+2. What sensations did I notice?
+3. What emotion or urge appeared?
+4. What interpretation did my mind add?
+
+[Emotion Explorer](/tool-finder/emotions/) can support observing and describing emotion clues without requiring an emotion choice first.
+
+## Handouts & Worksheets {#handouts-worksheets}
+
+### Original Source teaching pages
+
+[![Original Source: Describe teaching pages](/resources/mindfulness/program-source/mindfulness-describe-program-teaching.jpg){.img-fluid fig-alt="Original Source: Describe teaching pages"}](/resources/mindfulness/program-source/mindfulness-describe-program-teaching.pdf){target="_blank" rel="noopener"}
+
+[Open original source teaching pages](/resources/mindfulness/program-source/mindfulness-describe-program-teaching.pdf){target="_blank" rel="noopener"}
+
+:::: {.bs-practice-resource #resource-mindfulness-program-p033 data-source-id="mindfulness-program-p033"}
+**Mindfulness Handout 4B - Ideas for Practicing Describing**
+
+**Original Source**
+
+[![Original Source: Ideas for Practicing Describing](/resources/mindfulness/program-source/mindfulness-handout-4b-practicing-describing-original.jpg){.img-fluid fig-alt="Original Source: Ideas for Practicing Describing"}](/resources/mindfulness/program-source/mindfulness-handout-4b-practicing-describing-original.pdf){target="_blank" rel="noopener"}
+
+[Open original source](/resources/mindfulness/program-source/mindfulness-handout-4b-practicing-describing-original.pdf){target="_blank" rel="noopener"}
+
+::: {.bs-resource-match data-match-id="linehan-book:mindfulness-program-p033" data-source-id="mindfulness-program-p033" data-match-source="linehan-book" data-candidate-asset="/resources/clean/mindfulness/mindfulness-handout-4b-practicing-describing-clean.pdf"}
+**Clean Printable Copy**
+
+[![Clean Printable Copy: Ideas for Practicing Describing](/resources/clean/mindfulness/mindfulness-handout-4b-practicing-describing-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ideas for Practicing Describing"}](/resources/clean/mindfulness/mindfulness-handout-4b-practicing-describing-clean.pdf){target="_blank" rel="noopener"}
+
+[Open printable copy](/resources/clean/mindfulness/mindfulness-handout-4b-practicing-describing-clean.pdf){target="_blank" rel="noopener"}
+:::
+::::

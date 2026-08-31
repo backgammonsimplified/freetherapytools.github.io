@@ -18,20 +18,53 @@ execute:
   enabled: false
 ---
 
-## Positive Self-Talk {#positive-self-talk}
+Self-compassion makes room for difficulty while reducing avoidable self-attack. It does not excuse harmful behaviour or remove accountability.
 
-Positive self-talk does not require forced optimism. Start by noticing the words, tone, emotion, and body response that show up. Ask what you would say to a close friend in the same circumstances and what relevant evidence the difficult thought leaves out. Aim for a response that is fair, specific, believable, and supportive of effective action.
+## Three components of self-compassion {#three-components}
 
-[Open the Positive Self-Talk tool](/tool-finder/positive-self-talk/). The [CBT balanced-alternatives lesson](/learn/cbt-anxiety/thought-records-part-2.html#balanced-alternatives) remains useful when the thought needs a more structured evidence review.
+### Mindfulness
 
-## Self-Compassion and Loving Kindness
+Notice suffering or difficulty without denying it and without letting it define the whole self. *This is painful* is more specific than *Everything is ruined*.
 
-Loving kindness and self-compassion can be practised through intention, language, and small caring actions. They make room for difficulty while reducing avoidable self-attack.
+### Self-kindness
 
-## Source / Printable Copy
+Respond with support and understanding rather than a global attack. Kindness can include rest, protection, encouragement, repair, or a clear limit.
 
-[Other mindfulness perspectives: spiritual Wise Mind, loving kindness, and being/doing mind](/resources/mindfulness/mindfulness-other-perspectives-source.pdf)
+### Common humanity and connectedness
 
-## Text Version / Adapted Text
+Difficulty, mistakes, and imperfection are parts of human experience. Remembering this can reduce isolation without minimizing what happened.
 
-The source presents several perspectives rather than one required belief system. Loving-kindness practice intentionally wishes safety, health, ease, and wellbeing for oneself and others. Being Mind emphasizes awareness and presence; Doing Mind emphasizes goal-directed action. Wise Mind can hold both.
+## A self-compassion break {#self-compassion-break}
+
+1. **Notice:** "This is difficult."
+2. **Connect:** "Difficulty is part of being human; I am not the only person who struggles."
+3. **Respond:** "What would I need to hear right now that is both kind and true?"
+
+The response does not have to be positive or comforting. It can be realistic: *I made a mistake, I can take responsibility, and attacking myself will not help me repair it.*
+
+## Positive self-talk and the inner critic {#positive-self-talk}
+
+Replace global self-attacks with specific description, accountability where needed, learning, and realistic encouragement.
+
+Instead of: *What is wrong with me?*
+
+Try: *I missed something important. What contributed to that, what repair is possible, and what support would help next time?*
+
+[Open the Positive Self-Talk tool](/tool-finder/positive-self-talk/). The [CBT balanced-alternatives lesson](/learn/cbt-anxiety/thought-records-part-2.html#balanced-alternatives) is useful when a thought needs structured evidence review.
+
+## Loving kindness {#loving-kindness}
+
+Loving-kindness is the intentional practice of warm wishes. It may be directed toward someone cared about, oneself, someone neutral, and wider groups. It does not require a particular belief system or a specific emotional response.
+
+Use short wishes that feel workable, such as:
+
+- May you be safe.
+- May you have well-being.
+- May you meet this moment with kindness.
+- May there be some ease where ease is possible.
+
+Change the words if they feel forced. The practice is the intention and the return, not manufacturing warmth on command.
+
+## Source approach {#source-approach}
+
+This lesson is original adapted educational HTML based on the supplied session themes. The supplementary third-party worksheets and infographics are not republished here.

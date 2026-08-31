@@ -43,6 +43,7 @@ project:
     - "data/audio/**"
     - "resources/audio/**"
     - "resources/mindfulness/**"
+    - "resources/clean/mindfulness/**"
     - "resources/wellness/urge-surfing/**"
     - "resources/wellness/stages-of-change/**"
     - "data/skill-apps/**"

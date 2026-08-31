@@ -18,15 +18,46 @@ execute:
   enabled: false
 ---
 
-Effectively is the third HOW skill. Focus on what works instead of becoming stuck on how the situation should be, who is right, or whether it is fair.
+Effectively is the third HOW skill. Respond to the situation that actually exists and choose actions that move toward the goal.
 
-## Effectively {#effectively}
+## Focus on what works {#effectively}
 
-Keep your goals and the facts of the situation in view, then choose the response most likely to help.
-## Source / Printable Copy
+First identify the goal. Then consider the facts, constraints, available choices, and likely responses. Notice when an argument about who is right or wrong has started replacing the original goal.
 
-[Effectively source page](/resources/mindfulness/mindfulness-effectively-source.pdf)
+Effectiveness is not a direction to abandon values, safety, or boundaries. Be flexible about strategies or nonessential positions while maintaining what is important.
 
-## Text Version / Adapted Text
+## A short effectiveness check {#effectiveness-check}
 
-Effectively means responding to the situation that exists and the goal that matters, instead of becoming trapped in proving a point or demanding that reality be different first. Consider what is workable, lawful, safe, and aligned with values.
+- What is my actual goal?
+- What response would move toward it?
+- Am I trying to be effective, or mainly trying to prove I am right?
+- What constraints do I need to understand?
+- What can I change about my approach?
+
+An effective response may include asking for change, setting a boundary, delaying action, trying a different strategy, seeking support, or accepting that some parts of the situation are not currently controllable.
+
+## Handouts & Worksheets {#handouts-worksheets}
+
+### Original Source teaching pages
+
+[![Original Source: Effectively teaching pages](/resources/mindfulness/program-source/mindfulness-effectively-program-teaching.jpg){.img-fluid fig-alt="Original Source: Effectively teaching pages"}](/resources/mindfulness/program-source/mindfulness-effectively-program-teaching.pdf){target="_blank" rel="noopener"}
+
+[Open original source teaching pages](/resources/mindfulness/program-source/mindfulness-effectively-program-teaching.pdf){target="_blank" rel="noopener"}
+
+:::: {.bs-practice-resource #resource-mindfulness-program-p056 data-source-id="mindfulness-program-p056"}
+**Mindfulness Handout 5C - Ideas for Practicing Effectiveness**
+
+**Original Source**
+
+[![Original Source: Ideas for Practicing Effectiveness](/resources/mindfulness/program-source/mindfulness-handout-5c-practicing-effectiveness-original.jpg){.img-fluid fig-alt="Original Source: Ideas for Practicing Effectiveness"}](/resources/mindfulness/program-source/mindfulness-handout-5c-practicing-effectiveness-original.pdf){target="_blank" rel="noopener"}
+
+[Open original source](/resources/mindfulness/program-source/mindfulness-handout-5c-practicing-effectiveness-original.pdf){target="_blank" rel="noopener"}
+
+::: {.bs-resource-match data-match-id="linehan-book:mindfulness-program-p056" data-source-id="mindfulness-program-p056" data-match-source="linehan-book" data-candidate-asset="/resources/clean/mindfulness/mindfulness-handout-5c-practicing-effectiveness-clean.pdf"}
+**Clean Printable Copy**
+
+[![Clean Printable Copy: Ideas for Practicing Effectiveness](/resources/clean/mindfulness/mindfulness-handout-5c-practicing-effectiveness-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ideas for Practicing Effectiveness"}](/resources/clean/mindfulness/mindfulness-handout-5c-practicing-effectiveness-clean.pdf){target="_blank" rel="noopener"}
+
+[Open printable copy](/resources/clean/mindfulness/mindfulness-handout-5c-practicing-effectiveness-clean.pdf){target="_blank" rel="noopener"}
+:::
+::::

@@ -20,28 +20,136 @@ execute:
   enabled: false
 ---
 
-Mindfulness helps you notice the present moment and respond with greater choice. Wise Mind integrates emotion and reason.
+Mindfulness is the practice of deliberately noticing what is happening now and relating to that experience with less automatic judgment or avoidance. It can be practised formally, such as during meditation, or informally during ordinary activities.
 
-## Emotion Mind {#emotion-mind}
+## What mindfulness is {#what-mindfulness-is}
 
-## Reasonable Mind {#reasonable-mind}
+Mindfulness means intentionally noticing present experience: sensations, thoughts, emotions, urges, actions, and surroundings. The aim is to be here for what is happening without immediately judging it, rejecting it, clinging to it, or reacting automatically. It is not a demand to empty the mind or feel calm.
 
-## Wise Mind {#wise-mind}
-## Source / Printable Copies
+The source organizes the practice around three broad objectives:
 
-- [Mindfulness foundations and Wise Mind source pages](/resources/mindfulness/mindfulness-foundations-source.pdf)
-- [Core mindfulness practice worksheets](/resources/mindfulness/mindfulness-core-practice-source.pdf)
+- reduce unnecessary suffering and support well-being;
+- gain more choice about where attention goes;
+- experience present reality more directly.
 
-## Text Version / Adapted Text {#states-of-mind}
+These are directions for practice, not promises of a particular medical result.
 
-Mindfulness is intentional attention to present experience. The source distinguishes **reasonable mind**, which emphasizes facts and logic; **emotion mind**, in which emotion strongly shapes attention and action; and **Wise Mind**, which brings emotion and reason together with direct awareness of what matters.
+::: {.callout-note collapse="true" title="Where does automatic pilot show up?"}
+This is a reflection, not a test or score. Consider whether you sometimes:
 
-### Practising Wise Mind {#practising-wise-mind}
+- complete tasks without noticing much of the process;
+- rush from one activity to the next;
+- lose the present step while focusing on the goal;
+- listen while also doing something else;
+- become absorbed in the past or future; or
+- notice physical tension only after it becomes strong.
 
-Pause and observe the current facts, emotions, sensations, thoughts, and urges. Ask what you know from both reason and lived experience. A Wise Mind response may be quiet or uncertain; it does not require the absence of emotion.
+Choose one familiar moment in which you could pause and notice one thing more clearly.
+:::
 
-### Practice {#practice}
+## States of Mind {#states-of-mind}
 
-Choose an ordinary activity. Notice when attention moves away, name that gently, and return. Repetition is the practice; losing focus is not failure.
+### Reasonable Mind {#reasonable-mind}
+
+Reasonable Mind emphasizes facts, logic, analysis, planning, and task focus. It can be especially useful for comparing options, organizing information, and carrying out a plan. Used alone, it may leave important feelings or values out of view.
+
+### Emotion Mind {#emotion-mind}
+
+Emotion Mind emphasizes feelings, moods, urges, and interpretations shaped by the current emotion. It can bring urgency, energy, and important information. When it takes over completely, it may narrow what seems possible.
+
+### Wise Mind {#wise-mind}
+
+Wise Mind takes both emotion and reason seriously and integrates them with a broader awareness of the situation. It is a middle-path capacity, not a formula of 50% logic plus 50% emotion. A Wise Mind response may still include uncertainty, strong feeling, or the need for more information.
+
+Try describing one recent experience from each state of mind. What facts did Reasonable Mind notice? What feelings and urges did Emotion Mind bring forward? What did Wise Mind understand when both were included?
+
+## Practising Wise Mind {#practising-wise-mind}
+
+Use any brief practice that fits the moment:
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-6}
+**Settle like a lake.** Imagine a small object slowly settling through clear water. Let attention settle with it, without trying to force calm.
+:::
+::: {.g-col-12 .g-col-md-6}
+**Centre on a spiral stair.** Picture moving gently down a spiral stair toward a steady inner place.
+:::
+::: {.g-col-12 .g-col-md-6}
+**Use breathing words.** Silently notice *Wise* with one comfortable breath and *Mind* with the next. Breath-holding is not needed.
+:::
+::: {.g-col-12 .g-col-md-6}
+**Ask and listen.** Ask Wise Mind a question, or ask "Is this Wise Mind?" Then listen without demanding an immediate answer.
+:::
+::: {.g-col-12 .g-col-md-6}
+**Centre and expand.** Notice breath or body contact at one point, then gradually include the room and the wider situation.
+:::
+::: {.g-col-12 .g-col-md-6}
+**Notice the pauses.** If comfortable, notice the natural pause where one breath changes into the next. Do not lengthen or hold it.
+:::
+:::
+
+Choose an ordinary activity as a short practice. Notice when attention moves away and return. Wandering is not failure; noticing and returning is the exercise.
 
 [Use the Skill Thermometer](/tool-finder/thermometer/) when choosing a next skill would help.
+
+## Handouts & Worksheets {#handouts-worksheets}
+
+### Original Source teaching pages
+
+[![Original Source: mindfulness overview and states-of-mind reflection](/resources/mindfulness/program-source/mindfulness-foundations-program-teaching.jpg){.img-fluid fig-alt="Original Source: mindfulness overview and states-of-mind reflection"}](/resources/mindfulness/program-source/mindfulness-foundations-program-teaching.pdf){target="_blank" rel="noopener"}
+
+[Open original source teaching pages](/resources/mindfulness/program-source/mindfulness-foundations-program-teaching.pdf){target="_blank" rel="noopener"}
+
+:::: {.bs-practice-resource #resource-mindfulness-program-p008 data-source-id="mindfulness-program-p008"}
+**Mindfulness Handout 1A - Mindfulness Definitions**
+
+**Original Source**
+
+[![Original Source: Mindfulness Definitions](/resources/mindfulness/program-source/mindfulness-handout-1a-definitions-original.jpg){.img-fluid fig-alt="Original Source: Mindfulness Definitions"}](/resources/mindfulness/program-source/mindfulness-handout-1a-definitions-original.pdf){target="_blank" rel="noopener"}
+
+[Open original source](/resources/mindfulness/program-source/mindfulness-handout-1a-definitions-original.pdf){target="_blank" rel="noopener"}
+
+::: {.bs-resource-match data-match-id="linehan-book:mindfulness-program-p008" data-source-id="mindfulness-program-p008" data-match-source="linehan-book" data-candidate-asset="/resources/clean/mindfulness/mindfulness-handout-1a-definitions-clean.pdf"}
+**Clean Printable Copy**
+
+[![Clean Printable Copy: Mindfulness Definitions](/resources/clean/mindfulness/mindfulness-handout-1a-definitions-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Mindfulness Definitions"}](/resources/clean/mindfulness/mindfulness-handout-1a-definitions-clean.pdf){target="_blank" rel="noopener"}
+
+[Open printable copy](/resources/clean/mindfulness/mindfulness-handout-1a-definitions-clean.pdf){target="_blank" rel="noopener"}
+:::
+::::
+
+:::: {.bs-practice-resource #resource-mindfulness-program-p009 data-source-id="mindfulness-program-p009"}
+**Mindfulness Handout 3 - Wise Mind: States of Mind**
+
+**Original Source**
+
+[![Original Source: Wise Mind States of Mind](/resources/mindfulness/program-source/mindfulness-handout-3-wise-mind-states-of-mind-original.jpg){.img-fluid fig-alt="Original Source: Wise Mind States of Mind"}](/resources/mindfulness/program-source/mindfulness-handout-3-wise-mind-states-of-mind-original.pdf){target="_blank" rel="noopener"}
+
+[Open original source](/resources/mindfulness/program-source/mindfulness-handout-3-wise-mind-states-of-mind-original.pdf){target="_blank" rel="noopener"}
+
+::: {.bs-resource-match data-match-id="linehan-book:mindfulness-program-p009" data-source-id="mindfulness-program-p009" data-match-source="linehan-book" data-candidate-asset="/resources/clean/mindfulness/mindfulness-handout-3-wise-mind-states-of-mind-clean.pdf"}
+**Clean Printable Copy**
+
+[![Clean Printable Copy: Wise Mind States of Mind](/resources/clean/mindfulness/mindfulness-handout-3-wise-mind-states-of-mind-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Wise Mind States of Mind"}](/resources/clean/mindfulness/mindfulness-handout-3-wise-mind-states-of-mind-clean.pdf){target="_blank" rel="noopener"}
+
+[Open printable copy](/resources/clean/mindfulness/mindfulness-handout-3-wise-mind-states-of-mind-clean.pdf){target="_blank" rel="noopener"}
+:::
+::::
+
+:::: {.bs-practice-resource #resource-mindfulness-program-p012-p013 data-source-id="mindfulness-program-p012-p013"}
+**Mindfulness Handout 3A - Ideas for Practicing Wise Mind**
+
+**Original Source**
+
+[![Original Source: Ideas for Practicing Wise Mind](/resources/mindfulness/program-source/mindfulness-handout-3a-practicing-wise-mind-original.jpg){.img-fluid fig-alt="Original Source: Ideas for Practicing Wise Mind"}](/resources/mindfulness/program-source/mindfulness-handout-3a-practicing-wise-mind-original.pdf){target="_blank" rel="noopener"}
+
+[Open original source](/resources/mindfulness/program-source/mindfulness-handout-3a-practicing-wise-mind-original.pdf){target="_blank" rel="noopener"}
+
+::: {.bs-resource-match data-match-id="linehan-book:mindfulness-program-p012-p013" data-source-id="mindfulness-program-p012-p013" data-match-source="linehan-book" data-candidate-asset="/resources/clean/mindfulness/mindfulness-handout-3a-practicing-wise-mind-clean.pdf"}
+**Clean Printable Copy**
+
+[![Clean Printable Copy: Ideas for Practicing Wise Mind](/resources/clean/mindfulness/mindfulness-handout-3a-practicing-wise-mind-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ideas for Practicing Wise Mind"}](/resources/clean/mindfulness/mindfulness-handout-3a-practicing-wise-mind-clean.pdf){target="_blank" rel="noopener"}
+
+[Open printable copy](/resources/clean/mindfulness/mindfulness-handout-3a-practicing-wise-mind-clean.pdf){target="_blank" rel="noopener"}
+:::
+::::

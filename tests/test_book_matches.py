@@ -1,4 +1,5 @@
 import csv
+import json
 import unittest
 from pathlib import Path
 
@@ -49,6 +50,14 @@ class BookMatchTests(unittest.TestCase):
             (SITE / row["clean_asset"].lstrip("/")).resolve()
             for row in self.rows if row["confidence"] == "high"
         }
+        mindfulness_audit = json.loads(
+            (SITE / "data" / "mindfulness-source-audit.json").read_text(encoding="utf-8")
+        )
+        expected.update(
+            (SITE / row["clean_printable_public_asset"].lstrip("/")).resolve()
+            for row in mindfulness_audit["exact_matches"]
+            if row["exact_match"]
+        )
         actual_pdf = {path.resolve() for path in (SITE / "resources" / "clean").rglob("*.pdf")}
         self.assertEqual(expected, actual_pdf)
         self.assertFalse(any(path.stat().st_size > 2_000_000 for path in actual_pdf))

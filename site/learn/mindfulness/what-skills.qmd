@@ -18,20 +18,66 @@ execute:
   enabled: false
 ---
 
-Observe is the first WHAT skill: intentionally notice sensations, thoughts, emotions, and events as they arise.
+Observe is the first WHAT skill: intentionally notice sensations, thoughts, emotions, urges, and events as they arise.
+
+## The WHAT skills {#what-skills}
+
+The WHAT skills describe what you do in mindfulness: [Observe](#observe), [Describe](/learn/mindfulness/describe.html), and [Participate](/learn/mindfulness/participate.html). Use the skill that fits the moment; you do not have to force all three at once.
 
 ## Observe {#observe}
-## Source / Printable Copies
 
-- [Observe source pages](/resources/mindfulness/mindfulness-observe-source.pdf)
-- [WHAT skills practice worksheets](/resources/mindfulness/mindfulness-what-practice-source.pdf)
+Observation creates a small space in which you can notice what is happening before reacting automatically. It supports attention to the task, gathers useful information, and trains the ability to direct and return attention.
 
-## Text Version / Adapted Text
+### Two broad ways to observe
 
-The WHAT skills describe what you do in mindfulness: **observe**, **describe**, and **participate**. They can be practised separately or together.
+**Focusing the mind** uses a specific anchor, such as breath, touch, sound, an object, or a body sensation. Keep returning to that anchor when attention moves.
 
-### Observe {#observe}
+**Opening the mind** allows experiences to enter awareness without needing to hold onto or push away each thought, sensation, feeling, image, or sound.
 
-Attend to sensations, thoughts, feelings, and events as they occur. Notice the experience without immediately pushing it away, holding onto it, or turning it into a conclusion.
+### Attitudes that help
+
+- **Beginner's Mind:** meet this moment as new rather than assuming you already know it.
+- **Non-stick attention:** let experiences arrive and leave without clinging to each one.
+- **Return:** when attention drifts, notice and come back.
+- **Wordless watching:** sometimes notice directly before immediately naming or explaining.
+
+### Representative practices
+
+- Look at one object and notice colour, shape, light, and movement.
+- Let sounds arrive without searching for their source.
+- Notice the smell and taste of one bite or sip.
+- Feel pressure, temperature, or texture where the body meets a surface.
+- Follow one comfortable breath without changing it.
+- Notice an urge as sensations and movement without automatically acting.
+- Watch a thought enter and leave awareness.
+- While walking or eating, return to the sensory details of the activity.
+
+These are examples, not a required sequence. The printable handout offers a wider practice library.
 
 [Grounding](/learn/mindfulness/grounding.html) applies observation to present sensory and body information, and the [Grounding tool](/tool-finder/grounding/) provides a concise guided practice.
+
+## Handouts & Worksheets {#handouts-worksheets}
+
+### Original Source teaching pages
+
+[![Original Source: Observe teaching pages](/resources/mindfulness/program-source/mindfulness-observe-program-teaching.jpg){.img-fluid fig-alt="Original Source: Observe teaching pages"}](/resources/mindfulness/program-source/mindfulness-observe-program-teaching.pdf){target="_blank" rel="noopener"}
+
+[Open original source teaching pages](/resources/mindfulness/program-source/mindfulness-observe-program-teaching.pdf){target="_blank" rel="noopener"}
+
+:::: {.bs-practice-resource #resource-mindfulness-program-p024-p027 data-source-id="mindfulness-program-p024-p027"}
+**Mindfulness Handout 4A - Ideas for Practicing Observing**
+
+**Original Source**
+
+[![Original Source: Ideas for Practicing Observing](/resources/mindfulness/program-source/mindfulness-handout-4a-practicing-observing-original.jpg){.img-fluid fig-alt="Original Source: Ideas for Practicing Observing"}](/resources/mindfulness/program-source/mindfulness-handout-4a-practicing-observing-original.pdf){target="_blank" rel="noopener"}
+
+[Open original source](/resources/mindfulness/program-source/mindfulness-handout-4a-practicing-observing-original.pdf){target="_blank" rel="noopener"}
+
+::: {.bs-resource-match data-match-id="linehan-book:mindfulness-program-p024-p027" data-source-id="mindfulness-program-p024-p027" data-match-source="linehan-book" data-candidate-asset="/resources/clean/mindfulness/mindfulness-handout-4a-practicing-observing-clean.pdf"}
+**Clean Printable Copy**
+
+[![Clean Printable Copy: Ideas for Practicing Observing](/resources/clean/mindfulness/mindfulness-handout-4a-practicing-observing-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ideas for Practicing Observing"}](/resources/clean/mindfulness/mindfulness-handout-4a-practicing-observing-clean.pdf){target="_blank" rel="noopener"}
+
+[Open printable copy](/resources/clean/mindfulness/mindfulness-handout-4a-practicing-observing-clean.pdf){target="_blank" rel="noopener"}
+:::
+::::

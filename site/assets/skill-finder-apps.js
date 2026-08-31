@@ -4,11 +4,136 @@
   const Site = global.TherapySite || { path: (value) => value };
   const DATA_ROOT = Site.path("/data/skill-apps");
   const BODY_REGIONS = ["head / face", "jaw", "throat", "neck / shoulders", "chest / heart", "stomach / gut", "back", "arms", "hands", "legs", "feet", "whole body", "other"];
+  const EMOTION_CLUE_CATEGORIES = Object.freeze([
+    { key: "related_words", label: "Words or feelings" },
+    { key: "body_changes", label: "Body sensations / changes" },
+    { key: "prompting_events", label: "What was happening" },
+    { key: "interpretations", label: "Thoughts / interpretations" },
+    { key: "action_urges", label: "Action urges" },
+    { key: "expressions_actions", label: "Expressions / actions" },
+    { key: "aftereffects", label: "Aftereffects" },
+  ]);
+  const EMOTION_MATCH_DISCLAIMER = "These percentages show how many of the clues you selected appear in the source descriptions for each emotion. They are not probabilities, scores, or a diagnosis. Emotions can overlap, and your experience may not match any description exactly.";
   const Progress = global.TherapySkillProgress;
   const escapeHtml = (value) => String(value ?? "")
     .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;").replaceAll("'", "&#039;");
   const clone = (value) => JSON.parse(JSON.stringify(value));
+  const isPlainObjectValue = (value) => value !== null && typeof value === "object" && !Array.isArray(value);
+
+  function emotionClueId(category, text) {
+    const normalized = String(text || "").normalize("NFKD").toLowerCase()
+      .replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    return `${category}:${normalized}`;
+  }
+
+  function buildEmotionClueIndex(emotions = []) {
+    return EMOTION_CLUE_CATEGORIES.map((category) => {
+      const byId = new Map();
+      emotions.forEach((emotion) => {
+        (emotion[category.key] || []).forEach((text) => {
+          const id = emotionClueId(category.key, text);
+          const clue = byId.get(id) || { id, text, category: category.key, emotionIds: [] };
+          if (!clue.emotionIds.includes(emotion.id)) clue.emotionIds.push(emotion.id);
+          byId.set(id, clue);
+        });
+      });
+      return { ...category, clues: [...byId.values()] };
+    });
+  }
+
+  function emptyEmotionClueSelection() {
+    return Object.fromEntries(EMOTION_CLUE_CATEGORIES.map(({ key }) => [key, []]));
+  }
+
+  function normalizeEmotionExplorerState(next, emotions = [], clueIndex = buildEmotionClueIndex(emotions)) {
+    const emotionIds = new Set(emotions.map((emotion) => emotion.id));
+    const clueIds = Object.fromEntries(clueIndex.map((category) => [category.key, new Set(category.clues.map((clue) => clue.id))]));
+    const normalized = {
+      mode: next?.mode === "explore" ? "explore" : "identify",
+      selectedClues: emptyEmotionClueSelection(),
+      selectedResult: emotionIds.has(next?.selectedResult) ? next.selectedResult : "",
+      explore: {
+        emotion: emotionIds.has(next?.explore?.emotion) ? next.explore.emotion : "",
+        words: Array.isArray(next?.explore?.words) ? next.explore.words.filter((word) => typeof word === "string").slice(0, 100) : [],
+      },
+      legacy: {
+        step: Number.isInteger(next?.legacy?.step) ? next.legacy.step : 0,
+        regions: Array.isArray(next?.legacy?.regions) ? next.legacy.regions.filter((region) => typeof region === "string").slice(0, 100) : [],
+        details: isPlainObjectValue(next?.legacy?.details) ? { ...next.legacy.details } : {},
+      },
+    };
+    if (isPlainObjectValue(next?.selectedClues)) {
+      EMOTION_CLUE_CATEGORIES.forEach(({ key }) => {
+        normalized.selectedClues[key] = Array.isArray(next.selectedClues[key])
+          ? [...new Set(next.selectedClues[key].filter((id) => clueIds[key].has(id)))] : [];
+      });
+    }
+    const isLegacy = Number.isInteger(next?.step) || Object.hasOwn(next || {}, "emotion") || Object.hasOwn(next || {}, "regions") || Object.hasOwn(next || {}, "details");
+    if (isLegacy) {
+      const legacyEmotion = emotionIds.has(next.emotion) ? next.emotion : "";
+      normalized.mode = legacyEmotion ? "explore" : "identify";
+      normalized.explore.emotion = legacyEmotion;
+      normalized.explore.words = Array.isArray(next.words) ? next.words.filter((word) => typeof word === "string").slice(0, 100) : [];
+      normalized.legacy = {
+        step: Number.isInteger(next.step) ? next.step : 0,
+        regions: Array.isArray(next.regions) ? [...next.regions] : [],
+        details: isPlainObjectValue(next.details) ? { ...next.details } : {},
+      };
+      const wordsCategory = clueIndex.find((category) => category.key === "related_words");
+      normalized.selectedClues.related_words = normalized.explore.words.map((word) =>
+        wordsCategory?.clues.find((clue) => clue.text === word && (!legacyEmotion || clue.emotionIds.includes(legacyEmotion)))?.id
+      ).filter(Boolean);
+    }
+    const activeEmotion = emotions.find((emotion) => emotion.id === normalized.explore.emotion);
+    if (activeEmotion) normalized.explore.words = normalized.explore.words.filter((word) => activeEmotion.related_words.includes(word));
+    else normalized.explore.words = [];
+    return normalized;
+  }
+
+  function selectedEmotionClueRecords(state, clueIndex) {
+    const selected = [];
+    clueIndex.forEach((category) => {
+      const ids = new Set(state.selectedClues?.[category.key] || []);
+      category.clues.forEach((clue) => { if (ids.has(clue.id)) selected.push(clue); });
+    });
+    return selected;
+  }
+
+  function emotionRoughMatches(emotions = [], clueIndex = [], state = {}) {
+    const selected = selectedEmotionClueRecords(state, clueIndex);
+    return emotions.map((emotion) => {
+      const contributingClues = selected.filter((clue) => clue.emotionIds.includes(emotion.id));
+      return {
+        emotionId: emotion.id,
+        name: emotion.name,
+        color: emotion.color,
+        matchedSelectedClues: contributingClues.length,
+        totalSelectedClues: selected.length,
+        percentage: selected.length ? Math.round(contributingClues.length / selected.length * 100) : 0,
+        contributingClues,
+      };
+    }).sort((left, right) => right.percentage - left.percentage || right.matchedSelectedClues - left.matchedSelectedClues || left.name.localeCompare(right.name));
+  }
+
+  function emotionExplorerSummary(next, emotions, clueIndex) {
+    const state = normalizeEmotionExplorerState(next, emotions, clueIndex);
+    const matches = emotionRoughMatches(emotions, clueIndex, state);
+    const selectedSections = EMOTION_CLUE_CATEGORIES.map(({ key, label }) => {
+      const ids = new Set(state.selectedClues[key]);
+      const category = clueIndex.find((item) => item.key === key);
+      return [label, category.clues.filter((clue) => ids.has(clue.id)).map((clue) => clue.text)];
+    });
+    const legacyDetails = Object.entries(state.legacy.details).filter(([, value]) => value).map(([key, value]) => `${key}: ${value}`);
+    return Progress.nonEmptySections("Emotion Explorer", [
+      ...selectedSections,
+      ["Rough Pattern Matches", matches.filter((match) => match.matchedSelectedClues).map((match) => `${match.name} - ${match.percentage}% - ${match.matchedSelectedClues} of ${match.totalSelectedClues} selected clues`)],
+      ["How to read the matches", EMOTION_MATCH_DISCLAIMER],
+      ["Explore an Emotion", emotions.find((emotion) => emotion.id === state.explore.emotion)?.name],
+      ["Earlier Saved Body Regions", state.legacy.regions],
+      ["Earlier Saved Details", legacyDetails],
+    ]);
+  }
 
   async function getJson(path) {
     const response = await fetch(`${DATA_ROOT}/${path}`, { credentials: "same-origin" });
@@ -609,7 +734,7 @@
     render();
   }
 
-  async function initEmotionExplorer(root) {
+  async function initEmotionExplorerGraphLegacy(root) {
     const { emotions } = await getJson("emotions.json");
     const state = { step: 0, emotion: "", words: [], regions: [], details: {} };
     const detailFields = [["event", "Prompting event"], ["interpretations", "Interpretations"], ["body", "Body changes"], ["urge", "Action urge"], ["expression", "Face or body expression"], ["said", "What I said"], ["did", "What I did"], ["aftereffects", "Aftereffects"]];
@@ -729,6 +854,185 @@
         const emotion = emotions.find((item) => item.id === next.emotion);
         return Progress.nonEmptySections("Emotion Explorer", [["Emotion Family", emotion?.name], ["Words That Fit", next.words], ["Definition", emotion?.definition]]);
       },
+    });
+  }
+
+  async function initEmotionExplorer(root) {
+    const { emotions } = await getJson("emotions.json");
+    const clueIndex = buildEmotionClueIndex(emotions);
+    let state = normalizeEmotionExplorerState({}, emotions, clueIndex);
+    let graph = null;
+
+    root.innerHTML = `<div class="skill-app-shell emotion-explorer-shell"><header class="skill-app-header"><h2>Emotion Explorer</h2><p>Start with clues from your experience. The comparison is descriptive, not diagnostic, and your selections stay on this device.</p></header>
+      <div class="emotion-explorer-modes" role="tablist" aria-label="Emotion Explorer mode"><button type="button" role="tab" data-emotion-mode="identify" aria-controls="emotion-explorer-workspace">Identify from clues</button><button type="button" role="tab" data-emotion-mode="explore" aria-controls="emotion-explorer-workspace">Explore an emotion</button></div>
+      <section id="emotion-explorer-workspace" class="emotion-explorer-workspace" data-emotion-workspace role="tabpanel"></section>
+      <footer class="skill-app-footer"><a href="${escapeHtml(Site.path("/learn/emotion-regulation/observing-describing-emotions.html"))}">Learn about observing and describing emotions</a></footer></div>`;
+    const workspace = root.querySelector("[data-emotion-workspace]");
+
+    function updateModeControls() {
+      root.querySelectorAll("[data-emotion-mode]").forEach((button) => {
+        const active = button.dataset.emotionMode === state.mode;
+        button.setAttribute("aria-selected", String(active));
+        button.tabIndex = active ? 0 : -1;
+      });
+    }
+
+    function identifyMarkup() {
+      const selected = selectedEmotionClueRecords(state, clueIndex);
+      const matches = emotionRoughMatches(emotions, clueIndex, state);
+      const strongest = matches[0];
+      const selectedResult = emotions.find((emotion) => emotion.id === state.selectedResult);
+      const resultMatch = matches.find((match) => match.emotionId === state.selectedResult);
+      const selectedIds = new Set(selected.map((clue) => clue.id));
+      const categories = clueIndex.map((category, index) => {
+        const selectedForCategory = new Set(state.selectedClues[category.key]);
+        return `<details class="emotion-clue-category" ${index === 0 || selectedForCategory.size ? "open" : ""}><summary>${escapeHtml(category.label)} <span>${selectedForCategory.size} selected</span></summary><div class="emotion-clue-options" role="group" aria-label="${escapeHtml(category.label)} clues">${category.clues.map((clue) => `<button type="button" class="secondary emotion-clue-option" data-emotion-clue="${escapeHtml(clue.id)}" data-emotion-category="${escapeHtml(category.key)}" aria-pressed="${selectedForCategory.has(clue.id)}">${escapeHtml(clue.text)}</button>`).join("")}</div></details>`;
+      }).join("");
+      const resultRows = selected.length ? matches.map((match) => `<button type="button" class="emotion-match-result${match.emotionId === state.selectedResult ? " is-selected" : ""}" data-emotion-result="${escapeHtml(match.emotionId)}" aria-pressed="${match.emotionId === state.selectedResult}"><span class="emotion-match-label"><strong>${escapeHtml(match.name)}</strong><span>${match.percentage}% - ${match.matchedSelectedClues} of ${match.totalSelectedClues}</span></span><span class="emotion-match-track" role="progressbar" aria-label="${escapeHtml(match.name)} rough pattern match" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${match.percentage}"><span class="emotion-match-fill" aria-hidden="true" style="--emotion-match:${match.percentage}%;--emotion-color:${escapeHtml(match.color)}"></span></span></button>`).join("") : "";
+      let details = "";
+      if (selectedResult && resultMatch) {
+        const why = EMOTION_CLUE_CATEGORIES.map(({ key, label }) => {
+          const clues = resultMatch.contributingClues.filter((clue) => clue.category === key);
+          return clues.length ? `<section><h4>${escapeHtml(label)}</h4><ul>${clues.map((clue) => `<li>${escapeHtml(clue.text)}</li>`).join("")}</ul></section>` : "";
+        }).join("");
+        const other = EMOTION_CLUE_CATEGORIES.map(({ key, label }) => {
+          const clues = (selectedResult[key] || []).filter((text) => !selectedIds.has(emotionClueId(key, text)));
+          return clues.length ? `<section><h4>${escapeHtml(label)}</h4><ul>${clues.map((text) => `<li>${escapeHtml(text)}</li>`).join("")}</ul></section>` : "";
+        }).join("");
+        details = `<section class="emotion-match-details" data-emotion-details tabindex="-1"><h3>${escapeHtml(selectedResult.name)}</h3><p>${escapeHtml(selectedResult.definition)}</p><h4>Why this matched</h4>${why || "<p>None of the currently selected clues are listed for this emotion.</p>"}<details><summary>Other common features</summary><div class="emotion-common-features">${other || "<p>No additional source features are listed.</p>"}</div></details><div class="skill-app-actions"><a class="skill-app-link-button" href="${escapeHtml(Site.path(selectedResult.learn_route))}">Learn about this emotion</a></div></section>`;
+      }
+      return `<section class="skill-app-panel emotion-clue-intro"><h3>Identify from clues</h3><p>Select as many clues as fit. Emotion names are intentionally hidden while you choose.</p><div class="skill-app-actions"><span class="skill-app-status" aria-live="polite">${selected.length} clue${selected.length === 1 ? "" : "s"} selected</span><button type="button" class="secondary" data-clear-emotion-clues ${selected.length ? "" : "disabled"}>Clear clues</button></div></section><section class="emotion-clue-picker" aria-label="Emotion clues">${categories}</section>${selected.length ? `<section class="skill-app-panel emotion-match-results" aria-labelledby="rough-pattern-match"><h3 id="rough-pattern-match">Rough pattern match</h3><p><strong>${escapeHtml(strongest.name)} has the strongest pattern match among the clues you selected.</strong></p><p class="skill-app-note">${escapeHtml(EMOTION_MATCH_DISCLAIMER)}</p><div class="emotion-match-list">${resultRows}</div></section>${details}` : ""}`;
+    }
+
+    function bindIdentify() {
+      workspace.querySelectorAll("[data-emotion-clue]").forEach((button) => button.addEventListener("click", () => {
+        const category = button.dataset.emotionCategory;
+        const clue = button.dataset.emotionClue;
+        const current = new Set(state.selectedClues[category]);
+        if (current.has(clue)) current.delete(clue); else current.add(clue);
+        state.selectedClues[category] = [...current];
+        if (!selectedEmotionClueRecords(state, clueIndex).length) state.selectedResult = "";
+        renderIdentify();
+      }));
+      workspace.querySelector("[data-clear-emotion-clues]")?.addEventListener("click", () => {
+        state.selectedClues = emptyEmotionClueSelection();
+        state.selectedResult = "";
+        renderIdentify();
+      });
+      workspace.querySelectorAll("[data-emotion-result]").forEach((button) => button.addEventListener("click", () => {
+        state.selectedResult = button.dataset.emotionResult;
+        renderIdentify(true);
+      }));
+    }
+
+    function renderIdentify(focusDetails = false) {
+      workspace.innerHTML = identifyMarkup();
+      bindIdentify();
+      if (focusDetails) workspace.querySelector("[data-emotion-details]")?.focus({ preventScroll: true });
+    }
+
+    function mountExplore() {
+      workspace.innerHTML = `<section class="skill-app-panel"><h3>Explore an emotion</h3><p>Use the original graph to explore one broad emotion family and its descriptive words.</p></section><section class="emotion-force-map" data-force-graph-root aria-labelledby="emotion-graph-heading"><div class="values-map-toolbar" role="group" aria-label="Emotion graph view controls"><button type="button" class="secondary" data-graph-action="zoom-out" aria-label="Zoom out">-</button><button type="button" class="secondary" data-graph-action="zoom-in" aria-label="Zoom in">+</button><button type="button" class="secondary" data-graph-action="fit">Fit</button><button type="button" class="secondary" data-graph-action="reset">Reset</button><button type="button" class="secondary" data-graph-action="fullscreen" aria-pressed="false">Full screen</button></div><div class="emotion-force-viewport" data-force-viewport><div class="emotion-force-canvas" data-force-canvas><svg class="emotion-force-svg" role="group" aria-labelledby="emotion-graph-heading"><title id="emotion-graph-heading">Interactive graph of ten broad emotion families and their descriptive words</title><g data-force-scene><g data-force-links></g><g data-force-nodes></g></g></svg></div><p class="visually-hidden" aria-live="polite" data-force-status>Showing You and ten broad emotions.</p></div><section class="emotion-explorer-context" data-emotion-context aria-live="polite"></section></section>`;
+      const container = workspace.querySelector("[data-force-viewport]");
+      const context = workspace.querySelector("[data-emotion-context]");
+
+      function graphData() {
+        const ring = container.getBoundingClientRect().width < 480 ? 160 : 230;
+        const center = { id: "emotion-you", type: "center", label: "You", radius: 35, collisionRadius: 42, x: 0, y: 0 };
+        const primary = emotions.map((emotion, index) => {
+          const angle = -Math.PI / 2 + index * Math.PI * 2 / emotions.length;
+          return { ...emotion, type: "emotion", radius: 38, collisionRadius: 53, expanded: emotion.id === state.explore.emotion, x: Math.cos(angle) * ring, y: Math.sin(angle) * ring };
+        });
+        const active = emotions.find((emotion) => emotion.id === state.explore.emotion);
+        const parent = primary.find((emotion) => emotion.id === state.explore.emotion);
+        const words = (active?.related_words || []).map((word, index) => {
+          const angle = index / Math.max(1, active.related_words.length) * Math.PI * 2;
+          const distance = 110 + index % 3 * 24;
+          return { id: `word-${active.id}-${emotionClueId("word", word)}`, type: "word", emotionId: active.id, label: word, color: active.color, selected: state.explore.words.includes(word), radius: 18, collisionRadius: Math.max(27, word.length * 3.1), x: (parent?.x || 0) + Math.cos(angle) * distance, y: (parent?.y || 0) + Math.sin(angle) * distance };
+        });
+        return { nodes: [center, ...primary, ...words], links: [...primary.map((emotion) => ({ id: `emotion-link-${emotion.id}`, source: center.id, target: emotion.id, type: "emotion", distance: ring * .85 })), ...words.map((word) => ({ id: `word-link-${word.id}`, source: state.explore.emotion, target: word.id, type: "word", distance: 112 }))], newNodeIds: words.map((word) => word.id) };
+      }
+
+      function renderContext() {
+        const emotion = emotions.find((item) => item.id === state.explore.emotion);
+        if (!emotion) {
+          context.innerHTML = `<h3>Choose an emotion</h3><p>Activate any emotion node to expand its source-listed descriptive words.</p>`;
+          return;
+        }
+        context.innerHTML = `<h3>${escapeHtml(emotion.name)}</h3><p>${escapeHtml(emotion.definition)}</p><div class="emotion-selected-words" aria-label="Selected descriptive words">${state.explore.words.length ? state.explore.words.map((word) => `<button type="button" class="skill-app-chip" data-remove-emotion-word="${escapeHtml(word)}" aria-label="Remove ${escapeHtml(word)}">${escapeHtml(word)} <span aria-hidden="true">x</span></button>`).join("") : '<span class="skill-app-field-help">Select any descriptive word that fits.</span>'}</div><div class="skill-app-actions"><a class="skill-app-link-button" href="${escapeHtml(Site.path(emotion.learn_route))}">Learn about this emotion</a><button type="button" class="secondary" data-change-emotion>Change this emotion</button></div>`;
+        context.querySelectorAll("[data-remove-emotion-word]").forEach((control) => control.addEventListener("click", () => {
+          state.explore.words = state.explore.words.filter((word) => word !== control.dataset.removeEmotionWord);
+          updateGraph();
+        }));
+        context.querySelector("[data-change-emotion]")?.addEventListener("click", () => {
+          try { global.sessionStorage.setItem("therapy-skill-kit.change-emotion-handoff", JSON.stringify({ emotion: emotion.id })); } catch (_error) { /* direct selection remains available */ }
+          global.location.href = Site.path("/tool-finder/change-emotion/");
+        });
+      }
+
+      function renderNode(element, node) {
+        if (node.type === "center") element.innerHTML = `<circle class="emotion-node-hit" r="39"></circle><circle class="emotion-node-center" r="35"></circle><text class="emotion-node-label emotion-node-label--inverse" y="5" text-anchor="middle">You</text>`;
+        if (node.type === "emotion") element.innerHTML = `<circle class="emotion-node-hit" r="48"></circle><circle class="emotion-node-primary" r="38" style="--emotion-color:${escapeHtml(node.color)}"></circle><text class="emotion-node-label emotion-node-label--inverse" y="5" text-anchor="middle">${escapeHtml(node.name)}</text><circle class="emotion-node-toggle-badge" cx="29" cy="-29" r="15"></circle><text class="emotion-node-toggle" x="29" y="-30" dominant-baseline="middle" text-anchor="middle">+</text>`;
+        if (node.type === "word") element.innerHTML = `<circle class="emotion-node-hit" r="25"></circle><circle class="emotion-node-word" r="18" style="--emotion-color:${escapeHtml(node.color)}"></circle><text class="emotion-word-label" y="35" text-anchor="middle">${escapeHtml(node.label)}</text>`;
+      }
+      function updateNode(element, node) {
+        element.classList.toggle("is-expanded", Boolean(node.expanded));
+        element.classList.toggle("is-selected", Boolean(node.selected));
+        if (node.type === "emotion") {
+          element.setAttribute("aria-expanded", String(Boolean(node.expanded)));
+          const toggle = element.querySelector(".emotion-node-toggle");
+          if (toggle) toggle.textContent = node.expanded ? "-" : "+";
+        }
+        if (node.type === "word") element.setAttribute("aria-pressed", String(Boolean(node.selected)));
+      }
+      function updateGraph() {
+        const data = graphData();
+        graph.update(data.nodes, data.links, { reheat: .62, newNodeIds: data.newNodeIds });
+        renderContext();
+      }
+      graph = global.TherapyForceGraph?.createForceViewport({
+        container, initialNodeIds: ["emotion-you", ...emotions.map((emotion) => emotion.id)], minZoom: .38, maxZoom: 3.2,
+        linkDistance: (link) => link.distance, linkStrength: (link) => link.type === "emotion" ? .48 : .68,
+        charge: (node) => node.type === "center" ? -280 : node.type === "emotion" ? -260 : -90,
+        collisionRadius: (node) => node.collisionRadius, dragAlphaTarget: (node) => node.type === "center" ? .48 : .12,
+        persistDrop: (node) => node.type === "center", renderNode, updateNode,
+        ariaLabel: (node) => node.type === "center" ? "You, draggable center of the emotion graph" : node.type === "emotion" ? `${node.expanded ? "Collapse" : "Expand"} descriptive words for ${node.name}` : `${node.label}, descriptive word for ${emotions.find((emotion) => emotion.id === node.emotionId)?.name}. ${node.selected ? "Selected" : "Not selected"}.`,
+        onNodeActivate: (node) => {
+          if (node.type === "emotion") {
+            const switching = state.explore.emotion !== node.id;
+            state.explore.emotion = node.expanded ? "" : node.id;
+            if (switching || !state.explore.emotion) state.explore.words = [];
+          } else if (node.type === "word") {
+            state.explore.words = state.explore.words.includes(node.label) ? state.explore.words.filter((word) => word !== node.label) : [...state.explore.words, node.label];
+          }
+          updateGraph();
+        },
+      });
+      if (!graph) throw new Error("Shared force graph is unavailable");
+      updateGraph();
+    }
+
+    function renderMode() {
+      graph?.destroy();
+      graph = null;
+      updateModeControls();
+      if (state.mode === "explore") mountExplore(); else renderIdentify();
+    }
+
+    root.querySelectorAll("[data-emotion-mode]").forEach((button) => button.addEventListener("click", () => {
+      state.mode = button.dataset.emotionMode;
+      renderMode();
+      workspace.focus({ preventScroll: true });
+    }));
+    workspace.tabIndex = -1;
+    renderMode();
+
+    if (Progress) Progress.registerTool({
+      root, toolId: "emotion-explorer", toolTitle: "Emotion Explorer", route: Progress.TOOL_ROUTES["emotion-explorer"], schemaVersion: 1,
+      getState: () => clone(state),
+      setState: (next) => { state = normalizeEmotionExplorerState(next, emotions, clueIndex); renderMode(); },
+      validateState: (next) => Progress.isPlainObject(next) && ((["identify", "explore"].includes(next.mode) && Progress.isPlainObject(next.selectedClues)) || Number.isInteger(next.step)),
+      getReadableSummary: (next) => emotionExplorerSummary(next, emotions, clueIndex),
     });
   }
 
@@ -864,6 +1168,6 @@
 
   global.SkillFinderFlowEngine = FlowEngine;
   global.SkillFinderConstrainedTreeEngine = ConstrainedTreeEngine;
-  if (typeof module !== "undefined" && module.exports) module.exports = { FlowEngine, ConstrainedTreeEngine, BODY_REGIONS, dimeScore, dimeMoney, dimeGuidance, flowSummary };
+  if (typeof module !== "undefined" && module.exports) module.exports = { FlowEngine, ConstrainedTreeEngine, BODY_REGIONS, EMOTION_CLUE_CATEGORIES, EMOTION_MATCH_DISCLAIMER, buildEmotionClueIndex, normalizeEmotionExplorerState, emotionRoughMatches, emotionExplorerSummary, dimeScore, dimeMoney, dimeGuidance, flowSummary };
   if (typeof document !== "undefined") document.addEventListener("DOMContentLoaded", start);
 })(typeof window === "undefined" ? globalThis : window);

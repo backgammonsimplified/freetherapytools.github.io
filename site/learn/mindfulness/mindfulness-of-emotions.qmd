@@ -18,20 +18,69 @@ execute:
   enabled: false
 ---
 
-Notice the emotion, body sensations, thoughts, and urges while allowing the experience to change over time.
+Mindfulness of emotions means noticing an emotional experience long enough to understand it without automatically suppressing, amplifying, or acting on it.
 
-## Text Version / Adapted Practice {#emotion-surfing}
+## Observe the emotion {#observe-emotion}
 
-Emotion Surfing uses a wave metaphor for the changing experience of emotion. Begin by naming the emotion as well as you can. Notice where it appears in the body, which thoughts or images accompany it, and which action urges arise. Let a comfortable breath or another present sensation serve as an anchor. Return to observing without demanding that the emotion disappear and without automatically acting on the urge.
+Step back and notice. An emotion may change like a wave: rising, cresting, falling, returning, or changing shape. Let it move without deliberately feeding it and without demanding that it disappear.
 
-The practice is about changing your relationship with an emotion, not guaranteeing a particular intensity or duration.
+## Observe the body {#observe-body}
+
+Where do you feel the emotion? Notice pressure, heat, movement, tension, heaviness, openness, numbness, or other sensations. How do the location and intensity change over time?
+
+## You are not the emotion {#you-are-not-the-emotion}
+
+Having an emotion does not require acting on it. *I notice fear* or *sadness is present* can create a little more room than *I am fear* or *I am sadness*.
+
+## A willing, nonjudgmental stance {#willing-stance}
+
+Allow the experience to be present long enough to learn from it. Willingness does not mean liking the emotion, agreeing with every interpretation, or permitting unsafe behaviour.
+
+### Reflection
+
+- What name fits the emotion, even approximately?
+- Which body sensations are present?
+- What is the intensity right now?
+- Is this a primary emotion, or is another emotion responding to it?
+- What do you notice in breathing, posture, muscle tension, and facial expression?
+- Which thoughts or judgments are present?
+- What action urge appears?
+- What changes when you observe for a little while?
+
+[Try the Emotion Explorer](/tool-finder/emotions/) to begin with words, body sensations, events, thoughts, urges, actions, or aftereffects rather than choosing an emotion first. [Learn about observing and describing emotions](/learn/emotion-regulation/observing-describing-emotions.html) for the full ten-emotion reference.
+
+## Emotion Surfing practice {#emotion-surfing}
+
+Let a comfortable breath, the feet, or another present sensation serve as an anchor. Keep returning to observation without guaranteeing a particular intensity or duration.
 
 ::: {data-therapy-audio="emotion-surfing-jason-dean"}
-Loading audio…
+Loading audio...
 :::
 
-[Urge Surfing](/learn/wellness/urge-surfing.html) uses related noticing and wave imagery for an urge to act. The techniques are related but applied to different experiences.
+[Urge Surfing](/learn/wellness/urge-surfing.html) uses related wave imagery for an urge to act. The practices are related but applied to different experiences.
 
-## Source / Printable Copy
+## Handouts & Worksheets {#handouts-worksheets}
 
-[Mindfulness practice pages for emotions, being/doing mind, and the middle path](/resources/mindfulness/mindfulness-emotions-and-middle-path-source.pdf)
+### Original Source practice page
+
+[![Original Source: Practicing Mindfulness of Emotions at Home](/resources/mindfulness/program-source/mindfulness-emotions-program-practice.jpg){.img-fluid fig-alt="Original Source: Practicing Mindfulness of Emotions at Home"}](/resources/mindfulness/program-source/mindfulness-emotions-program-practice.pdf){target="_blank" rel="noopener"}
+
+[Open original source practice page](/resources/mindfulness/program-source/mindfulness-emotions-program-practice.pdf){target="_blank" rel="noopener"}
+
+:::: {.bs-practice-resource #resource-mindfulness-program-p077 data-source-id="mindfulness-program-p077"}
+**Emotion Regulation Handout 22 - Mindfulness of Current Emotions**
+
+**Original Source**
+
+[![Original Source: Mindfulness of Current Emotions](/resources/mindfulness/program-source/emotion-regulation-handout-22-mindfulness-current-emotions-original.jpg){.img-fluid fig-alt="Original Source: Mindfulness of Current Emotions"}](/resources/mindfulness/program-source/emotion-regulation-handout-22-mindfulness-current-emotions-original.pdf){target="_blank" rel="noopener"}
+
+[Open original source](/resources/mindfulness/program-source/emotion-regulation-handout-22-mindfulness-current-emotions-original.pdf){target="_blank" rel="noopener"}
+
+::: {.bs-resource-match data-match-id="linehan-book:mindfulness-program-p077" data-source-id="mindfulness-program-p077" data-match-source="linehan-book" data-candidate-asset="/resources/clean/mindfulness/emotion-regulation-handout-22-mindfulness-current-emotions-clean.pdf"}
+**Clean Printable Copy**
+
+[![Clean Printable Copy: Mindfulness of Current Emotions](/resources/clean/mindfulness/emotion-regulation-handout-22-mindfulness-current-emotions-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Mindfulness of Current Emotions"}](/resources/clean/mindfulness/emotion-regulation-handout-22-mindfulness-current-emotions-clean.pdf){target="_blank" rel="noopener"}
+
+[Open printable copy](/resources/clean/mindfulness/emotion-regulation-handout-22-mindfulness-current-emotions-clean.pdf){target="_blank" rel="noopener"}
+:::
+::::

@@ -1,6 +1,6 @@
 ---
 title: "Grounding"
-description: "Reconnect with the present through sensory and orientation practices."
+description: "Reconnect with the present through sensory, body, orientation, and social practices."
 sidebar: mindfulness
 learn-track: mindfulness
 learn-order: 11
@@ -18,4 +18,56 @@ execute:
   enabled: false
 ---
 
-Grounding directs attention toward immediate sensory information, the body, and the current environment.
+Grounding reconnects attention with the present. It can provide temporary steadiness, but it does not solve the underlying problem. Afterward, the issue may still need attention; grounding works best as a bridge to the next useful step rather than automatic avoidance.
+
+## Ways to ground {#ways-to-ground}
+
+### Tactile
+
+Feel the feet against the floor, the body supported by a chair, the texture of fabric, or a familiar object in the hand. Notice safe changes in temperature without using pain or extreme cold.
+
+### Sensory
+
+Name what sight, sound, smell, taste, and touch are noticing. Describe the room in concrete detail. Orient to your location, the date, the approximate time, and what is happening now.
+
+### Cognitive
+
+Count, name items in a category, spell a word, or state simple orienting facts. Use a task that is engaging enough to reconnect attention without becoming another source of pressure.
+
+### Imagery
+
+Picture a steadying place or recall the realistic words of a supportive person. Imagery should support orientation, not require pretending that the current problem is gone.
+
+### Social
+
+Contact a supportive person, spend time with a pet, read a supportive message, use humour where it fits, or do something small and meaningful for another person.
+
+### Body scan
+
+Move attention gradually through the body. Notice contact, tension, ease, temperature, or numbness without rushing and without forcing change.
+
+### Movement
+
+Movement helps some people reconnect with the present. Choose movement that is safe for your health and ability. [TIPP and Intense Exercise](/learn/distress-tolerance/tipp.html#intense-exercise) include separate suitability guidance.
+
+## Breathing as an anchor {#breathing-anchor}
+
+A comfortable breath can be one anchor among many. Do not force a pace or prescribe breath-holding. People respond differently: stop if you feel light-headed, distressed, or uncomfortable, and consult a health-care practitioner when a breathing practice may not be appropriate.
+
+[Box Breathing](/tool-finder/box-breathing/) offers adjustable holds that can be set to zero. Choose another grounding anchor if breath focus is uncomfortable.
+
+## Choose a next step {#next-step}
+
+After grounding, ask: *What needs attention now?* The answer might be problem-solving, support, rest, a boundary, a safety step, or another skill.
+
+[Open the Grounding tool](/tool-finder/grounding/) for a concise guided practice. [Positive Self-Talk](/tool-finder/positive-self-talk/) can help create a supportive phrase.
+
+## Original Source overview {#original-source-overview}
+
+[![Original Source: Grounding overview](/resources/mindfulness/program-source/mindfulness-grounding-program-overview.jpg){.img-fluid fig-alt="Original Source: Grounding overview"}](/resources/mindfulness/program-source/mindfulness-grounding-program-overview.pdf){target="_blank" rel="noopener"}
+
+[Open original source overview](/resources/mindfulness/program-source/mindfulness-grounding-program-overview.pdf){target="_blank" rel="noopener"}
+
+## Source approach {#source-approach}
+
+This lesson adapts the supplied tactile, sensory, cognitive, imagery, social, body-scan, movement, and breathing themes. Supplementary third-party worksheets and stronger unverified physiological claims are not republished.

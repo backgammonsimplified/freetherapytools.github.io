@@ -326,21 +326,25 @@ assert.ok(wholeRailToggle, "whole-left-rail toggle did not mount");
 assert.equal(wholeRailToggle.hidden, false, "desktop whole-left-rail toggle is hidden");
 window.scrollY = 200;
 window.dispatchEvent({ type: "scroll" });
-assert.equal(activeSidebar.hidden, false, "scroll auto-hide removed the sidebar grid item");
-assert.equal(fakeBody.classList.contains("bs-learn-left-sidebar-auto-hidden"), true);
-assert.equal(fakeBody.classList.contains("bs-learn-left-sidebar-collapsed"), false);
-window.scrollY = 100;
+assert.equal(activeSidebar.hidden, true, "collapsed sidebar still occupies its grid column");
+assert.equal(fakeBody.classList.contains("bs-learn-left-sidebar-collapsed"), true);
+assert.equal(wholeRailToggle.textContent, "\u2192 Show Lessons");
+assert.equal(wholeRailToggle.getAttribute("aria-expanded"), "false");
+window.scrollY = 0;
 window.dispatchEvent({ type: "scroll" });
 assert.equal(activeSidebar.hidden, false);
-assert.equal(fakeBody.classList.contains("bs-learn-left-sidebar-auto-hidden"), false);
+assert.equal(fakeBody.classList.contains("bs-learn-left-sidebar-collapsed"), false);
+assert.equal(wholeRailToggle.textContent, "\u2190 Hide");
 wholeRailToggle.click();
 assert.equal(activeSidebar.hidden, true);
 assert.equal(fakeBody.classList.contains("bs-learn-left-sidebar-collapsed"), true);
 assert.equal(wholeRailToggle.getAttribute("aria-expanded"), "false");
+assert.equal(wholeRailToggle.textContent, "\u2192 Show Lessons");
 wholeRailToggle.click();
 assert.equal(activeSidebar.hidden, false);
 assert.equal(fakeBody.classList.contains("bs-learn-left-sidebar-collapsed"), false);
 assert.equal(wholeRailToggle.getAttribute("aria-expanded"), "true");
+assert.equal(wholeRailToggle.textContent, "\u2190 Hide");
 
 const lookupData = JSON.parse(
   fs.readFileSync(path.join(root, "site", "assets", "bs-glossary-lookup.json"), "utf8")

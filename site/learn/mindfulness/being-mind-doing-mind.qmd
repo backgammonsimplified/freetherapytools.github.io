@@ -18,4 +18,85 @@ execute:
   enabled: false
 ---
 
-Being Mind and Doing Mind are complementary modes. Mindful practice helps you choose the balance a situation needs.
+Being Mind and Doing Mind are complementary modes. The skill is flexible balance: sometimes act, sometimes simply notice and be, and often do what is needed while remaining aware.
+
+## Doing Mind {#doing-mind}
+
+Doing Mind supports goals, planning, problem-solving, action, and completing necessary responsibilities. At an extreme, it can become relentless task focus, automatic pilot, or treating every moment as something to accomplish.
+
+## Being Mind {#being-mind}
+
+Being Mind supports curiosity, present awareness, and openness. It allows experience without immediately turning it into a task. At an extreme, it may become ineffective when practical action, protection, or responsibility is genuinely needed.
+
+## Wise Mind balance {#wise-mind-balance}
+
+Being and Doing are not enemies. Wise Mind can notice what the situation calls for and shift modes without treating either one as morally better.
+
+- Sometimes the next wise step is to act.
+- Sometimes it is to pause and receive the moment.
+- Often it is to carry out one task while staying in contact with the body, values, and surroundings.
+
+## Practices for balance {#practices-for-balance}
+
+- Keep a brief mindfulness reading or reminder where you will see it.
+- Use a visual or alarm cue to return to awareness.
+- Choose one routine activity for mindful attention.
+- When overwhelmed, narrow the frame to *just this one moment*.
+- Notice ordinary pleasant and unpleasant events.
+- Ask what actually needs doing now rather than mentally doing everything at once.
+- Practise willingness toward the next necessary step.
+- Try three minutes: notice thoughts, feelings, and sensations; gather attention around breath or body; then expand awareness to the whole situation.
+
+## Being and Doing calendar reflection {#being-doing-calendar}
+
+The worksheet supports one entry for each day. Its questions can be used without creating a new interactive tool:
+
+1. What was the experience?
+2. What one activity in this moment could receive your attention?
+3. How did your body feel while doing one thing at a time?
+4. How would you describe practising the skill?
+5. What do you notice now, after practising?
+
+## Handouts & Worksheets {#handouts-worksheets}
+
+### Original Source teaching pages
+
+[![Original Source: Being Mind and Doing Mind teaching pages](/resources/mindfulness/program-source/mindfulness-being-doing-program-teaching.jpg){.img-fluid fig-alt="Original Source: Being Mind and Doing Mind teaching pages"}](/resources/mindfulness/program-source/mindfulness-being-doing-program-teaching.pdf){target="_blank" rel="noopener"}
+
+[Open original source teaching pages](/resources/mindfulness/program-source/mindfulness-being-doing-program-teaching.pdf){target="_blank" rel="noopener"}
+
+:::: {.bs-practice-resource #resource-mindfulness-program-p099-p100 data-source-id="mindfulness-program-p099-p100"}
+**Mindfulness Handout 9A - Ideas for Practicing Balancing Doing Mind and Being Mind**
+
+**Original Source**
+
+[![Original Source: Balancing Doing Mind and Being Mind](/resources/mindfulness/program-source/mindfulness-handout-9a-balancing-doing-being-mind-original.jpg){.img-fluid fig-alt="Original Source: Balancing Doing Mind and Being Mind"}](/resources/mindfulness/program-source/mindfulness-handout-9a-balancing-doing-being-mind-original.pdf){target="_blank" rel="noopener"}
+
+[Open original source](/resources/mindfulness/program-source/mindfulness-handout-9a-balancing-doing-being-mind-original.pdf){target="_blank" rel="noopener"}
+
+::: {.bs-resource-match data-match-id="linehan-book:mindfulness-program-p099-p100" data-source-id="mindfulness-program-p099-p100" data-match-source="linehan-book" data-candidate-asset="/resources/clean/mindfulness/mindfulness-handout-9a-balancing-doing-being-mind-clean.pdf"}
+**Clean Printable Copy**
+
+[![Clean Printable Copy: Balancing Doing Mind and Being Mind](/resources/clean/mindfulness/mindfulness-handout-9a-balancing-doing-being-mind-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Balancing Doing Mind and Being Mind"}](/resources/clean/mindfulness/mindfulness-handout-9a-balancing-doing-being-mind-clean.pdf){target="_blank" rel="noopener"}
+
+[Open printable copy](/resources/clean/mindfulness/mindfulness-handout-9a-balancing-doing-being-mind-clean.pdf){target="_blank" rel="noopener"}
+:::
+::::
+
+:::: {.bs-practice-resource #resource-mindfulness-program-p101-p102 data-source-id="mindfulness-program-p101-p102"}
+**Mindfulness Worksheet 7A - Mindfulness of Being and Doing Calendar**
+
+**Original Source**
+
+[![Original Source: Mindfulness of Being and Doing Calendar](/resources/mindfulness/program-source/mindfulness-worksheet-7a-being-doing-calendar-original.jpg){.img-fluid fig-alt="Original Source: Mindfulness of Being and Doing Calendar"}](/resources/mindfulness/program-source/mindfulness-worksheet-7a-being-doing-calendar-original.pdf){target="_blank" rel="noopener"}
+
+[Open original source](/resources/mindfulness/program-source/mindfulness-worksheet-7a-being-doing-calendar-original.pdf){target="_blank" rel="noopener"}
+
+::: {.bs-resource-match data-match-id="linehan-book:mindfulness-program-p101-p102" data-source-id="mindfulness-program-p101-p102" data-match-source="linehan-book" data-candidate-asset="/resources/clean/mindfulness/mindfulness-worksheet-7a-being-doing-calendar-clean.pdf"}
+**Clean Printable Copy**
+
+[![Clean Printable Copy: Mindfulness of Being and Doing Calendar](/resources/clean/mindfulness/mindfulness-worksheet-7a-being-doing-calendar-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Mindfulness of Being and Doing Calendar"}](/resources/clean/mindfulness/mindfulness-worksheet-7a-being-doing-calendar-clean.pdf){target="_blank" rel="noopener"}
+
+[Open printable copy](/resources/clean/mindfulness/mindfulness-worksheet-7a-being-doing-calendar-clean.pdf){target="_blank" rel="noopener"}
+:::
+::::

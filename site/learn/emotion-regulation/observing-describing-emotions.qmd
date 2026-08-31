@@ -13,12 +13,16 @@ terms:
 body-classes: bs-learn-article
 page-layout: article
 toc: true
-toc-depth: 3
+toc-depth: 2
 execute:
   enabled: false
 ---
 
 Detailed observation separates the parts of an emotional response and makes patterns easier to understand.
+
+## Not sure which emotion fits? {#emotion-explorer}
+
+[Try the Emotion Explorer](/tool-finder/emotions/). Select words, body sensations, thoughts, urges, and other clues to compare the patterns that commonly accompany different emotions.
 
 For a cross-curriculum skills-selection reference, use the [Emotional Overload & Emotional Numbness Skills Guide](/resources/general/general-p004.jpg), which also remains available in [Tool Finder](/tool-finder/).
 

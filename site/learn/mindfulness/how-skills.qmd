@@ -1,6 +1,6 @@
 ---
 title: "Non-Judgmentally"
-description: "Notice and describe experience without adding evaluations of good or bad."
+description: "Notice and describe experience without turning evaluations into observed facts."
 sidebar: mindfulness
 learn-track: mindfulness
 learn-order: 5
@@ -18,18 +18,57 @@ execute:
   enabled: false
 ---
 
-Non-judgmentally is the first HOW skill. Notice evaluations when they arise and return to facts, consequences, preferences, and values.
+The HOW skills describe the stance used while observing, describing, or participating: [Non-Judgmentally](#non-judgmentally), [One-Mindfully](/learn/mindfulness/one-mindfully.html), and [Effectively](/learn/mindfulness/effectively.html).
 
-## Non-Judgmentally {#non-judgmentally}
-## Source / Printable Copies
+## Two meanings of judgment {#two-meanings-judgment}
 
-- [Non-Judgmentally source pages](/resources/mindfulness/mindfulness-nonjudgmentally-source.pdf)
-- [HOW skills practice worksheets](/resources/mindfulness/mindfulness-how-practice-source.pdf)
+### Discriminating
 
-## Text Version / Adapted Text
+Discrimination means noticing differences, consequences, risk, what fits, and what does not fit. This is necessary for safety, boundaries, learning, and decision-making.
 
-The HOW skills describe the stance used while observing, describing, or participating: non-judgmentally, one-mindfully, and effectively.
+### Evaluating
 
-### Non-Judgmentally {#non-judgmentally}
+Evaluation adds a global value label such as *good/bad*, *worthy/unworthy*, or *acceptable/unacceptable* as though the label itself were an objective observation. Evaluations may show what matters to you, but they can also hide the specific facts and consequences needed for an effective response.
 
-Notice judgments as thoughts. Return to observable facts, preferences, values, and consequences. Non-judgment does not mean approving of harm or giving up discernment; it means reducing labels that hide useful information.
+## Practise Non-Judgmentally {#non-judgmentally}
+
+Non-Judgmentally does not mean approving harmful behaviour, ignoring consequences, giving up preferences, abandoning boundaries, or refusing to ask for change.
+
+Instead:
+
+- describe the facts;
+- describe the consequences;
+- identify preferences, wishes, needs, and values;
+- describe your own feelings;
+- notice judgmental thoughts as thoughts; and
+- do not turn having a judgment into another reason to attack yourself.
+
+For example, replace *That was a terrible conversation* with a more useful description: *We interrupted each other several times. I felt tense, and I want to try again when we can each finish a sentence.*
+
+The memorable practice is to avoid judging the fact that judging occurred. Notice it, name it, and return to description.
+
+## Handouts & Worksheets {#handouts-worksheets}
+
+### Original Source teaching pages
+
+[![Original Source: Non-Judgmentally teaching pages](/resources/mindfulness/program-source/mindfulness-nonjudgmentally-program-teaching.jpg){.img-fluid fig-alt="Original Source: Non-Judgmentally teaching pages"}](/resources/mindfulness/program-source/mindfulness-nonjudgmentally-program-teaching.pdf){target="_blank" rel="noopener"}
+
+[Open original source teaching pages](/resources/mindfulness/program-source/mindfulness-nonjudgmentally-program-teaching.pdf){target="_blank" rel="noopener"}
+
+:::: {.bs-practice-resource #resource-mindfulness-program-p047 data-source-id="mindfulness-program-p047"}
+**Mindfulness Handout 5A - Ideas for Practicing Nonjudgmentalness**
+
+**Original Source**
+
+[![Original Source: Ideas for Practicing Nonjudgmentalness](/resources/mindfulness/program-source/mindfulness-handout-5a-practicing-nonjudgmentalness-original.jpg){.img-fluid fig-alt="Original Source: Ideas for Practicing Nonjudgmentalness"}](/resources/mindfulness/program-source/mindfulness-handout-5a-practicing-nonjudgmentalness-original.pdf){target="_blank" rel="noopener"}
+
+[Open original source](/resources/mindfulness/program-source/mindfulness-handout-5a-practicing-nonjudgmentalness-original.pdf){target="_blank" rel="noopener"}
+
+::: {.bs-resource-match data-match-id="linehan-book:mindfulness-program-p047" data-source-id="mindfulness-program-p047" data-match-source="linehan-book" data-candidate-asset="/resources/clean/mindfulness/mindfulness-handout-5a-practicing-nonjudgmentalness-clean.pdf"}
+**Clean Printable Copy**
+
+[![Clean Printable Copy: Ideas for Practicing Nonjudgmentalness](/resources/clean/mindfulness/mindfulness-handout-5a-practicing-nonjudgmentalness-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ideas for Practicing Nonjudgmentalness"}](/resources/clean/mindfulness/mindfulness-handout-5a-practicing-nonjudgmentalness-clean.pdf){target="_blank" rel="noopener"}
+
+[Open printable copy](/resources/clean/mindfulness/mindfulness-handout-5a-practicing-nonjudgmentalness-clean.pdf){target="_blank" rel="noopener"}
+:::
+::::

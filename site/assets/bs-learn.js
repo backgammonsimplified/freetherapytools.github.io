@@ -2373,13 +2373,12 @@
       sidebar.querySelector(".sidebar-menu-container") || sidebar;
     const pageHeader = document.getElementById("quarto-header");
     const toggle = document.createElement("button");
-    let autoHidden = false;
-    let manuallyCollapsed = false;
+    let collapsed = false;
     let lastScrollY = window.scrollY;
     let lastSidebarScrollTop = sidebarScroller.scrollTop;
     let scrollingDown = false;
     let pageScrollingDown = false;
-    let autoCollapsePending = true;
+    let autoCollapsePending = window.scrollY <= 32;
     toggle.type = "button";
     toggle.className = "bs-learn-left-sidebar-toggle";
     toggle.dataset.bsLearnLeftSidebarToggle = "";
@@ -2393,7 +2392,6 @@
     };
 
     const updateVisibility = function () {
-      const collapsed = autoHidden || manuallyCollapsed;
       const navbarHidden = Boolean(
         pageHeader && pageHeader.classList.contains("headroom--unpinned")
       );
@@ -2415,19 +2413,9 @@
     };
 
     const update = function () {
-      const manualActive = desktopQuery.matches && manuallyCollapsed;
-      const autoHiddenActive =
-        desktopQuery.matches && autoHidden && !manualActive;
-      const active = manualActive || autoHiddenActive;
-      sidebar.hidden = manualActive;
-      document.body.classList.toggle(
-        "bs-learn-left-sidebar-collapsed",
-        manualActive
-      );
-      document.body.classList.toggle(
-        "bs-learn-left-sidebar-auto-hidden",
-        autoHiddenActive
-      );
+      const active = desktopQuery.matches && collapsed;
+      sidebar.hidden = active;
+      document.body.classList.toggle("bs-learn-left-sidebar-collapsed", active);
       updateVisibility();
       toggle.setAttribute("aria-expanded", active ? "false" : "true");
       toggle.setAttribute(
@@ -2456,14 +2444,8 @@
     };
 
     toggle.addEventListener("click", function () {
-      if (autoHidden || manuallyCollapsed) {
-        autoHidden = false;
-        manuallyCollapsed = false;
-        autoCollapsePending = true;
-      } else {
-        manuallyCollapsed = true;
-        autoCollapsePending = false;
-      }
+      collapsed = !collapsed;
+      autoCollapsePending = !collapsed;
       update();
     });
     window.addEventListener("resize", update);
@@ -2473,8 +2455,8 @@
         const currentScrollY = window.scrollY;
         if (currentScrollY <= 32) {
           autoCollapsePending = true;
-          if (!keepExpandedWhileScrolling && autoHidden) {
-            autoHidden = false;
+          if (!keepExpandedWhileScrolling && collapsed) {
+            collapsed = false;
             pageScrollingDown = false;
             scrollingDown = false;
             lastScrollY = currentScrollY;
@@ -2487,25 +2469,14 @@
           scrollingDown = pageScrollingDown;
           lastScrollY = currentScrollY;
           if (
-            keepExpandedWhileScrolling === false &&
-            !scrollingDown &&
-            autoHidden
-          ) {
-            autoHidden = false;
-            autoCollapsePending = true;
-            update();
-            return;
-          }
-          if (
             !keepExpandedWhileScrolling &&
             autoCollapsePending &&
             scrollingDown &&
-            !manuallyCollapsed &&
             currentScrollY > 32
           ) {
             autoCollapsePending = false;
-            if (!autoHidden) {
-              autoHidden = true;
+            if (!collapsed) {
+              collapsed = true;
               update();
               return;
             }
@@ -2535,7 +2506,7 @@
     }
     if ("ResizeObserver" in window) {
       new ResizeObserver(function () {
-        if (!toggle.hidden && !autoHidden && !manuallyCollapsed) {
+        if (!toggle.hidden && !collapsed) {
           positionExpandedToggle();
         }
       }).observe(sidebar);
