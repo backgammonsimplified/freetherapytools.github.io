@@ -90,13 +90,20 @@ class QmdResourceExtractionTests(unittest.TestCase):
     def test_wellness_resources_have_native_qmd_content(self) -> None:
         rows = [row for row in self.published if row["section"] == "Wellness"]
         self.assertEqual(55, len(rows))
+        intentionally_omitted = {
+            "wellness-p034", "wellness-p035", "wellness-p036",
+            "wellness-p040", "wellness-p041",
+        }
         for resource in rows:
             source_id = resource["id"]
             lesson = ROOT / self.by_id[source_id]["lesson_qmd"]
-            self.assertIn(
-                f"<!-- native-resource-content:{source_id}:start -->",
-                lesson.read_text(encoding="utf-8"),
-            )
+            source = lesson.read_text(encoding="utf-8")
+            marker = f"<!-- native-resource-content:{source_id}:start -->"
+            if source_id in intentionally_omitted:
+                self.assertNotIn(marker, source)
+                self.assertEqual("true", self.by_id[source_id]["review_needed"])
+            else:
+                self.assertIn(marker, source)
             self.assertNotEqual("pending", self.by_id[source_id]["extraction_method"])
 
     def test_goal_and_general_resources_have_native_qmd_content(self) -> None:

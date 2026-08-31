@@ -67,8 +67,6 @@ The signs below are prompts for noticing patterns. Select any tile to read its e
 
 These are signs to notice, not a diagnostic checklist. One sign does not establish an addiction, and the tiles should not be added together into a score. The purpose is to notice patterns and decide whether further reflection, change, or support would be useful.
 
-[View the Signs of Maladaptive Coping source/printable copy](/resources/wellness/wellness-p035.jpg)
-
 Want to think about changing a coping pattern? [Use the Stages of Change reflection](/tool-finder/stages-of-change/).
 
 ## Stages of Change {#stages-of-change}
@@ -81,30 +79,9 @@ The Stages of Change model is a way to think about readiness for a particular ch
 
 The overview above introduces the main forward-moving stages. The accessible Change Path below also includes returning to an old pattern as a place to learn and restart.
 
-```{=html}
-<div class="change-path-graphic change-path-graphic--learn" aria-labelledby="change-path-caption">
-  <svg class="change-path-arrows" viewBox="0 0 900 620" role="img" aria-labelledby="change-path-svg-title change-path-svg-desc">
-    <title id="change-path-svg-title">A flexible path through six stages of change</title>
-    <desc id="change-path-svg-desc">Curved arrows connect six stage nodes and loop from learning and restarting toward earlier parts of the path.</desc>
-    <defs><marker id="change-path-arrow-learn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs>
-    <path d="M520 105 C630 105 705 145 740 205" marker-end="url(#change-path-arrow-learn)"></path>
-    <path d="M770 270 C790 335 775 390 735 430" marker-end="url(#change-path-arrow-learn)"></path>
-    <path d="M660 500 C590 540 530 550 500 550" marker-end="url(#change-path-arrow-learn)"></path>
-    <path d="M385 550 C300 540 240 505 210 470" marker-end="url(#change-path-arrow-learn)"></path>
-    <path d="M145 395 C110 340 105 290 125 250" marker-end="url(#change-path-arrow-learn)"></path>
-    <path d="M175 165 C240 105 310 90 390 100" marker-end="url(#change-path-arrow-learn)"></path>
-  </svg>
-  <ol class="change-path-stages">
-    <li class="change-path-node change-path-node--precontemplation"><strong>Noticing</strong><span>Precontemplation</span></li>
-    <li class="change-path-node change-path-node--contemplation"><strong>Weighing it up</strong><span>Contemplation</span></li>
-    <li class="change-path-node change-path-node--preparation"><strong>Getting ready</strong><span>Preparation</span></li>
-    <li class="change-path-node change-path-node--action"><strong>Doing</strong><span>Action</span></li>
-    <li class="change-path-node change-path-node--maintenance"><strong>Keeping it going</strong><span>Maintenance</span></li>
-    <li class="change-path-node change-path-node--return-old-pattern"><strong>Learn &amp; restart</strong><span>Return to old pattern</span></li>
-  </ol>
-  <p class="change-path-caption" id="change-path-caption">Change can move forward, pause, or loop back.</p>
-</div>
-```
+![A circular Stages of Change diagram showing precontemplation, contemplation, preparation, action, maintenance, and relapse, with learning from each cycle at the centre.](/resources/wellness/stages-of-change/stages-of-change-cycle.png){.img-fluid fig-alt="A six-stage cycle of change that loops through returning to an old pattern and learning from each cycle."}
+
+This view emphasizes that change is a process rather than a straight line. The wording *returning to an old pattern* used in the lesson keeps the focus on learning and restarting rather than labeling the person.
 
 ### Precontemplation — Not Considering Change Yet
 
@@ -142,36 +119,9 @@ A return to an earlier behaviour does not erase the work that came before it. It
 
 The useful task is to review what happened without turning it into a judgment about the person: What contributed? What did I learn? What would help me get back on track?
 
-![A circular Stages of Change diagram showing precontemplation, contemplation, preparation, action, maintenance, and relapse, with learning from each cycle at the centre.](/resources/wellness/stages-of-change/stages-of-change-cycle.png){.img-fluid fig-alt="A six-stage cycle of change that loops through returning to an old pattern and learning from each cycle."}
-
-This second view emphasizes that change is a process rather than a straight line. The wording *returning to an old pattern* used in the lesson keeps the focus on learning and restarting rather than labeling the person.
-
 [Use the Stages of Change reflection tool](/tool-finder/stages-of-change/) or continue to [Urge Surfing](/learn/wellness/urge-surfing.html), which applies mindful observation to an urge without treating it as a command.
 
-::: {.callout-caution title="Urgent overdose risk"}
-The visual overdose and naloxone resources below contain emergency material and are retained for review. If an overdose may be happening, use local emergency services and follow current instructions from trained emergency or public-health professionals.
-:::
-
 <!-- section-scan-resources:start -->
-
-## Handouts & Worksheets {#handouts-worksheets}
-
-:::: {.bs-practice-resource #resource-wellness-p036 data-source-id="wellness-p036"}
-**Stages of Change**
-
-[![Stages of Change](/resources/wellness/wellness-p036.jpg){.img-fluid fig-alt="Stages of Change"}](/resources/wellness/wellness-p036.jpg)
-
-[Download / View Handout](/resources/wellness/wellness-p036.jpg)
-
-
-<!-- native-resource-content:wellness-p036:start -->
-
-#### Native Version
-
-This handout's educational content is integrated into the anchored skill sections above.
-
-<!-- native-resource-content:wellness-p036:end -->
-::::
 
 ## Practice Materials {#practice-materials}
 
@@ -260,210 +210,6 @@ This handout's educational content is integrated into the anchored skill section
 ##### Additional Note
 
 <!-- native-resource-content:wellness-p039:end -->
-::::
-
-## Reference Materials {#reference-materials}
-
-:::: {.bs-practice-resource #resource-wellness-p034 data-source-id="wellness-p034"}
-**Effects of Substance Use**
-
-[![Effects of Substance Use](/resources/wellness/wellness-p034.jpg){.img-fluid fig-alt="Effects of Substance Use"}](/resources/wellness/wellness-p034.jpg)
-
-[Download / View Handout](/resources/wellness/wellness-p034.jpg)
-
-
-<!-- native-resource-content:wellness-p034:start -->
-
-#### Text Version
-
--Euphdfi@. Tålkåtivé .:Gontidenep. Social[.F.3irt4iiÖus . •Sjéeo.:aid.•. "Réilif'ffdm.#ithdiawc:,.
-
-##### Reliif
-
-**OF THIS PAGE?**
-
-##### Depre$sion
-
-##### Embarassment
-
-##### Gastritis
-
-##### Guilt
-
-##### Family conflict
-
-##### Job less
-
-##### Vomiting
-
-##### Self* disgust
-
-Accidents/Driving under the infiuenee Job performance impaired
-
-##### Brain damage
-
-##### Dizzieness
-
-##### Nausea
-
-##### Unpleasant taste
-
-##### Debt
-
-##### Over-spending
-
-Legal chaf$s
-
-##### Psychological depedence
-
-##### Liver disease
-
-##### Aggression
-
-##### Hangover
-
-##### Cancer
-
-##### Social disapproval
-
-##### Stomach ulcers
-
-<!-- native-resource-content:wellness-p034:end -->
-::::
-
-:::: {.bs-practice-resource #resource-wellness-p035 data-source-id="wellness-p035"}
-**Signs of Maladaptive Coping**
-
-[![Signs of Maladaptive Coping](/resources/wellness/wellness-p035.jpg){.img-fluid fig-alt="Signs of Maladaptive Coping"}](/resources/wellness/wellness-p035.jpg)
-
-[Download / View Handout](/resources/wellness/wellness-p035.jpg)
-
-
-<!-- native-resource-content:wellness-p035:start -->
-
-#### Text Version
-
-1. You Keep Doing It Even Though There Are Clear Negative Consequences
-2. You Pass Up Social Situations Where You Can't Partake
-3. You Suffer Withdrawal If You Attempt To Stop
-4. You Attempt To Keep Your Use Secret
-5. Your Tolerance Is Increasing
-6. You Can't Seem To Stop Yourself
-7. You Take Risks And Make Disproportionate Sacrifices For It
-8. You Make Excuses When Other People Act Concerned
-9. You Feel You Need It To Deal With Your Problems
-
-<!-- native-resource-content:wellness-p035:end -->
-::::
-
-:::: {.bs-practice-resource #resource-wellness-p040 data-source-id="wellness-p040"}
-**Naloxone: Save a Life**
-
-[![Naloxone: Save a Life](/resources/wellness/wellness-p040.jpg){.img-fluid fig-alt="Naloxone: Save a Life"}](/resources/wellness/wellness-p040.jpg)
-
-[Download / View Handout](/resources/wellness/wellness-p040.jpg)
-
-
-<!-- native-resource-content:wellness-p040:start -->
-
-#### Text Version
-
-**What is naloxone?**
-
-Naloxone {p ronolncsd nu-l_CX-ouvn) is fast-acting drug used reuerse the effetts Cf ark opioid overdose. Naloxone can æstore breath Eng within 2 to minutes.
-
-**Why does naloxone work only temporarifv?**
-
-N&bxone is active the bed}' for only 90 but the effects Df mast can last longer. This that the effects of naloxoae are Likeey to wear of F the cp'Aeds me gone from the body, which could bræelhing to gtap Nöbione mead to be used again, den ending on tho amout±tl rvpe or (liathüd of (erg.r An is an emevgen:y. Euan It has been auaye for heiø. if ur someone you know using opioida, make Cueg Eo carry r,édoxone nith Yolj. available without g prescriptöon and can picked up tt "lost pharfflacies ar local
-
-**Is naloxone safe for everyone?**
-
-Yes, gaioxone is sate for agas. It. wosks or-dy you have opiofds :vetom. is to keep an-hanå 't canaat bc u god not dependence How is naloxone helping to address Canada'S
-
-**opioid crisis?**
-
-Naloxone hss been used to successfully reugf thtusar,ds of opioid overdoses .sc;roee Caneda. iG used by first-responde:s es peramedica and Take-horne aaroxone kite are algo to lhlhu at risk of oue:dose or who is \ikely to ancounter o ne. Take-ho me naioxoae„ kits are. avaiiabie out a prescription oen picköd at most health eucharitie=.
-
-##### KNOW
-
-##### MORE
-
-- Tsbn97B.O.$GO-2893$2
-
-##### THE
-
-In Canada, two types of take-home
-
-##### naloxone kits are Availabee
-
-Ne Spray ig_nraycd Directih the nose whtra it iG Eogdrhac_i. If starts ta take effect in to 3 minutes Fnjectabes Naloxone is injected into a muscle in your &ady: tho Lg-lpgl awn, thigh or buttocks beet. stats to æke effect B to 6 minutes,
-
-##### Naioxone Saves Lives. Get a Kit,
-
-Naloxone tempotariiy reverses the effects of an ove$doee hglg restore V if think someone is experiencing an opioid overdose, cell 9-1-1 ar Eoca! emergency help line, then give naiexone Sy folkcwing the directrons the kit Taker-home kits are Auaieeb12 at most pharmacies or Locae haaåth autharit;es; no preecripti0ß Is meeded Kits expirs and Should be reptaced after 18 to 24 months . Get the facts at &uC-ariaöa
-
-<!-- native-resource-content:wellness-p040:end -->
-::::
-
-:::: {.bs-practice-resource #resource-wellness-p041 data-source-id="wellness-p041"}
-**Opioid Overdoses: What to Do**
-
-[![Opioid Overdoses: What to Do](/resources/wellness/wellness-p041.jpg){.img-fluid fig-alt="Opioid Overdoses: What to Do"}](/resources/wellness/wellness-p041.jpg)
-
-[Download / View Handout](/resources/wellness/wellness-p041.jpg)
-
-
-<!-- native-resource-content:wellness-p041:start -->
-
-#### Text Version
-
-Opioids - like oxycodone. and hyd40rnorphons - era medication's thut czn hg*p rei8ue pciu Howevgt. opioid& are cpitids any opioids that are made, shared 0' 50M ii!egaäy.
-
-**How can opioids cause an overdose?**
-
-Oplolda aF!ect hövv b?ain controls yaur breathiny if you toke more npiffids than votr budy handle, you val! to she" s$gns and symptoms of an overdose, sunh as:
-
-##### Saw, nt
-
-bre*thing or 5narin9 awako Ptotact yourself front an overdose
-
-##### If L]Gg opioids
-
-- dan*t With UecohÜI. Otha drL}gs
-
-- don't use - with B fliend
-
-- know the signs ot sn opio;.d overdose canya neloxøne Cot if you witness en overdose, stay and help Witnessing Fin overdose he ficaryr as; a breathing becomes weake;, shallower, ar even srcps cornpieteiy. doses are a medÉca! emergency.
-
-at gceng to hglp can gave Gogaeonors !ife_ Ff vøu'ue taken drugs, or baue some on you, ycx_l ore pretectal drug charges the Good Drug Overdose Act, Itis law ta the pereon Nho seeks BPd
-
-##### KNOW
-
-##### MORE
-
-FACTS. RIG".
-
-**Suspectarmetdose?**
-
-##### CALL
-
-##### Overdoses can happen if you take
-
-an opioid not prascribedfov Yali
-
-- mere than prescribed for you, Gtsch higher dose
-
-- an opioid With other Dfues (e.g icty medication, m Lioc!o or sleeping p4is) an opioid that has been tampeeed with [e.g..
-
-troken c,Eliehed)
-
-- produced or opioids if heve. sapped tekir;g for e Whig and stårt taking thecn again, yoo can be et risk of an overd0$e Becijirsa yaur body is rot used to the dwg anymo'ü.
-
-##### If you suspect an opioid overdose, yau should
-
-Call (or your local emergency hefp *ine) and stav at the scene Giug if you haue it that the Samaritan Drug Overdose Att prttects you from drug possession charges Cåiiiidä.
-
-<!-- native-resource-content:wellness-p041:end -->
 ::::
 
 <!-- section-scan-resources:end -->

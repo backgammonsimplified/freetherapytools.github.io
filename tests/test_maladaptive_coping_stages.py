@@ -66,13 +66,13 @@ def test_nine_signs_are_accessible_non_diagnostic_disclosures():
         assert explanation in LEARN
     assert "These are signs to notice, not a diagnostic checklist." in LEARN
     assert "tiles should not be added together into a score" in LEARN
-    assert "/resources/wellness/wellness-p035.jpg" in LEARN
+    assert "/resources/wellness/wellness-p035.jpg" not in LEARN
     assert "Use the Stages of Change reflection" in LEARN
     assert "maladaptive-sign summary:focus-visible" in STYLES
     assert 'details.addEventListener("toggle", syncExpanded)' in QUICK
 
 
-def test_stages_learn_has_full_copy_and_original_change_path():
+def test_stages_learn_has_full_copy_and_source_cycle_image():
     for stage in (
         "Precontemplation — Not Considering Change Yet",
         "Contemplation — Thinking It Over",
@@ -82,19 +82,22 @@ def test_stages_learn_has_full_copy_and_original_change_path():
         "Returning to an Old Pattern — Learning and Restarting",
     ):
         assert stage in LEARN
-    for label in ("Noticing", "Weighing it up", "Getting ready", "Doing", "Keeping it going", "Learn &amp; restart"):
-        assert label in LEARN
-    assert 'class="change-path-graphic' in LEARN
-    assert "Change can move forward, pause, or loop back." in LEARN
-    assert LEARN.count('marker-end="url(#change-path-arrow-learn)"') == 6
-    assert "/resources/wellness/wellness-p036.jpg" in LEARN
+    sentence = "The overview above introduces the main forward-moving stages."
+    image = "/resources/wellness/stages-of-change/stages-of-change-cycle.png"
+    assert LEARN.index(sentence) < LEARN.index(image) < LEARN.index("### Precontemplation")
+    assert LEARN.count(image) == 1
+    assert 'class="change-path-graphic' not in LEARN
+    assert 'marker-end="url(#change-path-arrow-learn)"' not in LEARN
+    assert "/resources/wellness/wellness-p036.jpg" not in LEARN
+    assert "## Handouts & Worksheets" not in LEARN
+    assert "## Reference Materials" not in LEARN
+    assert "Naloxone: Save a Life" not in LEARN
     assert "S-T-A-G-E" not in LEARN
     assert "Carepatron" not in LEARN
 
 
 def test_source_transcriptions_are_clean_and_complete():
     required = [
-        "You Keep Doing It Even Though There Are Clear Negative Consequences",
         "Do you find yourself ignoring or denying a problem in your life? If yes, explain.",
         "Why shouldn't you make positive changes to alleviate this problem?",
         "What steps should you take to make a change?",
@@ -108,8 +111,10 @@ def test_source_transcriptions_are_clean_and_complete():
     ]
     for text in required:
         assert text in LEARN
-    for resource in ("wellness-p035", "wellness-p036", "wellness-p037", "wellness-p038", "wellness-p039"):
+    for resource in ("wellness-p037", "wellness-p038", "wellness-p039"):
         assert resource in LEARN
+    for removed_resource in ("wellness-p034", "wellness-p035", "wellness-p036", "wellness-p040", "wellness-p041"):
+        assert removed_resource not in LEARN
     for corrupted in ("9 Sige", "Precontempiatiaa", "Conqinued", "chR\"enge", "AiiåTcluaÉ"):
         assert corrupted not in LEARN
 
@@ -136,7 +141,7 @@ class MaladaptiveCopingStagesTests(unittest.TestCase):
         test_nine_signs_are_accessible_non_diagnostic_disclosures()
 
     def test_stages_learn(self):
-        test_stages_learn_has_full_copy_and_original_change_path()
+        test_stages_learn_has_full_copy_and_source_cycle_image()
 
     def test_source_text(self):
         test_source_transcriptions_are_clean_and_complete()

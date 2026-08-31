@@ -3438,25 +3438,24 @@ clearing the query restores the normal curriculum order.
 ## 89. Maladaptive coping signs and full Stages of Change reflection (2026-08-30)
 
 `/learn/wellness/maladaptive-coping.html#signs-maladaptive-coping` presents the
-nine signs from source record `wellness-p035` as accessible disclosure tiles in
-a responsive 3-by-3 grid. They provide reflection and context only: the page
-does not use checkboxes, add selections into a score, or describe the tiles as a
-diagnostic screen. The original p035 image remains linked as the printable
-source copy.
-
-The Stages of Change Learn section now uses an original responsive Change Path,
-with six authored HTML stage nodes and SVG arrows that visibly loop back. Its
-caption is “Change can move forward, pause, or loop back.” The design does not
-reproduce the photographed S-T-A-G-E path or oval source graphic. The expanded
-public prose treats readiness as flexible and describes returning to an old
-pattern as learning and restarting rather than personal failure.
-
-Source records `wellness-p035` through `wellness-p039` remain available in the
-Learn resource area. The native text versions for p035 and worksheet pages
-p037–p039 are hand-repaired source transcriptions; do not replace them with the
-previous generated OCR. The surrounding Learn explanations and tool prompts are
-original Therapy Skill Kit adaptations based on those concepts. P036 retains
-the source's stage terminology and image as a printable source record.
+nine signs adapted from source record `wellness-p035` as accessible disclosure
+tiles in a responsive 3-by-3 grid. They provide reflection and context only: the
+page does not use checkboxes, add selections into a score, or describe the tiles
+as a diagnostic screen. The separate p035 printable link is intentionally not
+shown on this lesson.
+The Stages of Change Learn section uses the circular
+`stages-of-change-cycle.png` image directly below the forward-moving overview.
+The earlier authored HTML/SVG Change Path has been removed from the lesson. The
+expanded public prose still treats readiness as flexible and describes
+returning to an old pattern as learning and restarting rather than personal
+failure.
+Only worksheet records `wellness-p037` through `wellness-p039` remain in the
+lesson's Practice Materials area. The Handouts & Worksheets and Reference
+Materials areas, including p034–p036 and p040–p041, are intentionally absent.
+The worksheet text for p037–p039 is hand-repaired source transcription; do not
+replace it with the previous generated OCR. The surrounding Learn explanations
+and tool prompts are original Therapy Skill Kit adaptations based on those
+concepts.
 
 The existing `/tool-finder/stages-of-change/` tool now covers all substantive
 questions across worksheet pages p037, p038, and p039. It offers a six-stage
@@ -3471,8 +3470,8 @@ Readable Markdown, DOCX, and print exports group answered prompts by stage and
 omit empty administrative placeholders.
 
 Focused contracts are in `tests/test_maladaptive_coping_stages.py` and
-`tests/test_wellness_tools.js`; they cover the nine signs, clean source text,
-original Change Path, six-stage/19-prompt tool, old-state normalization,
+`tests/test_wellness_tools.js`; they cover the nine signs, source cycle image,
+clean worksheet text, six-stage/19-prompt tool, old-state normalization,
 round-trip progress, and readable export.
 
 ## 90. Mindfulness program authority and clue-first Emotion Explorer (2026-08-30)
