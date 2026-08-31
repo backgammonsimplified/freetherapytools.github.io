@@ -45,7 +45,7 @@ class NavigationParityTests(unittest.TestCase):
         self.assertGreater(initializer.stat().st_size, 20_000)
 
         pages = {
-            "DBT": RENDERED / "learn" / "cube" / "tipp.html",
+            "DBT": RENDERED / "learn" / "distress-tolerance" / "tipp.html",
             "CBT": RENDERED / "learn" / "cbt-anxiety" / "thinking-traps.html",
             "Mindfulness": RENDERED / "learn" / "mindfulness" / "what-skills.html",
         }
