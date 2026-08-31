@@ -2359,7 +2359,7 @@
       document.body.classList.contains("bs-learn-article") ||
       document.body.classList.contains("bs-learn-index") ||
       document.body.classList.contains("bs-learn-track-index");
-    const skillFinderPage = isSkillFinderPage();
+    const skillFinderPage = isToolFinderPage();
     const sidebar = document.getElementById("quarto-sidebar");
     if ((!learnPage && !skillFinderPage) || !sidebar) {
       return;

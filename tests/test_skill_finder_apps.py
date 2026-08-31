@@ -18,6 +18,7 @@ class SkillFinderAppTests(unittest.TestCase):
     def test_skill_finder_sidebar_uses_shared_scroll_and_arrow_controls(self):
         javascript = (SITE / "assets" / "bs-learn.js").read_text(encoding="utf-8")
         self.assertIn("const skillFinderPage = isToolFinderPage()", javascript)
+        self.assertNotIn("isSkillFinderPage", javascript)
         self.assertIn('"Show Tool Finder navigation"', javascript)
         self.assertIn('"Hide Tool Finder navigation"', javascript)
         self.assertIn('"\\u2192 Show navigation"', javascript)

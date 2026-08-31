@@ -72,7 +72,7 @@ class NavigationParityTests(unittest.TestCase):
                 self.assertIn(marker, html, f"{curriculum}: {marker}")
             self.assertRegex(
                 html,
-                r'<script src="\.\./\.\./assets/bs-learn\.js\?v=20260830-mindfulness-emotion-pass" defer',
+                r'<script src="\.\./\.\./assets/bs-learn\.js\?v=20260830-sidebar-runtime" defer',
             )
             self.assertEqual(
                 len(re.findall(r"sidebar-item sidebar-item-section", html)),
