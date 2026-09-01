@@ -2734,6 +2734,77 @@ button.values-inline-choice:hover {
 .skill-guided-step.is-dime-complete .skill-guided-choice.is-selected { opacity: 1; outline: 3px solid rgba(44, 54, 60, .22); }
 
 /* Focused Pros & Cons and Interpersonal Troubleshooting tools */
+.skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) {
+  --focused-tool-save-space: 8rem;
+  padding-bottom: var(--focused-tool-save-space);
+}
+
+.skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-app-footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: 1035;
+  box-sizing: border-box;
+  width: min(72rem, calc(100vw - 2rem));
+  padding: .7rem 1rem;
+  border: 1px solid var(--skill-app-border);
+  border-bottom: 0;
+  border-radius: .85rem .85rem 0 0;
+  background: var(--bs-page-background, #faf7f2);
+  box-shadow: 0 -.45rem 1.2rem rgb(48 37 29 / 14%);
+  transform: translateX(-50%);
+}
+
+.skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-progress-final {
+  display: grid;
+  grid-template-columns: minmax(11rem, .35fr) minmax(0, 1fr);
+  align-items: center;
+  gap: .2rem 1rem;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-progress-final h3,
+.skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-progress-final > p {
+  grid-column: 1;
+  margin: 0;
+}
+
+.skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-progress-final h3 {
+  font-size: .95rem;
+}
+
+.skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-progress-final > p {
+  font-size: .78rem;
+  line-height: 1.3;
+}
+
+.skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-progress-final-actions {
+  display: grid;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .45rem;
+}
+
+.skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-progress-final-actions button {
+  min-width: 0;
+  min-height: 2.5rem;
+  padding: .4rem .55rem;
+  font-size: .78rem;
+  line-height: 1.2;
+}
+
+body:has(.skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"])) .skill-progress-floating {
+  bottom: max(8.75rem, calc(env(safe-area-inset-bottom) + 8.75rem));
+}
+
+body:has(.skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"])) .bs-site-tools--floating {
+  bottom: max(12.25rem, calc(env(safe-area-inset-bottom) + 12.25rem));
+}
+
 .skill-app-textarea-large { min-height: 9rem; }
 .skill-app-optional { color: #5d6870; font-size: .82rem; font-weight: 500; }
 .pros-cons-grid {
@@ -2789,6 +2860,8 @@ button.values-inline-choice:hover {
 .pros-cons-review-options > section { min-width: 0; padding: .8rem; border: 1px solid #d8e0e3; border-radius: .55rem; }
 .pros-cons-review dt { margin-top: .75rem; font-weight: 800; }
 .pros-cons-review dd { margin-left: 0; white-space: pre-wrap; }
+.pros-cons-summary-action { display: grid; justify-items: start; gap: .35rem; margin: 1rem 0; }
+.pros-cons-summary-action p { margin: 0; }
 .quick-tool-related { margin: 1rem 0; }
 
 .troubleshooting-opening { display: grid; gap: .45rem; }
@@ -2820,6 +2893,35 @@ button.values-inline-choice:hover {
 .troubleshooting-suggestions h4 { margin-top: 0; }
 
 @media (max-width: 780px) {
+  .skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) {
+    --focused-tool-save-space: 11rem;
+  }
+  .skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-app-footer {
+    width: calc(100vw - 1rem);
+    padding: .55rem .65rem;
+  }
+  .skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-progress-final {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .35rem;
+  }
+  .skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-progress-final h3,
+  .skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-progress-final > p,
+  .skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-progress-final-actions {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-progress-final > p {
+    display: none;
+  }
+  .skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-progress-final-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  body:has(.skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"])) .skill-progress-floating {
+    bottom: max(11.75rem, calc(env(safe-area-inset-bottom) + 11.75rem));
+  }
+  body:has(.skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"])) .bs-site-tools--floating {
+    bottom: max(15.25rem, calc(env(safe-area-inset-bottom) + 15.25rem));
+  }
   .pros-cons-grid { grid-template-areas: "acting-pros" "acting-cons" "resisting-pros" "resisting-cons"; grid-template-columns: minmax(0, 1fr); }
   .pros-cons-time-review > div { grid-template-columns: minmax(0, 1fr); }
   .pros-cons-review-options { grid-template-columns: minmax(0, 1fr); }
@@ -2839,6 +2941,8 @@ button.values-inline-choice:hover {
 }
 
 @media print {
+  .skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) { padding-bottom: 0; }
+  .skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-app-footer { display: none !important; }
   .pros-cons-grid { grid-template-areas: "acting-pros resisting-pros" "acting-cons resisting-cons"; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pros-cons-item-actions,
   [data-pros-add],
