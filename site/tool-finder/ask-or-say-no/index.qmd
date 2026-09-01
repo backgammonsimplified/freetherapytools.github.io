@@ -13,3 +13,5 @@ For the source's structured ten-factor intensity exercise, use [The DIME Game](/
 ::: {#ask-no-app .skill-app data-practice-app="ask-or-say-no"}
 Loading Ask or Say No Planner…
 :::
+
+[Not working as expected? Troubleshoot the interaction.](/tool-finder/interpersonal-troubleshooting/)

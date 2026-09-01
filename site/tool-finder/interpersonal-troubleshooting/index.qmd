@@ -1,0 +1,18 @@
+---
+title: "Troubleshooting Interpersonal Effectiveness"
+subtitle: "Work out what may be getting in the way when an interpersonal skill isn't working."
+description: "Work out what may be getting in the way when an interpersonal skill isn't working."
+sidebar: tool-finder
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+Use this six-area review to identify a next adjustment. A response can show that an area is worth looking at; it does not diagnose the problem or guarantee an interpersonal outcome. [Learn about interpersonal troubleshooting](/learn/interpersonal-effectiveness/saying-no.html#interpersonal-troubleshooting).
+
+::: {#interpersonal-troubleshooting-app .skill-app data-quick-app="interpersonal-troubleshooting"}
+Loading Troubleshooting Interpersonal Effectiveness…
+:::
+
+[Back to all Tool Finder tools](/tool-finder/)

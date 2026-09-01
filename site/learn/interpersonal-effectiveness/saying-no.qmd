@@ -37,13 +37,20 @@ Move along a continuum rather than treating every interaction the same: ask or r
 
 [Open The DIME Game](/tool-finder/dime-game/) to work through the ten Worksheet 6 factors one at a time, or use the [Ask or Say No Planner](/tool-finder/ask-or-say-no/) for a non-scored reflection.
 
-## Troubleshooting {#interpersonal-troubleshooting}
+## Troubleshooting When What You're Doing Isn't Working {#interpersonal-troubleshooting}
 
-- If skills are weak, rehearse the wording and nonverbal delivery.
-- If worry thoughts interfere, check the facts and challenge myths about asking, saying no, approval, or conflict.
-- If emotions are too intense, regulate arousal before returning to the interaction.
-- If the environment makes the goal unrealistic, revise the objective, timing, or strategy.
-- If safety is at risk, prioritize protection and support over completing the script.
+Interpersonal skills do not guarantee that every request, refusal, boundary, or conversation will go the way you want. When something is not working, first identify what may be getting in the way. The problem may involve:
+
+- the skill itself;
+- unclear priorities;
+- short-term goals crowding out longer-term goals;
+- emotional intensity;
+- worries, assumptions, or myths;
+- the environment or power in the situation.
+
+The purpose is to choose the next useful adjustment rather than simply trying the same thing harder. That might mean reviewing or rehearsing a skill, clarifying the goal, pausing to regain choice, checking assumptions against facts, changing timing or strategy, seeking support, protecting safety, or accepting that even skillful communication may not produce the outcome you want.
+
+[Use the Troubleshooting tool](/tool-finder/interpersonal-troubleshooting/){.btn .btn-primary}
 
 ## Walking the Middle Path {#walking-the-middle-path}
 
@@ -136,19 +143,13 @@ This handout's educational content is integrated into the anchored skill section
 <!-- native-resource-content:interpersonal-effectiveness-p039:end -->
 ::::
 
-:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p040 data-source-id="interpersonal-effectiveness-p040"}
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p040 data-source-id="interpersonal-effectiveness-p040" data-public-source="clean-exact-match"}
 **Troubleshooting Interpersonal Effectiveness, Part 1**
 
-[![Troubleshooting Interpersonal Effectiveness, Part 1](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p040.jpg){.img-fluid fig-alt="Troubleshooting Interpersonal Effectiveness, Part 1"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p040.jpg)
-
-[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p040.jpg)
-
 ::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p040" data-source-id="interpersonal-effectiveness-p040" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-1-of-2-clean.pdf"}
-**Clean Printable Copy**
+[![Troubleshooting Interpersonal Effectiveness, Part 1 clean preview](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-1-of-2-clean.jpg){.img-fluid fig-alt="Clean preview of Interpersonal Effectiveness Handout 9, part 1"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-1-of-2-clean.pdf)
 
-[![Clean Printable Copy: Troubleshooting Interpersonal Effectiveness, Part 1](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-1-of-2-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Troubleshooting Interpersonal Effectiveness, Part 1"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-1-of-2-clean.pdf)
-
-[Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-1-of-2-clean.pdf)
+[Open Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-1-of-2-clean.pdf){target="_blank" rel="noopener"}
 
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
@@ -156,66 +157,20 @@ This handout's educational content is integrated into the anchored skill section
 
 <!-- native-resource-content:interpersonal-effectiveness-p040:start -->
 
-#### Text Version
+#### Readable version
 
-Interpersonal Effectiveness Handout 9 (I. E. Worksheet 7) (p. 1 of 2)
-
-##### Troubleshooting
-
-##### When What You Are Doing Isn’t Working
-
-Do I have the skills I need? Check out the instructions. 1 Review what has already been tried.
-
-- Do I know how to be skillful in getting what I want?
-
-- Do I know how to say what I want to say?
-
-- Do I follow the skill instructions to the letter?
-
-**Do I know what I really want in this interaction?**
-
-##### Ask
-
-- Am I undecided about what I really want in this interaction?
-
-- Am I unsure of my priorities?
-
-- Am I having trouble balancing:
-
-- Asking for too much versus too little?
-
-- Saying no to everything versus saying yes to everything?
-
-- Is fear or shame getting in the way of knowing what I really want?
-
-**Are short-term goals getting in the way of long-term goals?**
-
-##### 3 Ask
-
-- Is “now, now, now” winning out over getting what I really want in the
-
-**future?**
-
-- Is emotion mind controlling what I say and do instead of Wise Mind?
-
-*continued on next page*
+Part 1 asks whether the needed skill is understood and practised, whether the goal and priorities are clear, and whether an immediate goal is undermining a more important longer-term goal. These areas are adapted in the overview above and worked through in the interactive tool.
 
 <!-- native-resource-content:interpersonal-effectiveness-p040:end -->
 ::::
 
-:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p041 data-source-id="interpersonal-effectiveness-p041"}
+:::: {.bs-practice-resource #resource-interpersonal-effectiveness-p041 data-source-id="interpersonal-effectiveness-p041" data-public-source="clean-exact-match"}
 **Troubleshooting Interpersonal Effectiveness, Part 2**
 
-[![Troubleshooting Interpersonal Effectiveness, Part 2](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p041.jpg){.img-fluid fig-alt="Troubleshooting Interpersonal Effectiveness, Part 2"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p041.jpg)
-
-[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p041.jpg)
-
 ::: {.bs-resource-match data-match-id="linehan-book:interpersonal-effectiveness-p041" data-source-id="interpersonal-effectiveness-p041" data-match-source="linehan-book" data-candidate-asset="/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-2-of-2-clean.pdf"}
-**Clean Printable Copy**
+[![Troubleshooting Interpersonal Effectiveness, Part 2 clean preview](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-2-of-2-clean.jpg){.img-fluid fig-alt="Clean preview of Interpersonal Effectiveness Handout 9, part 2"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-2-of-2-clean.pdf)
 
-[![Clean Printable Copy: Troubleshooting Interpersonal Effectiveness, Part 2](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-2-of-2-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Troubleshooting Interpersonal Effectiveness, Part 2"}](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-2-of-2-clean.pdf)
-
-[Open Clean Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-2-of-2-clean.pdf)
+[Open Printable Copy](/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-2-of-2-clean.pdf){target="_blank" rel="noopener"}
 
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
@@ -223,43 +178,9 @@ Do I have the skills I need? Check out the instructions. 1 Review what has alrea
 
 <!-- native-resource-content:interpersonal-effectiveness-p041:start -->
 
-#### Text Version
+#### Readable version
 
-interpersonal effectiveness Handout 9 (p. 2 of 2)
-
-**are my emotions getting in the way of using my skills?**
-
-##### 4 Ask
-
-- Do I get too upset to use my skills?
-
-- Are my emotions so HIGH that I am over my skills breakdown point?
-
-**are worries, assumptions, and myths getting in my way?**
-
-##### Ask
-
-- Are THOUGHTS about bad consequences blocking my action? “They won’t like me,” “She will think I am stupid.”
-
-- Are THOUGHTS about not deserving things getting in my way? “I am such a bad person I don’t deserve this.”
-
-- Am I calling myself NAMES that stop me from doing anything? “I won’t do it right,” “I’ll probably fall apart,” “I’m so stupid.”
-
-- Do I believe MYTHS about interpersonal effectiveness? “If I make a request, this will show that I am a weak person,” “Only wimps have values.”
-
-**is the environment more powerful than my skills?**
-
-##### Ask
-
-- Are the people who have what I want or need more powerful than I am?
-
-- Are other people more in control of the situation than I am?
-
-- Will others be threatened if I get what I want?
-
-- Do others have reasons for not liking me if I get what I want?
-
-##### other ideas
+Part 2 asks whether emotional intensity, worries or rigid beliefs, and real environmental or power limits are affecting what is possible. Skillful communication can help without guaranteeing compliance; safety, support, timing, strategy, and acceptance of another person's answer may all matter.
 
 <!-- native-resource-content:interpersonal-effectiveness-p041:end -->
 ::::
@@ -321,63 +242,9 @@ mind mind Both do what is needed in the moment (including reviewing the past or 
 
 <!-- native-resource-content:interpersonal-effectiveness-p042:start -->
 
-#### Text Version
+#### Readable version
 
-interpersonal effectiveness Worksheet 7 (I. E. Handout 9) (p. 1 of 2)
-
-##### Due Date: Name: Week Starting
-
-Fill out this sheet whenever you practice your interpersonal skills and whenever you have an opportunity to practice, even if you don’t (or almost don’t) do anything to practice. Write on the back of this sheet if you need more room. Do i have the skills i need? check out the instructions. Review what has already been tried.
-
-- Do I know how to be skillful in getting what I want?
-
-- Do I know how to say what I want to say?
-
-- Did I follow the skill instructions to the letter?
-
-##### not sure
-
-Wrote out what I wanted to say first. Reread the instructions. Got coaching from someone I trust. Practiced with a friend or in front of a mirror. Did it work the next time? Yes (Fabulous) No (Continue) Didn’t try again
-
-##### yes
-
-**Do i know what i really want in this interaction?**
-
-##### Ask
-
-- Am I undecided about what I really want in this interaction?
-
-- Am I ambivalent about my priorities?
-
-- Am I having trouble balancing:
-
-- Asking for too much versus not asking for anything?
-
-- Saying no to everything versus giving in to everything?
-
-- Is fear or shame getting in the way of knowing what I really want?
-
-##### not sure
-
-Did pros and cons to compare different objectives. Used emotion regulation skills to reduce fear and shame. Did this help? Yes (Fabulous) No (Continue) Didn’t try again
-
-##### yes
-
-**are my short-term goals getting in the way of my long-term goals?**
-
-##### Ask
-
-- Is “now, now, now” winning out over getting what I really want?
-
-- Is emotion mind controlling what I say and do instead of Wise Mind?
-
-##### yes
-
-Did a pros and cons comparing short-term to long-term goals. Waited until another time when I’m not in emotion mind. Did this help? Yes (Fabulous) No (Continue) Didn’t try again
-
-##### no
-
-*continued on next page*
+Use Part 1 after an interpersonal attempt to review three areas: whether you had and practised the relevant skills, whether you were clear about the goal and priorities, and whether immediate relief or results were competing with a more important longer-term aim. Note what you tried, whether it helped, and what adjustment you want to test next.
 
 <!-- native-resource-content:interpersonal-effectiveness-p042:end -->
 ::::
@@ -402,59 +269,9 @@ Fill out this sheet whenever you practice your interpersonal skills and whenever
 
 <!-- native-resource-content:interpersonal-effectiveness-p043:start -->
 
-#### Text Version
+#### Readable version
 
-interpersonal effectiveness Worksheet 7 (p. 2 of 2)
-
-**are my emotions getting in the way of using my skills?**
-
-##### Ask
-
-- Do I get too upset to use my skills?
-
-- Are my emotions so high that I am over my skills breakdown point?
-
-##### yes
-
-Tried TIP skills. Used self- soothing crisis survival skills before the interaction to get myself calm. Did mindfulness of current emotions (Emotion Regulation Handout 22). Refocused attention completely on the present objective. Did this help? Yes (Fabulous) No (Continue) Didn’t try again
-
-##### no
-
-**are worries, assumptions, and myths getting in my way?**
-
-##### Ask
-
-- Are thoughts about bad consequences blocking my action? “They won’t like me,” “She will think I am stupid.”
-
-- Are thoughts about whether I deserve to get what I want in my way? “I am such a bad person I don’t deserve this.”
-
-- Am I calling myself names that stop me from doing anything? “I won’t do it right,” “I’ll probably fall apart,” “I’m so stupid.”
-
-- Am I believing myths about interpersonal effectiveness? “If I make a request, this will show that I am a very weak person,” “Only wimps have values.”
-
-##### yes
-
-Challenged myths. Checked the facts. Did opposite action all the way. Did this help? Yes (Fabulous) No (Continue) Didn’t try again
-
-##### no
-
-**is the environment more powerful than my skills?**
-
-##### Ask
-
-- Are the people who have what I want or need more powerful than I am?
-
-- Are the people commanding me powerful and in control?
-
-- Will others be threatened if I get what I want?
-
-- Do others have reasons for not liking me if I get what I want?
-
-##### yes
-
-Tried problem solving. Found a powerful ally. Practiced radical acceptance. Did this help? Yes (Fabulous) No (Continue) Didn’t try again
-
-##### no
+Part 2 reviews whether emotional intensity reduced your available choices, whether predictions or rigid beliefs interfered, and whether real environmental or power limits affected the outcome. Possible adjustments include emotion-regulation or mindfulness skills, checking assumptions against facts, problem solving, seeking an ally or other support, protecting safety, and accepting limits that communication alone cannot change.
 
 <!-- native-resource-content:interpersonal-effectiveness-p043:end -->
 ::::

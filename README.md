@@ -3530,3 +3530,46 @@ Focused regressions are in `tests/test_mindfulness_emotion_pass.py`,
 `tests/test_emotion_explorer.js`, and the existing navigation suites. Asset
 query versions in `site/includes/bs-scripts.html` must be bumped when the Learn
 or Emotion Explorer runtime changes.
+
+## 91. Pros & Cons and Interpersonal Troubleshooting (2026-09-01)
+
+`/tool-finder/pros-and-cons/` is the Distress Tolerance Pros & Cons worksheet.
+It preserves four independent, uncapped editable lists: pros and cons of acting
+on the urge, and pros and cons of resisting the urge. Every item has an optional
+Short term / today, Longer term / beyond today, Both, or Not sure tag. The
+derived time-frame review and low-distraction `Review my list` view do not add
+weights, calculate a winner, or recommend a decision. Urge/context, all ordered
+items and tags, what stands out, intended choice/next step, and follow-through
+support use the existing schema-v1 `TherapySkillProgress` browser/Markdown/JSON/
+DOCX/print authority.
+
+The public Pros & Cons Learn lesson now uses the exact clean Handout 5 and
+Worksheet 3 copies as the public source representation for source IDs
+`distress-tolerance-p030` and `distress-tolerance-p032`. Their lower-resolution
+original JPGs remain in the repository and provenance inventories but are not
+rendered in normal public Learn presentation. Visual review confirmed
+`distress-tolerance-p033` is an inferior duplicate containing two blank copies
+of the same four-way Handout 5 grid and no unique teaching or prompts; it remains
+in internal source/review records and is intentionally omitted from normal
+public presentation. This is a focused exception, not a global rule removing
+original source images.
+
+`/tool-finder/interpersonal-troubleshooting/` uses both exact clean pages of
+Interpersonal Effectiveness Handout 9 as authority. Its retained editable linear
+workflow covers six areas: skill knowledge/practice; clarity about the goal;
+short-term versus longer-term goals; emotional intensity; worries, assumptions,
+or myths; and environment/power. Each area accepts Yes, No, or Not sure plus an
+optional note. Changing an earlier response never deletes later responses. The
+result lists Yes areas first and Not sure areas second, then offers source-backed
+adjustments and context-sensitive links without a score or diagnostic result.
+The environment/power area explicitly preserves the possibility that skillful
+communication may not overcome power, safety, coercion, or another person's
+refusal. Opening context, all six responses/notes, the next adjustment, and its
+success indicator use the same shared progress and export system.
+
+The Handout 9 Part 1 and Part 2 Learn records (`interpersonal-effectiveness-p040`
+and `interpersonal-effectiveness-p041`) now present the exact clean pages
+directly instead of making readers scroll through blurry duplicate originals.
+Their provenance and source IDs remain intact. The associated Worksheet 7 text
+versions were also replaced with concise readable adaptations so corrupted OCR
+is not exposed in the normal lesson.

@@ -35,6 +35,8 @@
     "sleep-hygiene": "/tool-finder/sleep-hygiene/",
     "stages-of-change": "/tool-finder/stages-of-change/",
     "urge-surfing": "/tool-finder/urge-surfing/",
+    "pros-and-cons": "/tool-finder/pros-and-cons/",
+    "interpersonal-troubleshooting": "/tool-finder/interpersonal-troubleshooting/",
   });
 
   function canonicalProgressRoute(route) {

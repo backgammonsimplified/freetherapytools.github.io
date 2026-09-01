@@ -16,4 +16,6 @@ This guided tool follows **Interpersonal Effectiveness Worksheet 6 and Handout 8
 Loading The DIME Game…
 :::
 
+[Not working as expected? Troubleshoot the interaction.](/tool-finder/interpersonal-troubleshooting/)
+
 [Back to all Tool Finder tools](/tool-finder/)

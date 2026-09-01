@@ -20,6 +20,8 @@ website:
               href: tool-finder/thermometer/index.qmd
         - section: "Distress Tolerance"
           contents:
+            - text: "Pros & Cons"
+              href: tool-finder/pros-and-cons/index.qmd
             - text: "STOP"
               href: tool-finder/stop/index.qmd
         - section: "Mindfulness"
@@ -62,6 +64,8 @@ website:
               href: tool-finder/dear-man/index.qmd
             - text: "The DIME Game"
               href: tool-finder/dime-game/index.qmd
+            - text: "Troubleshooting Interpersonal Effectiveness"
+              href: tool-finder/interpersonal-troubleshooting/index.qmd
         - section: "Wellness (Actions & Patterns)"
           contents:
             - text: "Behaviour Chain Builder"

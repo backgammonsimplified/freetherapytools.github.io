@@ -1,0 +1,18 @@
+---
+title: "Pros & Cons"
+subtitle: "Compare acting on an urge with resisting it, including what may happen now and later."
+description: "Compare acting on an urge with resisting it, including what may happen now and later."
+sidebar: tool-finder
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+This worksheet preserves the source's four-way comparison without calculating a winner or telling you what to choose. [Learn about Pros & Cons](/learn/distress-tolerance/pros-and-cons.html).
+
+::: {#pros-and-cons-app .skill-app data-quick-app="pros-and-cons"}
+Loading Pros & Cons...
+:::
+
+[Back to all Tool Finder tools](/tool-finder/)

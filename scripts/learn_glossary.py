@@ -131,6 +131,7 @@ TOOL_FINDER_GROUPS = {
         ("Skill Thermometer", "tool-finder/thermometer/index.qmd"),
     ),
     "Distress Tolerance": (
+        ("Pros & Cons", "tool-finder/pros-and-cons/index.qmd"),
         ("STOP", "tool-finder/stop/index.qmd"),
     ),
     "Mindfulness": (
@@ -156,6 +157,7 @@ TOOL_FINDER_GROUPS = {
         ("Ask or Say No Planner", "tool-finder/ask-or-say-no/index.qmd"),
         ("DEAR MAN Builder", "tool-finder/dear-man/index.qmd"),
         ("The DIME Game", "tool-finder/dime-game/index.qmd"),
+        ("Troubleshooting Interpersonal Effectiveness", "tool-finder/interpersonal-troubleshooting/index.qmd"),
     ),
     "Wellness (Actions & Patterns)": (
         ("Behaviour Chain Builder", "tool-finder/behaviour-chain/index.qmd"),

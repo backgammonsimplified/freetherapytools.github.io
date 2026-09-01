@@ -44,8 +44,10 @@ legacy-dispositions:
     - {source: "/skill-finder/goal-builder/", target: "/tool-finder/goal-builder/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
     - {source: "/skill-finder/gratitude-journal/", target: "/tool-finder/gratitude-journal/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
     - {source: "/skill-finder/grounding/", target: "/tool-finder/grounding/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/interpersonal-troubleshooting/", target: "/tool-finder/interpersonal-troubleshooting/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
     - {source: "/skill-finder/missing-links/", target: "/tool-finder/missing-links/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
     - {source: "/skill-finder/pleasant-event/", target: "/tool-finder/pleasant-event/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
+    - {source: "/skill-finder/pros-and-cons/", target: "/tool-finder/pros-and-cons/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
     - {source: "/skill-finder/positive-self-talk/", target: "/tool-finder/positive-self-talk/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
     - {source: "/skill-finder/thermometer/", target: "/tool-finder/thermometer/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
     - {source: "/skill-finder/thinking-traps/", target: "/tool-finder/thinking-traps/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}

@@ -11,3 +11,5 @@ This interactive tool focuses only on DEAR MAN. It organizes only the words you 
 ::: {#dear-man-app .skill-app data-practice-app="dear-man"}
 Loading DEAR MAN Builder…
 :::
+
+[Not working as expected? Troubleshoot the interaction.](/tool-finder/interpersonal-troubleshooting/)

@@ -592,6 +592,216 @@
     register(root, { toolId: "urge-surfing", toolTitle: "Urge Surfing", route: Progress.TOOL_ROUTES["urge-surfing"], getState: () => ({...state, timer: {...state.timer, running: false}}), setState: (next) => { stopTimer(); state = { ...clone(initialState), ...clone(next), initialMinutes: typeof next.initialMinutes === "string" ? next.initialMinutes : "0", afterMinutes: typeof next.afterMinutes === "string" ? next.afterMinutes : "", checkpoints: Array.isArray(next.checkpoints) ? clone(next.checkpoints) : [] }; checkpointCounter = state.checkpoints.reduce((largest, point) => Math.max(largest, Number(String(point.id).match(/\d+$/)?.[0] || 0)), 0); state.timer.running = false; render(); }, validateState: (next) => isObject(next) && fields.every(([key]) => typeof next[key] === "string") && [next.intensity,next.afterIntensity].every(validUrgeRating) && (next.initialMinutes === undefined || validUrgeMinutes(next.initialMinutes)) && (next.afterMinutes === undefined || validUrgeMinutes(next.afterMinutes)) && Array.isArray(next.checkpoints) && next.checkpoints.every(validUrgeCheckpoint) && isObject(next.timer) && [120,180,240,300].includes(next.timer.duration) && Number.isInteger(next.timer.remaining) && next.timer.remaining >= 0 && next.timer.remaining <= next.timer.duration, getReadableSummary: (next) => Progress.nonEmptySections("Urge Surfing", [["Initial intensity",next.intensity && `${next.intensity}/100 at ${next.initialMinutes || 0} minutes`], ["Intensity checkpoints", urgeGraphPoints(next).map((point) => `${point.label}: ${point.intensity}/100 at ${point.minutes} minutes`)], ...fields.map(([key,label]) => [label,next[key]]), ["Later intensity",next.afterIntensity && `${next.afterIntensity}/100${next.afterMinutes ? ` at ${next.afterMinutes} minutes` : ""}`]]) });
   }
 
+  const PROS_CONS_SECTIONS = Object.freeze([
+    { key: "actingPros", title: "Pros of acting on the urge", prompt: "What might feel helpful, relieving, rewarding, or easier if you act on the urge?", review: "Acting on the urge — pro" },
+    { key: "actingCons", title: "Cons of acting on the urge", prompt: "What problems, costs, or consequences could come from acting on the urge?", review: "Acting on the urge — con" },
+    { key: "resistingPros", title: "Pros of resisting the urge", prompt: "What could be helpful about not acting on the urge and tolerating the distress?", review: "Resisting the urge — pro" },
+    { key: "resistingCons", title: "Cons of resisting the urge", prompt: "What might feel difficult, uncomfortable, or costly about resisting the urge?", review: "Resisting the urge — con" },
+  ]);
+  const PROS_CONS_TIME_FRAMES = Object.freeze([
+    ["", "Choose a time frame (optional)"],
+    ["short", "Short term / today"],
+    ["long", "Longer term / beyond today"],
+    ["both", "Both"],
+    ["unsure", "Not sure"],
+  ]);
+  const prosConsTimeLabel = (value) => PROS_CONS_TIME_FRAMES.find(([key]) => key === value)?.[1] || "";
+  function initialProsConsState() {
+    return { urge: "", context: "", lists: Object.fromEntries(PROS_CONS_SECTIONS.map(({ key }) => [key, []])), standsOut: "", choice: "", support: "" };
+  }
+  function normalizeProsConsState(next) {
+    const source = isObject(next) ? next : {};
+    const current = initialProsConsState();
+    ["urge", "context", "standsOut", "choice", "support"].forEach((key) => { current[key] = typeof source[key] === "string" ? source[key] : ""; });
+    if (isObject(source.lists)) PROS_CONS_SECTIONS.forEach(({ key }) => {
+      const seen = new Set();
+      current.lists[key] = Array.isArray(source.lists[key]) ? source.lists[key].slice(0, 500).map((item, index) => {
+        const row = isObject(item) ? item : { text: item };
+        let id = typeof row.id === "string" && row.id ? row.id : `${key}-${index + 1}`;
+        while (seen.has(id)) id = `${id}-${index + 1}`;
+        seen.add(id);
+        return { id, text: typeof row.text === "string" ? row.text : "", timeFrame: PROS_CONS_TIME_FRAMES.some(([value]) => value === row.timeFrame) ? row.timeFrame : "" };
+      }) : [];
+    });
+    return current;
+  }
+  function validateProsConsState(next) {
+    if (!isObject(next) || !isObject(next.lists) || !["urge", "context", "standsOut", "choice", "support"].every((key) => typeof next[key] === "string")) return false;
+    return PROS_CONS_SECTIONS.every(({ key }) => Array.isArray(next.lists[key]) && next.lists[key].length <= 500 && new Set(next.lists[key].map((item) => item.id)).size === next.lists[key].length && next.lists[key].every((item) => isObject(item) && typeof item.id === "string" && typeof item.text === "string" && PROS_CONS_TIME_FRAMES.some(([value]) => value === item.timeFrame)));
+  }
+  function reorderProsConsItem(next, listKey, index, offset) {
+    const current = normalizeProsConsState(next);
+    const list = current.lists[listKey];
+    const target = index + offset;
+    if (!list || index < 0 || index >= list.length || target < 0 || target >= list.length) return current;
+    [list[index], list[target]] = [list[target], list[index]];
+    return current;
+  }
+  function prosConsTimeGroups(next) {
+    const current = normalizeProsConsState(next);
+    const groups = { short: [], long: [], other: [] };
+    PROS_CONS_SECTIONS.forEach((section) => current.lists[section.key].forEach((item) => {
+      if (!item.text.trim()) return;
+      const value = `${section.review}: ${item.text.trim()}`;
+      if (item.timeFrame === "short") groups.short.push(value);
+      else if (item.timeFrame === "long") groups.long.push(value);
+      else groups.other.push(`${value}${item.timeFrame ? ` — ${prosConsTimeLabel(item.timeFrame)}` : " — Time frame not selected"}`);
+    }));
+    return groups;
+  }
+  function prosConsSummary(next) {
+    const current = normalizeProsConsState(next);
+    const lines = ["# Pros & Cons"];
+    [["Urge or problem behavior", current.urge], ["Context", current.context]].forEach(([heading, value]) => { lines.push("", `## ${heading}`, "", value.trim() || "Not entered."); });
+    PROS_CONS_SECTIONS.forEach((section) => {
+      lines.push("", `## ${section.title}`, "");
+      const entries = current.lists[section.key].filter((item) => item.text.trim());
+      if (!entries.length) lines.push("No entries.");
+      else entries.forEach((item) => lines.push(`- ${item.text.trim()}${item.timeFrame ? ` — ${prosConsTimeLabel(item.timeFrame)}` : ""}`));
+    });
+    lines.push("", "## Looking beyond the immediate moment", "", `What stands out: ${current.standsOut.trim() || "Not entered."}`, "", `Choice / next step: ${current.choice.trim() || "Not entered."}`, "", `Support: ${current.support.trim() || "Not entered."}`, "", "## Sources", "", "- Learn: /learn/distress-tolerance/pros-and-cons.html", "- Printable worksheet: /resources/clean/distress-tolerance/distress-tolerance-worksheet-3-pros-and-cons-of-acting-on-crisis-urges-clean.pdf", "- Reference handout: /resources/clean/distress-tolerance/distress-tolerance-handout-5-pros-and-cons-clean.pdf");
+    return lines.join("\n");
+  }
+  function initProsAndCons(root) {
+    let state = initialProsConsState();
+    let itemCounter = 0;
+    let reviewMode = false;
+    const nextItemId = (key) => { itemCounter += 1; return `${key}-${Date.now().toString(36)}-${itemCounter}`; };
+    const itemMarkup = (section, item, index, length) => `<fieldset class="pros-cons-item" data-pros-item="${escapeHtml(item.id)}"><legend>Item ${index + 1}</legend><label for="pros-${escapeHtml(item.id)}">Point</label><textarea id="pros-${escapeHtml(item.id)}" data-pros-text>${escapeHtml(item.text)}</textarea><label for="pros-time-${escapeHtml(item.id)}">Time frame</label><select id="pros-time-${escapeHtml(item.id)}" data-pros-time>${PROS_CONS_TIME_FRAMES.map(([value, label]) => `<option value="${value}" ${item.timeFrame === value ? "selected" : ""}>${escapeHtml(label)}</option>`).join("")}</select><div class="skill-app-actions pros-cons-item-actions"><button type="button" class="secondary" data-pros-edit>Edit</button><button type="button" class="secondary" data-pros-up ${index ? "" : "disabled"}>Move up</button><button type="button" class="secondary" data-pros-down ${index < length - 1 ? "" : "disabled"}>Move down</button><button type="button" class="secondary" data-pros-remove>Remove</button></div></fieldset>`;
+    function reviewMarkup() {
+      const groups = prosConsTimeGroups(state);
+      const list = (items) => items.length ? `<ul>${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>` : '<p class="skill-app-field-help">No points in this group.</p>';
+      const entries = (key) => list(state.lists[key].filter((item) => item.text.trim()).map((item) => `${item.text.trim()}${item.timeFrame ? ` — ${prosConsTimeLabel(item.timeFrame)}` : ""}`));
+      return `<section class="pros-cons-review" aria-labelledby="pros-review-heading"><p class="skill-tree-kicker">Review my list</p><h3 id="pros-review-heading">Pros & Cons</h3><p><strong>Urge:</strong> ${escapeHtml(state.urge || "Not entered")}</p><div class="pros-cons-review-options"><section><h4>ACTING ON THE URGE</h4><h5>Pros</h5>${entries("actingPros")}<h5>Cons</h5>${entries("actingCons")}</section><section><h4>RESISTING THE URGE</h4><h5>Pros</h5>${entries("resistingPros")}<h5>Cons</h5>${entries("resistingCons")}</section></div><section><h4>Short-term points</h4>${list(groups.short)}</section><section><h4>Longer-term points</h4>${list(groups.long)}</section><section><h4>Both / not sure</h4>${list(groups.other)}</section><dl><dt>What stands out</dt><dd>${escapeHtml(state.standsOut || "Not entered")}</dd><dt>My intended next step</dt><dd>${escapeHtml(state.choice || "Not entered")}</dd></dl><button type="button" class="secondary" data-pros-back-to-list>Back to worksheet</button></section>`;
+    }
+    function render(focusId = "") {
+      if (reviewMode) {
+        root.innerHTML = pageShell("Pros & Cons", "A low-distraction review of acting on the urge and resisting it.", reviewMarkup(), learnLinks([["Learn Pros & Cons", "/learn/distress-tolerance/pros-and-cons.html"], ["Printable worksheet", "/resources/clean/distress-tolerance/distress-tolerance-worksheet-3-pros-and-cons-of-acting-on-crisis-urges-clean.pdf", true], ["Reference handout", "/resources/clean/distress-tolerance/distress-tolerance-handout-5-pros-and-cons-clean.pdf", true]]));
+        root.querySelector("[data-pros-back-to-list]").addEventListener("click", () => { reviewMode = false; render(); });
+        return;
+      }
+      const grid = PROS_CONS_SECTIONS.map((section) => `<section class="pros-cons-quadrant pros-cons-quadrant--${section.key}" data-pros-list="${section.key}"><h3>${escapeHtml(section.title)}</h3><p>${escapeHtml(section.prompt)}</p><div>${state.lists[section.key].length ? state.lists[section.key].map((item, index) => itemMarkup(section, item, index, state.lists[section.key].length)).join("") : '<p class="pros-cons-empty">No items yet.</p>'}</div><button type="button" class="secondary" data-pros-add>Add another</button></section>`).join("");
+      const anyEntries = PROS_CONS_SECTIONS.some(({ key }) => state.lists[key].some((item) => item.text.trim()));
+      const groups = prosConsTimeGroups(state);
+      const derived = anyEntries ? `<section class="pros-cons-time-review" aria-labelledby="pros-time-review-heading"><h3 id="pros-time-review-heading">Looking beyond the immediate moment</h3><div><section><h4>Short term / today</h4><ul>${groups.short.map((item) => `<li>${escapeHtml(item)}</li>`).join("") || "<li>No points tagged for this group.</li>"}</ul></section><section><h4>Longer term / beyond today</h4><ul>${groups.long.map((item) => `<li>${escapeHtml(item)}</li>`).join("") || "<li>No points tagged for this group.</li>"}</ul></section><section><h4>Both / not sure</h4><ul>${groups.other.map((item) => `<li>${escapeHtml(item)}</li>`).join("") || "<li>No points tagged for this group.</li>"}</ul></section></div></section>` : "";
+      root.innerHTML = pageShell("Pros & Cons", "Compare acting on an urge with resisting it, including what may happen now and later.", `<label for="pros-urge"><strong>What urge or problem behavior are you considering?</strong></label><p class="skill-app-field-help">Describe the urge or behavior you want to think through.</p><textarea id="pros-urge" class="skill-app-textarea-large" data-pros-field="urge">${escapeHtml(state.urge)}</textarea><label for="pros-context">What is happening right now? <span class="skill-app-optional">Optional</span></label><p class="skill-app-field-help">Add only as much context as is useful.</p><textarea id="pros-context" data-pros-field="context">${escapeHtml(state.context)}</textarea><div class="pros-cons-grid">${grid}</div>${derived}<section class="pros-cons-reflection"><label for="pros-stands"><strong>Looking at both today and the longer term, what stands out to you?</strong></label><textarea id="pros-stands" data-pros-field="standsOut">${escapeHtml(state.standsOut)}</textarea><label for="pros-choice"><strong>What choice feels most consistent with what matters to you right now?</strong></label><textarea id="pros-choice" data-pros-field="choice">${escapeHtml(state.choice)}</textarea><label for="pros-support">What could help you follow through? <span class="skill-app-optional">Optional</span></label><textarea id="pros-support" data-pros-field="support">${escapeHtml(state.support)}</textarea></section><div class="skill-app-actions"><button type="button" data-pros-review ${anyEntries ? "" : "disabled"}>Review my list</button></div><details class="quick-tool-related"><summary>Related skills</summary><p><a href="${escapeHtml(Site.path("/tool-finder/stop/"))}">STOP</a> · <a href="${escapeHtml(Site.path("/learn/mindfulness/mindfulness-foundations.html#wise-mind"))}">Wise Mind</a> · <a href="${escapeHtml(Site.path("/tool-finder/urge-surfing/"))}">Urge Surfing</a> · <a href="${escapeHtml(Site.path("/learn/distress-tolerance/radical-acceptance.html"))}">Radical Acceptance</a></p></details><p class="skill-app-note">If an urge involves immediate danger to you or another person, prioritize immediate safety and appropriate real-world support rather than relying on this exercise alone.</p>`, learnLinks([["Learn Pros & Cons", "/learn/distress-tolerance/pros-and-cons.html"], ["Printable worksheet", "/resources/clean/distress-tolerance/distress-tolerance-worksheet-3-pros-and-cons-of-acting-on-crisis-urges-clean.pdf", true], ["Reference handout", "/resources/clean/distress-tolerance/distress-tolerance-handout-5-pros-and-cons-clean.pdf", true]]));
+      root.querySelectorAll("[data-pros-field]").forEach((field) => field.addEventListener("input", () => { state[field.dataset.prosField] = field.value; }));
+      root.querySelectorAll("[data-pros-list]").forEach((sectionElement) => {
+        const key = sectionElement.dataset.prosList;
+        sectionElement.querySelector("[data-pros-add]").addEventListener("click", () => { const id = nextItemId(key); state.lists[key].push({ id, text: "", timeFrame: "" }); render(id); });
+        sectionElement.querySelectorAll("[data-pros-item]").forEach((row) => {
+          const index = state.lists[key].findIndex((item) => item.id === row.dataset.prosItem);
+          const item = state.lists[key][index];
+          row.querySelector("[data-pros-text]").addEventListener("input", (event) => { item.text = event.target.value; });
+          row.querySelector("[data-pros-text]").addEventListener("change", () => render(item.id));
+          row.querySelector("[data-pros-time]").addEventListener("change", (event) => { item.timeFrame = event.target.value; render(item.id); });
+          row.querySelector("[data-pros-edit]").addEventListener("click", () => row.querySelector("[data-pros-text]").focus());
+          row.querySelector("[data-pros-up]").addEventListener("click", () => { state = reorderProsConsItem(state, key, index, -1); render(item.id); });
+          row.querySelector("[data-pros-down]").addEventListener("click", () => { state = reorderProsConsItem(state, key, index, 1); render(item.id); });
+          row.querySelector("[data-pros-remove]").addEventListener("click", () => { state.lists[key].splice(index, 1); render(); });
+        });
+      });
+      root.querySelector("[data-pros-review]")?.addEventListener("click", () => { reviewMode = true; render(); });
+      if (focusId) global.requestAnimationFrame(() => root.querySelector(`[data-pros-item="${global.CSS?.escape ? global.CSS.escape(focusId) : focusId}"] textarea`)?.focus());
+    }
+    render();
+    register(root, { toolId: "pros-and-cons", toolTitle: "Pros & Cons", route: Progress.TOOL_ROUTES["pros-and-cons"], getState: () => clone(state), setState: (next) => { state = normalizeProsConsState(next); itemCounter = PROS_CONS_SECTIONS.reduce((sum, section) => sum + state.lists[section.key].length, 0); reviewMode = false; render(); }, validateState: validateProsConsState, getReadableSummary: prosConsSummary });
+  }
+
+  const TROUBLESHOOTING_AREAS = Object.freeze([
+    { id: "skills", heading: "Do I have the skills I need?", exportHeading: "Skills", questions: ["Do I know how to ask skillfully for what I want?", "Do I know how to say what I need to say?", "Am I using the relevant skill steps, rather than only part of them?", "Have I practised the wording and nonverbal delivery enough to use the skill when it matters?"], suggestion: "Review or rehearse the relevant skill, including the wording and nonverbal delivery.", links: [["DEAR MAN", "/tool-finder/dear-man/"], ["Ask or Say No", "/tool-finder/ask-or-say-no/"], ["DIME Game", "/tool-finder/dime-game/"]] },
+    { id: "clarity", heading: "Am I clear about what I want in this interaction?", exportHeading: "Clarity about what I want", questions: ["Am I undecided about what I actually want?", "Am I unsure which priority matters most?", "Am I asking for more or less than I really intend?", "Am I moving toward saying no to everything or yes to everything?", "Are fear or shame making it harder to identify what I want?"], suggestion: "Clarify the goal and priorities before choosing intensity or wording.", links: [["Clarifying Priorities", "/learn/interpersonal-effectiveness/clarifying-priorities.html"], ["DIME Game", "/tool-finder/dime-game/"], ["Ask or Say No", "/tool-finder/ask-or-say-no/"]] },
+    { id: "timeGoals", heading: "Are short-term goals getting in the way of longer-term goals?", exportHeading: "Short-term vs longer-term goals", questions: ["Am I focused mainly on getting relief or a result right now?", "Could what I say or do now undermine something more important later?", "Is Emotion Mind driving the interaction when I would rather respond from Wise Mind?"], suggestion: "Pause and compare the immediate objective with longer-term relationship, self-respect, safety, and other goals.", links: [["Wise Mind", "/learn/mindfulness/mindfulness-foundations.html#wise-mind"], ["Clarifying Priorities", "/learn/interpersonal-effectiveness/clarifying-priorities.html"], ["STOP", "/tool-finder/stop/"]] },
+    { id: "emotions", heading: "Are my emotions making it hard to use the skill?", exportHeading: "Emotional intensity", questions: ["Am I too upset or activated to use the skill the way I intended?", "Does my emotional intensity make it hard to think clearly enough to use the skill?"], suggestion: "Regulate enough to regain choice, then return to the interpersonal problem. You do not have to become completely calm before communicating.", links: [["TIPP", "/learn/distress-tolerance/tipp.html"], ["STOP", "/tool-finder/stop/"], ["Grounding", "/tool-finder/grounding/"], ["Check the Facts", "/learn/emotion-regulation/check-the-facts.html"], ["Mindfulness of Current Emotions", "/learn/mindfulness/mindfulness-of-emotions.html"]] },
+    { id: "beliefs", heading: "Are worries, assumptions, or beliefs getting in the way?", exportHeading: "Worries, assumptions, or myths", questions: ["Am I predicting bad consequences such as rejection or disapproval?", "Am I assuming I do not deserve to ask, refuse, or set the boundary?", "Am I using harsh labels about myself that make it harder to act?", "Am I relying on rigid beliefs about what asking, saying no, or having values supposedly means?"], suggestion: "Separate predictions and assumptions from facts, then choose wording that supports self-respect.", links: [["Check the Facts", "/learn/emotion-regulation/check-the-facts.html"], ["Thinking Traps", "/tool-finder/thinking-traps/"], ["Thought Record", "/tool-finder/thought-record/"], ["FAST", "/learn/interpersonal-effectiveness/fast.html"]] },
+    { id: "environment", heading: "Is the environment more powerful than the skill right now?", exportHeading: "Environment / power", questions: ["Does someone else have substantially more control over the situation?", "Are there real power differences affecting what is possible?", "Could the other person feel threatened by the change I am asking for?", "Does the other person have strong reasons to resist what I want?", "Is this a situation where even skillful communication may not produce the outcome I want?"], suggestion: "Recognize environmental limits. Consider changing timing, strategy, or the goal; seeking support; protecting safety; or accepting that the other person may still say no.", links: [["Boundaries", "/learn/interpersonal-effectiveness/boundaries.html"], ["Clarifying Priorities", "/learn/interpersonal-effectiveness/clarifying-priorities.html"]] },
+  ]);
+  const TROUBLESHOOTING_ANSWERS = Object.freeze(["", "yes", "no", "unsure"]);
+  function initialTroubleshootingState() {
+    return { goal: "", tried: "", happened: "", areas: Object.fromEntries(TROUBLESHOOTING_AREAS.map(({ id }) => [id, { answer: "", note: "" }])), nextAdjustment: "", successMeasure: "" };
+  }
+  function normalizeTroubleshootingState(next) {
+    const source = isObject(next) ? next : {};
+    const current = initialTroubleshootingState();
+    ["goal", "tried", "happened", "nextAdjustment", "successMeasure"].forEach((key) => { current[key] = typeof source[key] === "string" ? source[key] : ""; });
+    if (isObject(source.areas)) TROUBLESHOOTING_AREAS.forEach(({ id }) => {
+      const area = isObject(source.areas[id]) ? source.areas[id] : {};
+      current.areas[id] = { answer: TROUBLESHOOTING_ANSWERS.includes(area.answer) ? area.answer : "", note: typeof area.note === "string" ? area.note : "" };
+    });
+    return current;
+  }
+  function validateTroubleshootingState(next) {
+    return isObject(next) && ["goal", "tried", "happened", "nextAdjustment", "successMeasure"].every((key) => typeof next[key] === "string") && isObject(next.areas) && TROUBLESHOOTING_AREAS.every(({ id }) => isObject(next.areas[id]) && TROUBLESHOOTING_ANSWERS.includes(next.areas[id].answer) && typeof next.areas[id].note === "string");
+  }
+  function troubleshootingResultAreas(next) {
+    const current = normalizeTroubleshootingState(next);
+    return { yes: TROUBLESHOOTING_AREAS.filter(({ id }) => current.areas[id].answer === "yes"), unsure: TROUBLESHOOTING_AREAS.filter(({ id }) => current.areas[id].answer === "unsure") };
+  }
+  function troubleshootingSummary(next) {
+    const current = normalizeTroubleshootingState(next);
+    const lines = ["# Troubleshooting Interpersonal Effectiveness", "", "## What I am trying to do", "", current.goal.trim() || "Not entered.", "", "## What I already tried", "", current.tried.trim() || "Not entered.", "", "## What happened", "", current.happened.trim() || "Not entered."];
+    TROUBLESHOOTING_AREAS.forEach((area) => { lines.push("", `## ${area.exportHeading}`, "", `Answer: ${current.areas[area.id].answer === "unsure" ? "Not sure" : current.areas[area.id].answer ? current.areas[area.id].answer[0].toUpperCase() + current.areas[area.id].answer.slice(1) : "Not answered"}`, "", `Notes: ${current.areas[area.id].note.trim() || "None."}`); });
+    const results = troubleshootingResultAreas(current);
+    lines.push("", "## What may be getting in the way", "", "Worth looking at:", ...(results.yes.length ? results.yes.map((area) => `- ${area.heading}`) : ["- None marked Yes."]), "", "Not sure:", ...(results.unsure.length ? results.unsure.map((area) => `- ${area.heading}`) : ["- None."]), "", "## Next adjustment", "", current.nextAdjustment.trim() || "Not entered.", "", "## How I'll know whether it helped", "", current.successMeasure.trim() || "Not entered.", "", "## Sources", "", "- Learn: /learn/interpersonal-effectiveness/saying-no.html#interpersonal-troubleshooting", "- Handout 9, part 1: /resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-1-of-2-clean.pdf", "- Handout 9, part 2: /resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-2-of-2-clean.pdf");
+    return lines.join("\n");
+  }
+  function initInterpersonalTroubleshooting(root) {
+    let state = initialTroubleshootingState();
+    let activeIndex = 0;
+    const answerLabel = (answer) => answer === "unsure" ? "Not sure" : answer ? answer[0].toUpperCase() + answer.slice(1) : "Not answered";
+    const answerButtons = (area, compact = false) => `<div class="skill-guided-choices troubleshooting-choices" role="group" aria-label="${compact ? "Change" : "Choose"} answer for ${escapeHtml(area.heading)}">${[["yes", "Yes"], ["no", "No"], ["unsure", "Not sure"]].map(([value, label]) => `<button type="button" class="skill-guided-choice skill-guided-choice--${value} ${state.areas[area.id].answer === value ? "is-selected" : ""}" data-trouble-answer="${value}" aria-pressed="${state.areas[area.id].answer === value}">${label}</button>`).join("")}</div>`;
+    const contextualLinks = (areas) => {
+      const seen = new Set();
+      const links = [];
+      areas.forEach((area) => area.links.forEach(([label, href]) => { if (!seen.has(href)) { seen.add(href); links.push([label, href]); } }));
+      if (areas.some((area) => area.id === "skills")) {
+        const goal = state.goal.toLocaleLowerCase();
+        if (goal.includes("boundary")) links.push(["Boundaries", "/learn/interpersonal-effectiveness/boundaries.html"]);
+        if (goal.includes("relationship") || goal.includes("conversation")) links.push(["GIVE", "/learn/interpersonal-effectiveness/give.html"]);
+        if (goal.includes("self-respect") || goal.includes("value")) links.push(["FAST", "/learn/interpersonal-effectiveness/fast.html"]);
+      }
+      return links.map(([label, href]) => `<a class="skill-app-link-button secondary" href="${escapeHtml(Site.path(href))}">${escapeHtml(label)}</a>`).join("");
+    };
+    function completedMarkup(area) {
+      const response = state.areas[area.id];
+      return `<article class="troubleshooting-completed" data-trouble-completed="${area.id}"><p class="skill-tree-kicker">Completed · ${escapeHtml(answerLabel(response.answer))}</p><h3>${escapeHtml(area.heading)}</h3>${answerButtons(area, true)}<label for="trouble-note-${area.id}">Optional note</label><textarea id="trouble-note-${area.id}" data-trouble-note>${escapeHtml(response.note)}</textarea><button type="button" class="secondary" data-trouble-review-area>Review this area</button></article>`;
+    }
+    function resultMarkup() {
+      const results = troubleshootingResultAreas(state);
+      const list = (areas, empty) => areas.length ? `<ul>${areas.map((area) => `<li>${escapeHtml(area.heading)}</li>`).join("")}</ul>` : `<p class="skill-app-field-help">${escapeHtml(empty)}</p>`;
+      const relevant = [...results.yes, ...results.unsure];
+      return `<section class="troubleshooting-result" aria-labelledby="trouble-result-heading"><p class="skill-tree-kicker">Review complete</p><h3 id="trouble-result-heading">What may be getting in the way</h3><h4>Worth looking at</h4>${list(results.yes, "No area was marked Yes.")}<h4>Not sure</h4>${list(results.unsure, "No area was marked Not sure.")}<div class="troubleshooting-suggestions">${relevant.map((area) => `<article><h4>${escapeHtml(area.heading)}</h4><p>${escapeHtml(area.suggestion)}</p></article>`).join("") || "<p>Your answers do not point to one of these six areas right now. You can still revise an answer or name another adjustment.</p>"}</div>${relevant.length ? `<nav class="quick-tool-source-links" aria-label="Related tools for the areas selected">${contextualLinks(relevant)}</nav>` : ""}<label for="trouble-adjustment"><strong>What is the next adjustment you want to try?</strong></label><textarea id="trouble-adjustment" data-trouble-field="nextAdjustment">${escapeHtml(state.nextAdjustment)}</textarea><label for="trouble-measure">What would tell you whether that adjustment helped? <span class="skill-app-optional">Optional</span></label><textarea id="trouble-measure" data-trouble-field="successMeasure">${escapeHtml(state.successMeasure)}</textarea><p class="skill-app-note">If safety or coercion is present, prioritize safety and appropriate support rather than simply trying an interpersonal script harder.</p></section>`;
+    }
+    function render(focus = false) {
+      const answered = TROUBLESHOOTING_AREAS.filter(({ id }) => state.areas[id].answer);
+      const history = answered.filter((_area, index) => TROUBLESHOOTING_AREAS.indexOf(answered[index]) !== activeIndex).map(completedMarkup).join("");
+      const allAnswered = answered.length === TROUBLESHOOTING_AREAS.length;
+      const current = activeIndex === null ? null : TROUBLESHOOTING_AREAS[activeIndex];
+      const currentMarkup = current ? `<article class="troubleshooting-current" data-trouble-current tabindex="-1"><p class="skill-tree-kicker">Current question · Area ${activeIndex + 1} of ${TROUBLESHOOTING_AREAS.length}</p><h3>${escapeHtml(current.heading)}</h3><ul>${current.questions.map((question) => `<li>${escapeHtml(question)}</li>`).join("")}</ul><p class="skill-app-field-help">Choose Yes if this may be worth looking at. It does not mean this is definitely the problem.</p>${answerButtons(current)}<label for="trouble-current-note">Optional note</label><textarea id="trouble-current-note" data-trouble-current-note>${escapeHtml(state.areas[current.id].note)}</textarea><div class="skill-app-actions"><button type="button" class="secondary" data-trouble-back ${activeIndex ? "" : "disabled"}>Back</button></div></article>` : "";
+      root.innerHTML = pageShell("Troubleshooting Interpersonal Effectiveness", "Work out what may be getting in the way when an interpersonal skill isn't working.", `<section class="troubleshooting-opening"><label for="trouble-goal"><strong>What are you trying to do in this interaction?</strong></label><p class="skill-app-field-help">For example: ask for something, say no, set a boundary, express a need, or handle a difficult conversation.</p><textarea id="trouble-goal" class="skill-app-textarea-large" data-trouble-field="goal">${escapeHtml(state.goal)}</textarea><label for="trouble-tried"><strong>What have you already tried?</strong></label><textarea id="trouble-tried" data-trouble-field="tried">${escapeHtml(state.tried)}</textarea><label for="trouble-happened">What happened? <span class="skill-app-optional">Optional</span></label><textarea id="trouble-happened" data-trouble-field="happened">${escapeHtml(state.happened)}</textarea></section><section class="troubleshooting-guide" aria-label="Six troubleshooting areas"><div class="troubleshooting-history" aria-live="polite">${history}${currentMarkup}${allAnswered && activeIndex === null ? resultMarkup() : ""}</div></section>`, learnLinks([["Learn troubleshooting", "/learn/interpersonal-effectiveness/saying-no.html#interpersonal-troubleshooting"], ["Handout 9, part 1", "/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-1-of-2-clean.pdf", true], ["Handout 9, part 2", "/resources/clean/interpersonal-effectiveness/interpersonal-effectiveness-handout-9-troubleshooting-when-what-you-are-doing-is-not-working-2-of-2-clean.pdf", true]]));
+      root.querySelectorAll("[data-trouble-field]").forEach((field) => field.addEventListener("input", () => { state[field.dataset.troubleField] = field.value; }));
+      root.querySelectorAll("[data-trouble-completed]").forEach((card) => {
+        const area = TROUBLESHOOTING_AREAS.find((item) => item.id === card.dataset.troubleCompleted);
+        card.querySelectorAll("[data-trouble-answer]").forEach((button) => button.addEventListener("click", () => { state.areas[area.id].answer = button.dataset.troubleAnswer; render(); }));
+        card.querySelector("[data-trouble-note]").addEventListener("input", (event) => { state.areas[area.id].note = event.target.value; });
+        card.querySelector("[data-trouble-review-area]").addEventListener("click", () => { activeIndex = TROUBLESHOOTING_AREAS.indexOf(area); render(true); });
+      });
+      if (current) {
+        root.querySelector("[data-trouble-current-note]").addEventListener("input", (event) => { state.areas[current.id].note = event.target.value; });
+        root.querySelectorAll("[data-trouble-current] [data-trouble-answer]").forEach((button) => button.addEventListener("click", () => {
+          state.areas[current.id].answer = button.dataset.troubleAnswer;
+          const next = TROUBLESHOOTING_AREAS.findIndex((area, index) => index > activeIndex && !state.areas[area.id].answer);
+          activeIndex = next >= 0 ? next : (TROUBLESHOOTING_AREAS.every((area) => state.areas[area.id].answer) ? null : TROUBLESHOOTING_AREAS.findIndex((area) => !state.areas[area.id].answer));
+          render(true);
+        }));
+        root.querySelector("[data-trouble-back]")?.addEventListener("click", () => { activeIndex = Math.max(0, activeIndex - 1); render(true); });
+      }
+      if (focus) global.requestAnimationFrame(() => { const target = root.querySelector("[data-trouble-current], #trouble-result-heading"); target?.scrollIntoView({ block: "start", behavior: global.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ? "auto" : "smooth" }); target?.focus?.({ preventScroll: true }); });
+    }
+    render();
+    register(root, { toolId: "interpersonal-troubleshooting", toolTitle: "Troubleshooting Interpersonal Effectiveness", route: Progress.TOOL_ROUTES["interpersonal-troubleshooting"], getState: () => clone(state), setState: (next) => { state = normalizeTroubleshootingState(next); const firstUnanswered = TROUBLESHOOTING_AREAS.findIndex((area) => !state.areas[area.id].answer); activeIndex = firstUnanswered >= 0 ? firstUnanswered : null; render(); }, validateState: validateTroubleshootingState, getReadableSummary: troubleshootingSummary });
+  }
+
   const INITIALIZERS = {
     "five-factor-model": initFiveFactor,
     "case-map": initCaseMap,
@@ -606,6 +816,8 @@
     "sleep-hygiene": initSleepHygiene,
     "stages-of-change": initStagesOfChange,
     "urge-surfing": initUrgeSurfing,
+    "pros-and-cons": initProsAndCons,
+    "interpersonal-troubleshooting": initInterpersonalTroubleshooting,
   };
 
   function initMaladaptiveSignDisclosures() {
@@ -626,7 +838,7 @@
     }
   }
 
-  const api = { FIVE_FACTORS, CASE_MAP_FIELDS, THINKING_TRAPS, THOUGHT_FIELDS, CANONICAL_EMOTION_IDS, GROUNDING_STEPS, STAGES_OF_CHANGE, STAGES_RESPONSE_KEYS, BoxBreathingMachine, initialThoughtRecord, normalizeThoughtRecord, validateThoughtRecordState, thoughtRecordSummarySections, gratitudeSummarySections, initialStagesOfChangeState, normalizeStagesOfChangeState, validateStagesOfChangeState, selectStagesOfChangeStage, stagesOfChangeSummary, stagesChangePathMarkup, validUrgeCheckpoint, urgeGraphPoints, urgeGraphMarkup };
+  const api = { FIVE_FACTORS, CASE_MAP_FIELDS, THINKING_TRAPS, THOUGHT_FIELDS, CANONICAL_EMOTION_IDS, GROUNDING_STEPS, STAGES_OF_CHANGE, STAGES_RESPONSE_KEYS, PROS_CONS_SECTIONS, PROS_CONS_TIME_FRAMES, TROUBLESHOOTING_AREAS, BoxBreathingMachine, initialThoughtRecord, normalizeThoughtRecord, validateThoughtRecordState, thoughtRecordSummarySections, gratitudeSummarySections, initialStagesOfChangeState, normalizeStagesOfChangeState, validateStagesOfChangeState, selectStagesOfChangeStage, stagesOfChangeSummary, stagesChangePathMarkup, validUrgeCheckpoint, urgeGraphPoints, urgeGraphMarkup, initialProsConsState, normalizeProsConsState, validateProsConsState, reorderProsConsItem, prosConsTimeGroups, prosConsSummary, initialTroubleshootingState, normalizeTroubleshootingState, validateTroubleshootingState, troubleshootingResultAreas, troubleshootingSummary };
   global.TherapyQuickTools = api;
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   if (typeof document !== "undefined") {

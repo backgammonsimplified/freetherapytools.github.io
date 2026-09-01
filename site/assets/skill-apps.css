@@ -2732,3 +2732,117 @@ button.values-inline-choice:hover {
 .skill-guided-step.is-dime-complete { border-color: #a7b0b7; border-left-color: #7a858d; background: #eef1f3; }
 .skill-guided-step.is-dime-complete .skill-guided-choice { opacity: .62; }
 .skill-guided-step.is-dime-complete .skill-guided-choice.is-selected { opacity: 1; outline: 3px solid rgba(44, 54, 60, .22); }
+
+/* Focused Pros & Cons and Interpersonal Troubleshooting tools */
+.skill-app-textarea-large { min-height: 9rem; }
+.skill-app-optional { color: #5d6870; font-size: .82rem; font-weight: 500; }
+.pros-cons-grid {
+  display: grid;
+  grid-template-areas: "acting-pros resisting-pros" "acting-cons resisting-cons";
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.pros-cons-quadrant {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid #c8d3d8;
+  border-top: .4rem solid #467568;
+  border-radius: .75rem;
+  background: #f9fbfa;
+}
+.pros-cons-quadrant--actingPros { grid-area: acting-pros; }
+.pros-cons-quadrant--actingCons { grid-area: acting-cons; }
+.pros-cons-quadrant--resistingPros { grid-area: resisting-pros; }
+.pros-cons-quadrant--resistingCons { grid-area: resisting-cons; }
+.pros-cons-quadrant > h3 { margin-top: 0; font-size: 1.12rem; }
+.pros-cons-quadrant > div { display: grid; gap: .75rem; margin-bottom: .75rem; }
+.pros-cons-empty { margin: .4rem 0; color: #5d6870; font-style: italic; }
+.pros-cons-item {
+  min-width: 0;
+  padding: .8rem;
+  border: 1px solid #d2dade;
+  border-radius: .6rem;
+  background: #fff;
+}
+.pros-cons-item legend { padding: 0 .25rem; font-size: .82rem; font-weight: 800; }
+.pros-cons-item textarea { min-height: 5.5rem; }
+.pros-cons-item select { width: 100%; max-width: 100%; }
+.pros-cons-item-actions { gap: .4rem; margin-top: .65rem; }
+.pros-cons-item-actions button { min-height: 2.35rem; padding: .35rem .55rem; font-size: .82rem; }
+.pros-cons-time-review,
+.pros-cons-reflection,
+.pros-cons-review {
+  margin: 1.5rem 0;
+  padding: 1.15rem;
+  border: 1px solid #bfcdd2;
+  border-radius: .75rem;
+  background: #f5f9f7;
+}
+.pros-cons-time-review > div { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; }
+.pros-cons-time-review section { min-width: 0; padding: .75rem; border-radius: .55rem; background: #fff; }
+.pros-cons-time-review h4 { margin-top: 0; font-size: 1rem; }
+.pros-cons-reflection { display: grid; gap: .55rem; }
+.pros-cons-review { max-width: 64rem; margin-inline: auto; background: #fff; }
+.pros-cons-review > section { padding: .75rem 0; border-top: 1px solid #d8e0e3; }
+.pros-cons-review-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.pros-cons-review-options > section { min-width: 0; padding: .8rem; border: 1px solid #d8e0e3; border-radius: .55rem; }
+.pros-cons-review dt { margin-top: .75rem; font-weight: 800; }
+.pros-cons-review dd { margin-left: 0; white-space: pre-wrap; }
+.quick-tool-related { margin: 1rem 0; }
+
+.troubleshooting-opening { display: grid; gap: .45rem; }
+.troubleshooting-guide { max-width: 66rem; margin: 1.5rem auto 0; }
+.troubleshooting-history { display: grid; gap: 1rem; }
+.troubleshooting-completed,
+.troubleshooting-current,
+.troubleshooting-result {
+  min-width: 0;
+  padding: 1.15rem;
+  border: 1px solid #c5d0d5;
+  border-left: .42rem solid #718088;
+  border-radius: .75rem;
+  background: #fff;
+  scroll-margin-top: 5rem;
+}
+.troubleshooting-completed { background: #eef1f3; color: #344047; }
+.troubleshooting-current { border-left-color: #285f77; box-shadow: 0 .25rem 1rem rgb(38 66 80 / 10%); }
+.troubleshooting-result { border-left-color: #467568; background: #f5f9f7; }
+.troubleshooting-completed h3,
+.troubleshooting-current h3,
+.troubleshooting-result h3 { margin-top: 0; }
+.troubleshooting-completed textarea { min-height: 4.5rem; background: #fff; }
+.troubleshooting-choices { grid-template-columns: repeat(3, minmax(0, 1fr)); margin: .8rem 0; }
+.skill-guided-choice--unsure { border-color: #8a6a24; background: #fff6d9; color: #5c4618; }
+.skill-guided-choice--unsure.is-selected { outline: 3px solid rgb(138 106 36 / 28%); }
+.troubleshooting-suggestions { display: grid; gap: .75rem; margin: 1rem 0; }
+.troubleshooting-suggestions article { padding: .8rem; border: 1px solid #d4dddf; border-radius: .55rem; background: #fff; }
+.troubleshooting-suggestions h4 { margin-top: 0; }
+
+@media (max-width: 780px) {
+  .pros-cons-grid { grid-template-areas: "acting-pros" "acting-cons" "resisting-pros" "resisting-cons"; grid-template-columns: minmax(0, 1fr); }
+  .pros-cons-time-review > div { grid-template-columns: minmax(0, 1fr); }
+  .pros-cons-review-options { grid-template-columns: minmax(0, 1fr); }
+  .pros-cons-item-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .troubleshooting-choices { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 420px) {
+  .pros-cons-quadrant,
+  .pros-cons-item,
+  .pros-cons-time-review,
+  .pros-cons-reflection,
+  .pros-cons-review,
+  .troubleshooting-completed,
+  .troubleshooting-current,
+  .troubleshooting-result { padding: .8rem; }
+}
+
+@media print {
+  .pros-cons-grid { grid-template-areas: "acting-pros resisting-pros" "acting-cons resisting-cons"; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pros-cons-item-actions,
+  [data-pros-add],
+  [data-pros-review],
+  [data-trouble-review-area],
+  .troubleshooting-choices { display: none !important; }
+}
