@@ -2473,13 +2473,16 @@ button.values-inline-choice:hover {
 }
 .tool-finder-featured-thermometer .skill-app { margin-block: 0; }
 .tool-finder-featured-thermometer .skill-app-shell { max-width: none; }
-.tool-finder-topic { margin: 2rem 0; }
+.tool-finder-results, .tool-finder-topic, .tool-finder-grid { min-width: 0; }
+.tool-finder-topic { margin: 2rem 0; scroll-margin-top: 5rem; }
+.tool-finder-topic[hidden] { display: none; }
 .tool-finder-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: .8rem; }
 .tool-finder-card { padding: .9rem; border: 1px solid #ced8df; border-radius: .65rem; background: #fff; }
 .tool-finder-card h3 { margin: 0; font-size: 1.05rem; }
 .tool-finder-card-heading { display: flex; gap: .5rem; justify-content: space-between; align-items: start; }
 .tool-finder-card-heading span, .tool-finder-planned { font-size: .78rem; color: #566773; }
 .tool-finder-subtopic { margin: .25rem 0; font-size: .84rem; font-weight: 700; color: #566773; }
+.tool-finder-card, .tool-finder-card * { overflow-wrap: anywhere; }
 @media (max-width: 430px) { .tool-finder-search, .tool-finder-card { padding: .75rem; } .tool-finder-actions .btn { min-height: 2.75rem; display: inline-flex; align-items: center; } }
 
 /* Goal-setting strengths overview */
