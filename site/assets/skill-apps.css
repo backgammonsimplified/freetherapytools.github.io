@@ -2187,7 +2187,10 @@ button.values-inline-choice:hover {
 .skill-tree-editor h3 { margin-top: 0; }
 .skill-tree-editor label { display: grid; gap: .25rem; margin-top: .75rem; font-weight: 700; }
 .skill-tree-editor textarea { width: 100%; min-height: 6rem; }
+.check-facts-fields { display: grid; gap: .75rem; }
+.check-facts-fields label { margin-top: 0; }
 .check-facts-editor .skill-app-note { margin-top: 1rem; }
+.check-facts-resources { margin-top: 1rem; line-height: 1.8; overflow-wrap: anywhere; }
 
 .skill-app[data-skill-app="change-emotion"] .skill-app-shell,
 .skill-app[data-skill-app="worry-tree"] .skill-app-shell,
