@@ -7,7 +7,7 @@ learn-order: 1
 categories:
   - Beginner
 tags:
-  - Checker Play
+  - Goal Setting
 terms:
   - goal-setting
 body-classes: bs-learn-article

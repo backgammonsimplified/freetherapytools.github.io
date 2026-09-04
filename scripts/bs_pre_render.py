@@ -49,6 +49,9 @@ def main() -> int:
     if invalidate_full_build_marker():
         print("Invalidated the previous full-build completion marker.")
 
+    print("Generating Tool Finder topic sections from the canonical catalogue.")
+    run([sys.executable, str(REPO_ROOT / "scripts" / "tool_finder_topics.py")])
+
     print("Generating changed approved resource worksheet exports.")
     run(
         [

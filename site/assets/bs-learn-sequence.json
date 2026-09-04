@@ -56,7 +56,7 @@
       "route": "/learn/distress-tolerance/stop-crisis-survival.html",
       "sequence_index": 4,
       "title": "Introduction & STOP",
-      "track_id": "doubling-cube",
+      "track_id": "distress-tolerance",
       "track_order": 2,
       "track_title": "Distress Tolerance"
     },
@@ -68,7 +68,7 @@
       "route": "/learn/distress-tolerance/tipp.html",
       "sequence_index": 5,
       "title": "TIPP",
-      "track_id": "doubling-cube",
+      "track_id": "distress-tolerance",
       "track_order": 2,
       "track_title": "Distress Tolerance"
     },
@@ -80,7 +80,7 @@
       "route": "/learn/distress-tolerance/self-soothe.html",
       "sequence_index": 6,
       "title": "Distraction & Self-Soothing",
-      "track_id": "doubling-cube",
+      "track_id": "distress-tolerance",
       "track_order": 2,
       "track_title": "Distress Tolerance"
     },
@@ -92,7 +92,7 @@
       "route": "/learn/distress-tolerance/improve.html",
       "sequence_index": 7,
       "title": "IMPROVE",
-      "track_id": "doubling-cube",
+      "track_id": "distress-tolerance",
       "track_order": 2,
       "track_title": "Distress Tolerance"
     },
@@ -104,7 +104,7 @@
       "route": "/learn/distress-tolerance/pros-and-cons.html",
       "sequence_index": 8,
       "title": "Pros & Cons",
-      "track_id": "doubling-cube",
+      "track_id": "distress-tolerance",
       "track_order": 2,
       "track_title": "Distress Tolerance"
     },
@@ -116,7 +116,7 @@
       "route": "/learn/distress-tolerance/radical-acceptance.html",
       "sequence_index": 9,
       "title": "Radical Acceptance",
-      "track_id": "doubling-cube",
+      "track_id": "distress-tolerance",
       "track_order": 2,
       "track_title": "Distress Tolerance"
     },

@@ -138,11 +138,24 @@ class SkillFinderAppTests(unittest.TestCase):
         self.assertEqual({choice["next"] for choice in nodes["fits-facts"]["choices"]}, {"effective-fit", "effective-no-fit"})
         self.assertEqual({"mindful-act-problem-solve", "opposite-action-fit", "change-thoughts-opposite", "mindful-act-reconsider"}, {node["id"] for node in flow["nodes"] if node["type"] == "result"})
         source = (SITE / "assets" / "skill-finder-apps.js").read_text(encoding="utf-8")
-        for token in ("class ConstrainedTreeEngine", "skill-guided-history", "facts-event", "facts-interpretations", "facts-threat", "facts-catastrophe", "Examples of Emotions That Fit the Facts", "data-tree-revisit", "removed.forEach"):
+        for token in ("class ConstrainedTreeEngine", "skill-guided-history", "facts-event", "facts-observations", "facts-interpretations", "facts-threat", "facts-likelihood", "facts-catastrophe", "facts-fit-reflection", "facts-intensity", "Handout 8A examples", "Handout 9 decision guide", "data-tree-revisit", "removed.forEach"):
             self.assertIn(token, source)
+        for route in (
+            "/learn/emotion-regulation/check-the-facts.html#check-the-facts",
+            "/resources/clean/emotion-regulation/emotion-regulation-handout-8-check-the-facts-clean.pdf",
+            "/learn/emotion-regulation/examples-emotions-fit-facts.html",
+            "/learn/emotion-regulation/opposite-action.html#opposite-action-decision-path",
+        ):
+            self.assertIn(f'Site.path("{route}")', source)
+        self.assertIn("original guided reflection", source)
+        self.assertNotIn("What is the emotion I want to change?", source)
+        self.assertNotIn("What's the catastrophe?", source)
         handout_page = SITE / "learn" / "emotion-regulation" / "examples-emotions-fit-facts.qmd"
         self.assertTrue(handout_page.is_file())
         self.assertIn('target="_blank"', handout_page.read_text(encoding="utf-8"))
+        change_page = (SITE / "tool-finder" / "change-emotion" / "index.qmd").read_text(encoding="utf-8")
+        self.assertIn("Check the Facts - Handout 8 reference", change_page)
+        self.assertIn("Handout 9 decision guide", change_page)
 
     def test_worry_tree_and_missing_links_use_shared_constrained_tree(self):
         worry = load("flows/worry-tree.json")

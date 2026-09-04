@@ -49,24 +49,6 @@ bs-publication:
         social-card:
           kind: article
           category: Learn
-      research-index:
-        schema-type: CollectionPage
-        updates-feed: false
-      research-article:
-        schema-type: Article
-        updates-feed: true
-        social-card:
-          kind: article
-          category: Research
-      engine-benchmark-index:
-        schema-type: CollectionPage
-        updates-feed: false
-      benchmark-report:
-        schema-type: Report
-        updates-feed: true
-        social-card:
-          kind: benchmark
-          category: Sage vs GNU
     statuses:
       published:
         indexable: true
@@ -101,24 +83,12 @@ bs-publication:
         source: site/about.qmd
         type: page
         status: published
-      /analyze/index.html:
-        source: site/analyze/index.qmd
-        type: page
-        status: published
       /glossary/:
         source: site/glossary/index.qmd
         type: page
         status: published
       /licensing.html:
         source: site/licensing.qmd
-        type: page
-        status: published
-      /match-predictor/index.html:
-        source: site/match-predictor/index.qmd
-        type: page
-        status: published
-      /updates/index.html:
-        source: site/updates/index.qmd
         type: page
         status: published
       /learn/index.html:
@@ -128,68 +98,9 @@ bs-publication:
         parents:
           - label: Home
             route: /
-      /research/index.html:
-        source: site/research/index.qmd
-        type: research-index
-        status: published
-        parents:
-          - label: Home
-            route: /
-      /engine-benchmark/index.html:
-        source: site/engine-benchmark/index.qmd
-        type: engine-benchmark-index
-        status: published
-        parents:
-          - label: Home
-            route: /
-        related:
-          - /engine-benchmark/sage-vs-gnu-stage1/index.html
-      /engine-benchmark/sage-vs-gnu-stage1/index.html:
-        source: site/engine-benchmark/sage-vs-gnu-stage1/index.qmd
-        type: benchmark-report
-        status: preliminary
-        parents:
-          - label: Home
-            route: /
-          - label: Engine Benchmark
-            route: /engine-benchmark/index.html
-        related:
-          - /research/sage-vs-gnu-additional-details.html
-      /research/sage-vs-gnu-additional-details.html:
-        source: site/research/sage-vs-gnu-additional-details.qmd
-        type: research-article
-        status: preliminary
-        parents:
-          - label: Home
-            route: /
-          - label: Research
-            route: /research/index.html
-        related:
-          - /engine-benchmark/sage-vs-gnu-stage1/index.html
-      /posts/2026-07-cube-basics/index.html:
-        source: site/posts/2026-07-cube-basics/index.qmd
-        type: page
-        status: fixture
-      /posts/2026-07-opening-play-article.html:
-        source: site/posts/2026-07-opening-play-article.qmd
-        type: page
-        status: fixture
-      /posts/2026-07-research-methodology.html:
-        source: site/posts/2026-07-research-methodology.qmd
-        type: page
-        status: fixture
-      /posts/2026-07-sage-vs-gnu-update.html:
-        source: site/posts/2026-07-sage-vs-gnu-update.qmd
-        type: page
-        status: fixture
-      /posts/2026-07-site-update.html:
-        source: site/posts/2026-07-site-update.qmd
-        type: page
-        status: fixture
   research:
     categories:
-      - Learn
-      - Position Analyzer
-      - Match Predictor
-      - Engine Benchmark
-      - Research
+      - DBT Skills
+      - CBT Skills
+      - Mindfulness
+      - Wellness

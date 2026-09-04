@@ -40,7 +40,7 @@ class PagesDeploymentTests(unittest.TestCase):
         self.assertTrue((SITE / "glossary" / "index.qmd").is_file())
         legacy = (SITE / "legacy-dispositions.yml").read_text(encoding="utf-8")
         self.assertIn('source: "/skill-finder/"', legacy)
-        self.assertIn('source: "/learn/cube/"', legacy)
+        self.assertNotIn('source: "/learn/cube/"', legacy)
 
     def test_stages_images_are_production_assets(self) -> None:
         location = SITE / "resources" / "wellness" / "stages-of-change"

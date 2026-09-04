@@ -13,9 +13,6 @@ from xml.etree import ElementTree
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_SOURCE = Path(
-    r"C:\Users\andre\Downloads\scans\Core_Values_and_Valued_Action_Workbook_v0.2.docx"
-)
 DEFAULT_OUTPUT = ROOT / "site" / "data" / "skill-apps" / "values.json"
 W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
 
@@ -301,7 +298,7 @@ def consolidate_values(values: list[dict[str, object]]) -> list[dict[str, object
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE)
+    parser.add_argument("--source", type=Path, required=True)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     args = parser.parse_args()
     lines = paragraphs(args.source)

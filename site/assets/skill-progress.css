@@ -93,7 +93,7 @@
   z-index: 1040;
 }
 
-/* Keep Backgammon-style page tools clear of the private progress control. */
+/* Keep inherited page tools clear of the private progress control. */
 body.bs-skill-finder-page .bs-site-tools--floating {
   bottom: max(4.75rem, calc(env(safe-area-inset-bottom) + 4.75rem));
 }

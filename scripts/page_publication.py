@@ -619,11 +619,11 @@ def _plain_text(value: str) -> str:
 def rendered_title(text: str) -> str:
     match = TITLE_PATTERN.search(text) or DOCUMENT_TITLE_PATTERN.search(text)
     if match is None:
-        return "Backgammon Simplified"
+        return "Free Therapy Tools"
     title = _plain_text(match.group(1))
     if " - " in title:
         title = title.split(" - ", 1)[0].strip()
-    return title or "Backgammon Simplified"
+    return title or "Free Therapy Tools"
 
 
 def rendered_description(text: str) -> str | None:
@@ -1004,7 +1004,7 @@ def filtered_sitemap_text(
 
 
 def stable_rss_guid(route: str) -> str:
-    return "urn:backgammonsimplified:route:" + route
+    return "urn:freetherapytools:route:" + route
 
 
 def filtered_updates_feed_text(

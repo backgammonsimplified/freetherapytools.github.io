@@ -42,9 +42,6 @@ GENERATED_MINDFULNESS_CATALOGUE_PATH = (
 GENERATED_MINDFULNESS_SEQUENCE_PATH = (
     SITE_ROOT / "assets" / "bs-mindfulness-sequence.json"
 )
-GENERATED_RESEARCH_SEQUENCE_PATH = (
-    SITE_ROOT / "assets" / "bs-research-sequence.json"
-)
 LEGACY_GENERATED_ROUTES_PATH = GLOSSARY_ROOT / "_generated-routes.json"
 QUARTO_CONFIG_PATH = SITE_ROOT / "_quarto.yml"
 
@@ -57,15 +54,13 @@ FULL_BUILD_MARKER_SCHEMA = 1
 RENDERED_CORE_PATHS = (
     "index.html",
     "about.html",
+    "tool-finder/index.html",
     "learn/index.html",
-    "learn/start-here/index.html",
     "glossary/index.html",
     "learn/distress-tolerance/index.html",
-    "learn/opening-play/index.html",
-    "learn/distress-tolerance/why-is-25-percent-the-basic-take-point.html",
-    "research/index.html",
-    "research/sage-vs-gnu-additional-details.html",
-    "updates/index.html",
+    "learn/distress-tolerance/stop-crisis-survival.html",
+    "cbt-skills/index.html",
+    "mindfulness/index.html",
 )
 RSS_FOOTER_REPRESENTATIVE_PATHS = (
     "index.html",
@@ -73,24 +68,22 @@ RSS_FOOTER_REPRESENTATIVE_PATHS = (
     "learn/index.html",
     "learn/distress-tolerance/index.html",
     "glossary/index.html",
-    "research/index.html",
-    "updates/index.html",
 )
 NOT_FOUND_ROUTES = (
     "/",
     "/learn/",
     "/glossary/",
-    "/research/",
 )
 
 DIFFICULTIES = ("Beginner", "Intermediate", "Advanced")
 TRACKS = (
-    "Doubling Cube",
-    "Checker Play",
-    "Opening Play",
-    "Match Play",
-    "Endgames",
-    "Engines and Analysis",
+    "Goal Setting",
+    "Distress Tolerance",
+    "Mindfulness",
+    "Emotional Regulation",
+    "CBT and Managing Anxiety",
+    "Interpersonal Effectiveness",
+    "Wellness (Actions & Patterns)",
 )
 
 LEARN_SECTIONS = {
@@ -101,7 +94,7 @@ LEARN_SECTIONS = {
         "home_source": "learn/index.qmd",
         "track_ids": (
             "goal-setting",
-            "doubling-cube",
+            "distress-tolerance",
             "interpersonal-effectiveness",
             "wellness",
             "emotion-regulation",
@@ -170,19 +163,13 @@ TOOL_FINDER_GROUPS = {
     ),
 }
 GLOSSARY_CATEGORIES = (
-    "Checker Play",
-    "Cube Action",
-    "Match Score",
-    "Race & Bearoff",
-    "Game Plans & Position Types",
-    "Board, Equipment & Notation",
-    "Rules & Procedures",
-    "Analysis & Probability",
-    "Tournaments & Community",
-    "Chouette & Money Play",
-    "Variants & History",
-    "Software & Engines",
-    "Slang & Expressions",
+    "Goal Setting",
+    "Distress Tolerance",
+    "Mindfulness",
+    "Emotional Regulation",
+    "CBT and Managing Anxiety",
+    "Interpersonal Effectiveness",
+    "Wellness",
 )
 CANONICAL_SLUG_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
@@ -1111,11 +1098,11 @@ def discover_cube_lessons() -> list[dict[str, object]]:
     lessons = discover_lessons()
     curriculum = build_curriculum(tracks, lessons)
     for track in curriculum:
-        if track["id"] != "doubling-cube":
+        if track["id"] != "distress-tolerance":
             continue
         track_lessons = track["lessons"]
         if not isinstance(track_lessons, list) or not track_lessons:
-            raise ValidationError("No published cube lessons were discovered")
+            raise ValidationError("No published distress-tolerance lessons were discovered")
         return [
             {
                 **lesson,
@@ -1126,7 +1113,7 @@ def discover_cube_lessons() -> list[dict[str, object]]:
             }
             for lesson in track_lessons
         ]
-    raise ValidationError("The doubling-cube Learn track was not discovered")
+    raise ValidationError("The distress-tolerance Learn track was not discovered")
 
 
 def discover_update_publications() -> list[dict[str, object]]:
@@ -1276,8 +1263,6 @@ def discover_research_articles() -> list[dict[str, object]]:
                 ),
             }
         )
-    if not articles:
-        raise ValidationError("No current Research articles were discovered")
     return articles
 
 
@@ -2291,9 +2276,6 @@ def generated_outputs(
         GENERATED_MINDFULNESS_SEQUENCE_PATH: json_text(
             build_learn_sequence(mindfulness_curriculum)
         ),
-        GENERATED_RESEARCH_SEQUENCE_PATH: json_text(
-            build_research_sequence(research_articles)
-        ),
         AUTHORING_TERMS_PATH: build_authoring_terms(entries),
     }
     for track in curriculum:
@@ -2713,7 +2695,7 @@ def check_rendered(output_root: Path) -> dict[str, int]:
     )
     for required_redirect_part in (
         '<meta name="robots" content="noindex, follow">',
-        '<link rel="canonical" href="https://backgammonsimplified.github.io/glossary/">',
+        '<link rel="canonical" href="https://backgammonsimplified.github.io/freetherapytools.github.io/glossary/">',
         '<meta http-equiv="refresh" content="0; url=/glossary/">',
         'window.location.replace("/glossary/" + window.location.search + window.location.hash)',
     ):
@@ -2776,38 +2758,6 @@ def check_rendered(output_root: Path) -> dict[str, int]:
     validate_learn_sequence(rendered_sequence)
     if rendered_sequence != expected_sequence:
         raise ValidationError("Rendered Learn sequence does not match curriculum metadata")
-
-    research_articles = discover_research_articles()
-    expected_research_sequence = build_research_sequence(research_articles)
-    rendered_research_sequence_path = (
-        output_root / "assets" / "bs-research-sequence.json"
-    )
-    rendered_research_scroll_path = (
-        output_root / "assets" / "bs-research-scroll.js"
-    )
-    if not rendered_research_sequence_path.is_file():
-        raise ValidationError("Rendered Research sequence asset is missing")
-    if not rendered_research_scroll_path.is_file():
-        raise ValidationError("Rendered continuous Research script is missing")
-    if read_json(rendered_research_sequence_path) != expected_research_sequence:
-        raise ValidationError(
-            "Rendered Research sequence does not match Research metadata"
-        )
-    for article in expected_research_sequence["articles"]:
-        route = str(article["route"])
-        article_path = output_root / route.lstrip("/")
-        if not article_path.is_file():
-            raise ValidationError(
-                f"Rendered continuous Research article is missing: {route}"
-            )
-        article_html = article_path.read_text(
-            encoding="utf-8",
-            errors="replace",
-        )
-        if "bs-research-scroll.js" not in article_html:
-            raise ValidationError(
-                f"Rendered Research article lacks shared script: {route}"
-            )
 
     rendered_lesson_count = 0
     expected_sidebar_routes = {
@@ -2955,7 +2905,7 @@ def check_rendered(output_root: Path) -> dict[str, int]:
         if "/glossary/" in location
     ]
     expected_glossary_location = (
-        "https://backgammonsimplified.github.io/glossary/"
+        "https://backgammonsimplified.github.io/freetherapytools.github.io/glossary/"
     )
     if glossary_locations != [expected_glossary_location]:
         raise ValidationError(
@@ -2964,12 +2914,12 @@ def check_rendered(output_root: Path) -> dict[str, int]:
 
     canonical = (
         '<link rel="canonical" '
-        'href="https://backgammonsimplified.github.io/glossary/">'
+        'href="https://backgammonsimplified.github.io/freetherapytools.github.io/glossary/">'
     )
     if canonical not in glossary_html:
         raise ValidationError("Rendered glossary is missing its one canonical URL")
     shared_image = (
-        "https://backgammonsimplified.github.io/"
+        "https://backgammonsimplified.github.io/freetherapytools.github.io/"
         "assets/social/generated/social-glossary.png"
     )
     if shared_image not in glossary_html:
@@ -2978,23 +2928,15 @@ def check_rendered(output_root: Path) -> dict[str, int]:
     lesson_path = (
         output_root
         / "learn"
-        / "cube"
-        / "why-is-25-percent-the-basic-take-point.html"
+        / "distress-tolerance"
+        / "stop-crisis-survival.html"
     )
-    research_path = (
-        output_root / "research" / "sage-vs-gnu-additional-details.html"
-    )
-    for label, path in (
-        ("Learn lesson", lesson_path),
-        ("Research article", research_path),
-    ):
+    for label, path in (("Learn lesson", lesson_path),):
         if not path.exists():
             raise ValidationError(f"Rendered {label} is missing: {path}")
         page_html = path.read_text(encoding="utf-8", errors="replace")
         if 'id="TOC"' not in page_html or 'data-toc-expanded="99"' not in page_html:
             raise ValidationError(f"Rendered {label} is missing native expanded TOC")
-        if "bs-research-toc-toggle" in page_html:
-            raise ValidationError(f"Rendered {label} contains a competing TOC initializer")
 
     for track in curriculum:
         route = str(track["route"])
@@ -3071,7 +3013,8 @@ def check_rendered(output_root: Path) -> dict[str, int]:
         for item in feed_items
     ]
     expected_feed_links = [
-        "https://backgammonsimplified.github.io" + str(publication["route"])
+        "https://backgammonsimplified.github.io/freetherapytools.github.io"
+        + str(publication["route"])
         for publication in discover_update_publications()
     ]
     if feed_links != expected_feed_links:

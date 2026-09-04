@@ -7,11 +7,9 @@ cd "${REPO_ROOT}"
 
 printf '\nBS quick UX automation contracts\n'
 node --check scripts/testing/ux/browser/release_ui_browser_check.mjs
-node --check scripts/testing/ux/browser/lesson_analysis_browser_check.mjs
 node --check scripts/testing/ux/browser/comprehensive_quality_browser_check.mjs
 node --check scripts/testing/quality/performance/runtime_performance_baseline.mjs
 node tests/test_release_ui_browser_check.mjs
-node tests/test_lesson_analysis_browser_check.mjs
 node tests/test_comprehensive_quality_browser_check.mjs
 node tests/test_runtime_performance_baseline.mjs
 

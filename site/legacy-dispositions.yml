@@ -18,12 +18,6 @@ legacy-dispositions:
       mechanism: static-client-redirect
       canonical: false
       indexing: "noindex, follow"
-    - source: "/learn/cube/"
-      target: "/learn/distress-tolerance/"
-      disposition: redirect
-      mechanism: static-client-redirect
-      canonical: false
-      indexing: "noindex, follow"
     - source: "/learn/goal-setting/strengths.html"
       target: "/learn/goal-setting/goal-setting-guidelines.html#strengths"
       disposition: redirect
@@ -56,9 +50,3 @@ legacy-dispositions:
     - {source: "/skill-finder/values-review/", target: "/tool-finder/values-review/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
     - {source: "/skill-finder/worry-time/", target: "/tool-finder/worry-time/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
     - {source: "/skill-finder/worry-tree/", target: "/tool-finder/worry-tree/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
-    - {source: "/learn/cube/stop-crisis-survival.html", target: "/learn/distress-tolerance/stop-crisis-survival.html", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
-    - {source: "/learn/cube/tipp.html", target: "/learn/distress-tolerance/tipp.html", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
-    - {source: "/learn/cube/self-soothe.html", target: "/learn/distress-tolerance/self-soothe.html", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
-    - {source: "/learn/cube/improve.html", target: "/learn/distress-tolerance/improve.html", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
-    - {source: "/learn/cube/pros-and-cons.html", target: "/learn/distress-tolerance/pros-and-cons.html", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
-    - {source: "/learn/cube/radical-acceptance.html", target: "/learn/distress-tolerance/radical-acceptance.html", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}

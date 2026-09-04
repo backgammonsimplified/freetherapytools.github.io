@@ -8,7 +8,7 @@ Learn pages use two separate glossary metadata fields.
 
 - glossary-to-lesson backlinks;
 - lesson search and term filters;
-- lesson and Research relationships;
+- lesson relationships;
 - existing metadata validation.
 
 Do not reduce `terms` to control inline presentation.
@@ -19,14 +19,10 @@ Do not reduce `terms` to control inline presentation.
 
 ```yaml
 terms:
-  - take-point
-  - doubling-cube
-  - pass
-  - recube-vigorish-vig
+  - wise-mind
 
 highlighted-terms:
-  - take-point
-  - doubling-cube
+  - wise-mind
 ```
 
 The field name is exactly `highlighted-terms`. Its rules are:
@@ -61,7 +57,7 @@ The generated link retains the visible lesson wording and stores only the canoni
   class="bs-inline-glossary"
   href="/glossary/#anchor"
   data-bs-glossary-slug="anchor"
->Holding Point</a>
+>Wise Mind</a>
 ```
 
 The lesson markup never contains a copied definition. On pointer hover or keyboard focus, `bs-learn.js` loads the generated canonical lookup, resolves `data-bs-glossary-slug`, and displays that record's `short_definition`. Activating the ordinary link navigates to `/glossary/#canonical-slug`.
