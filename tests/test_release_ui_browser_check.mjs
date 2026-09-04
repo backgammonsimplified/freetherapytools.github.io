@@ -25,6 +25,7 @@ assert.deepEqual(
     "desktop-1440",
     "laptop-1280",
     "tablet-1024",
+    "tablet-768",
     "mobile-390",
     "small-mobile-320"
   ]
