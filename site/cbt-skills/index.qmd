@@ -3,7 +3,6 @@ title: "CBT Skills"
 description: "Learn to identify and change unhelpful thought patterns through six CBT lessons."
 sidebar: cbt
 page-layout: full
-bibliography: ../references.bib
 body-classes: bs-learn-index
 toc: false
 execute:

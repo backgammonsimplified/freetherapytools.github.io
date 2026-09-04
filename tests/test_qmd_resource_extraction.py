@@ -115,10 +115,13 @@ class QmdResourceExtractionTests(unittest.TestCase):
         for resource in rows:
             source_id = resource["id"]
             lesson = ROOT / self.by_id[source_id]["lesson_qmd"]
-            self.assertIn(
-                f"<!-- native-resource-content:{source_id}:start -->",
-                lesson.read_text(encoding="utf-8"),
-            )
+            source = lesson.read_text(encoding="utf-8")
+            if lesson == SITE / "tool-finder/index.qmd":
+                self.assertIn("data-tool-finder-results", source)
+            else:
+                self.assertIn(
+                    f"<!-- native-resource-content:{source_id}:start -->", source
+                )
             self.assertNotEqual("pending", self.by_id[source_id]["extraction_method"])
 
     def test_no_published_resource_remains_pending(self) -> None:
@@ -127,7 +130,7 @@ class QmdResourceExtractionTests(unittest.TestCase):
         )
 
     def test_review_report_matches_inventory_counts(self) -> None:
-        report = (ROOT / "QMD-CONTENT-REVIEW.md").read_text(encoding="utf-8")
+        report = (ROOT / "docs" / "reviews" / "QMD-CONTENT-REVIEW.md").read_text(encoding="utf-8")
         self.assertIn("Published resources processed: **266**", report)
         self.assertIn("Resources integrated into existing anchored sections: **74**", report)
         self.assertIn("Resources using a local **Text Version** subsection: **192**", report)

@@ -7,7 +7,7 @@ learn-order: 17
 categories:
   - Beginner
 tags:
-  - Checker Play
+  - Emotional Regulation
 terms:
   - check-the-facts
 body-classes: bs-learn-article

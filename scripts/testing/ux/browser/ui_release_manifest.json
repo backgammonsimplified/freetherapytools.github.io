@@ -3,12 +3,12 @@
   "baseline_screenshot_route_ids": [
     "home",
     "learn-index",
-    "cube-lesson",
+    "distress-tolerance-lesson",
     "cbt-index",
     "cbt-lesson",
-    "research-article",
+    "tool-finder",
     "glossary",
-    "analyze"
+    "box-breathing"
   ],
   "baseline_screenshot_viewport_names": [
     "desktop-1440",
@@ -48,7 +48,7 @@
       "name": "Homepage",
       "route": "/",
       "kind": "home",
-      "required_markers": ["Therapy Skill Kit"]
+      "required_markers": ["Free Therapy Tools"]
     },
     {
       "id": "learn-index",
@@ -65,7 +65,7 @@
       "required_markers": ["data-bs-learn-filters", "data-bs-learn-list"]
     },
     {
-      "id": "cube-lesson",
+      "id": "distress-tolerance-lesson",
       "name": "DBT lesson",
       "route": "/learn/distress-tolerance/tipp.html",
       "kind": "learn-lesson",
@@ -135,46 +135,25 @@
       "required_markers": ["skill-app", "Save progress"]
     },
     {
-      "id": "research-index",
-      "name": "Research index",
-      "route": "/research/",
-      "kind": "research-index",
-      "required_markers": ["data-bs-research-list"]
-    },
-    {
-      "id": "research-article",
-      "name": "Research continuous article",
-      "route": "/research/sage-vs-gnu-additional-details.html",
-      "kind": "research-article",
-      "required_markers": ["bs-research-article"]
-    },
-    {
-      "id": "engine-benchmark",
-      "name": "Engine benchmark index",
-      "route": "/engine-benchmark/",
+      "id": "tool-finder",
+      "name": "Tool Finder",
+      "route": "/tool-finder/",
       "kind": "ordinary",
-      "required_markers": ["Engine Benchmark"]
+      "required_markers": ["data-tool-finder", "tool-finder-topic-section"]
     },
     {
-      "id": "sage-vs-gnu",
-      "name": "Sage versus GNU benchmark",
-      "route": "/engine-benchmark/sage-vs-gnu-stage1/",
+      "id": "box-breathing",
+      "name": "Box Breathing",
+      "route": "/tool-finder/box-breathing/",
       "kind": "ordinary",
-      "required_markers": ["Sage", "GNU"]
+      "required_markers": ["skill-app", "Box Breathing"]
     },
     {
-      "id": "analyze",
-      "name": "Analyzer landing page",
-      "route": "/analyze/",
-      "kind": "analyzer",
-      "required_markers": ["bs-position-preview-frame"]
-    },
-    {
-      "id": "match-predictor",
-      "name": "Match Predictor",
-      "route": "/match-predictor/",
-      "kind": "match-predictor",
-      "required_markers": ["bs-dashboard-frame"]
+      "id": "change-emotion",
+      "name": "Change an Emotion",
+      "route": "/tool-finder/change-emotion/",
+      "kind": "ordinary",
+      "required_markers": ["skill-app", "Check the Facts"]
     },
     {
       "id": "glossary",
@@ -196,13 +175,6 @@
       "route": "/licensing.html",
       "kind": "ordinary",
       "required_markers": ["Licensing"]
-    },
-    {
-      "id": "updates",
-      "name": "Updates index",
-      "route": "/updates/",
-      "kind": "ordinary",
-      "required_markers": ["Updates"]
     },
     {
       "id": "404",

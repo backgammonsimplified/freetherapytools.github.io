@@ -7,7 +7,7 @@ body:
     attributes:
       label: Page or tool
       description: Which page, lesson, report, or tool is this about?
-      placeholder: "Example: Analyze, Sage vs GNU Stage 1, or a page URL"
+      placeholder: "Example: Box Breathing, Check the Facts, or a page URL"
     validations:
       required: true
 

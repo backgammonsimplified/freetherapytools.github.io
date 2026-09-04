@@ -15,9 +15,6 @@ Options:
                        Quarto build. The default skips social-card generation.
   -h, --help           Show this help.
 
-Optional cross-repository renderer gate:
-  Set BACKGAMMONBOARD_REPO to the backgammonboard checkout.
-  Set RSCRIPT_BIN when Rscript is not on PATH.
 EOF
 }
 
@@ -59,13 +56,13 @@ printf 'BS comprehensive build gate\n'
 printf 'Repository:   %s\n' "${REPO_ROOT}"
 printf 'Social cards: %s\n\n' "$([[ ${WITH_SOCIAL_CARDS} -eq 1 ]] && printf yes || printf no)"
 
-printf '[1/6] Quick build gate\n'
+printf '[1/5] Quick build gate\n'
 bash scripts/testing/build/quick.sh
 
-printf '\n[2/6] Complete Python suite\n'
+printf '\n[2/5] Complete Python suite\n'
 "${PYTHON_COMMAND[@]}" -m unittest discover -s tests -p 'test_*.py'
 
-printf '\n[3/6] Full Quarto build\n'
+printf '\n[3/5] Full Quarto build\n'
 if [[ ${WITH_SOCIAL_CARDS} -eq 1 ]]; then
   unset BS_SKIP_SOCIAL_CARDS || true
 else
@@ -73,22 +70,11 @@ else
 fi
 quarto render site
 
-printf '\n[4/6] Full rendered glossary and HTML audit\n'
+printf '\n[4/5] Full rendered glossary and HTML audit\n'
 "${PYTHON_COMMAND[@]}" scripts/learn_glossary.py check-rendered \
   --output site/_site
 "${PYTHON_COMMAND[@]}" scripts/testing/build/release_ui_static_check.py
 
-printf '\n[5/6] Real checker projection and asset contract\n'
-"${PYTHON_COMMAND[@]}" -m unittest tests.test_real_checker_analysis -v
-
-printf '\n[6/6] Optional backgammonboard renderer gate\n'
-if [[ -n "${BACKGAMMONBOARD_REPO:-}" ]]; then
-  RSCRIPT_COMMAND="${RSCRIPT_BIN:-Rscript}"
-  "${RSCRIPT_COMMAND}" -e \
-    "devtools::load_all('${BACKGAMMONBOARD_REPO}', quiet=TRUE); testthat::test_file(file.path('${BACKGAMMONBOARD_REPO}', 'tests/testthat/test-move-overlay.R')); testthat::test_file(file.path('${BACKGAMMONBOARD_REPO}', 'tests/testthat/test-ggboard.R'))"
-else
-  printf 'Skipped: BACKGAMMONBOARD_REPO is not set.\n'
-fi
-
+printf '\n[5/5] Diff hygiene\n'
 git diff --check
 printf '\nPASS: comprehensive build gate.\n'

@@ -288,22 +288,9 @@ a:hover {
   text-align: left;
 }
 
-/*
-  Research and Engine Benchmark pages already have section context above the
-  heading (breadcrumbs where published). Avoid stacking the full editorial
-  intro offset beneath it.
-*/
-:is(
-    body.bs-engine-benchmark-page,
-    body.bs-research-index,
-    body.bs-research-article
-  ) #title-block-header {
-  padding-top: clamp(0.75rem, 1.5vw, 1.25rem);
-}
-
 /* About-only eyebrow. Other editorial pages receive the layout without this label. */
 body.bs-about-page #title-block-header::before {
-  content: "ABOUT  ::  BS";
+  content: "ABOUT  ::  FTT";
   display: block;
   width: min(100%, var(--bs-editorial-reading-width));
   margin: 0 auto 0.7rem;

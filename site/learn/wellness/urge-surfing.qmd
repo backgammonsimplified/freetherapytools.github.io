@@ -8,7 +8,7 @@ learn-parent: wellness/maladaptive-coping
 categories:
   - Intermediate
 tags:
-  - Checker Play
+  - Wellness (Actions & Patterns)
 terms:
   - coping
 body-classes: bs-learn-article

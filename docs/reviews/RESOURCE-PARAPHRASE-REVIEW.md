@@ -7,39 +7,39 @@ This durable report summarizes the generated draft corpus. Draft and review-need
 - Published target count: **266**
 - Excluded source pages: **65**
 - Informational: **174**
-- Interactive: **64**
-- Mixed informational + interactive: **28**
+- Interactive: **67**
+- Mixed informational + interactive: **25**
 - Total interactive/fillable resources: **92**
-- Total structured fields: **391**
+- Total structured fields: **368**
 
 ## Review status
 
 - Draft: **21**
 - Review needed: **245**
 - Approved/published: **0**
-- Source extraction uncertain: **190**
-- Similarity flags: **89**
-- Completeness flags: **86**
+- Source extraction uncertain: **191**
+- Similarity flags: **82**
+- Completeness flags: **80**
 
 ## Generated systems
 
 - Guided-reflection prompt drafts: **92**
-- Specialized Skill Finder overlaps: **69**
+- Specialized Tool Finder overlaps: **69**
 - Blank DOCX/PDF artifacts are generated only for approved/published interactive records.
 - Draft exports remain available in review mode as local browser-generated previews and are never copied into public asset paths.
 
 ## Field types
 
-- `date`: 15
-- `multi-select`: 9
-- `planning`: 38
+- `date`: 13
+- `multi-select`: 8
+- `planning`: 36
 - `rating-scale`: 12
-- `reflection`: 201
-- `repeating-rows`: 15
-- `table`: 32
-- `text`: 41
-- `textarea`: 27
-- `time`: 1
+- `reflection`: 185
+- `repeating-rows`: 16
+- `table`: 35
+- `text`: 38
+- `textarea`: 23
+- `time`: 2
 
 ## Generation failures
 
@@ -224,6 +224,7 @@ These records could not be treated as source-certain. The draft exists, but the 
 - `wellness-p030` — 5 Wellness.pdf, page 30
 - `wellness-p034` — 5 Wellness.pdf, page 34
 - `wellness-p035` — 5 Wellness.pdf, page 35
+- `wellness-p036` — 5 Wellness.pdf, page 36
 - `wellness-p037` — 5 Wellness.pdf, page 37
 - `wellness-p038` — 5 Wellness.pdf, page 38
 - `wellness-p039` — 5 Wellness.pdf, page 39

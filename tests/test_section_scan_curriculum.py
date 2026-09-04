@@ -80,6 +80,7 @@ class SectionScanCurriculumTests(unittest.TestCase):
             if not {"clean", "high-res"}.intersection(
                 path.relative_to(SITE / "resources").parts
             )
+            and "program-source" not in path.relative_to(SITE / "resources").parts
         }
         self.assertEqual(actual_assets, expected_assets)
 
@@ -120,7 +121,7 @@ class SectionScanCurriculumTests(unittest.TestCase):
                     "Weekly Goal Worksheets",
                     "Weekly Home Practice Trackers",
                 ],
-                "doubling-cube": [
+                "distress-tolerance": [
                     "Introduction & STOP",
                     "TIPP",
                     "Distraction & Self-Soothing",

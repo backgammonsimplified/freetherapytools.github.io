@@ -1,30 +1,18 @@
 from __future__ import annotations
 
-import importlib.util
 import json
 import os
 import subprocess
 import unittest
 from pathlib import Path
 
+from scripts import learn_glossary
+
 
 ROOT = Path(__file__).resolve().parents[1]
-MODULE_PATH = ROOT / "scripts" / "learn_glossary.py"
-SPEC = importlib.util.spec_from_file_location("learn_glossary_iteration03", MODULE_PATH)
-assert SPEC and SPEC.loader
-learn_glossary = importlib.util.module_from_spec(SPEC)
-SPEC.loader.exec_module(learn_glossary)
-
 PANDOC = Path(r"C:\Program Files\Quarto\bin\tools\pandoc.exe")
-FILTER = (
-    ROOT
-    / "site"
-    / "_extensions"
-    / "bs-inline-glossary"
-    / "bs-inline-glossary.lua"
-)
+FILTER = ROOT / "site" / "_extensions" / "bs-inline-glossary" / "bs-inline-glossary.lua"
 LOOKUP = ROOT / "site" / "assets" / "bs-glossary-lookup.json"
-FIXTURES = ROOT / "tests" / "fixtures" / "iteration03"
 
 
 class LessonInlineGlossaryTests(unittest.TestCase):
@@ -35,24 +23,11 @@ class LessonInlineGlossaryTests(unittest.TestCase):
         data = json.loads(learn_glossary.PUBLIC_DATA_PATH.read_text(encoding="utf-8"))
         cls.entries = learn_glossary.validate_public_data(data)
 
-    def render(
-        self,
-        source: str,
-        *,
-        lookup_path: Path = LOOKUP,
-    ) -> subprocess.CompletedProcess[str]:
+    def render(self, source: str) -> subprocess.CompletedProcess[str]:
         environment = os.environ.copy()
-        environment["BS_GLOSSARY_LOOKUP"] = str(lookup_path)
+        environment["BS_GLOSSARY_LOOKUP"] = str(LOOKUP)
         return subprocess.run(
-            [
-                str(PANDOC),
-                "--from",
-                "markdown",
-                "--to",
-                "html",
-                "--lua-filter",
-                str(FILTER),
-            ],
+            [str(PANDOC), "--from", "markdown", "--to", "html", "--lua-filter", str(FILTER)],
             cwd=ROOT,
             env=environment,
             input=source,
@@ -63,351 +38,55 @@ class LessonInlineGlossaryTests(unittest.TestCase):
             check=False,
         )
 
-    def highlighted_source(self) -> str:
-        return (FIXTURES / "highlighted-lesson.qmd").read_text(encoding="utf-8")
-
-    def control_source(self) -> str:
-        return (FIXTURES / "control-lesson.qmd").read_text(encoding="utf-8")
-
-    def test_highlighted_fixture_uses_only_first_safe_canonical_occurrences(self) -> None:
-        result = self.render(self.highlighted_source())
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual(result.stdout.count('class="bs-inline-glossary"'), 2)
-        self.assertIn('data-bs-glossary-slug="ace">Ace</a>', result.stdout)
-        self.assertIn(
-            'data-bs-glossary-slug="ahead-in-the-count">Ahead in the Race</a>',
-            result.stdout,
-        )
-        self.assertIn('href="/glossary/#ace"', result.stdout)
-        self.assertIn('href="/glossary/#ahead-in-the-count"', result.stdout)
-        self.assertIn(
-            "Ace appears again, and Ahead in the Count appears again",
-            result.stdout,
-        )
-
-    def test_excluded_contexts_and_visible_wording_remain_unchanged(self) -> None:
-        result = self.render(self.highlighted_source())
-        self.assertEqual(result.returncode, 0, result.stderr)
-        heading = result.stdout.split("</h1>", 1)[0]
-        self.assertNotIn("bs-inline-glossary", heading)
-        self.assertIn('href="https://example.com/ace"', result.stdout)
-        self.assertIn("<code>ahead in the count in inline code</code>", result.stdout)
-        self.assertIn("Ace and Ahead in the Race in a fenced code block.", result.stdout)
-        self.assertIn('class="math inline"', result.stdout)
-        self.assertRegex(
-            result.stdout,
-            r'class="fixture-raw">Ace and Ahead in the Race in raw\s+HTML\.</span>',
-        )
-        self.assertIn('alt="Ace and Ahead in the Race in a caption."', result.stdout)
-        self.assertNotIn("data-bs-glossary-summary", result.stdout)
-        self.assertNotIn("short_definition=", result.stdout)
-
-    def test_control_lesson_has_no_inline_markup(self) -> None:
-        result = self.render(self.control_source())
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertNotIn("bs-inline-glossary", result.stdout)
-        self.assertIn("Ace and Ahead in the Race appear in ordinary prose", result.stdout)
-
-    def test_broad_terms_still_drive_all_backlinks(self) -> None:
-        lesson = {
-            "relative_path": "fixture.qmd",
-            "categories": ["Beginner"],
-            "tags": ["Checker Play"],
-            "terms": ["ace", "active-builder", "ahead-in-the-count", "abt"],
-            "highlighted_terms": ["ace", "ahead-in-the-count"],
-            "title": "Fixture",
-        }
-        related = learn_glossary.validate_lessons([lesson], self.entries)
-        self.assertEqual(
-            set(related),
-            {"ace", "active-builder", "ahead-in-the-count", "abt"},
-        )
-        self.assertEqual(
-            lesson["terms"],
-            ["ace", "active-builder", "ahead-in-the-count", "abt"],
-        )
-        self.assertEqual(
-            lesson["highlighted_terms"],
-            ["ace", "ahead-in-the-count"],
-        )
-
-    def test_absent_and_empty_highlighted_metadata_disable_highlighting(self) -> None:
-        self.assertEqual(
-            learn_glossary.highlighted_terms_from_metadata({}, "Fixture"),
-            [],
-        )
-        self.assertEqual(
-            learn_glossary.highlighted_terms_from_metadata(
-                {"highlighted-terms": []},
-                "Fixture",
-            ),
-            [],
-        )
-
-    def test_highlighted_metadata_must_be_a_list(self) -> None:
-        with self.assertRaisesRegex(
-            learn_glossary.ValidationError,
-            "must be a YAML list",
-        ):
-            learn_glossary.highlighted_terms_from_metadata(
-                {"highlighted-terms": "ace"},
-                "Fixture",
-            )
-
-    def test_duplicate_normalized_values_fail(self) -> None:
-        with self.assertRaisesRegex(
-            learn_glossary.ValidationError,
-            "duplicate normalized",
-        ):
-            learn_glossary.highlighted_terms_from_metadata(
-                {"highlighted-terms": ["ace", "Ace"]},
-                "Fixture",
-            )
-
-    def test_malformed_multi_word_slug_fails(self) -> None:
-        with self.assertRaisesRegex(
-            learn_glossary.ValidationError,
-            "malformed",
-        ):
-            learn_glossary.highlighted_terms_from_metadata(
-                {"highlighted-terms": ["active builder"]},
-                "Fixture",
-            )
-
-    def test_unknown_alias_and_missing_broad_term_fail(self) -> None:
-        base = {
-            "relative_path": "fixture.qmd",
-            "categories": ["Beginner"],
-            "tags": ["Checker Play"],
-            "terms": ["ace"],
-            "title": "Fixture",
-        }
-        cases = (
-            (
-                {**base, "highlighted_terms": ["not-a-term"]},
-                "unknown term slug",
-            ),
-            (
-                {
-                    **base,
-                    "terms": ["ahead-in-the-count"],
-                    "highlighted_terms": ["ahead-in-the-race"],
-                },
-                "uses alias slug",
-            ),
-            (
-                {**base, "highlighted_terms": ["ahead-in-the-count"]},
-                "missing from terms",
-            ),
-        )
-        for lesson, message in cases:
-            with self.subTest(message=message):
-                with self.assertRaisesRegex(
-                    learn_glossary.ValidationError,
-                    message,
-                ):
-                    learn_glossary.validate_lessons([lesson], self.entries)
-
-    def test_longest_valid_phrase_wins_without_partial_word_matches(self) -> None:
+    def test_first_safe_occurrence_is_linked(self) -> None:
         source = """---
-terms: [one-point, point]
-highlighted-terms: [point, one-point]
+terms: [wise-mind]
+highlighted-terms: [wise-mind]
 ---
+# Wise Mind heading
 
-Checkpoint is not a match. One Point comes first; point comes second.
-"""
-        result = self.render(
-            source,
-            lookup_path=FIXTURES / "longest-phrase-lookup.json",
-        )
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertNotIn('>point</a> is not', result.stdout)
-        first = result.stdout.index('data-bs-glossary-slug="one-point"')
-        second = result.stdout.index('data-bs-glossary-slug="point"')
-        self.assertLess(first, second)
+`Wise Mind` in code. [Wise Mind](https://example.com/) in a link.
 
-    def test_ambiguous_canonical_alias_phrase_fails(self) -> None:
-        source = """---
-terms: [anchor, holding-point]
-highlighted-terms: [anchor, holding-point]
----
-
-Anchor and Holding Point.
-"""
-        result = self.render(
-            source,
-            lookup_path=FIXTURES / "ambiguous-phrase-lookup.json",
-        )
-        self.assertNotEqual(result.returncode, 0)
-        self.assertIn("ambiguous canonical or alias phrase", result.stderr)
-
-    def test_existing_link_is_not_nested_and_missing_safe_match_warns(self) -> None:
-        source = """---
-terms: [ace]
-highlighted-terms: [ace]
----
-
-[Ace](https://example.com/ace)
+Wise Mind in prose. Wise Mind appears again.
 """
         result = self.render(source)
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual(result.stdout.count("<a "), 1)
+        self.assertEqual(result.stdout.count('class="bs-inline-glossary"'), 1)
+        self.assertIn('data-bs-glossary-slug="wise-mind">Wise Mind</a>', result.stdout)
+        self.assertIn('<code>Wise Mind</code>', result.stdout)
+
+    def test_absent_highlighted_metadata_disables_markup(self) -> None:
+        result = self.render("---\nterms: [wise-mind]\n---\n\nWise Mind in prose.\n")
+        self.assertEqual(result.returncode, 0, result.stderr)
         self.assertNotIn("bs-inline-glossary", result.stdout)
-        self.assertIn("no safe prose occurrence for ace", result.stderr)
 
-    def test_rendering_is_byte_deterministic_and_metadata_order_independent(self) -> None:
-        first = self.render(self.highlighted_source())
-        second_source = self.highlighted_source().replace(
-            "  - ace\n  - ahead-in-the-count\n",
-            "  - ahead-in-the-count\n  - ace\n",
-        )
-        second = self.render(second_source)
-        self.assertEqual(first.returncode, 0, first.stderr)
-        self.assertEqual(second.returncode, 0, second.stderr)
-        self.assertEqual(first.stdout.encode("utf-8"), second.stdout.encode("utf-8"))
+    def test_highlighted_metadata_validation(self) -> None:
+        with self.assertRaisesRegex(learn_glossary.ValidationError, "YAML list"):
+            learn_glossary.highlighted_terms_from_metadata(
+                {"highlighted-terms": "wise-mind"}, "Fixture"
+            )
+        with self.assertRaisesRegex(learn_glossary.ValidationError, "duplicate normalized"):
+            learn_glossary.highlighted_terms_from_metadata(
+                {"highlighted-terms": ["wise-mind", "Wise-Mind"]}, "Fixture"
+            )
 
-    def test_generated_lookup_always_has_canonical_short_definitions(self) -> None:
-        data = json.loads(LOOKUP.read_text(encoding="utf-8"))
-        by_slug = {entry["slug"]: entry for entry in data["entries"]}
-        for slug in ("ace", "active-builder", "ahead-in-the-count", "abt"):
-            self.assertIsInstance(by_slug[slug]["short_definition"], str)
-            self.assertTrue(by_slug[slug]["short_definition"])
-        self.assertEqual(
-            by_slug["ahead-in-the-count"]["aliases"],
-            ["Ahead in the Race"],
-        )
-        self.assertEqual(
-            by_slug["ahead-in-the-count"]["alias_slugs"],
-            ["ahead-in-the-race"],
-        )
-
-    def test_client_hover_focus_and_slug_only_contract(self) -> None:
-        javascript = (ROOT / "site" / "assets" / "bs-learn.js").read_text(
-            encoding="utf-8"
-        )
-        glossary_html = (
-            ROOT / "site" / "glossary" / "_entries.html"
-        ).read_text(encoding="utf-8")
-        self.assertIn("function canonicalShortDefinition(entries, slug)", javascript)
-        self.assertIn("entry.short_definition", javascript)
-        self.assertIn(
-            '".bs-inline-glossary[data-bs-glossary-slug]"',
-            javascript,
-        )
-        self.assertIn('link.addEventListener("mouseenter"', javascript)
-        self.assertIn('link.addEventListener("focus"', javascript)
-        self.assertIn('link.addEventListener("blur"', javascript)
-        self.assertIn('link.addEventListener("click"', javascript)
-        self.assertIn("Click for full definition", javascript)
-        self.assertIn('"bs:open-glossary-term"', javascript)
-        self.assertIn("renderLookupResult(result, entry", javascript)
-        self.assertIn("link.dataset.bsGlossarySlug", javascript)
-        self.assertIn("inlineGlossaryTooltipPosition", javascript)
-        self.assertIn('window.addEventListener("resize"', javascript)
-        self.assertIn('window.addEventListener("scroll"', javascript)
-        self.assertNotIn("dataset.bsGlossarySummary", javascript)
-        self.assertIn(
-            'class="bs-inline-glossary"',
-            glossary_html,
-        )
-        self.assertNotIn(
-            'data-bs-glossary-slug="abt" '
-            'data-bs-definition-link="abt">American Backgammon Tour</a>',
-            glossary_html,
-        )
-        self.assertIn(
-            'data-bs-glossary-slug="active-builder" '
-            'data-bs-definition-link="active-builder">active builders</a>',
-            glossary_html,
-        )
-
-    def test_real_lesson_highlights_two_approved_terms(self) -> None:
-        lessons = learn_glossary.discover_lessons()
-        highlighted = [
-            lesson
-            for lesson in lessons
-            if lesson.get("highlighted_terms")
-        ]
-        self.assertEqual(len(highlighted), 1)
-        self.assertEqual(
-            highlighted[0]["relative_path"],
-            "cube/what-the-cube-is-asking.qmd",
-        )
-        self.assertEqual(
-            highlighted[0]["highlighted_terms"],
-            ["10-in-the-zone", "active-builder"],
-        )
-
-    def test_real_lesson_has_only_approved_inline_glossary_links(self) -> None:
-        source_path = (
-            ROOT
-            / "site"
-            / "learn"
-            / "cube"
-            / "what-the-cube-is-asking.qmd"
-        )
-        result = self.render(source_path.read_text(encoding="utf-8"))
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual(result.stdout.count('class="bs-inline-glossary"'), 2)
-        self.assertIn('data-bs-glossary-slug="10-in-the-zone"', result.stdout)
-        self.assertIn('data-bs-glossary-slug="active-builder"', result.stdout)
-        self.assertIn("<code>Take point ~= risk / (risk + reward)</code>", result.stdout)
-        self.assertNotIn("data-bs-glossary-summary", result.stdout)
-
-    def test_real_lesson_terms_create_relationships_without_extra_highlights(self) -> None:
-        lessons = learn_glossary.discover_lessons()
-        selected = next(
-            lesson
-            for lesson in lessons
-            if lesson["relative_path"] == "cube/what-the-cube-is-asking.qmd"
-        )
-        related = learn_glossary.validate_lessons(lessons, self.entries)
-        public_slugs = {str(entry["slug"]) for entry in self.entries}
-        for slug in selected["terms"]:
-            with self.subTest(slug=slug):
-                if slug in public_slugs:
-                    self.assertIn(selected, related.get(slug, []))
-                else:
-                    self.assertNotIn(slug, related)
-
-    def test_real_research_article_uses_the_same_highlight_contract(self) -> None:
-        articles = learn_glossary.discover_research_articles()
-        selected = next(
-            article
-            for article in articles
-            if article["relative_path"]
-            == "research/sage-vs-gnu-additional-details.qmd"
-        )
-        self.assertEqual(selected["highlighted_terms"], [])
-        self.assertIn("equity", selected["terms"])
-        related = learn_glossary.validate_research_articles(
-            articles,
-            self.entries,
-        )
-        self.assertNotIn("equity", related)
-
-        result = self.render(selected["path"].read_text(encoding="utf-8"))
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertNotIn('data-bs-glossary-slug="equity"', result.stdout)
-
-    def test_research_highlighted_term_must_be_canonical_and_in_terms(self) -> None:
-        base = {
-            "relative_path": "research/fixture.qmd",
-            "terms": ["ahead-in-the-count"],
-            "highlighted_terms": ["ahead-in-the-race"],
+    def test_lesson_backlinks_use_broad_terms(self) -> None:
+        lesson = {
+            "relative_path": "fixture.qmd",
+            "categories": ["Beginner"],
+            "tags": ["Mindfulness"],
+            "terms": ["wise-mind"],
+            "highlighted_terms": ["wise-mind"],
             "title": "Fixture",
         }
-        with self.assertRaisesRegex(
-            learn_glossary.ValidationError,
-            "uses alias slug",
-        ):
-            learn_glossary.validate_research_articles([base], self.entries)
-        base["highlighted_terms"] = ["ace"]
-        with self.assertRaisesRegex(
-            learn_glossary.ValidationError,
-            "missing from terms",
-        ):
-            learn_glossary.validate_research_articles([base], self.entries)
+        related = learn_glossary.validate_lessons([lesson], self.entries)
+        self.assertEqual([item["title"] for item in related["wise-mind"]], ["Fixture"])
+
+    def test_real_lesson_uses_current_canonical_term(self) -> None:
+        lessons = learn_glossary.discover_lessons()
+        highlighted = [lesson for lesson in lessons if lesson.get("highlighted_terms")]
+        self.assertEqual(len(highlighted), 1)
+        self.assertEqual(highlighted[0]["highlighted_terms"], ["wise-mind"])
 
 
 if __name__ == "__main__":

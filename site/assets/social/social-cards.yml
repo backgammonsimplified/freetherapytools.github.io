@@ -4,29 +4,9 @@ cards:
   width: 1200
   height: 630
   output: site/assets/social/generated/social-default.png
-  title: Backgammon Simplified
-  subtitle: Learn backgammon through clear explanations and useful tools that show
-    why a decision is correct, not just what the right decision is.
+  title: Free Therapy Tools
+  subtitle: Browse practical DBT, CBT, and mindfulness skills in an educational curriculum.
   category: ''
-  visual: ''
-- slug: github-backgammon-simplified
-  kind: github
-  width: 1280
-  height: 640
-  output: site/assets/social/generated/github-backgammon-simplified.png
-  title: Backgammon Simplified
-  subtitle: Question-driven lessons, position analysis and backgammon research.
-  category: ''
-  visual: ''
-- slug: sage-vs-gnu-stage1
-  kind: benchmark
-  width: 1200
-  height: 630
-  output: site/assets/social/generated/social-sage-vs-gnu-stage1.png
-  title: 'Sage vs GNU: Stage 1'
-  subtitle: Results from 20 seven-point matches between Sage and GNU, including match
-    wins, 4ply review, luck estimates, and selected Sage rollouts.
-  category: Sage vs GNU
   visual: ''
 - slug: glossary
   kind: section
@@ -34,16 +14,6 @@ cards:
   height: 630
   output: site/assets/social/generated/social-glossary.png
   title: Therapy Skills Glossary
-  subtitle: A searchable glossary for concepts used throughout Therapy Skill Kit.
+  subtitle: A searchable glossary for concepts used throughout Free Therapy Tools.
   category: Learn
-  visual: ''
-- slug: sage-vs-gnu-additional-details
-  kind: article
-  width: 1200
-  height: 630
-  output: site/assets/social/generated/social-sage-vs-gnu-additional-details.png
-  title: 'Sage vs GNU: Additional Details'
-  subtitle: |
-    Methods, results, and evidence for the Sage versus GNU Stage 1 backgammon engine benchmark.
-  category: Research
   visual: ''

@@ -111,11 +111,6 @@ Use `runRuntimePerformanceBaselineWithIsolation()` when the controller needs
 the same fresh-page navigation isolation. The performance contract, measured
 loads, medians, interaction names, and report schema remain unchanged.
 
-When lesson-analysis changed, also run `runLessonAnalysisBrowserChecks()` from
-`browser/lesson_analysis_browser_check.mjs`. It exercises cube paths, nested
-disclosures, independent instances, checker candidates, missing values, image
-loads, state retention, and overflow at both viewports.
-
 Record helper summaries, failures, console messages, URL, and viewports. If a
 browser controller is unavailable, record this phase as `NOT RUN`, never passed.
 

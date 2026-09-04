@@ -23,7 +23,7 @@ class ToolFinderPassTests(unittest.TestCase):
             if page.parent.name not in {"stop", "sleep-hygiene", "stages-of-change", "urge-surfing"}:
                 self.assertIn(route.replace("/tool-finder/", "/skill-finder/"), legacy)
         self.assertTrue((SITE / "learn/distress-tolerance/stop-crisis-survival.qmd").exists())
-        self.assertIn('/learn/cube/stop-crisis-survival.html', legacy)
+        self.assertNotIn('/learn/cube/', legacy)
 
     def test_static_redirect_pages_include_non_javascript_meta_refresh(self):
         from scripts import bs_post_render
@@ -43,7 +43,7 @@ class ToolFinderPassTests(unittest.TestCase):
             if path.name == "legacy-dispositions.yml" or "_site" in path.parts or ".quarto" in path.parts or path.name == "skill-progress.js":
                 continue
             text = path.read_text(encoding="utf-8", errors="replace")
-            if "/skill-finder/" in text or "/learn/cube/" in text:
+            if "/skill-finder/" in text:
                 offenders.append(str(path.relative_to(ROOT)))
         self.assertEqual(offenders, [])
 

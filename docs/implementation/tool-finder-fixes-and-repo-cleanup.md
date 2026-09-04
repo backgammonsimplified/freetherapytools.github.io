@@ -294,13 +294,13 @@ Do not assume every item in this list still exists. Inventory first.
 
 The root currently contains historical review documents such as:
 
-- `NAVIGATION-PARITY-REVIEW.md`
-- `OVERNIGHT-REVIEW.md`
-- `PHP-MATCH-REVIEW.md`
-- `PROGRESS-SYSTEM-REVIEW.md`
-- `QMD-CONTENT-REVIEW.md`
-- `RESOURCE-PARAPHRASE-REVIEW.md`
-- `VALUES-DICTIONARY-REVIEW.md`
+- `docs/reviews/NAVIGATION-PARITY-REVIEW.md`
+- `docs/reviews/OVERNIGHT-REVIEW.md`
+- `docs/reviews/PHP-MATCH-REVIEW.md`
+- `docs/reviews/PROGRESS-SYSTEM-REVIEW.md`
+- `docs/reviews/QMD-CONTENT-REVIEW.md`
+- `docs/reviews/RESOURCE-PARAPHRASE-REVIEW.md`
+- `docs/reviews/VALUES-DICTIONARY-REVIEW.md`
 
 Do not blindly delete useful project knowledge. Move still-useful historical/internal reviews into an organized location such as `docs/reviews/` or `docs/architecture/`. Delete only reports proven obsolete and superseded with no durable value.
 
