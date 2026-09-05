@@ -41,6 +41,8 @@ Anxiety can create a simple learning loop:
 
 This is one reason anxiety can persist even when avoidance appears to “work.” The behaviour solves the immediate feeling but can block longer-term learning.
 
+![The anxiety and avoidance cycle.](/assets/cbt/anxiety-avoidance-cycle.svg){.img-fluid fig-alt="Anxiety cycle: anxiety leads to avoidance behaviour, which brings short-term relief and reinforces anxiety, making avoidance more likely next time."}
+
 ### Safety behaviour or useful coping? {#safety-behaviour-or-coping}
 
 The same action can sometimes be helpful coping and sometimes function as avoidance. Rather than judging the action by its name, look at its **purpose and effect**.
@@ -86,6 +88,10 @@ A basic exposure practice looks like this:
 7. Repeat the practice so the new learning has a chance to become familiar.
 
 Anxiety may rise, fall, stay uneven, or change from one practice to another. A useful exposure does not require anxiety to reach zero. The more important question is whether you stayed engaged long enough to learn something that avoidance would have prevented you from learning.
+
+![Illustrative anxiety patterns over time.](/assets/cbt/anxiety-over-time.svg){.img-fluid fig-alt="Illustrative anxiety-over-time curves: facing a feared situation may produce a rise and later fall in anxiety, while repeated avoidance and safety behaviours may maintain or increase anxiety over time. Individual experiences vary."}
+
+*This graph is a conceptual illustration, not a prediction of exactly how anxiety will change for any one person.*
 
 ### Worry, anxiety, and action
 
