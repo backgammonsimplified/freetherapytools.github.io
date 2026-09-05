@@ -1,13 +1,15 @@
 ---
 title: "Safety Behaviours & Exposure"
-description: "Identify avoidance and safety behaviours that maintain anxiety."
+description: "Understand safety behaviours, build graded fear ladders, and use behavioural experiments to test anxious predictions."
 sidebar: cbt
 learn-track: cbt-anxiety
 learn-order: 6
 categories:
   - Beginner
 tags:
-  - Checker Play
+  - Anxiety
+  - Exposure
+  - Behavioural Experiments
 terms:
   - exposure
 body-classes: bs-learn-article
@@ -18,52 +20,167 @@ execute:
   enabled: false
 ---
 
-Exposure involves approaching feared situations gradually while reducing behaviours that prevent new learning.
+Week 6 brings together three closely related CBT ideas: **safety behaviours**, **graded exposure or fear ladders**, and **behavioural experiments**. The common goal is to notice what anxiety is teaching you to avoid, approach situations in a planned and safe way, and learn from what actually happens.
+
+A useful theme for the whole lesson is the difference between **short-term relief** and **long-term learning**. Avoidance can reduce anxiety quickly. That relief makes avoidance more likely next time, even when it gets in the way of goals or keeps you from discovering that you can cope.
 
 ## Safety Behaviours {#safety-behaviours}
 
 Safety behaviours are things you do to prevent, escape, hide, or reduce a feared outcome. They can include checking, reassurance seeking, carrying a protective object, staying near exits, rehearsing excessively, distracting from bodily sensations, avoiding eye contact, or relying on another person.
 
-They may bring short-term relief while keeping anxiety going: if the feared outcome does not happen, the safety behaviour gets the credit, so you do not learn that the situation may be safer or more manageable than predicted.
+Safety behaviours are usually attempts to protect yourself. They are not evidence of weakness, and the behaviour itself is not automatically a problem. The important question is **what the behaviour is doing in this situation**.
+
+### The short-term relief loop
+
+Anxiety can create a simple learning loop:
+
+1. **Anxiety rises.** A situation feels threatening, uncertain, embarrassing, uncomfortable, or unsafe.
+2. **Retreat or protect.** You avoid, escape, check, seek reassurance, distract, over-prepare, or use another safety behaviour.
+3. **Relief arrives.** Anxiety often drops in the short term.
+4. **The brain learns to repeat it.** Because the relief followed the avoidance, avoiding can feel even more necessary the next time.
+
+This is one reason anxiety can persist even when avoidance appears to “work.” The behaviour solves the immediate feeling but can block longer-term learning.
+
+### Safety behaviour or useful coping? {#safety-behaviour-or-coping}
+
+The same action can sometimes be helpful coping and sometimes function as avoidance. Rather than judging the action by its name, look at its **purpose and effect**.
+
+Ask:
+
+- Is this helping me **approach** something important, or helping me stay away from it?
+- Is it supporting safety and functioning, or mainly trying to make sure I never feel anxious?
+- What does it do **right now**?
+- What does it teach me **over time**?
+- Does it help me participate in my life, or is it increasingly getting in the way?
+
+A helpful support can make it easier to approach. A safety behaviour that maintains anxiety often becomes something you feel you *must* do before you can approach at all.
 
 ### Review a Safety Behaviour
 
+Choose one behaviour and ask:
+
 - What situation triggers it?
-- What outcome are you trying to prevent?
-- What do you do to feel safer?
-- What does the behaviour cost or prevent you from learning?
-- What small experiment could reduce it safely?
+- What outcome am I trying to prevent?
+- What do I do to feel safer or more certain?
+- What relief do I get in the short term?
+- What might this behaviour cost me in the longer term?
+- What does it prevent me from learning about the situation or about my ability to cope?
+- What small, safe experiment could help me rely on it a little less?
+
+The aim is not to remove every coping strategy. It is to notice when protection has become avoidance and to create opportunities for new learning.
 
 ## Situational Exposure {#situational-exposure}
 
-Exposure means intentionally entering a feared but safe-enough situation, remaining there long enough to learn, and repeating the practice. The aim is new learning and increased ability to cope—not forcing anxiety to disappear on command.
+Exposure means intentionally approaching a feared but safe-enough situation instead of automatically escaping or avoiding it. **Graded exposure** does this in manageable steps rather than jumping immediately to the hardest situation.
 
-1. Predict what you fear will happen and how you would cope.
-2. Choose a manageable step from the ladder.
-3. Enter the situation while reducing safety behaviours where it is safe to do so.
-4. Notice what actually happens, including uncertainty and your ability to stay.
-5. Repeat the step until you have learned what it can teach you, then move to a harder step.
+The goal is not to prove that nothing uncomfortable will ever happen. It is to learn through experience: *What happens when I approach? What can I handle? What do I discover when I stay long enough to find out?*
+
+A basic exposure practice looks like this:
+
+1. Predict what you fear will happen and how you think you would cope.
+2. Choose a manageable step from the fear ladder.
+3. Enter the situation while reducing unnecessary safety behaviours where it is safe to do so.
+4. Allow anxiety and discomfort to be present without treating them as a signal that you must escape.
+5. Notice what actually happens, including what is difficult, what is manageable, and what you are able to do.
+6. Review the experience instead of judging it only by how anxious you felt.
+7. Repeat the practice so the new learning has a chance to become familiar.
+
+Anxiety may rise, fall, stay uneven, or change from one practice to another. A useful exposure does not require anxiety to reach zero. The more important question is whether you stayed engaged long enough to learn something that avoidance would have prevented you from learning.
+
+### Worry, anxiety, and action
+
+It can help to separate related parts of the experience:
+
+- **Worry** is often a thinking process: repeated predictions, “what if” questions, mental rehearsing, or attempts to solve uncertainty in advance.
+- **Anxiety** is the emotional and physical response that may accompany those thoughts.
+- **Avoidance and safety behaviours** are actions that can temporarily reduce the feeling.
+
+CBT can work on more than one part of this cycle. Cognitive strategies can help you examine thinking traps, rigid rules, or perfectionistic predictions. Exposure and behavioural experiments add something different: they let you gather information from direct experience.
 
 ## Exposure / Fear Ladder {#fear-ladder}
 
+A fear ladder turns a large avoided goal into a series of smaller approach steps. The steps are **graded** from easier to harder so that practice is challenging enough to learn from without making the plan unnecessarily overwhelming.
+
 ### Build the Ladder
 
-1. Name the fear or avoided goal.
-2. Brainstorm many specific situations, from easier to harder.
-3. Rate predicted distress for each from 0 to 100.
-4. Order the situations by difficulty. Similar ratings can share a rung.
-5. Choose a starting step that is challenging but workable.
+1. **Name the goal.** What would you like anxiety to interfere with less?
+2. **Brainstorm many specific situations.** Include easier, medium, and harder versions.
+3. **Rate predicted distress.** Use a simple 0–100 estimate for how difficult each situation feels *before* doing it.
+4. **Order the situations.** Put more manageable situations lower on the ladder and harder situations higher. Similar ratings can share a rung.
+5. **Choose a workable starting point.** Start with a step that creates some anxiety but still feels possible to attempt safely.
+6. **Repeat before you leap.** Practice gives you more information than a single attempt. You do not have to rush to the next rung after one try.
 
 ### For Each Rung
 
-- **Situation:** What exactly will you approach?
-- **Predicted fear:** What do you think will happen?
-- **Safety behaviours to reduce:** What will you practise doing differently?
-- **Repetition plan:** When, where, how long, and how often?
-- **Observed result:** What happened, what did not happen, and what did you learn?
+Before and after each practice, record enough information to learn from it:
+
+- **Situation:** What exactly will I approach?
+- **Prediction:** What do I think will happen?
+- **Predicted distress:** How difficult do I expect this to feel?
+- **Safety behaviours to reduce:** What will I practise doing differently?
+- **Plan:** When, where, how long, and how often will I practise?
+- **Observed result:** What actually happened?
+- **Coping:** What did I manage, tolerate, or recover from?
+- **Learning:** What would I want to remember next time?
+
+The purpose of the ladder is not to “win” against anxiety. It is to make approach practice concrete, repeatable, and connected to the life you want to live.
+
+## Behavioural Experiments {#behavioural-experiments}
+
+A behavioural experiment is a planned way to **test an anxious prediction in real life**. Instead of arguing endlessly with a thought, you identify what the thought predicts and gather evidence by trying something safe and observable.
+
+Behavioural experiments are especially useful when a belief sounds like:
+
+- “If I do this, something bad will definitely happen.”
+- “I could not cope if that happened.”
+- “I have to do this safety behaviour or the situation will go badly.”
+- “I need to do this perfectly before I can try.”
+
+The aim is not to force yourself to prove the prediction wrong. An experiment can teach you something even when part of the feared outcome occurs.
+
+### Plan an Experiment
+
+1. **Name the prediction.** Write it clearly enough that you could tell afterward what happened.
+2. **Estimate your expectation.** How strongly do you expect the prediction to come true?
+3. **Choose a safe test.** What small action would give you useful information?
+4. **Identify safety behaviours.** Is there something you normally do that would make it hard to know what the experiment actually showed?
+5. **Run the experiment.** Approach the situation and observe rather than trying to manufacture a particular result.
+6. **Compare prediction with outcome.** What happened? What did not happen? What was different from what you expected?
+7. **Notice coping.** If something uncomfortable did happen, how did you respond? What does that tell you about your ability to cope?
+8. **Update the learning.** What is a more complete or balanced conclusion now?
+9. **Repeat or refine.** One experiment is information, not a final verdict. Decide whether another test would help.
+
+### Review what you did, not only how you felt
+
+After exposure or a behavioural experiment, anxiety can make it tempting to ask only, “How bad did I feel?” Add a second set of questions:
+
+- What did I actually do?
+- What did I predict beforehand?
+- What happened in the situation?
+- What did I handle better than I expected?
+- Did I use less avoidance or fewer safety behaviours?
+- What would I repeat next time?
+- What would I adjust?
+
+Confidence often develops from accumulating experiences of approaching, learning, and coping—not from waiting until you feel completely confident before you begin.
+
+## Bringing the Skills Together {#bringing-the-skills-together}
+
+Safety behaviours, fear ladders, cognitive restructuring, and behavioural experiments can work together.
+
+A practical sequence is:
+
+1. **Notice the pattern.** What am I avoiding, escaping, checking, rehearsing, or protecting against?
+2. **Look at the function.** Is the behaviour helping me approach life, or mainly helping me avoid anxiety?
+3. **Identify the prediction.** What am I afraid will happen?
+4. **Check the thinking.** Are thinking traps, perfectionistic rules, or overestimates of danger shaping the prediction?
+5. **Choose an approach step.** Use a fear ladder when the larger goal needs to be broken into graded steps.
+6. **Test and observe.** Use exposure or a behavioural experiment to learn from experience.
+7. **Review short term and long term.** What gave immediate relief? What helped build longer-term freedom, confidence, or coping?
+8. **Repeat.** New learning usually becomes stronger through practice rather than through a single successful attempt.
 
 ::: {.callout-caution title="Use appropriate support"}
-Exposure is for feared situations that are safe enough to approach. Do not use it to enter genuine danger. Seek professional guidance for trauma memories, severe symptoms, medical risks, or exposures that could put you or someone else at risk.
+Exposure and behavioural experiments are for situations that are safe enough to approach. They are not instructions to ignore genuine danger, medical limitations, coercion, or other real risks. Seek professional guidance for trauma memories, severe symptoms, medical risks, or practices that could put you or someone else at risk.
 :::
 
 <!-- section-scan-resources:start -->
