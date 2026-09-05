@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative anxiety patterns over time</title>
+  <desc id="desc">A conceptual graph with anxiety on the vertical axis and time on the horizontal axis. A facing-fears curve rises and then falls, a baseline curve rises moderately and settles, and an avoidance or safety-behaviour curve rises, dips somewhat, and then trends upward.</desc>
+  <rect width="1400" height="820" fill="#fbfaf6"/>
+
+  <g stroke="#17365f" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M105 690 V82"/>
+    <path d="M105 690 H1325"/>
+    <path d="M105 82 l-17 25 M105 82 l17 25"/>
+    <path d="M1325 690 l-25-17 M1325 690 l-25 17"/>
+  </g>
+
+  <text x="715" y="766" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" fill="#17365f">Time</text>
+  <text x="47" y="400" text-anchor="middle" transform="rotate(-90 47 400)" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" fill="#17365f">Anxiety</text>
+
+  <path d="M110 670 C180 650 220 565 270 430 C330 260 390 175 470 195 C545 215 565 310 645 415 C735 535 820 600 910 640 C1030 690 1170 680 1300 668" fill="none" stroke="#178ad9" stroke-width="12" stroke-linecap="round"/>
+  <path d="M470 195 C545 215 565 310 645 415 C735 535 820 600 910 640 C1030 690 1170 680 1300 668" fill="none" stroke="#2fb765" stroke-width="12" stroke-linecap="round"/>
+
+  <path d="M110 670 C180 650 225 585 285 495 C345 405 405 355 475 370 C540 385 575 430 650 445 C780 470 930 430 1060 350 C1180 275 1265 180 1320 95" fill="none" stroke="#ec2946" stroke-width="12" stroke-linecap="round"/>
+
+  <path d="M110 670 C180 655 225 610 285 535 C350 455 410 420 480 435 C560 452 625 520 710 555 C825 600 970 592 1300 585" fill="none" stroke="#e3aa18" stroke-width="11" stroke-linecap="round"/>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    <text x="445" y="150" font-size="37" fill="#178b68">Facing fears / riding the wave</text>
+    <path d="M430 160 C410 164 398 177 394 193" fill="none" stroke="#178b68" stroke-width="4"/>
+
+    <text x="760" y="115" font-size="37" fill="#ec2946">Avoidance cycle / safety behaviours</text>
+    <path d="M1205 124 C1230 130 1241 147 1246 170" fill="none" stroke="#ec2946" stroke-width="4"/>
+
+    <text x="905" y="526" font-size="37" fill="#d59900">Baseline</text>
+    <path d="M895 536 C870 544 850 560 845 582" fill="none" stroke="#d59900" stroke-width="4"/>
+  </g>
+
+  <g fill="#17365f">
+    <circle cx="465" cy="193" r="11"/>
+    <circle cx="1060" cy="350" r="11"/>
+  </g>
+
+  <g stroke="#17365f" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M445 205 l-14 39 31 21 20 36"/>
+    <path d="M438 244 l-32 29"/>
+    <path d="M461 265 l34-5"/>
+    <path d="M1038 362 l-11 34 30 19 18 32"/>
+    <path d="M1033 395 l-26 26"/>
+    <path d="M1057 414 l32-4"/>
+  </g>
+
+  <text x="700" y="800" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#5d675f">Conceptual illustration only — individual anxiety patterns vary.</text>
+</svg>
