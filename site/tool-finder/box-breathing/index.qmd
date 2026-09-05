@@ -30,7 +30,9 @@ execute:
 }
 
 #box-breathing-app .skill-app-footer,
-#box-breathing-app [data-skill-progress-final] {
+#box-breathing-app [data-skill-progress-final],
+#box-breathing-app [data-skill-progress-open],
+body:has(#box-breathing-app) [data-skill-progress-floating] {
   display: none !important;
 }
 </style>
