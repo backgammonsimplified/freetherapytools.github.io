@@ -1,0 +1,21 @@
+---
+title: "DEAR FAST Script Builder"
+description: "Build a self-respect-priority request using DEAR plus FAST."
+sidebar: tool-finder
+page-layout: full
+toc: false
+---
+
+Use this tool when **self-respect, values, or personal integrity are the main priority**. DEAR organizes what you want to say; FAST helps you say it while protecting self-respect: **Fair, no unnecessary Apologies, Stick to values, Truthful**.
+
+If your main priority is a concrete objective, use **[DEAR MAN](/tool-finder/dear-man/)**. If your main priority is strengthening the relationship, use **[DEAR GIVE](/tool-finder/dear-give/)**.
+
+Keep the script factual, respectful, and truthful. Self-respect does not require aggression; it means communicating in a way you can stand behind afterward.
+
+Your entries remain on this device unless you choose to download a file. Save the Markdown (`.md`) file to resume later; export DOCX or print/save as PDF for a readable copy.
+
+[Learn how DEAR, MAN, GIVE, and FAST relate](/learn/interpersonal-effectiveness/dear-man.html#choose-the-priority)
+
+::: {#dear-fast-app .skill-app data-practice-app="dear-fast"}
+Loading DEAR FAST Script Builder…
+:::
