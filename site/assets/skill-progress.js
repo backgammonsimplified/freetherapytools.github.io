@@ -17,6 +17,8 @@
     "missing-links": "/tool-finder/missing-links/",
     exposure: "/tool-finder/exposure/",
     "dear-man": "/tool-finder/dear-man/",
+    "dear-give": "/tool-finder/dear-give/",
+    "dear-fast": "/tool-finder/dear-fast/",
     "ask-or-say-no": "/tool-finder/ask-or-say-no/",
     "goal-builder": "/tool-finder/goal-builder/",
     "behavioural-activation": "/tool-finder/behavioural-activation/",
@@ -47,7 +49,7 @@
 
   let active = null;
   let autosaveTimer = null;
-  let restoreFocus = null;
+  const SAVE_HELP = "You can save your progress by downloading the Markdown (.md) file below. For a readable copy to print or share, download DOCX or choose Print / Save as PDF in your browser. To resume your progress later, upload the .md file.";
 
   function routeForTool(toolId, fallbackRoute = "") {
     if (TOOL_ROUTES[toolId]) return TOOL_ROUTES[toolId];
@@ -254,27 +256,17 @@
     ensurePageControls();
   }
 
-  function openDrawer(trigger) {
-    restoreFocus = trigger || document.activeElement;
-    const record = currentRecord();
-    active.filename.value = active.config.getSaveFilename?.(record) || localFilename(active.config.toolId);
-    active.backdrop.hidden = false;
-    active.drawer.hidden = false;
-    document.body.classList.add("skill-progress-dialog-open");
-    active.filename.focus();
+  function openDrawer() {
+    ensurePageControls();
+    active.area.open = true;
+    active.area.scrollIntoView({ block: "nearest" });
+    active.filename.focus({ preventScroll: true });
   }
 
   function closeDrawer() {
-    if (!active || active.drawer.hidden) return;
-    active.drawer.hidden = true;
-    active.backdrop.hidden = true;
-    document.body.classList.remove("skill-progress-dialog-open");
-    restoreFocus?.focus?.();
-  }
-
-  function openFilePicker() {
-    active.fileInput.value = "";
-    active.fileInput.click();
+    if (!active?.area) return;
+    active.area.open = false;
+    active.area.querySelector("summary").focus();
   }
 
   async function loadFile(file) {
@@ -305,7 +297,8 @@
     active.config.setState(clone(checked.state));
     if (active.config.browserAutosave !== false) saveDraftNow();
     setMessage("Progress restored. You can continue where you left off.");
-    closeDrawer();
+    ensurePageControls();
+    active.area.open = true;
   }
 
   function showWrongTool(record) {
@@ -467,18 +460,17 @@
   }
 
   function buildUi(config) {
-    const backdrop = element("div", { className: "skill-progress-backdrop" });
-    backdrop.hidden = true;
-    const drawer = element("aside", { className: "skill-progress-drawer", attrs: { role: "dialog", "aria-modal": "true", "aria-labelledby": "skill-progress-heading" } });
-    drawer.hidden = true;
-    const heading = element("h2", { text: "Save progress", attrs: { id: "skill-progress-heading" } });
+    const area = element("details", { className: "skill-progress-final", attrs: { "data-skill-progress-final": "" } });
+    area.append(element("summary", { text: config.finalHeading || "Save your work" }));
+    const drawer = element("div", { className: "skill-progress-content" });
+    area.append(drawer);
     const filenameLabel = element("label", { text: "File name", attrs: { for: "skill-progress-filename" } });
     const filename = element("input", { type: "text", attrs: { id: "skill-progress-filename", autocomplete: "off", maxlength: "100" } });
     if (config.getSaveFilename) filename.readOnly = true;
     const saveActions = element("div", { className: "skill-progress-actions" });
     const saveMarkdown = element("button", { type: "button", text: "Save progress (.md)" });
     saveActions.append(saveMarkdown);
-    const markdownHelp = element("p", { className: "skill-progress-help", text: "Recommended. You can reopen this Markdown file later and continue." });
+    const markdownHelp = element("p", { className: "skill-progress-help", text: SAVE_HELP });
 
     const openSection = element("section");
     openSection.append(element("h3", { text: "Open previous progress" }));
@@ -507,19 +499,33 @@
       lastSavedText = element("strong", { text: "Not yet saved" });
       savedLine.append(lastSavedText);
       clearButton = element("button", { type: "button", text: "Clear browser progress" });
-      browserSection.append(savedLine, clearButton);
+      const restore = element("button", { type: "button", text: "Restore browser progress" });
+      restore.addEventListener("click", () => {
+        const draft = readDraft();
+        if (!draft) return setMessage("No compatible browser progress is available.", true);
+        active.config.setState(clone(draft.state));
+        ensurePageControls();
+        active.area.open = true;
+        setMessage("Browser progress restored.");
+      });
+      browserSection.append(savedLine, restore, clearButton);
     }
 
     const privacySection = element("section");
     privacySection.append(element("h3", { text: "Privacy" }), element("p", { className: "skill-progress-privacy", text: config.privacyText || "Your progress stays on this device unless you save a copy to your computer. Nothing you enter here is uploaded." }));
     const message = element("p", { className: "skill-progress-status", attrs: { role: "status", "aria-live": "polite" } });
     const close = element("button", { type: "button", text: "Close" });
-    drawer.append(heading, filenameLabel, filename, saveActions, markdownHelp);
+    drawer.append(markdownHelp, filenameLabel, filename, saveActions);
     if (config.showOpenPreviousProgress !== false) drawer.append(openSection);
     drawer.append(exportSection);
     if (browserSection) drawer.append(browserSection);
     drawer.append(privacySection, message, close);
-    document.body.append(backdrop, drawer);
+    if (config.showFinalStartAgain !== false) {
+      const restart = element("button", { className: "secondary", type: "button", text: "Start again" });
+      restart.addEventListener("click", startOver);
+      drawer.append(restart);
+    }
+    filename.value = localFilename(config.toolId);
 
     saveMarkdown.addEventListener("click", () => saveFile("md"));
     saveJson.addEventListener("click", () => saveFile("json"));
@@ -528,53 +534,20 @@
     print.addEventListener("click", printSummary);
     clearButton?.addEventListener("click", () => clearDraft(true));
     close.addEventListener("click", closeDrawer);
-    backdrop.addEventListener("click", closeDrawer);
     drawer.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") closeDrawer();
-      if (event.key !== "Tab") return;
-      const focusable = [...drawer.querySelectorAll('button:not([disabled]), input:not([disabled]), [href], [tabindex]:not([tabindex="-1"])')];
-      if (!focusable.length) return;
-      const first = focusable[0];
-      const last = focusable.at(-1);
-      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
-      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      if (event.key === "Escape") { event.preventDefault(); closeDrawer(); }
     });
-    return { backdrop, drawer, filename, fileInput, wrongTool, lastSavedText, clearButton, message };
+    return { area, drawer, filename, fileInput, wrongTool, lastSavedText, clearButton, message };
   }
 
   function ensurePageControls() {
     if (!active) return;
-    const header = active.config.root.querySelector(".skill-app-header");
-    if (active.config.showOpenPreviousProgress !== false && header && !header.querySelector("[data-skill-progress-open]")) {
-      const heading = header.querySelector("h2");
-      if (heading) {
-        const row = element("div", { className: "skill-progress-title-row" });
-        heading.before(row);
-        row.append(heading);
-        const open = element("button", { className: "secondary skill-progress-open", type: "button", text: "Open previous progress", attrs: { "data-skill-progress-open": "" } });
-        open.addEventListener("click", () => { openDrawer(open); openFilePicker(); });
-        row.append(open);
-      }
-    }
-    const footer = active.config.root.querySelector(".skill-app-footer") || active.config.root.querySelector(".skill-app-shell");
-    if (footer && !active.config.root.querySelector("[data-skill-progress-final]")) {
-      const area = element("section", { className: "skill-progress-final", attrs: { "data-skill-progress-final": "" } });
-      area.append(element("h3", { text: active.config.finalHeading || "Save your work" }));
-      const actions = element("div", { className: "skill-progress-final-actions" });
-      const md = element("button", { type: "button", text: "Save progress (.md)" });
-      const docx = element("button", { type: "button", text: "Export DOCX" });
-      const print = element("button", { type: "button", text: "Print / Save as PDF" });
-      md.addEventListener("click", () => saveFile("md"));
-      docx.addEventListener("click", exportDocx);
-      print.addEventListener("click", printSummary);
-      actions.append(md, docx, print);
-      if (active.config.showFinalStartAgain !== false) {
-        const restart = element("button", { className: "secondary", type: "button", text: "Start again" });
-        restart.addEventListener("click", startOver);
-        actions.append(restart);
-      }
-      area.append(element("p", { text: "Recommended. You can reopen this Markdown file later and continue." }), actions);
-      footer.append(area);
+    // Reattach the same disclosure after a tool rerenders, preserving its open state.
+    if (active.config.getSaveFilename) active.filename.value = active.config.getSaveFilename(currentRecord()) || localFilename(active.config.toolId);
+    const footer = active.config.root.querySelector(".skill-app-footer") || active.config.root.querySelector(".skill-app-shell") || active.config.root;
+    if (!active.config.root.contains(active.area)) {
+      if (footer.matches(".skill-app-footer")) footer.after(active.area);
+      else footer.append(active.area);
     }
   }
 
@@ -590,19 +563,12 @@
     if (active && active.config.root !== config.root) {
       global.clearTimeout(autosaveTimer);
       active.observer?.disconnect();
-      active.floating?.remove();
-      active.backdrop?.remove();
-      active.drawer?.remove();
+      active.area?.remove();
       active = null;
     }
     if (active?.observer) active.observer.disconnect();
+    active?.area?.remove();
     active = { config, initialState: clone(config.getState()), lastSaved: null, ...buildUi(config) };
-    if (config.showFloating !== false) {
-      const floating = element("button", { className: "skill-progress-floating", type: "button", text: "Save progress", attrs: { "data-skill-progress-floating": "", "aria-haspopup": "dialog" } });
-      floating.addEventListener("click", () => openDrawer(floating));
-      document.body.append(floating);
-      active.floating = floating;
-    }
     if (config.browserAutosave !== false) {
       config.root.addEventListener("input", scheduleDraft);
       config.root.addEventListener("change", scheduleDraft);
@@ -620,7 +586,7 @@
     ensurePageControls();
     updateDraftUi();
     consumeHandoff();
-    return { notifyChange: scheduleDraft, saveDraft: saveDraftNow, open: () => openDrawer(active.floating) };
+    return { notifyChange: scheduleDraft, saveDraft: saveDraftNow, open: () => openDrawer() };
   }
 
   function nonEmptySections(title, sections) {

@@ -7,9 +7,7 @@ learn-order: 3
 categories:
   - Beginner
 tags:
-  - Interpersonal Effectiveness
-  - Assertiveness
-  - DEAR MAN
+  - Checker Play
 terms:
   - dear-man
 body-classes: bs-learn-article
@@ -30,7 +28,7 @@ How you communicate affects whether another person can understand what you want,
 
 **Passive communication** hides, softens, or withholds needs, preferences, limits, and opinions. It can look like staying quiet, agreeing when you do not agree, or hoping the other person will notice what you need without being told.
 
-The problem is that other people may genuinely **not know what you want, how strongly you feel, or how important the issue is**. If a request is never made clearly, the other person may not understand that action is needed or may not take the issue seriously.
+The problem is that other people may **not know what you want, how strongly you feel, or how important the issue is**. If a request is never made clearly, the other person may not understand that action is needed or may not take the issue seriously.
 
 ### Aggressive
 
@@ -42,7 +40,7 @@ Aggressive communication often makes the other person **defensive**, which can s
 
 **Passive-aggressive communication** expresses resistance, resentment, or anger indirectly instead of stating the concern or request clearly. The words and the intended message may not match.
 
-It can combine the ambiguity of passive communication with the hostility of aggressive communication—the **worst of both worlds**. The other person may be left confused about what is wanted while still feeling criticized or punished.
+It can combine the unclear communication of passivity with the hostility or resentment of aggression. The other person may be left confused about what is wanted while still feeling criticized or punished.
 
 ### Assertive
 
@@ -58,7 +56,7 @@ Assertiveness gives the other person enough information to understand the situat
 
 Before writing a script, ask: **What matters most in this interaction?** The same situation can involve more than one goal, but choosing the main priority helps you select the right interpersonal skill.
 
-- **Objective priority:** you mainly need a concrete result. Use **DEAR MAN**. Example: asking a landlord to arrange repair of a broken sink. The important outcome is getting the sink fixed; the landlord relationship itself is not the main goal.
+- **Objective priority:** you mainly need a concrete result. Use **[DEAR MAN](/tool-finder/dear-man/)**. Example: asking a landlord to arrange repair of a broken sink. The important outcome is getting the sink fixed; the landlord relationship itself is not the main goal.
 - **Relationship priority:** the important goal is closeness, connection, or preserving the relationship. Use **[DEAR GIVE](/tool-finder/dear-give/)**. Example: asking a partner to say good morning when the real priority is feeling connected, rather than simply obtaining the words "good morning."
 - **Self-respect priority:** the important goal is acting consistently with your values and protecting self-respect. Use **[DEAR FAST](/tool-finder/dear-fast/)**. Example: responding when someone says that people with mental-health concerns are weak and the main priority is standing up for your values rather than obtaining a particular practical result.
 
@@ -127,7 +125,11 @@ Negotiation might mean adjusting timing, dividing a task differently, suggesting
 Suppose you told your landlord that the sink was broken a week ago. You were told it would be fixed soon, but you have not received an update and the sink still does not work.
 
 **Situation — What is going on?**  
-I told my landlord the sink was broken a week ago, and it still has not been fixed.
+I previously told my landlord the sink was broken, and it has been a week and it still has not been fixed.
+
+**Objective — What result do I want?**
+
+Have the repair scheduled promptly and receive a clear update about when it will happen.
 
 **Describe**  
 I told you one week ago that the sink was broken. You said it would be fixed soon, and I asked for an update about when you or a plumber would come. I have not heard back, and the sink is still not fixed.
@@ -185,6 +187,8 @@ A useful DEAR MAN draft can include:
 
 [Build a DEAR MAN script](/tool-finder/dear-man/)
 
+**Free Therapy Tools DEAR MAN Script Worksheet:** [Download editable DOCX](/resources/interpersonal-effectiveness/dear-man-script-worksheet.docx) · [Download printable PDF](/resources/interpersonal-effectiveness/dear-man-script-worksheet.pdf). This original practice material uses project-written prompts and generous writing space; it is separate from the source transcriptions below.
+
 ## Source Transcriptions {#source-transcriptions}
 
 The blocks below preserve the wording and organization of the supplied learning materials. They are separated from the Free Therapy Tools explanation above so the source text and the adaptation are easy to distinguish.
@@ -192,6 +196,8 @@ The blocks below preserve the wording and organization of the supplied learning 
 ### Interpersonal Effectiveness Handout 5 — Part 1 {#handout-5-part-1}
 
 > **Guidelines for Objectives Effectiveness: Getting What You Want (DEAR MAN)**
+>
+> Interpersonal Effectiveness Handout 5 (p. 1 of 2). (Interpersonal Effectiveness Worksheets 4, 5.)
 >
 > A way to remember these skills is to remember the term **DEAR MAN**:
 >
@@ -223,11 +229,17 @@ The blocks below preserve the wording and organization of the supplied learning 
 > If necessary, also clarify the negative consequences of not getting what you want or need.  
 > “I would be so relieved, and a lot easier to live with, if you do that.”  
 > Remember also to reward desired behavior after the fact.
+>
+> (continued on next page)
+>
+> From DBT Skills Training Handouts and Worksheets, Second Edition by Marsha M. Linehan. Copyright 2015 by Marsha M. Linehan. Permission to photocopy this handout is granted to purchasers of DBT Skills Training Handouts and Worksheets, Second Edition, and DBT Skills Training Manual, Second Edition, for personal use and use with individual clients only. (See page ii of this packet for details.)
 
 *Source: Interpersonal Effectiveness Handout 5 (1 of 2), “Guidelines for Objectives Effectiveness: Getting What You Want (DEAR MAN),” DBT Skills Training Handouts and Worksheets, 2nd ed., supplied by the user and cross-checked against the matched clean resource in this project.*
 
 ### Interpersonal Effectiveness Handout 5 — Part 2 {#handout-5-part-2}
 
+> Interpersonal Effectiveness Handout 5, p. 2 of 2.
+>
 > **(Stay) Mindful**  
 > Keep your focus **ON YOUR GOALS**.  
 > Maintain your position. Don’t be distracted. Don’t get off the topic.
@@ -299,6 +311,8 @@ The blocks below preserve the wording and organization of the supplied learning 
 > Example: “Let’s stop talking about this now. I’m not going to change my mind, and I think this is just going to get frustrating for both of us,” or “OK, I can see you don’t want to do this, so let’s see if we can come up with something that will make you more willing to do it.”
 >
 > Not: “If you don’t do this for me, I’ll never do anything for you ever again,” “If you keep asking me, I’ll get a restraining order against you,” “Gosh, you must be a terrible person for not doing this/for asking me to do this.”
+>
+> From DBT Skills Training Handouts and Worksheets, Second Edition by Marsha M. Linehan. Copyright 2015 by Marsha M. Linehan. Permission to photocopy this handout is granted to purchasers of DBT Skills Training Handouts and Worksheets, Second Edition, and DBT Skills Training Manual, Second Edition, for personal use and use with individual clients only. (See page ii of this packet for details.)
 
 *Source: Interpersonal Effectiveness Handout 5A, “Applying DEAR MAN Skills to a Difficult Current Interaction,” DBT Skills Training Handouts and Worksheets, 2nd ed., supplied by the user and cross-checked against the matched clean resource in this project.*
 
@@ -421,7 +435,7 @@ The full readable transcription is integrated in [Interpersonal Effectiveness Ha
 
 #### Native Version
 
-The corrupted OCR previously shown here has been replaced by the readable transcription in [DEAR MAN Script Practice Worksheet](#dear-man-script-source) above.
+Read the complete text in [DEAR MAN Script Practice Worksheet](#dear-man-script-source) above.
 ::::
 
 <!-- section-scan-resources:end -->

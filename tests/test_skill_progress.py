@@ -47,7 +47,7 @@ class SkillProgressTests(unittest.TestCase):
             self.assertIn(label, PROGRESS)
         self.assertIn("Your progress stays on this device unless you save a copy to your computer.", PROGRESS)
         self.assertIn("Nothing you enter here is uploaded.", PROGRESS)
-        self.assertGreaterEqual(PROGRESS.count("showOpenPreviousProgress !== false"), 2)
+        self.assertEqual(PROGRESS.count("showOpenPreviousProgress !== false"), 1)
 
     def test_every_app_family_registers_validated_state_and_readable_export(self):
         values = (ASSETS / "skill-apps.js").read_text(encoding="utf-8")
@@ -78,7 +78,7 @@ class SkillProgressTests(unittest.TestCase):
         self.assertNotIn("innerHTML", PROGRESS)
 
     def test_accessibility_mobile_and_print_contract(self):
-        for token in ('role: "dialog"', '"aria-modal": "true"', 'aria-live', 'event.key === "Escape"', 'prefers-reduced-motion'):
+        for token in ('element("details"', 'element("summary"', 'aria-live', 'event.key === "Escape"'):
             self.assertIn(token, PROGRESS + CSS)
         self.assertIn("@media (max-width: 575.98px)", CSS)
         self.assertIn("box-sizing: border-box", CSS)
@@ -95,8 +95,8 @@ class SkillProgressTests(unittest.TestCase):
     def test_progress_actions_use_modern_shared_button_styling(self):
         self.assertIn("border-radius: 999px", CSS)
         self.assertIn("box-shadow:", CSS)
-        self.assertIn("transform: translateY(-1px)", CSS)
-        self.assertIn(".skill-progress-open:focus-visible", CSS)
+        self.assertNotIn("position: fixed", CSS)
+        self.assertIn(".skill-progress-final :focus-visible", CSS)
 
     def test_normal_learn_sources_do_not_contain_progress_controls(self):
         labels = ("Open previous progress", "Save progress", "skill-progress-drawer")

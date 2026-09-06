@@ -517,7 +517,17 @@ def validate_sitemap_origin(
     return len(locations)
 
 
+def ensure_listing_index(output_root: Path = OUTPUT_ROOT) -> bool:
+    """Quarto category badges request this even in builds with no listing pages."""
+    path = output_root / "listings.json"
+    if path.exists():
+        return False
+    path.write_text("[]\n", encoding="utf-8", newline="\n")
+    return True
+
+
 def main() -> int:
+    ensure_listing_index()
     mode, mode_config = publication_mode(PUBLICATION)
     print(f"Applying {mode} publication indexing.")
     glossary_feed_count = augment_updates_rss_feed()

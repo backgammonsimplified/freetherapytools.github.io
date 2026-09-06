@@ -4,7 +4,7 @@
   const escapeHtml = (value) => String(value ?? "")
     .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;").replaceAll("'", "&#039;");
-  const Progress = typeof window !== "undefined" ? window.TherapySkillProgress : null;
+  const Progress = typeof window !== "undefined" ? window.TherapySkillProgress : require("./skill-progress.js");
   const SharedCalendar = typeof window !== "undefined" ? window.TherapyCalendar : require("./therapy-calendar.js");
   const Site = typeof window !== "undefined" && window.TherapySite ? window.TherapySite : { path: (value) => value };
 
@@ -32,18 +32,6 @@
         ["environment", "Did the environment, timing, resources, or another person get in the way?"],
         ["next", "What link could I repair before the next opportunity?"],
       ], links: LINKS.missing,
-    },
-    "dear-man": {
-      title: "DEAR MAN Builder",
-      intro: "Enter your own words. The summary preserves them without adding persuasion language.",
-      fields: [
-        ["describe", "Describe — What are the observable facts?"], ["express", "Express — What do I feel or think?"],
-        ["assert", "Assert — What am I asking for or saying no to?"], ["reinforce", "Reinforce — What positive outcome could follow?"],
-        ["mindful", "Mindful — What will help me stay with my objective?"], ["appear", "Appear Confident — What posture or tone fits?"],
-        ["negotiate", "Negotiate — Where can I be flexible?"],
-      ],
-      legacyKeys: ["gentle", "interested", "validate", "easy", "fair", "apologies", "values", "truthful"],
-      links: LINKS.dear,
     },
     "ask-or-say-no": {
       title: "Ask or Say No Planner",
@@ -94,6 +82,140 @@
       ], links: LINKS.review,
     },
   };
+
+  const DEAR_FIELDS = [
+    ["describe", "Describe — What are the observable facts?"],
+    ["express", "Express — What do I feel or think?"],
+    ["assert", "Assert — What am I clearly asking for?"],
+    ["reinforce", "Reinforce — Why would cooperation help?"],
+  ];
+  const DEAR_DEFINITIONS = {
+    "dear-man": {
+      title: "DEAR MAN Script Builder", approach: "MAN — How I say it", goal: "Objective — What result do you want?",
+      fields: [["mindful", "Mindful — What phrase will I return to?"], ["appear", "Appear Confident — How do I want to present myself?"], ["negotiate", "Negotiate — What workable alternatives could I offer?"]],
+      help: "Use calm, steady delivery and a clear voice. Avoid apologizing for a reasonable request. Return to it instead of backing away simply because the other person pushes back.",
+      examples: {
+        situation: "I previously told my landlord the sink was broken, and it has been a week and it still has not been fixed.",
+        objective: "Have the repair scheduled promptly and receive a clear update about when it will happen.",
+        describe: "I told you one week ago that the sink was broken. You said it would be fixed soon, and I asked for an update about when you or a plumber would come. I have not heard back, and the sink is still not fixed.",
+        express: "I feel frustrated and overlooked because it is difficult to manage daily life without a working sink.",
+        assert: "I need the repair to be scheduled within the next day.",
+        reinforce: "If the repair is scheduled promptly, the sink is less likely to get worse and the issue can be resolved before it becomes more disruptive or expensive.",
+        mindful: "I understand there may be delays, but I still need the repair to be scheduled within the next day.",
+        appear: "I am asking clearly because this issue needs attention, and I need a concrete update today.",
+        negotiate: "If scheduling is difficult on your end, I can send you a few plumber options so the repair can be arranged more quickly.",
+      }, learn: "dear-man",
+    },
+    "dear-give": {
+      title: "DEAR GIVE Script Builder", approach: "GIVE — How I support the relationship", goal: "Relationship goal — What connection do I want to strengthen?",
+      fields: [["gentle", "Gentle — How can I keep my wording and tone kind?"], ["interested", "Interested — How will I listen and make room for their perspective?"], ["validate", "Validate — What can I acknowledge about their experience?"], ["easy", "Easy manner — What would make this conversation feel more comfortable?"]],
+      help: "GIVE changes how you approach the interaction when preserving or strengthening the relationship is your main concern. Listen without interrupting; acknowledging a feeling does not require agreeing with every claim.",
+      examples: { situation: "My partner and I often start the day without greeting each other.", objective: "Feel more connected at the start of the day.", describe: "We have started several mornings without saying hello.", express: "I miss feeling connected with you in the morning.", assert: "Could we take a moment to say good morning?", reinforce: "That small moment would help me feel close to you.", gentle: "Use a warm voice without blame.", interested: "Ask what mornings have been like for you, and listen.", validate: "I know you often have a lot on your mind first thing.", easy: "Choose a relaxed moment and keep the request simple." }, learn: "give",
+    },
+    "dear-fast": {
+      title: "DEAR FAST Script Builder", approach: "FAST — How I protect self-respect", goal: "Self-respect goal — What values or boundaries do I want to honour?",
+      fields: [["fair", "Fair — How can I be fair to myself and the other person?"], ["apologies", "No unnecessary Apologies — Am I apologizing for a reasonable need or boundary?"], ["values", "Stick to values — What matters to me here?"], ["truthful", "Truthful — Is my wording accurate and free of exaggeration?"]],
+      help: "No unnecessary Apologies means avoiding apology for existing, reasonable needs, appropriate boundaries, or having an opinion. Apologize when an apology is warranted, including when you have caused harm or made a mistake.",
+      examples: { situation: "Someone made a demeaning statement about people with mental-health concerns.", objective: "Stand up for dignity and speak in a way I can respect afterward.", describe: "You described people with mental-health concerns as weak.", express: "I disagree, and I find that description hurtful.", assert: "Please discuss this without putting people down.", reinforce: "That would make it easier for us to have a respectful conversation.", fair: "I can disagree without insulting you or dismissing my own concern.", apologies: "I do not need to apologize for having this opinion.", values: "Dignity and respect matter to me.", truthful: "Describe the words I heard without claiming to know your motives." }, learn: "fast",
+    },
+  };
+  const DEAR_PROMPT = `Help me brainstorm a DEAR MAN script.
+
+My main priority is getting an objective met.
+
+Situation:
+[describe the situation]
+
+Objective:
+[what I want]
+
+Please suggest concise, respectful options for:
+- Describe
+- Express
+- Assert
+- Reinforce
+- Mindful
+- Appear Confident
+- Negotiate
+
+Keep all suggestions factual, truthful and non-manipulative.
+Do not use threats, guilt, deception or pressure tactics.
+Give me several options rather than deciding what I should say.
+Finish with one example of how the pieces could sound when spoken naturally as a script.
+I will edit the ideas myself.`;
+
+  function dearFields(toolId) {
+    const definition = DEAR_DEFINITIONS[toolId];
+    return [["situation", "Situation — What is going on?"], ["objective", definition.goal], ...DEAR_FIELDS, ...definition.fields, ["finalScript", "Final combined script"]];
+  }
+
+  function combineDear(fields) {
+    return DEAR_FIELDS.map(([key]) => fields[key]?.trim()).filter(Boolean).join(" ");
+  }
+
+  function normalizeDearState(toolId, next = {}) {
+    const fields = Object.fromEntries(dearFields(toolId).map(([key]) => [key, next.fields?.[key] || ""]));
+    // Older MAN files stored seven fields and a summary flag, with optional GIVE/FAST keys.
+    if (next.summaryBuilt && next.fields?.finalScript === undefined) fields.finalScript = combineDear(fields);
+    return { fields, summaryBuilt: Boolean(next.summaryBuilt) };
+  }
+
+  function dearStateValid(toolId, next) {
+    if (!Progress.isPlainObject(next) || !Progress.isPlainObject(next.fields) || typeof next.summaryBuilt !== "boolean" || !Object.keys(next).every((key) => ["fields", "summaryBuilt"].includes(key))) return false;
+    const keys = dearFields(toolId).map(([key]) => key);
+    const legacy = toolId === "dear-man" ? ["gentle", "interested", "validate", "easy", "fair", "apologies", "values", "truthful"] : [];
+    const required = toolId === "dear-man" ? [...DEAR_FIELDS, ...DEAR_DEFINITIONS[toolId].fields].map(([key]) => key) : keys;
+    return required.every((key) => typeof next.fields[key] === "string") && Object.entries(next.fields).every(([key, value]) => [...keys, ...legacy].includes(key) && typeof value === "string");
+  }
+
+  function dearSummary(toolId, next) {
+    const state = normalizeDearState(toolId, next);
+    return Progress.nonEmptySections(DEAR_DEFINITIONS[toolId].title, dearFields(toolId).map(([key, label]) => [label, state.fields[key]]));
+  }
+
+  function initDear(root, toolId) {
+    const definition = DEAR_DEFINITIONS[toolId];
+    let state = normalizeDearState(toolId);
+    const fields = dearFields(toolId);
+    const markup = ([key, label]) => `<label for="${toolId}-${key}">${escapeHtml(label)}</label><textarea id="${toolId}-${key}" name="${key}" rows="${key === "finalScript" ? 7 : 3}" placeholder="${escapeHtml(definition.examples[key] || "Edit the draft into words you could say aloud.")}"${key === "appear" ? ` aria-describedby="${toolId}-approach-help"` : ""}></textarea>`;
+    root.innerHTML = `<div class="skill-app-shell"><form class="skill-app-panel" data-dear-form>
+      <h2>Plan the conversation</h2>${fields.slice(0, 2).map(markup).join("")}
+      <h2>DEAR — What I say</h2>${DEAR_FIELDS.map(markup).join("")}
+      <h2>${escapeHtml(definition.approach)}</h2><p id="${toolId}-approach-help">${escapeHtml(definition.help)}</p>${definition.fields.map(markup).join("")}
+      <h2>Put it into my own words</h2><p>Combine your DEAR wording, then edit it to sound natural. Use your delivery notes and alternatives where they fit the conversation. Combining again replaces the final script.</p>
+      <button type="submit">Combine DEAR into final script</button>${markup(fields.at(-1))}
+      ${toolId === "dear-man" ? `<details><summary>Need ideas?</summary><p>Copy this prompt, add only details you choose to share, and paste it into an assistant yourself. Copying sends nothing; a service you paste into has its own privacy practices.</p><textarea aria-label="DEAR MAN brainstorming prompt" rows="12" readonly data-dear-prompt>${escapeHtml(DEAR_PROMPT)}</textarea><button type="button" data-copy-dear-prompt>Copy Prompt</button><p role="status" aria-live="polite" data-dear-copy-status></p></details>` : ""}
+      <p role="status" aria-live="polite" data-dear-status></p>
+      </form><footer class="skill-app-footer">${linksMarkup([{ label: `Learn ${toolId === "dear-man" ? "DEAR + MAN" : definition.learn.toUpperCase()}`, href: `/learn/interpersonal-effectiveness/${definition.learn}.html` }])}</footer></div>`;
+    const form = root.querySelector("[data-dear-form]");
+    form.addEventListener("input", (event) => {
+      if (fields.some(([key]) => key === event.target.name)) state.fields[event.target.name] = event.target.value;
+    });
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      state.fields.finalScript = combineDear(state.fields);
+      state.summaryBuilt = true;
+      form.elements.finalScript.value = state.fields.finalScript;
+      form.elements.finalScript.focus();
+      root.querySelector("[data-dear-status]").textContent = "DEAR wording combined. Edit the final script to suit your conversation.";
+      root.dispatchEvent(new Event("input", { bubbles: true }));
+    });
+    root.querySelector("[data-copy-dear-prompt]")?.addEventListener("click", async () => {
+      const status = root.querySelector("[data-dear-copy-status]");
+      try { await navigator.clipboard.writeText(DEAR_PROMPT); status.textContent = "Prompt copied. Nothing was sent."; }
+      catch (_) {
+        const prompt = root.querySelector("[data-dear-prompt]"); prompt.focus(); prompt.select();
+        status.textContent = "Automatic copying is unavailable. The prompt is selected; use your device’s Copy command.";
+      }
+    });
+    register(root, {
+      toolId, toolTitle: definition.title, route: Progress.TOOL_ROUTES[toolId],
+      getState: () => state,
+      setState: (next) => { state = normalizeDearState(toolId, next); fields.forEach(([key]) => { form.elements[key].value = state.fields[key]; }); },
+      validateState: (next) => dearStateValid(toolId, next),
+      getReadableSummary: (next) => dearSummary(toolId, next),
+    });
+  }
 
   function linksMarkup(links) {
     return `<div class="skill-app-result-links">${links.map((link) => `<a class="skill-app-link-button secondary" href="${escapeHtml(Site.path(link.href))}">${escapeHtml(link.label)}</a>`).join("")}</div>`;
@@ -834,12 +956,13 @@
       else if (name === "goal-builder") initGoalBuilder(root);
       else if (name === "behavioural-activation") initBehaviouralActivation(root).catch((error) => { root.innerHTML = '<p class="skill-app-note">Activity suggestions could not load. Please refresh this page.</p>'; console.error(error); });
       else if (name === "values-review") initValuesReview(root);
+      else if (DEAR_DEFINITIONS[name]) initDear(root, name);
       else if (FORM_DEFINITIONS[name]) initGuidedForm(root, FORM_DEFINITIONS[name]);
     });
   }
 
   if (typeof module !== "undefined" && module.exports) module.exports = {
-    FORM_DEFINITIONS, WEEKDAYS, calendarDateFromOffset, calendarWindow, calendarTimeSlots, recurrenceStartDate, calendarCommitmentValid,
+    FORM_DEFINITIONS, DEAR_DEFINITIONS, normalizeDearState, dearStateValid, dearSummary, combineDear, DEAR_PROMPT, WEEKDAYS, calendarDateFromOffset, calendarWindow, calendarTimeSlots, recurrenceStartDate, calendarCommitmentValid,
     recurrenceRule, zonedDateTimeToDate, calendarHelpText, escapeIcsText, buildIcsEvent, buildGoogleCalendarUrl,
     buildGoogleCalendarUrls, goalBuilderPrefill, normalizeGoalState, goalGtdMarkdown, goalTitle,
   };

@@ -26,13 +26,15 @@ class PracticeAppTests(unittest.TestCase):
 
     def test_dear_man_contains_only_dear_man_and_goal_components_remain_complete(self):
         text = JS.read_text(encoding="utf-8")
-        dear_definition = re.search(r'"dear-man": \{(?P<body>.*?)\n    \},\n    "ask-or-say-no"', text, re.DOTALL).group("body")
-        for component in ("Describe", "Express", "Assert", "Reinforce", "Mindful", "Appear Confident", "Negotiate"):
+        dear_definition = text.split('const DEAR_DEFINITIONS = {', 1)[1].split('"dear-give":', 1)[0]
+        for component in ("Describe", "Express", "Assert", "Reinforce"):
+            self.assertIn(component, text.split('const DEAR_FIELDS = [', 1)[1].split('];', 1)[0])
+        for component in ("Mindful", "Appear Confident", "Negotiate", "Objective"):
             self.assertIn(component, dear_definition)
-        for component in ("Gentle", "Interested", "Validate", "Easy Manner", "Fair", "No Unnecessary Apologies", "Stick to Values", "Truthful"):
+        for component in ("Gentle", "Interested", "Validate", "Truthful"):
             self.assertNotIn(component, dear_definition)
         for legacy_key in ("gentle", "interested", "validate", "easy", "fair", "apologies", "values", "truthful"):
-            self.assertIn(legacy_key, dear_definition)
+            self.assertIn(legacy_key, text.split('const legacy = toolId === "dear-man"', 1)[1].split(';', 1)[0])
         for component in ("Specific", "Measurable", "Achievable", "Relevant / Realistic", "Time-Oriented"):
             self.assertIn(component, text)
         for component in ("Can we simplify the goal?", "What is a smaller thing we could do and still feel satisfied?", "What could get in the way?", "What could prevent us from completing the goal", "What could support follow-through?"):

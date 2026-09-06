@@ -60,8 +60,12 @@ website:
           contents:
             - text: "Ask or Say No Planner"
               href: tool-finder/ask-or-say-no/index.qmd
-            - text: "DEAR MAN Builder"
+            - text: "DEAR MAN Script Builder"
               href: tool-finder/dear-man/index.qmd
+            - text: "DEAR GIVE Script Builder"
+              href: tool-finder/dear-give/index.qmd
+            - text: "DEAR FAST Script Builder"
+              href: tool-finder/dear-fast/index.qmd
             - text: "The DIME Game"
               href: tool-finder/dime-game/index.qmd
             - text: "Troubleshooting Interpersonal Effectiveness"
@@ -122,7 +126,7 @@ website:
               href: learn/interpersonal-effectiveness/boundaries.qmd
             - text: "2. Clarifying Priorities & Myths"
               href: learn/interpersonal-effectiveness/clarifying-priorities.qmd
-            - text: "3. DEAR MAN"
+            - text: "3. DEAR + MAN"
               href: learn/interpersonal-effectiveness/dear-man.qmd
             - text: "4. DEAR + GIVE"
               href: learn/interpersonal-effectiveness/give.qmd

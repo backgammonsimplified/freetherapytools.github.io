@@ -34,7 +34,7 @@ class SkillFinderAppTests(unittest.TestCase):
 
     def test_every_skill_finder_page_uses_the_shared_sidebar(self):
         pages = sorted((SITE / "tool-finder").rglob("index.qmd"))
-        self.assertEqual(len(pages), 31)
+        self.assertEqual(len(pages), 33)
         for page in pages:
             self.assertIn("sidebar: tool-finder", page.read_text(encoding="utf-8"), page)
 
@@ -45,7 +45,7 @@ class SkillFinderAppTests(unittest.TestCase):
         for route in (
             "values", "thermometer", "emotions", "case-map", "change-emotion", "worry-tree",
             "pleasant-event", "behaviour-chain", "missing-links", "exposure",
-            "dear-man", "ask-or-say-no", "goal-builder", "behavioural-activation", "values-review",
+            "dear-man", "dear-give", "dear-fast", "ask-or-say-no", "goal-builder", "behavioural-activation", "values-review",
             "five-factor-model", "thinking-traps", "thought-record", "worry-time",
             "box-breathing", "gratitude-journal", "positive-self-talk", "grounding", "dime-game",
             "stop", "sleep-hygiene", "stages-of-change", "urge-surfing",

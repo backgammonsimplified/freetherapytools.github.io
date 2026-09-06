@@ -155,7 +155,9 @@ TOOL_FINDER_GROUPS = {
     ),
     "Interpersonal Effectiveness": (
         ("Ask or Say No Planner", "tool-finder/ask-or-say-no/index.qmd"),
-        ("DEAR MAN Builder", "tool-finder/dear-man/index.qmd"),
+        ("DEAR MAN Script Builder", "tool-finder/dear-man/index.qmd"),
+        ("DEAR GIVE Script Builder", "tool-finder/dear-give/index.qmd"),
+        ("DEAR FAST Script Builder", "tool-finder/dear-fast/index.qmd"),
         ("The DIME Game", "tool-finder/dime-game/index.qmd"),
         ("Troubleshooting Interpersonal Effectiveness", "tool-finder/interpersonal-troubleshooting/index.qmd"),
     ),

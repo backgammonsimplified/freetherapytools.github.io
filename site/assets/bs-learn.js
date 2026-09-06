@@ -2414,7 +2414,9 @@
 
     const update = function () {
       const active = desktopQuery.matches && collapsed;
-      sidebar.hidden = active;
+      sidebar.inert = active;
+      if (active) sidebar.setAttribute("aria-hidden", "true");
+      else sidebar.removeAttribute("aria-hidden");
       document.body.classList.toggle("bs-learn-left-sidebar-collapsed", active);
       updateVisibility();
       toggle.setAttribute("aria-expanded", active ? "false" : "true");

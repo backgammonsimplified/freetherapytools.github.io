@@ -12,9 +12,9 @@ If your main priority is a concrete objective, use **[DEAR MAN](/tool-finder/dea
 
 Keep the script factual, respectful, and truthful. The goal is not to manipulate the other person into agreeing; it is to communicate clearly while giving appropriate attention to the relationship.
 
-Your entries remain on this device unless you choose to download a file. Save the Markdown (`.md`) file to resume later; export DOCX or print/save as PDF for a readable copy.
+User-entered data stays in your browser and is not uploaded by this tool. Save the Markdown (`.md`) file to resume later; export DOCX or print/save as PDF for a readable copy.
 
-[Learn how DEAR, MAN, GIVE, and FAST relate](/learn/interpersonal-effectiveness/dear-man.html#choose-the-priority)
+[Learn GIVE](/learn/interpersonal-effectiveness/give.html) · [Learn how DEAR, MAN, GIVE, and FAST relate](/learn/interpersonal-effectiveness/dear-man.html#choose-the-priority)
 
 ::: {#dear-give-app .skill-app data-practice-app="dear-give"}
 Loading DEAR GIVE Script Builder…

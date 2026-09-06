@@ -72,7 +72,7 @@ class NavigationParityTests(unittest.TestCase):
                 self.assertIn(marker, html, f"{curriculum}: {marker}")
             self.assertRegex(
                 html,
-                r'<script src="\.\./\.\./assets/bs-learn\.js\?v=20260830-sidebar-runtime" defer',
+                r'<script src="\.\./\.\./assets/bs-learn\.js\?v=20260906-dear-skills" defer',
             )
             self.assertEqual(
                 len(re.findall(r"sidebar-item sidebar-item-section", html)),
@@ -94,7 +94,7 @@ class NavigationParityTests(unittest.TestCase):
             'toggle.style.left = "0.5rem"',
             "pageScrollingDown = currentScrollY > lastScrollY",
             "let collapsed = false",
-            'sidebar.hidden = active',
+            'sidebar.inert = active',
             '"\\u2192 Show Lessons"',
             '"\\u2190 Hide"',
             'new CustomEvent("bs:left-sidebar-change")',
@@ -105,7 +105,7 @@ class NavigationParityTests(unittest.TestCase):
         self.assertNotIn("bs-learn-left-sidebar-auto-hidden", self.learn + self.learn_css)
         for token in (
             "body.bs-learn-left-sidebar-collapsed",
-            "grid-column-start: page-start",
+            "visibility: hidden",
             "bs-learn-active-section",
         ):
             self.assertIn(token, self.learn + self.learn_css)
@@ -213,20 +213,11 @@ class NavigationParityTests(unittest.TestCase):
         ):
             self.assertIn(text, self.navigation)
 
-    def test_save_progress_and_page_tools_have_explicit_collision_guards(self) -> None:
-        for token in (
-            "body.bs-skill-finder-page .bs-site-tools--floating",
-            "body.bs-skill-finder-page:has(.bs-term-lookup--site:not([hidden]))",
-            "body.skill-progress-dialog-open .bs-site-tools",
-            "body.skill-progress-dialog-open .bs-term-lookup",
-            "body.skill-progress-dialog-open .bs-learn-left-sidebar-toggle",
-            "pointer-events: none",
-        ):
-            self.assertIn(token, self.progress_css)
-        self.assertRegex(
-            self.progress_css,
-            r"body\.bs-skill-finder-page \.bs-site-tools--floating \{\s+bottom:",
-        )
+    def test_progress_controls_stay_in_document_flow(self) -> None:
+        self.assertNotIn("position: fixed", self.progress_css)
+        self.assertIn(".skill-progress-final > summary", self.progress_css)
+        self.assertNotIn("skill-progress-floating", self.progress_css)
+        self.assertNotIn("grid-column-start: page-start", self.learn_css)
 
 
 if __name__ == "__main__":

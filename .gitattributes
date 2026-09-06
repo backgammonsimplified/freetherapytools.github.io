@@ -3,3 +3,7 @@ LICENSES/*.txt text eol=lf whitespace=-blank-at-eof,-trailing-space
 
 # Preserve the approved project-owned SVG byte content.
 site/assets/icons/favicon.svg text eol=lf whitespace=-trailing-space
+
+# Document packages must survive checkout without line-ending conversion.
+*.pdf binary
+*.docx binary

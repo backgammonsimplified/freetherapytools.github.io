@@ -1645,15 +1645,10 @@ body.bs-glossary-index
   }
 
   body.bs-learn-left-sidebar-collapsed
-    #quarto-content.page-columns
-    > main#quarto-document-content {
-    grid-column-start: page-start;
-  }
-
-  body.bs-learn-left-sidebar-collapsed
-    main#quarto-document-content.page-columns
-    > :not(.column-margin) {
-    grid-column-start: page-start-inset;
+    #quarto-sidebar {
+    /* Reserve the grid footprint: article width and both column edges stay put. */
+    visibility: hidden;
+    pointer-events: none;
   }
 
   body.bs-learn-right-sidebar-collapsed
