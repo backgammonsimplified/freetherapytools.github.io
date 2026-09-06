@@ -5,6 +5,17 @@ Base: `master`
 
 This branch is for a draft implementation PR. Do not merge directly to `master`, do not force-push, and do not rewrite history.
 
+## Work already completed on this branch
+
+A first-pass implementation has already been committed before Codex QA:
+
+- `site/learn/interpersonal-effectiveness/dear-man.qmd` has been rewritten as **DEAR + MAN** with communication styles, priority selection, DEAR/MAN teaching, a landlord worked example, cleaned source transcriptions, provenance lines, and removal of the malformed p020 OCR.
+- `site/assets/interpersonal/communication-styles-triangle.svg` has been added as an accessible project recreation of the supplied communication-styles diagram.
+- `site/tool-finder/dear-man/index.qmd` has improved objective-priority framing, local-data/save guidance, Learn link, and links to GIVE/FAST.
+- `site/tool-finder/dear-give/index.qmd` and `site/tool-finder/dear-fast/index.qmd` route shells now exist.
+
+Codex should **preserve, review, refine, wire, test, and complete** this first pass rather than replacing it with an unrelated implementation.
+
 ## 1. Global Learn-page layout
 
 For all Learn pages, when the left lesson sidebar is collapsed with `← Hide`, the article text must stay in the same horizontal position instead of shifting left. `→ Show Lessons` restores the sidebar. Keep the right TOC independent, preserve mobile behavior, accessibility, and no horizontal overflow.
