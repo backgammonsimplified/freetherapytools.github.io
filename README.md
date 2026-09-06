@@ -736,41 +736,19 @@ Do not broadly rewrite the Learn shell again.
 
 ---
 
-# 14. Sidebar auto-hide vs manual collapse
+# 14. Learn sidebar visibility
 
-Commit:
+Desktop Learn pages use `bs-learn-left-sidebar-collapsed` for manual and
+scroll-triggered collapse. The sidebar remains in the grid with
+`visibility: hidden`, `inert`, and `aria-hidden`, so the article keeps its
+horizontal position and width. Never use `hidden`/`display: none` or change
+the article grid start when collapsing it.
 
-```text
-54e4e16 Keep lesson width fixed during sidebar auto-hide
-```
-
-Two deliberately separate states:
-
-## Auto-hide on scroll
-
-```text
-bs-learn-left-sidebar-auto-hidden
-```
-
-Sidebar is visually translated/hidden while the grid footprint remains reserved, so lesson/right-rail geometry does not move.
-
-## Manual collapse
-
-```text
-bs-learn-left-sidebar-collapsed
-```
-
-Sidebar is truly collapsed and lesson content may widen.
-
-Do not merge these states again.
-
-Known unrelated issue at that checkpoint:
-
-```text
-/learn/cbt-anxiety/thinking-traps.html
-```
-
-had horizontal overflow. Fix it only as a focused later task.
+The `← Hide` / `→ Show Lessons` control keeps keyboard focus. Restoring it
+reveals the sidebar without moving the article or the independent right TOC.
+Below 992px, the collapsed desktop state is inactive and Quarto mobile
+navigation retains control. The existing `bs:left-sidebar-change` event and
+continuous-scroll lesson synchronization remain intact.
 
 ---
 
@@ -1125,6 +1103,44 @@ Product preference: refine individual tools deeply rather than apply broad shall
 
 ---
 
+## DEAR practice tools and source materials
+
+The objective, relationship, and self-respect priorities have dedicated tools:
+`/tool-finder/dear-man/`, `/tool-finder/dear-give/`, and
+`/tool-finder/dear-fast/`. They share `DEAR_DEFINITIONS` and `initDear` in
+`site/assets/skill-practice-apps.js`, plus the existing schema-v1
+`TherapySkillProgress` adapters. All include Situation, a priority-specific goal,
+DEAR wording, their MAN/GIVE/FAST approach fields, and an editable final script.
+Combining copies the user's DEAR wording without adding persuasion; delivery
+notes remain separate and all fields are exported. Old seven-field MAN files,
+including legacy GIVE/FAST keys, still validate and normalize. A manual final
+script is preserved on restore. The MAN brainstorming disclosure copies only a
+static prompt; no answers are uploaded or automatically included.
+
+The Learn authority is `/learn/interpersonal-effectiveness/dear-man.html`.
+Its communication-styles SVG, priorities, and landlord example are project
+explanations. The five source transcription blocks remain distinctly quoted
+with immediate provenance, original images, and existing clean resource links.
+The p020 practice worksheet is manually transcribed; never restore its malformed
+OCR. The existing handwritten-note transcription is retained; the handwritten
+source image is not available in this checkout for renewed verification.
+
+Original blank downloads are
+`site/resources/interpersonal-effectiveness/dear-man-script-worksheet.docx` and
+`site/resources/interpersonal-effectiveness/dear-man-script-worksheet.pdf`.
+Both are linked from Learn and the MAN builder. Regenerate them with
+`python scripts/generate-dear-worksheet.py` using python-docx and ReportLab.
+The three-page practice worksheet has original prompts, writing space, a final
+script, and reflection; it does not copy the supplied worksheet's layout.
+
+The catalogue retains educational GIVE/FAST entries alongside the new tools.
+`scripts/learn_glossary.py` owns generated sidebar destinations; regenerate
+navigation after adding a route. Focused regression coverage is in
+`tests/test_dear_skills.js`, `tests/test_dear_content.py`, and
+`tests/test_dear_browser.cjs` (Playwright, after a full render).
+
+---
+
 # 23. Shared Save Progress architecture
 
 Central files:
@@ -1167,7 +1183,7 @@ Save progress (.md)
 Supporting copy:
 
 ```text
-Recommended. You can reopen this Markdown file later and continue.
+You can save your progress by downloading the Markdown (.md) file below. For a readable copy to print or share, download DOCX or choose Print / Save as PDF in your browser. To resume your progress later, upload the .md file.
 ```
 
 ## Export
@@ -1179,6 +1195,8 @@ Print / Save as PDF
 ```
 
 Legacy JSON progress should remain loadable. Markdown is the main user-facing save/reopen format.
+
+All adapters share one bottom `details` disclosure (`Save your work`) in document flow. There is no floating or side Save progress control and no modal save drawer. The disclosure contains filename, Markdown save/reopen, DOCX, browser Print / Save as PDF, browser restore/clear, and optional restart. PDF uses the browser print dialog, not a direct PDF download. Reattach the same disclosure after tool rerenders so its open state remains usable. Tool navigation, including the Values action bar, stays independent from saving.
 
 ---
 
@@ -3238,8 +3256,8 @@ print exports are all driven by that complete shared summary. Gratitude Journal
 similarly includes every populated date, gratitude item, and reflection in its
 shared summary.
 
-The interactive DEAR MAN route now renders only Describe, Express, Assert,
-Reinforce, Mindful, Appear Confident, and Negotiate. Older saved GIVE/FAST keys
+The interactive DEAR MAN route includes Situation, Objective, Describe, Express,
+Assert, Reinforce, Mindful, Appear Confident, Negotiate, and an editable final script. Older saved GIVE/FAST keys
 are accepted during validation and ignored during rendering/export; educational
 GIVE and FAST Learn pages are unchanged. Behavioural Activation removes
 horseback riding from its recommendation subset and combines the existing source
@@ -3519,9 +3537,9 @@ in readable exports.
 
 Desktop Learn left-sidebar behavior follows the Backgammon Simplified
 single-collapse implementation. The exact expanded control is `← Hide`; the
-collapsed edge control is `→ Show Lessons`. Collapsing hides the Quarto sidebar
-grid item and applies `bs-learn-left-sidebar-collapsed`, allowing the article to
-use the released width while leaving the right TOC independent. This control is
+collapsed edge control is `→ Show Lessons`. Collapsing applies `bs-learn-left-sidebar-collapsed`, `visibility: hidden`,
+`inert`, and `aria-hidden` to the sidebar while reserving its grid footprint.
+The article keeps both edges in place; the right TOC remains independent. This control is
 desktop-only and does not replace Quarto's mobile navigation. The long
 Observing/Describing Emotions lesson sets page-local `toc-depth: 2`; its H3
 teaching sections remain in the article but never expand the right TOC.
