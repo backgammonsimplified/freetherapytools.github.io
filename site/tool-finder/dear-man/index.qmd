@@ -1,15 +1,27 @@
 ---
-title: "DEAR MAN Builder"
-description: "Organize your own request or boundary through the DEAR MAN structure."
+title: "DEAR MAN Script Builder"
+description: "Build a factual, respectful script for an objective-priority request or boundary."
 sidebar: tool-finder
 page-layout: full
 toc: false
 ---
 
-This interactive tool focuses only on DEAR MAN. It organizes only the words you enter and does not generate pressure tactics or manipulative wording. GIVE and FAST remain available as separate educational lessons elsewhere in the curriculum.
+Use this tool when your main priority is **getting an objective met**: asking for something, saying no, requesting a change, or resolving a practical problem. If your main priority is strengthening the relationship, use the **[DEAR GIVE tool](/tool-finder/dear-give/)**. If your main priority is protecting self-respect or acting consistently with your values, use the **[DEAR FAST tool](/tool-finder/dear-fast/)**.
+
+Write the result as a script you could realistically say out loud. Keep the wording factual, truthful, respectful, and non-manipulative. Rehearsing the script can help you clarify the request and visualize staying on topic during the conversation.
+
+Your entries remain on this device unless you choose to download a file. Save the Markdown (`.md`) file if you want to resume later; export DOCX or print/save as PDF if you want a readable copy for printing or sharing with your therapist.
+
+[Learn DEAR + MAN before building a script](/learn/interpersonal-effectiveness/dear-man.html)
+
+::: {.callout-tip title="Which DEAR skill fits?"}
+- **Objective priority:** DEAR MAN — focus on obtaining a concrete result.
+- **Relationship priority:** [DEAR GIVE](/tool-finder/dear-give/) — focus on the relationship while making the request.
+- **Self-respect priority:** [DEAR FAST](/tool-finder/dear-fast/) — focus on your values and self-respect while making the request.
+:::
 
 ::: {#dear-man-app .skill-app data-practice-app="dear-man"}
-Loading DEAR MAN Builder…
+Loading DEAR MAN Script Builder…
 :::
 
 [Not working as expected? Troubleshoot the interaction.](/tool-finder/interpersonal-troubleshooting/)
