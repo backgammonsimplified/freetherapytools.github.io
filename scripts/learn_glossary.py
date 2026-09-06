@@ -85,6 +85,7 @@ NOT_FOUND_ROUTES = (
 
 DIFFICULTIES = ("Beginner", "Intermediate", "Advanced")
 TRACKS = (
+    "CBT and Managing Anxiety",
     "Doubling Cube",
     "Checker Play",
     "Opening Play",
@@ -146,7 +147,9 @@ TOOL_FINDER_GROUPS = {
     "CBT and Managing Anxiety": (
         ("Box Breathing", "tool-finder/box-breathing/index.qmd"),
         ("Case Map", "tool-finder/case-map/index.qmd"),
-        ("Exposure Ladder", "tool-finder/exposure/index.qmd"),
+        ("Avoidance & Approach Planner", "tool-finder/avoidance/index.qmd"),
+        ("Safety Behaviour Check", "tool-finder/safety-behaviours/index.qmd"),
+        ("Fear Ladder / Graded Exposure", "tool-finder/exposure/index.qmd"),
         ("Five Factor Model", "tool-finder/five-factor-model/index.qmd"),
         ("Recognizing Thinking Traps", "tool-finder/thinking-traps/index.qmd"),
         ("Thought Record", "tool-finder/thought-record/index.qmd"),

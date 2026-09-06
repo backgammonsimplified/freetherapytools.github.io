@@ -273,7 +273,11 @@ def pdf_content(record: dict[str, Any]) -> list[str]:
 
 
 def write_pdf(path: Path, record: dict[str, Any]) -> None:
-    contents = pdf_content(record)
+    write_pdf_pages(path, pdf_content(record))
+
+
+def write_pdf_pages(path: Path, contents: list[str]) -> None:
+    """Write pre-laid-out pages, also used by original project worksheets."""
     objects: list[bytes] = []
     def add(value: str | bytes) -> int:
         objects.append(value.encode("latin-1") if isinstance(value, str) else value)

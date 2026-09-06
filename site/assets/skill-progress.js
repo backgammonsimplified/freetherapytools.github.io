@@ -16,6 +16,8 @@
     "behaviour-chain": "/tool-finder/behaviour-chain/",
     "missing-links": "/tool-finder/missing-links/",
     exposure: "/tool-finder/exposure/",
+    avoidance: "/tool-finder/avoidance/",
+    "safety-behaviours": "/tool-finder/safety-behaviours/",
     "dear-man": "/tool-finder/dear-man/",
     "ask-or-say-no": "/tool-finder/ask-or-say-no/",
     "goal-builder": "/tool-finder/goal-builder/",

@@ -7,9 +7,7 @@ learn-order: 6
 categories:
   - Beginner
 tags:
-  - Anxiety
-  - Exposure
-  - Behavioural Experiments
+  - CBT and Managing Anxiety
 terms:
   - exposure
 body-classes: bs-learn-article
@@ -24,11 +22,21 @@ Week 6 brings together three closely related CBT ideas: **safety behaviours**, *
 
 A useful theme for the whole lesson is the difference between **short-term relief** and **long-term learning**. Avoidance can reduce anxiety quickly. That relief makes avoidance more likely next time, even when it gets in the way of goals or keeps you from discovering that you can cope.
 
-## Safety Behaviours {#safety-behaviours}
+Choose a tool for the part you want to work on:
+
+- [Avoidance & Approach Planner](/tool-finder/avoidance/) — notice avoided situations and plan small approach steps.
+- [Safety Behaviour Check](/tool-finder/safety-behaviours/) — examine what a protective behaviour does now and over time.
+- [Fear Ladder / Graded Exposure](/tool-finder/exposure/) — build and repeat rungs toward a meaningful goal.
+
+## What are Safety Behaviours? {#safety-behaviours}
 
 Safety behaviours are things you do to prevent, escape, hide, or reduce a feared outcome. They can include checking, reassurance seeking, carrying a protective object, staying near exits, rehearsing excessively, distracting from bodily sensations, avoiding eye contact, or relying on another person.
 
 Safety behaviours are usually attempts to protect yourself. They are not evidence of weakness, and the behaviour itself is not automatically a problem. The important question is **what the behaviour is doing in this situation**.
+
+## Why Safety Behaviours Can Keep Anxiety Going {#why-safety-behaviours}
+
+A safety behaviour may get in the way of learning in several ways. It can prevent a direct test of the fear: if you never speak, you cannot discover how others respond to your contribution. It can become part of a self-fulfilling pattern: withdrawing from a conversation may leave fewer opportunities for connection. If things go well, you may credit the checking or rehearsal alone, missing evidence that you could cope without so much preparation. Monitoring yourself closely can also pull attention away from the people or task in front of you. These are possible effects, not things every safety behaviour always does.
 
 ### The short-term relief loop
 
@@ -43,7 +51,12 @@ This is one reason anxiety can persist even when avoidance appears to “work.�
 
 ![The anxiety and avoidance cycle.](/assets/cbt/anxiety-avoidance-cycle.svg){.img-fluid fig-alt="Anxiety cycle: anxiety leads to avoidance behaviour, which brings short-term relief and reinforces anxiety, making avoidance more likely next time."}
 
-### Safety behaviour or useful coping? {#safety-behaviour-or-coping}
+<figure class="cbt-diagram">
+<img src="/assets/cbt/anxiety-over-time.svg" class="img-fluid" alt="Two conceptual panels: facing fears includes rising anxiety, riding the wave, direct experience, and greater confidence or freedom. Avoidance includes repeated anxiety peaks and short-term relief, which can reinforce a more restrictive pattern over time.">
+<figcaption>The curves are conceptual. Anxiety does not always decrease smoothly, need not reach zero, and can follow a different pattern in each practice. Staying engaged creates opportunities for learning; the curve is not a target.</figcaption>
+</figure>
+
+## Safety Behaviour or Useful Coping? {#safety-behaviour-or-coping}
 
 The same action can sometimes be helpful coping and sometimes function as avoidance. Rather than judging the action by its name, look at its **purpose and effect**.
 
@@ -56,6 +69,8 @@ Ask:
 - Does it help me participate in my life, or is it increasingly getting in the way?
 
 A helpful support can make it easier to approach. A safety behaviour that maintains anxiety often becomes something you feel you *must* do before you can approach at all.
+
+For example, headphones on transit might be ordinary enjoyment or helpful sensory support. They might also be used mainly to prevent interaction because you believe you could not cope with it. The same outward action can have different functions. Keep useful accessibility and health supports; examine purpose without shaming coping.
 
 ### Review a Safety Behaviour
 
@@ -71,7 +86,38 @@ Choose one behaviour and ask:
 
 The aim is not to remove every coping strategy. It is to notice when protection has become avoidance and to create opportunities for new learning.
 
-## Situational Exposure {#situational-exposure}
+## Safety Behaviour Checklist {#safety-behaviour-checklist}
+
+These original examples are prompts for reflection, not a diagnostic checklist. Consider what each action is doing in its particular context:
+
+- **Social / attention:** choosing a less visible seat, looking away to avoid eye contact, using a device to disengage, rehearsing conversations excessively, reviewing messages repeatedly, or using clothing/accessories mainly to avoid notice.
+- **Reassurance / dependence:** repeatedly checking another person's safety, going places only with a trusted companion, asking again for reassurance, or carrying an object because coping without it feels impossible.
+- **Escape / control:** keeping exits in mind primarily as an escape plan, controlling every detail of a task, or refusing to delegate because uncertainty feels intolerable.
+- **Checking:** returning to locks after a reasonable check, repeatedly monitoring physical signs or vitals, seeking excessive health reassurance, or checking work/messages far beyond what is useful.
+- **Preparation / perfectionism:** preparing or rehearsing well past the task's needs, or avoiding ordinary small risks because anything short of certainty feels unsafe.
+- **Avoidance:** staying away from anxiety-provoking places, delaying action because of worry, or avoiding uncertain situations.
+- **Substances / rituals:** using substances mainly to suppress anxiety, or relying on superstitious rituals to prevent a feared outcome. Do not change prescribed treatment or medically necessary supports as a self-directed experiment.
+
+[Use the Safety Behaviour Check](/tool-finder/safety-behaviours/) to select several behaviours, add your own examples, and consider their feared outcomes, immediate relief, longer-term costs, useful coping purpose, and small safe experiments.
+
+## Avoidance and Approach {#avoidance-and-approach}
+
+<span id="avoidance"></span>
+
+Avoidance can be staying away, leaving early, or putting something off. It can feel like a workable solution because it brings relief right now. Over time, it may shrink your options or make the postponed situation feel even harder. Start by noticing the pattern with curiosity.
+
+- What are you avoiding because it feels frightening or overwhelming? What have you postponed because of worry?
+- Which parts of the situation are realistically within your control or possible to change?
+- What thoughts, predictions, or perfectionistic rules are getting in the way? What do you do instead?
+- What relief does avoiding give you now, and what does it cost over time?
+- What would you like to be able to do? Picture a successful-enough outcome: what would you actually be doing?
+- What small, safe action would move you toward that outcome, and what would make it manageable?
+
+You can examine several avoided situations without committing to tackling them all at once. Choose a useful starting point and return to record what you did, what happened, how you felt, and what you learned.
+
+[Use the Avoidance & Approach Planner](/tool-finder/avoidance/). Original printable PDF and editable DOCX worksheets are available at the top of the tool.
+
+## Situational / Graded Exposure {#situational-exposure}
 
 Exposure means intentionally approaching a feared but safe-enough situation instead of automatically escaping or avoiding it. **Graded exposure** does this in manageable steps rather than jumping immediately to the hardest situation.
 
@@ -89,9 +135,9 @@ A basic exposure practice looks like this:
 
 Anxiety may rise, fall, stay uneven, or change from one practice to another. A useful exposure does not require anxiety to reach zero. The more important question is whether you stayed engaged long enough to learn something that avoidance would have prevented you from learning.
 
-![Illustrative anxiety patterns over time.](/assets/cbt/anxiety-over-time.svg){.img-fluid fig-alt="Illustrative anxiety-over-time curves: facing a feared situation may produce a rise and later fall in anxiety, while repeated avoidance and safety behaviours may maintain or increase anxiety over time. Individual experiences vary."}
+Adjust difficulty by varying **WHO** is there, **WHAT** you do, **WHEN** you do it, **WHERE** it happens, and **HOW** long you remain engaged. You can also change familiarity, busyness, available support, or one unnecessary safety behaviour. Begin with something that brings some anxiety but is manageable enough to approach.
 
-*This graph is a conceptual illustration, not a prediction of exactly how anxiety will change for any one person.*
+Acknowledge what you attempted. Setbacks do not erase earlier learning; they may point to an in-between step or a different practice plan. Repeat to gather more experience, then decide whether to repeat, adjust, or move upward. You do not have to become completely comfortable before trying another rung.
 
 ### Worry, anxiety, and action
 
@@ -103,15 +149,33 @@ It can help to separate related parts of the experience:
 
 CBT can work on more than one part of this cycle. Cognitive strategies can help you examine thinking traps, rigid rules, or perfectionistic predictions. Exposure and behavioural experiments add something different: they let you gather information from direct experience.
 
-## Exposure / Fear Ladder {#fear-ladder}
+## Ideas for Challenging Different Fears {#practice-ideas}
+
+Generate several versions of an ordinary, safe situation. Make it shorter, more familiar, quieter, or supported; then vary one detail. Examples are possibilities to edit, not assignments:
+
+- **Fear of mistakes:** send a casual message without perfecting every phrase; ask a question before finding the ideal wording; finish a low-stakes household task after one reasonable check.
+- **Uncertainty / facing the unknown:** sample an unfamiliar food that fits your dietary needs; visit a safe, unfamiliar public place; let a friend choose one agreed part of a shared activity.
+- **Social fears:** ask a straightforward question at a library; make a brief, respectful request; start a small conversation with someone willing to talk; allow yourself to be noticed while participating in a safe group activity.
+
+For perfectionism, a behavioural experiment might test the rule “I must rehearse perfectly before speaking.” Choose a low-stakes context, reduce one round of rehearsal, and observe what actually happens and how you cope.
+
+### Brainstorm practice ideas with an AI assistant {#ai-practice-ideas}
+
+<div data-cbt-learn-prompt></div>
+
+<noscript>Ask for 15–25 gradual, specific, safe practice ideas connected to your fear and meaningful goal. Vary who, what, when, where, duration, support, and unnecessary safety behaviours. For each idea ask what prediction it could test. Edit suggestions for your circumstances, consent, legal limits, medical needs, and trauma boundaries.</noscript>
+
+## Fear Ladder / Exposure Hierarchy {#fear-ladder}
 
 A fear ladder turns a large avoided goal into a series of smaller approach steps. The steps are **graded** from easier to harder so that practice is challenging enough to learn from without making the plan unnecessarily overwhelming.
+
+Put **GOAL / VICTORY** at the top: something meaningful you want to be able to do. The top is not simply the situation with the biggest anxiety number. Rungs beneath it are specific practices that help you move toward greater freedom. Optional 0–100 predicted difficulty ratings help with planning; they are not clinical scores.
 
 ### Build the Ladder
 
 1. **Name the goal.** What would you like anxiety to interfere with less?
 2. **Brainstorm many specific situations.** Include easier, medium, and harder versions.
-3. **Rate predicted distress.** Use a simple 0–100 estimate for how difficult each situation feels *before* doing it.
+3. **Optionally rate predicted difficulty.** Use a simple 0–100 estimate for how difficult each situation feels *before* doing it.
 4. **Order the situations.** Put more manageable situations lower on the ladder and harder situations higher. Similar ratings can share a rung.
 5. **Choose a workable starting point.** Start with a step that creates some anxiety but still feels possible to attempt safely.
 6. **Repeat before you leap.** Practice gives you more information than a single attempt. You do not have to rush to the next rung after one try.
@@ -131,6 +195,8 @@ Before and after each practice, record enough information to learn from it:
 
 The purpose of the ladder is not to “win” against anxiety. It is to make approach practice concrete, repeatable, and connected to the life you want to live.
 
+[Build your Fear Ladder / Graded Exposure plan](/tool-finder/exposure/). Add or reorder rungs using buttons and keep a separate history of repeated attempts on each rung.
+
 ## Behavioural Experiments {#behavioural-experiments}
 
 A behavioural experiment is a planned way to **test an anxious prediction in real life**. Instead of arguing endlessly with a thought, you identify what the thought predicts and gather evidence by trying something safe and observable.
@@ -144,6 +210,8 @@ Behavioural experiments are especially useful when a belief sounds like:
 
 The aim is not to force yourself to prove the prediction wrong. An experiment can teach you something even when part of the feared outcome occurs.
 
+A fear ladder organizes approach steps; exposure is the practice of approaching; a behavioural experiment deliberately tests a prediction. One activity can do both. Connect the prediction with relevant [thinking traps](/learn/cbt-anxiety/thinking-traps.html) or perfectionistic rules, and update the belief using observed evidence.
+
 ### Plan an Experiment
 
 1. **Name the prediction.** Write it clearly enough that you could tell afterward what happened.
@@ -156,7 +224,9 @@ The aim is not to force yourself to prove the prediction wrong. An experiment ca
 8. **Update the learning.** What is a more complete or balanced conclusion now?
 9. **Repeat or refine.** One experiment is information, not a final verdict. Decide whether another test would help.
 
-### Review what you did, not only how you felt
+## Review What You Did and Learned {#review-practice}
+
+Ask both **WHAT DID I DO?** and **HOW DID I FEEL?** A practice can still be useful when anxiety remains high.
 
 After exposure or a behavioural experiment, anxiety can make it tempting to ask only, “How bad did I feel?” Add a second set of questions:
 
@@ -167,6 +237,8 @@ After exposure or a behavioural experiment, anxiety can make it tempting to ask 
 - Did I use less avoidance or fewer safety behaviours?
 - What would I repeat next time?
 - What would I adjust?
+
+Also note what you approached, what was uncomfortable, what you tolerated or recovered from, which safety behaviours you used, whether you relied on them less, and what you learned. “I can cope” may become something you discover through experience, rather than a promise you must believe before starting.
 
 Confidence often develops from accumulating experiences of approaching, learning, and coping—not from waiting until you feel completely confident before you begin.
 
@@ -186,12 +258,47 @@ A practical sequence is:
 8. **Repeat.** New learning usually becomes stronger through practice rather than through a single successful attempt.
 
 ::: {.callout-caution title="Use appropriate support"}
-Exposure and behavioural experiments are for situations that are safe enough to approach. They are not instructions to ignore genuine danger, medical limitations, coercion, or other real risks. Seek professional guidance for trauma memories, severe symptoms, medical risks, or practices that could put you or someone else at risk.
+Exposure and behavioural experiments are for situations that are reasonably safe to approach. Respect genuine danger, consent, legal limits, medical restrictions, accessibility needs, and coercive situations. Seek professional guidance for trauma memories, severe symptoms, medical risks, or practices that could put you or someone else at risk.
 :::
+
+## Videos {#videos}
+
+These four selected videos offer additional perspectives. When a video emphasizes anxiety decreasing, keep this lesson's broader review in mind: what you approached, experienced, coped with, and learned also matter.
+
+<div class="cbt-videos">
+<article class="cbt-video">
+<h3>How to use exposure therapy to overcome phobias</h3>
+<p>Doctor Ali Mattu</p>
+<iframe src="https://www.youtube-nocookie.com/embed/2z-ZGt_vD5A" title="How to use exposure therapy to overcome phobias — Doctor Ali Mattu" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p><a href="https://www.youtube.com/watch?v=2z-ZGt_vD5A">Watch on YouTube</a></p>
+</article>
+<article class="cbt-video">
+<h3>Super Duper Gentle Exposure Therapy</h3>
+<p>Therapy in a Nutshell</p>
+<iframe src="https://www.youtube-nocookie.com/embed/qzpoO0oVRr8" title="Super Duper Gentle Exposure Therapy — Therapy in a Nutshell" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p><a href="https://www.youtube.com/watch?v=qzpoO0oVRr8">Watch on YouTube</a></p>
+</article>
+<article class="cbt-video">
+<h3>The Exposure Hierarchy: How to do Exposure Therapy for Anxiety: Anxiety Skills #20</h3>
+<p>Therapy in a Nutshell</p>
+<iframe src="https://www.youtube-nocookie.com/embed/n2rKVj75P3M" title="The Exposure Hierarchy: How to do Exposure Therapy for Anxiety: Anxiety Skills #20 — Therapy in a Nutshell" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p><a href="https://www.youtube.com/watch?v=n2rKVj75P3M">Watch on YouTube</a></p>
+</article>
+<article class="cbt-video">
+<h3>How to do Exposure Therapy for Fears and Anxiety — Break the Anxiety Cycle 27/30</h3>
+<p>Therapy in a Nutshell</p>
+<iframe src="https://www.youtube-nocookie.com/embed/TYQ2qWgVJrY" title="How to do Exposure Therapy for Fears and Anxiety — Therapy in a Nutshell" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p><a href="https://www.youtube.com/watch?v=TYQ2qWgVJrY">Watch on YouTube</a></p>
+</article>
+</div>
 
 <!-- section-scan-resources:start -->
 
 ## Handouts & Worksheets {#handouts-worksheets}
+
+The teaching and interactive prompts above use original Free Therapy Tools wording informed by the supplied teaching materials and session notes. The existing source images and higher-resolution references below remain separately attributed reference resources; the new planner downloads are original worksheets, not digital clones of those pages.
+
+Further reading: [Centre for Clinical Interventions anxiety resources](https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Anxiety).
 
 :::: {.bs-practice-resource #resource-cbt-skills-p048 data-source-id="cbt-skills-p048"}
 **What Are Safety Behaviours?**
@@ -249,21 +356,9 @@ This handout's educational content is integrated into the anchored skill section
 
 <!-- native-resource-content:cbt-skills-p047:start -->
 
-#### Text Version
+#### Native Version
 
-**What are the thlags that you are avoiding because you feei too Anxeous to do them?**
-
-**What things have you put Ott due to worry?**
-
-**Are these things that are possibåe to change?**
-
-**What thoughts get in the way?**
-
-**What are some things vou could start to do push against the fear?**
-
-**What wou*d you like to have happen in this situation?**
-
-##### Triüiurn
+The useful educational content from this source is integrated into the lesson above.
 
 <!-- native-resource-content:cbt-skills-p047:end -->
 ::::
@@ -278,13 +373,9 @@ This handout's educational content is integrated into the anchored skill section
 
 <!-- native-resource-content:cbt-skills-p049:start -->
 
-#### Text Version
+#### Native Version
 
-using the betow, can you pick some of the safety behaviaws you may he Ijsng to avoid feeäing anxious? Remember that aål these for flis of avoidance work in the shortterm and cause Fncreæsed anxiety and more avoidance in the long term. Sitting only in the back row of the to avoid beiøg not*ced. Avgding eye contact while grocery shopping and Zgeng through the checkout. Weuing sung!asses while ushog public transportation {evea on gioomy days). Over-preparing for presentations or meetings. Mentally rehearsing conversations befoæ they happen, Carrying bottle ot anti,anxieiy medical'h)fi whenever of the home. [gaving the house only Ef accompanied by a trusted loved one, Creating an escape plan from any buüd*ng entered. Checking the tocks on the hoose or car door multiple times. Frequently checking or go;ng on electronics during social interactions, Consuming recreaticoai drugs, or other substances to curb anxiety; Engaging in superstitious Rituaes before, dwing, G! after sitüätion that elicits anxiety. Avoidarca Eocations or situations that tend to increase anxiety. Having to object in thaq tend to mcrease anxiety. F"equent Visits the doctor for slight changes in phys*tal symptoms -0*' sensations. Frequent checking of heart rat2, hiood pressure, or other vital æccvdings. SE3Ying awake for Fong geriods of time to ensure safety of home. Wearing excessive amounts of clothing when in to avoid atteotion. Re-æ•eading a text e-mail multiple times before sending. Caning a loved one several tirnes throughout the day to check their safety Avoidance of not feeling in Compeete contro' (refusal to Deeegate tasks to cthers/dolng everything purse'" Perfectionism can be avoidance Avoidance of risk {even risk is too much). This might inciude excessive checking or Teassucatce seeking.
-
-##### Other i
-
-##### Other
+The useful educational content from this source is integrated into the lesson above.
 
 <!-- native-resource-content:cbt-skills-p049:end -->
 ::::
@@ -335,25 +426,9 @@ This handout's educational content is integrated into the anchored skill section
 
 <!-- native-resource-content:cbt-skills-p051:start -->
 
-#### Text Version
+#### Native Version
 
-Goat; Go to the mall by myself
-
-##### i Situation
-
-Walk around the alone slaw day (for example, Monday afternoon) Walk at'Oieeid the mall with friend on e day (For example, Monday Sii otltside the tuall entrance on a bench with or friend Goa': Drive a ear in my neighbourhood
-
-##### Situation
-
-Drive dowa a main road wifh Mom when there is more traffic (for exae»pie, Sunday down B main road with Mom when there very fitne {for verv
-
-##### ;Sunciay morning)
-
-Ehe block with Mom the car up a-nd down driveway Mom in the car üiüium fear
-
-##### Fe&r
-
-##### Rating
+The useful educational content from this source is integrated into the lesson above.
 
 <!-- native-resource-content:cbt-skills-p051:end -->
 ::::
@@ -368,23 +443,9 @@ Ehe block with Mom the car up a-nd down driveway Mom in the car üiüium fear
 
 <!-- native-resource-content:cbt-skills-p052:start -->
 
-#### Text Version
+#### Native Version
 
-##### tf making a n*istake
-
-1. 2. 3. 4. 5. Make a spedfng tnlstake ia an friend. Misuse a word wwhen to stranger. Put-Paseey make a noistake 'Ahen handing in an asgignment. Purposely önsvver a question wrong In Make your handwriting a Iite2 rnessy on a test and cross sornetmng than erase
-
-##### Fear of facing the unknown
-
-1. 2. 3, 4. 5. Order something yourve never aaten before at a restaurant, Ask Ehe Barsta at c:affee shop to a bevacage you have never tried before, and go It. Explore a safe new part of the city a friend, let your ft-Fend plan an evening by pick*ng restaurant or movie, go akong With whatever she or he planned (without knowing the in advance). fruita new to hang out you and your friends
-
-##### Socfal fears
-
-2, 3. 4. 5. Cali a stcæ and ask it they have something in your size eod can put it on hold fer the day. Buy spmething and then return it a couple hours later saying you changed lurnd (don't forget to check the store's return policy before you do one). Approach a Stranger in a safe piace and ask directions to nearest qæc-ety stü*'e, Get a hus and put the wrong amount of Order scmething at a fast food restaurant aad once the cashier has punched in, change your mind.
-
-##### MI ium
-
-##### Heaäth Partneis
+The useful educational content from this source is integrated into the lesson above.
 
 <!-- native-resource-content:cbt-skills-p052:end -->
 ::::

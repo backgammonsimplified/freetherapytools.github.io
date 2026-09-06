@@ -3,3 +3,7 @@ LICENSES/*.txt text eol=lf whitespace=-blank-at-eof,-trailing-space
 
 # Preserve the approved project-owned SVG byte content.
 site/assets/icons/favicon.svg text eol=lf whitespace=-trailing-space
+
+# Generated worksheet byte offsets and OOXML archives must survive checkout.
+site/resources/free-therapy-tools/cbt/*.pdf binary
+site/resources/free-therapy-tools/cbt/*.docx binary

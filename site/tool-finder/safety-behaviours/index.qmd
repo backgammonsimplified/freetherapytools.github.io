@@ -1,0 +1,13 @@
+---
+title: "Safety Behaviour Check"
+description: "Examine the purpose, short-term relief, and longer-term effects of possible safety behaviours."
+sidebar: tool-finder
+page-layout: full
+toc: false
+---
+
+::: {#safety-behaviours-app .skill-app data-cbt-app="safety-behaviours"}
+Loading Safety Behaviour Check…
+:::
+
+<noscript>The interactive check needs JavaScript. <a href="/learn/cbt-anxiety/safety-behaviours-exposure.html#safety-behaviours">Read the Safety Behaviours lesson.</a></noscript>

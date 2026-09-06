@@ -3573,3 +3573,64 @@ directly instead of making readers scroll through blurry duplicate originals.
 Their provenance and source IDs remain intact. The associated Worksheet 7 text
 versions were also replaced with concise readable adaptations so corrupted OCR
 is not exposed in the normal lesson.
+
+## 92. CBT Week 6: avoidance, safety behaviours, and graded practice (2026-09-05)
+
+The implementation authority is
+`docs/implementation/cbt-week-6-avoidance-safety-exposure-tools.md`. The canonical
+lesson remains `/learn/cbt-anxiety/safety-behaviours-exposure.html`. Its authored
+sequence moves from safety behaviours and their function through avoidance,
+graded exposure, a meaningful goal/ladder, behavioural experiments, and reviewing
+both actions and feelings. High anxiety does not make a practice unsuccessful.
+
+Three tools share `site/assets/cbt-practice.js` and `cbt-practice.css`:
+
+- `/tool-finder/avoidance/`: multiple avoided situations, small safe approach
+  steps, and repeated practice histories.
+- `/tool-finder/safety-behaviours/`: an original seven-category checklist, custom
+  behaviours, and function/relief/cost/learning/coping/experiment reflections.
+  Deselecting a behaviour retains its previous reflection; this is not a score.
+- `/tool-finder/exposure/`: the existing canonical Fear Ladder / Graded Exposure
+  route, with Victory / Goal above flexible rungs, keyboard-accessible add,
+  remove, duplicate and move controls, and repeated practice. State is ordered
+  easier-to-harder; presentation reverses it so the highest rung meets the goal.
+  Legacy `theme/safety/steps/next` progress migrates without losing ratings.
+
+All three register with the existing schema-v1 `TherapySkillProgress`; no second
+storage layer or external submission is introduced. Their Markdown/JSON/DOCX/
+print exports use original Free Therapy Tools summaries. Canonical progress
+IDs are `avoidance`, `safety-behaviours`, and `exposure`. Tool Finder catalogue
+entries and the generated sidebar include all three. Regenerate navigation with
+`python scripts/learn_glossary.py generate`; CBT and Managing Anxiety is now an
+allowed authored lesson tag.
+
+`python scripts/generate-cbt-worksheets.py` generates the original three-page
+Avoidance & Approach Planner PDF and editable DOCX in
+`site/resources/free-therapy-tools/cbt/`, using the repository's OOXML and PDF
+helpers in `generate-resource-exports.py`. Both downloads appear at the top of
+the interactive tool. Regenerate both together and visually inspect every page.
+The layouts and prompts are original, not digital clones of teaching worksheets.
+Source images and provenance links remain separate reference resources. Corrupt
+Week 6 OCR blocks p047/p049/p051/p052 now use concise Native Version notices;
+educational meaning is integrated into the authored lesson, not transcribed.
+
+The accessible two-panel `site/assets/cbt/anxiety-over-time.svg` contrasts
+engaged practice with repeated avoidance. Its curves are explicitly conceptual,
+not promises about anxiety decreasing or reaching zero. Four requested videos
+use lazy, responsive `youtube-nocookie.com` embeds with verified titles/channels,
+fallback links, and no autoplay. The Learn page and Fear Ladder share a copy-only
+AI brainstorming prompt. The ladder substitutes current fear/goal locally;
+personal text is never added to a URL or sent to an AI service. Clipboard failure
+reveals selectable text and announces useful status feedback.
+
+Box Breathing is an intentional progress-UI exception: it does not register a
+progress adapter. Its existing page-local single-column timing layout is retained
+and verified at 390/768/1280/1440px in the runtime harness; Start/Pause/Reset,
+adjustable phase times, zero-second holds, and safety wording remain intact.
+
+Focused tests are `tests/test_cbt_week6.js` and `tests/test_cbt_week6.py` alongside
+the existing tool/progress/path suites. `scripts/cbt-browser-harness.py` provides
+an explicitly labelled Pandoc-content runtime fallback when Windows prevents
+Quarto subprocess spawning; it is not a production theme/sidebar verification.
+See `docs/implementation/cbt-week-6-verification.md` for this pass's results and
+remaining production-render review requirements.

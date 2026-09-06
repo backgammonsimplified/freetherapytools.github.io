@@ -21,8 +21,9 @@ class PracticeAppTests(unittest.TestCase):
         self.assertNotIn("Add chain link", text)
         for token in ("What exactly is the behaviour I am analyzing?", "Unbalanced sleep", "Unbalanced eating", "Unbalanced exercise", "Actions", "Body sensations", "Cognitions / thoughts", "Events", "Feelings", "Short-term pros", "Long-term cons", "Plans to correct or repair"):
             self.assertIn(token, text)
-        for token in ("Add safe step", "Move easier", "Move harder", "Before rating 0-100", "After rating 0-100", "objectively safe"):
-            self.assertIn(token, text)
+        cbt = (SITE / "assets/cbt-practice.js").read_text(encoding="utf-8")
+        for token in ("Add rung", "Move up", "Move down", "Before difficulty/anxiety", "After difficulty/anxiety", "reasonably safe"):
+            self.assertIn(token, cbt)
 
     def test_dear_man_contains_only_dear_man_and_goal_components_remain_complete(self):
         text = JS.read_text(encoding="utf-8")
