@@ -50,6 +50,7 @@
 
   function makePersistentBar(app, area) {
     if (area.dataset.skillProgressPersistent === "true") {
+      app.classList.add("skill-progress-persistent-enabled");
       ensureOpenProgressButton(app, area);
       return;
     }
@@ -61,6 +62,7 @@
 
     area.dataset.skillProgressPersistent = "true";
     area.classList.add("skill-progress-persistent");
+    app.classList.add("skill-progress-persistent-enabled");
     area.open = true;
 
     const summary = area.querySelector(":scope > summary");
