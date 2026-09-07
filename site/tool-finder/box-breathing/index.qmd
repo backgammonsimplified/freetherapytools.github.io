@@ -9,15 +9,35 @@ execute:
 ---
 
 <style>
-#box-breathing-app .box-breathing-settings {
+/* Keep the Box Breathing page on one predictable layout. The shared tool CSS
+   also defines a two-column Box Breathing layout; after the branch
+   consolidation that left the duration controls squeezed into the right-hand
+   column. Long labels and full-width number inputs could then collide. */
+#box-breathing-app .box-breathing-tool {
   grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+#box-breathing-app .box-breathing-stage {
+  min-width: 0;
+}
+
+#box-breathing-app .box-breathing-settings {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem 1rem;
+  width: min(100%, 64rem);
+  margin-inline: auto;
 }
 
 #box-breathing-app .box-breathing-settings > label {
-  display: block;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 0.35rem;
   min-width: 0;
   max-width: 100%;
-  margin-block: 0.45rem;
+  margin: 0;
   overflow: visible;
   white-space: normal;
 }
@@ -26,7 +46,27 @@ execute:
   display: block;
   width: 100%;
   min-width: 0;
-  margin-top: 0.35rem;
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#box-breathing-app .box-breathing-actions {
+  margin-top: 0.25rem;
+}
+
+/* The safety message is presented once, below the exercise. */
+#box-breathing-app .box-breathing-safety,
+#box-breathing-app .box-breathing-tool + .skill-app-note {
+  display: none !important;
+}
+
+.box-breathing-page-safety {
+  max-width: 72rem;
+  margin: 1rem auto 1.5rem;
+  padding: 0.9rem 1rem;
+  border-left: 0.3rem solid #6f4e37;
+  background: #f4efe9;
 }
 
 #box-breathing-app .skill-app-footer,
@@ -35,12 +75,28 @@ execute:
 body:has(#box-breathing-app) [data-skill-progress-floating] {
   display: none !important;
 }
+
+@media (max-width: 900px) {
+  #box-breathing-app .box-breathing-settings {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  #box-breathing-app .box-breathing-settings {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 </style>
 
 Box Breathing appears in the Free Therapy Tools source list. The source does not prescribe timings, so this tool's equal four-second defaults are adjustable.
 
 ::: {#box-breathing-app .skill-app data-quick-app="box-breathing"}
 Loading Box Breathing…
+:::
+
+::: {.box-breathing-page-safety}
+Please consult your doctor or health care practitioner before holding your breath if you have concerns about whether breath-hold exercises are appropriate for you. Everyone has different breathing needs. Be mindful of what feels safe and works for you.
 :::
 
 [Back to all Tool Finder tools](/tool-finder/)
