@@ -1,143 +1,157 @@
-.skill-app-header .tool-duplicate-heading,
-.skill-app-header .tool-duplicate-subtitle {
+.skill-app-header[hidden] {
   display: none !important;
 }
 
-.skill-app-header.tool-header-compact {
-  padding-block: 0.65rem;
+.skill-app-header.tool-header-functional-only {
+  padding-top: 0;
 }
 
-.skill-app-header.tool-header-empty {
-  display: none !important;
-}
-
-.tool-header-context {
-  margin: 0 0 1rem;
-  padding: 0.55rem 0.75rem;
-  border: 1px solid var(--skill-app-border, #d8cec2);
-  border-radius: 0.55rem;
-  background: var(--skill-app-soft, #f4efe9);
-  font-size: 0.92rem;
-}
-
-.tool-header-context summary,
-.tool-question-help summary,
-.tool-answer-review summary {
-  cursor: pointer;
-  font-weight: 700;
-}
-
-.tool-question-flow-toolbar {
-  position: sticky;
-  top: 0.6rem;
-  z-index: 20;
-  display: grid;
-  gap: 0.65rem;
-  margin: 0 0 1rem;
-  padding: 0.8rem;
-  border: 1px solid var(--skill-app-border, #d8cec2);
-  border-radius: 0.7rem;
-  background: #fff;
-  box-shadow: 0 0.35rem 1rem rgb(48 37 29 / 10%);
-}
-
-.tool-question-flow-actions {
+.tool-progressive-controls {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.55rem;
+  justify-content: flex-end;
+  margin: 0 0 1rem;
 }
 
-.tool-question-flow-actions [data-tool-question-count] {
-  margin-right: auto;
+.tool-progressive-controls button {
+  font-size: 0.9rem;
 }
 
 .tool-question-step {
-  max-width: 52rem;
-  margin: 0 auto 1rem;
-  padding: clamp(1rem, 3vw, 1.5rem);
-  border: 1px solid var(--skill-app-border, #d8cec2);
-  border-radius: 0.75rem;
-  background: #fff;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0 0 1.1rem;
+  padding: 0;
+  transition:
+    max-height 0.55s ease,
+    opacity 0.4s ease,
+    transform 0.5s ease,
+    margin 0.5s ease,
+    background-color 0.35s ease,
+    color 0.35s ease;
+  transform-origin: top;
 }
 
-.tool-question-step[hidden] {
-  display: none !important;
+.tool-question-step.is-concealed {
+  max-height: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-0.5rem);
+  pointer-events: none;
+  visibility: hidden;
 }
 
-.tool-question-step > label:first-child,
-.tool-question-step > strong:first-child,
-.tool-question-step legend {
-  font-size: 1.05rem;
+.tool-question-step.is-revealed {
+  max-height: 200rem;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.tool-question-step.is-entering {
+  animation: tool-question-enter 0.65s ease both;
+}
+
+@keyframes tool-question-enter {
+  from {
+    opacity: 0;
+    transform: translateY(0.9rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Completed answers stay visible above the active question, but recede gently. */
+.tool-question-step.is-answered:not(:focus-within):not(.is-current) {
+  padding: 0.8rem;
+  border-radius: 0.45rem;
+  background: #f1f2f2;
+  color: #626b70;
+}
+
+.tool-question-step.is-answered:not(:focus-within):not(.is-current) :is(textarea, input, select) {
+  border-color: #c8cdcf;
+  background: #f7f8f8;
+  color: #4f575b;
+}
+
+.tool-question-step :is(textarea, input[type="text"], input[type="number"], select) {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
 }
 
 .tool-question-help {
-  margin-top: 0.7rem;
-  padding: 0.65rem 0.75rem;
-  border: 1px solid var(--skill-app-border, #d8cec2);
-  border-radius: 0.55rem;
-  background: var(--skill-app-soft, #f4efe9);
+  margin-top: 0.45rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid #e2e4e5;
+  font-size: 0.9rem;
 }
 
-.tool-question-help p {
-  margin: 0.55rem 0;
-}
-
-.tool-question-help-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.tool-question-help-actions a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.4rem;
-  padding: 0.45rem 0.75rem;
-  border: 2px solid var(--skill-app-accent, #6f4e37);
-  border-radius: 0.45rem;
-  color: var(--skill-app-accent, #6f4e37);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.tool-answer-review {
-  border-top: 1px solid var(--skill-app-border, #d8cec2);
-  padding-top: 0.55rem;
-}
-
-.tool-answer-review ol {
-  margin: 0.6rem 0 0;
-  padding-left: 1.4rem;
-}
-
-.tool-answer-review button {
-  width: 100%;
-  padding: 0.35rem 0;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  text-align: left;
+.tool-question-help summary {
+  cursor: pointer;
+  color: #687176;
   font-weight: 600;
 }
 
-.tool-answer-review small {
+.tool-question-help p {
+  margin: 0.45rem 0;
+  color: #626b70;
+}
+
+.tool-question-help > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tool-question-help a {
+  font-weight: 600;
+}
+
+/* Avoidance is intentionally one worked example, not a repeatable list. */
+.skill-app[data-cbt-app="avoidance"] .cbt-fields {
   display: block;
-  margin-top: 0.15rem;
-  font-weight: 400;
 }
 
-.skill-app.tool-question-flow-all .tool-question-step[hidden] {
-  display: block !important;
+.skill-app[data-cbt-app="avoidance"] .cbt-item.tool-avoidance-primary {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
 }
 
-@media (max-width: 600px) {
-  .tool-question-flow-toolbar {
-    top: 0.25rem;
+.skill-app[data-cbt-app="avoidance"] .cbt-item.tool-avoidance-primary > summary,
+.skill-app[data-cbt-app="avoidance"] .cbt-item.tool-avoidance-extra,
+.skill-app[data-cbt-app="avoidance"] [data-cbt-action="add"],
+.skill-app[data-cbt-app="avoidance"] [data-cbt-action="practice"],
+.skill-app[data-cbt-app="avoidance"] [data-cbt-action="remove"],
+.skill-app[data-cbt-app="avoidance"] .cbt-practice {
+  display: none !important;
+}
+
+.skill-app[data-cbt-app="avoidance"] .cbt-field {
+  width: 100%;
+  max-width: none;
+}
+
+.skill-app[data-cbt-app="avoidance"] .cbt-field :is(textarea, input) {
+  width: 100%;
+  max-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tool-question-step {
+    transition: none;
   }
-
-  .tool-question-flow-actions > button {
-    flex: 1 1 auto;
+  .tool-question-step.is-entering {
+    animation: none;
   }
 }
