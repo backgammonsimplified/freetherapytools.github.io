@@ -35,6 +35,8 @@ project:
     - assets/skill-finder-apps.js
     - assets/skill-practice-apps.js
     - assets/skill-quick-tools.js
+    - assets/tool-question-flow.js
+    - assets/tool-question-flow.css
     - assets/tool-finder.js
     - assets/therapy-audio.js
     - "data/tool-finder/**"
@@ -92,7 +94,7 @@ website:
     left: |
       Free Therapy Tools · Under active development
     center:
-      - text: "Code: AGPL-3.0-only \u00b7 Educational content: CC BY-SA 4.0 \u00b7 Licensing"
+      - text: "Code: AGPL-3.0-only · Educational content: CC BY-SA 4.0 · Licensing"
         href: licensing.qmd
 
 format:
