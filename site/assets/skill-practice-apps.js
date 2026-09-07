@@ -891,46 +891,7 @@ I will edit the ideas myself.`;
   }
 
   function initExposure(root) {
-    const state = { theme: "", safety: "", steps: [{ situation: "", before: "0", after: "" }], next: "" };
-    function render(focus = false) {
-      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Exposure Ladder</h2><p>Include only objectively safe, appropriate steps. Entries stay on this page.</p></header><section class="skill-app-panel"><label for="exposure-theme">Feared situation or theme</label><textarea id="exposure-theme" data-exposure-field="theme">${escapeHtml(state.theme)}</textarea><label for="exposure-safety">Safety behaviours I want to notice</label><textarea id="exposure-safety" data-exposure-field="safety">${escapeHtml(state.safety)}</textarea><h3>Graded steps: easier to harder</h3>${state.steps.map((step, index) => `<fieldset class="skill-app-fieldset"><legend>Step ${index + 1}</legend><label for="exposure-step-${index}">Objectively safe practice situation</label><textarea id="exposure-step-${index}" data-exposure-step="${index}">${escapeHtml(step.situation)}</textarea><div class="skill-app-inline-fields"><div><label for="exposure-before-${index}">Before rating 0-100</label><input id="exposure-before-${index}" type="number" min="0" max="100" data-exposure-before="${index}" value="${step.before}"></div><div><label for="exposure-after-${index}">After rating 0-100</label><input id="exposure-after-${index}" type="number" min="0" max="100" data-exposure-after="${index}" value="${escapeHtml(step.after)}"></div></div><div class="skill-app-actions"><button type="button" class="secondary" data-exposure-up="${index}" ${index ? "" : "disabled"}>Move easier</button><button type="button" class="secondary" data-exposure-down="${index}" ${index < state.steps.length - 1 ? "" : "disabled"}>Move harder</button><button type="button" class="secondary" data-exposure-remove="${index}" ${state.steps.length > 1 ? "" : "disabled"}>Remove</button></div></fieldset>`).join("")}<button type="button" data-exposure-add>Add safe step</button><label for="exposure-next">Next practice step</label><textarea id="exposure-next" data-exposure-field="next">${escapeHtml(state.next)}</textarea></section><footer class="skill-app-footer">${linksMarkup(LINKS.exposure)}</footer></div>`;
-      bind(); if (focus) root.querySelector("fieldset:last-of-type textarea")?.focus();
-    }
-    function swap(a, b) { [state.steps[a], state.steps[b]] = [state.steps[b], state.steps[a]]; render(); }
-    function bind() {
-      root.querySelectorAll("[data-exposure-field]").forEach((field) => field.addEventListener("input", () => { state[field.dataset.exposureField] = field.value; }));
-      root.querySelectorAll("[data-exposure-step]").forEach((field) => field.addEventListener("input", () => { state.steps[Number(field.dataset.exposureStep)].situation = field.value; }));
-      root.querySelectorAll("[data-exposure-before]").forEach((field) => field.addEventListener("input", () => { state.steps[Number(field.dataset.exposureBefore)].before = field.value; }));
-      root.querySelectorAll("[data-exposure-after]").forEach((field) => field.addEventListener("input", () => { state.steps[Number(field.dataset.exposureAfter)].after = field.value; }));
-      root.querySelector("[data-exposure-add]").addEventListener("click", () => { state.steps.push({ situation: "", before: "0", after: "" }); render(true); });
-      root.querySelectorAll("[data-exposure-up]").forEach((button) => button.addEventListener("click", () => swap(Number(button.dataset.exposureUp), Number(button.dataset.exposureUp) - 1)));
-      root.querySelectorAll("[data-exposure-down]").forEach((button) => button.addEventListener("click", () => swap(Number(button.dataset.exposureDown), Number(button.dataset.exposureDown) + 1)));
-      root.querySelectorAll("[data-exposure-remove]").forEach((button) => button.addEventListener("click", () => { state.steps.splice(Number(button.dataset.exposureRemove), 1); render(); }));
-    }
-    render();
-    register(root, {
-      toolId: "exposure",
-      toolTitle: "Exposure Ladder",
-      route: Progress.TOOL_ROUTES.exposure,
-      getState: () => state,
-      setState: (next) => { Object.assign(state, next); state.steps = next.steps.map((step) => ({ ...step })); render(); },
-      validateState: (next) => Progress.isPlainObject(next)
-        && Object.keys(next).every((key) => ["theme", "safety", "steps", "next"].includes(key))
-        && ["theme", "safety", "next"].every((key) => typeof next[key] === "string")
-        && Array.isArray(next.steps) && next.steps.length >= 1 && next.steps.length <= 100
-        && next.steps.every((step) => Progress.isPlainObject(step)
-          && Object.keys(step).every((key) => ["situation", "before", "after"].includes(key))
-          && ["situation", "before", "after"].every((key) => typeof step[key] === "string")
-          && [step.before, step.after].every((value) => value === "" || (/^\d{1,3}$/.test(value) && Number(value) <= 100))),
-      getReadableSummary: (next) => {
-        const lines = ["# Exposure Ladder", ""];
-        [["Feared Theme", next.theme], ["Safety Behaviours", next.safety]].forEach(([heading, value]) => { if (value) lines.push(`## ${heading}`, "", value, ""); });
-        const used = next.steps.filter((step) => step.situation || step.before || step.after);
-        if (used.length) { lines.push("## Exposure Steps", ""); used.forEach((step, index) => lines.push(`${index + 1}. ${step.situation || "Unnamed step"}${step.before !== "" ? ` — before: ${step.before}/100` : ""}${step.after !== "" ? `; after: ${step.after}/100` : ""}`)); lines.push(""); }
-        if (next.next) lines.push("## Next Practice Step", "", next.next);
-        return lines.join("\n").trim();
-      },
-    });
+    window.TherapyCbtPractice.init(root, "exposure");
   }
 
   async function initBehaviouralActivation(root) {

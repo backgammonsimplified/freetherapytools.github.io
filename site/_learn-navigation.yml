@@ -44,7 +44,11 @@ website:
               href: tool-finder/box-breathing/index.qmd
             - text: "Case Map"
               href: tool-finder/case-map/index.qmd
-            - text: "Exposure Ladder"
+            - text: "Avoidance & Approach Planner"
+              href: tool-finder/avoidance/index.qmd
+            - text: "Safety Behaviour Check"
+              href: tool-finder/safety-behaviours/index.qmd
+            - text: "Fear Ladder / Graded Exposure"
               href: tool-finder/exposure/index.qmd
             - text: "Five Factor Model"
               href: tool-finder/five-factor-model/index.qmd

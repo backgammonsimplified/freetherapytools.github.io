@@ -86,6 +86,9 @@ TRACKS = (
     "Wellness (Actions & Patterns)",
 )
 
+# Lesson topics may refine a learning track without becoming glossary tracks.
+LESSON_TAGS = (*TRACKS, "Self-Respect")
+
 LEARN_SECTIONS = {
     "dbt": {
         "sidebar_id": "learn",
@@ -139,7 +142,9 @@ TOOL_FINDER_GROUPS = {
     "CBT and Managing Anxiety": (
         ("Box Breathing", "tool-finder/box-breathing/index.qmd"),
         ("Case Map", "tool-finder/case-map/index.qmd"),
-        ("Exposure Ladder", "tool-finder/exposure/index.qmd"),
+        ("Avoidance & Approach Planner", "tool-finder/avoidance/index.qmd"),
+        ("Safety Behaviour Check", "tool-finder/safety-behaviours/index.qmd"),
+        ("Fear Ladder / Graded Exposure", "tool-finder/exposure/index.qmd"),
         ("Five Factor Model", "tool-finder/five-factor-model/index.qmd"),
         ("Recognizing Thinking Traps", "tool-finder/thinking-traps/index.qmd"),
         ("Thought Record", "tool-finder/thought-record/index.qmd"),
@@ -1321,15 +1326,15 @@ def validate_lessons(
     for lesson in lessons:
         relative = str(lesson["relative_path"])
         invalid_difficulties = set(lesson["categories"]) - set(DIFFICULTIES)
-        invalid_tracks = set(lesson["tags"]) - set(TRACKS)
+        invalid_tags = set(lesson["tags"]) - set(LESSON_TAGS)
         if invalid_difficulties:
             raise ValidationError(
                 f"Lesson {relative} has invalid difficulty categories: "
                 f"{sorted(invalid_difficulties)}"
             )
-        if invalid_tracks:
+        if invalid_tags:
             raise ValidationError(
-                f"Lesson {relative} has invalid learning-track tags: {sorted(invalid_tracks)}"
+                f"Lesson {relative} has invalid lesson tags: {sorted(invalid_tags)}"
             )
         for slug in lesson["terms"]:
             if slug in alias_to_canonical:
@@ -2107,6 +2112,7 @@ def build_entries_html(
                     str(track)
                     for lesson in related_lessons
                     for track in lesson["tags"]
+                    if track in TRACKS
                 ),
                 key=TRACKS.index,
             )

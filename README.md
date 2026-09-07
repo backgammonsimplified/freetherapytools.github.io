@@ -109,6 +109,50 @@ navigation after adding a route. Focused regression coverage is in
 `tests/test_dear_skills.js`, `tests/test_dear_content.py`, and
 `tests/test_dear_browser.cjs` (Playwright, after a full render).
 
+## CBT Week 6 and FAST lessons
+
+The CBT Week 6 lesson at `/learn/cbt-anxiety/safety-behaviours-exposure.html`
+covers safety behaviours, avoidance and approach, graded exposure, behavioural
+experiments, and reviewing both actions and feelings. Its diagrams, practice
+prompts, videos, and resource summaries support the authored lesson sequence.
+
+Three tools share `site/assets/cbt-practice.js` and `cbt-practice.css`:
+
+- `/tool-finder/avoidance/`: the Avoidance & Approach Planner records avoided
+  situations, small approach steps, and repeated practice histories.
+- `/tool-finder/safety-behaviours/`: the Safety Behaviour Check combines an
+  original checklist with reflections on function, relief, cost, learning,
+  coping, and experiments. Deselecting a behaviour retains its reflection.
+- `/tool-finder/exposure/`: Fear Ladder / Graded Exposure keeps the existing
+  route and supports a meaningful goal, editable and reorderable rungs, and
+  repeated practice. Legacy `theme/safety/steps/next` progress migrates with ratings.
+
+All three use the existing schema-v1 `TherapySkillProgress` adapters and shared
+save/export architecture. Their canonical IDs are `avoidance`,
+`safety-behaviours`, and `exposure`. The ladder's AI brainstorming prompt is
+copied locally; personal answers are not sent to an external service. Box
+Breathing remains a timer without a progress adapter.
+
+The original Avoidance & Approach Planner PDF and editable DOCX are in
+`site/resources/free-therapy-tools/cbt/` and linked from the tool. Regenerate both
+with `python scripts/generate-cbt-worksheets.py` and visually inspect every page.
+Generic PDF/DOCX binary attributes protect these packages during checkout.
+Week 6 resource cards retain source provenance and concise Native Version
+summaries; educational content is integrated into the authored lesson.
+
+The DEAR + FAST lesson at `/learn/interpersonal-effectiveness/fast.html` adds
+self-respect reflection, Assertive Rights and Responsibilities, expanded FAST
+skills, replacing automatic apologies with appreciation, adding FAST to a DEAR
+MAN script, and practice questions. It retains the Self-Respect tag and
+project-written Native Version resource summaries without malformed OCR.
+
+Focused coverage includes `tests/test_cbt_week6.py`, `tests/test_cbt_week6.js`,
+and `tests/test_cbt_tool_finder.js`, alongside the tool, navigation, and progress
+suites. `scripts/cbt-browser-harness.py` provides a Pandoc-content runtime
+fallback for Windows Quarto subprocess failures; full theme/sidebar review
+still requires a production render. See the [CBT implementation guide](docs/implementation/cbt-week-6-avoidance-safety-exposure-tools.md)
+and [recorded CBT verification](docs/implementation/cbt-week-6-verification.md).
+
 ## Documentation
 
 - [Authoring guide](docs/authoring-guide.md)

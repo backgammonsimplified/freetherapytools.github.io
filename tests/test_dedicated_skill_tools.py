@@ -28,7 +28,10 @@ class DedicatedSkillToolTests(unittest.TestCase):
             self.assertIn("sidebar: tool-finder", text)
             self.assertIn(f'data-quick-app="{route}"', text)
             self.assertIn(f'"{route}": init', quick)
-            self.assertIn(f'toolId: "{route}"', quick)
+            if route == "box-breathing":
+                self.assertNotIn('toolId: "box-breathing"', quick)
+            else:
+                self.assertIn(f'toolId: "{route}"', quick)
             self.assertIn(f'"{route}": "/tool-finder/{route}/"', progress)
 
     def test_shared_assets_and_progress_are_wired_once(self):

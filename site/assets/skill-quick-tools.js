@@ -275,7 +275,7 @@
       updateStatus();
     }
     render();
-    register(root, { toolId: "box-breathing", toolTitle: "Box Breathing", route: Progress.TOOL_ROUTES["box-breathing"], getState: () => ({ durations: { ...state.durations }, cycles: state.cycles }), setState: (next) => { state = { durations: { ...next.durations }, cycles: next.cycles }; render(); }, validateState: (next) => isObject(next) && isObject(next.durations) && ["inhale", "exhale"].every((key) => Number.isInteger(Number(next.durations[key])) && Number(next.durations[key]) >= 1 && Number(next.durations[key]) <= 30) && ["holdIn", "holdOut"].every((key) => Number.isInteger(Number(next.durations[key])) && Number(next.durations[key]) >= 0 && Number(next.durations[key]) <= 30) && Number.isInteger(next.cycles) && next.cycles >= 0, getReadableSummary: (next) => Progress.nonEmptySections("Box Breathing", [["Inhale", `${next.durations.inhale} seconds`], ["First Hold", `${next.durations.holdIn} seconds`], ["Exhale", `${next.durations.exhale} seconds`], ["Second Hold", `${next.durations.holdOut} seconds`], ["Completed Cycles", String(next.cycles)]]) });
+    // In-the-moment timer: intentionally no progress registration or save/export UI.
   }
 
   function initGratitude(root) {

@@ -61,8 +61,11 @@ class SkillProgressTests(unittest.TestCase):
         for tool_id in ("emotion-explorer", "pleasant-event"):
             self.assertIn(f'toolId: "{tool_id}"', finder)
         self.assertNotIn('toolId: "thermometer"', finder)
-        for tool_id in ("behaviour-chain", "exposure"):
-            self.assertIn(f'toolId: "{tool_id}"', practice)
+        self.assertIn('toolId: "behaviour-chain"', practice)
+        self.assertIn('TherapyCbtPractice.init(root, "exposure")', practice)
+        cbt = (ASSETS / "cbt-practice.js").read_text(encoding="utf-8")
+        for token in ("registerTool", "getState", "setState", "validateState", "getReadableSummary"):
+            self.assertIn(token, cbt)
         self.assertNotIn("browserAutosave: false", values)
         self.assertIn("showFloating: false", values)
         self.assertNotIn("localStorage", values)

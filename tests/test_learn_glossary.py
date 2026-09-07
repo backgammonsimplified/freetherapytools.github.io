@@ -29,8 +29,23 @@ class LearnGlossaryTests(unittest.TestCase):
 
     def test_lessons_have_valid_topic_metadata(self) -> None:
         for lesson in self.lessons:
-            self.assertTrue(lesson["tags"])
-            self.assertLessEqual(set(lesson["tags"]), set(learn_glossary.TRACKS))
+            self.assertIn(lesson["track_id"], {track["id"] for track in self.tracks})
+            self.assertLessEqual(set(lesson["tags"]), set(learn_glossary.LESSON_TAGS))
+
+    def test_fast_topic_tag_is_preserved_without_becoming_a_glossary_track(self) -> None:
+        fast = next(lesson for lesson in self.lessons if lesson["id"] == "interpersonal-effectiveness/fast")
+        self.assertIn("Self-Respect", fast["tags"])
+        self.assertNotIn("Self-Respect", learn_glossary.TRACKS)
+        entries = learn_glossary.validate_public_data(
+            json.loads(learn_glossary.PUBLIC_DATA_PATH.read_text(encoding="utf-8"))
+        )
+        learn_glossary.validate_lessons([fast], entries)
+        # A related lesson topic must not be sorted or displayed as a glossary track.
+        html = learn_glossary.build_entries_html(entries, {"wise-mind": [fast]}, {})
+        self.assertIn("Interpersonal Effectiveness", html)
+        self.assertNotIn("Self-Respect", html)
+        with self.assertRaises(learn_glossary.ValidationError):
+            learn_glossary.validate_lessons([{**fast, "tags": ["Unknown topic"]}], entries)
 
     def test_distress_tolerance_sequence_is_metadata_driven(self) -> None:
         lessons = learn_glossary.discover_cube_lessons()
