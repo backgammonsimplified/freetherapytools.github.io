@@ -2,7 +2,7 @@
   --skill-progress-bar-height: 5.25rem;
 }
 
-.skill-app:has(.skill-progress-persistent) {
+.skill-app.skill-progress-persistent-enabled {
   padding-bottom: calc(var(--skill-progress-bar-height) + env(safe-area-inset-bottom));
 }
 
@@ -84,17 +84,17 @@
 }
 
 /* Keep Values' existing persistent navigation above the universal save/export bar. */
-.skill-app[data-skill-app="values"] {
+.skill-app.skill-progress-persistent-enabled[data-skill-app="values"] {
   --values-action-bar-bottom: var(--skill-progress-bar-height);
   padding-bottom: calc(var(--values-action-bar-space) + var(--skill-progress-bar-height));
 }
 
 /* These focused tools already have a fixed footer; keep it above the shared save/export bar. */
-.skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-app-footer {
+.skill-app.skill-progress-persistent-enabled:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-app-footer {
   bottom: var(--skill-progress-bar-height);
 }
 
-.skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) {
+.skill-app.skill-progress-persistent-enabled:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) {
   --focused-tool-save-space: calc(8rem + var(--skill-progress-bar-height));
 }
 
@@ -136,7 +136,7 @@
     align-self: flex-start;
   }
 
-  .skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) {
+  .skill-app.skill-progress-persistent-enabled:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) {
     --focused-tool-save-space: calc(11rem + var(--skill-progress-bar-height));
   }
 }
@@ -147,7 +147,7 @@
     display: none !important;
   }
 
-  .skill-app:has(.skill-progress-persistent) {
+  .skill-app.skill-progress-persistent-enabled {
     padding-bottom: 0 !important;
   }
 }
