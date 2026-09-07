@@ -16,6 +16,16 @@ const D = require("../site/assets/skill-practice-apps.js");
     const config = { toolId: id, toolTitle: D.DEAR_DEFINITIONS[id].title, route: P.TOOL_ROUTES[id], schemaVersion: 1, validateState: next => D.dearStateValid(id, next) };
     const record = P.makeRecord(config, state);
     const summary = D.dearSummary(id, state);
+    const approachTitle = id === "dear-man" ? "Backup / delivery lines" : id === "dear-give" ? "Relationship approach notes" : "Self-respect approach notes";
+    assert.ok(summary.includes(`## ${approachTitle}`));
+    const spoken = summary.split("## Main spoken DEAR script\n\n")[1].split("\n\n## ")[0];
+    assert.equal(spoken, state.fields.finalScript);
+    const approach = summary.split(`## ${approachTitle}\n\n`)[1].split("\n\n## Planning notes")[0];
+    for (const [key] of D.DEAR_DEFINITIONS[id].fields) assert.ok(approach.includes(state.fields[key]));
+    assert.ok(!approach.includes(state.fields.describe));
+    if (id === "dear-man") {
+      for (const label of ["Mindful — If the conversation gets pulled off track", "Negotiate — Possible negotiation", "Appear Confident — Delivery reminder"]) assert.ok(approach.includes(`### ${label}`));
+    }
     for (const value of Object.values(state.fields)) assert.ok(summary.includes(value), `${id} missing export field: ${value}`);
     const parsed = P.parseProgress(P.serializeMarkdown(record, summary));
     assert.deepEqual(P.validateForTool(parsed.record, config).state, state);
@@ -23,6 +33,8 @@ const D = require("../site/assets/skill-practice-apps.js");
     const xml = new TextDecoder().decode(bytes);
     assert.ok(xml.includes("My finalScript &lt;&amp;&gt; words"));
     assert.ok(xml.includes("word/document.xml"));
+    assert.ok(xml.indexOf("Main spoken DEAR script") < xml.indexOf(approachTitle));
+    assert.ok(xml.indexOf(approachTitle) < xml.indexOf("Planning notes"));
   }
   const legacy = { fields: Object.fromEntries(["describe", "express", "assert", "reinforce", "mindful", "appear", "negotiate", "gentle"].map(k => [k, k])), summaryBuilt: true };
   assert.ok(D.dearStateValid("dear-man", legacy));
@@ -31,6 +43,7 @@ const D = require("../site/assets/skill-practice-apps.js");
   assert.equal(normalized.fields.finalScript, "describe express assert reinforce");
   assert.ok(!D.dearSummary("dear-man", legacy).includes("gentle"));
   assert.equal(D.normalizeDearState("dear-man", { ...normalized, fields: { ...normalized.fields, finalScript: "My edited script" } }).fields.finalScript, "My edited script");
+  assert.equal(D.combineDear({ describe: "  Facts. ", express: "Feeling.", assert: "Request.", reinforce: "Benefit.", mindful: "Repeat.", appear: "Steady voice.", negotiate: "Alternative." }), "Facts. Feeling. Request. Benefit.");
   assert.match(D.DEAR_PROMPT, /Do not use threats, guilt, deception or pressure tactics/);
   assert.match(D.DEAR_PROMPT, /several options/);
   const catalogue = JSON.parse(fs.readFileSync("site/data/tool-finder/catalogue.json"));

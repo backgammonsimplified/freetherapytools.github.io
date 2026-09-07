@@ -102,7 +102,7 @@
         assert: "I need the repair to be scheduled within the next day.",
         reinforce: "If the repair is scheduled promptly, the sink is less likely to get worse and the issue can be resolved before it becomes more disruptive or expensive.",
         mindful: "I understand there may be delays, but I still need the repair to be scheduled within the next day.",
-        appear: "I am asking clearly because this issue needs attention, and I need a concrete update today.",
+        appear: "Use a calm, steady voice and keep returning to the request.",
         negotiate: "If scheduling is difficult on your end, I can send you a few plumber options so the repair can be arranged more quickly.",
       }, learn: "dear-man",
     },
@@ -146,7 +146,7 @@ I will edit the ideas myself.`;
 
   function dearFields(toolId) {
     const definition = DEAR_DEFINITIONS[toolId];
-    return [["situation", "Situation — What is going on?"], ["objective", definition.goal], ...DEAR_FIELDS, ...definition.fields, ["finalScript", "Final combined script"]];
+    return [["situation", "Situation — What is going on?"], ["objective", definition.goal], ...DEAR_FIELDS, ...definition.fields, ["finalScript", "Main spoken DEAR script"]];
   }
 
   function combineDear(fields) {
@@ -168,9 +168,24 @@ I will edit the ideas myself.`;
     return required.every((key) => typeof next.fields[key] === "string") && Object.entries(next.fields).every(([key, value]) => [...keys, ...legacy].includes(key) && typeof value === "string");
   }
 
+  function dearApproach(toolId) {
+    if (toolId === "dear-man") return {
+      title: "Backup / delivery lines",
+      fields: [["mindful", "Mindful — If the conversation gets pulled off track"], ["negotiate", "Negotiate — Possible negotiation"], ["appear", "Appear Confident — Delivery reminder"]],
+    };
+    return { title: toolId === "dear-give" ? "Relationship approach notes" : "Self-respect approach notes", fields: DEAR_DEFINITIONS[toolId].fields };
+  }
+
   function dearSummary(toolId, next) {
-    const state = normalizeDearState(toolId, next);
-    return Progress.nonEmptySections(DEAR_DEFINITIONS[toolId].title, dearFields(toolId).map(([key, label]) => [label, state.fields[key]]));
+    const { fields } = normalizeDearState(toolId, next);
+    const approach = dearApproach(toolId);
+    const group = (title, items) => {
+      const answered = items.filter(([key]) => fields[key].trim());
+      return answered.length ? `\n\n## ${title}\n\n${answered.map(([key, label]) => `### ${label}\n\n${fields[key]}`).join("\n\n")}` : "";
+    };
+    return Progress.nonEmptySections(DEAR_DEFINITIONS[toolId].title, [["Main spoken DEAR script", fields.finalScript]])
+      + group(approach.title, approach.fields)
+      + group("Planning notes", dearFields(toolId).slice(0, 2).concat(DEAR_FIELDS));
   }
 
   function initDear(root, toolId) {
@@ -182,14 +197,21 @@ I will edit the ideas myself.`;
       <h2>Plan the conversation</h2>${fields.slice(0, 2).map(markup).join("")}
       <h2>DEAR — What I say</h2>${DEAR_FIELDS.map(markup).join("")}
       <h2>${escapeHtml(definition.approach)}</h2><p id="${toolId}-approach-help">${escapeHtml(definition.help)}</p>${definition.fields.map(markup).join("")}
-      <h2>Put it into my own words</h2><p>Combine your DEAR wording, then edit it to sound natural. Use your delivery notes and alternatives where they fit the conversation. Combining again replaces the final script.</p>
+      <h2>Rehearse the conversation</h2><p>Combine your DEAR wording, then edit it to sound natural. Only your entered words are used. Combining again replaces the main script. Your approach notes stay separate below and update as you edit the planning fields.</p>
       <button type="submit">Combine DEAR into final script</button>${markup(fields.at(-1))}
+      <section data-dear-approach-output aria-label="${escapeHtml(dearApproach(toolId).title)}"></section>
       ${toolId === "dear-man" ? `<details><summary>Need ideas?</summary><p>Copy this prompt, add only details you choose to share, and paste it into an assistant yourself. Copying sends nothing; a service you paste into has its own privacy practices.</p><textarea aria-label="DEAR MAN brainstorming prompt" rows="12" readonly data-dear-prompt>${escapeHtml(DEAR_PROMPT)}</textarea><button type="button" data-copy-dear-prompt>Copy Prompt</button><p role="status" aria-live="polite" data-dear-copy-status></p></details>` : ""}
       <p role="status" aria-live="polite" data-dear-status></p>
       </form><footer class="skill-app-footer">${linksMarkup([{ label: `Learn ${toolId === "dear-man" ? "DEAR + MAN" : definition.learn.toUpperCase()}`, href: `/learn/interpersonal-effectiveness/${definition.learn}.html` }])}</footer></div>`;
     const form = root.querySelector("[data-dear-form]");
+    function renderApproach() {
+      const approach = dearApproach(toolId);
+      root.querySelector("[data-dear-approach-output]").innerHTML = `<h2>${escapeHtml(approach.title)}</h2>${approach.fields.map(([key, label]) => `<h3>${escapeHtml(label)}</h3><p style="white-space: pre-wrap">${escapeHtml(state.fields[key]) || "Add your own wording in the planning field above."}</p>`).join("")}`;
+    }
+    renderApproach();
     form.addEventListener("input", (event) => {
       if (fields.some(([key]) => key === event.target.name)) state.fields[event.target.name] = event.target.value;
+      renderApproach();
     });
     form.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -211,7 +233,7 @@ I will edit the ideas myself.`;
     register(root, {
       toolId, toolTitle: definition.title, route: Progress.TOOL_ROUTES[toolId],
       getState: () => state,
-      setState: (next) => { state = normalizeDearState(toolId, next); fields.forEach(([key]) => { form.elements[key].value = state.fields[key]; }); },
+      setState: (next) => { state = normalizeDearState(toolId, next); fields.forEach(([key]) => { form.elements[key].value = state.fields[key]; }); renderApproach(); },
       validateState: (next) => dearStateValid(toolId, next),
       getReadableSummary: (next) => dearSummary(toolId, next),
     });

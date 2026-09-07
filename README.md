@@ -1111,19 +1111,24 @@ The objective, relationship, and self-respect priorities have dedicated tools:
 `site/assets/skill-practice-apps.js`, plus the existing schema-v1
 `TherapySkillProgress` adapters. All include Situation, a priority-specific goal,
 DEAR wording, their MAN/GIVE/FAST approach fields, and an editable final script.
-Combining copies the user's DEAR wording without adding persuasion; delivery
-notes remain separate and all fields are exported. Old seven-field MAN files,
+Combining copies the user's DEAR wording without adding persuasion. Rehearsal
+shows the main spoken script separately from MAN backup/delivery lines (Mindful,
+Negotiate, and an Appear Confident reminder), GIVE relationship approach notes,
+or FAST self-respect approach notes. Markdown, DOCX, and print retain that
+structure, followed by the planning fields. Old seven-field MAN files,
 including legacy GIVE/FAST keys, still validate and normalize. A manual final
 script is preserved on restore. The MAN brainstorming disclosure copies only a
 static prompt; no answers are uploaded or automatically included.
 
 The Learn authority is `/learn/interpersonal-effectiveness/dear-man.html`.
 Its communication-styles SVG, priorities, and landlord example are project
-explanations. The five source transcription blocks remain distinctly quoted
-with immediate provenance, original images, and existing clean resource links.
-The p020 practice worksheet is manually transcribed; never restore its malformed
-OCR. The existing handwritten-note transcription is retained; the handwritten
-source image is not available in this checkout for renewed verification.
+explanations. Handout 5 Parts 1/2, Handout 5A, and the source Script worksheet
+have project-written summaries with immediate provenance; do not publish their
+full verbatim transcriptions or malformed OCR. Existing source/reference cards
+remain subject to the project's publication rules. Useful handwritten-note
+concepts are integrated with concise attribution. The lesson uses its existing
+interpersonal-effectiveness track and Beginner category without legacy subject
+tags; optional tags are not required by the lesson metadata validator.
 
 Original blank downloads are
 `site/resources/interpersonal-effectiveness/dear-man-script-worksheet.docx` and

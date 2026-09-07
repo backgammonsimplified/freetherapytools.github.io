@@ -921,8 +921,10 @@ def discover_lessons() -> list[dict[str, object]]:
             )
         lesson["description"] = " ".join(description.split())
         for key in ("categories", "tags", "terms"):
-            value = metadata.get(key)
-            if not isinstance(value, list) or not value:
+            # The required learn-track already supplies the Therapy taxonomy.
+            # Optional legacy tags must not force unrelated subject metadata.
+            value = metadata.get(key, [] if key == "tags" else None)
+            if not isinstance(value, list) or (not value and key != "tags"):
                 raise ValidationError(
                     f"Lesson {relative.as_posix()} requires a non-empty {key} list"
                 )

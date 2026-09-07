@@ -61,6 +61,21 @@ let browser;
         const box = await figure.boundingBox();
         assert.ok(box.x >= 0 && box.x + box.width <= width + 1);
         await page.screenshot({ path: path.join(output, `learn-figure-${width}.png`) });
+        for (const anchor of ["handout-5-part-1", "handout-5-part-2", "handout-5a", "dear-man-script-source"]) {
+          const summary = page.locator(`section#${anchor}`);
+          assert.ok((await summary.innerText()).includes("Source:"));
+          assert.equal(await summary.locator("blockquote").count(), 0);
+          assert.ok((await summary.locator("p").last().innerText()).includes("Source:") || anchor === "dear-man-script-source");
+        }
+        assert.equal(await page.getByText("Checker Play", { exact: true }).count(), 0);
+        for (const extension of ["pdf", "docx"]) {
+          const href = await page.locator(`a[href*="dear-man-script-worksheet.${extension}"]`).first().getAttribute("href");
+          const response = await context.request.get(new URL(href, page.url()).href);
+          assert.equal(response.status(), 200);
+          assert.ok((await response.body()).length > 1000);
+        }
+        await page.locator("section#handout-5-part-1").scrollIntoViewIfNeeded();
+        await page.screenshot({ path: path.join(output, `learn-source-summary-${width}.png`) });
       }
       rows.push({ route, width, result: "article position/width, controls and overflow passed" });
     }
@@ -78,6 +93,13 @@ let browser;
       await page.getByRole("button", { name: "Combine DEAR into final script" }).click();
       assert.equal(await page.locator('[name="finalScript"]').inputValue(), "describe example express example assert example reinforce example");
       await page.locator('[name="finalScript"]').fill("My own edited final script <&>");
+      const approach = page.locator("[data-dear-approach-output]");
+      const approachTitle = id === "dear-man" ? "Backup / delivery lines" : id === "dear-give" ? "Relationship approach notes" : "Self-respect approach notes";
+      assert.equal(await approach.locator("h2").innerText(), approachTitle);
+      for (const [key] of D.DEAR_DEFINITIONS[id].fields) assert.ok((await approach.innerText()).includes(`${key} example`));
+      assert.ok(!(await approach.innerText()).includes("describe example"));
+      await approach.scrollIntoViewIfNeeded();
+      await page.screenshot({ path: path.join(output, `${id}-output-${width}.png`) });
       const area = page.locator("[data-skill-progress-final]");
       await area.locator("summary").click();
       assert.ok(await area.getAttribute("open") !== null);
@@ -91,6 +113,8 @@ let browser;
         const markdown = fs.readFileSync(saved, "utf8");
         for (const key of Object.keys(fields).filter(k => k !== "finalScript")) assert.ok(markdown.includes(`${key} example`));
         assert.ok(markdown.includes("My own edited final script"));
+        assert.ok(markdown.includes(`## ${approachTitle}`));
+        assert.ok(markdown.indexOf("## Main spoken DEAR script") < markdown.indexOf(`## ${approachTitle}`));
         await page.locator('[name="situation"]').fill("changed after export");
         await area.locator('input[type="file"]').setInputFiles(saved);
         await page.waitForFunction(() => document.querySelector('[name="situation"]').value === "situation example");
@@ -98,9 +122,11 @@ let browser;
         const docxEvent = page.waitForEvent("download");
         await area.getByRole("button", { name: "Export DOCX", exact: true }).click();
         await (await docxEvent).saveAs(path.join(output, `${id}.docx`));
+        assert.ok(fs.readFileSync(path.join(output, `${id}.docx`), "utf8").includes(approachTitle));
         await page.evaluate(() => { window.print = () => { window.__printed = document.querySelector(".skill-progress-print").textContent; }; });
         await area.getByRole("button", { name: "Print / Save as PDF", exact: true }).click();
         assert.match(await page.evaluate(() => window.__printed), /My own edited final script/);
+        assert.ok((await page.evaluate(() => window.__printed)).includes(approachTitle));
         await page.evaluate(() => window.dispatchEvent(new Event("afterprint")));
         await page.waitForTimeout(550);
         await page.reload();
@@ -108,6 +134,7 @@ let browser;
         await area.locator("summary").click();
         await area.getByRole("button", { name: "Restore browser progress" }).click();
         assert.equal(await page.locator('[name="finalScript"]').inputValue(), "My own edited final script <&>");
+        for (const [key] of D.DEAR_DEFINITIONS[id].fields) assert.ok((await approach.innerText()).includes(`${key} example`));
         if (id === "dear-man") {
           await page.getByText("Need ideas?", { exact: true }).click();
           await page.getByRole("button", { name: "Copy Prompt" }).click();
@@ -115,7 +142,16 @@ let browser;
           assert.equal((await page.evaluate(() => navigator.clipboard.readText())).replace(/\r\n/g, "\n"), D.DEAR_PROMPT);
         }
       }
-      rows.push({ route: id, width, result: "fields, script, bottom disclosure, overflow passed" });
+      for (const [key, example] of Object.entries(D.DEAR_DEFINITIONS[id].examples)) await page.locator(`[name="${key}"]`).fill(example);
+      await page.getByRole("button", { name: "Combine DEAR into final script" }).click();
+      await page.locator('[for="' + id + '-finalScript"]').evaluate(el => el.scrollIntoView({ block: "start", behavior: "instant" }));
+      await page.evaluate(() => window.scrollBy(0, -110));
+      await noOverflow(`${id} ${width} worked example`);
+      await page.screenshot({ path: path.join(output, `${id}-rehearsal-${width}.png`) });
+      await approach.evaluate(el => el.scrollIntoView({ block: "start", behavior: "instant" }));
+      await page.evaluate(() => window.scrollBy(0, -110));
+      await page.screenshot({ path: path.join(output, `${id}-worked-approach-${width}.png`) });
+      rows.push({ route: id, width, result: "fields, separated script/approach notes, bottom disclosure, overflow passed" });
     }
   }
   for (const id of ["pros-and-cons", "interpersonal-troubleshooting", "dime-game", "ask-or-say-no", "emotions", "thought-record", "values"]) {

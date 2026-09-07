@@ -1,5 +1,82 @@
 # DEAR skills implementation and verification
 
+## Focused follow-up to reviewed head 0db11b7
+
+Starting commit: `0db11b75d4ae06e8aaaa29843b566098d9b6f22f`.
+Branch: `content/interpersonal-dear-skills`; Draft PR #3 remains unmerged.
+
+Removed the lesson's `Checker Play` tag. The existing
+`learn-track: interpersonal-effectiveness` and `Beginner` category supply its
+metadata. Legacy tags are now optional in the lesson loader; supplied tags still
+undergo validation. No new taxonomy was introduced. The focused DEAR route,
+builder, worksheet-generator, and catalogue scan found no other inherited
+Backgammon metadata. Generated search indexes reflect the new lesson content.
+
+The public lesson now has four project-written source summaries: Handout 5 Part
+1 explains DEAR; Part 2 explains MAN; Handout 5A applies DEAR to a stuck
+interaction with original examples; the Script worksheet summary explains its
+practice sequence. Full verbatim transcriptions, source examples, and worksheet
+prompts were removed from the authored HTML source. Each summary has immediate
+provenance. Existing resource cards and reference links remain under the same
+publication rules. Original Free Therapy Tools DOCX/PDF downloads remain
+prominent and explicitly separate from the supplied worksheet. Handwritten
+concepts are integrated with concise attribution.
+
+The rehearsal output separates the editable main DEAR script from MAN backup
+lines (Mindful, Negotiate) and the Appear Confident delivery reminder. GIVE and
+FAST have relationship and self-respect approach sections. Only entered text is
+used. Markdown, DOCX, and print keep these sections, with planning notes after
+them; resume files and browser restore preserve the fields. The bottom-only
+Save your work disclosure and shared progress runtime were not redesigned.
+
+Follow-up checks, all exit 0:
+
+```text
+node --check site/assets/skill-practice-apps.js
+node --check site/assets/skill-progress.js
+node --check site/assets/bs-learn.js
+node --check tests/test_dear_browser.cjs
+node tests/test_dear_skills.js
+node tests/test_skill_progress.js
+node tests/test_navigation_runtime.js
+node tests/test_site_path.js
+python -m unittest tests.test_dear_content
+python -m unittest tests.test_tool_finder_pass tests.test_practice_apps tests.test_skill_progress tests.test_navigation_parity
+python scripts/learn_glossary.py generate
+python scripts/learn_glossary.py validate
+git diff --check
+node tests/test_dear_browser.cjs
+```
+
+Python results: **5 DEAR content tests passed; 42 shared-tool/navigation tests
+passed**. Glossary: 58 lessons, 7 tracks, 18 generated files checked. The bundled
+Python initially lacked PyYAML; the repository's normal `python` environment
+ran generation and validation successfully.
+
+Full production-like Quarto render: **PASS**, exit 0, 109 pages and
+`Output created: _site\index.html`, using the same Windows short-path launcher
+outside the sandbox:
+
+```powershell
+Remove-Item Env:TSK_RESOURCE_REVIEW -ErrorAction SilentlyContinue
+$env:BS_SKIP_SOCIAL_CARDS='1'
+& 'C:/PROGRA~1/Quarto/bin/quarto.cmd' render site
+```
+
+Browser: **27 route/width checks passed**, zero page/console errors, at 390, 768,
+1280, and 1440px. Covered the DEAR MAN lesson, TIPP, all three builders, and seven
+other tools using the shared bottom disclosure. Added checks cover source
+summaries/provenance, successful original worksheet downloads, separate approach
+sections in screen/Markdown/DOCX/print, and restored notes. Screenshots include
+the worked examples. There were no horizontal-overflow or Learn article-shift
+regressions. Logs and screenshots remain under ignored `tmp/`.
+
+## Prior implementation pass
+
+The following records the earlier pass. Its transcription treatment and legacy
+tag workaround are superseded by the focused follow-up above. Worksheets were
+unchanged in the follow-up; their prior validation limits still apply.
+
 Starting commit: `c8a8403ba067b12d164abbd26db34bef800a3f92`.
 Branch: `content/interpersonal-dear-skills`. Target: Draft PR #3, base `master`.
 Verification date: 2026-09-06. No merge, force push, or history rewrite.
