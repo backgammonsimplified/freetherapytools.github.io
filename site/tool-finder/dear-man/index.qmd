@@ -8,8 +8,6 @@ toc: false
 
 Use this tool when your main priority is **getting an objective met**: asking for something, saying no, requesting a change, or resolving a practical problem. If your main priority is strengthening the relationship, use the **[DEAR GIVE tool](/tool-finder/dear-give/)**. If your main priority is protecting self-respect or acting consistently with your values, use the **[DEAR FAST tool](/tool-finder/dear-fast/)**.
 
-For example, you might ask a friend or partner to be on time so you can leave when planned.
-
 Write the result as a script you could realistically say out loud. Keep the wording factual, truthful, respectful, and non-manipulative. Rehearsing the script can help you clarify the request and visualize staying on topic during the conversation.
 
 User-entered data stays in your browser and is not uploaded by this tool. Save the Markdown (`.md`) file if you want to resume later; export DOCX or print/save as PDF if you want a readable copy for printing or sharing with your therapist.
