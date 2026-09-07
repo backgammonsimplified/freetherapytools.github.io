@@ -1,10 +1,14 @@
 (function (global) {
   "use strict";
 
+  const VERSION = "20260907-progressive-reveal-3";
+  const CHATGPT_URL = "https://chatgpt.com/";
   const stateByRoot = new WeakMap();
   const scheduled = new WeakSet();
-  const VERSION = "20260907-question-flow-1";
-  const CHATGPT_URL = "https://chatgpt.com/";
+
+  // These tools already have an intentionally guided, visual, repeated-item, or
+  // decision-tree interaction. Keep their existing interaction and only remove
+  // the duplicate app-level title/subtitle.
   const PROGRESSIVE_EXCLUSIONS = new Set([
     "box-breathing",
     "grounding",
@@ -21,7 +25,12 @@
     "urge-surfing",
     "pros-and-cons",
     "interpersonal-troubleshooting",
+    "exposure",
+    "safety-behaviours",
+    "behaviour-chain",
+    "gratitude-journal"
   ]);
+
   const UTILITY_ANCESTORS = [
     ".values-map-toolbar",
     ".skill-app-inline-fields",
@@ -32,8 +41,8 @@
     "[data-calendar-fields]",
     "[data-values-review-calendar]",
     "[data-activation-calendar]",
-    ".tool-question-flow-toolbar",
     ".tool-question-help",
+    ".tool-progressive-controls"
   ].join(",");
 
   function toolId(root) {
@@ -50,58 +59,6 @@
     return String(value || "").replace(/\s+/g, " ").trim();
   }
 
-  function pageDescription() {
-    return cleanText(document.querySelector("#title-block-header .description, #title-block-header .lead")?.textContent || "");
-  }
-
-  function wordSet(value) {
-    return new Set(cleanText(value).toLowerCase().replace(/[^a-z0-9 ]+/g, " ").split(/\s+/).filter((word) => word.length > 2));
-  }
-
-  function similarity(left, right) {
-    const a = wordSet(left);
-    const b = wordSet(right);
-    if (!a.size || !b.size) return 0;
-    let shared = 0;
-    a.forEach((word) => { if (b.has(word)) shared += 1; });
-    return shared / Math.min(a.size, b.size);
-  }
-
-  function simplifyAppHeader(root, shell) {
-    const header = shell.querySelector(":scope > .skill-app-header");
-    if (!header || header.dataset.toolHeaderSimplified === VERSION) return;
-    header.dataset.toolHeaderSimplified = VERSION;
-
-    const heading = header.querySelector(":scope > h2");
-    if (heading) heading.classList.add("tool-duplicate-heading");
-
-    const description = pageDescription();
-    const context = [];
-    header.querySelectorAll(":scope > p").forEach((paragraph) => {
-      const text = cleanText(paragraph.textContent);
-      paragraph.classList.add("tool-duplicate-subtitle");
-      const hasContext = /device|browser|uploaded|upload|privacy|source|handout|worksheet|save a copy/i.test(text);
-      if (hasContext && similarity(text, description) < 0.7) context.push(text);
-    });
-
-    const meaningfulChildren = [...header.children].filter((element) => {
-      if (element === heading || element.matches("p")) return false;
-      return !element.hidden;
-    });
-    header.classList.toggle("tool-header-empty", meaningfulChildren.length === 0);
-    header.classList.toggle("tool-header-compact", meaningfulChildren.length > 0);
-
-    if (context.length) {
-      const panel = shell.querySelector(":scope > .skill-app-panel, :scope > form.skill-app-panel, :scope > .skill-guided-tree, :scope > .skill-tree-app");
-      if (panel && !panel.querySelector(":scope > .tool-header-context")) {
-        const details = document.createElement("details");
-        details.className = "tool-header-context";
-        details.innerHTML = `<summary>About this tool and privacy</summary>${[...new Set(context)].map((text) => `<p>${escapeHtml(text)}</p>`).join("")}`;
-        panel.prepend(details);
-      }
-    }
-  }
-
   function escapeHtml(value) {
     return String(value || "")
       .replaceAll("&", "&amp;")
@@ -111,86 +68,128 @@
       .replaceAll("'", "&#039;");
   }
 
+  function simplifyAppHeader(shell) {
+    const header = shell.querySelector(":scope > .skill-app-header");
+    if (!header || header.dataset.toolHeaderSimplified === VERSION) return;
+    header.dataset.toolHeaderSimplified = VERSION;
+
+    const heading = header.querySelector(":scope > h2");
+    if (heading) heading.hidden = true;
+    header.querySelectorAll(":scope > p").forEach((paragraph) => { paragraph.hidden = true; });
+
+    // Some headers contain useful controls/progress in addition to the repeated
+    // title. Keep those children, otherwise remove the empty header entirely.
+    const usefulChildren = [...header.children].filter((child) => !child.hidden);
+    if (!usefulChildren.length) header.hidden = true;
+    else header.classList.add("tool-header-functional-only");
+  }
+
+  function prepareAvoidance(root) {
+    if (toolId(root) !== "avoidance") return true;
+
+    const add = root.querySelector('[data-cbt-action="add"]');
+    const items = [...root.querySelectorAll(".cbt-item")];
+    if (!items.length && add && add.dataset.autoCreated !== VERSION) {
+      add.dataset.autoCreated = VERSION;
+      add.click();
+      return false;
+    }
+
+    const currentItems = [...root.querySelectorAll(".cbt-item")];
+    currentItems.forEach((item, index) => {
+      item.open = true;
+      item.classList.toggle("tool-avoidance-primary", index === 0);
+      item.classList.toggle("tool-avoidance-extra", index > 0);
+      item.hidden = index > 0;
+      const summary = item.querySelector(":scope > summary");
+      if (summary) summary.hidden = true;
+    });
+
+    // The planner is now deliberately about one example. Older additional
+    // items remain in saved state for backward compatibility but are not shown.
+    root.querySelectorAll('[data-cbt-action="add"], [data-cbt-action="practice"], [data-cbt-action="remove"]').forEach((button) => { button.hidden = true; });
+    const primary = root.querySelector(".tool-avoidance-primary");
+    if (primary) {
+      primary.querySelectorAll(":scope > h3").forEach((heading) => {
+        if (/practice history/i.test(cleanText(heading.textContent))) {
+          heading.hidden = true;
+          if (heading.nextElementSibling?.matches("p")) heading.nextElementSibling.hidden = true;
+        }
+      });
+      primary.querySelectorAll(":scope > .cbt-practice").forEach((entry) => { entry.hidden = true; });
+      const itemActions = primary.querySelector(":scope > .skill-app-actions");
+      if (itemActions) itemActions.hidden = true;
+    }
+    return true;
+  }
+
   function associatedLabel(control, scope) {
-    if (control.closest("label")) return control.closest("label");
+    const wrapping = control.closest("label");
+    if (wrapping && scope.contains(wrapping)) return wrapping;
     if (!control.id) return null;
-    try { return scope.querySelector(`label[for="${global.CSS?.escape ? global.CSS.escape(control.id) : control.id}"]`); }
-    catch (_error) { return null; }
+    try {
+      const escaped = global.CSS?.escape ? global.CSS.escape(control.id) : control.id;
+      return scope.querySelector(`label[for="${escaped}"]`);
+    } catch (_error) {
+      return null;
+    }
   }
 
   function promptLabel(control, scope) {
     const label = associatedLabel(control, scope);
     if (label) return cleanText(label.textContent);
-    const aria = control.getAttribute("aria-label");
-    if (aria) return cleanText(aria);
-    return cleanText(control.getAttribute("placeholder")) || "this reflection question";
+    return cleanText(control.getAttribute("aria-label") || control.getAttribute("placeholder")) || "this reflection question";
   }
 
   function isProgressControl(control) {
     if (!(control instanceof HTMLElement) || control.disabled || control.closest(UTILITY_ANCESTORS)) return false;
-    if (control.matches("textarea")) return true;
-    if (control.matches("select")) return true;
+    if (control.matches("textarea, select")) return true;
     if (!control.matches("input")) return false;
-    const type = (control.getAttribute("type") || "text").toLowerCase();
-    return ["text", "number"].includes(type);
+    return ["text", "number"].includes((control.getAttribute("type") || "text").toLowerCase());
   }
 
-  function isHelpControl(control) {
+  function isPromptHelpControl(control) {
     if (control.matches("textarea")) return true;
-    if (!control.matches("input")) return false;
-    return (control.getAttribute("type") || "text").toLowerCase() === "text";
+    return control.matches('input[type="text"], input:not([type])');
   }
 
-  function safePairBlock(control, panel) {
-    const preset = control.closest(".cbt-field, .thought-record-steps > li, .case-map-field");
+  function safeQuestionBlock(control, panel) {
+    const preset = control.closest(".cbt-field, .case-map-field, .five-factor-card, .thought-record-steps > li");
     if (preset && panel.contains(preset)) return preset;
 
-    const containingLabel = control.closest("label");
-    if (containingLabel && containingLabel !== panel && panel.contains(containingLabel)) {
-      const parent = containingLabel.parentElement;
-      if (parent && parent.querySelectorAll(":scope > label").length === 1 && parent.querySelectorAll("textarea, input, select").length === 1) return parent;
-      return null;
-    }
+    const wrappingLabel = control.closest("label");
+    if (wrappingLabel && wrappingLabel !== panel && panel.contains(wrappingLabel)) return wrappingLabel;
 
     const label = associatedLabel(control, panel);
     if (!label || label.parentElement !== control.parentElement) return null;
-    const nodes = [];
-    let current = label;
-    for (let count = 0; current && count < 5; count += 1, current = current.nextSibling) {
-      nodes.push(current);
-      if (current === control) break;
-      if (current.nodeType === Node.ELEMENT_NODE && current.matches("h2,h3,h4,button,fieldset,section,details")) return null;
-    }
-    if (!nodes.includes(control)) return null;
 
-    const wrapper = document.createElement("section");
+    const nodes = [label];
+    let cursor = label.nextSibling;
+    while (cursor && cursor !== control) {
+      if (cursor.nodeType === Node.ELEMENT_NODE && cursor.matches("h2,h3,h4,button,fieldset,section,details,label")) return null;
+      nodes.push(cursor);
+      cursor = cursor.nextSibling;
+    }
+    if (cursor !== control) return null;
+    nodes.push(control);
+
+    const wrapper = document.createElement("div");
     wrapper.className = "tool-question-step";
     label.before(wrapper);
     nodes.forEach((node) => wrapper.append(node));
     return wrapper;
   }
 
-  function ensureQuestionClass(block) {
-    if (!block) return null;
-    block.classList.add("tool-question-step");
-    return block;
-  }
-
-  function addHelp(control, block, scope) {
-    if (!isHelpControl(control) || !block || control.dataset.toolPromptHelp === VERSION) return;
-    control.dataset.toolPromptHelp = VERSION;
+  function addPromptHelp(control, block, scope) {
+    if (!isPromptHelpControl(control) || block.querySelector(":scope > .tool-question-help")) return;
     const label = promptLabel(control, scope);
     if (!label || /search|filter|date|time|duration|seconds|minutes/i.test(label)) return;
 
-    const prompt = `Help me think through this reflection question: “${label}” Ask me one brief question at a time and help me find my own answer.`;
+    const prompt = `Help me think through this question: “${label}” Ask me one short question at a time and help me find my own answer.`;
     const details = document.createElement("details");
     details.className = "tool-question-help";
-    details.innerHTML = `<summary>Need help with this question?</summary><p>${escapeHtml(prompt)}</p><div class="tool-question-help-actions"><button type="button" class="secondary" data-tool-copy-prompt>Copy prompt</button><a href="${CHATGPT_URL}" target="_blank" rel="noopener">Open ChatGPT <span class="visually-hidden">(opens in a new tab)</span></a><span role="status" data-tool-prompt-status></span></div>`;
-    details.dataset.prompt = prompt;
-
-    const anchor = control.closest("label") === block ? block : control;
-    if (anchor === block) block.after(details);
-    else anchor.after(details);
+    details.innerHTML = `<summary>Need help with this question?</summary><p>${escapeHtml(prompt)}</p><div><button type="button" class="secondary" data-tool-copy-prompt>Copy prompt</button> <a href="${CHATGPT_URL}" target="_blank" rel="noopener">Open ChatGPT<span class="visually-hidden"> (opens in a new tab)</span></a> <span role="status" data-tool-prompt-status></span></div>`;
+    block.append(details);
 
     details.querySelector("[data-tool-copy-prompt]")?.addEventListener("click", async () => {
       const status = details.querySelector("[data-tool-prompt-status]");
@@ -204,99 +203,107 @@
     });
   }
 
-  function answersForBlock(block) {
-    const answers = [];
-    block.querySelectorAll("textarea, input, select").forEach((control) => {
-      if (!isProgressControl(control)) return;
-      const value = cleanText(control.value);
-      if (!value) return;
-      answers.push({ label: promptLabel(control, block), value });
-    });
-    return answers;
+  function blockControls(block) {
+    return [...block.querySelectorAll("textarea, input, select")].filter(isProgressControl);
   }
 
-  function buildToolbar(root, panel, blocks, state) {
-    const toolbar = document.createElement("div");
-    toolbar.className = "tool-question-flow-toolbar";
-    toolbar.innerHTML = `<div class="tool-question-flow-actions"><strong data-tool-question-count></strong><button type="button" class="secondary" data-tool-question-back>Back</button><button type="button" data-tool-question-next>Next</button><button type="button" class="secondary" data-tool-question-reveal>Reveal all questions</button></div><details class="tool-answer-review"><summary>Review what I have entered</summary><ol data-tool-answer-list></ol></details>`;
-    panel.prepend(toolbar);
+  function blockAnswered(block) {
+    const controls = blockControls(block);
+    return controls.some((control) => cleanText(control.value));
+  }
 
-    const update = (focus = false) => {
-      state.index = Math.max(0, Math.min(state.index, blocks.length - 1));
-      root.classList.toggle("tool-question-flow-all", state.revealAll);
-      blocks.forEach((block, index) => { block.hidden = !state.revealAll && index !== state.index; });
-
-      toolbar.querySelector("[data-tool-question-count]").textContent = state.revealAll ? `${blocks.length} questions` : `Question ${state.index + 1} of ${blocks.length}`;
-      const back = toolbar.querySelector("[data-tool-question-back]");
-      const next = toolbar.querySelector("[data-tool-question-next]");
-      back.hidden = state.revealAll;
-      next.hidden = state.revealAll;
-      back.disabled = state.index === 0;
-      next.disabled = state.index === blocks.length - 1;
-      toolbar.querySelector("[data-tool-question-reveal]").textContent = state.revealAll ? "Show one question at a time" : "Reveal all questions";
-
-      const review = toolbar.querySelector("[data-tool-answer-list]");
-      const items = blocks.map((block, index) => {
-        const answers = answersForBlock(block);
-        if (!answers.length) return "";
-        const label = answers[0].label || `Question ${index + 1}`;
-        const snippet = answers.map((item) => item.value).join(" · ").slice(0, 160);
-        return `<li><button type="button" data-tool-review-index="${index}">${escapeHtml(label)}<small>${escapeHtml(snippet)}</small></button></li>`;
-      }).filter(Boolean).join("");
-      review.innerHTML = items || "<li>No answers entered yet.</li>";
-      review.querySelectorAll("[data-tool-review-index]").forEach((button) => button.addEventListener("click", () => {
-        state.revealAll = false;
-        state.index = Number(button.dataset.toolReviewIndex);
-        update(true);
-      }));
-
-      if (focus && !state.revealAll) {
-        const target = blocks[state.index].querySelector("textarea, input, select, button");
-        target?.focus({ preventScroll: true });
-        blocks[state.index].scrollIntoView({ behavior: "smooth", block: "center" });
-      }
-    };
-
-    toolbar.querySelector("[data-tool-question-back]").addEventListener("click", () => { state.index -= 1; update(true); });
-    toolbar.querySelector("[data-tool-question-next]").addEventListener("click", () => { state.index += 1; update(true); });
-    toolbar.querySelector("[data-tool-question-reveal]").addEventListener("click", () => { state.revealAll = !state.revealAll; update(false); });
-    panel.addEventListener("input", () => update(false));
-    panel.addEventListener("change", () => update(false));
-    update(false);
+  function collectQuestionBlocks(panel) {
+    const blocks = [];
+    const seen = new Set();
+    [...panel.querySelectorAll("textarea, input, select")].filter(isProgressControl).forEach((control) => {
+      const block = safeQuestionBlock(control, panel);
+      if (!block || seen.has(block)) return;
+      seen.add(block);
+      block.classList.add("tool-question-step");
+      addPromptHelp(control, block, panel);
+      blocks.push(block);
+    });
+    return blocks;
   }
 
   function enhanceQuestions(root, shell) {
+    const id = toolId(root);
+    if (PROGRESSIVE_EXCLUSIONS.has(id)) return;
     const panel = shell.querySelector(":scope > .skill-app-panel, :scope > form.skill-app-panel");
     if (!panel) return;
 
-    const controls = [...panel.querySelectorAll("textarea, input, select")].filter(isProgressControl);
-    const blocks = [];
-    const seen = new Set();
+    const blocks = collectQuestionBlocks(panel);
+    if (blocks.length < 2) return;
 
-    controls.forEach((control) => {
-      let block = safePairBlock(control, panel);
-      block = ensureQuestionClass(block);
-      if (!block) return;
-      addHelp(control, block, panel);
-      if (!seen.has(block)) {
-        seen.add(block);
-        blocks.push(block);
+    const savedMax = blocks.reduce((max, block, index) => blockAnswered(block) ? index : max, -1);
+    const previous = stateByRoot.get(root);
+    const state = previous || { revealed: Math.min(blocks.length, Math.max(1, savedMax + 2)), showAll: false, timers: new WeakMap() };
+    state.revealed = Math.max(state.revealed, Math.min(blocks.length, savedMax + 2));
+    stateByRoot.set(root, state);
+
+    const controls = document.createElement("div");
+    controls.className = "tool-progressive-controls";
+    controls.innerHTML = '<button type="button" class="secondary" data-tool-show-all>Show all questions</button>';
+    blocks[0].before(controls);
+
+    const apply = (animateIndex = -1) => {
+      blocks.forEach((block, index) => {
+        const visible = state.showAll || index < state.revealed;
+        block.classList.toggle("is-concealed", !visible);
+        block.classList.toggle("is-revealed", visible);
+        block.classList.toggle("is-answered", visible && blockAnswered(block));
+        block.classList.toggle("is-current", visible && !state.showAll && index === state.revealed - 1);
+        block.setAttribute("aria-hidden", visible ? "false" : "true");
+        if (visible && index === animateIndex) {
+          block.classList.remove("is-entering");
+          void block.offsetWidth;
+          block.classList.add("is-entering");
+          global.setTimeout(() => block.classList.remove("is-entering"), 700);
+        }
+      });
+      controls.querySelector("[data-tool-show-all]").textContent = state.showAll ? "Show one question at a time" : "Show all questions";
+    };
+
+    const revealAfter = (block) => {
+      const index = blocks.indexOf(block);
+      if (index < 0 || state.showAll || index >= blocks.length - 1 || index + 1 < state.revealed || !blockAnswered(block)) {
+        apply();
+        return;
       }
+      const existing = state.timers.get(block);
+      if (existing) global.clearTimeout(existing);
+      const timer = global.setTimeout(() => {
+        if (!blockAnswered(block)) return;
+        state.revealed = Math.max(state.revealed, index + 2);
+        apply(index + 1);
+        blocks[index + 1]?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }, 450);
+      state.timers.set(block, timer);
+      apply();
+    };
+
+    panel.addEventListener("input", (event) => {
+      const block = event.target.closest(".tool-question-step");
+      if (block) revealAfter(block);
+    });
+    panel.addEventListener("change", (event) => {
+      const block = event.target.closest(".tool-question-step");
+      if (block) revealAfter(block);
+    });
+    controls.querySelector("[data-tool-show-all]").addEventListener("click", () => {
+      state.showAll = !state.showAll;
+      apply();
     });
 
-    const id = toolId(root);
-    if (blocks.length < 3 || PROGRESSIVE_EXCLUSIONS.has(id) || shell.querySelector(".skill-guided-tree, .skill-tree-app, .grounding-guide, .values-action-bar-toggle")) return;
-
-    const state = stateByRoot.get(root) || { index: 0, revealAll: false };
-    stateByRoot.set(root, state);
-    buildToolbar(root, panel, blocks, state);
+    apply();
   }
 
   function enhanceRoot(root) {
+    if (!prepareAvoidance(root)) return;
     const shell = root.querySelector(":scope > .skill-app-shell");
-    if (!shell || shell.dataset.toolQuestionFlowVersion === VERSION) return;
-    shell.dataset.toolQuestionFlowVersion = VERSION;
-    simplifyAppHeader(root, shell);
+    if (!shell || shell.dataset.toolProgressiveVersion === VERSION) return;
+    shell.dataset.toolProgressiveVersion = VERSION;
+    simplifyAppHeader(shell);
     enhanceQuestions(root, shell);
   }
 
@@ -310,8 +317,7 @@
   }
 
   function start() {
-    const roots = [...document.querySelectorAll(".skill-app")];
-    roots.forEach((root) => {
+    document.querySelectorAll(".skill-app").forEach((root) => {
       schedule(root);
       const observer = new MutationObserver(() => schedule(root));
       observer.observe(root, { childList: true, subtree: true });
