@@ -8,8 +8,7 @@ toc: false
 
 A tool to help you write an effective script to help you get an objective from someone.
 
-User-entered data stays in your browser and is not uploaded by this tool.  
-The information you enter is never saved by us on our servers.
+The information you enter stays in your browser and is never saved on our servers.
 
 [Learn DEAR + MAN before building a script](/learn/interpersonal-effectiveness/dear-man.html)
 
