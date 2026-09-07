@@ -952,7 +952,7 @@ const interactWithLearnIndex = async (tab, check, context) => {
   const input = filters.locator("[data-bs-learn-search]");
   const items = tab.playwright.locator("[data-bs-learn-item]");
   const total = await items.count();
-  await input.fill("What the Cube Is Really Asking");
+  await input.fill("Check the Facts");
   await delay(80);
   const visible = await countVisible(items);
   check(
@@ -1011,39 +1011,6 @@ const interactWithRichFixture = async (tab, check, context) => {
   );
 };
 
-const interactWithLessonAnalysisFixture = async (tab, check, context) => {
-  const fixture = tab.playwright.locator("[data-bs-cube-decision]").nth(0);
-  check(
-    (await fixture.count()) === 1,
-    context,
-    "cube lesson analysis mounts"
-  );
-  if ((await fixture.count()) !== 1) {
-    return;
-  }
-  const double = fixture.locator(
-    "button[data-bs-analysis-choice='double']"
-  );
-  await double.click();
-  check(
-    (await double.getAttribute("aria-pressed")) === "true",
-    context,
-    "Double records its pressed state"
-  );
-  const take = fixture.locator(
-    "button[data-bs-analysis-choice='take']"
-  );
-  check((await take.count()) === 1, context, "Double reveals Pass and Take");
-  if ((await take.count()) === 1) {
-    await take.click();
-    check(
-      (await take.getAttribute("aria-pressed")) === "true",
-      context,
-      "Take records its pressed state"
-    );
-  }
-};
-
 const interactWithEdgeFixture = async (tab, check, context) => {
   const fixture = tab.playwright.locator("[data-bs-ui-edge-fixture]");
   check((await fixture.count()) === 1, context, "edge fixture renders once");
@@ -1094,11 +1061,11 @@ const interactWithGlossary = async (tab, check, context) => {
   }
   const entries = tab.playwright.locator("[data-bs-glossary-entry]");
   const total = await entries.count();
-  await input.fill("active builder");
+  await input.fill("no matching therapy term");
   await delay(100);
   const visible = await countVisible(entries);
   check(
-    visible >= 1 && visible < total,
+    visible === 0 && total >= 1,
     context,
     "glossary search narrows full definitions"
   );
@@ -1115,24 +1082,24 @@ const interactWithGlossary = async (tab, check, context) => {
   } else {
     check(false, context, "glossary clear control is missing");
   }
-  const trackFilter = tab.playwright.locator(
-    "[data-bs-glossary-filter-track='Doubling Cube']"
+  const categoryFilter = tab.playwright.locator(
+    "[data-bs-glossary-filter-category='Mindfulness']"
   );
-  check((await trackFilter.count()) === 1, context, "glossary track filter exists");
-  if ((await trackFilter.count()) === 1) {
-    await clickInPlace(tab, trackFilter);
+  check((await categoryFilter.count()) === 1, context, "glossary category filter exists");
+  if ((await categoryFilter.count()) === 1) {
+    await clickInPlace(tab, categoryFilter);
     check(
-      (await trackFilter.getAttribute("aria-pressed")) === "true" &&
-        (await countVisible(entries)) < total,
+      (await categoryFilter.getAttribute("aria-pressed")) === "true" &&
+        (await countVisible(entries)) === total,
       context,
-      "glossary track filter narrows definitions"
+      "glossary category filter selects definitions"
     );
-    await clickInPlace(tab, trackFilter);
+    await clickInPlace(tab, categoryFilter);
   }
-  await tab.goto(new URL("#active-builder", await tab.url()).href);
+  await tab.goto(new URL("#wise-mind", await tab.url()).href);
   check(
-    (await tab.url()).endsWith("#active-builder") &&
-      (await tab.playwright.locator("#active-builder").getAttribute("open")) !== null,
+    (await tab.url()).endsWith("#wise-mind") &&
+      (await tab.playwright.locator("#wise-mind").getAttribute("open")) !== null,
     context,
     "glossary anchor opens the requested definition"
   );
@@ -1161,9 +1128,6 @@ const runPageInteraction = async ({
       await interactWithLookup(tab, check, context, desktop);
     } else {
       await interactWithMobileDrawer(tab, check, context);
-    }
-    if ((page.required_markers || []).includes("data-bs-cube-decision")) {
-      await interactWithLessonAnalysisFixture(tab, check, context);
     }
     await interactWithGlossarySidebar(tab, check, context);
   }
@@ -1211,31 +1175,31 @@ const clickThroughNavigation = async ({
     "desktop/click-through",
     "navbar click reaches Learn"
   );
-  let cubeTab = tab;
+  let trackTab = tab;
   if (browser) {
-    cubeTab = await browser.tabs.new();
+    trackTab = await browser.tabs.new();
     await viewport.set({ width: desktop.width, height: desktop.height });
-    await cubeTab.goto(new URL("/learn/", baseUrl).href);
+    await trackTab.goto(new URL("/learn/", baseUrl).href);
     await delay(300);
   }
-  const cubeLink = await visibleLocator(
-    cubeTab.playwright.getByRole("link", {
-      name: "The Doubling Cube",
+  const trackLink = await visibleLocator(
+    trackTab.playwright.getByRole("link", {
+      name: "Distress Tolerance",
       exact: true
     })
   );
-  check(Boolean(cubeLink), "desktop/click-through", "Cube track link is visible");
-  if (!cubeLink) {
-    return cubeTab;
+  check(Boolean(trackLink), "desktop/click-through", "Distress Tolerance track link is visible");
+  if (!trackLink) {
+    return trackTab;
   }
-  await cubeLink.click();
+  await trackLink.click();
   await delay(300);
   check(
-    new URL(await cubeTab.url()).pathname === "/learn/distress-tolerance/",
+    new URL(await trackTab.url()).pathname === "/learn/distress-tolerance/",
     "desktop/click-through",
-    "Learn click reaches the Cube track"
+    "Learn click reaches the Distress Tolerance track"
   );
-  return cubeTab;
+  return trackTab;
 };
 
 export const summarizeReport = (report) => ({
@@ -1839,7 +1803,7 @@ export async function runReleaseUiChecks({
         if (finalClickTab !== clickTab) {
           await collectConsole(
             finalClickTab,
-            "desktop/click-through-cube/console"
+            "desktop/click-through-track/console"
           );
         }
       }

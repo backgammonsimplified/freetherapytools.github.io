@@ -1,4 +1,4 @@
-# Backgammon Simplified Social Cards — Contract v1.1
+# Free Therapy Tools Social Cards
 
 This package implements the frozen contract v1.1 text-only renderer. It uses deterministic local assets and six typography/composition profiles.
 
@@ -29,7 +29,7 @@ examples/social-cards.yml
 
 ## Font location
 
-The renderer supports either the original Google Fonts variable TrueType file:
+The renderer supports either the Source Sans variable TrueType file:
 
 ```text
 social_generator/site/assets/social/fonts/SourceSans3-VariableFont_wght.ttf
@@ -106,7 +106,7 @@ The homepage always maps to `social-default`. Other pages opt into a page-specif
 Use one of these front-matter slug fields:
 
 ```yaml
-slug: when-should-you-offer-the-cube
+slug: glossary
 ```
 
 The validator also accepts `social-card-slug`, `social_card_slug`,
@@ -115,7 +115,7 @@ The validator also accepts `social-card-slug`, `social_card_slug`,
 The generated image metadata must match the card output:
 
 ```yaml
-image: /assets/social/generated/social-when-should-you-offer-the-cube.png
+image: /assets/social/generated/social-glossary.png
 ```
 
 An opted-in page also declares `social-card-kind` and, when needed, `social-card-category`. Pages with `draft: true` or status `planned`, `draft`, `private`, `archived`, or `unpublished` are excluded.

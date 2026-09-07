@@ -64,7 +64,7 @@ ALLOWED_CATEGORIES = {
     "",
     "Learn",
     "Analyze",
-    "Sage vs GNU",
+    "Therapy Skills",
     "Blog",
     "Research",
     "About",
@@ -277,7 +277,7 @@ def validate_font_coverage(cards: list[Card], fonts: FontFiles) -> None:
     This prevents Chromium from silently substituting a system font for a
     missing title, category, brand, or subtitle glyph.
     """
-    semibold_text = "Backgammon Simplified" + "".join(
+    semibold_text = "Free Therapy Tools" + "".join(
         card.title + card.pill_label for card in cards
     )
     regular_text = "".join(card.subtitle for card in cards)
@@ -616,11 +616,11 @@ def wait_for_assets(page: Page, remote_requests: list[str]) -> None:
             await Promise.all([
               document.fonts.load(
                 '400 16px "Source Sans 3 Local"',
-                "Backgammon Simplified"
+                "Free Therapy Tools"
               ),
               document.fonts.load(
                 '600 16px "Source Sans 3 Local"',
-                "Backgammon Simplified"
+                "Free Therapy Tools"
               )
             ]);
             await document.fonts.ready;
@@ -638,11 +638,11 @@ def wait_for_assets(page: Page, remote_requests: list[str]) -> None:
             fontError,
             regularLoaded: document.fonts.check(
               '400 16px "Source Sans 3 Local"',
-              "Backgammon"
+              "Therapy"
             ),
             semiboldLoaded: document.fonts.check(
               '600 16px "Source Sans 3 Local"',
-              "Backgammon"
+              "Therapy"
             )
           };
         }
@@ -996,7 +996,7 @@ def clean_orphans(cards: list[Card]) -> None:
 
 def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Validate and render text-only Backgammon Simplified social cards"
+        description="Validate and render text-only Free Therapy Tools social cards"
     )
 
     commands = parser.add_mutually_exclusive_group()

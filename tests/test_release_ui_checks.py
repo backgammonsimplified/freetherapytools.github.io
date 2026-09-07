@@ -118,7 +118,7 @@ class ReleaseUiStaticCheckTests(unittest.TestCase):
 
     def test_manifest_uses_only_current_public_pages(self) -> None:
         manifest = json.loads(
-            (ROOT / "scripts" / "ui_release_manifest.json").read_text(
+            (ROOT / "scripts/testing/ux/browser/ui_release_manifest.json").read_text(
                 encoding="utf-8"
             )
         )
@@ -136,7 +136,7 @@ class ReleaseUiStaticCheckTests(unittest.TestCase):
         for expected in (
             "scripts/release-ui-check.sh",
             "scripts/release_ui_browser_check.mjs",
-            "scripts/ui_release_manifest.json",
+            "scripts/testing/ux/browser/ui_release_manifest.json",
             "90 minutes",
             "site/_site",
         ):
@@ -145,7 +145,7 @@ class ReleaseUiStaticCheckTests(unittest.TestCase):
             "git diff --check",
             "unittest discover",
             "release_ui_static_check.py",
-            "test_continuous_research.js",
+            "test_continuous_learn.js",
         ):
             self.assertIn(expected, shell_runner)
 

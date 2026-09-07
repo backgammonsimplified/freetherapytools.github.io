@@ -11,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "data" / "source-inventory.csv"
 EXTRACTIONS = ROOT / "data" / "qmd-resource-extraction.csv"
-REPORT = ROOT / "QMD-CONTENT-REVIEW.md"
+REPORT = ROOT / "docs" / "reviews" / "QMD-CONTENT-REVIEW.md"
 
 
 def rows(path: Path) -> list[dict[str, str]]:

@@ -2,7 +2,7 @@
 title: "Distress Tolerance"
 description: "Six lessons for surviving crises, accepting reality, and reducing impulsive responses."
 sidebar: learn
-learn-track-index: doubling-cube
+learn-track-index: distress-tolerance
 learn-track-order: 2
 page-layout: full
 body-classes: "bs-learn-article bs-learn-track-index"

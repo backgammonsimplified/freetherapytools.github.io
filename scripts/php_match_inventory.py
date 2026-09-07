@@ -29,7 +29,6 @@ SOURCE_INVENTORY = ROOT / "data" / "source-inventory.csv"
 BOOK_MATCHES = ROOT / "data" / "book-matches.csv"
 PHP_MATCHES = ROOT / "data" / "php-matches.csv"
 PHP_ASSETS = SITE / "resources" / "high-res" / "php"
-DEFAULT_PHP = Path(r"C:\Users\andre\Downloads\book-scans\php.pdf")
 DEFAULT_CACHE = ROOT / "tmp" / "pdfs" / "php-matching" / "rendered"
 
 MATCH_SCHEMA_VERSION = "1"
@@ -343,7 +342,7 @@ def inventory_version(rows: list[dict[str, str]]) -> str:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--php", type=Path, default=DEFAULT_PHP)
+    parser.add_argument("--php", type=Path, required=True)
     parser.add_argument("--cache", type=Path, default=DEFAULT_CACHE)
     parser.add_argument("--render-cache", action="store_true")
     parser.add_argument("--extract", action="store_true")

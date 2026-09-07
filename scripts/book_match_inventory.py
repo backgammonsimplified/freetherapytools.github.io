@@ -20,9 +20,6 @@ ROOT = Path(__file__).resolve().parents[1]
 INVENTORY = ROOT / "data" / "source-inventory.csv"
 MATCHES = ROOT / "data" / "book-matches.csv"
 CLEAN_ROOT = ROOT / "site" / "resources" / "clean"
-DEFAULT_BOOK = Path(
-    r"C:\Users\andre\Downloads\scans\dbt_skills_training_handouts_and_worksheets_-_linehan_marsha_srg_.pdf"
-)
 
 
 # source_id: (physical PDF page, module, printed identifier, printed title)
@@ -286,7 +283,7 @@ def extract_assets(book: Path, rows: list[dict[str, str]]) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--book", type=Path, default=DEFAULT_BOOK)
+    parser.add_argument("--book", type=Path, required=True)
     parser.add_argument("--extract", action="store_true", help="Extract high-confidence single-page PDF and preview assets.")
     args = parser.parse_args()
     rows = build_rows()

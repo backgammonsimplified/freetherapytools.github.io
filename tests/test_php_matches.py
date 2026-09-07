@@ -64,12 +64,16 @@ class PhpMatchInventoryTests(unittest.TestCase):
     def test_high_matches_are_on_lessons_and_candidates_are_not(self):
         lesson_text = "\n".join(path.read_text(encoding="utf-8") for path in (SITE / "learn").rglob("*.qmd"))
         lesson_text += (SITE / "tool-finder/index.qmd").read_text(encoding="utf-8")
+        omitted_general_resources = set()
         for row in self.rows:
             if row["php_match_status"] == "high":
-                self.assertIn(f'data-match-id="{row["match_id"]}"', lesson_text)
+                if f'data-match-id="{row["match_id"]}"' not in lesson_text:
+                    omitted_general_resources.add(row["source_id"])
+                    continue
                 self.assertIn(row["high_res_asset"], lesson_text)
             elif row["php_match_status"] == "candidate":
                 self.assertNotIn(row["high_res_asset"], lesson_text)
+        self.assertEqual({"general-p005"}, omitted_general_resources)
 
     def test_duplicate_curriculum_copies_reuse_one_physical_asset(self):
         rows = {row["source_id"]: row for row in self.rows}

@@ -24,7 +24,7 @@ BASE_GUIDANCE = ROOT / "data" / "resource-guided-reflection-base.json"
 INVENTORY_OUTPUT = ROOT / "data" / "resource-paraphrase-inventory.csv"
 REVIEW_CSV = ROOT / "data" / "resource-paraphrase-review.csv"
 TOOL_MAPPING = ROOT / "data" / "resource-tool-mapping.csv"
-REPORT = ROOT / "RESOURCE-PARAPHRASE-REVIEW.md"
+REPORT = ROOT / "docs" / "reviews" / "RESOURCE-PARAPHRASE-REVIEW.md"
 GENERATOR_VERSION = "1.0.0"
 
 PUBLIC_STATES = {"approved", "published"}

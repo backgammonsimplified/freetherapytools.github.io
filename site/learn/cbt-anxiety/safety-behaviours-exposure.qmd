@@ -7,7 +7,7 @@ learn-order: 6
 categories:
   - Beginner
 tags:
-  - Checker Play
+  - CBT and Managing Anxiety
 terms:
   - exposure
 body-classes: bs-learn-article

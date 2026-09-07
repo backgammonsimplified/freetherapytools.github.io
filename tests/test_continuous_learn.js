@@ -242,12 +242,12 @@ assert.equal(
 assert.equal(scroll.findPrimaryToc(null), null);
 
 assert.equal(
-  scroll.idPrefixForRoute("/learn/distress-tolerance/what-the-cube-is-asking.html"),
-  "bs-learn-scroll-distress-tolerance-what-the-cube-is-asking-"
+  scroll.idPrefixForRoute("/learn/distress-tolerance/stop-crisis-survival.html"),
+  "bs-learn-scroll-distress-tolerance-stop-crisis-survival-"
 );
 assert.equal(
-  scroll.idPrefixForRoute("/learn/game-plans/"),
-  "bs-learn-scroll-game-plans-"
+  scroll.idPrefixForRoute("/learn/goal-setting/"),
+  "bs-learn-scroll-goal-setting-"
 );
 assert.notEqual(
   scroll.idPrefixForRoute(
@@ -258,7 +258,7 @@ assert.notEqual(
   ),
   "the full route keeps repeated lesson filenames collision-free"
 );
-const generatedPrefixes = ["start-here", "doubling-cube", "opening-play"]
+const generatedPrefixes = ["goal-setting", "distress-tolerance", "mindfulness"]
   .flatMap((track) =>
     Array.from({ length: 3 }, (_, index) =>
       scroll.idPrefixForRoute(

@@ -26,7 +26,9 @@ class ValuesRedesignTests(unittest.TestCase):
         self.assertEqual(next(row for row in rows if row["current_id"] == "perfection")["decision"], "REMOVE")
         excluded = {"MERGE_ALIAS", "MOVE_TO_DOMAIN", "REMOVE"}
         self.assertEqual(len(VALUES["values"]), sum(row["decision"] not in excluded for row in rows))
-        self.assertTrue((ROOT / "VALUES-DICTIONARY-REVIEW.md").is_file())
+        self.assertTrue(
+            (ROOT / "docs" / "reviews" / "VALUES-DICTIONARY-REVIEW.md").is_file()
+        )
 
     def test_canonical_cleanup_and_legacy_vocabulary(self):
         ids = [value["id"] for value in VALUES["values"]]

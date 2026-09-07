@@ -7,7 +7,7 @@ learn-order: 5
 categories:
   - Beginner
 tags:
-  - Checker Play
+  - Interpersonal Effectiveness
 terms:
   - fast
 body-classes: bs-learn-article

@@ -3,7 +3,6 @@ title: "Mindfulness"
 description: "A twelve-lesson mindfulness curriculum separated from the DBT Skills catalogue."
 sidebar: mindfulness
 page-layout: full
-bibliography: ../references.bib
 body-classes: bs-learn-index
 toc: false
 execute:

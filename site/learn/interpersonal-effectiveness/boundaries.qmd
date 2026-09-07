@@ -7,7 +7,7 @@ learn-order: 1
 categories:
   - Beginner
 tags:
-  - Checker Play
+  - Interpersonal Effectiveness
 terms:
   - boundaries
 body-classes: bs-learn-article

@@ -2,12 +2,12 @@
 title: "Introduction & STOP"
 description: "Pause, step back, observe, and proceed mindfully during a crisis."
 sidebar: learn
-learn-track: doubling-cube
+learn-track: distress-tolerance
 learn-order: 1
 categories:
   - Beginner
 tags:
-  - Checker Play
+  - Distress Tolerance
 terms:
   - stop
 body-classes: bs-learn-article

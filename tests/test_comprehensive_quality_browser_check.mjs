@@ -34,6 +34,7 @@ assert.deepEqual(
     [1440, 900],
     [1280, 800],
     [1024, 768],
+    [768, 1024],
     [390, 844],
     [320, 568]
   ]
@@ -55,20 +56,22 @@ const requiredPageIds = [
   "home",
   "learn-index",
   "distress-tolerance-index",
-  "cube-lesson",
+  "distress-tolerance-lesson",
+  "dear-man-lesson",
+  "emotion-regulation-lesson",
   "cbt-index",
   "cbt-lesson",
+  "cbt-worry-lesson",
   "mindfulness-index",
-  "research-index",
-  "research-article",
-  "engine-benchmark",
-  "sage-vs-gnu",
-  "analyze",
-  "match-predictor",
+  "mindfulness-observe-lesson",
+  "values-app",
+  "emotion-explorer-app",
+  "tool-finder",
+  "box-breathing",
+  "change-emotion",
   "glossary",
   "about",
   "licensing",
-  "updates",
   "404"
 ];
 assert.deepEqual(

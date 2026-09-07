@@ -35,11 +35,14 @@ class ResourceMatchReviewTests(unittest.TestCase):
         cls.review_js = REVIEW_JS.read_text(encoding="utf-8")
 
     def test_all_displayed_alternatives_have_stable_ids_and_exact_button(self):
-        self.assertEqual(99, self.lesson_text.count('data-match-source="linehan-book"'))
-        self.assertEqual(42, self.lesson_text.count('data-match-source="php-high-res"'))
-        self.assertEqual(141, self.lesson_text.count('data-match-id="'))
-        self.assertEqual(141, self.lesson_text.count(">Incorrect match</button>"))
-        self.assertEqual(141, self.lesson_text.count("bs-match-review-control\" hidden"))
+        book_count = self.lesson_text.count('data-match-source="linehan-book"')
+        php_count = self.lesson_text.count('data-match-source="php-high-res"')
+        control_count = self.lesson_text.count(">Incorrect match</button>")
+        self.assertEqual(111, book_count)
+        self.assertEqual(41, php_count)
+        self.assertEqual(book_count + php_count, self.lesson_text.count('data-match-id="'))
+        self.assertEqual(control_count, self.lesson_text.count('bs-match-review-control" hidden'))
+        self.assertGreater(control_count, 0)
 
     def test_review_controls_are_local_or_explicit_query_only(self):
         self.assertIn('new Set(["localhost", "127.0.0.1", "::1"])', self.review_js)

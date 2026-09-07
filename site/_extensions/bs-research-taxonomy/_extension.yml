@@ -1,7 +1,0 @@
-title: BS Research Taxonomy
-author: Backgammon Simplified
-version: 1.2.0
-quarto-required: ">=1.4.0"
-contributes:
-  filters:
-    - bs-research-taxonomy.lua

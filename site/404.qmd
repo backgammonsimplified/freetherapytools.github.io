@@ -1,6 +1,6 @@
 ---
-title: "Page closed out"
-description: "You rolled... but there was nowhere to land."
+title: "Page not found"
+description: "The page you requested could not be found."
 page-layout: full
 toc: false
 sidebar: false
@@ -21,25 +21,25 @@ execute:
 :::
 
 ::: {.bs-404-copy}
-<p class="bs-404-eyebrow">ERROR 404 · CLOSED OUT</p>
+<p class="bs-404-eyebrow">ERROR 404 · PAGE NOT FOUND</p>
 
-<h1 class="bs-404-title">Page closed out</h1>
+<h1 class="bs-404-title">Page not found</h1>
 
-<p class="bs-404-lead">You rolled... but there was nowhere to land.</p>
+<p class="bs-404-lead">This page may have moved or no longer exist.</p>
 
-The page you're looking for doesn't exist, has moved, or suspiciously bounced off the board. Try one of these reliable points instead.
+Try one of these useful destinations instead.
 
 ::: {.bs-404-links aria-label="Helpful destinations"}
 
-- [Home](/) — return to the board
-- [Learn](/learn/) — build your game
-- [Backgammon Glossary](/glossary/) — find a definition
-- [Research](/research/) — explore the evidence
+- [Home](/) — return to Free Therapy Tools
+- [Tool Finder](/tool-finder/) — choose a focused exercise
+- [DBT Skills](/learn/) — browse DBT lessons
+- [Glossary](/glossary/) — find a definition
 
 :::
 
 ::: {.bs-404-actions}
-[Look Up a Term](/glossary/){.bs-button-outline}
+[Find a Tool](/tool-finder/){.bs-button-outline}
 :::
 :::
 :::

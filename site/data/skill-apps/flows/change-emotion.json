@@ -5,8 +5,8 @@
   "start": "emotion",
   "nodes": [
     {"id": "emotion", "type": "question", "control": "choice", "prompt": "What is the emotion?", "field": "emotion", "dynamic_choices": "emotions", "next": "fits-facts", "level": 0, "lane": 0},
-    {"id": "fits-facts", "type": "question", "control": "yesno", "editor": "check-facts", "prompt": "Does this emotion fit the facts?", "field": "fits-facts", "choices": [
-      {"label": "Yes", "value": "yes", "next": "effective-fit"}, {"label": "No", "value": "no", "next": "effective-no-fit"}
+    {"id": "fits-facts", "type": "question", "control": "yesno", "editor": "check-facts", "prompt": "Based on this review, does the emotion seem to fit what you know about the situation?", "field": "fits-facts", "choices": [
+      {"label": "Yes - it seems to fit", "value": "yes", "next": "effective-fit"}, {"label": "No - it may not fully fit", "value": "no", "next": "effective-no-fit"}
     ], "level": 1, "lane": 0},
     {"id": "effective-fit", "type": "question", "control": "yesno", "prompt": "Is acting on this emotion effective? Check Wise Mind.", "field": "effective-fit", "choices": [
       {"label": "Yes", "value": "yes", "next": "mindful-act-problem-solve"}, {"label": "No", "value": "no", "next": "opposite-action-fit"}

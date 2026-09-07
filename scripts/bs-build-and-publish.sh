@@ -112,4 +112,4 @@ printf '\nSource checkout remains on:\n'
 git status --short --branch
 
 printf '\nDeployment submitted successfully.\n'
-printf 'Site: https://backgammonsimplified.github.io/\n'
+printf 'Site: https://backgammonsimplified.github.io/freetherapytools.github.io/\n'

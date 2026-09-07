@@ -2,12 +2,12 @@
 title: "Pros & Cons"
 description: "Compare the short- and longer-term effects of acting on or resisting an urge."
 sidebar: learn
-learn-track: doubling-cube
+learn-track: distress-tolerance
 learn-order: 5
 categories:
   - Beginner
 tags:
-  - Checker Play
+  - Distress Tolerance
 terms:
   - pros-cons
 body-classes: bs-learn-article

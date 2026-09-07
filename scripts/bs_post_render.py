@@ -42,7 +42,6 @@ NOT_FOUND_ROUTE_MAP = {
     "/./": "/",
     "/./learn/": "/learn/",
     "/./glossary/": "/glossary/",
-    "/./research/": "/research/",
 }
 FOOTER_PATTERN = re.compile(r"<footer\b.*?</footer>", flags=re.DOTALL)
 HREF_PATTERN = re.compile(r'(\bhref=")([^"]+)(")')
