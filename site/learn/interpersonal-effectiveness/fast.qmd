@@ -7,7 +7,8 @@ learn-order: 5
 categories:
   - Beginner
 tags:
-  - Checker Play
+  - Interpersonal Effectiveness
+  - Self-Respect
 terms:
   - fast
 body-classes: bs-learn-article
@@ -18,23 +19,137 @@ execute:
   enabled: false
 ---
 
-FAST helps you remain fair and aligned with your values.
+DEAR + FAST builds on the same DEAR MAN script used to make a request, set a boundary, or say no. **DEAR MAN helps you organize what you want to communicate; FAST helps you protect your self-respect while you communicate it.** The goal is not to win every interaction or make the other person agree. It is to speak clearly, act in line with your values, and leave the interaction knowing that you treated both yourself and the other person with respect.
 
-## Fair {#fair}
+If you want to draft the request first, use the [DEAR MAN Builder](/tool-finder/dear-man/), then come back to this page and check the script against FAST.
 
-Be fair to yourself and to the other person. Include both sets of needs and facts.
+## 1. Start With Self-Respect {#self-respect-reflection}
 
-## No Unnecessary Apologies {#no-unnecessary-apologies}
+Before working on the script, think about what self-respect means in the interaction.
 
-Do not over-apologize for having an opinion, making a request, disagreeing, or saying no. Apologize when an apology fits the facts, not for existing or having needs.
+### Reflection
 
-## Stick to Values {#stick-to-values}
+Think of an interaction where something you did left you with **less respect for yourself** afterward.
 
-Act in line with your values. Do not abandon what matters merely to gain approval or avoid conflict. Be clear about which value is at stake.
+- What did you do or not do?
+- What part of your response bothered you afterward?
+- Did you ignore a value, need, limit, or fact that mattered to you?
 
-## Truthful {#truthful}
+Now think of an interaction where your response **strengthened your self-respect**.
 
-Do not lie, exaggerate, make excuses, or act helpless when you are not. Describe your reasons accurately and avoid manipulating the situation.
+- What did you do differently?
+- Did you stand up for yourself, tell the truth, set a limit, or act according to a value?
+- What helped you feel better about how you handled the interaction, even if the outcome was not perfect?
+
+The point is not to judge yourself for past interactions. It is to identify the behaviours that help you respect how you acted.
+
+## 2. Assertive Rights and Responsibilities {#assertive-rights}
+
+Assertiveness starts with recognizing that your thoughts, needs, limits, and choices matter. The session material describes several useful rights. In practical terms, you can give yourself permission to:
+
+1. **Express your thoughts, feelings, and needs.** You can choose how to express them and take responsibility for the effects of how you communicate.
+2. **Decide how much explanation is actually needed.** You do not have to justify every preference or decision in order to earn permission or approval.
+3. **Decide which problems are yours to solve.** Caring about someone does not mean taking over responsibility for problems that belong to them.
+4. **Change your mind.** You can reconsider a decision, especially when new information appears or you were put on the spot.
+5. **Make mistakes and take responsibility for them.** Being assertive does not require being perfect.
+6. **Say that you do not know or do not understand.** You do not have to pretend certainty.
+7. **Remain assertive when someone is being kind, helpful, or doing you a favour.** Gratitude does not require giving up your limits or needs.
+8. **Say that you are not interested.** You do not have to participate in every topic, activity, request, or relationship simply to avoid disappointing someone.
+9. **Say no.** A respectful refusal can still be uncomfortable, but guilt does not automatically mean the refusal was wrong.
+
+These are not permissions to ignore other people's rights, agreements, safety, or the consequences of your choices. Assertiveness works best when it is paired with responsibility and respect for the other person.
+
+## 3. Use FAST to Protect Self-Respect {#fast}
+
+FAST is a quick check for how you want to behave while using your DEAR MAN script.
+
+### Fair {#fair}
+
+Be fair to **yourself and the other person**. Include both people's needs, feelings, limits, and relevant facts.
+
+Being fair does not mean that both people must feel the same way or agree. It also does not mean pressuring, guilting, or manipulating the other person into sharing your reaction. You can validate the other person's experience without giving up your own.
+
+Ask yourself:
+
+- Am I treating my needs as real and worth considering?
+- Am I also acknowledging the other person's perspective?
+- Am I trying to communicate, or am I trying to make the other person feel a certain way?
+
+### No Unnecessary Apologies {#no-unnecessary-apologies}
+
+Apologize when an apology fits what happened—for example, when you caused harm, broke an agreement, or need to repair something. FAST is a reminder not to apologize automatically for **having an opinion, disagreeing, making a reasonable request, setting a boundary, or saying no**.
+
+Over-apologizing can turn an ordinary need into something that sounds as though it requires permission. Before saying “sorry,” ask:
+
+- Did I actually do something that needs repair?
+- Am I apologizing because I did harm, or because I feel uncomfortable taking up space?
+- Would a clear explanation, acknowledgment, or thank-you fit better?
+
+### Stick to Values {#stick-to-values}
+
+Keep your behaviour aligned with the values that matter in the situation. Do not abandon your integrity simply to gain approval, end discomfort quickly, or avoid conflict.
+
+Ask:
+
+- What value do I want my behaviour to reflect here?
+- What would I be proud of doing even if the other person still disagrees?
+- Am I giving up something important just to make the tension disappear?
+
+Values can sometimes conflict, and compromise can be appropriate. The point is to make that choice deliberately rather than automatically abandoning what matters to you.
+
+### Truthful {#truthful}
+
+Describe the situation and your needs honestly. Avoid lying, exaggerating, inventing excuses, pretending to be helpless, or using distorted information to pressure the other person.
+
+Truthfulness also means being accurate about your own limits. You can say that something is difficult, that you need time, or that you do not want to do something without making the situation sound more extreme than it is.
+
+## 4. From Automatic Apologies to Clear Appreciation {#apologies-to-appreciation}
+
+One of the session pages contrasts reflexive apologizing with thanking or acknowledging the other person. The useful idea is not “never apologize.” It is to notice when **gratitude or direct communication fits better than self-blame**.
+
+For example:
+
+| Instead of automatically saying... | You might try... |
+|---|---|
+| “Sorry I kept you waiting.” | “Thank you for waiting for me.” |
+| “Sorry I am being sensitive.” | “Thank you for being patient with me while I explain this.” |
+| “Sorry, I messed that up.” when the mistake is small and already acknowledged | “Thanks for giving me a chance to correct that.” |
+| “Sorry you have to help me.” | “Thank you for helping me with this.” |
+| “Sorry I talked so much.” | “Thanks for listening.” |
+
+If you genuinely harmed someone, an apology and repair may be appropriate. FAST is about reducing **unnecessary** apologies, not avoiding responsibility.
+
+## 5. Add FAST to a DEAR MAN Script {#dear-fast-script}
+
+A DEAR MAN script organizes the content of the request or boundary. FAST is the self-respect check that runs alongside it.
+
+1. **Describe** the situation using observable facts.
+2. **Express** your feelings or opinion.
+3. **Assert** what you are asking for, or state your no clearly.
+4. **Reinforce** why cooperation could help or what positive outcome you are working toward.
+5. Stay **Mindful** of your goal instead of getting pulled into side arguments.
+6. **Appear confident** enough to communicate clearly, even if you feel nervous.
+7. **Negotiate** when there is room for a workable alternative.
+8. Then review FAST: Was I **Fair**? Did I avoid **unnecessary Apologies**? Did I **Stick to my values**? Was I **Truthful**?
+
+::: {.callout-tip title="Use FAST as an editing pass"}
+Draft your request with the [DEAR MAN Builder](/tool-finder/dear-man/). Then read the draft again with FAST in mind. Look for places where you are over-apologizing, giving up a value only to avoid discomfort, minimizing your own needs, ignoring the other person's needs, or making claims that are stronger than the facts support.
+:::
+
+## 6. Practice Questions {#practice-questions}
+
+For a current or recent interaction where **self-respect is a priority**, work through these questions:
+
+- What happened?
+- How do I want to feel about the way I handled myself afterward?
+- What do I want to ask for, say no to, or communicate?
+- What facts belong in the description?
+- What feelings or opinions do I want to express?
+- What is my direct request or boundary?
+- What value do I want to protect?
+- Is there an apology that is genuinely needed? Is there an apology that is only habitual?
+- Am I being truthful without exaggerating, minimizing, or making excuses?
+- How can I be fair to myself and the other person at the same time?
 
 <!-- section-scan-resources:start -->
 
@@ -62,7 +177,7 @@ Do not lie, exaggerate, make excuses, or act helpless when you are not. Describe
 
 #### Native Version
 
-This handout's educational content is integrated into the anchored skill sections above.
+The educational ideas from this handout are integrated into the FAST sections above in original wording.
 
 <!-- native-resource-content:interpersonal-effectiveness-p033:end -->
 ::::
@@ -89,17 +204,9 @@ This handout's educational content is integrated into the anchored skill section
 
 <!-- native-resource-content:interpersonal-effectiveness-p035:start -->
 
-#### Text Version
+#### Native Version
 
-Think of a situation you are currently experiencing or have experienced recently where the SELF-RESPECT in the situation was/is the priority. Use the DEAR FAST script below to practice how this skill could be used.
-
-##### SELF-RESPECT issue (How I want to feel about myself?)
-
-Describe situation.
-
-##### E
-
-xpress feelings/opinions. Assert request (or say no) directly (circle the part you will use later in "broken record" to stay Mindful if you need it). Reinforcing comments to make. Be Eair and no Apologies. Comments to make (if needed). Stick to your values and be Iruthful. Comments to make (if needed)
+Use the [DEAR MAN Builder](/tool-finder/dear-man/) to draft the communication, then use the FAST and practice sections above to review self-respect effectiveness. This provides an original, editable practice path without reproducing the worksheet fields.
 
 <!-- native-resource-content:interpersonal-effectiveness-p035:end -->
 ::::
@@ -113,22 +220,11 @@ xpress feelings/opinions. Assert request (or say no) directly (circle the part y
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p031.jpg)
 
-
 <!-- native-resource-content:interpersonal-effectiveness-p031:start -->
 
-#### Text Version
+#### Native Version
 
-##### Exercise 1
-
-##### Z
-
-Give an Of an interaction when vou haue done something to reduce your Qwn sense of
-
-**selt-respect? Describe What ettions left vou Feeling with less respect for yourself?**
-
-**Can you think of examples when you haue enhanced your sense of Seef•respgct an interact}on?**
-
-**What do Yoli think was responsible for helpirg you feel better about Y0ürse}f?**
+The two core reflection ideas are integrated at the top of this lesson: examine an interaction that reduced your self-respect, then one that strengthened it, and identify the behaviours that made the difference. Personal handwritten examples from the photographed session material are not reproduced on the public page.
 
 <!-- native-resource-content:interpersonal-effectiveness-p031:end -->
 ::::
@@ -142,12 +238,11 @@ Give an Of an interaction when vou haue done something to reduce your Qwn sense 
 
 [Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p032.jpg)
 
-
 <!-- native-resource-content:interpersonal-effectiveness-p032:start -->
 
-#### Text Version
+#### Native Version
 
-You haue the right tn express your own thoughts! feelings, and needs. Yau have (he right to choose how you express themta others ! and thereby. lhe coosequences in doing so. You have the right Io decåde whethey• is necessary offer reasons excy-jses justifying yocte• Behaveour_ A simple explanation perfectly reasonable or even at all deper*åiu on the situation. Justifying is aften an attemæN at seeking approvai or pgrmission, You have Eze to judge whether you are for finding solutions to other people's problems. you aæ woiking harder at solving someone else's problem than they are. then you may the You havz• *Lhe ight change your mind and to be Kljogical in making decÉsions (Particufarly because we donu aways have consider our "position" carefülly when we are '"put on lhe spot'), Vali have Ifie light to make mistakes - a-Nd be for them„ You have the right to say "E don't know" arid dan'i understand', Yau have the light to öe asserive oven when the other Éndiviclual is "doing you a favour" or being nice or trying be hed,pful. You have to say "I'M tot interested" and "I care". you have the right to say "NO" Without feeling guilty. 80m: When t Say Smat-„ üiat Press, lg7s
+A clean, paraphrased set of the nine assertiveness ideas from this page appears in **Assertive Rights and Responsibilities** above.
 
 <!-- native-resource-content:interpersonal-effectiveness-p032:end -->
 ::::
@@ -172,9 +267,9 @@ You haue the right tn express your own thoughts! feelings, and needs. Yau have (
 
 <!-- native-resource-content:interpersonal-effectiveness-p034:start -->
 
-#### Text Version
+#### Native Version
 
-Printed content could not be extracted reliably from this page.
+The lesson's **From Automatic Apologies to Clear Appreciation** section provides an adapted version of the session material: use a genuine apology when repair is needed, and consider a direct acknowledgment or thank-you when the apology is only habitual self-blame.
 
 <!-- native-resource-content:interpersonal-effectiveness-p034:end -->
 ::::
