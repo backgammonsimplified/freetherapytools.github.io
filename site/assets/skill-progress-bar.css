@@ -1,0 +1,153 @@
+:root {
+  --skill-progress-bar-height: 5.25rem;
+}
+
+.skill-app:has(.skill-progress-persistent) {
+  padding-bottom: calc(var(--skill-progress-bar-height) + env(safe-area-inset-bottom));
+}
+
+.skill-progress-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.skill-progress-title-row h2 {
+  margin-bottom: 0;
+}
+
+.skill-progress-title-row--standalone {
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.skill-progress-persistent {
+  position: fixed;
+  right: auto;
+  bottom: 0;
+  left: 50%;
+  z-index: 1040;
+  box-sizing: border-box;
+  width: min(72rem, calc(100vw - 2rem));
+  margin: 0;
+  padding: .7rem 1rem calc(.7rem + env(safe-area-inset-bottom));
+  border: 1px solid var(--skill-app-border, #d8cec2);
+  border-bottom: 0;
+  border-radius: .85rem .85rem 0 0;
+  background: var(--bs-page-background, #faf7f2);
+  box-shadow: 0 -.45rem 1.2rem rgb(48 37 29 / 14%);
+  transform: translateX(-50%);
+}
+
+.skill-progress-persistent > summary,
+.skill-progress-persistent > .skill-progress-content {
+  display: none !important;
+}
+
+.skill-progress-persistent-inner {
+  display: grid;
+  grid-template-columns: minmax(10rem, .3fr) minmax(0, 1fr);
+  align-items: center;
+  gap: .35rem 1rem;
+}
+
+.skill-progress-persistent-label {
+  font-size: .95rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.skill-progress-bar-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .5rem;
+}
+
+.skill-progress-bar-actions button {
+  min-width: 0;
+  min-height: 2.55rem;
+  padding: .45rem .65rem;
+  font-size: .82rem;
+  line-height: 1.2;
+}
+
+.skill-progress-bar-status {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: .78rem;
+  line-height: 1.25;
+}
+
+.skill-progress-bar-status:empty {
+  display: none;
+}
+
+/* Keep Values' existing persistent navigation above the universal save/export bar. */
+.skill-app[data-skill-app="values"] {
+  --values-action-bar-bottom: var(--skill-progress-bar-height);
+  padding-bottom: calc(var(--values-action-bar-space) + var(--skill-progress-bar-height));
+}
+
+/* These focused tools already have a fixed footer; keep it above the shared save/export bar. */
+.skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-app-footer {
+  bottom: var(--skill-progress-bar-height);
+}
+
+.skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) {
+  --focused-tool-save-space: calc(8rem + var(--skill-progress-bar-height));
+}
+
+@media (max-width: 700px) {
+  :root {
+    --skill-progress-bar-height: 6.5rem;
+  }
+
+  .skill-progress-persistent {
+    width: calc(100vw - 1rem);
+    padding: .55rem .65rem calc(.55rem + env(safe-area-inset-bottom));
+  }
+
+  .skill-progress-persistent-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .4rem;
+  }
+
+  .skill-progress-persistent-label {
+    font-size: .82rem;
+  }
+
+  .skill-progress-bar-actions {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .35rem;
+  }
+
+  .skill-progress-bar-actions button {
+    padding: .4rem .35rem;
+    font-size: .72rem;
+  }
+
+  .skill-progress-title-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .skill-progress-title-row .skill-progress-open {
+    align-self: flex-start;
+  }
+
+  .skill-app:is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) {
+    --focused-tool-save-space: calc(11rem + var(--skill-progress-bar-height));
+  }
+}
+
+@media print {
+  .skill-progress-persistent,
+  [data-skill-progress-open-top] {
+    display: none !important;
+  }
+
+  .skill-app:has(.skill-progress-persistent) {
+    padding-bottom: 0 !important;
+  }
+}
