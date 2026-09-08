@@ -80,7 +80,7 @@
     labelTitle.textContent = "Save your work";
     const privacy = document.createElement("small");
     privacy.className = "skill-progress-persistent-privacy";
-    privacy.textContent = "Static site hosted on GitHub Pages. There is no Free Therapy Tools application server or database receiving your entries, and we do not add analytics, tracking scripts, or cookies. Browser autosave stays on this device.";
+    privacy.textContent = "Your entries stay on this device. Free Therapy Tools is a static GitHub Pages site with no app server or database for entries and no analytics or tracking cookies in the site code. Save progress downloads a .md text file; use Open previous progress to select it later.";
     label.append(labelTitle, privacy);
 
     const actions = document.createElement("div");
