@@ -9,7 +9,7 @@ execute:
   enabled: false
 ---
 
-Use this tool to practice one or more TIPP skills. It is based on the same learning goals as the TIPP worksheet, but the wording and layout are original to Free Therapy Tools. [Learn about TIPP](/learn/distress-tolerance/tipp.html).
+Use this tool to practice one or more TIPP skills. It is based on the same learning goals as the TIPP worksheet, but the wording and layout are original to Free Therapy Tools. [Learn about TIPP](/learn/distress-tolerance/tipp.html){target="_blank" rel="noopener"}.
 
 ::: {.callout-important title="Sometimes not making things worse is enough"}
 The goal is not always to feel good or solve the problem immediately. A useful result may simply be lowering the intensity enough to avoid making the situation worse and choose the next effective step.
@@ -89,8 +89,8 @@ Temperature and Intense Exercise can affect heart rate and circulation. Use only
     },
     {
       id: "progressive-muscle-relaxation",
-      title: "P - Progressive / Paired Muscle Relaxation",
-      prompt: "Which muscle groups did you tense and release? What changed when you let go?",
+      title: "P - Progressive Muscle Relaxation",
+      prompt: "Which muscle groups did you gently tense and release? If you paired the release with your exhale, what did you notice?",
       href: "/learn/distress-tolerance/progressive-muscle-relaxation.html"
     }
   ];
@@ -108,7 +108,7 @@ Temperature and Intense Exercise can affect heart rate and circulation. Use only
       <div class="card-body">
         <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
           <h2 class="h4 mb-0">${skill.title}</h2>
-          <a href="${skill.href}">Learn this skill</a>
+          <a href="${skill.href}" target="_blank" rel="noopener">Learn this skill</a>
         </div>
         <div class="row g-3">
           ${field(skill.id, "situation", "Situation or trigger", "text")}

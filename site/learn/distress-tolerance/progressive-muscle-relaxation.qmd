@@ -12,7 +12,7 @@ execute:
 
 [Back to TIPP](tipp.qmd)
 
-The second **P** in TIPP is commonly taught as **paired muscle relaxation**. It uses the same basic idea as progressive muscle relaxation: gently create tension, notice it, release it, and notice the difference. In the DBT version, the release is paired with the out-breath and a mental cue such as **relax**. [1]
+The second **P** in TIPP is **Progressive Muscle Relaxation**. The basic idea is to gently create tension, notice it, release it, and notice the difference. In DBT, this is often taught as a **paired** version: gently tense a muscle group while breathing in, then release it with the out-breath and a mental cue such as **relax**. [1]
 
 ## Learn it when you are relatively calm {#learn-calm}
 
@@ -68,19 +68,17 @@ The image is not the important part. The useful learning comes from noticing **t
 
 ## Pair the release with breathing {#pairing}
 
-The skill becomes more portable when the out-breath and the word **relax** repeatedly occur at the same time as physical release. With practice, the breath and cue can become reminders for the body to let go of unnecessary tension. [1]
+The DBT variation pairs the physical release with the out-breath and a cue such as **relax**. With practice, the breath and cue can become reminders for the body to let go of unnecessary tension. [1]
 
 ## Guided audio and video resources {#resources}
 
-[Browse Insight Timer progressive relaxation meditations](https://insighttimer.com/meditation-topics/progressive_relaxation){.btn .btn-outline-primary target="_blank" rel="noopener"}
+[Browse Insight Timer progressive muscle relaxation](https://insighttimer.com/meditation-topics/progressive_relaxation){.btn .btn-outline-primary target="_blank" rel="noopener"}
 
-[Search YouTube for progressive muscle relaxation](https://www.youtube.com/results?search_query=progressive+muscle+relaxation+guided){.btn .btn-outline-primary target="_blank" rel="noopener"}
+[Search YouTube for progressive muscle relaxation](https://www.youtube.com/results?search_query=progressive+muscle+relaxation){.btn .btn-outline-primary target="_blank" rel="noopener"}
 
-[Search YouTube for DBT paired muscle relaxation](https://www.youtube.com/results?search_query=DBT+paired+muscle+relaxation){.btn .btn-outline-primary target="_blank" rel="noopener"}
+[Search Google for progressive muscle relaxation](https://www.google.com/search?q=progressive+muscle+relaxation){.btn .btn-outline-secondary target="_blank" rel="noopener"}
 
-[Search Google for progressive muscle relaxation](https://www.google.com/search?q=progressive+muscle+relaxation+guided){.btn .btn-outline-secondary target="_blank" rel="noopener"}
-
-On Insight Timer, useful search terms include **progressive relaxation**, **progressive muscle relaxation**, **tense and release**, and **body relaxation**.
+For guided practices, the clearest search term is **progressive muscle relaxation**. Adding **guided**, **short**, or **full body** can help narrow the results.
 
 ## References {#references}
 
