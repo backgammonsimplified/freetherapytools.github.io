@@ -37,11 +37,13 @@
     link.target = "_blank";
     link.rel = "noopener noreferrer";
     link.dataset.googleDocsDocx = "true";
+    link.dataset.googleDocsEnhanced = "true";
     link.title = "Open this public DOCX in Google's document viewer. Editing requires saving or uploading a copy to Google Drive.";
 
     const fileName = (() => {
       try {
-        return decodeURIComponent(new URL(docxUrl).pathname.split("/").filter(Boolean).at(-1) || "DOCX");
+        const parts = new URL(docxUrl).pathname.split("/").filter(Boolean);
+        return decodeURIComponent(parts[parts.length - 1] || "DOCX");
       } catch (_error) {
         return "DOCX";
       }
@@ -65,6 +67,7 @@
 
   function enhance(anchor) {
     if (!(anchor instanceof HTMLAnchorElement)) return;
+    if (anchor.dataset.googleDocsDocx === "true") return;
     if (anchor.dataset.googleDocsEnhanced === "true") return;
     if (anchor.dataset.noGoogleDocs === "true") return;
     if (!isDocxLink(anchor)) return;
