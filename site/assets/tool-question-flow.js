@@ -1,7 +1,7 @@
 (function (global) {
   "use strict";
 
-  const VERSION = "20260907-progressive-reveal-4";
+  const VERSION = "20260907-progressive-reveal-5-next";
   const CHATGPT_URL = "https://chatgpt.com/";
   const stateByRoot = new WeakMap();
   const scheduled = new WeakSet();
@@ -48,7 +48,8 @@
     "[data-values-review-calendar]",
     "[data-activation-calendar]",
     ".tool-question-help",
-    ".tool-progressive-controls"
+    ".tool-progressive-controls",
+    ".tool-question-next-row"
   ].join(",");
 
   function toolId(root) {
@@ -75,8 +76,7 @@
   }
 
   // Quarto already supplies the public H1 and description. Remove only the
-  // duplicated app heading/intro. Never hide the whole header: the progress
-  // component may put a live control there later.
+  // duplicated app heading/intro. Never touch progress/save controls.
   function simplifyAppHeader(shell) {
     const header = shell.querySelector(":scope > .skill-app-header");
     if (!header || header.dataset.toolHeaderSimplified === VERSION) return;
@@ -194,9 +194,6 @@
     if (cursor !== control) return null;
     nodes.push(control);
 
-    // A lightweight wrapper is only used when the original tool has no natural
-    // field wrapper. It stays inside the original panel and contains only the
-    // existing label/help/control nodes; no tool state or progress DOM moves.
     const wrapper = document.createElement("div");
     wrapper.className = "tool-question-step";
     label.before(wrapper);
@@ -249,6 +246,16 @@
     return blocks;
   }
 
+  function addNextButtons(blocks) {
+    blocks.forEach((block, index) => {
+      if (index >= blocks.length - 1 || block.querySelector(":scope > .tool-question-next-row")) return;
+      const row = document.createElement("div");
+      row.className = "tool-question-next-row";
+      row.innerHTML = `<button type="button" data-tool-question-next="${index}" hidden>Next</button>`;
+      block.append(row);
+    });
+  }
+
   function enhanceQuestions(root, shell) {
     const id = toolId(root);
     if (PROGRESSIVE_EXCLUSIONS.has(id)) return;
@@ -259,10 +266,11 @@
     if (blocks.length < 2) return;
 
     root.classList.add("tool-progressive-enabled");
+    addNextButtons(blocks);
 
     const savedMax = blocks.reduce((max, block, index) => blockAnswered(block) ? index : max, -1);
     const previous = stateByRoot.get(root);
-    const state = previous || { revealed: Math.min(blocks.length, Math.max(1, savedMax + 2)), showAll: false, timers: new WeakMap() };
+    const state = previous || { revealed: Math.min(blocks.length, Math.max(1, savedMax + 2)), showAll: false };
     state.revealed = Math.max(state.revealed, Math.min(blocks.length, savedMax + 2));
     stateByRoot.set(root, state);
 
@@ -277,11 +285,16 @@
     const apply = (animateIndex = -1) => {
       blocks.forEach((block, index) => {
         const visible = state.showAll || index < state.revealed;
+        const current = visible && !state.showAll && index === state.revealed - 1;
         block.classList.toggle("is-concealed", !visible);
         block.classList.toggle("is-revealed", visible);
         block.classList.toggle("is-answered", visible && blockAnswered(block));
-        block.classList.toggle("is-current", visible && !state.showAll && index === state.revealed - 1);
+        block.classList.toggle("is-current", current);
         block.setAttribute("aria-hidden", visible ? "false" : "true");
+
+        const next = block.querySelector(":scope > .tool-question-next-row > [data-tool-question-next]");
+        if (next) next.hidden = !(current && blockAnswered(block));
+
         if (visible && index === animateIndex) {
           block.classList.remove("is-entering");
           void block.offsetWidth;
@@ -293,31 +306,29 @@
       if (toggle) toggle.textContent = state.showAll ? "Return to progressive questions" : "Show all questions";
     };
 
-    const revealAfter = (block) => {
-      const index = blocks.indexOf(block);
-      if (index < 0 || state.showAll || index >= blocks.length - 1 || index + 1 < state.revealed || !blockAnswered(block)) {
-        apply();
-        return;
-      }
-      const existing = state.timers.get(block);
-      if (existing) global.clearTimeout(existing);
-      const timer = global.setTimeout(() => {
-        if (!blockAnswered(block)) return;
-        state.revealed = Math.max(state.revealed, index + 2);
-        apply(index + 1);
+    const revealNext = (index) => {
+      const block = blocks[index];
+      if (!block || !blockAnswered(block) || index >= blocks.length - 1) return;
+      state.revealed = Math.max(state.revealed, index + 2);
+      state.showAll = false;
+      apply(index + 1);
+      global.setTimeout(() => {
+        const nextControl = blocks[index + 1]?.querySelector("textarea, input, select");
         blocks[index + 1]?.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      }, 600);
-      state.timers.set(block, timer);
-      apply();
+        nextControl?.focus({ preventScroll: true });
+      }, 120);
     };
 
     panel.addEventListener("input", (event) => {
       const block = event.target.closest(".tool-question-step");
-      if (block) revealAfter(block);
+      if (block) apply();
     });
     panel.addEventListener("change", (event) => {
       const block = event.target.closest(".tool-question-step");
-      if (block) revealAfter(block);
+      if (block) apply();
+    });
+    panel.querySelectorAll("[data-tool-question-next]").forEach((button) => {
+      button.addEventListener("click", () => revealNext(Number(button.dataset.toolQuestionNext)));
     });
     controls.querySelector("[data-tool-show-all]")?.addEventListener("click", () => {
       state.showAll = !state.showAll;
