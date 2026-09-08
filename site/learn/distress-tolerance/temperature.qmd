@@ -1,0 +1,57 @@
+---
+title: "TIPP: Temperature"
+description: "Use safe facial cooling as a rapid body-level distress-tolerance skill when arousal is very high."
+sidebar: learn
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+[Back to TIPP](tipp.qmd)
+
+The **Temperature** part of TIPP uses brief, safe cooling of the face to create a rapid body-level shift when emotional arousal is very high. It is intended as a crisis-survival skill, not as a way to solve the whole problem. [1]
+
+## Why facial cooling can help {#why-it-can-help}
+
+Cooling the face, especially around the eyes and upper cheeks, can activate part of the body's diving response. That response can slow the heart and change autonomic activity. The DBT handout describes this as a way to reduce very intense emotional activation quickly enough to regain some ability to choose what to do next. [1]
+
+## A practical version {#practice}
+
+1. **Sit somewhere safe and quiet.** This skill is easier to notice when you are not moving around or doing several things at once.
+2. **Choose a safe cooling method.** You can use cool or cold water on the face, or a cold pack wrapped so it is comfortable against the skin and placed over the upper cheeks and around the eyes.
+3. **Use it briefly.** The DBT handout describes holding the breath and cooling the face for roughly 15 to 30 seconds. If using water, keep it at or above about 50°F (10°C). [1]
+4. **Stop and reassess.** Notice your heart rate, breathing, body tension, emotion intensity, and urges. The goal is a shift toward enough regulation to choose the next effective step.
+
+You do not need to make the water colder or stay in it longer to make the skill "work better." More intense is not automatically more effective.
+
+::: {.callout-caution title="Physical safety"}
+Sudden cold exposure can affect heart rate and circulation. Do not use this skill as written if a health professional has told you to avoid sudden cold exposure. If you have a heart or circulation condition, a very low resting heart rate, significant cold sensitivity, take medication that affects heart rate, or have another medical concern, ask a qualified health professional first. Stop if you feel faint, have chest pain, or feel physically unwell.
+:::
+
+## What to notice afterward {#afterward}
+
+Ask yourself:
+
+- Did my arousal move at all?
+- Did my urge to act immediately change?
+- Can I think a little more clearly?
+- What is the next effective step?
+
+A partial change counts. If the skill helps you avoid making the situation worse while the peak passes, it may already be doing its job.
+
+## Find demonstrations and related resources {#resources}
+
+[Search YouTube for DBT TIPP Temperature](https://www.youtube.com/results?search_query=DBT+TIPP+temperature+cold+water){.btn .btn-outline-primary target="_blank" rel="noopener"}
+
+[Search Google for TIPP Temperature](https://www.google.com/search?q=DBT+TIPP+temperature+cold+water){.btn .btn-outline-secondary target="_blank" rel="noopener"}
+
+[Browse Insight Timer techniques](https://insighttimer.com/techniques){.btn .btn-outline-secondary target="_blank" rel="noopener"}
+
+For Insight Timer, search for terms such as **grounding**, **nervous system regulation**, or **body awareness**. Insight Timer is more useful for follow-up regulation practices than for demonstrating cold-water safety.
+
+## References {#references}
+
+[1] M. M. Linehan, *DBT Skills Training Handouts and Worksheets*, 2nd ed. New York, NY, USA: Guilford Press, 2015.
