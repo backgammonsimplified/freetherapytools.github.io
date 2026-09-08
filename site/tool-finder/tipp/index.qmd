@@ -1,0 +1,172 @@
+---
+title: "TIPP Practice Tool"
+subtitle: "Track what you tried and whether the moment became more manageable."
+description: "An original TIPP practice worksheet for Temperature, Intense Exercise, Paced Breathing, and Progressive Muscle Relaxation."
+sidebar: tool-finder
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+Use this tool to practice one or more TIPP skills. It is based on the same learning goals as the TIPP worksheet, but the wording and layout are original to Free Therapy Tools. [Learn about TIPP](/learn/distress-tolerance/tipp.html).
+
+::: {.callout-important title="Sometimes not making things worse is enough"}
+The goal is not always to feel good or solve the problem immediately. A useful result may simply be lowering the intensity enough to avoid making the situation worse and choose the next effective step.
+:::
+
+::: {.callout-caution title="Physical safety"}
+Temperature and Intense Exercise can affect heart rate and circulation. Use only approaches that are safe for your body. If you have a heart or circulation condition, a very low resting heart rate, significant cold sensitivity, take medication that affects heart rate, or have another medical concern, ask a qualified health professional before using these parts of TIPP.
+:::
+
+<div class="d-flex flex-wrap gap-2 mb-4">
+  <a class="btn btn-outline-primary" href="/resources/original/distress-tolerance/tipp-practice-worksheet.docx">Download DOCX worksheet</a>
+  <a class="btn btn-outline-secondary" target="_blank" rel="noopener" href="https://docs.google.com/gview?url=https%3A%2F%2Ffreetherapytools.github.io%2Fresources%2Foriginal%2Fdistress-tolerance%2Ftipp-practice-worksheet.docx">View with Google Docs Viewer</a>
+  <button class="btn btn-outline-secondary" type="button" id="tipp-print">Print / Save as PDF</button>
+  <button class="btn btn-outline-danger" type="button" id="tipp-clear">Clear this worksheet</button>
+</div>
+
+<p class="text-muted small">Your entries are saved only in this browser using local storage. They are not sent to Free Therapy Tools.</p>
+
+<form id="tipp-practice-form" class="container-fluid px-0">
+  <div class="row g-3 mb-4">
+    <div class="col-md-6">
+      <label class="form-label" for="tipp-date"><strong>Date or week</strong></label>
+      <input class="form-control" id="tipp-date" name="date" type="text" autocomplete="off">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label" for="tipp-name"><strong>Optional name or initials</strong></label>
+      <input class="form-control" id="tipp-name" name="name" type="text" autocomplete="off">
+    </div>
+  </div>
+
+  <div id="tipp-skill-sections"></div>
+
+  <section class="card mb-4">
+    <div class="card-body">
+      <h2 class="h4">Reflection</h2>
+      <label class="form-label" for="reflection-easiest">Which TIPP skill was easiest to use?</label>
+      <textarea class="form-control mb-3" id="reflection-easiest" name="reflectionEasiest" rows="2"></textarea>
+
+      <label class="form-label" for="reflection-helpful">Which skill changed your arousal or made the situation more manageable?</label>
+      <textarea class="form-control mb-3" id="reflection-helpful" name="reflectionHelpful" rows="2"></textarea>
+
+      <label class="form-label" for="reflection-earlier">Was there a point where using the skill earlier might have helped?</label>
+      <textarea class="form-control mb-3" id="reflection-earlier" name="reflectionEarlier" rows="2"></textarea>
+
+      <label class="form-label" for="reflection-next">What do you want to remember for the next high-arousal moment?</label>
+      <textarea class="form-control" id="reflection-next" name="reflectionNext" rows="2"></textarea>
+    </div>
+  </section>
+</form>
+
+<script>
+(function () {
+  "use strict";
+
+  const storageKey = "free-therapy-tools:tipp-practice:v1";
+  const form = document.getElementById("tipp-practice-form");
+  const sections = document.getElementById("tipp-skill-sections");
+
+  const skills = [
+    {
+      id: "temperature",
+      title: "T - Temperature",
+      prompt: "What safe cooling method did you use, for how long, and what did you notice?",
+      href: "/learn/distress-tolerance/temperature.html"
+    },
+    {
+      id: "intense-exercise",
+      title: "I - Intense Exercise",
+      prompt: "What movement did you choose, for how long, and what did you notice in your body?",
+      href: "/learn/distress-tolerance/intense-exercise.html"
+    },
+    {
+      id: "paced-breathing",
+      title: "P - Paced Breathing",
+      prompt: "What breathing pace did you use? Note the inhale and exhale counts if that helped.",
+      href: "/learn/distress-tolerance/paced-breathing.html"
+    },
+    {
+      id: "progressive-muscle-relaxation",
+      title: "P - Progressive / Paired Muscle Relaxation",
+      prompt: "Which muscle groups did you tense and release? What changed when you let go?",
+      href: "/learn/distress-tolerance/progressive-muscle-relaxation.html"
+    }
+  ];
+
+  const field = (skillId, key, label, type, extra) => {
+    const id = `${skillId}-${key}`;
+    if (type === "number") {
+      return `<div class="col-md-6"><label class="form-label" for="${id}">${label}</label><input class="form-control" id="${id}" name="${id}" type="number" min="0" max="100" inputmode="numeric" ${extra || ""}></div>`;
+    }
+    return `<div class="col-12"><label class="form-label" for="${id}">${label}</label><textarea class="form-control" id="${id}" name="${id}" rows="2" ${extra || ""}></textarea></div>`;
+  };
+
+  sections.innerHTML = skills.map((skill) => `
+    <section class="card mb-4" data-tipp-skill="${skill.id}">
+      <div class="card-body">
+        <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+          <h2 class="h4 mb-0">${skill.title}</h2>
+          <a href="${skill.href}">Learn this skill</a>
+        </div>
+        <div class="row g-3">
+          ${field(skill.id, "situation", "Situation or trigger", "text")}
+          ${field(skill.id, "arousal-before", "Emotional arousal before (0 to 100)", "number")}
+          ${field(skill.id, "arousal-after", "Emotional arousal after (0 to 100)", "number")}
+          ${field(skill.id, "manageable-before", "How manageable did it feel before? (0 to 100)", "number")}
+          ${field(skill.id, "manageable-after", "How manageable did it feel after? (0 to 100)", "number")}
+          ${field(skill.id, "tried", skill.prompt, "text")}
+          ${field(skill.id, "changed", "What changed in your body, emotions, urges, thoughts, or attention?", "text")}
+          ${field(skill.id, "next", "What was the next effective step? What would you repeat, change, or try earlier next time?", "text")}
+        </div>
+      </div>
+    </section>
+  `).join("");
+
+  function readForm() {
+    const data = {};
+    new FormData(form).forEach((value, key) => { data[key] = value; });
+    return data;
+  }
+
+  function save() {
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(readForm()));
+    } catch (error) {
+      // The form still works if browser storage is unavailable.
+    }
+  }
+
+  function restore() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(storageKey) || "{}");
+      Object.entries(saved).forEach(([key, value]) => {
+        const input = form.elements.namedItem(key);
+        if (input) input.value = value;
+      });
+    } catch (error) {
+      // Ignore unreadable or unavailable browser storage.
+    }
+  }
+
+  form.addEventListener("input", save);
+  restore();
+
+  document.getElementById("tipp-print").addEventListener("click", function () {
+    window.print();
+  });
+
+  document.getElementById("tipp-clear").addEventListener("click", function () {
+    if (!window.confirm("Clear all entries from this TIPP worksheet on this browser?")) return;
+    form.reset();
+    try { localStorage.removeItem(storageKey); } catch (error) {}
+  });
+}());
+</script>
+
+## References {#references}
+
+[1] M. M. Linehan, *DBT Skills Training Handouts and Worksheets*, 2nd ed. New York, NY, USA: Guilford Press, 2015.
+
+[Back to all Tool Finder tools](/tool-finder/)
