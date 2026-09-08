@@ -95,7 +95,7 @@
     labelTitle.textContent = "Save your work";
     const privacy = document.createElement("small");
     privacy.className = "skill-progress-persistent-privacy";
-    privacy.textContent = "Your entries stay on this device. Free Therapy Tools is a static GitHub Pages site with no app server or database for entries and no analytics or tracking cookies in the site code. Save progress downloads a .md text file; use Open previous progress to select it later.";
+    privacy.textContent = "Your data is not saved or uploaded to our servers. Browser autosave stays only on this device. To keep your progress and reopen it later, download the .md file. When you are finished, export the result as a DOCX or PDF to save, print, or share with your therapist.";
     label.append(labelTitle, privacy);
 
     const actions = document.createElement("div");
