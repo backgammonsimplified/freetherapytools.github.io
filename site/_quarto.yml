@@ -22,6 +22,8 @@ project:
     - assets/therapy-calendar.js
     - assets/skill-apps.js
     - assets/skill-progress.js
+    - assets/skill-progress-bar.js
+    - assets/skill-progress-bar.css
     - assets/cbt-practice.js
     - assets/cbt-practice.css
     - "assets/cbt/**"
