@@ -35,12 +35,11 @@ class ToolUiStabilityTests(unittest.TestCase):
 
     def test_persistent_bar_keeps_simple_privacy_and_resume_guidance(self):
         self.assertIn('skill-progress-persistent-privacy', PROGRESS_JS)
-        self.assertIn('Your entries stay on this device', PROGRESS_JS)
-        self.assertIn('static GitHub Pages site', PROGRESS_JS)
-        self.assertIn('no app server or database for entries', PROGRESS_JS)
-        self.assertIn('no analytics or tracking cookies in the site code', PROGRESS_JS)
-        self.assertIn('Save progress downloads a .md text file', PROGRESS_JS)
-        self.assertIn('use Open previous progress to select it later', PROGRESS_JS)
+        self.assertIn('Your data is not saved or uploaded to our servers', PROGRESS_JS)
+        self.assertIn('Browser autosave stays only on this device', PROGRESS_JS)
+        self.assertIn('download the .md file', PROGRESS_JS)
+        self.assertIn('export the result as a DOCX or PDF', PROGRESS_JS)
+        self.assertIn('share with your therapist', PROGRESS_JS)
         self.assertIn('.skill-progress-persistent-privacy', PROGRESS_CSS)
 
     def test_progressive_reveal_uses_explicit_next(self):
@@ -71,7 +70,7 @@ class ToolUiStabilityTests(unittest.TestCase):
 
     def test_current_assets_are_cache_busted(self):
         self.assertIn('skill-progress-bar.css?v=20260908-persistent-bar-6-shell-aligned', SCRIPTS)
-        self.assertIn('skill-progress-bar.js?v=20260908-persistent-bar-6-shell-aligned', SCRIPTS)
+        self.assertIn('skill-progress-bar.js?v=20260908-persistent-bar-7-save-guidance', SCRIPTS)
         self.assertIn('tool-question-flow.css?v=20260907-progressive-reveal-6-geometry', SCRIPTS)
         self.assertIn('tool-question-flow.js?v=20260907-progressive-reveal-5-next', SCRIPTS)
 
