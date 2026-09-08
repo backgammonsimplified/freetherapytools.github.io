@@ -11,10 +11,52 @@ term-lookup: false
 lesson-taxonomy: false
 ---
 
+## Window of Tolerance {#window-of-tolerance}
+
+The **window of tolerance** is the range where you have enough nervous-system regulation to respond to what is happening and live your day-to-day life. Inside the window, you can usually think, choose, connect, learn, solve problems, and respond rather than simply react.
+
+Outside the window, your nervous system has moved into dysregulation. A useful way to think about this is **survival mode**: much of your attention and energy may go toward reacting to what your body and emotions are doing and getting through the moment until you can return to a more regulated state.
+
+**Distress tolerance** gives you skills for those moments. The immediate goal is often to survive the crisis, avoid making it worse, and help yourself move back toward your window of tolerance. **Wellness, mindfulness, emotion regulation, interpersonal effectiveness, and other skills** can help reduce vulnerabilities, support day-to-day regulation, and gradually make your window more flexible over time.
+
+<!-- TODO: Add the original unicorn river Window of Tolerance diagram here when it is ready. -->
+
+### What the different states can feel like {#window-states}
+
+- **Hyperarousal:** Your nervous system is highly activated. You may feel anxious, panicky, angry, restless, urgent, or out of control. Your body may prepare to fight or run, and clear thinking can become harder.
+- **Upper-edge dysregulation:** You are moving above your window. You may feel tense, agitated, anxious, irritable, or increasingly reactive. You are uncomfortable, but you may still have some access to choice and control.
+- **Inside the window of tolerance:** You have enough activation to be alert and engaged without being overwhelmed. You can think, make choices, connect with other people, learn, problem-solve, and respond effectively.
+- **Lower-edge dysregulation:** You are moving below your window. You may feel overwhelmed, slowed down, foggy, detached, heavy, or lose track of time. You are uncomfortable, but you may still have some access to choice and control.
+- **Hypoarousal:** Your nervous system is underactivated or shutting down. You may feel numb, exhausted, disconnected, frozen, very sleepy, or have difficulty moving, speaking, or thinking.
+
+The goal is not to stay inside the window every moment. Everyone moves in and out of it. The useful skill is noticing where you are, then choosing what may help you move toward enough regulation to respond again.
+
+### What can shrink or expand your window? {#shrink-expand-window}
+
+Your window is not fixed. Stress, illness, trauma reminders, conflict, exhaustion, pain, hunger, dehydration, isolation, or too much stimulation can make the range feel narrower. Recovery, supportive routines, safe connection, and repeated practice with regulation skills can help make it easier to stay within or return to your window.
+
+Many factors can work in either direction depending on **balance, context, and what your nervous system needs that day**.
+
+| Factor | Can support or expand your window | Can shrink or strain your window |
+|---|---|---|
+| **Sleep** | Enough regular, restorative sleep | Too little, poor-quality, or very irregular sleep |
+| **Food** | Regular meals and enough fuel | Hunger, skipping meals, or not eating enough |
+| **Water** | Staying adequately hydrated | Dehydration |
+| **Exercise and movement** | Manageable, regular movement that fits your body | Too little movement or pushing into pain and exhaustion |
+| **Social interaction** | Safe, supportive connection and enough time alone when you need it | Isolation, conflict, unsafe relationships, or too much interaction when already overloaded |
+| **Stimulation and recovery** | A workable balance of activity, stimulation, quiet, and rest | Sensory overload, stacked demands, or too little recovery time |
+| **Mindfulness and enjoyable activities** | Grounding, meditation, music, hobbies, nature, and other restorative activities | Losing access to activities that help you settle, recover, or reconnect |
+
+More is not always better. Exercise can help and overexertion can drain you. Social connection can help and too much interaction can overwhelm you. Rest can help and long periods of inactivity may leave some people feeling more shut down. The aim is to learn what tends to widen or narrow **your** window and use that information early.
+
 ## Objectives {#objectives}
 
 1. Survive crisis situations without making them worse.
 2. Accept reality by replacing suffering and being stuck with ordinary pain and the possibility of moving forward.
 3. Become free of having to satisfy the demands of your own desires, urges, and intense emotions.
+
+::: {.callout-important title="Sometimes not making things worse is enough"}
+During a crisis, success does not have to mean fixing the problem or feeling good. If a skill helps you avoid making the situation worse and gives you time to return to a state where you can choose your next effective step, it is doing its job.
+:::
 
 {{< include _lesson-index.html >}}
