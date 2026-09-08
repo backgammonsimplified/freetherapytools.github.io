@@ -1,0 +1,87 @@
+---
+title: "TIPP: Progressive Muscle Relaxation"
+description: "Practice tensing and releasing muscles so the body learns the contrast between tension and relaxation."
+sidebar: learn
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+[Back to TIPP](tipp.qmd)
+
+The second **P** in TIPP is commonly taught as **paired muscle relaxation**. It uses the same basic idea as progressive muscle relaxation: gently create tension, notice it, release it, and notice the difference. In the DBT version, the release is paired with the out-breath and a mental cue such as **relax**. [1]
+
+## Learn it when you are relatively calm {#learn-calm}
+
+This skill becomes easier to use during distress if you have already practiced it when you are not in crisis. Start somewhere quiet, give yourself enough time, and choose a comfortable seated or lying position. As the skill becomes familiar, practice in more ordinary settings so it is easier to use when you need it. [1]
+
+## Step by step {#step-by-step}
+
+For each muscle group:
+
+1. **Breathe in** and gently tighten the muscles for about 5 to 6 seconds. Use enough tension to notice it, but not enough to cause pain or a cramp.
+2. **Notice the tension.** Pay attention to where you feel tightness, pressure, effort, or pulling.
+3. **Breathe out and release.** Let the muscles go rather than slowly lowering the tension.
+4. As you release, silently use a cue such as **relax**.
+5. **Notice the change** for roughly 10 to 15 seconds before moving to the next area. [1]
+
+If focusing on muscle tension makes you anxious, return to comfortable [Paced Breathing](paced-breathing.qmd) and try again later.
+
+## A head-to-toe sequence {#sequence}
+
+You can start with smaller muscle groups and later combine them into larger groups. A detailed practice can move through:
+
+1. hands and wrists;
+2. lower and upper arms;
+3. shoulders;
+4. forehead;
+5. eyes;
+6. nose and upper cheeks;
+7. lips, jaw, and lower face;
+8. tongue and mouth;
+9. neck;
+10. chest;
+11. upper and lower back;
+12. abdomen;
+13. buttocks;
+14. thighs;
+15. calves;
+16. ankles and feet. [1]
+
+You do not need to use every muscle group every time. Once you know the sensations well, you can combine areas, such as both arms, the whole face, the upper body, or the whole body.
+
+## A more playful version {#playful-version}
+
+Some people, especially children, find imagery easier than anatomy. The same tense-and-release pattern can be taught with simple images:
+
+- squeeze your hands as though pressing juice from fruit, then let go;
+- stretch your arms and shoulders like a cat, then let them drop;
+- scrunch your face briefly, then let it soften;
+- lift your shoulders toward your ears like a turtle pulling into its shell, then release;
+- tighten your belly for a moment, then let it become soft;
+- curl or press your toes, then release your feet.
+
+The image is not the important part. The useful learning comes from noticing **tension, release, and the contrast between them**.
+
+## Pair the release with breathing {#pairing}
+
+The skill becomes more portable when the out-breath and the word **relax** repeatedly occur at the same time as physical release. With practice, the breath and cue can become reminders for the body to let go of unnecessary tension. [1]
+
+## Guided audio and video resources {#resources}
+
+[Browse Insight Timer progressive relaxation meditations](https://insighttimer.com/meditation-topics/progressive_relaxation){.btn .btn-outline-primary target="_blank" rel="noopener"}
+
+[Search YouTube for progressive muscle relaxation](https://www.youtube.com/results?search_query=progressive+muscle+relaxation+guided){.btn .btn-outline-primary target="_blank" rel="noopener"}
+
+[Search YouTube for DBT paired muscle relaxation](https://www.youtube.com/results?search_query=DBT+paired+muscle+relaxation){.btn .btn-outline-primary target="_blank" rel="noopener"}
+
+[Search Google for progressive muscle relaxation](https://www.google.com/search?q=progressive+muscle+relaxation+guided){.btn .btn-outline-secondary target="_blank" rel="noopener"}
+
+On Insight Timer, useful search terms include **progressive relaxation**, **progressive muscle relaxation**, **tense and release**, and **body relaxation**.
+
+## References {#references}
+
+[1] M. M. Linehan, *DBT Skills Training Handouts and Worksheets*, 2nd ed. New York, NY, USA: Guilford Press, 2015.
