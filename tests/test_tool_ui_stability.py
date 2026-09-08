@@ -31,7 +31,9 @@ class ToolUiStabilityTests(unittest.TestCase):
 
     def test_persistent_bar_keeps_privacy_reminder(self):
         self.assertIn('skill-progress-persistent-privacy', PROGRESS_JS)
-        self.assertIn('not sent to or stored on Free Therapy Tools servers', PROGRESS_JS)
+        self.assertIn('Static site hosted on GitHub Pages', PROGRESS_JS)
+        self.assertIn('no Free Therapy Tools application server or database receiving your entries', PROGRESS_JS)
+        self.assertIn('do not add analytics, tracking scripts, or cookies', PROGRESS_JS)
         self.assertIn('Browser autosave stays on this device', PROGRESS_JS)
         self.assertIn('.skill-progress-persistent-privacy', PROGRESS_CSS)
 
@@ -63,7 +65,7 @@ class ToolUiStabilityTests(unittest.TestCase):
 
     def test_current_assets_are_cache_busted(self):
         self.assertIn('skill-progress-bar.css?v=20260907-persistent-bar-3-restored', SCRIPTS)
-        self.assertIn('skill-progress-bar.js?v=20260907-persistent-bar-3-restored', SCRIPTS)
+        self.assertIn('skill-progress-bar.js?v=20260907-persistent-bar-4-privacy', SCRIPTS)
         self.assertIn('tool-question-flow.css?v=20260907-progressive-reveal-6-geometry', SCRIPTS)
         self.assertIn('tool-question-flow.js?v=20260907-progressive-reveal-5-next', SCRIPTS)
 
