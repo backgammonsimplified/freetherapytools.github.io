@@ -46,6 +46,7 @@ project:
     - "resources/clean/mindfulness/**"
     - "resources/wellness/urge-surfing/**"
     - "resources/wellness/stages-of-change/**"
+    - "resources/original/**"
     - "data/skill-apps/**"
     - "data/resource-paraphrases/**"
     - assets/bs-glossary-lookup.json
@@ -95,7 +96,7 @@ website:
     left: |
       Free Therapy Tools · Under active development
     center:
-      - text: "Code: AGPL-3.0-only \u00b7 Educational content: CC BY-SA 4.0 \u00b7 Licensing"
+      - text: "Code: AGPL-3.0-only · Educational content: CC BY-SA 4.0 · Licensing"
         href: licensing.qmd
 
 format:
