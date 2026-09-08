@@ -13,25 +13,35 @@ lesson-taxonomy: false
 
 ## Window of Tolerance {#window-of-tolerance}
 
-The **window of tolerance** is the range where you have enough nervous-system regulation to respond to what is happening and live your day-to-day life. Inside the window, you can usually think, choose, connect, learn, solve problems, and respond rather than simply react.
+The **window of tolerance** is the range where you have enough nervous-system regulation to respond to what is happening and live your day-to-day life. Inside the window, you can usually think, choose, connect, learn, solve problems, and respond rather than simply react. The broader window-of-tolerance model was introduced by Daniel J. Siegel [2].
 
 Outside the window, your nervous system has moved into dysregulation. A useful way to think about this is **survival mode**: much of your attention and energy may go toward reacting to what your body and emotions are doing and getting through the moment until you can return to a more regulated state.
 
 **Distress tolerance** gives you skills for those moments. The immediate goal is often to survive the crisis, avoid making it worse, and help yourself move back toward your window of tolerance. **Wellness, mindfulness, emotion regulation, interpersonal effectiveness, and other skills** can help reduce vulnerabilities, support day-to-day regulation, and gradually make your window more flexible over time.
 
+::: {.callout-note title="About this explanation"}
+The descriptions of hyperarousal, hypoarousal, dysregulation, the river analogy, and the original shrink-and-expand examples below are paraphrased from the 2020 *Window of Tolerance* infographic by Mind My Peelings [1]. The wording here is original rather than a reproduction of the handout.
+:::
+
 <!-- TODO: Add the original unicorn river Window of Tolerance diagram here when it is ready. -->
+
+### Think of your window as a river {#window-river}
+
+One way to picture the window of tolerance is as a river that you are travelling down. When the river becomes narrow, the current speeds up and becomes harder and less safe to navigate. When the river becomes wider, the current slows and there is more room to stay balanced and calm. In that wider space, it is easier to feel relaxed and in control, function effectively, and deal with the challenges that come up in daily life [1].
 
 ### What the different states can feel like {#window-states}
 
-- **Hyperarousal:** Your nervous system is highly activated. You may feel anxious, panicky, angry, restless, urgent, or out of control. Your body may prepare to fight or run, and clear thinking can become harder.
-- **Upper-edge dysregulation:** You are moving above your window. You may feel tense, agitated, anxious, irritable, or increasingly reactive. You are uncomfortable, but you may still have some access to choice and control.
-- **Inside the window of tolerance:** You have enough activation to be alert and engaged without being overwhelmed. You can think, make choices, connect with other people, learn, problem-solve, and respond effectively.
-- **Lower-edge dysregulation:** You are moving below your window. You may feel overwhelmed, slowed down, foggy, detached, heavy, or lose track of time. You are uncomfortable, but you may still have some access to choice and control.
-- **Hypoarousal:** Your nervous system is underactivated or shutting down. You may feel numb, exhausted, disconnected, frozen, very sleepy, or have difficulty moving, speaking, or thinking.
+- **Hyperarousal:** Your nervous system is highly activated and more responsive than usual. You may feel anxious, panicky, angry, restless, urgent, or out of control. Your body may prepare to fight or run, and clear thinking can become harder [1].
+- **Upper-edge dysregulation:** You are moving above your window. You may feel tense, agitated, anxious, irritable, or increasingly reactive. You are uncomfortable, but you may still have some access to choice and control [1].
+- **Inside the window of tolerance:** You have enough activation to be alert and engaged without being overwhelmed. You can feel more balanced and calm, think clearly, make choices, connect with other people, learn, problem-solve, and respond effectively [1].
+- **Lower-edge dysregulation:** You are moving below your window. You may feel overwhelmed, slowed down, foggy, detached, or heavy. Your body may begin to shut down, and you may lose track of time. You are uncomfortable, but you may still have some access to choice and control [1].
+- **Hypoarousal:** Your nervous system is underactivated and less responsive than usual. You may feel emotionally numb, exhausted, disconnected, depressed or very low, frozen, very sleepy, or have difficulty moving, speaking, or thinking [1].
 
 The goal is not to stay inside the window every moment. Everyone moves in and out of it. The useful skill is noticing where you are, then choosing what may help you move toward enough regulation to respond again.
 
 ### What can shrink or expand your window? {#shrink-expand-window}
+
+The original handout highlights **stress and trauma** as experiences that can narrow the window, while **meditation, listening to music, and engaging in hobbies** are examples of activities that may help widen it [1].
 
 Your window is not fixed. Stress, illness, trauma reminders, conflict, exhaustion, pain, hunger, dehydration, isolation, or too much stimulation can make the range feel narrower. Recovery, supportive routines, safe connection, and repeated practice with regulation skills can help make it easier to stay within or return to your window.
 
@@ -60,3 +70,9 @@ During a crisis, success does not have to mean fixing the problem or feeling goo
 :::
 
 {{< include _lesson-index.html >}}
+
+## References {#references}
+
+[1] Mind My Peelings, “Window of Tolerance Infographic,” 2020. [Online]. Available: https://www.mindmypeelings.com/s/window-of-tolerance-infographic.pdf. Accessed: Sep. 8, 2026.
+
+[2] D. J. Siegel, *The Developing Mind: How Relationships and the Brain Interact to Shape Who We Are*, 2nd ed. New York, NY, USA: Guilford Press, 2012.
