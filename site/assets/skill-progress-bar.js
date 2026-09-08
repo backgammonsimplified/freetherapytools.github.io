@@ -8,6 +8,20 @@
     return [...root.querySelectorAll("button")].find((button) => button.textContent.trim() === text) || null;
   }
 
+  function syncPersistentBarGeometry(app, area) {
+    const shell = app.querySelector(".skill-app-shell") || app;
+    const rect = shell.getBoundingClientRect();
+    const viewportWidth = document.documentElement.clientWidth || window.innerWidth;
+    const gutter = viewportWidth <= 700 ? 8 : 16;
+    const left = Math.max(gutter, rect.left);
+    const right = Math.min(viewportWidth - gutter, rect.right);
+    const width = Math.max(0, right - left);
+
+    if (!width) return;
+    area.style.setProperty("--skill-progress-bar-left", `${left}px`);
+    area.style.setProperty("--skill-progress-bar-width", `${width}px`);
+  }
+
   function ensureOpenProgressButton(app, area) {
     if (app.querySelector("[data-skill-progress-open-top]")) return;
     const fileInput = area.querySelector('input[type="file"]');
@@ -52,6 +66,7 @@
     if (area.dataset.skillProgressPersistent === "true") {
       app.classList.add("skill-progress-persistent-enabled");
       ensureOpenProgressButton(app, area);
+      syncPersistentBarGeometry(app, area);
       return;
     }
 
@@ -95,6 +110,7 @@
     area.append(inner);
 
     ensureOpenProgressButton(app, area);
+    syncPersistentBarGeometry(app, area);
   }
 
   function upgradeAll() {
@@ -104,8 +120,16 @@
     });
   }
 
+  function syncAllGeometry() {
+    document.querySelectorAll(APP_SELECTOR).forEach((app) => {
+      const area = app.querySelector(`${AREA_SELECTOR}.skill-progress-persistent`);
+      if (area) syncPersistentBarGeometry(app, area);
+    });
+  }
+
   const observer = new MutationObserver(upgradeAll);
   observer.observe(document.documentElement, { childList: true, subtree: true });
+  window.addEventListener("resize", syncAllGeometry, { passive: true });
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", upgradeAll, { once: true });
