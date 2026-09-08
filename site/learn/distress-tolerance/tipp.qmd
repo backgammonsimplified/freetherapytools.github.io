@@ -1,6 +1,6 @@
 ---
 title: "TIPP"
-description: "Use body-based strategies to reduce very high emotional arousal."
+description: "Use body-based crisis-survival skills to reduce very high emotional arousal enough to choose the next effective step."
 sidebar: learn
 learn-track: doubling-cube
 learn-order: 2
@@ -18,345 +18,67 @@ execute:
   enabled: false
 ---
 
-TIPP skills can help bring intense arousal down enough to choose the next effective step.
+TIPP is a set of body-based distress-tolerance skills for moments when emotional arousal is so high that it is hard to think clearly, use more reflective skills, or choose what to do next. The immediate goal is not to solve the whole problem. The goal is to reduce the physical intensity enough to regain some choice. **Sometimes not making things worse is enough.** [1]
+
+TIPP is especially useful when you notice very high activation, strong urges to act impulsively, or a sense that your body is driving the reaction. After the intensity comes down, you can decide what other skill fits the situation.
+
+## TIPP at a glance {#tipp-at-a-glance}
+
+| Skill | What you are trying to change | Learn more |
+|---|---|---|
+| **T - Temperature** | Use safe cooling of the face or upper cheeks to create a rapid body-level shift in high arousal. | [Temperature](temperature.qmd) |
+| **I - Intense Exercise** | Use a short, safe burst of vigorous movement to use some of the physical energy that comes with high arousal. | [Intense Exercise](intense-exercise.qmd) |
+| **P - Paced Breathing** | Slow the breath, breathe into the belly, and make the exhale a little longer than the inhale. | [Paced Breathing](paced-breathing.qmd) |
+| **P - Progressive / Paired Muscle Relaxation** | Gently tense and release muscles while breathing so you can notice and reduce physical tension. | [Progressive Muscle Relaxation](progressive-muscle-relaxation.qmd) |
+
+The four skills can be used separately. You do not need to complete all four every time. Choose the one that is safest, practical, and most likely to match what your body is doing.
 
 ## Temperature {#temperature}
 
-Change the temperature of your face with cold water to calm down quickly. While holding your breath, place your face in a bowl of cold water or hold a cold pack over your eyes and cheeks for about 30 seconds. Keep the water above 50°F (10°C).
+Cooling the face can create a fast physiological shift when arousal is very high. The DBT handout describes using cool or cold water on the face, or placing a cold pack over the eyes and upper cheeks, while sitting quietly for a brief period. Facial cooling can trigger part of the body's diving response, which can slow the heart and change autonomic activity. [1]
 
-::: {.callout-caution title="Physical safety"}
-Very cold water can lower heart rate rapidly. Consult a health care provider before using this skill if you have a heart or other medical condition, a low resting heart rate because of medication, take a beta-blocker, are allergic to cold, or have an eating disorder.
-:::
+This is a crisis-survival skill, not a test of how much cold you can tolerate. Use safe temperatures and brief exposure. [Read the Temperature page](temperature.qmd).
 
 ## Intense Exercise {#intense-exercise}
 
-When your body is revved up by emotion, briefly use intense exercise to expend stored physical energy. Depending on your health and ability, this might include fast walking, running, jumping, playing basketball, or lifting weights.
+Strong emotion often comes with a strong physical activation signal. A short period of vigorous movement can give that activation somewhere to go. Examples can include fast walking, jogging, stairs, jumping, dancing, sports, or another activity that is appropriate for your body. [1]
 
-::: {.callout-caution title="Physical safety"}
-Intense exercise raises heart rate. Choose an activity that is safe for your body and consult a health care provider when a medical condition could make this skill unsafe.
-:::
+The goal is a brief shift, not exhaustion, punishment, or pushing through pain. [Read the Intense Exercise page](intense-exercise.qmd).
 
 ## Paced Breathing {#paced-breathing}
 
-- Breathe deeply into your belly.
-- Slow your inhaling and exhaling to about five or six breaths per minute.
-- Breathe out more slowly than you breathe in, such as 5 seconds in and 7 seconds out.
+Paced breathing slows the breathing rhythm and places more emphasis on the exhale. A common starting point is roughly five or six breaths per minute, with the exhale a little longer than the inhale. For example, you might breathe in for 4 or 5 counts and out for 6 or 7 counts. [1] Slow breathing has also been studied as a way of influencing autonomic regulation and subjective arousal. [2]
 
-## Paired / Progressive Muscle Relaxation {#progressive-muscle-relaxation}
+[Read the Paced Breathing page](paced-breathing.qmd).
 
-1. As you breathe in, tense the muscles in your body gently enough to avoid a cramp.
-2. Notice the tension.
-3. As you breathe out, say **Relax** silently.
-4. Let go of the tension and notice how the sensations change.
+## Progressive / Paired Muscle Relaxation {#progressive-muscle-relaxation}
 
-Practice first in a quiet place. Work through separate muscle groups, then larger groups, and eventually the whole body. Pairing the out-breath and the word *relax* with releasing tension makes it easier to call on this response when distress is high.
+Progressive or paired muscle relaxation teaches your body to notice the difference between tension and release. In the DBT version, you gently tense a muscle group while breathing in, then release the muscles as you breathe out. You can silently pair the release with a cue such as **relax** and notice the change in sensation. [1]
 
-## Window of Tolerance {#window-of-tolerance}
+Practice tends to become easier when you first learn it in a quiet setting and then gradually use it in more ordinary environments. [Read the Progressive Muscle Relaxation page](progressive-muscle-relaxation.qmd).
 
-The window of tolerance is a practical map for noticing nervous-system states and choosing a fitting skill.
+## Practice the skill {#practice}
 
-<!-- section-scan-resources:start -->
+Use the practice tool to record the situation, your arousal before and after, how manageable the moment felt, what you tried, and what changed.
 
-## Handouts & Worksheets {#handouts-worksheets}
+[Open the interactive TIPP practice tool](/tool-finder/tipp/){.btn .btn-primary}
 
-:::: {.bs-practice-resource #resource-distress-tolerance-p012 data-source-id="distress-tolerance-p012"}
-**Changing Your Body Chemistry with TIPP**
+[Download the original TIPP practice worksheet (.docx)](/resources/original/distress-tolerance/tipp-practice-worksheet.docx){.btn .btn-outline-primary}
 
-[![Changing Your Body Chemistry with TIPP](/resources/distress-tolerance/distress-tolerance-p012.jpg){.img-fluid fig-alt="Changing Your Body Chemistry with TIPP"}](/resources/distress-tolerance/distress-tolerance-p012.jpg)
+[View the DOCX with Google Docs Viewer](https://docs.google.com/gview?url=https%3A%2F%2Ffreetherapytools.github.io%2Fresources%2Foriginal%2Fdistress-tolerance%2Ftipp-practice-worksheet.docx){.btn .btn-outline-secondary target="_blank" rel="noopener"}
 
-[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p012.jpg)
+To edit the DOCX in Google Docs, download it, upload it to Google Drive, then choose **Open with Google Docs**. Google Docs Viewer is useful for viewing the public file but does not provide the same editing workflow as a document stored in your Drive.
 
-::: {.bs-resource-match data-match-id="linehan-book:distress-tolerance-p012" data-source-id="distress-tolerance-p012" data-match-source="linehan-book" data-candidate-asset="/resources/clean/distress-tolerance/distress-tolerance-handout-6-tip-skills-changing-your-body-chemistry-clean.pdf"}
-**Clean Printable Copy**
-
-[![Clean Printable Copy: Changing Your Body Chemistry with TIPP](/resources/clean/distress-tolerance/distress-tolerance-handout-6-tip-skills-changing-your-body-chemistry-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Changing Your Body Chemistry with TIPP"}](/resources/clean/distress-tolerance/distress-tolerance-handout-6-tip-skills-changing-your-body-chemistry-clean.pdf)
-
-[Open Clean Printable Copy](/resources/clean/distress-tolerance/distress-tolerance-handout-6-tip-skills-changing-your-body-chemistry-clean.pdf)
-
-<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
-<span class="bs-match-review-status" aria-live="polite"></span>
+::: {.callout-caution title="Physical safety"}
+The Temperature and Intense Exercise parts of TIPP can affect heart rate and circulation. Use only approaches that are safe for your body. If you have a heart or circulation condition, a very low resting heart rate, significant cold sensitivity, take medication that affects heart rate, or have another medical concern, ask a qualified health professional before using these parts of TIPP. Stop if you feel faint, have chest pain, or feel physically unwell.
 :::
 
-<!-- native-resource-content:distress-tolerance-p012:start -->
+## About the source material {#source-note}
 
-#### Native Version
+This page paraphrases the educational content of DBT Skills Training Handouts 6, 6a, and 6b and the practice structure of Distress Tolerance Worksheet 4. The copyrighted handout text and worksheet are not reproduced here. The downloadable worksheet above is an original Free Therapy Tools practice worksheet based on the skill concepts. [1]
 
-This handout's educational content is integrated into the anchored skill sections above.
+## References {#references}
 
-<!-- native-resource-content:distress-tolerance-p012:end -->
-::::
+[1] M. M. Linehan, *DBT Skills Training Handouts and Worksheets*, 2nd ed. New York, NY, USA: Guilford Press, 2015.
 
-:::: {.bs-practice-resource #resource-distress-tolerance-p013 data-source-id="distress-tolerance-p013"}
-**Using Cold Water, Step by Step**
-
-[![Using Cold Water, Step by Step](/resources/distress-tolerance/distress-tolerance-p013.jpg){.img-fluid fig-alt="Using Cold Water, Step by Step"}](/resources/distress-tolerance/distress-tolerance-p013.jpg)
-
-[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p013.jpg)
-
-::: {.bs-resource-match data-match-id="linehan-book:distress-tolerance-p013" data-source-id="distress-tolerance-p013" data-match-source="linehan-book" data-candidate-asset="/resources/clean/distress-tolerance/distress-tolerance-handout-6a-using-cold-water-step-by-step-clean.pdf"}
-**Clean Printable Copy**
-
-[![Clean Printable Copy: Using Cold Water, Step by Step](/resources/clean/distress-tolerance/distress-tolerance-handout-6a-using-cold-water-step-by-step-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Using Cold Water, Step by Step"}](/resources/clean/distress-tolerance/distress-tolerance-handout-6a-using-cold-water-step-by-step-clean.pdf)
-
-[Open Clean Printable Copy](/resources/clean/distress-tolerance/distress-tolerance-handout-6a-using-cold-water-step-by-step-clean.pdf)
-
-<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
-<span class="bs-match-review-status" aria-live="polite"></span>
-:::
-
-<!-- native-resource-content:distress-tolerance-p013:start -->
-
-#### Text Version
-
-Distress tolerance Handout 6a (Distress Tolerance Worksheet 4)
-
-##### Cold Water Can Work Wonders
-
-When you put your full face into cold water . . . or you put a zip-lock bag with cold water on your eyes and upper cheeks, and hold your breath, it tells your brain you are diving underwater. This causes the “dive response” to occur. (It may take 15-30 seconds to start.) Your heart slows down, blood flow to nonessential organs is reduced, and blood flow is redirected to the brain and heart. This response can actually help regulate your emotions. This will be useful as a distress tolerance strategy when you are having a very strong, distressing emotion, or when you are having very strong urges to engage in dangerous behaviors. (This strategy works best when you are sitting quietlyactivity and distraction may make it less effective.) try it oUt!
-
-> **Safety note:** Very cold water decreases your heart rate. If you have any heart or medical condition, have a lowered base heart rate due to medications, or are on a beta- blocker, consult your health care provider before using these skills. Avoid ice water if you are allergic to the cold.
-
-<!-- native-resource-content:distress-tolerance-p013:end -->
-::::
-
-:::: {.bs-practice-resource #resource-distress-tolerance-p014 data-source-id="distress-tolerance-p014"}
-**Paired Muscle Relaxation, Step by Step**
-
-[![Paired Muscle Relaxation, Step by Step](/resources/distress-tolerance/distress-tolerance-p014.jpg){.img-fluid fig-alt="Paired Muscle Relaxation, Step by Step"}](/resources/distress-tolerance/distress-tolerance-p014.jpg)
-
-[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p014.jpg)
-
-::: {.bs-resource-match data-match-id="linehan-book:distress-tolerance-p014" data-source-id="distress-tolerance-p014" data-match-source="linehan-book" data-candidate-asset="/resources/clean/distress-tolerance/distress-tolerance-handout-6b-paired-muscle-relaxation-step-by-step-clean.pdf"}
-**Clean Printable Copy**
-
-[![Clean Printable Copy: Paired Muscle Relaxation, Step by Step](/resources/clean/distress-tolerance/distress-tolerance-handout-6b-paired-muscle-relaxation-step-by-step-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Paired Muscle Relaxation, Step by Step"}](/resources/clean/distress-tolerance/distress-tolerance-handout-6b-paired-muscle-relaxation-step-by-step-clean.pdf)
-
-[Open Clean Printable Copy](/resources/clean/distress-tolerance/distress-tolerance-handout-6b-paired-muscle-relaxation-step-by-step-clean.pdf)
-
-<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
-<span class="bs-match-review-status" aria-live="polite"></span>
-:::
-
-<!-- native-resource-content:distress-tolerance-p014:start -->
-
-#### Text Version
-
-distress tolerance Handout 6b (Distress Tolerance Worksheet 4a) If you have decided to practice paired muscle relaxation, it can be very helpful to practice relaxing each of your muscles first. When you are starting, practice in a quiet place to reduce distractions, and make sure that you have enough time. As you improve with practice, you will want to practice in many different kinds of places, so that you can relax effectively when you most need to. remember that effectiveness improves with practice. If judgments arise, observe them, let them go, and return to your practice. If you become anxious, try focusing on breathing in to the count of 5 and out to the count of 7 (or the counts you have already determined for paced breathing), breathing all the while into your belly until you can return to relaxation exercises. now that you are ready to begin . . .
-
-1. Get your body into a comfortable position in which you can relax. Loosen tight clothing. Lie or sit down, with all body parts uncrossed and no body part supporting any others.
-
-2. For each area of the body listed below, gather tension by tightening muscles. Focus on the sensation of tightness in and around that area. Hold the tension as you inhale for 5-6 seconds, then release and breathe out.
-
-3. As you release, say in your mind very slowly the word “Relax.”
-
-4. Observe the changes in sensations as you relax for 10-15 seconds then move on to the next muscle.
-
-Start first with each of the 16 muscle groups. Once you can do that, practice with medium groups of muscles and then large groups. Once you are good at that, practice tensing your entire body at once. When you tense your entire body, you are like a robot-stiff, nothing moving. When you relax your entire body, you are like a rag doll-all muscles drooping down. Once you can relax all your muscles, practice three or four times a day until you can routinely m l relax your entire body rapidly. e u l g i a By practicing pairing exhaling and the word “Relax” with relaxing your muscles, you will r edm a eventually be able to relax just by letting go and saying the word “Relax.”
-
-##### M S
-
-1. Hands and wrists: Make fists with both hands and pull fists up on the wrists.
-
-2. Lower and upper arms: Make fists and bend both arms up to touch your shoulders.
-
-3. Shoulders: Pull both shoulders up to your ears.
-
-4. Forehead: Pull eyebrows close together, wrinkling forehead.
-
-5. Eyes: Shut eyes tightly.
-
-6. Nose and upper cheeks: Scrunch up nose; bring upper lips and cheeks up toward eyes.
-
-7. Lips and lower face: Press lips together; bring edges of lips back toward ears.
-
-8. Tongue and mouth: Teeth together; tongue pushing on upper mouth.
-
-9. Neck: Push head back into chair, floor, or bed, or push chin down to chest.
-
-10. Chest: Take deep breath and hold it.
-
-11. Back: Arch back, bringing shoulder blades together.
-
-12. Stomach: Hold stomach in tightly.
-
-13. Buttocks: Squeeze buttocks
-
-<!-- native-resource-content:distress-tolerance-p014:end -->
-::::
-
-## Practice Materials {#practice-materials}
-
-:::: {.bs-practice-resource #resource-distress-tolerance-p016 data-source-id="distress-tolerance-p016"}
-**Changing Body Chemistry with TIPP Skills**
-
-[![Changing Body Chemistry with TIPP Skills](/resources/distress-tolerance/distress-tolerance-p016.jpg){.img-fluid fig-alt="Changing Body Chemistry with TIPP Skills"}](/resources/distress-tolerance/distress-tolerance-p016.jpg)
-
-[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p016.jpg)
-
-::: {.bs-resource-match data-match-id="linehan-book:distress-tolerance-p016" data-source-id="distress-tolerance-p016" data-match-source="linehan-book" data-candidate-asset="/resources/clean/distress-tolerance/distress-tolerance-worksheet-4-changing-body-chemistry-with-tip-skills-clean.pdf"}
-**Clean Printable Copy**
-
-[![Clean Printable Copy: Changing Body Chemistry with TIPP Skills](/resources/clean/distress-tolerance/distress-tolerance-worksheet-4-changing-body-chemistry-with-tip-skills-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Changing Body Chemistry with TIPP Skills"}](/resources/clean/distress-tolerance/distress-tolerance-worksheet-4-changing-body-chemistry-with-tip-skills-clean.pdf)
-
-[Open Clean Printable Copy](/resources/clean/distress-tolerance/distress-tolerance-worksheet-4-changing-body-chemistry-with-tip-skills-clean.pdf)
-
-<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
-<span class="bs-match-review-status" aria-live="polite"></span>
-:::
-
-<!-- native-resource-content:distress-tolerance-p016:start -->
-
-#### Text Version
-
-Distress tolerance Worksheet 4 (Distress Tolerance Handouts 6-6b)
-
-##### Due Date: Name: Week Starting
-
-Describe the situation you were in when you chose to practice each skill. Rate both your emotional arousal and distress tolerance before and after using the TIP skill. Describe what you actually did. Use the back of this sheet if necessary.
-
-##### Changing My Facial Temperature
-
-Used cold water to change emotions
-
-##### Situation
-
-##### Arousal (0-100) Before: After
-
-##### T
-
-Distress tolerance (0 = I can’t stand it; 100 = I can definitely survive) Before: After:
-
-##### What I did (describe)
-
-##### Intense Exercise
-
-##### Situation
-
-##### Arousal (0-100) Before: After
-
-I Distress tolerance (0 = I can’t stand it; 100 = I can definitely survive) Before: After:
-
-##### What I did (describe)
-
-##### Paced Breathing
-
-##### Situation
-
-##### Arousal (0-100) Before: After
-
-Distress tolerance (0 = I can’t stand it; 100 = I can definitely survive) Before: After:
-
-##### What I did (describe)
-
-##### P
-
-##### Paired Muscle Relaxation
-
-##### Situation
-
-##### Arousal (0-100) Before: After
-
-Distress tolerance (0 = I can’t stand it; 100 = I can definitely survive) Before: After:
-
-##### What I did (describe)
-
-<!-- native-resource-content:distress-tolerance-p016:end -->
-::::
-
-## Exercises {#exercises}
-
-:::: {.bs-practice-resource #resource-distress-tolerance-p015 data-source-id="distress-tolerance-p015"}
-**Progressive Muscle Relaxation: Nose to Toes**
-
-[![Progressive Muscle Relaxation: Nose to Toes](/resources/distress-tolerance/distress-tolerance-p015.jpg){.img-fluid fig-alt="Progressive Muscle Relaxation: Nose to Toes"}](/resources/distress-tolerance/distress-tolerance-p015.jpg)
-
-[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p015.jpg)
-
-
-<!-- native-resource-content:distress-tolerance-p015:start -->
-
-#### Text Version
-
-This exercise moves from the hands down through the body. For each image, gently tighten the named muscles, notice the tension, and then release them completely. Do not tighten hard enough to cause pain or a cramp.
-
-##### Lemonade
-
-Imagine holding a lemon. Squeeze it hard and notice the tightness in your hand, then drop it and feel the hand relax. Repeat with both hands.
-
-##### Lazy Cat
-
-Imagine stretching like a cat: reach your arms forward, raise them overhead, and feel the pull through your shoulders. Let your arms drop and notice the warm, relaxed feeling.
-
-##### Fly on Your Nose
-
-Without using your hands, scrunch your nose and face as though trying to move a fly. Hold briefly, then release and notice your cheeks, mouth, and eyes soften.
-
-##### Turtle Shell
-
-Imagine you are a turtle pulling your head down into your shell. Raise your shoulders and press your head down, hold briefly, and then let your shoulders drop as the danger passes.
-
-##### Baby Elephant
-
-Tighten your stomach as though bracing for an elephant's foot, hold, and release. Then notice the difference between a hard, tight abdomen and a soft one.
-
-##### Mud in Your Toes
-
-Imagine pressing your bare toes deep into mud. Curl your toes and press your feet down, then step out of the puddle, let your toes loosen, and feel your feet relax.
-
-<!-- native-resource-content:distress-tolerance-p015:end -->
-::::
-
-## Reference Materials {#reference-materials}
-
-:::: {.bs-practice-resource #resource-distress-tolerance-p011 data-source-id="distress-tolerance-p011"}
-**Window of Tolerance**
-
-[![Window of Tolerance](/resources/distress-tolerance/distress-tolerance-p011.jpg){.img-fluid fig-alt="Window of Tolerance"}](/resources/distress-tolerance/distress-tolerance-p011.jpg)
-
-[Download / View Handout](/resources/distress-tolerance/distress-tolerance-p011.jpg)
-
-::: {.bs-resource-match data-match-id="php-high-res:distress-tolerance-p011:php-p0126" data-source-id="distress-tolerance-p011" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0126.pdf"}
-**Higher-Resolution Copy**
-
-[![Higher-Resolution Copy: Window of Tolerance](/resources/high-res/php/php-p0126.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Window of Tolerance"}](/resources/high-res/php/php-p0126.pdf)
-
-[Open Higher-Resolution Copy](/resources/high-res/php/php-p0126.pdf)
-
-<button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
-<span class="bs-match-review-status" aria-live="polite"></span>
-:::
-
-<!-- native-resource-content:distress-tolerance-p011:start -->
-
-#### Text Version
-
-Think of the window of tolerance as a river. When the river narrows it becomes fast and unsafe; when it widens it slows down. Inside the window you can feel balanced, calm, relaxed, in control, and able to respond effectively to challenges.
-
-##### Hyperarousal
-
-- Responsiveness increases beyond your workable range.
-- You may feel anxious, angry, or out of control.
-- You may want to fight or run away.
-
-##### Moving Above the Window
-
-As you begin to move outside your window, you may feel agitated, anxious, or angry. You are uncomfortable, but not necessarily out of control yet.
-
-##### Hypoarousal
-
-- Responsiveness decreases beyond your workable range.
-- You may feel emotionally numb, exhausted, or depressed.
-- Your body may feel as though it is shutting down or freezing.
-
-##### Moving Below the Window
-
-You may feel overwhelmed, begin to shut down, or lose track of time. You are uncomfortable, but not necessarily out of control yet.
-
-##### What Changes the Window
-
-Stress and trauma can narrow the window of tolerance. Practices such as meditation, listening to music, and engaging in hobbies can help expand it.
-
-<!-- native-resource-content:distress-tolerance-p011:end -->
-::::
-
-<!-- section-scan-resources:end -->
+[2] A. Zaccaro, A. Piarulli, M. Laurino, E. Garbella, D. Menicucci, B. Neri, and A. Gemignani, "How Breath-Control Can Change Your Life: A Systematic Review on Psycho-Physiological Correlates of Slow Breathing," *Frontiers in Human Neuroscience*, vol. 12, art. 353, 2018, doi: 10.3389/fnhum.2018.00353.
