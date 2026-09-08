@@ -24,8 +24,16 @@ class ToolUiStabilityTests(unittest.TestCase):
         self.assertIn('- assets/skill-progress-bar.css', QUARTO)
         self.assertIn('position: fixed;', PROGRESS_CSS)
         self.assertIn('bottom: 0;', PROGRESS_CSS)
-        self.assertIn('.skill-app.skill-progress-persistent-enabled .skill-app-shell', PROGRESS_CSS)
-        self.assertIn('overflow: visible;', PROGRESS_CSS)
+        self.assertIn('left: 50%;', PROGRESS_CSS)
+        self.assertIn('width: min(72rem, calc(100vw - 2rem));', PROGRESS_CSS)
+        self.assertIn('transform: translateX(-50%);', PROGRESS_CSS)
+        self.assertNotIn('.skill-app.skill-progress-persistent-enabled .skill-app-shell', PROGRESS_CSS)
+
+    def test_persistent_bar_keeps_privacy_reminder(self):
+        self.assertIn('skill-progress-persistent-privacy', PROGRESS_JS)
+        self.assertIn('not sent to or stored on Free Therapy Tools servers', PROGRESS_JS)
+        self.assertIn('Browser autosave stays on this device', PROGRESS_JS)
+        self.assertIn('.skill-progress-persistent-privacy', PROGRESS_CSS)
 
     def test_progressive_reveal_uses_explicit_next(self):
         self.assertIn('data-tool-question-next', QUESTION_JS)
@@ -42,8 +50,9 @@ class ToolUiStabilityTests(unittest.TestCase):
         self.assertIn('font-family: inherit;', QUESTION_CSS)
         self.assertIn('font-size: 1.05rem;', QUESTION_CSS)
         self.assertIn('width: 100%;', QUESTION_CSS)
-        self.assertIn('.skill-app.tool-progressive-enabled > .skill-app-shell', QUESTION_CSS)
-        self.assertIn('max-width: none;', QUESTION_CSS)
+        self.assertIn('.skill-app.tool-progressive-enabled .skill-app-panel', QUESTION_CSS)
+        self.assertNotIn('.skill-app.tool-progressive-enabled > .skill-app-shell', QUESTION_CSS)
+        self.assertNotIn('.skill-app [data-skill-progress-final].skill-progress-persistent', QUESTION_CSS)
 
     def test_avoidance_is_presented_as_one_worked_example(self):
         self.assertIn('tool-single-example', QUESTION_JS)
@@ -53,9 +62,9 @@ class ToolUiStabilityTests(unittest.TestCase):
         self.assertIn('[data-cbt-action="remove"]', QUESTION_JS)
 
     def test_current_assets_are_cache_busted(self):
-        self.assertIn('skill-progress-bar.css?v=20260907-persistent-bar-2', SCRIPTS)
-        self.assertIn('skill-progress-bar.js?v=20260907-persistent-bar-2', SCRIPTS)
-        self.assertIn('tool-question-flow.css?v=20260907-progressive-reveal-5-next', SCRIPTS)
+        self.assertIn('skill-progress-bar.css?v=20260907-persistent-bar-3-restored', SCRIPTS)
+        self.assertIn('skill-progress-bar.js?v=20260907-persistent-bar-3-restored', SCRIPTS)
+        self.assertIn('tool-question-flow.css?v=20260907-progressive-reveal-6-geometry', SCRIPTS)
         self.assertIn('tool-question-flow.js?v=20260907-progressive-reveal-5-next', SCRIPTS)
 
 
