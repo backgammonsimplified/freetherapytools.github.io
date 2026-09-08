@@ -89,8 +89,8 @@ Temperature and Intense Exercise can affect heart rate and circulation. Use only
     },
     {
       id: "progressive-muscle-relaxation",
-      title: "P - Progressive / Paired Muscle Relaxation",
-      prompt: "Which muscle groups did you tense and release? What changed when you let go?",
+      title: "P - Progressive Muscle Relaxation",
+      prompt: "Which muscle groups did you gently tense and release? If you paired the release with your exhale, what did you notice?",
       href: "/learn/distress-tolerance/progressive-muscle-relaxation.html"
     }
   ];
