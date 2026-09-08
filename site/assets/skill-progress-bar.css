@@ -6,12 +6,6 @@
   padding-bottom: calc(var(--skill-progress-bar-height) + env(safe-area-inset-bottom));
 }
 
-/* A fixed descendant can otherwise be clipped by the rounded tool shell after
-   a clean render. Keep the persistent bar visible at the viewport edge. */
-.skill-app.skill-progress-persistent-enabled .skill-app-shell {
-  overflow: visible;
-}
-
 .skill-progress-title-row {
   display: flex;
   align-items: center;
@@ -59,9 +53,20 @@
 }
 
 .skill-progress-persistent-label {
+  display: grid;
+  gap: .12rem;
   font-size: .95rem;
   font-weight: 800;
   line-height: 1.2;
+}
+
+.skill-progress-persistent-privacy {
+  display: block;
+  max-width: 22rem;
+  color: #6b625c;
+  font-size: .72rem;
+  font-weight: 500;
+  line-height: 1.25;
 }
 
 .skill-progress-bar-actions {
@@ -121,6 +126,11 @@
 
   .skill-progress-persistent-label {
     font-size: .82rem;
+  }
+
+  .skill-progress-persistent-privacy {
+    max-width: none;
+    font-size: .68rem;
   }
 
   .skill-progress-bar-actions {
