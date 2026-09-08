@@ -15,7 +15,7 @@ TIPP_SUBPAGES = (
     ("Intense Exercise", "learn/distress-tolerance/intense-exercise.qmd"),
     ("Paced Breathing", "learn/distress-tolerance/paced-breathing.qmd"),
     (
-        "Progressive / Paired Muscle Relaxation",
+        "Progressive Muscle Relaxation",
         "learn/distress-tolerance/progressive-muscle-relaxation.qmd",
     ),
 )
