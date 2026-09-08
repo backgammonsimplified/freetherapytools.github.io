@@ -24,10 +24,14 @@ class ToolUiStabilityTests(unittest.TestCase):
         self.assertIn('- assets/skill-progress-bar.css', QUARTO)
         self.assertIn('position: fixed;', PROGRESS_CSS)
         self.assertIn('bottom: 0;', PROGRESS_CSS)
-        self.assertIn('left: 50%;', PROGRESS_CSS)
-        self.assertIn('width: min(72rem, calc(100vw - 2rem));', PROGRESS_CSS)
-        self.assertIn('transform: translateX(-50%);', PROGRESS_CSS)
-        self.assertNotIn('.skill-app.skill-progress-persistent-enabled .skill-app-shell', PROGRESS_CSS)
+        self.assertIn('left: var(--skill-progress-bar-left', PROGRESS_CSS)
+        self.assertIn('width: var(--skill-progress-bar-width', PROGRESS_CSS)
+        self.assertIn('transform: none;', PROGRESS_CSS)
+        self.assertNotIn('left: 50%;', PROGRESS_CSS)
+        self.assertNotIn('transform: translateX(-50%);', PROGRESS_CSS)
+        self.assertIn('getBoundingClientRect()', PROGRESS_JS)
+        self.assertIn('--skill-progress-bar-left', PROGRESS_JS)
+        self.assertIn('--skill-progress-bar-width', PROGRESS_JS)
 
     def test_persistent_bar_keeps_simple_privacy_and_resume_guidance(self):
         self.assertIn('skill-progress-persistent-privacy', PROGRESS_JS)
@@ -66,8 +70,8 @@ class ToolUiStabilityTests(unittest.TestCase):
         self.assertIn('[data-cbt-action="remove"]', QUESTION_JS)
 
     def test_current_assets_are_cache_busted(self):
-        self.assertIn('skill-progress-bar.css?v=20260907-persistent-bar-3-restored', SCRIPTS)
-        self.assertIn('skill-progress-bar.js?v=20260907-persistent-bar-5-simple-guidance', SCRIPTS)
+        self.assertIn('skill-progress-bar.css?v=20260908-persistent-bar-6-shell-aligned', SCRIPTS)
+        self.assertIn('skill-progress-bar.js?v=20260908-persistent-bar-6-shell-aligned', SCRIPTS)
         self.assertIn('tool-question-flow.css?v=20260907-progressive-reveal-6-geometry', SCRIPTS)
         self.assertIn('tool-question-flow.js?v=20260907-progressive-reveal-5-next', SCRIPTS)
 
