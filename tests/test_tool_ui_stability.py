@@ -5,7 +5,9 @@ ROOT = Path(__file__).resolve().parents[1]
 QUESTION_JS = (ROOT / "site/assets/tool-question-flow.js").read_text(encoding="utf-8")
 QUESTION_CSS = (ROOT / "site/assets/tool-question-flow.css").read_text(encoding="utf-8")
 PROGRESS_JS = (ROOT / "site/assets/skill-progress-bar.js").read_text(encoding="utf-8")
+PROGRESS_CSS = (ROOT / "site/assets/skill-progress-bar.css").read_text(encoding="utf-8")
 SCRIPTS = (ROOT / "site/includes/bs-scripts.html").read_text(encoding="utf-8")
+QUARTO = (ROOT / "site/_quarto.yml").read_text(encoding="utf-8")
 
 
 class ToolUiStabilityTests(unittest.TestCase):
@@ -17,12 +19,24 @@ class ToolUiStabilityTests(unittest.TestCase):
         self.assertNotIn('Question ${', QUESTION_JS)
         self.assertIn('data-skill-progress-final', PROGRESS_JS)
 
-    def test_progressive_reveal_keeps_previous_answers_visible(self):
+    def test_persistent_bar_assets_survive_clean_quarto_render(self):
+        self.assertIn('- assets/skill-progress-bar.js', QUARTO)
+        self.assertIn('- assets/skill-progress-bar.css', QUARTO)
+        self.assertIn('position: fixed;', PROGRESS_CSS)
+        self.assertIn('bottom: 0;', PROGRESS_CSS)
+        self.assertIn('.skill-app.skill-progress-persistent-enabled .skill-app-shell', PROGRESS_CSS)
+        self.assertIn('overflow: visible;', PROGRESS_CSS)
+
+    def test_progressive_reveal_uses_explicit_next(self):
+        self.assertIn('data-tool-question-next', QUESTION_JS)
+        self.assertIn('Next</button>', QUESTION_JS)
+        self.assertIn('revealNext', QUESTION_JS)
         self.assertIn('is-answered', QUESTION_JS)
         self.assertIn('is-current', QUESTION_JS)
         self.assertIn('is-entering', QUESTION_JS)
         self.assertIn('Show all questions', QUESTION_JS)
         self.assertIn('scrollIntoView({ behavior: "smooth"', QUESTION_JS)
+        self.assertNotIn('setTimeout(() => {\n        if (!blockAnswered(block))', QUESTION_JS)
 
     def test_standard_text_controls_use_readable_full_width_typography(self):
         self.assertIn('font-family: inherit;', QUESTION_CSS)
@@ -39,8 +53,10 @@ class ToolUiStabilityTests(unittest.TestCase):
         self.assertIn('[data-cbt-action="remove"]', QUESTION_JS)
 
     def test_current_assets_are_cache_busted(self):
-        self.assertIn('tool-question-flow.css?v=20260907-progressive-reveal-4', SCRIPTS)
-        self.assertIn('tool-question-flow.js?v=20260907-progressive-reveal-4', SCRIPTS)
+        self.assertIn('skill-progress-bar.css?v=20260907-persistent-bar-2', SCRIPTS)
+        self.assertIn('skill-progress-bar.js?v=20260907-persistent-bar-2', SCRIPTS)
+        self.assertIn('tool-question-flow.css?v=20260907-progressive-reveal-5-next', SCRIPTS)
+        self.assertIn('tool-question-flow.js?v=20260907-progressive-reveal-5-next', SCRIPTS)
 
 
 if __name__ == "__main__":
