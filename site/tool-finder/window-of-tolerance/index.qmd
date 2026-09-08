@@ -3,6 +3,7 @@ title: "Window of Tolerance Tool"
 description: "Identify what tends to narrow your window of tolerance and what helps widen it, then print a personal plan."
 sidebar: tool-finder
 page-layout: full
+body-classes: window-of-tolerance-page
 toc: false
 execute:
   enabled: false
