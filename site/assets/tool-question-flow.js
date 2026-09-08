@@ -1,14 +1,14 @@
 (function (global) {
   "use strict";
 
-  const VERSION = "20260907-progressive-reveal-3";
+  const VERSION = "20260907-progressive-reveal-4";
   const CHATGPT_URL = "https://chatgpt.com/";
   const stateByRoot = new WeakMap();
   const scheduled = new WeakSet();
 
-  // These tools already have an intentionally guided, visual, repeated-item, or
-  // decision-tree interaction. Keep their existing interaction and only remove
-  // the duplicate app-level title/subtitle.
+  // Purpose-built tools keep their existing interaction. This layer only
+  // removes their repeated app-level heading/intro; it does not restructure
+  // their controls.
   const PROGRESSIVE_EXCLUSIONS = new Set([
     "box-breathing",
     "grounding",
@@ -31,7 +31,13 @@
     "gratitude-journal"
   ]);
 
+  // Shared infrastructure is outside the progressive-question contract. In
+  // particular, never wrap, hide, or otherwise mutate the progress/save UI.
   const UTILITY_ANCESTORS = [
+    "[data-skill-progress-final]",
+    ".skill-progress-persistent",
+    ".skill-progress-title-row",
+    ".skill-progress-content",
     ".values-map-toolbar",
     ".skill-app-inline-fields",
     ".box-breathing-settings",
@@ -68,24 +74,32 @@
       .replaceAll("'", "&#039;");
   }
 
+  // Quarto already supplies the public H1 and description. Remove only the
+  // duplicated app heading/intro. Never hide the whole header: the progress
+  // component may put a live control there later.
   function simplifyAppHeader(shell) {
     const header = shell.querySelector(":scope > .skill-app-header");
     if (!header || header.dataset.toolHeaderSimplified === VERSION) return;
     header.dataset.toolHeaderSimplified = VERSION;
 
-    const heading = header.querySelector(":scope > h2");
-    if (heading) heading.hidden = true;
-    header.querySelectorAll(":scope > p").forEach((paragraph) => { paragraph.hidden = true; });
+    const directHeading = header.querySelector(":scope > h2");
+    const progressHeading = header.querySelector(":scope > .skill-progress-title-row > h2");
+    (directHeading || progressHeading)?.remove();
 
-    // Some headers contain useful controls/progress in addition to the repeated
-    // title. Keep those children, otherwise remove the empty header entirely.
-    const usefulChildren = [...header.children].filter((child) => !child.hidden);
-    if (!usefulChildren.length) header.hidden = true;
+    const intro = header.querySelector(":scope > p");
+    intro?.remove();
+
+    header.querySelectorAll(":scope > .skill-progress-title-row").forEach((row) => {
+      if (!row.children.length) row.remove();
+    });
+
+    if (!header.children.length && !cleanText(header.textContent)) header.remove();
     else header.classList.add("tool-header-functional-only");
   }
 
   function prepareAvoidance(root) {
     if (toolId(root) !== "avoidance") return true;
+    root.classList.add("tool-single-example");
 
     const add = root.querySelector('[data-cbt-action="add"]');
     const items = [...root.querySelectorAll(".cbt-item")];
@@ -105,9 +119,13 @@
       if (summary) summary.hidden = true;
     });
 
-    // The planner is now deliberately about one example. Older additional
-    // items remain in saved state for backward compatibility but are not shown.
-    root.querySelectorAll('[data-cbt-action="add"], [data-cbt-action="practice"], [data-cbt-action="remove"]').forEach((button) => { button.hidden = true; });
+    // The public planner is deliberately one worked example. Additional items
+    // from older saves remain in state for backward compatibility but are not
+    // exposed as another-situation or practice-entry UI.
+    root.querySelectorAll('[data-cbt-action="add"], [data-cbt-action="practice"], [data-cbt-action="remove"]').forEach((button) => {
+      button.hidden = true;
+    });
+
     const primary = root.querySelector(".tool-avoidance-primary");
     if (primary) {
       primary.querySelectorAll(":scope > h3").forEach((heading) => {
@@ -154,6 +172,9 @@
   }
 
   function safeQuestionBlock(control, panel) {
+    const existing = control.closest(".tool-question-step");
+    if (existing && panel.contains(existing)) return existing;
+
     const preset = control.closest(".cbt-field, .case-map-field, .five-factor-card, .thought-record-steps > li");
     if (preset && panel.contains(preset)) return preset;
 
@@ -173,6 +194,9 @@
     if (cursor !== control) return null;
     nodes.push(control);
 
+    // A lightweight wrapper is only used when the original tool has no natural
+    // field wrapper. It stays inside the original panel and contains only the
+    // existing label/help/control nodes; no tool state or progress DOM moves.
     const wrapper = document.createElement("div");
     wrapper.className = "tool-question-step";
     label.before(wrapper);
@@ -208,8 +232,7 @@
   }
 
   function blockAnswered(block) {
-    const controls = blockControls(block);
-    return controls.some((control) => cleanText(control.value));
+    return blockControls(block).some((control) => cleanText(control.value));
   }
 
   function collectQuestionBlocks(panel) {
@@ -235,16 +258,21 @@
     const blocks = collectQuestionBlocks(panel);
     if (blocks.length < 2) return;
 
+    root.classList.add("tool-progressive-enabled");
+
     const savedMax = blocks.reduce((max, block, index) => blockAnswered(block) ? index : max, -1);
     const previous = stateByRoot.get(root);
     const state = previous || { revealed: Math.min(blocks.length, Math.max(1, savedMax + 2)), showAll: false, timers: new WeakMap() };
     state.revealed = Math.max(state.revealed, Math.min(blocks.length, savedMax + 2));
     stateByRoot.set(root, state);
 
-    const controls = document.createElement("div");
-    controls.className = "tool-progressive-controls";
-    controls.innerHTML = '<button type="button" class="secondary" data-tool-show-all>Show all questions</button>';
-    blocks[0].before(controls);
+    let controls = panel.querySelector(":scope > .tool-progressive-controls");
+    if (!controls) {
+      controls = document.createElement("div");
+      controls.className = "tool-progressive-controls";
+      controls.innerHTML = '<button type="button" class="secondary" data-tool-show-all>Show all questions</button>';
+      blocks[0].before(controls);
+    }
 
     const apply = (animateIndex = -1) => {
       blocks.forEach((block, index) => {
@@ -261,7 +289,8 @@
           global.setTimeout(() => block.classList.remove("is-entering"), 700);
         }
       });
-      controls.querySelector("[data-tool-show-all]").textContent = state.showAll ? "Show one question at a time" : "Show all questions";
+      const toggle = controls.querySelector("[data-tool-show-all]");
+      if (toggle) toggle.textContent = state.showAll ? "Return to progressive questions" : "Show all questions";
     };
 
     const revealAfter = (block) => {
@@ -277,7 +306,7 @@
         state.revealed = Math.max(state.revealed, index + 2);
         apply(index + 1);
         blocks[index + 1]?.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      }, 450);
+      }, 600);
       state.timers.set(block, timer);
       apply();
     };
@@ -290,7 +319,7 @@
       const block = event.target.closest(".tool-question-step");
       if (block) revealAfter(block);
     });
-    controls.querySelector("[data-tool-show-all]").addEventListener("click", () => {
+    controls.querySelector("[data-tool-show-all]")?.addEventListener("click", () => {
       state.showAll = !state.showAll;
       apply();
     });
