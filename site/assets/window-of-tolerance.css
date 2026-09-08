@@ -131,6 +131,10 @@
     grid-template-columns: minmax(0, 1fr) minmax(7.5rem, auto);
   }
 
+  .wot-row input {
+    grid-column: 1 / -1;
+  }
+
   .wot-rating-label {
     grid-column: 1;
   }
