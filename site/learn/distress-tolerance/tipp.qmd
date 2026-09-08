@@ -22,6 +22,10 @@ TIPP is a set of body-based distress-tolerance skills for moments when emotional
 
 TIPP is especially useful when you notice very high activation, strong urges to act impulsively, or a sense that your body is driving the reaction. After the intensity comes down, you can decide what other skill fits the situation.
 
+## Video overview {#video-overview}
+
+{{< video https://www.youtube.com/watch?v=UuvH_j9O0f4 >}}
+
 ## TIPP at a glance {#tipp-at-a-glance}
 
 | Skill | What you are trying to change | Learn more |
