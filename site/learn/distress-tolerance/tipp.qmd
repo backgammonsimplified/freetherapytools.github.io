@@ -65,9 +65,7 @@ Use the practice tool to record the situation, your arousal before and after, ho
 
 [Download the original TIPP practice worksheet (.docx)](/resources/original/distress-tolerance/tipp-practice-worksheet.docx){.btn .btn-outline-primary}
 
-[View the DOCX with Google Docs Viewer](https://docs.google.com/gview?url=https%3A%2F%2Ffreetherapytools.github.io%2Fresources%2Foriginal%2Fdistress-tolerance%2Ftipp-practice-worksheet.docx){.btn .btn-outline-secondary target="_blank" rel="noopener"}
-
-To edit the DOCX in Google Docs, download it, upload it to Google Drive, then choose **Open with Google Docs**. Google Docs Viewer is useful for viewing the public file but does not provide the same editing workflow as a document stored in your Drive.
+Every DOCX resource on Free Therapy Tools automatically gets an **Open in Google Docs** option beside its DOCX link. This opens the public file through Google's document viewer. To edit a personal copy, save or upload the DOCX to Google Drive and open it with Google Docs.
 
 ::: {.callout-caution title="Physical safety"}
 The Temperature and Intense Exercise parts of TIPP can affect heart rate and circulation. Use only approaches that are safe for your body. If you have a heart or circulation condition, a very low resting heart rate, significant cold sensitivity, take medication that affects heart rate, or have another medical concern, ask a qualified health professional before using these parts of TIPP. Stop if you feel faint, have chest pain, or feel physically unwell.
