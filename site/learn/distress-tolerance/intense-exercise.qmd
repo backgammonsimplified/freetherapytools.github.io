@@ -1,0 +1,67 @@
+---
+title: "TIPP: Intense Exercise"
+description: "Use a short, safe burst of vigorous movement to reduce very high physical arousal."
+sidebar: learn
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+[Back to TIPP](tipp.qmd)
+
+The **Intense Exercise** part of TIPP is for moments when emotion has strongly activated the body. A short period of vigorous movement can use some of that physical energy and help the body shift out of a highly activated state. [1]
+
+## When it can fit {#when-it-can-fit}
+
+This skill may be useful when you feel restless, keyed up, shaky, angry, panicky, or full of physical energy that is making it harder to slow down and choose what to do next.
+
+The aim is not to exercise until you are exhausted. It is to create a brief, safe change in your body's level of activation.
+
+## A practical version {#practice}
+
+Choose an activity that is safe for your body and available where you are. Possibilities include:
+
+- fast walking;
+- jogging or running;
+- stairs;
+- jumping or jumping jacks;
+- dancing;
+- a short body-weight movement sequence;
+- basketball or another active sport;
+- another vigorous movement that you already know is safe for you.
+
+Use the activity for a short period, then stop and reassess. Notice whether your breathing, muscle tension, restlessness, emotion intensity, or urges have changed.
+
+If very intense exercise is not appropriate for your body, use a safer level of movement. The skill is about shifting activation, not meeting a fitness target.
+
+::: {.callout-caution title="Physical safety"}
+Intense exercise raises heart rate and can worsen some injuries or medical conditions. Use only movement that is safe for your current health and ability. Do not push through chest pain, dizziness, injury pain, or unusual shortness of breath. If a medical condition makes vigorous exercise uncertain, ask a qualified health professional what level of activity is appropriate for you.
+:::
+
+## What to do after the movement {#afterward}
+
+Pause and ask:
+
+- Is the physical urge to act immediately lower, higher, or unchanged?
+- Can I slow my breathing now?
+- Would Paced Breathing or Progressive Muscle Relaxation help with the remaining activation?
+- What is the next effective action?
+
+Sometimes this skill creates enough of a shift that another distress-tolerance or mindfulness skill becomes usable.
+
+## Find demonstrations and related resources {#resources}
+
+[Search YouTube for DBT TIPP Intense Exercise](https://www.youtube.com/results?search_query=DBT+TIPP+intense+exercise){.btn .btn-outline-primary target="_blank" rel="noopener"}
+
+[Search Google for TIPP Intense Exercise](https://www.google.com/search?q=DBT+TIPP+intense+exercise){.btn .btn-outline-secondary target="_blank" rel="noopener"}
+
+[Browse Insight Timer techniques](https://insighttimer.com/techniques){.btn .btn-outline-secondary target="_blank" rel="noopener"}
+
+For Insight Timer, try searching for **mindful movement**, **walking meditation**, **somatic movement**, or **movement for stress**. These are better suited to guided follow-up practice than to demonstrating vigorous exercise itself.
+
+## References {#references}
+
+[1] M. M. Linehan, *DBT Skills Training Handouts and Worksheets*, 2nd ed. New York, NY, USA: Guilford Press, 2015.
