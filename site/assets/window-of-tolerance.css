@@ -159,12 +159,13 @@
   .quarto-secondary-nav,
   .page-navigation,
   .nav-footer,
+  .quarto-title-block,
+  #title-block-header,
+  .window-of-tolerance-page main.content > :not(#window-of-tolerance-app),
   .wot-shell > .skill-app-header,
   .wot-grid,
   .wot-plan-panel,
-  .wot-footer,
-  .quarto-title-block,
-  #title-block-header {
+  .wot-footer {
     display: none !important;
   }
 
@@ -175,6 +176,14 @@
     display: block !important;
     max-width: none !important;
     width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #window-of-tolerance-app,
+  .wot-shell {
+    display: block !important;
+    max-width: none !important;
     margin: 0 !important;
     padding: 0 !important;
   }
