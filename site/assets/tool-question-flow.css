@@ -26,8 +26,7 @@
   min-height: 7.5rem;
 }
 
-/* Standard reflection tools should use the page's available content width.
-   Purpose-built tools excluded by the JS keep their existing dimensions. */
+/* Standard reflection tools use the page's available content width. */
 .skill-app.tool-progressive-enabled,
 .skill-app.tool-progressive-enabled > .skill-app-shell,
 .skill-app.tool-single-example,
@@ -157,6 +156,21 @@
 
 .tool-question-help a {
   font-weight: 600;
+}
+
+/* Next appears only after the current question contains an answer. */
+.tool-question-next-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.8rem;
+}
+
+.tool-question-next-row button {
+  min-width: 7rem;
+}
+
+.tool-question-next-row button[hidden] {
+  display: none !important;
 }
 
 /* Avoidance is intentionally one worked example, not a repeatable list. */
