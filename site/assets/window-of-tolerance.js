@@ -129,8 +129,8 @@
       <section><h2>When I notice my window getting narrow</h2><p>Reduce or plan around the highest-impact stressors where possible. Start with the high-effectiveness supports above, then use what fits the situation and what my nervous system needs that day.</p></section>`;
   }
 
-  function bindRows() {
-    root.querySelectorAll("[data-wot-row]").forEach((rowElement) => {
+  function bindRows(scope = root) {
+    scope.querySelectorAll("[data-wot-row]").forEach((rowElement) => {
       const kind = rowElement.dataset.kind;
       const index = Number(rowElement.dataset.index);
       const text = rowElement.querySelector("[data-wot-text]");
@@ -161,7 +161,7 @@
     const host = root.querySelector(`[data-wot-rows="${kind}"]`);
     if (!host) return;
     host.innerHTML = state[kind].map((row, index) => rowMarkup(kind, row, index)).join("");
-    bindRows();
+    bindRows(host);
   }
 
   function render() {
@@ -187,7 +187,7 @@
       <section class="wot-print-sheet" data-wot-print-sheet aria-hidden="true"></section>
     </div>`;
 
-    bindRows();
+    bindRows(root);
     updatePlan();
 
     root.querySelectorAll("[data-wot-add]").forEach((button) => button.addEventListener("click", () => {
