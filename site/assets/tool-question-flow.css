@@ -1,9 +1,46 @@
-.skill-app-header[hidden] {
-  display: none !important;
+.skill-app-header.tool-header-functional-only {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
-.skill-app-header.tool-header-functional-only {
-  padding-top: 0;
+/* Base contract for text-entry controls. Keep form text at normal reading size
+   and let controls use the full width available to their tool. */
+.skill-app :is(
+  textarea,
+  input[type="text"],
+  input[type="search"],
+  input[type="number"],
+  input[type="date"],
+  input[type="datetime-local"],
+  select
+) {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  font-family: inherit;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.skill-app textarea {
+  min-height: 7.5rem;
+}
+
+/* Standard reflection tools should use the page's available content width.
+   Purpose-built tools excluded by the JS keep their existing dimensions. */
+.skill-app.tool-progressive-enabled,
+.skill-app.tool-progressive-enabled > .skill-app-shell,
+.skill-app.tool-single-example,
+.skill-app.tool-single-example > .skill-app-shell {
+  width: 100%;
+  max-width: none;
+}
+
+.skill-app.tool-progressive-enabled .skill-app-panel,
+.skill-app.tool-single-example .skill-app-panel {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
 }
 
 .tool-progressive-controls {
@@ -13,6 +50,8 @@
 }
 
 .tool-progressive-controls button {
+  min-height: 2.35rem;
+  padding: 0.4rem 0.7rem;
   font-size: 0.9rem;
 }
 
@@ -23,10 +62,11 @@
   margin: 0 0 1.1rem;
   padding: 0;
   transition:
-    max-height 0.55s ease,
-    opacity 0.4s ease,
-    transform 0.5s ease,
+    max-height 0.6s ease,
+    opacity 0.45s ease,
+    transform 0.55s ease,
     margin 0.5s ease,
+    padding 0.35s ease,
     background-color 0.35s ease,
     color 0.35s ease;
   transform-origin: top;
@@ -36,6 +76,8 @@
   max-height: 0;
   margin-top: 0;
   margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   overflow: hidden;
   opacity: 0;
   transform: translateY(-0.5rem);
@@ -51,13 +93,13 @@
 }
 
 .tool-question-step.is-entering {
-  animation: tool-question-enter 0.65s ease both;
+  animation: tool-question-enter 0.7s ease both;
 }
 
 @keyframes tool-question-enter {
   from {
     opacity: 0;
-    transform: translateY(0.9rem);
+    transform: translateY(1rem);
   }
   to {
     opacity: 1;
@@ -65,9 +107,10 @@
   }
 }
 
-/* Completed answers stay visible above the active question, but recede gently. */
+/* Completed answers stay visible above the active question and recede gently.
+   They remain editable; focus restores the normal active appearance. */
 .tool-question-step.is-answered:not(:focus-within):not(.is-current) {
-  padding: 0.8rem;
+  padding: 0.8rem 0.95rem;
   border-radius: 0.45rem;
   background: #f1f2f2;
   color: #626b70;
@@ -79,17 +122,19 @@
   color: #4f575b;
 }
 
-.tool-question-step :is(textarea, input[type="text"], input[type="number"], select) {
-  box-sizing: border-box;
+.tool-question-step > :is(textarea, input[type="text"], input[type="number"], select),
+.tool-question-step .cbt-field :is(textarea, input),
+.tool-question-step.case-map-field textarea,
+.tool-question-step.five-factor-card textarea {
   width: 100%;
   max-width: none;
 }
 
 .tool-question-help {
-  margin-top: 0.45rem;
-  padding-top: 0.35rem;
+  margin-top: 0.5rem;
+  padding-top: 0.4rem;
   border-top: 1px solid #e2e4e5;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .tool-question-help summary {
@@ -117,10 +162,12 @@
 /* Avoidance is intentionally one worked example, not a repeatable list. */
 .skill-app[data-cbt-app="avoidance"] .cbt-fields {
   display: block;
+  width: 100%;
 }
 
 .skill-app[data-cbt-app="avoidance"] .cbt-item.tool-avoidance-primary {
   display: block;
+  width: 100%;
   margin: 0;
   padding: 0;
   border: 0;
@@ -147,10 +194,23 @@
   max-width: none;
 }
 
+/* The save/export bar is protected infrastructure. Progressive reveal must not
+   change its positioning, visibility, sizing, or internal layout. */
+.skill-app [data-skill-progress-final].skill-progress-persistent {
+  max-width: none;
+}
+
+@media (max-width: 700px) {
+  .skill-app :is(textarea, input[type="text"], input[type="search"], input[type="number"], select) {
+    font-size: 1rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .tool-question-step {
     transition: none;
   }
+
   .tool-question-step.is-entering {
     animation: none;
   }
