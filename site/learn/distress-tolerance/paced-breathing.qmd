@@ -1,0 +1,74 @@
+---
+title: "TIPP: Paced Breathing"
+description: "Slow the breath and lengthen the exhale to reduce high physiological arousal."
+sidebar: learn
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+toc-depth: 3
+execute:
+  enabled: false
+---
+
+[Back to TIPP](tipp.qmd)
+
+The **Paced Breathing** part of TIPP slows the breathing rhythm and gives a little more time to the exhale. This can help shift the body away from very high arousal and make it easier to use other skills. [1] Slow breathing has also been studied for its effects on autonomic regulation, heart-rate variability, and subjective relaxation. [2]
+
+## A simple starting pace {#starting-pace}
+
+A common starting point is about **five or six breaths per minute**. [1]
+
+Try this:
+
+1. Sit or lie in a position where your breathing can move comfortably.
+2. Let the breath move into the belly rather than forcing a very large breath into the chest.
+3. Breathe in gently for about **4 counts**.
+4. Breathe out slowly for about **6 counts**.
+5. Repeat for several breaths and notice what changes.
+
+The exact count is not the important part. You can use 3 in and 4 out, 4 in and 5 out, 5 in and 7 out, or another pace that feels comfortable. The main ideas are to **slow down** and let the **exhale last a little longer than the inhale**. [1]
+
+## Do not force the breath {#do-not-force}
+
+Paced breathing should not feel like a contest to take the biggest or slowest breath possible. Breathing too deeply or too forcefully can make some people lightheaded or more anxious.
+
+If you become uncomfortable:
+
+- make the breath smaller and easier;
+- shorten the count;
+- return to normal breathing for a moment;
+- keep the exhale gentle rather than pushing all the air out.
+
+You do not need to hold your breath between the inhale and exhale unless a specific exercise you have chosen calls for it and it feels comfortable.
+
+## Two-minute guided practice {#guided-practice}
+
+For the next several breaths:
+
+- notice your belly move as you breathe in;
+- count **1, 2, 3, 4** on the inhale;
+- count **1, 2, 3, 4, 5, 6** on the exhale;
+- let your shoulders soften a little on each out-breath;
+- if your attention wanders, return to the count without judging yourself.
+
+After a minute or two, stop counting and check your arousal. You can continue if the pace feels helpful.
+
+## Pair it with the next P {#pair-with-relaxation}
+
+Paced Breathing combines naturally with [Progressive / Paired Muscle Relaxation](progressive-muscle-relaxation.qmd). You can tense a muscle group gently on the inhale, then release it as you breathe out.
+
+## Guided audio and video resources {#resources}
+
+[Browse Insight Timer breathing meditations](https://insighttimer.com/meditation-topics/breathing_meditation){.btn .btn-outline-primary target="_blank" rel="noopener"}
+
+[Search YouTube for paced breathing 5 to 6 breaths per minute](https://www.youtube.com/results?search_query=paced+breathing+5+to+6+breaths+per+minute){.btn .btn-outline-primary target="_blank" rel="noopener"}
+
+[Search Google for paced breathing](https://www.google.com/search?q=paced+breathing+5+to+6+breaths+per+minute){.btn .btn-outline-secondary target="_blank" rel="noopener"}
+
+On Insight Timer, useful search terms include **paced breathing**, **coherent breathing**, **resonant breathing**, and **extended exhale breathing**.
+
+## References {#references}
+
+[1] M. M. Linehan, *DBT Skills Training Handouts and Worksheets*, 2nd ed. New York, NY, USA: Guilford Press, 2015.
+
+[2] A. Zaccaro, A. Piarulli, M. Laurino, E. Garbella, D. Menicucci, B. Neri, and A. Gemignani, "How Breath-Control Can Change Your Life: A Systematic Review on Psycho-Physiological Correlates of Slow Breathing," *Frontiers in Human Neuroscience*, vol. 12, art. 353, 2018, doi: 10.3389/fnhum.2018.00353.
