@@ -6,6 +6,12 @@
   padding-bottom: calc(var(--skill-progress-bar-height) + env(safe-area-inset-bottom));
 }
 
+/* A fixed descendant can otherwise be clipped by the rounded tool shell after
+   a clean render. Keep the persistent bar visible at the viewport edge. */
+.skill-app.skill-progress-persistent-enabled .skill-app-shell {
+  overflow: visible;
+}
+
 .skill-progress-title-row {
   display: flex;
   align-items: center;
