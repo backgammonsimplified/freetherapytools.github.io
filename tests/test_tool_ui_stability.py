@@ -29,12 +29,14 @@ class ToolUiStabilityTests(unittest.TestCase):
         self.assertIn('transform: translateX(-50%);', PROGRESS_CSS)
         self.assertNotIn('.skill-app.skill-progress-persistent-enabled .skill-app-shell', PROGRESS_CSS)
 
-    def test_persistent_bar_keeps_privacy_reminder(self):
+    def test_persistent_bar_keeps_simple_privacy_and_resume_guidance(self):
         self.assertIn('skill-progress-persistent-privacy', PROGRESS_JS)
-        self.assertIn('Static site hosted on GitHub Pages', PROGRESS_JS)
-        self.assertIn('no Free Therapy Tools application server or database receiving your entries', PROGRESS_JS)
-        self.assertIn('do not add analytics, tracking scripts, or cookies', PROGRESS_JS)
-        self.assertIn('Browser autosave stays on this device', PROGRESS_JS)
+        self.assertIn('Your entries stay on this device', PROGRESS_JS)
+        self.assertIn('static GitHub Pages site', PROGRESS_JS)
+        self.assertIn('no app server or database for entries', PROGRESS_JS)
+        self.assertIn('no analytics or tracking cookies in the site code', PROGRESS_JS)
+        self.assertIn('Save progress downloads a .md text file', PROGRESS_JS)
+        self.assertIn('use Open previous progress to select it later', PROGRESS_JS)
         self.assertIn('.skill-progress-persistent-privacy', PROGRESS_CSS)
 
     def test_progressive_reveal_uses_explicit_next(self):
@@ -65,7 +67,7 @@ class ToolUiStabilityTests(unittest.TestCase):
 
     def test_current_assets_are_cache_busted(self):
         self.assertIn('skill-progress-bar.css?v=20260907-persistent-bar-3-restored', SCRIPTS)
-        self.assertIn('skill-progress-bar.js?v=20260907-persistent-bar-4-privacy', SCRIPTS)
+        self.assertIn('skill-progress-bar.js?v=20260907-persistent-bar-5-simple-guidance', SCRIPTS)
         self.assertIn('tool-question-flow.css?v=20260907-progressive-reveal-6-geometry', SCRIPTS)
         self.assertIn('tool-question-flow.js?v=20260907-progressive-reveal-5-next', SCRIPTS)
 
