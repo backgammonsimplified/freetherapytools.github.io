@@ -52,11 +52,27 @@ Pause and ask:
 
 Sometimes this skill creates enough of a shift that another distress-tolerance or mindfulness skill becomes usable.
 
-## Find demonstrations and related resources {#resources}
+## Find short workout examples {#resources}
 
-[Search YouTube for DBT TIPP Intense Exercise](https://www.youtube.com/results?search_query=DBT+TIPP+intense+exercise){.btn .btn-outline-primary target="_blank" rel="noopener"}
+[Search YouTube for "5 minute intense bodyweight workout"](https://www.youtube.com/results?search_query=5+minute+intense+bodyweight+workout){.btn .btn-outline-primary target="_blank" rel="noopener"}
 
-[Search Google for TIPP Intense Exercise](https://www.google.com/search?q=DBT+TIPP+intense+exercise){.btn .btn-outline-secondary target="_blank" rel="noopener"}
+[Search Google for "5 minute intense bodyweight workout"](https://www.google.com/search?q=5+minute+intense+bodyweight+workout){.btn .btn-outline-secondary target="_blank" rel="noopener"}
+
+::: {.callout-note title="Examples, not endorsements"}
+The videos below are examples of short bodyweight workouts, not endorsements. Free Therapy Tools has not reviewed every instruction or claim in these videos. Choose an option that fits your current body, health, and fitness level, and stop if you feel pain, dizziness, unusual shortness of breath, or feel physically unwell.
+:::
+
+**More approachable if your current fitness is lower:**
+
+[Example bodyweight workout](https://www.youtube.com/watch?v=R0mMyV5OtcM){.btn .btn-outline-primary target="_blank" rel="noopener"}
+
+**A bit more intense:**
+
+[Example 1](https://www.youtube.com/watch?v=BR0jT6JxH-o){.btn .btn-outline-primary target="_blank" rel="noopener"}
+
+[Example 2](https://www.youtube.com/watch?v=ZCcX2Egirp4){.btn .btn-outline-primary target="_blank" rel="noopener"}
+
+[Example 3](https://www.youtube.com/watch?v=OFibSNpw2hE){.btn .btn-outline-primary target="_blank" rel="noopener"}
 
 [Browse Insight Timer techniques](https://insighttimer.com/techniques){.btn .btn-outline-secondary target="_blank" rel="noopener"}
 
