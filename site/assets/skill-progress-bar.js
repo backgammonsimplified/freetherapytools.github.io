@@ -76,7 +76,12 @@
 
     const label = document.createElement("div");
     label.className = "skill-progress-persistent-label";
-    label.textContent = "Save your work";
+    const labelTitle = document.createElement("span");
+    labelTitle.textContent = "Save your work";
+    const privacy = document.createElement("small");
+    privacy.className = "skill-progress-persistent-privacy";
+    privacy.textContent = "Your entries are not sent to or stored on Free Therapy Tools servers. Browser autosave stays on this device.";
+    label.append(labelTitle, privacy);
 
     const actions = document.createElement("div");
     actions.className = "skill-progress-bar-actions";
