@@ -7,19 +7,19 @@ This durable report summarizes the generated draft corpus. Draft and review-need
 - Published target count: **266**
 - Excluded source pages: **65**
 - Informational: **174**
-- Interactive: **67**
-- Mixed informational + interactive: **25**
+- Interactive: **68**
+- Mixed informational + interactive: **24**
 - Total interactive/fillable resources: **92**
-- Total structured fields: **368**
+- Total structured fields: **362**
 
 ## Review status
 
-- Draft: **21**
-- Review needed: **245**
+- Draft: **19**
+- Review needed: **247**
 - Approved/published: **0**
-- Source extraction uncertain: **191**
-- Similarity flags: **82**
-- Completeness flags: **80**
+- Source extraction uncertain: **193**
+- Similarity flags: **81**
+- Completeness flags: **81**
 
 ## Generated systems
 
@@ -32,14 +32,14 @@ This durable report summarizes the generated draft corpus. Draft and review-need
 
 - `date`: 13
 - `multi-select`: 8
-- `planning`: 36
-- `rating-scale`: 12
-- `reflection`: 185
-- `repeating-rows`: 16
-- `table`: 35
-- `text`: 38
-- `textarea`: 23
-- `time`: 2
+- `planning`: 32
+- `rating-scale`: 10
+- `reflection`: 178
+- `repeating-rows`: 12
+- `table`: 38
+- `text`: 42
+- `textarea`: 25
+- `time`: 4
 
 ## Generation failures
 
@@ -47,7 +47,7 @@ No record-level generator failures.
 
 ## Review queue
 
-The compact queue is in `data/resource-paraphrase-review.csv` (245 flagged or uncertain records). Use the review dashboard for source/paraphrase/form/prompt comparison; this report intentionally does not duplicate full drafts.
+The compact queue is in `data/resource-paraphrase-review.csv` (247 flagged or uncertain records). Use the review dashboard for source/paraphrase/form/prompt comparison; this report intentionally does not duplicate full drafts.
 
 ## Source extraction review queue
 
@@ -179,6 +179,8 @@ These records could not be treated as source-certain. The draft exists, but the 
 - `interpersonal-effectiveness-p011` — 4 Distress Tolerance.pdf, page 11
 - `interpersonal-effectiveness-p012` — 4 Distress Tolerance.pdf, page 12
 - `interpersonal-effectiveness-p013` — 4 Distress Tolerance.pdf, page 13
+- `interpersonal-effectiveness-p017` — 4 Distress Tolerance.pdf, page 17
+- `interpersonal-effectiveness-p018` — 4 Distress Tolerance.pdf, page 18
 - `interpersonal-effectiveness-p019` — 4 Distress Tolerance.pdf, page 19
 - `interpersonal-effectiveness-p020` — 4 Distress Tolerance.pdf, page 20
 - `interpersonal-effectiveness-p022` — 4 Distress Tolerance.pdf, page 22

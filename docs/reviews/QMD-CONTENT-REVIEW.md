@@ -2,7 +2,11 @@
 
 This development report tracks native educational content reconstructed directly in the existing authoritative Quarto lesson files. No parallel Markdown resource library was created.
 
-## Summary
+## September 2026 reconciliation
+
+The counts below record the original extraction pass. The later copyright-safe DEAR rewrite intentionally omitted the native transcriptions for interpersonal-effectiveness-p017 through p020 while retaining original summaries and provenance. Their extraction records now explicitly require review and do not claim that the transcriptions remain integrated. Do not restore those reproductions from historical backups.
+
+## Original extraction summary
 
 - Published resources processed: **266**
 - Lesson QMD files containing resource content: **34**

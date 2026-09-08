@@ -5,8 +5,20 @@ from __future__ import annotations
 
 import posixpath
 import re
+from functools import lru_cache
 from pathlib import Path, PurePosixPath
 from urllib.parse import SplitResult, urlsplit, urlunsplit
+
+try:
+    from publication_config import load_publication_identity
+except ModuleNotFoundError:
+    from scripts.publication_config import load_publication_identity
+
+
+@lru_cache(maxsize=1)
+def publication_base_path() -> str:
+    return urlsplit(load_publication_identity()["canonical-origin"]).path.rstrip("/")
+
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -27,33 +39,44 @@ META_REFRESH_PATTERN = re.compile(
 )
 
 
-def portable_url(url: str, rendered_path: PurePosixPath) -> str:
+def portable_url(url: str, rendered_path: PurePosixPath, base_path: str = "") -> str:
     """Convert one internal root URL to a page-relative URL."""
     if not url.startswith("/") or url.startswith("//"):
         return url
     parsed = urlsplit(url)
+    path = parsed.path.replace("\\", "/")
+    if base_path and (path == base_path or path.startswith(base_path + "/")):
+        path = path[len(base_path):] or "/"
+    trailing_slash = path.endswith("/")
+    path = posixpath.normpath(path)
+    if trailing_slash and path != "/":
+        path += "/"
+    # GitHub serves this document at arbitrary missing URLs, including nested ones.
+    # Its links must remain rooted at the configured project path.
+    if rendered_path == PurePosixPath("404.html"):
+        return urlunsplit(SplitResult("", "", base_path + path, parsed.query, parsed.fragment))
     source_dir = str(rendered_path.parent) or "."
-    target = parsed.path.lstrip("/") or "."
+    target = path.lstrip("/") or "."
     relative = posixpath.relpath(target, source_dir)
-    if parsed.path.endswith("/"):
+    if path.endswith("/"):
         relative = ("./" if relative == "." else relative.rstrip("/") + "/")
     rebuilt = SplitResult("", "", relative, parsed.query, parsed.fragment)
     return urlunsplit(rebuilt)
 
 
-def rewrite_html_text(text: str, rendered_path: PurePosixPath) -> tuple[str, bool]:
+def rewrite_html_text(text: str, rendered_path: PurePosixPath, base_path: str = "") -> tuple[str, bool]:
     def replace_attribute(match: re.Match[str]) -> str:
-        return f"{match.group('prefix')}{portable_url(match.group('url'), rendered_path)}{match.group('quote')}"
+        return f"{match.group('prefix')}{portable_url(match.group('url'), rendered_path, base_path)}{match.group('quote')}"
 
     def replace_css_url(match: re.Match[str]) -> str:
         return (
             f"{match.group('prefix')}"
-            f"{portable_url(match.group('url'), rendered_path)}"
+            f"{portable_url(match.group('url'), rendered_path, base_path)}"
             f"{match.group('quote')})"
         )
 
     def replace_refresh(match: re.Match[str]) -> str:
-        return f"{match.group('prefix')}{portable_url(match.group('url'), rendered_path)}{match.group('quote')}"
+        return f"{match.group('prefix')}{portable_url(match.group('url'), rendered_path, base_path)}{match.group('quote')}"
 
     updated = URL_ATTRIBUTE_PATTERN.sub(replace_attribute, text)
     updated = CSS_URL_PATTERN.sub(replace_css_url, updated)
@@ -68,7 +91,7 @@ def rewrite_rendered_site(output_root: Path = OUTPUT_ROOT) -> int:
     for path in sorted(output_root.rglob("*.html")):
         current = path.read_text(encoding="utf-8")
         relative = PurePosixPath(path.relative_to(output_root).as_posix())
-        updated, path_changed = rewrite_html_text(current, relative)
+        updated, path_changed = rewrite_html_text(current, relative, publication_base_path())
         if not path_changed:
             continue
         path.write_text(updated, encoding="utf-8", newline="\n")

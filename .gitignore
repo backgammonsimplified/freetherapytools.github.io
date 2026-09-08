@@ -32,3 +32,6 @@ Thumbs.db
 .tools/
 /tmp/
 /site/data/resource-paraphrases/review.json
+
+# Local social-card render cache; source manifests and published cards remain tracked.
+/site/assets/social/generated/.render-state.json

@@ -13,11 +13,18 @@ import sys
 from collections import defaultdict
 from datetime import date
 from functools import lru_cache
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from urllib.parse import urljoin
 from xml.etree import ElementTree
 
 import yaml
+
+try:
+    from site_base_paths import publication_base_path, portable_url
+    from page_publication import load_page_policy, resolve_route_policy
+except ModuleNotFoundError:
+    from scripts.site_base_paths import publication_base_path, portable_url
+    from scripts.page_publication import load_page_policy, resolve_route_policy
 
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
@@ -2618,13 +2625,13 @@ def validate_full_build_output(output_root: Path) -> None:
 
 def validate_rendered_404(not_found_html: str) -> None:
     for text_value in (
-        "Page closed out",
-        "suspiciously bounced off the board",
+        "Page not found",
+        "This page may have moved or no longer exist.",
     ):
         if text_value not in not_found_html:
             raise ValidationError(f"Rendered 404 is malformed: missing {text_value!r}")
     for route in NOT_FOUND_ROUTES:
-        if f'href="{route}"' not in not_found_html:
+        if f'href="{publication_base_path() + route}"' not in not_found_html:
             raise ValidationError(
                 f"Rendered 404 links are malformed: missing clean link {route}"
             )
@@ -2664,10 +2671,12 @@ def validate_representative_rss_footers(output_root: Path) -> None:
         path = output_root / relative
         page_html = path.read_text(encoding="utf-8", errors="replace")
         hrefs = footer_rss_hrefs(page_html)
-        if hrefs != ["/updates/index.xml"]:
+        normalized = [urljoin("/" + relative, href) for href in hrefs]
+        expected = ["/updates/index.xml"] if (SITE_ROOT / "updates/index.qmd").is_file() else []
+        if normalized != expected:
             raise ValidationError(
                 "Rendered footer RSS mismatch in "
-                f"{relative}: expected ['/updates/index.xml'], found {hrefs}"
+                f"{relative}: expected {expected}, found {normalized}"
             )
 
 
@@ -2681,10 +2690,9 @@ def check_rendered(output_root: Path) -> dict[str, int]:
     validate_rendered_404(not_found_html)
 
     updates_feed = output_root / "updates" / "index.xml"
-    if not updates_feed.exists():
-        raise ValidationError(
-            "Rendered Updates RSS feed is missing: updates/index.xml"
-        )
+    feed_enabled = (SITE_ROOT / "updates/index.qmd").is_file()
+    if updates_feed.exists() != feed_enabled:
+        raise ValidationError("Rendered Updates RSS presence does not match the authored Updates page")
 
     sitemap = output_root / "sitemap.xml"
     if not sitemap.exists():
@@ -2706,8 +2714,10 @@ def check_rendered(output_root: Path) -> dict[str, int]:
     for required_redirect_part in (
         '<meta name="robots" content="noindex, follow">',
         '<link rel="canonical" href="https://backgammonsimplified.github.io/freetherapytools.github.io/glossary/">',
-        '<meta http-equiv="refresh" content="0; url=/glossary/">',
-        'window.location.replace("/glossary/" + window.location.search + window.location.hash)',
+        '<meta http-equiv="refresh" content="0; url='
+        + portable_url("/glossary/", PurePosixPath("learn/glossary/index.html"), publication_base_path()) + '">',
+        'const target = "/glossary/";',
+        'window.location.replace(basePath + target + window.location.search + window.location.hash)',
     ):
         if required_redirect_part not in legacy_glossary_html:
             raise ValidationError(
@@ -2757,22 +2767,29 @@ def check_rendered(output_root: Path) -> dict[str, int]:
     tracks = discover_tracks()
     lessons = discover_lessons()
     curriculum = build_curriculum(tracks, lessons)
-    expected_sequence = build_learn_sequence(curriculum)
-    rendered_sequence_path = output_root / "assets" / "bs-learn-sequence.json"
-    rendered_scroll_path = output_root / "assets" / "bs-learn-scroll.js"
-    if not rendered_sequence_path.is_file():
-        raise ValidationError("Rendered Learn sequence asset is missing")
-    if not rendered_scroll_path.is_file():
+    expected_sequence = {"lessons": []}
+    sidebar_routes_by_lesson = {}
+    for section, asset in (
+        ("dbt", "bs-learn-sequence.json"),
+        ("cbt", "bs-cbt-sequence.json"),
+        ("mindfulness", "bs-mindfulness-sequence.json"),
+    ):
+        expected = build_learn_sequence(curriculum_for_section(curriculum, section))
+        sequence_path = output_root / "assets" / asset
+        if not sequence_path.is_file():
+            raise ValidationError(f"Rendered {section} sequence asset is missing")
+        actual = read_json(sequence_path)
+        validate_learn_sequence(actual)
+        if actual != expected:
+            raise ValidationError(f"Rendered {section} sequence does not match curriculum metadata")
+        routes = {str(lesson["route"]) for lesson in expected["lessons"]}
+        for lesson in expected["lessons"]:
+            sidebar_routes_by_lesson[str(lesson["route"])] = routes
+        expected_sequence["lessons"].extend(expected["lessons"])
+    if not (output_root / "assets/bs-learn-scroll.js").is_file():
         raise ValidationError("Rendered continuous Learn script is missing")
-    rendered_sequence = read_json(rendered_sequence_path)
-    validate_learn_sequence(rendered_sequence)
-    if rendered_sequence != expected_sequence:
-        raise ValidationError("Rendered Learn sequence does not match curriculum metadata")
 
     rendered_lesson_count = 0
-    expected_sidebar_routes = {
-        str(lesson["route"]) for lesson in expected_sequence["lessons"]
-    }
     for lesson in expected_sequence["lessons"]:
         route = str(lesson["route"])
         relative = route.lstrip("/")
@@ -2812,7 +2829,7 @@ def check_rendered(output_root: Path) -> dict[str, int]:
             if resolved.endswith("/index.html"):
                 resolved = resolved.removesuffix("index.html")
             sidebar_routes.add(resolved)
-        missing_sidebar_routes = expected_sidebar_routes - sidebar_routes
+        missing_sidebar_routes = sidebar_routes_by_lesson[route] - sidebar_routes
         if missing_sidebar_routes:
             raise ValidationError(
                 f"Rendered Learn sidebar is missing lesson routes on {route}: "
@@ -2820,9 +2837,11 @@ def check_rendered(output_root: Path) -> dict[str, int]:
             )
 
         rendered_lesson_count += 1
+    dbt_curriculum = curriculum_for_section(curriculum, "dbt")
+    dbt_lessons = [lesson for track in dbt_curriculum for lesson in track["lessons"]]
     learn_index = output_root / "learn" / "index.html"
     learn_html = learn_index.read_text(encoding="utf-8", errors="replace")
-    if learn_html.count("data-bs-learn-item") != len(lessons):
+    if learn_html.count("data-bs-learn-item") != len(dbt_lessons):
         raise ValidationError("Rendered Learn catalogue has the wrong lesson count")
     for required in (
         "data-bs-learn-search",
@@ -2846,7 +2865,7 @@ def check_rendered(output_root: Path) -> dict[str, int]:
             learn_html,
         )
     }
-    expected_catalogue_routes = {str(lesson["route"]) for lesson in lessons}
+    expected_catalogue_routes = {str(lesson["route"]) for lesson in dbt_lessons}
     if rendered_catalogue_routes != expected_catalogue_routes:
         raise ValidationError(
             "Rendered Learn catalogue routes do not match lesson routes"
@@ -2855,7 +2874,7 @@ def check_rendered(output_root: Path) -> dict[str, int]:
         r'<details class="bs-learn-catalogue-description"[^>]*>',
         learn_html,
     )
-    if len(description_tags) != len(lessons) or any(
+    if len(description_tags) != len(dbt_lessons) or any(
         " open" in tag for tag in description_tags
     ):
         raise ValidationError(
@@ -2865,13 +2884,13 @@ def check_rendered(output_root: Path) -> dict[str, int]:
         r'<details class="bs-learn-catalogue-section"[^>]*>',
         learn_html,
     )
-    if len(catalogue_group_tags) != len(curriculum) or any(
+    if len(catalogue_group_tags) != len(dbt_curriculum) or any(
         " open" not in tag for tag in catalogue_group_tags
     ):
         raise ValidationError(
             "Rendered Learn track sections must all begin expanded"
         )
-    for track in curriculum:
+    for track in dbt_curriculum:
         track_title = str(track["title"])
         rendered_heading = re.compile(
             r'<span class="bs-learn-track-heading">\s*'
@@ -2917,7 +2936,9 @@ def check_rendered(output_root: Path) -> dict[str, int]:
     expected_glossary_location = (
         "https://backgammonsimplified.github.io/freetherapytools.github.io/glossary/"
     )
-    if glossary_locations != [expected_glossary_location]:
+    glossary_policy = resolve_route_policy(load_page_policy(), "/glossary/")
+    expected_locations = [expected_glossary_location] if glossary_policy["status_config"]["sitemap"] else []
+    if glossary_locations != expected_locations:
         raise ValidationError(
             f"Sitemap glossary locations are incorrect: {glossary_locations[:10]}"
         )
@@ -3013,11 +3034,13 @@ def check_rendered(output_root: Path) -> dict[str, int]:
                 f"Rendered track index {track['id']} lessons are missing or out of order"
             )
     validate_representative_rss_footers(output_root)
-    try:
-        feed_root = ElementTree.parse(updates_feed).getroot()
-    except ElementTree.ParseError as error:
-        raise ValidationError("Rendered combined Updates RSS feed is invalid XML") from error
-    feed_items = feed_root.findall("./channel/item")
+    feed_items = []
+    if feed_enabled:
+        try:
+            feed_root = ElementTree.parse(updates_feed).getroot()
+        except ElementTree.ParseError as error:
+            raise ValidationError("Rendered combined Updates RSS feed is invalid XML") from error
+        feed_items = feed_root.findall("./channel/item")
     feed_links = [
         (item.findtext("link") or "").strip()
         for item in feed_items
@@ -3025,7 +3048,7 @@ def check_rendered(output_root: Path) -> dict[str, int]:
     expected_feed_links = [
         "https://backgammonsimplified.github.io/freetherapytools.github.io"
         + str(publication["route"])
-        for publication in discover_update_publications()
+        for publication in (discover_update_publications() if feed_enabled else [])
     ]
     if feed_links != expected_feed_links:
         raise ValidationError(

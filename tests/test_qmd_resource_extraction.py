@@ -75,17 +75,29 @@ class QmdResourceExtractionTests(unittest.TestCase):
             )
             self.assertNotEqual("pending", self.by_id[source_id]["extraction_method"])
 
-    def test_interpersonal_resources_have_native_qmd_content(self) -> None:
+    def test_interpersonal_resources_have_native_content_or_copyright_safe_summary(self) -> None:
         rows = [row for row in self.published if row["section"] == "Interpersonal Effectiveness"]
         self.assertEqual(41, len(rows))
+        summarized_sources = {
+            "interpersonal-effectiveness-p017": "handout-5-part-1",
+            "interpersonal-effectiveness-p018": "handout-5-part-2",
+            "interpersonal-effectiveness-p019": "handout-5a",
+            "interpersonal-effectiveness-p020": "dear-man-script-source",
+        }
         for resource in rows:
             source_id = resource["id"]
-            lesson = ROOT / self.by_id[source_id]["lesson_qmd"]
-            self.assertIn(
-                f"<!-- native-resource-content:{source_id}:start -->",
-                lesson.read_text(encoding="utf-8"),
-            )
-            self.assertNotEqual("pending", self.by_id[source_id]["extraction_method"])
+            record = self.by_id[source_id]
+            source = (ROOT / record["lesson_qmd"]).read_text(encoding="utf-8")
+            marker = f"<!-- native-resource-content:{source_id}:start -->"
+            if source_id in summarized_sources:
+                self.assertNotIn(marker, source)
+                self.assertIn("{#" + summarized_sources[source_id] + "}", source)
+                self.assertEqual("true", record["review_needed"], source_id)
+                self.assertEqual("false", record["integrated_into_existing_section"], source_id)
+                self.assertIn("copyright-safe", record["notes"])
+            else:
+                self.assertIn(marker, source)
+            self.assertNotEqual("pending", record["extraction_method"])
 
     def test_wellness_resources_have_native_qmd_content(self) -> None:
         rows = [row for row in self.published if row["section"] == "Wellness"]

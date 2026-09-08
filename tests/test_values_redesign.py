@@ -101,7 +101,7 @@ class ValuesRedesignTests(unittest.TestCase):
             "BEGIN:VCALENDAR", "DTSTART", "DURATION", "RRULE", "goalGtdMarkdown", "due_date", "therapy-skill-kit-progress",
         ):
             self.assertIn(token, GOAL_JS)
-        for token in ("Save progress (.md)", "Recommended. You can reopen this Markdown file later and continue.", "Export JSON", "Export DOCX", "Print / Save as PDF"):
+        for token in ("Save progress (.md)", "To resume your progress later, upload the .md file.", "Export JSON", "Export DOCX", "Print / Save as PDF"):
             self.assertIn(token, PROGRESS_JS)
         self.assertNotIn('text: "Save JSON"', PROGRESS_JS)
 

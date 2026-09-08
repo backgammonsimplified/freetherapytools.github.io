@@ -60,6 +60,19 @@ class ReleaseUiStaticCheckTests(unittest.TestCase):
         )
         self.assertEqual(findings, [])
 
+    def test_project_prefixed_404_links_are_checked_against_local_output(self) -> None:
+        base = release_check.publication_base_path()
+        self.write("assets/test.svg", "<svg></svg>")
+        self.write("learn/index.html", page_html('<section id="lesson">Lesson</section>'))
+        self.write("404.html", page_html(
+            f'<a href="{base}/learn/#lesson">Learn</a>'
+            f'<img src="{base}/assets/test.svg" alt="">'
+        ))
+        self.assertEqual([], release_check.audit_page(site_dir=self.site_dir, route="/404.html"))
+        self.write("404.html", page_html(f'<img src="{base}/assets/missing.svg" alt="">'))
+        self.assertTrue(any("missing local asset" in finding.message for finding in
+            release_check.audit_page(site_dir=self.site_dir, route="/404.html")))
+
     def test_duplicate_id_broken_link_and_missing_anchor_fail(self) -> None:
         self.write(
             "index.html",

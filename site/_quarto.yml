@@ -3,6 +3,7 @@ project:
   output-dir: _site
   render:
     - "**/*.qmd"
+    - "!includes/**"
   pre-render:
   - python ../scripts/bs_pre_render.py
   - python ../scripts/page_publication.py validate-source

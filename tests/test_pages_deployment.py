@@ -69,6 +69,28 @@ class PagesDeploymentTests(unittest.TestCase):
         self.assertIn('href="https://example.org/"', updated)
         self.assertEqual(portable_url("/", PurePosixPath("tool-finder/values/index.html")), "../../")
 
+    def test_404_links_stay_rooted_when_served_at_nested_missing_paths(self) -> None:
+        from urllib.parse import urljoin
+        base = "/freetherapytools.github.io"
+        route = PurePosixPath("404.html")
+        for original, expected in (
+            ("/assets/logo.svg", base + "/assets/logo.svg"),
+            (base + "/assets/logo.svg", base + "/assets/logo.svg"),
+            (base + "/.\\\\learn/?review=1#lesson", base + "/learn/?review=1#lesson"),
+            (base, base + "/"),
+        ):
+            actual = portable_url(original, route, base)
+            self.assertEqual(expected, actual)
+            self.assertEqual(
+                "https://example.org" + expected,
+                urljoin("https://example.org" + base + "/missing/deep/page", actual),
+            )
+        self.assertEqual("/learn/", portable_url("/learn/", route))
+        self.assertEqual(
+            "../../assets/logo.svg",
+            portable_url(base + "/assets/logo.svg", PurePosixPath("learn/wellness/index.html"), base),
+        )
+
     def test_thermometer_is_featured_not_duplicated(self) -> None:
         catalogue = json.loads((SITE / "data" / "tool-finder" / "catalogue.json").read_text(encoding="utf-8"))
         thermometer = next(entry for entry in catalogue["entries"] if entry["id"] == "thermometer")

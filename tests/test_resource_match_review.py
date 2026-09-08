@@ -34,6 +34,17 @@ class ResourceMatchReviewTests(unittest.TestCase):
         cls.unmatched = UNMATCHED.read_text(encoding="utf-8")
         cls.review_js = REVIEW_JS.read_text(encoding="utf-8")
 
+    def test_removed_resource_anchor_links_to_current_lesson(self):
+        from scripts.resource_match_review import review_link
+        self.assertEqual(
+            "/learn/wellness/maladaptive-coping.html?review=1",
+            review_link("/learn/wellness/maladaptive-coping.html", "wellness-p034"),
+        )
+        self.assertEqual(
+            "/learn/wellness/maladaptive-coping.html?review=1#resource-wellness-p037",
+            review_link("/learn/wellness/maladaptive-coping.html", "wellness-p037"),
+        )
+
     def test_all_displayed_alternatives_have_stable_ids_and_exact_button(self):
         book_count = self.lesson_text.count('data-match-source="linehan-book"')
         php_count = self.lesson_text.count('data-match-source="php-high-res"')

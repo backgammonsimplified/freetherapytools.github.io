@@ -132,7 +132,7 @@ class SectionScanCurriculumTests(unittest.TestCase):
                 "interpersonal-effectiveness": [
                     "Boundaries",
                     "Clarifying Priorities & Myths",
-                    "DEAR MAN",
+                    "DEAR + MAN",
                     "DEAR + GIVE",
                     "DEAR + FAST",
                     "How to Ask & Say No & Troubleshooting",

@@ -130,21 +130,23 @@
       "name": "Values Tool Finder",
       "route": "/tool-finder/values/",
       "kind": "ordinary",
-      "required_markers": ["skill-app", "Save progress"]
+      "required_markers": ["skill-app", "Save progress"],
+      "static_required_markers": ["skill-app", "skill-progress-bar.js"]
     },
     {
       "id": "emotion-explorer-app",
       "name": "Emotion Explorer Tool Finder",
       "route": "/tool-finder/emotions/",
       "kind": "ordinary",
-      "required_markers": ["skill-app", "Save progress"]
+      "required_markers": ["skill-app", "Save progress"],
+      "static_required_markers": ["skill-app", "skill-progress-bar.js"]
     },
     {
       "id": "tool-finder",
       "name": "Tool Finder",
       "route": "/tool-finder/",
       "kind": "ordinary",
-      "required_markers": ["data-tool-finder", "tool-finder-topic-section"]
+      "required_markers": ["data-tool-finder", "tool-finder-topic"]
     },
     {
       "id": "box-breathing",

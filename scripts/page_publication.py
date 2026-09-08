@@ -592,6 +592,11 @@ def route_from_public_url(url: str, canonical_origin: str) -> str | None:
     if parsed.scheme != origin.scheme or parsed.netloc != origin.netloc:
         return None
     route = parsed.path or "/"
+    base_path = origin.path.rstrip("/")
+    if base_path:
+        if route != base_path and not route.startswith(base_path + "/"):
+            return None
+        route = route[len(base_path):] or "/"
     if route == "/index.html":
         route = "/"
     elif route == "/glossary/index.html":

@@ -43,6 +43,28 @@ class PagePublicationTests(unittest.TestCase):
             "https://backgammonsimplified.github.io/freetherapytools.github.io/tool-finder/",
         )
 
+    def test_project_urls_resolve_to_policy_routes_without_crossing_projects(self) -> None:
+        origin = pp.load_publication_identity()["canonical-origin"]
+        self.assertEqual("/", pp.route_from_public_url(origin + "/index.html", origin))
+        self.assertEqual("/glossary/", pp.route_from_public_url(origin + "/glossary/index.html", origin))
+        self.assertIsNone(pp.route_from_public_url("https://backgammonsimplified.github.io/another-project/", origin))
+        self.assertIsNone(pp.route_from_public_url(origin + "-other/glossary/", origin))
+        self.assertIsNone(pp.route_from_public_url("https://example.org/glossary/", origin))
+
+    def test_sitemap_keeps_published_project_routes_and_removes_drafts(self) -> None:
+        origin = pp.load_publication_identity()["canonical-origin"]
+        source = (
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+            f"<url><loc>{origin}/glossary/index.html</loc></url>"
+            f"<url><loc>{origin}/unregistered.html</loc></url></urlset>"
+        )
+        updated, changed, removed = pp.filtered_sitemap_text(source, self.policy, origin)
+        self.assertTrue(changed)
+        self.assertEqual(1, removed)
+        self.assertIn(origin + "/glossary/", updated)
+        self.assertNotIn("unregistered", updated)
+        self.assertNotIn("freetherapytools.github.io/freetherapytools.github.io", updated)
+
     def test_rendered_title_fallback_uses_current_brand(self) -> None:
         self.assertEqual(pp.rendered_title("<html></html>"), "Free Therapy Tools")
         self.assertEqual(
