@@ -4,7 +4,7 @@
 }
 
 /* Base contract for text-entry controls. Keep form text at normal reading size
-   and let controls use the full width available to their tool. */
+   and let controls use the full width available inside the established tool shell. */
 .skill-app :is(
   textarea,
   input[type="text"],
@@ -26,20 +26,12 @@
   min-height: 7.5rem;
 }
 
-/* Standard reflection tools use the page's available content width. */
-.skill-app.tool-progressive-enabled,
-.skill-app.tool-progressive-enabled > .skill-app-shell,
-.skill-app.tool-single-example,
-.skill-app.tool-single-example > .skill-app-shell {
-  width: 100%;
-  max-width: none;
-}
-
+/* Preserve the pre-existing tool-shell geometry. Progressive reveal changes
+   question visibility only; it must not widen or reposition the app or save bar. */
 .skill-app.tool-progressive-enabled .skill-app-panel,
 .skill-app.tool-single-example .skill-app-panel {
   box-sizing: border-box;
   width: 100%;
-  max-width: none;
 }
 
 .tool-progressive-controls {
@@ -205,12 +197,6 @@
 
 .skill-app[data-cbt-app="avoidance"] .cbt-field :is(textarea, input) {
   width: 100%;
-  max-width: none;
-}
-
-/* The save/export bar is protected infrastructure. Progressive reveal must not
-   change its positioning, visibility, sizing, or internal layout. */
-.skill-app [data-skill-progress-final].skill-progress-persistent {
   max-width: none;
 }
 
