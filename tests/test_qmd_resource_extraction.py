@@ -41,15 +41,25 @@ class QmdResourceExtractionTests(unittest.TestCase):
             if marker not in lesson.read_text(encoding="utf-8"):
                 self.assertEqual("true", record["review_needed"], source_id)
 
-    def test_distress_tolerance_resources_have_native_qmd_content(self) -> None:
+    def test_distress_tolerance_resources_preserve_copyright_safe_tipp(self) -> None:
         distress = [row for row in self.published if row["section"] == "Distress Tolerance"]
         self.assertEqual(39, len(distress))
+        summarized = {f"distress-tolerance-p{i:03}" for i in range(11, 17)}
         for resource in distress:
             source_id = resource["id"]
-            lesson = ROOT / self.by_id[source_id]["lesson_qmd"]
-            source = lesson.read_text(encoding="utf-8")
-            self.assertIn(f"<!-- native-resource-content:{source_id}:start -->", source)
-            self.assertNotEqual("pending", self.by_id[source_id]["extraction_method"])
+            record = self.by_id[source_id]
+            source = (ROOT / record["lesson_qmd"]).read_text(encoding="utf-8")
+            marker = f"<!-- native-resource-content:{source_id}:start -->"
+            if source_id in summarized:
+                self.assertNotIn(marker, source)
+                self.assertEqual("true", record["review_needed"])
+                self.assertEqual("false", record["integrated_into_existing_section"])
+                self.assertIn("copyright-safe", record["notes"])
+                self.assertIn("{#source-note}", source)
+                self.assertIn("original Free Therapy Tools practice worksheet", source)
+            else:
+                self.assertIn(marker, source)
+            self.assertNotEqual("pending", record["extraction_method"])
 
     def test_emotion_regulation_resources_have_native_qmd_content(self) -> None:
         emotion_rows = [row for row in self.published if row["section"] == "Emotion Regulation"]
@@ -75,17 +85,29 @@ class QmdResourceExtractionTests(unittest.TestCase):
             )
             self.assertNotEqual("pending", self.by_id[source_id]["extraction_method"])
 
-    def test_interpersonal_resources_have_native_qmd_content(self) -> None:
+    def test_interpersonal_resources_have_native_content_or_copyright_safe_summary(self) -> None:
         rows = [row for row in self.published if row["section"] == "Interpersonal Effectiveness"]
         self.assertEqual(41, len(rows))
+        summarized_sources = {
+            "interpersonal-effectiveness-p017": "handout-5-part-1",
+            "interpersonal-effectiveness-p018": "handout-5-part-2",
+            "interpersonal-effectiveness-p019": "handout-5a",
+            "interpersonal-effectiveness-p020": "dear-man-script-source",
+        }
         for resource in rows:
             source_id = resource["id"]
-            lesson = ROOT / self.by_id[source_id]["lesson_qmd"]
-            self.assertIn(
-                f"<!-- native-resource-content:{source_id}:start -->",
-                lesson.read_text(encoding="utf-8"),
-            )
-            self.assertNotEqual("pending", self.by_id[source_id]["extraction_method"])
+            record = self.by_id[source_id]
+            source = (ROOT / record["lesson_qmd"]).read_text(encoding="utf-8")
+            marker = f"<!-- native-resource-content:{source_id}:start -->"
+            if source_id in summarized_sources:
+                self.assertNotIn(marker, source)
+                self.assertIn("{#" + summarized_sources[source_id] + "}", source)
+                self.assertEqual("true", record["review_needed"], source_id)
+                self.assertEqual("false", record["integrated_into_existing_section"], source_id)
+                self.assertIn("copyright-safe", record["notes"])
+            else:
+                self.assertIn(marker, source)
+            self.assertNotEqual("pending", record["extraction_method"])
 
     def test_wellness_resources_have_native_qmd_content(self) -> None:
         rows = [row for row in self.published if row["section"] == "Wellness"]
@@ -115,10 +137,13 @@ class QmdResourceExtractionTests(unittest.TestCase):
         for resource in rows:
             source_id = resource["id"]
             lesson = ROOT / self.by_id[source_id]["lesson_qmd"]
-            self.assertIn(
-                f"<!-- native-resource-content:{source_id}:start -->",
-                lesson.read_text(encoding="utf-8"),
-            )
+            source = lesson.read_text(encoding="utf-8")
+            if lesson == SITE / "tool-finder/index.qmd":
+                self.assertIn("data-tool-finder-results", source)
+            else:
+                self.assertIn(
+                    f"<!-- native-resource-content:{source_id}:start -->", source
+                )
             self.assertNotEqual("pending", self.by_id[source_id]["extraction_method"])
 
     def test_no_published_resource_remains_pending(self) -> None:
@@ -127,7 +152,7 @@ class QmdResourceExtractionTests(unittest.TestCase):
         )
 
     def test_review_report_matches_inventory_counts(self) -> None:
-        report = (ROOT / "QMD-CONTENT-REVIEW.md").read_text(encoding="utf-8")
+        report = (ROOT / "docs" / "reviews" / "QMD-CONTENT-REVIEW.md").read_text(encoding="utf-8")
         self.assertIn("Published resources processed: **266**", report)
         self.assertIn("Resources integrated into existing anchored sections: **74**", report)
         self.assertIn("Resources using a local **Text Version** subsection: **192**", report)
@@ -182,7 +207,7 @@ class QmdResourceExtractionTests(unittest.TestCase):
                 "## Temperature {#temperature}",
                 "## Intense Exercise {#intense-exercise}",
                 "## Paced Breathing {#paced-breathing}",
-                "## Paired / Progressive Muscle Relaxation {#progressive-muscle-relaxation}",
+                "## Progressive Muscle Relaxation {#progressive-muscle-relaxation}",
             ),
             "site/learn/distress-tolerance/self-soothe.qmd": (
                 "### Activities {#activities}",
@@ -251,8 +276,8 @@ class QmdResourceExtractionTests(unittest.TestCase):
         match_count = len(re.findall(r"data-match-id=", lessons))
         review_control_count = lessons.count(">Incorrect match</button>")
         self.assertGreaterEqual(match_count, 141)
-        self.assertIn("php-high-res:distress-tolerance-p011:php-p0126", lessons)
-        self.assertIn("linehan-book:distress-tolerance-p012", lessons)
+        self.assertNotIn("php-high-res:distress-tolerance-p011:php-p0126", lessons)
+        self.assertNotIn("linehan-book:distress-tolerance-p012", lessons)
         mindfulness_audit = json.loads(
             (SITE / "data" / "mindfulness-source-audit.json").read_text(encoding="utf-8")
         )

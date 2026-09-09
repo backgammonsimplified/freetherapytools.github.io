@@ -81,7 +81,7 @@ end
 local function track_label(value)
   local labels = {
     ["goal-setting"] = "Goal Setting & Tracking",
-    ["doubling-cube"] = "Distress Tolerance",
+    ["distress-tolerance"] = "Distress Tolerance",
     ["interpersonal-effectiveness"] = "Interpersonal Effectiveness",
     ["wellness"] = "Wellness",
     ["emotion-regulation"] = "Emotion Regulation",
@@ -101,7 +101,7 @@ end
 local function track_href(value)
   local routes = {
     ["goal-setting"] = "/learn/goal-setting/",
-    ["doubling-cube"] = "/learn/distress-tolerance/",
+    ["distress-tolerance"] = "/learn/distress-tolerance/",
     ["interpersonal-effectiveness"] = "/learn/interpersonal-effectiveness/",
     ["wellness"] = "/learn/wellness/",
     ["emotion-regulation"] = "/learn/emotion-regulation/",

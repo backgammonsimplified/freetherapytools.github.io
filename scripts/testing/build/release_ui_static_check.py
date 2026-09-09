@@ -14,6 +14,9 @@ from urllib.parse import unquote, urljoin, urlsplit
 
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(REPOSITORY_ROOT / "scripts"))
+from site_base_paths import publication_base_path
+
 DEFAULT_SITE_DIR = REPOSITORY_ROOT / "site" / "_site"
 DEFAULT_MANIFEST = (
     Path(__file__).parents[1] / "ux" / "browser" / "ui_release_manifest.json"
@@ -90,6 +93,9 @@ def load_manifest(path: Path = DEFAULT_MANIFEST) -> dict[str, object]:
 
 def route_to_file(site_dir: Path, route: str) -> Path:
     path = unquote(urlsplit(route).path)
+    base = publication_base_path()
+    if base and (path == base or path.startswith(base + "/")):
+        path = path[len(base):] or "/"
     relative = path.lstrip("/")
     if not relative:
         return site_dir / "index.html"
@@ -262,7 +268,7 @@ def audit_site(
                 site_dir=site_dir,
                 route=route,
                 required_markers=[
-                    str(item) for item in page.get("required_markers", [])
+                    str(item) for item in page.get("static_required_markers", page.get("required_markers", []))
                 ],
                 forbidden_markers=[
                     str(item) for item in page.get("forbidden_markers", [])

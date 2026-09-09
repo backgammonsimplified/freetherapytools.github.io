@@ -8,8 +8,8 @@ from playwright.sync_api import sync_playwright
 
 PAGES = [
     "/",
-    "/learn/distress-tolerance/why-is-25-percent-the-basic-take-point.html",
-    "/research/",
+    "/tool-finder/",
+    "/learn/distress-tolerance/stop-crisis-survival.html",
     "/licensing.html",
 ]
 

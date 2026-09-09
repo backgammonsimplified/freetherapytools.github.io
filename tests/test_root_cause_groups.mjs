@@ -34,7 +34,7 @@ const groups = groupFindingsByRootCause([
   makeFinding({ finding_id: "bs-finding-a", selector: "#TOC" }),
   makeFinding({
     finding_id: "bs-finding-b",
-    route_or_file: "/research/example.html",
+    route_or_file: "/learn/mindfulness/example.html",
     viewport: { name: "desktop-1440" },
     evidence: "initial IDs are unique: TOC; screenshot: screenshots/research.png"
   })
@@ -45,8 +45,8 @@ assert.deepEqual(groups[0], {
   root_cause_id: "bs-root-continuous-duplicate-ids",
   category: "product-defect",
   severity: "major",
-  affected_component: "continuous Learn/Research content",
-  affected_routes: ["/learn/distress-tolerance/example.html", "/research/example.html"],
+  affected_component: "continuous Learn content",
+  affected_routes: ["/learn/distress-tolerance/example.html", "/learn/mindfulness/example.html"],
   affected_viewports: ["desktop-1440", "mobile-390"],
   finding_instances: 2,
   representative_selectors: ["#TOC"],
@@ -55,8 +55,7 @@ assert.deepEqual(groups[0], {
     "screenshots/research.png"
   ],
   likely_source_files: [
-    "site/assets/bs-learn-scroll.js",
-    "site/assets/bs-research-scroll.js"
+    "site/assets/bs-learn-scroll.js"
   ],
   stability: "stable",
   confidence: "high",

@@ -171,11 +171,11 @@
     "measured_loads": 3,
     "route_ids": [
       "home",
-      "cube-lesson",
-      "research-article",
+      "distress-tolerance-lesson",
+      "tool-finder",
       "glossary",
-      "analyze",
-      "match-predictor"
+      "box-breathing",
+      "change-emotion"
     ],
     "viewport_names": [
       "desktop-1440",
@@ -230,29 +230,35 @@
   "routes": [
     {"id": "home", "route": "/"},
     {"id": "learn-index", "route": "/learn/"},
-    {"id": "cube-index", "route": "/learn/distress-tolerance/"},
-    {"id": "cube-lesson", "route": "/learn/distress-tolerance/what-the-cube-is-asking.html"},
-    {"id": "take-point-lesson", "route": "/learn/distress-tolerance/why-is-25-percent-the-basic-take-point.html"},
-    {"id": "research-index", "route": "/research/"},
-    {"id": "research-article", "route": "/research/sage-vs-gnu-additional-details.html"},
-    {"id": "engine-benchmark", "route": "/engine-benchmark/"},
-    {"id": "sage-vs-gnu", "route": "/engine-benchmark/sage-vs-gnu-stage1/"},
-    {"id": "analyze", "route": "/analyze/"},
-    {"id": "match-predictor", "route": "/match-predictor/"},
+    {"id": "distress-tolerance-index", "route": "/learn/distress-tolerance/"},
+    {"id": "distress-tolerance-lesson", "route": "/learn/distress-tolerance/tipp.html"},
+    {"id": "dear-man-lesson", "route": "/learn/interpersonal-effectiveness/dear-man.html"},
+    {"id": "emotion-regulation-lesson", "route": "/learn/emotion-regulation/what-emotions-do.html"},
+    {"id": "cbt-index", "route": "/cbt-skills/"},
+    {"id": "cbt-lesson", "route": "/learn/cbt-anxiety/thinking-traps.html"},
+    {"id": "cbt-worry-lesson", "route": "/learn/cbt-anxiety/understanding-worry.html"},
+    {"id": "mindfulness-index", "route": "/mindfulness/"},
+    {"id": "mindfulness-observe-lesson", "route": "/learn/mindfulness/what-skills.html"},
+    {"id": "values-app", "route": "/tool-finder/values/"},
+    {"id": "emotion-explorer-app", "route": "/tool-finder/emotions/"},
+    {"id": "tool-finder", "route": "/tool-finder/"},
+    {"id": "box-breathing", "route": "/tool-finder/box-breathing/"},
+    {"id": "change-emotion", "route": "/tool-finder/change-emotion/"},
     {"id": "glossary", "route": "/glossary/"},
     {"id": "about", "route": "/about.html"},
     {"id": "licensing", "route": "/licensing.html"},
-    {"id": "updates", "route": "/updates/"},
     {"id": "404", "route": "/404.html"}
   ],
   "screenshots": {
     "baseline_route_ids": [
       "home",
       "learn-index",
-      "cube-lesson",
-      "research-article",
+      "distress-tolerance-lesson",
+      "cbt-index",
+      "cbt-lesson",
+      "tool-finder",
       "glossary",
-      "analyze"
+      "box-breathing"
     ],
     "baseline_viewport_names": [
       "desktop-1440",
@@ -264,6 +270,7 @@
     {"height": 900, "name": "desktop-1440", "width": 1440},
     {"height": 800, "name": "laptop-1280", "width": 1280},
     {"height": 768, "name": "tablet-1024", "width": 1024},
+    {"height": 1024, "name": "tablet-768", "width": 768},
     {"height": 844, "name": "mobile-390", "width": 390},
     {"height": 568, "name": "small-mobile-320", "width": 320}
   ]

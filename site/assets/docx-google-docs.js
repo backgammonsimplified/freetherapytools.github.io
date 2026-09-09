@@ -2,12 +2,15 @@
   "use strict";
 
   const GOOGLE_VIEWER = "https://docs.google.com/gview";
-  const PRODUCTION_ORIGIN = "https://freetherapytools.github.io";
-  const LOCAL_HOSTS = new Set(["localhost", "127.0.0.1", "0.0.0.0", "::1"]);
+  const PRODUCTION_SITE = "https://backgammonsimplified.github.io/freetherapytools.github.io";
+  const LOCAL_HOSTS = new Set(["localhost", "127.0.0.1", "0.0.0.0", "::1", "[::1]"]);
 
   function isDocxLink(anchor) {
     const href = String(anchor.getAttribute("href") || "").trim();
-    return /\.docx(?:$|[?#])/i.test(href);
+    try {
+      const url = new URL(href, document.baseURI);
+      return /^https?:$/.test(url.protocol) && /\.docx$/i.test(url.pathname);
+    } catch (_error) { return false; }
   }
 
   function publicDocxUrl(anchor) {
@@ -16,7 +19,11 @@
       if (!/^https?:$/.test(url.protocol)) return null;
 
       if (LOCAL_HOSTS.has(url.hostname)) {
-        return `${PRODUCTION_ORIGIN}${url.pathname}${url.search}`;
+        const production = new URL(PRODUCTION_SITE);
+        const base = production.pathname.replace(/\/$/, "");
+        const path = url.pathname === base || url.pathname.startsWith(base + "/")
+          ? url.pathname.slice(base.length) : url.pathname;
+        return `${PRODUCTION_SITE}${path}${url.search}`;
       }
 
       return url.href;

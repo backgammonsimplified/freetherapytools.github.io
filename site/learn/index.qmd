@@ -3,7 +3,6 @@ title: "DBT Skills"
 description: "Five DBT-oriented curriculum tracks with lessons and practice materials."
 sidebar: learn
 page-layout: full
-bibliography: ../references.bib
 body-classes: bs-learn-index
 toc: false
 execute:

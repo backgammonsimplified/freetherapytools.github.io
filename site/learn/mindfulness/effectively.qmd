@@ -7,7 +7,7 @@ learn-order: 7
 categories:
   - Beginner
 tags:
-  - Checker Play
+  - Mindfulness
 terms:
   - how-skills
 body-classes: bs-learn-article

@@ -28,7 +28,10 @@ class DedicatedSkillToolTests(unittest.TestCase):
             self.assertIn("sidebar: tool-finder", text)
             self.assertIn(f'data-quick-app="{route}"', text)
             self.assertIn(f'"{route}": init', quick)
-            self.assertIn(f'toolId: "{route}"', quick)
+            if route == "box-breathing":
+                self.assertNotIn('toolId: "box-breathing"', quick)
+            else:
+                self.assertIn(f'toolId: "{route}"', quick)
             self.assertIn(f'"{route}": "/tool-finder/{route}/"', progress)
 
     def test_shared_assets_and_progress_are_wired_once(self):
@@ -56,6 +59,21 @@ class DedicatedSkillToolTests(unittest.TestCase):
             self.assertIn(token, css)
         self.assertIn("@media (max-width: 780px)", css)
         self.assertIn("@media (prefers-reduced-motion: reduce)", css)
+
+    def test_box_breathing_uses_unclipped_four_side_geometry(self):
+        quick = (SITE / "assets" / "skill-quick-tools.js").read_text(encoding="utf-8")
+        css = (SITE / "assets" / "skill-apps.css").read_text(encoding="utf-8")
+        page = (SITE / "tool-finder" / "box-breathing" / "index.qmd").read_text(encoding="utf-8")
+        self.assertIn('data-quick-app="box-breathing"', page)
+        for phase in ("inhale", "holdIn", "exhale", "holdOut"):
+            self.assertIn(f'data-breath-side="{phase}"', quick)
+        for label in (">Inhale<", ">Exhale<", ">Hold<"):
+            self.assertIn(label, quick)
+        self.assertIn('label.setAttribute("aria-current", "step")', quick)
+        self.assertRegex(css, r"\.box-breathing-stage\s*\{[^}]*overflow:\s*visible")
+        self.assertRegex(css, r"\.box-breathing-side--inhale\s*\{[^}]*grid-column:\s*1")
+        self.assertNotRegex(css, r"\.box-breathing-side--inhale\s*\{[^}]*(?:left:\s*-|translateX\s*\(\s*-)")
+        self.assertIn("@media (max-width: 390px)", css)
 
     def test_five_factor_print_uses_live_text_and_css_not_raster_capture(self):
         quick = (SITE / "assets" / "skill-quick-tools.js").read_text(encoding="utf-8")

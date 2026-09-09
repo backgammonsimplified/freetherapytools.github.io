@@ -42,7 +42,7 @@ class GlossaryBuildFreshnessTests(unittest.TestCase):
 
     def test_changed_published_term_count_regenerates_glossary_outputs(self) -> None:
         entries = copy.deepcopy(glossary_source.load_contract_json())
-        added = copy.deepcopy(entries["ace"])
+        added = copy.deepcopy(entries["wise-mind"])
         added.update(
             {
                 "term": "Z Freshness Term",
@@ -50,7 +50,7 @@ class GlossaryBuildFreshnessTests(unittest.TestCase):
                 "redirect_slugs": [],
                 "short_definition": "A generated freshness test term.",
                 "long_definition": "A generated freshness test term.",
-                "categories": ["Checker Play"],
+                "categories": ["Mindfulness"],
                 "tracks": [],
                 "related_terms": [],
                 "inline_terms": {},
@@ -64,9 +64,9 @@ class GlossaryBuildFreshnessTests(unittest.TestCase):
         html = learn_glossary.build_entries_html(public_entries, {}, {})
         lookup = json.loads(learn_glossary.build_lookup_data(public_entries, {}))
 
-        self.assertEqual(len(public_entries), 39)
-        self.assertEqual(html.count('class="bs-glossary-entry"'), 39)
-        self.assertEqual(len(lookup["entries"]), 39)
+        self.assertEqual(len(public_entries), 2)
+        self.assertEqual(html.count('class="bs-glossary-entry"'), 2)
+        self.assertEqual(len(lookup["entries"]), 2)
 
     def test_partial_render_runs_the_freshness_check(self) -> None:
         with mock.patch.dict(os.environ, {}, clear=True), mock.patch.object(
@@ -76,6 +76,7 @@ class GlossaryBuildFreshnessTests(unittest.TestCase):
 
         scripts = bs_pre_render.REPO_ROOT / "scripts"
         self.assertEqual(run.call_args_list, [
+            mock.call([bs_pre_render.sys.executable, str(scripts / "tool_finder_topics.py")]),
             mock.call([bs_pre_render.sys.executable, str(scripts / "generate-resource-exports.py"), "--changed"]),
             mock.call([bs_pre_render.sys.executable, str(scripts / "build-resource-paraphrase-assets.py")]),
             mock.call([bs_pre_render.sys.executable, str(scripts / "learn_glossary_site.py"), "validate"]),

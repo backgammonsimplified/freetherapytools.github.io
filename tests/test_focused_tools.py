@@ -130,15 +130,15 @@ class FocusedDistressInterpersonalToolTests(unittest.TestCase):
         self.assertIn("Handout 9, part 1:", self.quick)
         self.assertIn("Handout 9, part 2:", self.quick)
 
-    def test_new_tools_pin_the_shared_save_bar(self):
-        selector = ':is([data-quick-app="pros-and-cons"], [data-quick-app="interpersonal-troubleshooting"]) .skill-app-footer'
-        self.assertIn(selector, self.css)
-        focused_css = self.css.split("/* Focused Pros & Cons and Interpersonal Troubleshooting tools */", 1)[1]
-        self.assertIn("position: fixed;", focused_css)
-        self.assertIn("bottom: 0;", focused_css)
-        self.assertIn("padding-bottom: var(--focused-tool-save-space);", focused_css)
-        self.assertIn(".skill-progress-final-actions", focused_css)
-        self.assertIn("@media print", focused_css)
+    def test_new_tools_use_shared_bottom_disclosure(self):
+        progress = (SITE / "assets/skill-progress.js").read_text(encoding="utf-8")
+        css = (SITE / "assets/skill-progress.css").read_text(encoding="utf-8")
+        self.assertIn('element("details"', progress)
+        self.assertIn('element("summary"', progress)
+        self.assertNotIn('data-skill-progress-floating', progress)
+        self.assertNotIn('--focused-tool-save-space', self.css)
+        self.assertNotIn('position: fixed', css)
+        self.assertIn('@media print', css)
 
 
 if __name__ == "__main__":

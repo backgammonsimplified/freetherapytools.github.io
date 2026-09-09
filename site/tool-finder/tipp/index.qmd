@@ -19,9 +19,9 @@ The goal is not always to feel good or solve the problem immediately. A useful r
 Temperature and Intense Exercise can affect heart rate and circulation. Use only approaches that are safe for your body. If you have a heart or circulation condition, a very low resting heart rate, significant cold sensitivity, take medication that affects heart rate, or have another medical concern, ask a qualified health professional before using these parts of TIPP.
 :::
 
+```{=html}
 <div class="d-flex flex-wrap gap-2 mb-4">
   <a class="btn btn-outline-primary" href="/resources/original/distress-tolerance/tipp-practice-worksheet.docx">Download DOCX worksheet</a>
-  <a class="btn btn-outline-secondary" target="_blank" rel="noopener" href="https://docs.google.com/gview?url=https%3A%2F%2Ffreetherapytools.github.io%2Fresources%2Foriginal%2Fdistress-tolerance%2Ftipp-practice-worksheet.docx">View with Google Docs Viewer</a>
   <button class="btn btn-outline-secondary" type="button" id="tipp-print">Print / Save as PDF</button>
   <button class="btn btn-outline-danger" type="button" id="tipp-clear">Clear this worksheet</button>
 </div>
@@ -164,6 +164,7 @@ Temperature and Intense Exercise can affect heart rate and circulation. Use only
   });
 }());
 </script>
+```
 
 ## References {#references}
 

@@ -3,12 +3,7 @@ project:
   output-dir: _site
   render:
     - "**/*.qmd"
-    - "!analyze/"
-    - "!engine-benchmark/"
-    - "!match-predictor/"
-    - "!posts/"
-    - "!research/"
-    - "!updates/"
+    - "!includes/**"
   pre-render:
   - python ../scripts/bs_pre_render.py
   - python ../scripts/page_publication.py validate-source
@@ -23,12 +18,17 @@ project:
     - assets/bs-glossary.js
     - assets/bs-learn.js
     - assets/site-path.js
-    - assets/docx-google-docs.js
     - assets/d3-values-force.min.js
     - assets/therapy-force-graph.js
     - assets/therapy-calendar.js
     - assets/skill-apps.js
     - assets/skill-progress.js
+    - assets/skill-progress-bar.js
+    - assets/skill-progress-bar.css
+    - assets/cbt-practice.js
+    - assets/cbt-practice.css
+    - "assets/cbt/**"
+    - "resources/free-therapy-tools/cbt/**"
     - assets/resource-paraphrases.js
     - assets/resource-review-app.js
     - assets/resource-review-app.css
@@ -38,6 +38,10 @@ project:
     - assets/skill-finder-apps.js
     - assets/skill-practice-apps.js
     - assets/skill-quick-tools.js
+    - assets/tool-question-flow.js
+    - assets/tool-question-flow.css
+    - assets/docx-google-docs.js
+    - "resources/original/**"
     - assets/tool-finder.js
     - assets/therapy-audio.js
     - "data/tool-finder/**"
@@ -47,7 +51,6 @@ project:
     - "resources/clean/mindfulness/**"
     - "resources/wellness/urge-surfing/**"
     - "resources/wellness/stages-of-change/**"
-    - "resources/original/**"
     - "data/skill-apps/**"
     - "data/resource-paraphrases/**"
     - assets/bs-glossary-lookup.json
@@ -55,7 +58,6 @@ project:
     - assets/bs-learn-sequence.json
     - assets/bs-cbt-sequence.json
     - assets/bs-mindfulness-sequence.json
-    - assets/bs-research-sequence.json
 
 filters:
   - bs-link-policy
@@ -107,7 +109,6 @@ format:
       - assets/bs-shared.css
       - assets/bs-components.css
       - assets/bs-learn.css
-      - assets/bs-lesson-analysis.css
       - assets/skill-apps.css
       - assets/skill-progress.css
       - assets/resource-paraphrases.css

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 860" role="img" aria-labelledby="title desc">
+  <title id="title">Facing fears and the avoidance cycle over time</title>
+  <desc id="desc">Two conceptual panels with anxiety level and time axes. Facing fears: anxiety rises, ride the wave and remain engaged, learn through experience, build confidence and greater freedom. Avoidance: repeated anxiety peaks and short-term relief can reinforce avoidance and restriction. Real experiences vary; anxiety need not fall during practice.</desc>
+  <rect width="720" height="860" rx="16" fill="#fbfaf6"/>
+  <g font-family="Arial, sans-serif" fill="#17365f">
+    <text x="36" y="46" font-size="28" font-weight="700">Facing your fears</text>
+    <text x="36" y="81" font-size="22">Approach → stay engaged → learn → repeat</text>
+    <g stroke="#17365f" stroke-width="3" fill="none"><path d="M95 315 V115 M95 315 H679"/></g>
+    <text x="24" y="127" font-size="18">High</text><text x="28" y="314" font-size="18">Low</text>
+    <text x="30" y="235" font-size="18" transform="rotate(-90 30 235)">Anxiety level</text>
+    <text x="616" y="345" font-size="20">Time →</text>
+    <path d="M100 295 C145 290 170 135 240 135 C310 135 310 202 365 235 S445 290 515 287 S615 283 670 270" fill="none" stroke="#28775d" stroke-width="6" stroke-linecap="round"/>
+    <text x="180" y="117" font-size="22" fill="#23654f">Ride the wave</text>
+    <text x="395" y="179" font-size="22" fill="#23654f">Direct experience</text>
+    <text x="395" y="210" font-size="22" fill="#23654f">Confidence / freedom</text>
+    <text x="36" y="387" font-size="20">Learning counts even when anxiety stays high.</text>
+    <path d="M36 416 H684" stroke="#c5d0d5"/>
+    <text x="36" y="462" font-size="28" font-weight="700">Safety behaviours / avoidance</text>
+    <text x="36" y="497" font-size="22">Anxiety → protect → relief → avoidance repeated</text>
+    <g stroke="#17365f" stroke-width="3" fill="none"><path d="M95 735 V530 M95 735 H679"/></g>
+    <text x="24" y="543" font-size="18">High</text><text x="28" y="734" font-size="18">Low</text>
+    <text x="30" y="662" font-size="18" transform="rotate(-90 30 662)">Anxiety level</text>
+    <text x="616" y="765" font-size="20">Time →</text>
+    <path d="M100 715 C130 710 142 630 167 630 S187 724 212 710 S249 605 278 600 S295 706 324 690 S367 568 397 565 S414 684 445 660 S489 545 516 540 S540 653 565 620 S630 550 670 531" fill="none" stroke="#b64c48" stroke-width="6" stroke-linecap="round"/>
+    <text x="124" y="574" font-size="22" fill="#963a38">Short-term relief</text>
+    <path d="M210 583 L212 691" stroke="#963a38" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="36" y="801" font-size="20">Repeated avoidance can restrict life over time.</text>
+    <text x="36" y="838" font-size="18">Conceptual curves only. Individual patterns vary.</text>
+  </g>
+</svg>

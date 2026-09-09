@@ -25,13 +25,14 @@ assert.deepEqual(
     "desktop-1440",
     "laptop-1280",
     "tablet-1024",
+    "tablet-768",
     "mobile-390",
     "small-mobile-320"
   ]
 );
 assert.ok(DEFAULT_MANIFEST.pages.some((page) => page.id === "home"));
 assert.deepEqual(
-  DEFAULT_MANIFEST.pages.find((page) => page.id === "cube-lesson")
+  DEFAULT_MANIFEST.pages.find((page) => page.id === "distress-tolerance-lesson")
     .required_markers,
   ["bs-learn-article"]
 );

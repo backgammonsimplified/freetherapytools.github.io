@@ -1,0 +1,27 @@
+.cbt-tool { max-width: 70rem; }
+.cbt-fields, .cbt-checklist { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.cbt-field, .cbt-checklist fieldset, .cbt-item, .cbt-practice { min-width: 0; }
+.cbt-field label { display: block; margin-bottom: .35rem; }
+.cbt-field :is(textarea, input) { box-sizing: border-box; width: 100%; min-width: 0; max-width: 100%; }
+.cbt-field textarea { min-height: 5rem; }
+.cbt-item, .cbt-practice { margin: 1rem 0; padding: 1rem; border: 1px solid #bfcdd2; border-radius: .5rem; background: #fff; }
+.cbt-item > summary, .cbt-practice > summary { cursor: pointer; font-weight: 700; padding: .4rem 0; overflow-wrap: anywhere; }
+.cbt-item > summary { font-size: 1.15rem; }
+.cbt-item[open] > summary, .cbt-practice[open] > summary { margin-bottom: 1rem; }
+.cbt-practice { background: #f4f8f7; }
+.cbt-checklist fieldset { padding: .8rem; border: 1px solid #bfcdd2; }
+.cbt-checklist legend { float: none; width: auto; font-size: 1.1rem; font-weight: 700; }
+.cbt-checklist .cbt-check { display: flex; align-items: flex-start; gap: .5rem; margin: .8rem 0; font-weight: 400; }
+.cbt-check input { flex: 0 0 auto; width: 1.1rem; height: 1.1rem; margin-top: .2rem; }
+.cbt-prompt { padding: 1rem; margin: 1rem 0; background: #f2f7f6; border: 1px solid #bfcdd2; border-radius: .5rem; }
+.cbt-prompt pre { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; padding: .75rem; }
+.cbt-prompt [role=status] { display: block; margin: .5rem 0; }
+.cbt-victory { padding: 1.2rem; text-align: center; border: 2px solid #467568; border-radius: .5rem; background: #edf5ed; overflow-wrap: anywhere; }
+.cbt-victory strong { letter-spacing: .08em; }
+.cbt-ladder { margin: 0 .5rem; padding: 0 .8rem; border-inline: .3rem solid #718e86; }
+.cbt-ladder > .cbt-item { border-bottom: .3rem solid #718e86; }
+.cbt-videos { display: grid; gap: 1.5rem; }
+.cbt-video iframe { display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; border: 0; }
+.cbt-diagram { width: 100%; max-width: 50rem; margin: 1.5rem 0; }
+@media (max-width: 780px) { .cbt-fields, .cbt-checklist { grid-template-columns: minmax(0, 1fr); } .cbt-item, .cbt-practice { padding: .7rem; } .cbt-ladder { margin: 0; padding: 0 .4rem; } }
+@media print { .cbt-tool button, .cbt-prompt { display: none; } .cbt-fields { display: block; } }

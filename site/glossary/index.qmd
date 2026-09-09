@@ -31,18 +31,6 @@ execute:
     <div class="bs-glossary-filter-options" role="group" aria-label="Filter by glossary category" data-bs-glossary-category-filters></div>
   </details>
 
-  <details class="bs-glossary-filter-disclosure" data-bs-glossary-track-disclosure>
-    <summary>Related learning track</summary>
-    <div class="bs-glossary-filter-options" role="group" aria-label="Filter by related learning track">
-      <button type="button" class="bs-glossary-filter bs-glossary-filter--track" data-bs-glossary-filter-track="Doubling Cube" aria-pressed="false">Doubling Cube</button>
-      <button type="button" class="bs-glossary-filter bs-glossary-filter--track" data-bs-glossary-filter-track="Checker Play" aria-pressed="false">Checker Play</button>
-      <button type="button" class="bs-glossary-filter bs-glossary-filter--track" data-bs-glossary-filter-track="Opening Play" aria-pressed="false">Opening Play</button>
-      <button type="button" class="bs-glossary-filter bs-glossary-filter--track" data-bs-glossary-filter-track="Match Play" aria-pressed="false">Match Play</button>
-      <button type="button" class="bs-glossary-filter bs-glossary-filter--track" data-bs-glossary-filter-track="Endgames" aria-pressed="false">Endgames</button>
-      <button type="button" class="bs-glossary-filter bs-glossary-filter--track" data-bs-glossary-filter-track="Engines and Analysis" aria-pressed="false">Engines and Analysis</button>
-    </div>
-  </details>
-
   <div class="bs-glossary-filter-footer">
     <p class="bs-glossary-result-count" aria-live="polite" data-bs-glossary-result-count></p>
     <button type="button" class="bs-glossary-clear" data-bs-glossary-clear hidden>Reset search and filters</button>

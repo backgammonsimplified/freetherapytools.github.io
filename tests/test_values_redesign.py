@@ -26,7 +26,9 @@ class ValuesRedesignTests(unittest.TestCase):
         self.assertEqual(next(row for row in rows if row["current_id"] == "perfection")["decision"], "REMOVE")
         excluded = {"MERGE_ALIAS", "MOVE_TO_DOMAIN", "REMOVE"}
         self.assertEqual(len(VALUES["values"]), sum(row["decision"] not in excluded for row in rows))
-        self.assertTrue((ROOT / "VALUES-DICTIONARY-REVIEW.md").is_file())
+        self.assertTrue(
+            (ROOT / "docs" / "reviews" / "VALUES-DICTIONARY-REVIEW.md").is_file()
+        )
 
     def test_canonical_cleanup_and_legacy_vocabulary(self):
         ids = [value["id"] for value in VALUES["values"]]
@@ -99,7 +101,7 @@ class ValuesRedesignTests(unittest.TestCase):
             "BEGIN:VCALENDAR", "DTSTART", "DURATION", "RRULE", "goalGtdMarkdown", "due_date", "therapy-skill-kit-progress",
         ):
             self.assertIn(token, GOAL_JS)
-        for token in ("Save progress (.md)", "Recommended. You can reopen this Markdown file later and continue.", "Export JSON", "Export DOCX", "Print / Save as PDF"):
+        for token in ("Save progress (.md)", "To resume your progress later, upload the .md file.", "Export JSON", "Export DOCX", "Print / Save as PDF"):
             self.assertIn(token, PROGRESS_JS)
         self.assertNotIn('text: "Save JSON"', PROGRESS_JS)
 

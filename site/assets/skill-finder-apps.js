@@ -15,6 +15,16 @@
   ]);
   const EMOTION_MATCH_DISCLAIMER = "These percentages show how many of the clues you selected appear in the source descriptions for each emotion. They are not probabilities, scores, or a diagnosis. Emotions can overlap, and your experience may not match any description exactly.";
   const Progress = global.TherapySkillProgress;
+  const CHECK_FACT_FIELDS = Object.freeze([
+    ["facts-event", "What changed in the situation just before this emotion showed up?"],
+    ["facts-observations", "Which details could a camera or recording have captured, without adding a judgment?"],
+    ["facts-interpretations", "What meanings, assumptions, or predictions is my mind adding? What else might explain what happened?"],
+    ["facts-threat", "If fear is part of this, what outcome am I predicting?"],
+    ["facts-likelihood", "Given what I know right now, how likely does that predicted outcome seem?"],
+    ["facts-catastrophe", "If the difficult outcome did happen, what could help me respond, cope, or get support?"],
+    ["facts-fit-reflection", "What in the situation supports the emotion I named, and what information points another way?"],
+    ["facts-intensity", "Does the intensity seem proportionate, or might it be higher or lower than the current facts suggest?"],
+  ]);
   const escapeHtml = (value) => String(value ?? "")
     .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;").replaceAll("'", "&#039;");
@@ -174,6 +184,21 @@
     return mode === "say-no" ? "Saying No" : mode === "ask" ? "Asking" : "Not selected";
   }
 
+  function checkFactsFieldsMarkup(answers = {}) {
+    return `<div class="check-facts-fields">${CHECK_FACT_FIELDS.map(([field, label]) => `<label for="tree-${field}">${escapeHtml(label)}</label><textarea id="tree-${field}" data-tree-fact="${field}">${escapeHtml(answers[field] || "")}</textarea>`).join("")}</div>`;
+  }
+
+  function checkFactsResourcesMarkup() {
+    return `<nav class="check-facts-resources" aria-label="Check the Facts references"><a href="${escapeHtml(Site.path("/learn/emotion-regulation/check-the-facts.html#check-the-facts"))}">Check the Facts - Handout 8 reference</a> · <a href="${escapeHtml(Site.path("/resources/clean/emotion-regulation/emotion-regulation-handout-8-check-the-facts-clean.pdf"))}" target="_blank" rel="noopener">Open printable Handout 8 <span class="visually-hidden">(opens in a new tab)</span></a> · <a href="${escapeHtml(Site.path("/learn/emotion-regulation/examples-emotions-fit-facts.html"))}">Handout 8A examples</a> · <a href="${escapeHtml(Site.path("/learn/emotion-regulation/opposite-action.html#opposite-action-decision-path"))}">Handout 9 decision guide</a></nav>`;
+  }
+
+  function allowedFlowAnswerKeys(flow) {
+    return [...new Set([
+      ...flow.nodes.map((node) => node.field).filter(Boolean),
+      ...(flow.id === "change-emotion" ? CHECK_FACT_FIELDS.map(([field]) => field) : []),
+    ])];
+  }
+
   function flowSummary(flow, state) {
     if (flow.id === "dime-game") {
       const score = dimeScore(flow, state.answers);
@@ -197,6 +222,20 @@
       ]);
     }
     const emotion = state.answers.emotion && global.__therapyEmotionNames?.[state.answers.emotion];
+    if (flow.id === "change-emotion") {
+      const answerLabels = Object.fromEntries([
+        ...CHECK_FACT_FIELDS,
+        ["fits-facts", "Does the emotion seem to fit what I know?"],
+        ["effective-fit", "Would acting on the emotion be effective?"],
+        ["effective-no-fit", "Would acting on the emotion be effective?"],
+      ]);
+      return Progress.nonEmptySections("Change an Emotion", [
+        ["Emotion I Noticed", emotion || state.answers.emotion],
+        ["Check the Facts Reflection", Object.entries(answerLabels).map(([key, label]) => state.answers[key] ? `${label} ${state.answers[key]}` : "").filter(Boolean)],
+        ["Decision Path", [...state.history, state.nodeId].map((id) => { const node = flow.nodes.find((item) => item.id === id); return node?.title || node?.prompt || id; })],
+        ["Current Decision Point", flow.nodes.find((node) => node.id === state.nodeId)?.title || flow.nodes.find((node) => node.id === state.nodeId)?.prompt],
+      ]);
+    }
     return Progress.nonEmptySections(flow.title, [
       ["Emotion", emotion || state.answers.emotion],
       ["Decision Path", [...state.history, state.nodeId].map((id) => { const node = flow.nodes.find((item) => item.id === id); return node?.title || node?.prompt || id; })],
@@ -216,7 +255,7 @@
       this.answers = {};
       this.render();
       if (Progress) {
-        const allowedAnswers = flow.nodes.map((node) => node.field).filter(Boolean);
+        const allowedAnswers = allowedFlowAnswerKeys(flow);
         Progress.registerTool({
           root,
           toolId: flow.id,
@@ -382,10 +421,10 @@
 
     checkFactsMarkup(node) {
       const emotion = this.context.emotions.find((item) => item.id === this.answers.emotion);
-      return `<div class="check-facts-editor"><p>Use the Handout 8 sequence before answering the tree question. Observable facts are different from judgments, absolutes, and black-and-white descriptions.</p>
-        ${[["facts-event", "What event prompted the emotion? Describe observable facts."], ["facts-interpretations", "What interpretations, thoughts, and assumptions are present? What other interpretations are possible?"], ["facts-threat", "Am I assuming a threat? What is it, and how likely is it?"], ["facts-catastrophe", "What is the catastrophe? How could I cope through problem solving, coping ahead, or acceptance?"]].map(([field, label]) => `<label for="tree-${field}">${escapeHtml(label)}</label><textarea id="tree-${field}" data-tree-fact="${field}">${escapeHtml(this.answers[field] || "")}</textarea>`).join("")}
+      return `<div class="check-facts-editor"><p>Pause before choosing a branch. The prompts below are an original guided reflection based on Check the Facts; they are not a digital copy of a DBT worksheet.</p>
+        ${checkFactsFieldsMarkup(this.answers)}
         ${emotion ? `<aside class="skill-app-note"><strong>Events that can justify ${escapeHtml(emotion.name)}</strong><ul>${emotion.fit_facts.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul><p>Intensity and duration also depend on likelihood, importance, and effectiveness.</p></aside>` : ""}
-        <p><a href="/learn/emotion-regulation/check-the-facts.html">Review Check the Facts</a> · <a href="/resources/clean/emotion-regulation/emotion-regulation-handout-8a-examples-of-emotions-that-fit-the-facts-clean.pdf" target="_blank" rel="noopener">Open Handout 8A examples <span class="visually-hidden">(opens in a new tab)</span></a></p></div>`;
+        ${checkFactsResourcesMarkup()}</div>`;
     }
 
     dynamicResult(node) {
@@ -469,7 +508,7 @@
 
     registerProgress() {
       if (!Progress) return;
-      const allowed = new Set([...this.flow.nodes.map((node) => node.field).filter(Boolean), "facts-event", "facts-interpretations", "facts-threat", "facts-catastrophe"]);
+      const allowed = new Set(allowedFlowAnswerKeys(this.flow));
       Progress.registerTool({
         root: this.root, toolId: this.flow.id, toolTitle: this.flow.title, route: Progress.TOOL_ROUTES[this.flow.id], schemaVersion: 1,
         getState: () => ({ nodeId: this.nodeId, history: this.history, answers: this.answers }),
@@ -523,10 +562,10 @@
 
     checkFactsMarkup() {
       const emotion = this.context.emotions.find((item) => item.id === this.answers.emotion);
-      return `<div class="check-facts-editor"><p>Use the Handout 8 sequence before answering. Describe observable facts separately from judgments and assumptions.</p>
-        ${[["facts-event", "What event prompted the emotion? Describe observable facts."], ["facts-interpretations", "What interpretations, thoughts, and assumptions are present? What other interpretations are possible?"], ["facts-threat", "Am I assuming a threat? What is it, and how likely is it?"], ["facts-catastrophe", "What is the catastrophe? How could I cope through problem solving, coping ahead, or acceptance?"]].map(([field, label]) => `<label for="tree-${field}">${escapeHtml(label)}</label><textarea id="tree-${field}" data-tree-fact="${field}">${escapeHtml(this.answers[field] || "")}</textarea>`).join("")}
+      return `<div class="check-facts-editor"><p>Pause before choosing a branch. The prompts below are an original guided reflection based on Check the Facts; they are not a digital copy of a DBT worksheet.</p>
+        ${checkFactsFieldsMarkup(this.answers)}
         ${emotion ? `<aside class="skill-app-note"><strong>Events that can justify ${escapeHtml(emotion.name)}</strong><ul>${emotion.fit_facts.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul><p>Intensity and duration also depend on likelihood, importance, and effectiveness.</p></aside>` : ""}
-        <p><a href="/learn/emotion-regulation/check-the-facts.html">Review Check the Facts</a> · <a href="/learn/emotion-regulation/examples-emotions-fit-facts.html">Read Examples of Emotions That Fit the Facts</a> · <a href="/resources/clean/emotion-regulation/emotion-regulation-handout-8a-examples-of-emotions-that-fit-the-facts-clean.pdf" target="_blank" rel="noopener">Open printable Handout 8A <span class="visually-hidden">(opens in a new tab)</span></a></p></div>`;
+        ${checkFactsResourcesMarkup()}</div>`;
     }
 
     dynamicResult(node) {
@@ -667,7 +706,7 @@
 
     registerProgress() {
       if (!Progress) return;
-      const allowed = new Set([...this.flow.nodes.map((node) => node.field).filter(Boolean), "facts-event", "facts-interpretations", "facts-threat", "facts-catastrophe"]);
+      const allowed = new Set(allowedFlowAnswerKeys(this.flow));
       Progress.registerTool({
         root: this.root, toolId: this.flow.id, toolTitle: this.flow.title, route: Progress.TOOL_ROUTES[this.flow.id], schemaVersion: 1,
         getState: () => ({ nodeId: this.nodeId, history: this.history, answers: this.answers }),
@@ -1168,6 +1207,6 @@
 
   global.SkillFinderFlowEngine = FlowEngine;
   global.SkillFinderConstrainedTreeEngine = ConstrainedTreeEngine;
-  if (typeof module !== "undefined" && module.exports) module.exports = { FlowEngine, ConstrainedTreeEngine, BODY_REGIONS, EMOTION_CLUE_CATEGORIES, EMOTION_MATCH_DISCLAIMER, buildEmotionClueIndex, normalizeEmotionExplorerState, emotionRoughMatches, emotionExplorerSummary, dimeScore, dimeMoney, dimeGuidance, flowSummary };
+  if (typeof module !== "undefined" && module.exports) module.exports = { FlowEngine, ConstrainedTreeEngine, BODY_REGIONS, CHECK_FACT_FIELDS, EMOTION_CLUE_CATEGORIES, EMOTION_MATCH_DISCLAIMER, allowedFlowAnswerKeys, buildEmotionClueIndex, normalizeEmotionExplorerState, emotionRoughMatches, emotionExplorerSummary, dimeScore, dimeMoney, dimeGuidance, flowSummary };
   if (typeof document !== "undefined") document.addEventListener("DOMContentLoaded", start);
 })(typeof window === "undefined" ? globalThis : window);

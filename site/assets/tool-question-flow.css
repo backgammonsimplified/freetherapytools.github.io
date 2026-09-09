@@ -1,0 +1,217 @@
+.skill-app-header.tool-header-functional-only {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/* Base contract for text-entry controls. Keep form text at normal reading size
+   and let controls use the full width available inside the established tool shell. */
+.skill-app :is(
+  textarea,
+  input[type="text"],
+  input[type="search"],
+  input[type="number"],
+  input[type="date"],
+  input[type="datetime-local"],
+  select
+) {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  font-family: inherit;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.skill-app textarea {
+  min-height: 7.5rem;
+}
+
+/* Preserve the pre-existing tool-shell geometry. Progressive reveal changes
+   question visibility only; it must not widen or reposition the app or save bar. */
+.skill-app.tool-progressive-enabled .skill-app-panel,
+.skill-app.tool-single-example .skill-app-panel {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.tool-progressive-controls {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 1rem;
+}
+
+.tool-progressive-controls button {
+  min-height: 2.35rem;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.9rem;
+}
+
+.tool-question-step {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0 0 1.1rem;
+  padding: 0;
+  transition:
+    max-height 0.6s ease,
+    opacity 0.45s ease,
+    transform 0.55s ease,
+    margin 0.5s ease,
+    padding 0.35s ease,
+    background-color 0.35s ease,
+    color 0.35s ease;
+  transform-origin: top;
+}
+
+.tool-question-step.is-concealed {
+  max-height: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-0.5rem);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.tool-question-step.is-revealed {
+  max-height: 200rem;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.tool-question-step.is-entering {
+  animation: tool-question-enter 0.7s ease both;
+}
+
+@keyframes tool-question-enter {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Completed answers stay visible above the active question and recede gently.
+   They remain editable; focus restores the normal active appearance. */
+.tool-question-step.is-answered:not(:focus-within):not(.is-current) {
+  padding: 0.8rem 0.95rem;
+  border-radius: 0.45rem;
+  background: #f1f2f2;
+  color: #626b70;
+}
+
+.tool-question-step.is-answered:not(:focus-within):not(.is-current) :is(textarea, input, select) {
+  border-color: #c8cdcf;
+  background: #f7f8f8;
+  color: #4f575b;
+}
+
+.tool-question-step > :is(textarea, input[type="text"], input[type="number"], select),
+.tool-question-step .cbt-field :is(textarea, input),
+.tool-question-step.case-map-field textarea,
+.tool-question-step.five-factor-card textarea {
+  width: 100%;
+  max-width: none;
+}
+
+.tool-question-help {
+  margin-top: 0.5rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid #e2e4e5;
+  font-size: 0.95rem;
+}
+
+.tool-question-help summary {
+  cursor: pointer;
+  color: #687176;
+  font-weight: 600;
+}
+
+.tool-question-help p {
+  margin: 0.45rem 0;
+  color: #626b70;
+}
+
+.tool-question-help > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tool-question-help a {
+  font-weight: 600;
+}
+
+/* Next appears only after the current question contains an answer. */
+.tool-question-next-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.8rem;
+}
+
+.tool-question-next-row button {
+  min-width: 7rem;
+}
+
+.tool-question-next-row button[hidden] {
+  display: none !important;
+}
+
+/* Avoidance is intentionally one worked example, not a repeatable list. */
+.skill-app[data-cbt-app="avoidance"] .cbt-fields {
+  display: block;
+  width: 100%;
+}
+
+.skill-app[data-cbt-app="avoidance"] .cbt-item.tool-avoidance-primary {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.skill-app[data-cbt-app="avoidance"] .cbt-item.tool-avoidance-primary > summary,
+.skill-app[data-cbt-app="avoidance"] .cbt-item.tool-avoidance-extra,
+.skill-app[data-cbt-app="avoidance"] [data-cbt-action="add"],
+.skill-app[data-cbt-app="avoidance"] [data-cbt-action="practice"],
+.skill-app[data-cbt-app="avoidance"] [data-cbt-action="remove"],
+.skill-app[data-cbt-app="avoidance"] .cbt-practice {
+  display: none !important;
+}
+
+.skill-app[data-cbt-app="avoidance"] .cbt-field {
+  width: 100%;
+  max-width: none;
+}
+
+.skill-app[data-cbt-app="avoidance"] .cbt-field :is(textarea, input) {
+  width: 100%;
+  max-width: none;
+}
+
+@media (max-width: 700px) {
+  .skill-app :is(textarea, input[type="text"], input[type="search"], input[type="number"], select) {
+    font-size: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tool-question-step {
+    transition: none;
+  }
+
+  .tool-question-step.is-entering {
+    animation: none;
+  }
+}

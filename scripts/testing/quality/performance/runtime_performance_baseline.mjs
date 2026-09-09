@@ -7,11 +7,11 @@ export const PERFORMANCE_CONTRACT = {
   measured_loads: 3,
   route_ids: [
     "home",
-    "cube-lesson",
-    "research-article",
+    "distress-tolerance-lesson",
+    "tool-finder",
     "glossary",
-    "analyze",
-    "match-predictor"
+    "box-breathing",
+    "change-emotion"
   ],
   viewport_names: ["desktop-1440", "mobile-390"],
   metric_names: [
@@ -227,7 +227,7 @@ const measureGlossaryInteractions = async ({ tab, baseUrl }) => {
   const search = tab.playwright.locator("[data-bs-glossary-search]");
   if ((await search.count()) === 1) {
     let started = Date.now();
-    await search.fill("active builder");
+    await search.fill("Wise Mind");
     await tab.playwright.locator("[data-bs-glossary-result-count]").textContent();
     measurements.glossary_search_ms = Date.now() - started;
     const clear = await visibleLocator(
@@ -236,7 +236,7 @@ const measureGlossaryInteractions = async ({ tab, baseUrl }) => {
     if (clear) await clear.click();
   }
   const filter = tab.playwright.locator(
-    "[data-bs-glossary-filter-track='Doubling Cube']"
+    "[data-bs-glossary-filter-category='Mindfulness']"
   );
   if ((await filter.count()) === 1) {
     const started = Date.now();
@@ -245,12 +245,12 @@ const measureGlossaryInteractions = async ({ tab, baseUrl }) => {
     measurements.glossary_filter_ms = Date.now() - started;
   }
   let started = Date.now();
-  await tab.goto(new URL("/glossary/#active-builder", baseUrl).href);
-  await tab.playwright.locator("#active-builder").getAttribute("open");
+  await tab.goto(new URL("/glossary/#wise-mind", baseUrl).href);
+  await tab.playwright.locator("#wise-mind").getAttribute("open");
   measurements.glossary_anchor_ms = Date.now() - started;
 
   await tab.goto(
-    new URL("/learn/distress-tolerance/what-the-cube-is-asking.html", baseUrl).href
+    new URL("/learn/mindfulness/mindfulness-foundations.html", baseUrl).href
   );
   const inlineLink = await visibleLocator(
     tab.playwright.locator("main .bs-inline-glossary[data-bs-glossary-slug]")

@@ -134,7 +134,7 @@ class TherapyCurriculumTests(unittest.TestCase):
             encoding="utf-8"
         )
         self.assertIn('section: "Distress Tolerance"', navigation)
-        self.assertIn('text: "2. TIPP"', navigation)
+        self.assertIn('section: "2. TIPP"', navigation)
         self.assertIn('id: cbt', navigation)
         self.assertIn('id: mindfulness', navigation)
         expected = {

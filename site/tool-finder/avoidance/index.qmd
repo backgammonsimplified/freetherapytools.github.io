@@ -1,0 +1,13 @@
+---
+title: "Avoidance & Approach Planner"
+description: "Notice what anxiety is keeping you from and choose a manageable approach step."
+sidebar: tool-finder
+page-layout: full
+toc: false
+---
+
+::: {#avoidance-app .skill-app data-cbt-app="avoidance"}
+Loading Avoidance & Approach Planner…
+:::
+
+<noscript>The interactive planner needs JavaScript. <a href="/resources/free-therapy-tools/cbt/avoidance-and-approach-planner.pdf">Download the printable worksheet (PDF)</a> or <a href="/resources/free-therapy-tools/cbt/avoidance-and-approach-planner.docx">editable worksheet (DOCX)</a>.</noscript>

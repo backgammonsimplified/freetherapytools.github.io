@@ -7,7 +7,7 @@ learn-order: 1
 categories:
   - Beginner
 tags:
-  - Checker Play
+  - Mindfulness
 terms:
   - wise-mind
 highlighted-terms:

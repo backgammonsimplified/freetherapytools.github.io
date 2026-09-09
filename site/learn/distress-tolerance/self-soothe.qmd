@@ -2,12 +2,12 @@
 title: "Distraction & Self-Soothing"
 description: "Use ACCEPTS and the five senses to get through distress without making it worse."
 sidebar: learn
-learn-track: doubling-cube
+learn-track: distress-tolerance
 learn-order: 3
 categories:
   - Beginner
 tags:
-  - Checker Play
+  - Distress Tolerance
 terms:
   - self-soothe
 body-classes: bs-learn-article

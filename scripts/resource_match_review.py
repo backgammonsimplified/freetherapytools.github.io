@@ -9,6 +9,7 @@ import html
 import sys
 from collections import defaultdict
 from pathlib import Path
+from urllib.parse import urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -70,7 +71,17 @@ def inventory_version(matches: list[dict[str, str]]) -> str:
 
 
 def review_link(route: str, source_id: str) -> str:
-    return f"{route}?review=1#resource-{source_id}"
+    source = SITE / urlsplit(route).path.lstrip("/")
+    if not source.suffix:
+        source = source / "index.qmd"
+    else:
+        source = source.with_suffix(".qmd")
+    text = source.read_text(encoding="utf-8")
+    anchor = f"resource-{source_id}"
+    if f"#{anchor}" in text or f'id="{anchor}"' in text:
+        return f"{route}?review=1#{anchor}"
+    # Removed source reproductions have no resource anchor; open the current lesson.
+    return f"{route}?review=1"
 
 
 def page_header(title: str) -> str:

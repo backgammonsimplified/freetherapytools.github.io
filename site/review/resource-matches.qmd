@@ -76,11 +76,11 @@ Review controls appear on localhost, 127.0.0.1, or when `?review=1` is present. 
 <li><a href="/learn/distress-tolerance/self-soothe.html?review=1#resource-distress-tolerance-p022">Distracting with Wise Mind ACCEPTS</a> <small class="bs-review-meta">distress-tolerance-p022 - Linehan clean copy</small></li>
 <li><a href="/learn/distress-tolerance/stop-crisis-survival.html?review=1#resource-distress-tolerance-p004">When to Use Crisis Survival Skills</a> <small class="bs-review-meta">distress-tolerance-p004 - Linehan clean copy</small></li>
 <li><a href="/learn/distress-tolerance/stop-crisis-survival.html?review=1#resource-distress-tolerance-p007">STOP Skill</a> <small class="bs-review-meta">distress-tolerance-p007 - Linehan clean copy</small></li>
-<li><a href="/learn/distress-tolerance/tipp.html?review=1#resource-distress-tolerance-p011">Window of Tolerance</a> <small class="bs-review-meta">distress-tolerance-p011 - Higher-resolution copy</small></li>
-<li><a href="/learn/distress-tolerance/tipp.html?review=1#resource-distress-tolerance-p012">Changing Your Body Chemistry with TIPP</a> <small class="bs-review-meta">distress-tolerance-p012 - Linehan clean copy</small></li>
-<li><a href="/learn/distress-tolerance/tipp.html?review=1#resource-distress-tolerance-p013">Using Cold Water, Step by Step</a> <small class="bs-review-meta">distress-tolerance-p013 - Linehan clean copy</small></li>
-<li><a href="/learn/distress-tolerance/tipp.html?review=1#resource-distress-tolerance-p014">Paired Muscle Relaxation, Step by Step</a> <small class="bs-review-meta">distress-tolerance-p014 - Linehan clean copy</small></li>
-<li><a href="/learn/distress-tolerance/tipp.html?review=1#resource-distress-tolerance-p016">Changing Body Chemistry with TIPP Skills</a> <small class="bs-review-meta">distress-tolerance-p016 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/tipp.html?review=1">Window of Tolerance</a> <small class="bs-review-meta">distress-tolerance-p011 - Higher-resolution copy</small></li>
+<li><a href="/learn/distress-tolerance/tipp.html?review=1">Changing Your Body Chemistry with TIPP</a> <small class="bs-review-meta">distress-tolerance-p012 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/tipp.html?review=1">Using Cold Water, Step by Step</a> <small class="bs-review-meta">distress-tolerance-p013 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/tipp.html?review=1">Paired Muscle Relaxation, Step by Step</a> <small class="bs-review-meta">distress-tolerance-p014 - Linehan clean copy</small></li>
+<li><a href="/learn/distress-tolerance/tipp.html?review=1">Changing Body Chemistry with TIPP Skills</a> <small class="bs-review-meta">distress-tolerance-p016 - Linehan clean copy</small></li>
 </ul>
 
 ### Emotion Regulation
@@ -148,7 +148,7 @@ Review controls appear on localhost, 127.0.0.1, or when `?review=1` is present. 
 
 <ul class="bs-review-link-list">
 <li><a href="/learn/goal-setting/goal-setting-guidelines.html?review=1#resource-general-p002">Skills &amp; Strengths List</a> <small class="bs-review-meta">general-p002 - Higher-resolution copy</small></li>
-<li><a href="/tool-finder/index.html?review=1#resource-general-p005">Skills Use Guideline</a> <small class="bs-review-meta">general-p005 - Higher-resolution copy</small></li>
+<li><a href="/tool-finder/index.html?review=1">Skills Use Guideline</a> <small class="bs-review-meta">general-p005 - Higher-resolution copy</small></li>
 </ul>
 
 ### Goal Setting & Tracking

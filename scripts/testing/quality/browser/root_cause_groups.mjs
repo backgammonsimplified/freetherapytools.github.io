@@ -11,8 +11,8 @@ const GROUP_RULES = [
   {
     id: "bs-root-continuous-duplicate-ids",
     pattern: /duplicate IDs|IDs are unique/i,
-    component: "continuous Learn/Research content",
-    source: ["site/assets/bs-learn-scroll.js", "site/assets/bs-research-scroll.js"],
+    component: "continuous Learn content",
+    source: ["site/assets/bs-learn-scroll.js"],
     task: "Correct duplicate IDs without excluding or suppressing appended content."
   },
   {

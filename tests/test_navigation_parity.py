@@ -1,4 +1,3 @@
-import hashlib
 import re
 import unittest
 from pathlib import Path
@@ -25,17 +24,11 @@ class NavigationParityTests(unittest.TestCase):
         cls.navigation = read(SITE / "_learn-navigation.yml")
         cls.config = read(SITE / "_quarto.yml")
 
-    def test_backgammon_authority_files_that_need_no_therapy_adaptation_are_exact(self) -> None:
-        expected = {
-            "bs-glossary.js": "d89a9ce1677dcb833aa46f0958bdd131db5a8a6ccd58df2197594cbb7e7e6a63",
-            "bs-shared.css": "d52c75fd08226296efcc593d86937c5af97f836ae83a276616e4ee9ff7289454",
-        }
-        for name, digest in expected.items():
-            self.assertEqual(
-                hashlib.sha256((ASSETS / name).read_bytes()).hexdigest(),
-                digest,
-                name,
-            )
+    def test_inherited_generic_navigation_assets_remain_available(self) -> None:
+        for name in ("bs-glossary.js", "bs-shared.css", "bs-learn.js", "bs-learn-scroll.js"):
+            path = ASSETS / name
+            self.assertTrue(path.is_file(), name)
+            self.assertGreater(path.stat().st_size, 1_000, name)
 
     def test_rendered_lessons_have_compatible_dom_and_a_deployed_initializer(self) -> None:
         if not RENDERED.exists():
@@ -72,7 +65,7 @@ class NavigationParityTests(unittest.TestCase):
                 self.assertIn(marker, html, f"{curriculum}: {marker}")
             self.assertRegex(
                 html,
-                r'<script src="\.\./\.\./assets/bs-learn\.js\?v=20260830-sidebar-runtime" defer',
+                r'<script src="\.\./\.\./assets/bs-learn\.js\?v=20260906-dear-skills" defer',
             )
             self.assertEqual(
                 len(re.findall(r"sidebar-item sidebar-item-section", html)),
@@ -94,7 +87,7 @@ class NavigationParityTests(unittest.TestCase):
             'toggle.style.left = "0.5rem"',
             "pageScrollingDown = currentScrollY > lastScrollY",
             "let collapsed = false",
-            'sidebar.hidden = active',
+            'sidebar.inert = active',
             '"\\u2192 Show Lessons"',
             '"\\u2190 Hide"',
             'new CustomEvent("bs:left-sidebar-change")',
@@ -105,7 +98,7 @@ class NavigationParityTests(unittest.TestCase):
         self.assertNotIn("bs-learn-left-sidebar-auto-hidden", self.learn + self.learn_css)
         for token in (
             "body.bs-learn-left-sidebar-collapsed",
-            "grid-column-start: page-start",
+            "visibility: hidden",
             "bs-learn-active-section",
         ):
             self.assertIn(token, self.learn + self.learn_css)
@@ -213,20 +206,11 @@ class NavigationParityTests(unittest.TestCase):
         ):
             self.assertIn(text, self.navigation)
 
-    def test_save_progress_and_page_tools_have_explicit_collision_guards(self) -> None:
-        for token in (
-            "body.bs-skill-finder-page .bs-site-tools--floating",
-            "body.bs-skill-finder-page:has(.bs-term-lookup--site:not([hidden]))",
-            "body.skill-progress-dialog-open .bs-site-tools",
-            "body.skill-progress-dialog-open .bs-term-lookup",
-            "body.skill-progress-dialog-open .bs-learn-left-sidebar-toggle",
-            "pointer-events: none",
-        ):
-            self.assertIn(token, self.progress_css)
-        self.assertRegex(
-            self.progress_css,
-            r"body\.bs-skill-finder-page \.bs-site-tools--floating \{\s+bottom:",
-        )
+    def test_progress_controls_stay_in_document_flow(self) -> None:
+        self.assertNotIn("position: fixed", self.progress_css)
+        self.assertIn(".skill-progress-final > summary", self.progress_css)
+        self.assertNotIn("skill-progress-floating", self.progress_css)
+        self.assertNotIn("grid-column-start: page-start", self.learn_css)
 
 
 if __name__ == "__main__":

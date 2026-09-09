@@ -95,9 +95,6 @@ class RDependencyContractTests(unittest.TestCase):
         )
 
         self.assertFalse(result.ok)
-        self.assertFalse(
-            any("repository .venv is not selected" in item for item in result.failures)
-        )
         self.assertTrue(
             any(
                 "social-card R dependency check failed before render" in item

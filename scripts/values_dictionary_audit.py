@@ -12,7 +12,7 @@ from values_workbook import DEFAULT_SOURCE, EXCLUDED_VALUE_NAMES, extract_values
 
 ROOT = Path(__file__).resolve().parents[1]
 CSV_OUTPUT = ROOT / "data" / "values-dictionary-review.csv"
-MARKDOWN_OUTPUT = ROOT / "VALUES-DICTIONARY-REVIEW.md"
+MARKDOWN_OUTPUT = ROOT / "docs" / "reviews" / "VALUES-DICTIONARY-REVIEW.md"
 
 MERGES = {
     "bravery": "courage",
