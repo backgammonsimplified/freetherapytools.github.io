@@ -1,13 +1,13 @@
 ---
 title: "Introduction and States of Mind"
-description: "Recognize emotion mind, reasonable mind, and Wise Mind."
+description: "Learn what mindfulness is, how the WHAT and HOW skills fit together, and how Wise Mind guides effective action."
 sidebar: mindfulness
 learn-track: mindfulness
 learn-order: 1
 categories:
   - Beginner
 tags:
-  - Checker Play
+  - Mindfulness
 terms:
   - wise-mind
 highlighted-terms:
@@ -20,48 +20,114 @@ execute:
   enabled: false
 ---
 
-Mindfulness is the practice of deliberately noticing what is happening now and relating to that experience with less automatic judgment or avoidance. It can be practised formally, such as during meditation, or informally during ordinary activities.
+Mindfulness is **being aware of the present moment with acceptance**. It is the practice of noticing what is happening now and relating to it with enough openness that you can choose how to respond.
+
+It is not about becoming detached from life, emptying your mind, or making every distraction disappear. Thoughts, emotions, memories, sensations, and urges still happen. Mindfulness helps you notice them without automatically handing them control.
 
 ## What mindfulness is {#what-mindfulness-is}
 
-Mindfulness means intentionally noticing present experience: sensations, thoughts, emotions, urges, actions, and surroundings. The aim is to be here for what is happening without immediately judging it, rejecting it, clinging to it, or reacting automatically. It is not a demand to empty the mind or feel calm.
+Mindfulness can be practised formally, such as during meditation, or informally while living your day. You can be mindful of:
 
-The source organizes the practice around three broad objectives:
+- **sensations and the five senses;**
+- **thoughts and cognitions;**
+- **emotions and moods;**
+- **urges and impulses;**
+- **actions and movements;**
+- **other people and the situation around you.**
 
-- reduce unnecessary suffering and support well-being;
-- gain more choice about where attention goes;
-- experience present reality more directly.
+The point is not to force yourself to feel a certain way. The point is to know more clearly what is happening while it is happening.
 
-These are directions for practice, not promises of a particular medical result.
+## Why practise mindfulness? {#why-practise-mindfulness}
 
-::: {.callout-note collapse="true" title="Where does automatic pilot show up?"}
-This is a reflection, not a test or score. Consider whether you sometimes:
+The teaching slides organize mindfulness around three broad aims. In original wording, we can summarize them as:
 
-- complete tasks without noticing much of the process;
-- rush from one activity to the next;
-- lose the present step while focusing on the goal;
-- listen while also doing something else;
-- become absorbed in the past or future; or
-- notice physical tension only after it becomes strong.
+1. **Reduce unnecessary suffering and support well-being.** Mindfulness can help reduce the extra layer of tension, struggle, and mental suffering that gets added when we fight every uncomfortable experience.
+2. **Increase control of your mind.** This does not mean controlling every thought. It means becoming less controlled by distraction, rumination, emotional momentum, or automatic habits, and gaining more choice about where attention goes.
+3. **Experience reality more directly.** Mindfulness asks you to notice what is actually happening now rather than living only through memories, predictions, judgments, or assumptions.
 
-Choose one familiar moment in which you could pause and notice one thing more clearly.
+Mindfulness often has less of an immediate "switch" effect than crisis skills such as TIPP. One practice session may not produce a dramatic result. Its strength is repeated use. Over time, the ability to notice, accept, and return can become more available in ordinary life and during difficult moments.
+
+::: {.callout-note title="Mindfulness is not emptying the mind"}
+A distracted mind is not a failed mindfulness practice. The moment you notice that attention has wandered, you are already practising awareness. The next step is choosing whether to return, stay with what arose, or shift attention intentionally.
 :::
+
+## How mindfulness supports other skills {#mindfulness-and-other-skills}
+
+Mindfulness is woven through the rest of the skills on this site.
+
+### Window of Tolerance
+
+Repeated mindfulness practice can help you notice early signs that you are moving toward hyperarousal or hypoarousal. That earlier awareness can give you more opportunity to respond before the nervous system is fully driving the situation. In that practical sense, mindfulness can support a wider and more usable window of tolerance over time.
+
+### Distress Tolerance
+
+Mindfulness can also be used **inside a distress-tolerance moment**. You might notice the sensations in your body, identify the emotion, observe an urge without immediately acting on it, and then choose a crisis-survival skill.
+
+### Wise Mind
+
+Wise Mind depends on awareness. If you cannot notice what Reasonable Mind and Emotion Mind are contributing, it is harder to integrate them. Mindfulness gives you the space to notice both without requiring either one to disappear.
+
+## The mindfulness skill families {#skill-families}
+
+The program organizes mindfulness into several related skill groups.
+
+### The WHAT skills {#what-skills}
+
+The WHAT skills describe **what you do with your attention**.
+
+#### Observe
+
+Notice the experience directly. Use the senses and body awareness to take in what is present before adding a story about it. Thoughts and feelings can also be observed as events occurring in the mind and body.
+
+#### Describe
+
+Put the experience into words. Aim for factual descriptions that separate what you can observe from interpretations and judgments. Describing helps make experience clearer without requiring you to argue with it.
+
+#### Participate
+
+Enter the experience fully. Instead of watching yourself from a distance or staying partly elsewhere in your mind, take part in the activity you are actually doing.
+
+### The HOW skills {#how-skills}
+
+The HOW skills describe **how you practise mindfulness**.
+
+#### Non-Judgmentally
+
+Notice judgments as judgments. You do not have to pretend everything is good or acceptable. The skill is separating observable facts from automatic labels, opinions, and evaluations so that you can respond more clearly.
+
+#### One-Mindfully
+
+Do one thing at a time. Bring your attention to the task, conversation, sensation, or experience in front of you. When the mind moves elsewhere, notice that movement and return. One-Mindfully is one of the most important practical mindfulness skills because it turns mindfulness from an idea into something you can use throughout the day.
+
+#### Effectively
+
+Focus on what works in the situation. Instead of getting trapped in whether events are fair, right, or how they should have happened, ask what the situation calls for now and what action is most likely to help.
+
+## Operations of Mind: Being and Doing {#operations-of-mind}
+
+Alongside States of Mind and the WHAT/HOW skills, it is useful to notice the **operations of mind**.
+
+**Doing Mind** is oriented toward goals, solving, changing, accomplishing, and getting somewhere. It is useful when action is needed.
+
+**Being Mind** is oriented toward experiencing, allowing, noticing, and being present without needing the moment to immediately become something else.
+
+Neither mode is inherently better. Problems arise when one mode takes over every situation. Mindfulness helps you notice which mode you are in and whether the moment calls for continuing, shifting, or balancing the two.
 
 ## States of Mind {#states-of-mind}
 
 ### Reasonable Mind {#reasonable-mind}
 
-Reasonable Mind emphasizes facts, logic, analysis, planning, and task focus. It can be especially useful for comparing options, organizing information, and carrying out a plan. Used alone, it may leave important feelings or values out of view.
+Reasonable Mind emphasizes facts, logic, analysis, planning, and task focus. It is useful for organizing information and solving problems. On its own, it can miss emotional information, needs, and values.
 
 ### Emotion Mind {#emotion-mind}
 
-Emotion Mind emphasizes feelings, moods, urges, and interpretations shaped by the current emotion. It can bring urgency, energy, and important information. When it takes over completely, it may narrow what seems possible.
+Emotion Mind emphasizes feelings, moods, urges, and interpretations shaped by emotion. It can bring energy, motivation, and important information. When it takes over completely, it can narrow attention and make immediate urges feel like the only option.
 
 ### Wise Mind {#wise-mind}
 
-Wise Mind takes both emotion and reason seriously and integrates them with a broader awareness of the situation. It is a middle-path capacity, not a formula of 50% logic plus 50% emotion. A Wise Mind response may still include uncertainty, strong feeling, or the need for more information.
+Wise Mind includes both reason and emotion while holding a wider awareness of the situation. It is not a mathematical halfway point. Sometimes Wise Mind leads to action, sometimes to acceptance, sometimes to waiting, and sometimes to asking for more information.
 
-Try describing one recent experience from each state of mind. What facts did Reasonable Mind notice? What feelings and urges did Emotion Mind bring forward? What did Wise Mind understand when both were included?
+The purpose of mindfulness is not to suppress Emotion Mind or replace it with Reasonable Mind. It is to become aware enough of both that you have a better chance of responding from Wise Mind.
 
 ## Practising Wise Mind {#practising-wise-mind}
 
@@ -69,7 +135,7 @@ Use any brief practice that fits the moment:
 
 ::: {.grid}
 ::: {.g-col-12 .g-col-md-6}
-**Settle like a lake.** Imagine a small object slowly settling through clear water. Let attention settle with it, without trying to force calm.
+**Settle like a lake.** Imagine a small object slowly settling through clear water. Let attention settle with it without forcing calm.
 :::
 ::: {.g-col-12 .g-col-md-6}
 **Centre on a spiral stair.** Picture moving gently down a spiral stair toward a steady inner place.
@@ -81,10 +147,10 @@ Use any brief practice that fits the moment:
 **Ask and listen.** Ask Wise Mind a question, or ask "Is this Wise Mind?" Then listen without demanding an immediate answer.
 :::
 ::: {.g-col-12 .g-col-md-6}
-**Centre and expand.** Notice breath or body contact at one point, then gradually include the room and the wider situation.
+**Centre and expand.** Notice breath or body contact at one point, then gradually include the room and wider situation.
 :::
 ::: {.g-col-12 .g-col-md-6}
-**Notice the pauses.** If comfortable, notice the natural pause where one breath changes into the next. Do not lengthen or hold it.
+**Notice the pauses.** If comfortable, notice the natural transition where one breath changes into the next. Do not lengthen or hold it.
 :::
 :::
 
@@ -92,64 +158,6 @@ Choose an ordinary activity as a short practice. Notice when attention moves awa
 
 [Use the Skill Thermometer](/tool-finder/thermometer/) when choosing a next skill would help.
 
-## Handouts & Worksheets {#handouts-worksheets}
+## About the source material {#source-note}
 
-### Original Source teaching pages
-
-[![Original Source: mindfulness overview and states-of-mind reflection](/resources/mindfulness/program-source/mindfulness-foundations-program-teaching.jpg){.img-fluid fig-alt="Original Source: mindfulness overview and states-of-mind reflection"}](/resources/mindfulness/program-source/mindfulness-foundations-program-teaching.pdf){target="_blank" rel="noopener"}
-
-[Open original source teaching pages](/resources/mindfulness/program-source/mindfulness-foundations-program-teaching.pdf){target="_blank" rel="noopener"}
-
-:::: {.bs-practice-resource #resource-mindfulness-program-p008 data-source-id="mindfulness-program-p008"}
-**Mindfulness Handout 1A - Mindfulness Definitions**
-
-**Original Source**
-
-[![Original Source: Mindfulness Definitions](/resources/mindfulness/program-source/mindfulness-handout-1a-definitions-original.jpg){.img-fluid fig-alt="Original Source: Mindfulness Definitions"}](/resources/mindfulness/program-source/mindfulness-handout-1a-definitions-original.pdf){target="_blank" rel="noopener"}
-
-[Open original source](/resources/mindfulness/program-source/mindfulness-handout-1a-definitions-original.pdf){target="_blank" rel="noopener"}
-
-::: {.bs-resource-match data-match-id="linehan-book:mindfulness-program-p008" data-source-id="mindfulness-program-p008" data-match-source="linehan-book" data-candidate-asset="/resources/clean/mindfulness/mindfulness-handout-1a-definitions-clean.pdf"}
-**Clean Printable Copy**
-
-[![Clean Printable Copy: Mindfulness Definitions](/resources/clean/mindfulness/mindfulness-handout-1a-definitions-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Mindfulness Definitions"}](/resources/clean/mindfulness/mindfulness-handout-1a-definitions-clean.pdf){target="_blank" rel="noopener"}
-
-[Open printable copy](/resources/clean/mindfulness/mindfulness-handout-1a-definitions-clean.pdf){target="_blank" rel="noopener"}
-:::
-::::
-
-:::: {.bs-practice-resource #resource-mindfulness-program-p009 data-source-id="mindfulness-program-p009"}
-**Mindfulness Handout 3 - Wise Mind: States of Mind**
-
-**Original Source**
-
-[![Original Source: Wise Mind States of Mind](/resources/mindfulness/program-source/mindfulness-handout-3-wise-mind-states-of-mind-original.jpg){.img-fluid fig-alt="Original Source: Wise Mind States of Mind"}](/resources/mindfulness/program-source/mindfulness-handout-3-wise-mind-states-of-mind-original.pdf){target="_blank" rel="noopener"}
-
-[Open original source](/resources/mindfulness/program-source/mindfulness-handout-3-wise-mind-states-of-mind-original.pdf){target="_blank" rel="noopener"}
-
-::: {.bs-resource-match data-match-id="linehan-book:mindfulness-program-p009" data-source-id="mindfulness-program-p009" data-match-source="linehan-book" data-candidate-asset="/resources/clean/mindfulness/mindfulness-handout-3-wise-mind-states-of-mind-clean.pdf"}
-**Clean Printable Copy**
-
-[![Clean Printable Copy: Wise Mind States of Mind](/resources/clean/mindfulness/mindfulness-handout-3-wise-mind-states-of-mind-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Wise Mind States of Mind"}](/resources/clean/mindfulness/mindfulness-handout-3-wise-mind-states-of-mind-clean.pdf){target="_blank" rel="noopener"}
-
-[Open printable copy](/resources/clean/mindfulness/mindfulness-handout-3-wise-mind-states-of-mind-clean.pdf){target="_blank" rel="noopener"}
-:::
-::::
-
-:::: {.bs-practice-resource #resource-mindfulness-program-p012-p013 data-source-id="mindfulness-program-p012-p013"}
-**Mindfulness Handout 3A - Ideas for Practicing Wise Mind**
-
-**Original Source**
-
-[![Original Source: Ideas for Practicing Wise Mind](/resources/mindfulness/program-source/mindfulness-handout-3a-practicing-wise-mind-original.jpg){.img-fluid fig-alt="Original Source: Ideas for Practicing Wise Mind"}](/resources/mindfulness/program-source/mindfulness-handout-3a-practicing-wise-mind-original.pdf){target="_blank" rel="noopener"}
-
-[Open original source](/resources/mindfulness/program-source/mindfulness-handout-3a-practicing-wise-mind-original.pdf){target="_blank" rel="noopener"}
-
-::: {.bs-resource-match data-match-id="linehan-book:mindfulness-program-p012-p013" data-source-id="mindfulness-program-p012-p013" data-match-source="linehan-book" data-candidate-asset="/resources/clean/mindfulness/mindfulness-handout-3a-practicing-wise-mind-clean.pdf"}
-**Clean Printable Copy**
-
-[![Clean Printable Copy: Ideas for Practicing Wise Mind](/resources/clean/mindfulness/mindfulness-handout-3a-practicing-wise-mind-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ideas for Practicing Wise Mind"}](/resources/clean/mindfulness/mindfulness-handout-3a-practicing-wise-mind-clean.pdf){target="_blank" rel="noopener"}
-
-[Open printable copy](/resources/clean/mindfulness/mindfulness-handout-3a-practicing-wise-mind-clean.pdf){target="_blank" rel="noopener"}
-:::
-::::
+This lesson summarizes and reorganizes ideas from the photographed mindfulness teaching slides supplied for this project, including the three broad objectives and the WHAT/HOW skill structure. The wording here is original and does not reproduce the handouts. Additional connections to the Window of Tolerance, Distress Tolerance, Wise Mind, and Being/Doing Mind reflect the Free Therapy Tools curriculum structure.
