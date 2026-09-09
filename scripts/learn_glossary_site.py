@@ -40,6 +40,10 @@ def install_extensions() -> None:
             distress_tools.append(tool)
     glossary.TOOL_FINDER_GROUPS["Distress Tolerance"] = tuple(distress_tools)
 
+    mindfulness_section = dict(glossary.LEARN_SECTIONS["mindfulness"])
+    mindfulness_section["home_source"] = "learn/mindfulness/index.qmd"
+    glossary.LEARN_SECTIONS["mindfulness"] = mindfulness_section
+
     original_parse_complete = glossary.parse_complete_front_matter
 
     def parse_complete_front_matter(path: Path) -> dict[str, object]:
