@@ -7,10 +7,10 @@ learn-order: 6
 categories:
   - Beginner
 tags:
-  - Checker Play
+  - Mindfulness
 terms:
   - how-skills
-body-classes: bs-learn-article
+body-classes: "bs-learn-article one-mindfully-page"
 page-layout: article
 toc: true
 toc-depth: 3
@@ -18,50 +18,106 @@ execute:
   enabled: false
 ---
 
-One-Mindfully is the second HOW skill: do one thing at a time and return attention to what is happening now.
+One-Mindfully is a core mindfulness HOW skill: **be here for this moment and do one thing at a time**. It sounds simple, but it changes how you relate to attention. Instead of asking your mind to hold several competing tasks at once, you choose what you are doing now, give it your attention, notice when attention wanders, and return.
 
-## One thing at a time {#one-mindfully}
+::: {.callout-important title="One thing at a time is the skill"}
+One-Mindfully is not just a productivity technique. It is a central mindfulness practice. When you listen, listen. When you plan, plan. When you eat, eat. When you notice that your mind has moved somewhere else, gently bring it back to the thing you are doing now.
+:::
 
-Thoughts about the past or future can still be present. The practice is not to erase them, but to avoid turning every thought into the current task. When planning, plan. When listening, listen. When washing one dish, wash that dish.
+## Switch tasking: why one thing at a time matters {#switch-tasking}
 
-Attention will wander. Notice where it went and return without framing ordinary distraction as failure. Simplifying the task or reducing interruptions can help, but the essential skill is the return.
+What people call multitasking is often **switch tasking**: attention moves back and forth between tasks. Each switch asks the mind to stop one set of information, find the other task again, and rebuild its place. The exercise in this video is a useful way to notice that cost directly.
+
+<div class="ratio ratio-16x9 mb-4">
+<iframe src="https://www.youtube-nocookie.com/embed/5eQyfirx2HA" title="Switch-tasking demonstration for One-Mindfully" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+The point is not that you must eliminate every interruption. Life requires switching sometimes. The mindfulness skill is to **know what you are doing while you are doing it** and, whenever possible, let one activity have your full attention before moving to the next.
+
+## What is "One-Mindfully"? {#what-is-one-mindfully}
+
+One-Mindfully means being as present as you can for this one moment. Thoughts, memories, plans, feelings, and worries may still arise. The practice is not to erase them. The practice is to notice what is happening now without becoming so absorbed in another time, another task, or another train of thought that you lose contact with the present activity.
+
+### The past is over {#past-is-over}
+
+The past can show up now as memories, images, regret, longing, anger, sadness, or other emotions. Those experiences are happening **in the present as memories and feelings**. One-Mindfully asks you to notice that distinction. Remembering the past is different from becoming lost in it and no longer noticing what is happening around you now.
+
+You can make space for a memory without making the memory the only thing you are doing. Notice it, name what is happening, and return to the present task when that is what you have chosen to do.
+
+### The future has not come into existence {#future-not-here}
+
+Planning and worrying about the future also happen in the present. Planning can be useful when planning is the task you have intentionally chosen. The difficulty comes when the mind keeps rehearsing possible futures while you are trying to do something else.
+
+One-Mindfully separates **planning** from **ruminating**. If it is time to plan, plan with your full attention. If it is time to listen, work, rest, eat, or connect with someone, return to that activity instead of repeatedly living through imagined futures.
+
+### One-Mindfulness means doing one thing at a time {#doing-one-thing}
+
+Doing one thing at a time means choosing the activity that matters in this moment and bringing your attention back to it. You do not have to perform it perfectly or keep your attention there without interruption. Minds wander. The practice is the return.
+
+This is why One-Mindfully is such an important mindfulness skill. It turns mindfulness from an idea into something you can practice throughout the day. You do not need a special meditation setting. Every ordinary activity becomes a chance to practice undivided attention.
+
+## Benefits of One-Mindfulness: Why do it? {#benefits}
+
+### The pain of the present moment is enough pain for anyone {#present-pain}
+
+The teaching pages distinguish between what is difficult **right now** and the extra suffering that can be added by repeatedly replaying past pain or anticipating future pain. Staying present does not make a difficult situation harmless or pleasant. It can help you deal with the experience that is actually here without carrying every remembered and imagined difficulty at the same time.
+
+### Multitasking is inefficient {#multitasking}
+
+Trying to do several attention-heavy things at once can feel faster because you are busy, but frequent switching can make each task harder to follow. You lose your place, rebuild context, miss details, and divide attention.
+
+One-Mindfully offers a different approach: finish the current unit of attention when you can, then deliberately move to the next. When switching is unavoidable, notice the switch instead of trying to mentally occupy both tasks at once.
+
+### Life, relationships, and beauty pass you by {#life-passes-by}
+
+When attention is continually somewhere else, you can physically be present without fully experiencing the moment. Conversations become background noise. Meals are barely noticed. A walk becomes time spent inside a worry. One-Mindfully is a way to participate in the life that is actually happening rather than repeatedly missing it while attention is elsewhere.
+
+## One-Mindfully: How to do it? {#how-to-do-it}
+
+### Be present to your own experiences {#be-present}
+
+Start by noticing your current experience rather than automatically avoiding, suppressing, or escaping it. Pay attention to what is here: sensations, emotions, thoughts, movements, urges, and actions. You do not have to approve of the experience. The first step is simply to know that it is happening.
+
+### Rivet yourself to now {#rivet-to-now}
+
+Choose the present activity and engage with it. If you are in a conversation, listen to the person. If you are walking, feel yourself walking. If you are eating, notice eating. If you are driving, drive.
+
+When thoughts about the past, future, or another task appear, notice them and come back. Returning is not evidence that the practice failed. **Returning is the practice.**
+
+### Do only one thing at a time {#one-thing-at-a-time}
+
+Give the current physical or mental activity as much undivided attention as you reasonably can. If another task needs your attention, pause and switch deliberately rather than trying to keep both active at once.
+
+A useful question is:
+
+> **What is the one thing I am doing right now?**
+
+If the answer is unclear, choose one thing. Do that. Then choose the next thing.
 
 ## Ordinary activities as practice {#ordinary-activities}
 
-Choose one familiar activity:
+One-Mindfully can be practiced in ordinary moments. Choose one familiar activity and make the activity itself the practice:
 
-- making tea or coffee;
-- washing dishes or hands;
-- cleaning one small area;
-- showering or bathing;
-- walking;
-- having a conversation; or
-- sitting for a brief meditation.
+- make tea or coffee and notice each step;
+- wash dishes and stay with the sensations and movements of washing;
+- clean one small area without mentally doing the next five jobs;
+- shower or bathe while noticing water, temperature, movement, and touch;
+- walk while paying attention to walking;
+- have a conversation while repeatedly returning to listening; or
+- sit for a brief meditation and return to one anchor when the mind wanders.
 
-Notice the next concrete action and its sensory details. When the mind leaves, come back to this action in this moment.
+You do not need to move slowly all day. The goal is awareness, not slowness. Start with activities where you can safely reduce distractions, then practice One-Mindfully during more ordinary and demanding parts of the day.
 
-## Handouts & Worksheets {#handouts-worksheets}
+## A short practice {#short-practice}
 
-### Original Source teaching pages
+1. Pick one activity you will do for the next two to five minutes.
+2. Name it: **"Right now, I am _____."**
+3. Put aside avoidable competing tasks for that short period.
+4. Notice the sensory and mental details of the activity.
+5. When attention wanders, notice where it went.
+6. Return to the activity without criticizing yourself for wandering.
+7. At the end, notice whether doing one thing changed your experience of the task.
 
-[![Original Source: One-Mindfully teaching pages](/resources/mindfulness/program-source/mindfulness-one-mindfully-program-teaching.jpg){.img-fluid fig-alt="Original Source: One-Mindfully teaching pages"}](/resources/mindfulness/program-source/mindfulness-one-mindfully-program-teaching.pdf){target="_blank" rel="noopener"}
-
-[Open original source teaching pages](/resources/mindfulness/program-source/mindfulness-one-mindfully-program-teaching.pdf){target="_blank" rel="noopener"}
-
-:::: {.bs-practice-resource #resource-mindfulness-program-p051 data-source-id="mindfulness-program-p051"}
-**Mindfulness Handout 5B - Ideas for Practicing One-Mindfulness**
-
-**Original Source**
-
-[![Original Source: Ideas for Practicing One-Mindfulness](/resources/mindfulness/program-source/mindfulness-handout-5b-practicing-one-mindfulness-original.jpg){.img-fluid fig-alt="Original Source: Ideas for Practicing One-Mindfulness"}](/resources/mindfulness/program-source/mindfulness-handout-5b-practicing-one-mindfulness-original.pdf){target="_blank" rel="noopener"}
-
-[Open original source](/resources/mindfulness/program-source/mindfulness-handout-5b-practicing-one-mindfulness-original.pdf){target="_blank" rel="noopener"}
-
-::: {.bs-resource-match data-match-id="linehan-book:mindfulness-program-p051" data-source-id="mindfulness-program-p051" data-match-source="linehan-book" data-candidate-asset="/resources/clean/mindfulness/mindfulness-handout-5b-practicing-one-mindfulness-clean.pdf"}
-**Clean Printable Copy**
-
-[![Clean Printable Copy: Ideas for Practicing One-Mindfulness](/resources/clean/mindfulness/mindfulness-handout-5b-practicing-one-mindfulness-clean.jpg){.img-fluid fig-alt="Clean Printable Copy: Ideas for Practicing One-Mindfulness"}](/resources/clean/mindfulness/mindfulness-handout-5b-practicing-one-mindfulness-clean.pdf){target="_blank" rel="noopener"}
-
-[Open printable copy](/resources/clean/mindfulness/mindfulness-handout-5b-practicing-one-mindfulness-clean.pdf){target="_blank" rel="noopener"}
+::: {.callout-note title="Source note"}
+This lesson summarizes and paraphrases the first two photographed One-Mindfully teaching pages supplied for this project. The section headings are retained to preserve the teaching structure, but the explanatory text is rewritten and condensed rather than reproduced. The practice examples are also summarized rather than copied from the accompanying mindfulness handout.
 :::
-::::
