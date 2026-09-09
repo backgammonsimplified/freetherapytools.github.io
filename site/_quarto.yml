@@ -88,7 +88,7 @@ website:
       - text: CBT Skills
         href: cbt-skills/index.qmd
       - text: Mindfulness
-        href: mindfulness/index.qmd
+        href: learn/mindfulness/index.qmd
     right:
       - href: glossary/index.qmd
         text: Glossary
