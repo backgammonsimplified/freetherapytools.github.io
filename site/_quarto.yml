@@ -24,6 +24,7 @@ project:
     - assets/bs-learn.js
     - assets/site-path.js
     - assets/docx-google-docs.js
+    - assets/learn-layout-stability.js
     - assets/d3-values-force.min.js
     - assets/therapy-force-graph.js
     - assets/therapy-calendar.js
