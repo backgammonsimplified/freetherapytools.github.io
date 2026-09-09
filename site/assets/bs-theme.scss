@@ -1,16 +1,18 @@
 /*-- scss:defaults --*/
 
-$body-bg: #FAF7F2;
-$body-color: #1B2040;
-$link-color: #915634;
-$navbar-bg: #FFFDFC;
-$navbar-fg: #1B2040;
-$navbar-hl: #915634;
-$border-color: #D9CCC0;
+$primary: #527873;
+$secondary: #526D87;
+$body-bg: #F6F7F3;
+$body-color: #3F4650;
+$link-color: #527873;
+$navbar-bg: #F6F7F3;
+$navbar-fg: #3F4650;
+$navbar-hl: #527873;
+$border-color: #B7CFC8;
 $font-family-sans-serif: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 $font-family-monospace: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 $headings-font-family: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-$headings-color: #11182F;
+$headings-color: #3F4650;
 $headings-font-weight: 650;
 $enable-rounded: true;
 $border-radius: 0.45rem;
@@ -18,6 +20,69 @@ $border-radius-sm: 0.35rem;
 $border-radius-lg: 0.55rem;
 
 /*-- scss:rules --*/
+
+/*
+  Coastal Mist palette.
+  Legacy --bs-* site tokens stay in place as compatibility aliases so existing
+  components adopt the new visual system without markup changes.
+*/
+html:root:not([data-bs-theme="dark"]):not([data-theme="dark"]) {
+  --coastal-cloud-ivory: #F6F7F3;
+  --coastal-pale-stone: #E9ECE6;
+  --coastal-primary: #527873;
+  --coastal-secondary: #526D87;
+  --coastal-lavender: #A5A9BE;
+  --coastal-sea-glass: #B7CFC8;
+  --coastal-text: #3F4650;
+
+  --bs-navy-dark: var(--coastal-text);
+  --bs-navy: var(--coastal-secondary);
+  --bs-slate: var(--coastal-secondary);
+
+  --bs-copper: var(--coastal-lavender);
+  --bs-copper-dark: var(--coastal-primary);
+
+  --bs-ivory: var(--coastal-pale-stone);
+  --bs-page-background: var(--coastal-cloud-ivory);
+  --bs-surface: var(--coastal-cloud-ivory);
+  --bs-sidebar-background: var(--coastal-pale-stone);
+  --bs-callout-surface: var(--coastal-pale-stone);
+
+  --bs-border: var(--coastal-sea-glass);
+  --bs-border-subtle: var(--coastal-sea-glass);
+  --bs-border-strong: var(--coastal-lavender);
+
+  --bs-text: var(--coastal-text);
+  --bs-text-secondary: var(--coastal-secondary);
+  --bs-text-muted: var(--coastal-secondary);
+  --bs-placeholder: var(--coastal-secondary);
+  --bs-text-inverse: #FFFFFF;
+  --bs-text-on-accent: #FFFFFF;
+
+  --bs-link: var(--coastal-primary);
+  --bs-link-on-warm: var(--coastal-secondary);
+  --bs-link-hover: var(--coastal-secondary);
+
+  --bs-badge-text: var(--coastal-text);
+  --bs-focus: var(--coastal-secondary);
+  --bs-focus-halo: rgba(82, 109, 135, 0.20);
+  --bs-shadow-soft: 0 12px 32px rgba(63, 70, 80, 0.08);
+
+  --bs-body-bg: var(--coastal-cloud-ivory);
+  --bs-body-color: var(--coastal-text);
+  --bs-emphasis-color: var(--coastal-text);
+  --bs-secondary-color: var(--coastal-secondary);
+  --bs-secondary-bg: var(--coastal-pale-stone);
+  --bs-tertiary-bg: var(--coastal-pale-stone);
+  --bs-border-color: var(--coastal-sea-glass);
+  --bs-border-color-translucent: rgba(183, 207, 200, 0.60);
+  --bs-link-color: var(--coastal-primary);
+  --bs-link-hover-color: var(--coastal-secondary);
+  --bs-primary: #527873;
+  --bs-primary-rgb: 82, 120, 115;
+  --bs-secondary: #526D87;
+  --bs-secondary-rgb: 82, 109, 135;
+}
 
 .navbar {
   border-bottom: 1px solid var(--bs-border);
@@ -33,20 +98,63 @@ $border-radius-lg: 0.55rem;
   font-weight: 800;
 }
 
-.navbar .nav-link.active,
-.navbar-nav .show > .nav-link {
-  background: var(--bs-navy-dark);
+html:root:not([data-bs-theme="dark"]):not([data-theme="dark"]) .navbar {
+  background: var(--coastal-cloud-ivory) !important;
+  border-bottom-color: var(--coastal-sea-glass);
+}
+
+html:root:not([data-bs-theme="dark"]):not([data-theme="dark"]) .navbar .nav-link.active,
+html:root:not([data-bs-theme="dark"]):not([data-theme="dark"]) .navbar-nav .show > .nav-link {
+  background: var(--coastal-primary);
   border-radius: 6px;
-  color: #fff !important;
+  color: #FFFFFF !important;
 }
 
-.navbar .nav-link:hover {
-  color: var(--bs-copper-dark) !important;
+html:root:not([data-bs-theme="dark"]):not([data-theme="dark"]) .navbar .nav-link:hover {
+  color: var(--coastal-primary) !important;
 }
 
-.navbar .nav-link.active:hover {
-  background: var(--bs-navy);
-  color: #fff !important;
+html:root:not([data-bs-theme="dark"]):not([data-theme="dark"]) .navbar .nav-link.active:hover {
+  background: var(--coastal-secondary);
+  color: #FFFFFF !important;
+}
+
+html:root:not([data-bs-theme="dark"]):not([data-theme="dark"]) .bs-button-primary,
+html:root:not([data-bs-theme="dark"]):not([data-theme="dark"]) .bs-analyzer-form button,
+html:root:not([data-bs-theme="dark"]):not([data-theme="dark"]) .btn-primary {
+  background: var(--coastal-primary) !important;
+  border-color: var(--coastal-primary) !important;
+  color: #FFFFFF !important;
+}
+
+html:root:not([data-bs-theme="dark"]):not([data-theme="dark"]) .bs-button-primary:hover,
+html:root:not([data-bs-theme="dark"]):not([data-theme="dark"]) .bs-analyzer-form button:hover,
+html:root:not([data-bs-theme="dark"]):not([data-theme="dark"]) .btn-primary:hover {
+  background: var(--coastal-secondary) !important;
+  border-color: var(--coastal-secondary) !important;
+}
+
+html:root:not([data-bs-theme="dark"]):not([data-theme="dark"]) .bs-button-secondary,
+html:root:not([data-bs-theme="dark"]):not([data-theme="dark"]) .bs-button-outline {
+  border-color: var(--coastal-primary);
+}
+
+html:root:not([data-bs-theme="dark"]):not([data-theme="dark"]) .bs-button-secondary {
+  background: var(--coastal-primary);
+  color: #FFFFFF;
+}
+
+html:root:not([data-bs-theme="dark"]):not([data-theme="dark"]) .bs-button-outline {
+  color: var(--coastal-primary);
+}
+
+html:root:not([data-bs-theme="dark"]):not([data-theme="dark"]) .bs-callout {
+  border-left-color: var(--coastal-lavender);
+}
+
+html:root:not([data-bs-theme="dark"]):not([data-theme="dark"]) .nav-footer {
+  background: var(--coastal-pale-stone);
+  border-top: 1px solid var(--coastal-sea-glass);
 }
 
 .quarto-title-banner {
