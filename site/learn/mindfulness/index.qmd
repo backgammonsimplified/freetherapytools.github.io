@@ -1,6 +1,6 @@
 ---
 title: "Mindfulness"
-description: "Twelve authored lessons for awareness, participation, compassion, grounding, and states of mind."
+description: "A twelve-lesson mindfulness curriculum for present-moment awareness, acceptance, Wise Mind, and everyday practice."
 sidebar: mindfulness
 learn-track-index: mindfulness
 learn-track-order: 6
@@ -10,5 +10,67 @@ toc: false
 term-lookup: false
 lesson-taxonomy: false
 ---
+
+Mindfulness is **being aware of the present moment with acceptance**. It means noticing what is happening now without immediately fighting it, clinging to it, judging it, or getting pulled away by every thought, feeling, or urge.
+
+Mindfulness is not only a meditation exercise. It is a way of living. You can be mindful while talking with someone, doing dishes, walking, working, eating, resting, or making a difficult decision.
+
+## What can you be mindful of? {#what-can-you-be-mindful-of}
+
+You can bring mindful awareness to many parts of experience:
+
+- **sensations and the five senses:** what you see, hear, touch, smell, taste, and feel in the body;
+- **thoughts and cognitions:** noticing ideas, memories, predictions, interpretations, and mental stories as thoughts;
+- **emotions:** noticing what you feel without needing to immediately suppress, fix, or act on the feeling;
+- **urges and actions:** noticing impulses and what you are doing in the moment;
+- **the situation around you:** taking in what is actually happening rather than only what your mind predicts or remembers.
+
+Mindfulness is not about becoming empty-minded or eliminating distraction. Minds wander. The skill is noticing that your attention moved and having more choice about where it goes next.
+
+## Why practise mindfulness? {#why-practise}
+
+Some distress-tolerance skills are designed to create a relatively fast change during a crisis. Mindfulness often works differently. A single practice may feel subtle, and the short-term result may be modest. Its strength is repetition. Over time, practising awareness and acceptance can make it easier to notice what is happening before automatically reacting.
+
+On Free Therapy Tools, mindfulness connects to several other skill areas:
+
+- **Window of Tolerance:** repeated practice can help you notice rising or falling activation earlier and respond before you are fully pulled into dysregulation;
+- **Distress Tolerance:** mindfulness can be used during a crisis to notice sensations, thoughts, emotions, and urges while you use another survival skill;
+- **Wise Mind:** mindfulness helps create the awareness needed to notice both emotion and reason and respond from a broader perspective;
+- **Emotion Regulation:** noticing an emotion clearly can make it easier to choose what to do with it;
+- **CBT:** mindful awareness can help you notice a thought as a thought before deciding whether to examine or act on it.
+
+The goal is not perfect control. It is **more choice and less automatic control by whatever happens to be loudest in the mind at that moment**.
+
+## The mindfulness skill map {#skill-map}
+
+This curriculum is organized around several related groups of skills.
+
+### States of Mind
+
+Reasonable Mind, Emotion Mind, and Wise Mind describe different ways information can guide us. Mindfulness helps us notice which state is dominant and make room for Wise Mind.
+
+### The WHAT skills
+
+The WHAT skills describe **what you do with attention**:
+
+- **Observe:** notice the experience directly;
+- **Describe:** put what you notice into words using factual language;
+- **Participate:** enter the activity fully instead of standing outside your own experience.
+
+### The HOW skills
+
+The HOW skills describe **how you practise**:
+
+- **Non-Judgmentally:** notice judgments without treating them as the whole truth;
+- **One-Mindfully:** do one thing at a time and keep returning attention to it;
+- **Effectively:** focus on what works in the situation rather than getting stuck on how things should be.
+
+### Operations of Mind
+
+Mindfulness also includes the movement between **Being Mind** and **Doing Mind**. Doing Mind is oriented toward goals, solving, changing, and accomplishing. Being Mind is oriented toward experiencing, allowing, and simply being present. Neither is always better. The skill is recognizing what the moment calls for and moving between them intentionally.
+
+## Start here {#start-here}
+
+Begin with **Introduction and States of Mind**, then work through the lessons in order or choose the skill that matches what you are practising now.
 
 {{< include _lesson-index.html >}}
