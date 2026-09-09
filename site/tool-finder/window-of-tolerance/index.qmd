@@ -1,0 +1,26 @@
+---
+title: "Window of Tolerance Tool"
+description: "Identify what tends to narrow your window of tolerance and what helps widen it, then print a personal plan."
+sidebar: tool-finder
+page-layout: full
+body-classes: window-of-tolerance-page
+toc: false
+execute:
+  enabled: false
+---
+
+Use this tool to notice patterns that can make your **window of tolerance narrower** and the things that can help **widen it or make it easier to return to**. The goal is a practical plan you can look at when your fuse feels short, you are overloaded, or you are starting to shut down.
+
+[Learn about the Window of Tolerance](/learn/distress-tolerance/index.html#window-of-tolerance)
+
+```{=html}
+<link rel="stylesheet" href="../../assets/window-of-tolerance.css">
+<div id="window-of-tolerance-app" class="skill-app" data-window-of-tolerance-app>
+  Loading Window of Tolerance Tool…
+</div>
+<script src="../../assets/window-of-tolerance.js"></script>
+```
+
+This tool is for reflection and planning. What helps can vary by person and by day; use your own experience and appropriate professional guidance when needed.
+
+[Back to Tool Finder](/tool-finder/)

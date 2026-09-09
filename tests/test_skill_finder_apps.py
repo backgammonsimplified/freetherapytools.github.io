@@ -34,7 +34,7 @@ class SkillFinderAppTests(unittest.TestCase):
 
     def test_every_skill_finder_page_uses_the_shared_sidebar(self):
         pages = sorted((SITE / "tool-finder").rglob("index.qmd"))
-        self.assertEqual(len(pages), 31)
+        self.assertEqual(len(pages), 33)
         for page in pages:
             self.assertIn("sidebar: tool-finder", page.read_text(encoding="utf-8"), page)
 

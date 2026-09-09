@@ -15,39 +15,45 @@ lesson-taxonomy: false
 
 The **window of tolerance** is the range where you have enough nervous-system regulation to respond to what is happening and live your day-to-day life. Inside the window, you can usually think, choose, connect, learn, solve problems, and respond rather than simply react. The broader window-of-tolerance model was introduced by Daniel J. Siegel [2].
 
-Outside the window, your nervous system has moved into dysregulation. A useful way to think about this is **survival mode**: much of your attention and energy may go toward reacting to what your body and emotions are doing and getting through the moment until you can return to a more regulated state.
+When you move far enough above or below that workable range, more of your attention and energy can shift toward getting through the moment. At the high end this can become **hyperarousal**. At the low end it can become **hypoarousal**. **Distress tolerance** is especially useful here: the immediate goal is to get through the moment safely, avoid making things worse, and move back toward enough regulation to choose what to do next.
 
-**Distress tolerance** gives you skills for those moments. The immediate goal is often to survive the crisis, avoid making it worse, and help yourself move back toward your window of tolerance. **Wellness, mindfulness, emotion regulation, interpersonal effectiveness, and other skills** can help reduce vulnerabilities, support day-to-day regulation, and gradually make your window more flexible over time.
+This is a **spectrum**, not a switch between "regulated" and "dysregulated." You do not have to be perfectly calm to be inside your window. You can be stressed, excited, sad, frustrated, or physically activated and still have enough regulation to think and respond effectively.
 
 ::: {.callout-note title="About this explanation"}
-The descriptions of hyperarousal, hypoarousal, dysregulation, the river analogy, and the original shrink-and-expand examples below are paraphrased from the 2020 *Window of Tolerance* infographic by Mind My Peelings [1]. The wording here is original rather than a reproduction of the handout.
+The descriptions of hyperarousal, hypoarousal, the river analogy, and the shrink-and-expand examples below are paraphrased from the 2020 *Window of Tolerance* infographic by Mind My Peelings [1]. The wording here is original rather than a reproduction of the handout.
 :::
 
-<!-- TODO: Add the original unicorn river Window of Tolerance diagram here when it is ready. -->
+![](/assets/distress-tolerance/window-of-tolerance-river.png){.img-fluid fig-alt="A river narrows near hyperarousal, widens through a workable regulated range, and narrows again toward hypoarousal. Calm water, faster currents, rocks, and rapids represent changing conditions across the spectrum." width="1536" height="1024"}
 
 ### Think of your window as a river {#window-river}
 
-One way to picture the window of tolerance is as a river that you are travelling down. When the river becomes narrow, the current speeds up and becomes harder and less safe to navigate. When the river becomes wider, the current slows and there is more room to stay balanced and calm. In that wider space, it is easier to feel relaxed and in control, function effectively, and deal with the challenges that come up in daily life [1].
+A useful way to picture the window of tolerance is as a **river in nature**. A healthy river is not perfectly still from beginning to end. It can have calm stretches, faster current, narrow sections, rocks, and rapids. In the same way, being regulated does not mean feeling calm every second. There can be rough or fast-moving parts of the day while you still have enough room to steer, make choices, and stay connected to what matters.
 
-### What the different states can feel like {#window-states}
+When the river narrows, the same water has less room and the current can become faster and harder to navigate. When your window narrows, stress and emotion can also become harder to manage before you are pushed toward hyperarousal or hypoarousal. When the river widens, there is more room to adjust and recover. Regulation skills can help you navigate a rough stretch, while longer-term habits and skills can gradually make your window more flexible and easier to return to [1].
 
-- **Hyperarousal:** Your nervous system is highly activated and more responsive than usual. You may feel anxious, panicky, angry, restless, urgent, or out of control. Your body may prepare to fight or run, and clear thinking can become harder [1].
-- **Upper-edge dysregulation:** You are moving above your window. You may feel tense, agitated, anxious, irritable, or increasingly reactive. You are uncomfortable, but you may still have some access to choice and control [1].
-- **Inside the window of tolerance:** You have enough activation to be alert and engaged without being overwhelmed. You can feel more balanced and calm, think clearly, make choices, connect with other people, learn, problem-solve, and respond effectively [1].
-- **Lower-edge dysregulation:** You are moving below your window. You may feel overwhelmed, slowed down, foggy, detached, or heavy. Your body may begin to shut down, and you may lose track of time. You are uncomfortable, but you may still have some access to choice and control [1].
-- **Hypoarousal:** Your nervous system is underactivated and less responsive than usual. You may feel emotionally numb, exhausted, disconnected, depressed or very low, frozen, very sleepy, or have difficulty moving, speaking, or thinking [1].
+The goal is therefore not to eliminate every rapid. Life will still contain stress, conflict, grief, excitement, uncertainty, and difficult days. The goal is to build enough regulation that more of the river remains navigable.
 
-The goal is not to stay inside the window every moment. Everyone moves in and out of it. The useful skill is noticing where you are, then choosing what may help you move toward enough regulation to respond again.
+### A spectrum from hyperarousal to hypoarousal {#window-states}
 
-### What can shrink or expand your window? {#shrink-expand-window}
+- **Hyperarousal:** Your nervous system is highly activated. You may feel anxious, panicky, angry, restless, urgent, overwhelmed, or driven to act immediately. Clear thinking can become harder [1].
+- **Higher activation while still in your window:** The water may be moving quickly, but you still have enough regulation to notice what is happening, pause, and choose a response.
+- **Calmer, regulated range:** You have enough activation to be alert and engaged without being overwhelmed. Thinking, learning, connecting, and problem-solving are usually easier [1].
+- **Lower activation while still in your window:** You may be tired, quiet, slowed down, or needing recovery, while still being able to respond and make choices.
+- **Hypoarousal:** Your nervous system is underactivated. You may feel emotionally numb, exhausted, disconnected, frozen, very sleepy, foggy, or have difficulty moving, speaking, or thinking [1].
+
+Distress-tolerance skills can help you move safely away from the extremes of hyperarousal or hypoarousal and back toward a more workable part of the spectrum. A partial shift counts. You do not need to go from overwhelmed to completely calm for a skill to be useful.
+
+If you are not sure what state you are in or what skill might fit, try the [Skill Thermometer](/tool-finder/thermometer/) or browse the [Tool Finder](/tool-finder/).
+
+### What can shrink or widen your window? {#shrink-expand-window}
 
 The original handout highlights **stress and trauma** as experiences that can narrow the window, while **meditation, listening to music, and engaging in hobbies** are examples of activities that may help widen it [1].
 
-Your window is not fixed. Stress, illness, trauma reminders, conflict, exhaustion, pain, hunger, dehydration, isolation, or too much stimulation can make the range feel narrower. Recovery, supportive routines, safe connection, and repeated practice with regulation skills can help make it easier to stay within or return to your window.
+Your window is not fixed. Stress, illness, trauma reminders, conflict, exhaustion, pain, hunger, dehydration, isolation, or too much stimulation can make the workable range feel narrower. Recovery, supportive routines, safe connection, and repeated practice with regulation skills can help make it easier to stay within or return to your window.
 
 Many factors can work in either direction depending on **balance, context, and what your nervous system needs that day**.
 
-| Factor | Can support or expand your window | Can shrink or strain your window |
+| Factor | Can support or widen your window | Can shrink or strain your window |
 |---|---|---|
 | **Sleep** | Enough regular, restorative sleep | Too little, poor-quality, or very irregular sleep |
 | **Food** | Regular meals and enough fuel | Hunger, skipping meals, or not eating enough |
@@ -58,6 +64,10 @@ Many factors can work in either direction depending on **balance, context, and w
 | **Mindfulness and enjoyable activities** | Grounding, meditation, music, hobbies, nature, and other restorative activities | Losing access to activities that help you settle, recover, or reconnect |
 
 More is not always better. Exercise can help and overexertion can drain you. Social connection can help and too much interaction can overwhelm you. Rest can help and long periods of inactivity may leave some people feeling more shut down. The aim is to learn what tends to widen or narrow **your** window and use that information early.
+
+Use the [Window of Tolerance Tool](/tool-finder/window-of-tolerance/) to make a personal list of what narrows your window, what widens it, and which supports are most useful to try first. The tool can be printed or saved as a PDF for quick reference.
+
+Over time, skills from [Wellness](/learn/wellness/), [Interpersonal Effectiveness](/learn/interpersonal-effectiveness/), [Thought Records and CBT](/learn/cbt-anxiety/thought-records.html), and [Emotion Regulation](/learn/emotion-regulation/) can help reduce vulnerabilities, solve recurring problems, and make difficult situations more manageable. [Mindfulness](/learn/mindfulness/) can help across the whole spectrum by making it easier to notice changes in your state earlier and respond more deliberately.
 
 ## Objectives {#objectives}
 

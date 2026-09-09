@@ -1,0 +1,234 @@
+.wot-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.wot-grid,
+.wot-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.wot-panel {
+  min-width: 0;
+}
+
+.wot-panel header > :last-child,
+.wot-plan-panel > :last-child {
+  margin-bottom: 0;
+}
+
+.wot-kicker {
+  margin: 0 0 .25rem;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  opacity: .72;
+}
+
+.wot-rows {
+  display: grid;
+  gap: .65rem;
+  margin: 1rem 0;
+}
+
+.wot-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(7.5rem, auto) auto;
+  gap: .5rem;
+  align-items: center;
+}
+
+.wot-row input,
+.wot-row select {
+  width: 100%;
+}
+
+.wot-rating-label {
+  font-size: .86rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.wot-remove {
+  white-space: nowrap;
+}
+
+.wot-plan-panel {
+  margin-top: 1.25rem;
+}
+
+.wot-plan-grid > section {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--bs-border-color, #d8dee4);
+  border-radius: .75rem;
+  background: var(--bs-body-bg, #fff);
+}
+
+.wot-plan-grid h4 {
+  margin-top: 0;
+}
+
+.wot-plan-grid ol,
+.wot-print-sheet ol {
+  display: grid;
+  gap: .45rem;
+  margin: .75rem 0 0;
+  padding-left: 1.35rem;
+}
+
+.wot-plan-grid li,
+.wot-print-sheet li {
+  padding-left: .15rem;
+}
+
+.wot-plan-grid li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: .75rem;
+  align-items: start;
+}
+
+.wot-rating-badge {
+  display: inline-block;
+  min-width: 4.5rem;
+  padding: .15rem .45rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: .78rem;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.wot-rating-badge[data-rating="high"] {
+  font-weight: 800;
+}
+
+.wot-empty {
+  margin-bottom: 0;
+  font-style: italic;
+  opacity: .75;
+}
+
+.wot-footer {
+  margin-top: 1.25rem;
+}
+
+.wot-print-sheet {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .wot-grid,
+  .wot-plan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wot-row {
+    grid-template-columns: minmax(0, 1fr) minmax(7.5rem, auto);
+  }
+
+  .wot-row input {
+    grid-column: 1 / -1;
+  }
+
+  .wot-rating-label {
+    grid-column: 1;
+  }
+
+  .wot-row select {
+    grid-column: 2;
+  }
+
+  .wot-remove {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+}
+
+@media print {
+  body > header,
+  body > footer,
+  .navbar,
+  #quarto-header,
+  #quarto-sidebar,
+  #quarto-margin-sidebar,
+  .quarto-secondary-nav,
+  .page-navigation,
+  .nav-footer,
+  .quarto-title-block,
+  #title-block-header,
+  .window-of-tolerance-page main.content > :not(#window-of-tolerance-app),
+  .wot-shell > .skill-app-header,
+  .wot-grid,
+  .wot-plan-panel,
+  .wot-footer {
+    display: none !important;
+  }
+
+  main.content,
+  #quarto-content,
+  .page-columns,
+  .content {
+    display: block !important;
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #window-of-tolerance-app,
+  .wot-shell {
+    display: block !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .wot-print-sheet {
+    display: block !important;
+    color: #000;
+    background: #fff;
+    font: 11pt/1.35 system-ui, sans-serif;
+  }
+
+  .wot-print-sheet h1 {
+    margin: 0 0 .35rem;
+    font-size: 20pt;
+  }
+
+  .wot-print-sheet h2 {
+    margin: 1.25rem 0 .4rem;
+    font-size: 14pt;
+    break-after: avoid;
+  }
+
+  .wot-print-intro {
+    max-width: 70ch;
+  }
+
+  .wot-print-sheet ol {
+    gap: .25rem;
+  }
+
+  .wot-print-sheet li {
+    break-inside: avoid;
+  }
+
+  .wot-print-sheet .wot-rating-badge {
+    margin-left: .45rem;
+    border: 0;
+    padding: 0;
+  }
+
+  .wot-print-sheet .wot-rating-badge::before {
+    content: "(";
+  }
+
+  .wot-print-sheet .wot-rating-badge::after {
+    content: ")";
+  }
+}
