@@ -24,6 +24,10 @@ website:
               href: tool-finder/pros-and-cons/index.qmd
             - text: "STOP"
               href: tool-finder/stop/index.qmd
+            - text: "TIPP Practice Tool"
+              href: tool-finder/tipp/index.qmd
+            - text: "Window of Tolerance Tool"
+              href: tool-finder/window-of-tolerance/index.qmd
         - section: "Mindfulness"
           contents:
             - text: "Grounding"
@@ -105,8 +109,17 @@ website:
           contents:
             - text: "1. Introduction & STOP"
               href: learn/distress-tolerance/stop-crisis-survival.qmd
-            - text: "2. TIPP"
+            - section: "2. TIPP"
               href: learn/distress-tolerance/tipp.qmd
+              contents:
+                - text: "Temperature"
+                  href: learn/distress-tolerance/temperature.qmd
+                - text: "Intense Exercise"
+                  href: learn/distress-tolerance/intense-exercise.qmd
+                - text: "Paced Breathing"
+                  href: learn/distress-tolerance/paced-breathing.qmd
+                - text: "Progressive Muscle Relaxation"
+                  href: learn/distress-tolerance/progressive-muscle-relaxation.qmd
             - text: "3. Distraction & Self-Soothing"
               href: learn/distress-tolerance/self-soothe.qmd
             - text: "4. IMPROVE"

@@ -73,7 +73,7 @@ def main() -> int:
         run(
             [
                 sys.executable,
-                str(REPO_ROOT / "scripts" / "learn_glossary.py"),
+                str(REPO_ROOT / "scripts" / "learn_glossary_site.py"),
                 "validate",
             ]
         )
@@ -84,7 +84,7 @@ def main() -> int:
     run(
         [
             sys.executable,
-            str(REPO_ROOT / "scripts" / "learn_glossary.py"),
+            str(REPO_ROOT / "scripts" / "learn_glossary_site.py"),
             "generate",
         ]
     )

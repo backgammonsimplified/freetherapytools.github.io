@@ -74,13 +74,12 @@ class GlossaryBuildFreshnessTests(unittest.TestCase):
         ), mock.patch.object(bs_pre_render, "run") as run:
             self.assertEqual(bs_pre_render.main(), 0)
 
-        run.assert_called_once_with(
-            [
-                bs_pre_render.sys.executable,
-                str(bs_pre_render.REPO_ROOT / "scripts" / "learn_glossary.py"),
-                "validate",
-            ]
-        )
+        scripts = bs_pre_render.REPO_ROOT / "scripts"
+        self.assertEqual(run.call_args_list, [
+            mock.call([bs_pre_render.sys.executable, str(scripts / "generate-resource-exports.py"), "--changed"]),
+            mock.call([bs_pre_render.sys.executable, str(scripts / "build-resource-paraphrase-assets.py")]),
+            mock.call([bs_pre_render.sys.executable, str(scripts / "learn_glossary_site.py"), "validate"]),
+        ])
 
     def test_partial_render_propagates_a_stale_output_failure(self) -> None:
         with mock.patch.dict(os.environ, {}, clear=True), mock.patch.object(

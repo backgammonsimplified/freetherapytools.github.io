@@ -22,6 +22,10 @@ TIPP is a set of body-based distress-tolerance skills for moments when emotional
 
 TIPP is especially useful when you notice very high activation, strong urges to act impulsively, or a sense that your body is driving the reaction. After the intensity comes down, you can decide what other skill fits the situation.
 
+## Video overview {#video-overview}
+
+{{< video https://www.youtube.com/watch?v=UuvH_j9O0f4 >}}
+
 ## TIPP at a glance {#tipp-at-a-glance}
 
 | Skill | What you are trying to change | Learn more |
@@ -29,7 +33,7 @@ TIPP is especially useful when you notice very high activation, strong urges to 
 | **T - Temperature** | Use safe cooling of the face or upper cheeks to create a rapid body-level shift in high arousal. | [Temperature](temperature.qmd) |
 | **I - Intense Exercise** | Use a short, safe burst of vigorous movement to use some of the physical energy that comes with high arousal. | [Intense Exercise](intense-exercise.qmd) |
 | **P - Paced Breathing** | Slow the breath, breathe into the belly, and make the exhale a little longer than the inhale. | [Paced Breathing](paced-breathing.qmd) |
-| **P - Progressive / Paired Muscle Relaxation** | Gently tense and release muscles while breathing so you can notice and reduce physical tension. | [Progressive Muscle Relaxation](progressive-muscle-relaxation.qmd) |
+| **P - Progressive Muscle Relaxation** | Gently tense and release muscles while breathing so you can notice and reduce physical tension. | [Progressive Muscle Relaxation](progressive-muscle-relaxation.qmd) |
 
 The four skills can be used separately. You do not need to complete all four every time. Choose the one that is safest, practical, and most likely to match what your body is doing.
 
@@ -51,9 +55,9 @@ Paced breathing slows the breathing rhythm and places more emphasis on the exhal
 
 [Read the Paced Breathing page](paced-breathing.qmd).
 
-## Progressive / Paired Muscle Relaxation {#progressive-muscle-relaxation}
+## Progressive Muscle Relaxation {#progressive-muscle-relaxation}
 
-Progressive or paired muscle relaxation teaches your body to notice the difference between tension and release. In the DBT version, you gently tense a muscle group while breathing in, then release the muscles as you breathe out. You can silently pair the release with a cue such as **relax** and notice the change in sensation. [1]
+Progressive Muscle Relaxation teaches your body to notice the difference between tension and release. In DBT, it is often taught as a paired version: gently tense a muscle group while breathing in, then release the muscles as you breathe out. You can silently pair the release with a cue such as **relax** and notice the change in sensation. [1]
 
 Practice tends to become easier when you first learn it in a quiet setting and then gradually use it in more ordinary environments. [Read the Progressive Muscle Relaxation page](progressive-muscle-relaxation.qmd).
 
