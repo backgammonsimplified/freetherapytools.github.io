@@ -226,7 +226,7 @@ website:
       collapse-level: 2
       contents:
         - text: "Mindfulness Home"
-          href: mindfulness/index.qmd
+          href: learn/mindfulness/index.qmd
         - section: "Mindfulness"
           href: learn/mindfulness/index.qmd
           contents:
