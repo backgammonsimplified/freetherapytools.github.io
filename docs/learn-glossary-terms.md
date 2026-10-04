@@ -6,4 +6,25 @@ Use only these canonical slugs in Learn and Research `terms` metadata. Every ter
 
 | Term | Canonical slug | Stable glossary anchor |
 |---|---|---|
+| Acceptance | `acceptance` | `/glossary/#acceptance` |
+| Acceptance and Commitment Therapy | `acceptance-and-commitment-therapy` | `/glossary/#acceptance-and-commitment-therapy` |
+| Automatic Thought | `automatic-thought` | `/glossary/#automatic-thought` |
+| Behavioural Activation | `behavioural-activation` | `/glossary/#behavioural-activation` |
+| Behavioural Experiment | `behavioural-experiment` | `/glossary/#behavioural-experiment` |
+| Cognitive Behavioural Therapy | `cognitive-behavioural-therapy` | `/glossary/#cognitive-behavioural-therapy` |
+| Cognitive Defusion | `cognitive-defusion` | `/glossary/#cognitive-defusion` |
+| Cognitive Model | `cognitive-model` | `/glossary/#cognitive-model` |
+| Committed Action | `committed-action` | `/glossary/#committed-action` |
+| Core Belief | `core-belief` | `/glossary/#core-belief` |
+| Dialectical Behaviour Therapy | `dialectical-behaviour-therapy` | `/glossary/#dialectical-behaviour-therapy` |
+| Emotion Mind | `emotion-mind` | `/glossary/#emotion-mind` |
+| HOW Skills | `how-skills` | `/glossary/#how-skills` |
+| Mindfulness | `mindfulness` | `/glossary/#mindfulness` |
+| Psychological Flexibility | `psychological-flexibility` | `/glossary/#psychological-flexibility` |
+| Reasonable Mind | `reasonable-mind` | `/glossary/#reasonable-mind` |
+| Self-as-Context | `self-as-context` | `/glossary/#self-as-context` |
+| Underlying Assumption | `underlying-assumption` | `/glossary/#underlying-assumption` |
+| Values | `values` | `/glossary/#values` |
+| WHAT Skills | `what-skills` | `/glossary/#what-skills` |
+| Willingness | `willingness` | `/glossary/#willingness` |
 | Wise Mind | `wise-mind` | `/glossary/#wise-mind` |

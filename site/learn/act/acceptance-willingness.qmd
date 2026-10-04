@@ -1,0 +1,61 @@
+---
+title: "Making Room for Experience"
+description: "Explore acceptance and willingness while staying connected to the present and to useful action."
+sidebar: act
+learn-track: act
+learn-order: 1
+categories:
+  - Beginner
+tags:
+  - Acceptance and Commitment Therapy
+terms:
+  - acceptance-and-commitment-therapy
+  - acceptance
+  - willingness
+  - psychological-flexibility
+highlighted-terms:
+  - acceptance
+  - willingness
+  - psychological-flexibility
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+execute:
+  enabled: false
+---
+
+You may have noticed how much effort can go into trying not to feel anxious, sad, embarrassed, or uncertain. Sometimes a coping strategy helps you stay engaged. Sometimes the effort to remove the feeling begins to organize your whole day.
+
+ACT invites you to look at the effect of a strategy in context: does it help you move toward the life you want, or does it increasingly restrict your choices?
+
+## Acceptance is an active choice
+
+**Acceptance** means allowing room for a present inner experience instead of making its disappearance a requirement for your next action. It does not mean liking the feeling, agreeing with every thought, accepting mistreatment, or staying in danger. Practical problem solving, boundaries, and support can remain necessary.
+
+**Willingness** asks what you are prepared to experience while doing something meaningful. You might allow some nervousness while greeting someone you want to know. The action can be small; willingness is not a test of how much distress you can endure.
+
+## Check what your strategy is doing
+
+Consider one recent attempt to get rid of an uncomfortable feeling. What did it change immediately? What happened to your choices afterward? Rest, distraction, and reassurance are not automatically wrong. Their usefulness depends on what they do in your circumstances and whether you can use them flexibly.
+
+The [Avoidance & Approach Planner](/tool-finder/avoidance/) can help you notice a pattern and identify a manageable alternative.
+
+## Try it: a brief opening
+
+Choose a mild, everyday discomfort for practice.
+
+1. Orient to the room and notice one point of physical contact, such as your feet on the floor.
+2. Name the feeling or sensation in ordinary language.
+3. Allow it to be present for a few moments without requiring yourself to change it.
+4. Choose one small useful action: listen to the next sentence, begin a task, or ask for what you need.
+5. Notice whether you had more room to choose, even if the feeling remained.
+
+You can pause or adapt the exercise. If turning inward increases distress or disconnection, use [Grounding](/tool-finder/grounding/) and external orientation instead.
+
+## What counts as progress?
+
+Look for flexibility: noticing earlier, reducing an unhelpful struggle, or taking a meaningful step. Immediate calm is not the only useful outcome. For moments of overwhelming distress, the [Skill Thermometer](/tool-finder/thermometer/) and [Distress Tolerance curriculum](../distress-tolerance/index.qmd) offer other ways to choose a next step.
+
+## Reference
+
+Original Free Therapy Tools summary and practice prompts informed by Steven C. Hayes with Spencer Smith, [*Get Out of Your Mind and Into Your Life*](https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/) (2005), Chapters 3-4 and 9-10. The authors' exercises and metaphors are not reproduced here.

@@ -58,6 +58,7 @@ project:
     - assets/bs-learn-scroll.js
     - assets/bs-learn-sequence.json
     - assets/bs-cbt-sequence.json
+    - assets/bs-act-sequence.json
     - assets/bs-mindfulness-sequence.json
 
 filters:
@@ -91,6 +92,8 @@ website:
         href: cbt-skills/index.qmd
       - text: Mindfulness
         href: learn/mindfulness/index.qmd
+      - text: ACT Skills
+        href: learn/act/index.qmd
     right:
       - href: glossary/index.qmd
         text: Glossary

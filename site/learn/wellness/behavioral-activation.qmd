@@ -9,7 +9,7 @@ categories:
 tags:
   - Wellness (Actions & Patterns)
 terms:
-  - behavioral-activation
+  - behavioural-activation
 body-classes: bs-learn-article
 page-layout: article
 toc: true

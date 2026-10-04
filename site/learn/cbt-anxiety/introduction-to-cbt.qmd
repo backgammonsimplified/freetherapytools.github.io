@@ -9,7 +9,7 @@ categories:
 tags:
   - CBT and Managing Anxiety
 terms:
-  - cbt
+  - cognitive-behavioural-therapy
 body-classes: bs-learn-article
 page-layout: article
 toc: true

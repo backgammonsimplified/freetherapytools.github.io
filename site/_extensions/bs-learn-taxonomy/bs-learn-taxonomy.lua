@@ -87,6 +87,7 @@ local function track_label(value)
     ["emotion-regulation"] = "Emotion Regulation",
     ["cbt-anxiety"] = "CBT Skills",
     ["mindfulness"] = "Mindfulness",
+    ["act"] = "ACT Skills",
   }
   if labels[value] then
     return labels[value]
@@ -106,6 +107,7 @@ local function track_href(value)
     ["wellness"] = "/learn/wellness/",
     ["emotion-regulation"] = "/learn/emotion-regulation/",
     ["cbt-anxiety"] = "/learn/cbt-anxiety/",
+    ["act"] = "/learn/act/",
     ["mindfulness"] = "/learn/mindfulness/",
   }
   return routes[value] or ("/learn/?track=" .. url_encode(value))

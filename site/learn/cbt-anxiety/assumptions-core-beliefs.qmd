@@ -1,0 +1,61 @@
+---
+title: "Assumptions & Core Beliefs"
+description: "Notice personal rules, test predictions, and gather evidence for a more flexible view of yourself."
+sidebar: cbt
+learn-track: cbt-anxiety
+learn-order: 7
+categories:
+  - Beginner
+tags:
+  - CBT and Managing Anxiety
+terms:
+  - underlying-assumption
+  - core-belief
+  - behavioural-experiment
+highlighted-terms:
+  - underlying-assumption
+  - core-belief
+  - behavioural-experiment
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+execute:
+  enabled: false
+---
+
+A difficult moment can involve more than one quick thought. A familiar rule may be shaping what you expect: asking for help means you are incapable, disagreement leads to rejection, or resting means you are falling behind. These rules may once have helped you cope. You can examine how well they fit your life now.
+
+## From a moment to a pattern
+
+An **automatic thought** concerns this situation: "They will be annoyed if I ask." An **underlying assumption** is a wider prediction: "Whenever I need help, people lose respect for me." A **core belief** is a broader conclusion, perhaps "I am inadequate."
+
+These are possible patterns to explore, not labels someone else can assign from one sentence. If reflecting on a belief becomes overwhelming or repetitive, return to a concrete situation and consider working through it with a therapist.
+
+## Test a rule in a manageable situation
+
+Choose a low-stakes prediction you can investigate safely. For example, someone who expects all requests for help to annoy others might ask a trusted colleague one specific question.
+
+Before acting, decide what you would actually observe if the prediction were right. Afterward, record what happened, including uncertainty. A brief answer could reflect a busy day; it does not automatically establish rejection. Repeated observations are more informative than treating one outcome as a final verdict.
+
+Use the [Avoidance & Approach Planner](/tool-finder/avoidance/) to choose a small step. The [Safety Behaviours & Exposure lesson](safety-behaviours-exposure.qmd#behavioural-experiments) explains how experiments differ from trying to guarantee a comfortable outcome.
+
+## Build a believable alternative
+
+The aim is a view that fits the evidence, not an affirmation you feel obliged to accept. "Needing help and being capable can coexist" leaves more room than either "I am incapable" or "I can do everything alone."
+
+Notice everyday experiences that support the alternative. Include small examples instead of dismissing them because they were imperfect. You can keep these observations in a [Thought Record](/tool-finder/thought-record/) or your own notes.
+
+## Try it: one rule, one observation
+
+Write a short note with four parts:
+
+- The recurring rule that has been influencing your choices.
+- A more flexible possibility worth investigating.
+- One safe action that could produce useful information.
+- What you observed and what remains uncertain.
+
+Review the evidence without grading yourself. An experiment that surprises you, or needs redesigning, can still be useful.
+
+## Reference
+
+Original Free Therapy Tools summary and practice prompts informed by Dennis Greenberger and Christine A. Padesky, [*Mind Over Mood*, second edition](https://www.guilford.com/books/Mind-Over-Mood/Greenberger-Padesky/9781462520428), Chapters 11-12, printed pp. 132-187. For the authors' full explanations and worksheets, consult the book.

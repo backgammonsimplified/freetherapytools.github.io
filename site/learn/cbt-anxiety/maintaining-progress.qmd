@@ -1,0 +1,58 @@
+---
+title: "Maintaining Progress"
+description: "Keep useful skills in practice, notice early changes, and prepare a manageable response to setbacks."
+sidebar: cbt
+learn-track: cbt-anxiety
+learn-order: 9
+categories:
+  - Beginner
+tags:
+  - CBT and Managing Anxiety
+terms:
+  - behavioural-activation
+  - values
+highlighted-terms:
+  - behavioural-activation
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+execute:
+  enabled: false
+---
+
+When things improve, it is easy to stop using the skills that helped. Keeping a small amount of practice in ordinary weeks can make the skills easier to return to during a difficult period. A setback is information to respond to, not proof that earlier progress has vanished.
+
+## Notice what is helping
+
+Look back at a recent situation that went a little differently. Which action made a useful contribution? Perhaps you checked an assumption, returned a call, ate regularly, or started a task before feeling ready.
+
+Choose one or two practices you can maintain. A short, repeatable plan is often more workable than trying to use every skill each day.
+
+## Keep activity connected to your life
+
+With low mood, reduced activity can narrow opportunities for enjoyment, connection, or accomplishment. **Behavioural activation** uses manageable planned actions to investigate that pattern. Make room for necessary care and rest as well as activity; being busy is not the goal.
+
+Use the [Behavioural Activation planner](/tool-finder/behavioural-activation/) to choose a doable step and observe its effect. The [Gratitude Journal](/tool-finder/gratitude-journal/) can help you notice specific positive experiences without denying difficulties. [Values Review](/tool-finder/values-review/) connects practice to what matters to you.
+
+## Prepare for your own early signs
+
+Changes such as withdrawing from people, avoiding routine tasks, disrupted sleep, or increasingly rigid thinking may be useful signals for some people. Decide which changes are meaningful for you rather than treating every difficult day as a relapse.
+
+Write a brief plan you could understand on a tired day:
+
+- **A signal to notice:** one change from your usual pattern.
+- **A first response:** a practical action you can take promptly.
+- **A person or service:** who you could contact if things continue to worsen.
+- **A review point:** when you will check whether more support is needed.
+
+Persistent or worsening symptoms, or difficulty managing daily life, are reasons to seek professional support rather than relying on a self-help plan alone.
+
+## Practise the plan before you need it
+
+Imagine an ordinary setback and rehearse the first step. If the plan depends on high energy, perfect motivation, or several hours of free time, simplify it. Keep it somewhere you can find it, and adjust it as you learn what helps.
+
+The [SMART Goal Builder](/tool-finder/goal-builder/) can turn a practice into a specific next action. Keep reviewing what is workable; progress does not need to look the same every week.
+
+## Reference
+
+Original Free Therapy Tools summary and practice prompts informed by Dennis Greenberger and Christine A. Padesky, [*Mind Over Mood*, second edition](https://www.guilford.com/books/Mind-Over-Mood/Greenberger-Padesky/9781462520428), Chapters 12-13 and 16, especially printed pp. 280-291. The skills review on pp. 282-285 helped identify topics to cover; its checklist and rating system are not reproduced here.

@@ -88,6 +88,14 @@ class GlossaryPageGenerationTests(unittest.TestCase):
         self.assertIsNotNone(first_link)
         self.assertEqual(first_link.group(1), "wise-mind")
 
+    def test_acronym_links_do_not_capture_ordinary_words(self) -> None:
+        act = public_entry("Acceptance and Commitment Therapy", "act-therapy", aliases=("ACT",))
+        sample = public_entry("Example", "example", definition="ACT can help you act with care.")
+        output = learn_glossary.linked_definition_html(sample, [sample, act])
+        self.assertEqual(output.count('data-bs-glossary-slug="act-therapy"'), 1)
+        self.assertIn(">ACT</a>", output)
+        self.assertIn("help you act with care", output)
+
     def test_self_links_are_prevented(self) -> None:
         entry = public_entry(
             "Wise Mind",

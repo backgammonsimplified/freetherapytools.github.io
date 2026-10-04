@@ -10,6 +10,9 @@
     if (route.startsWith("/learn/cbt-anxiety/") || route.startsWith("/cbt-skills/")) {
       return "/assets/bs-cbt-sequence.json";
     }
+    if (route.startsWith("/learn/act/")) {
+      return "/assets/bs-act-sequence.json";
+    }
     if (route.startsWith("/learn/mindfulness/") || route.startsWith("/mindfulness/")) {
       return "/assets/bs-mindfulness-sequence.json";
     }

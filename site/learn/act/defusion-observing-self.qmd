@@ -1,0 +1,58 @@
+---
+title: "Thoughts & the Observing Perspective"
+description: "Notice thinking without automatically following it, and practise a broader perspective on experience."
+sidebar: act
+learn-track: act
+learn-order: 2
+categories:
+  - Beginner
+tags:
+  - Acceptance and Commitment Therapy
+terms:
+  - cognitive-defusion
+  - self-as-context
+  - mindfulness
+highlighted-terms:
+  - cognitive-defusion
+  - self-as-context
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+execute:
+  enabled: false
+---
+
+A thought can feel like a command, prediction, or complete description of who you are. ACT explores whether you can notice that thought and still have a choice about what you do next.
+
+## Change your relationship to a thought
+
+**Cognitive defusion** means recognizing thinking as an activity of the mind. You do not need to decide that a thought is false, replace it with something positive, or make it disappear.
+
+For example, a prediction that you will fail might appear before an important task. You can acknowledge the prediction, check any practical concerns, and decide whether a small step is still worthwhile. Defusion does not mean ignoring evidence or genuine danger.
+
+## Try it: notice, orient, choose
+
+Start with a mildly unhelpful thought rather than your most painful experience.
+
+- Write the thought in a few words and notice how it influences your next move.
+- Identify its form: perhaps a prediction, comparison, memory, or self-judgment.
+- Briefly notice something outside the thought: a sound, a colour, or the activity in front of you.
+- Choose a small response that fits what matters now.
+
+Review whether this made your response more flexible. The thought may still feel convincing. That does not prevent you from noticing it as a thought.
+
+## The observing perspective
+
+**Self-as-context** refers to the perspective from which you notice experiences. Your thoughts, moods, roles, and memories change; none needs to be the entire definition of you.
+
+For a brief practice, notice one thought, one sensation, and one sound. Each is part of your current experience. You do not have to become distant from your body or surroundings. If the exercise feels unreal or disconnecting, stop and return to concrete external [Grounding](/tool-finder/grounding/).
+
+## Choose the question that helps
+
+A [Thought Record](/tool-finder/thought-record/) asks you to examine an interpretation and its evidence. Defusion asks whether you can notice the thought without automatically organizing your behaviour around it. Either approach can be useful, and neither demands that you deny a real difficulty.
+
+Continue with [Mindfulness of Thoughts](../mindfulness/mindfulness-of-thoughts.qmd) for everyday noticing, or move to [Values & Committed Action](values-committed-action.qmd) to choose what to do next.
+
+## Reference
+
+Original Free Therapy Tools summary and practice prompts informed by Steven C. Hayes with Spencer Smith, [*Get Out of Your Mind and Into Your Life*](https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/) (2005), Chapters 5-8, especially printed pp. 69-104. This page uses original examples rather than reproducing the book's exercises.

@@ -1,0 +1,41 @@
+{
+  "lessons": [
+    {
+      "lesson_order": 1,
+      "next_route": "/learn/act/defusion-observing-self.html",
+      "next_starts_new_track": false,
+      "previous_route": null,
+      "route": "/learn/act/acceptance-willingness.html",
+      "sequence_index": 0,
+      "title": "Making Room for Experience",
+      "track_id": "act",
+      "track_order": 8,
+      "track_title": "ACT Skills"
+    },
+    {
+      "lesson_order": 2,
+      "next_route": "/learn/act/values-committed-action.html",
+      "next_starts_new_track": false,
+      "previous_route": "/learn/act/acceptance-willingness.html",
+      "route": "/learn/act/defusion-observing-self.html",
+      "sequence_index": 1,
+      "title": "Thoughts & the Observing Perspective",
+      "track_id": "act",
+      "track_order": 8,
+      "track_title": "ACT Skills"
+    },
+    {
+      "lesson_order": 3,
+      "next_route": null,
+      "next_starts_new_track": false,
+      "previous_route": "/learn/act/defusion-observing-self.html",
+      "route": "/learn/act/values-committed-action.html",
+      "sequence_index": 2,
+      "title": "Values & Committed Action",
+      "track_id": "act",
+      "track_order": 8,
+      "track_title": "ACT Skills"
+    }
+  ],
+  "schema_version": 1
+}

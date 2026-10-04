@@ -1,6 +1,6 @@
 ---
 title: "CBT Skills"
-description: "The six-session CBT curriculum."
+description: "A CBT curriculum for thoughts, behaviour, emotions, and maintaining progress."
 sidebar: cbt
 learn-track-index: cbt-anxiety
 learn-track-order: 7

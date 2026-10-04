@@ -28,10 +28,11 @@ class TherapyCurriculumTests(unittest.TestCase):
                 "Emotion Regulation",
                 "Mindfulness",
                 "CBT Skills",
+                "ACT Skills",
             ],
         )
-        self.assertEqual(len(lessons), 58)
-        expected_counts = {"dbt": 40, "cbt": 6, "mindfulness": 12}
+        self.assertEqual(len(lessons), 64)
+        expected_counts = {"dbt": 40, "cbt": 9, "mindfulness": 12, "act": 3}
         for section_id, expected_count in expected_counts.items():
             section = learn_glossary.curriculum_for_section(curriculum, section_id)
             sequence = learn_glossary.build_learn_sequence(section)
@@ -139,8 +140,9 @@ class TherapyCurriculumTests(unittest.TestCase):
         self.assertIn('id: mindfulness', navigation)
         expected = {
             "bs-learn-sequence.json": 40,
-            "bs-cbt-sequence.json": 6,
+            "bs-cbt-sequence.json": 9,
             "bs-mindfulness-sequence.json": 12,
+            "bs-act-sequence.json": 3,
         }
         for filename, count in expected.items():
             sequence = yaml.safe_load(
@@ -172,6 +174,9 @@ class TherapyCurriculumTests(unittest.TestCase):
                 "Thought Records Part 2",
                 "Understanding Worry",
                 "Safety Behaviours & Exposure",
+                "Assumptions & Core Beliefs",
+                "Working with Anger, Guilt & Shame",
+                "Maintaining Progress",
             ],
         )
 
@@ -180,7 +185,7 @@ class TherapyCurriculumTests(unittest.TestCase):
         left = config["website"]["navbar"]["left"]
         self.assertEqual(
             [item["text"] for item in left],
-            ["Tool Finder", "DBT Skills", "CBT Skills", "Mindfulness"],
+            ["Tool Finder", "DBT Skills", "CBT Skills", "Mindfulness", "ACT Skills"],
         )
         self.assertEqual(
             [item["text"] for item in config["website"]["navbar"]["right"]],

@@ -765,3 +765,5 @@ assert.equal(mountedPrompt.dataset.bsAnswerChoicesMounted, "true");
 assert.equal(mountedAnalyzer.dataset.bsLazyAnalyzerMounted, "true");
 
 console.log("continuous Learn helper tests passed");
+
+assert.strictEqual(scroll.manifestRoute("/learn/act/acceptance-willingness.html"), "/assets/bs-act-sequence.json");

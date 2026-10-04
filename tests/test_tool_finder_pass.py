@@ -69,7 +69,7 @@ class ToolFinderPassTests(unittest.TestCase):
         self.assertNotIn("background:", featured_styles)
         thermometer = next(entry for entry in self.entries if entry["id"] == "thermometer")
         self.assertTrue(thermometer["featured_on_home"])
-        self.assertEqual(self.catalogue["topics"], ["Goal Setting", "Distress Tolerance", "Mindfulness", "Emotional Regulation", "CBT and Managing Anxiety", "Interpersonal Effectiveness", "Wellness (Actions & Patterns)"])
+        self.assertEqual(self.catalogue["topics"], ["Goal Setting", "Distress Tolerance", "Mindfulness", "Emotional Regulation", "CBT and Managing Anxiety", "Interpersonal Effectiveness", "Wellness (Actions & Patterns)", "Acceptance and Commitment Therapy"])
 
     def test_wise_mind_includes_thought_record(self):
         thermometer = json.loads((SITE / "data/skill-apps/thermometer.json").read_text(encoding="utf-8"))

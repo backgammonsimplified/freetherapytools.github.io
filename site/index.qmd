@@ -32,15 +32,19 @@ Clear lessons, handouts, worksheets, and exercises for DBT, CBT, and mindfulness
 
 [<span class="bs-home-explore-icon" aria-hidden="true"></span>
 <span class="bs-home-explore-copy"><span class="bs-home-explore-title">DBT Skills</span><span class="bs-home-explore-description">Goal setting, distress tolerance, interpersonal effectiveness, wellness, and emotion regulation.</span></span>
-<span class="bs-home-explore-chevron" aria-hidden="true">›</span>](learn/index.qmd){.bs-home-explore-link .bs-home-explore-link--analyze}
+<span class="bs-home-explore-chevron" aria-hidden="true">›</span>](learn/index.qmd){.bs-home-explore-link .bs-home-explore-link--dbt}
 
 [<span class="bs-home-explore-icon" aria-hidden="true"></span>
-<span class="bs-home-explore-copy"><span class="bs-home-explore-title">CBT Skills</span><span class="bs-home-explore-description">Six lessons for noticing and changing unhelpful thought patterns.</span></span>
-<span class="bs-home-explore-chevron" aria-hidden="true">›</span>](cbt-skills/index.qmd){.bs-home-explore-link .bs-home-explore-link--compare}
+<span class="bs-home-explore-copy"><span class="bs-home-explore-title">CBT Skills</span><span class="bs-home-explore-description">Practise skills for thoughts, behaviour, emotions, and maintaining progress.</span></span>
+<span class="bs-home-explore-chevron" aria-hidden="true">›</span>](cbt-skills/index.qmd){.bs-home-explore-link .bs-home-explore-link--cbt}
 
 [<span class="bs-home-explore-icon" aria-hidden="true"></span>
 <span class="bs-home-explore-copy"><span class="bs-home-explore-title">Mindfulness</span><span class="bs-home-explore-description">Twelve lessons for awareness, participation, compassion, grounding, and states of mind.</span></span>
-<span class="bs-home-explore-chevron" aria-hidden="true">›</span>](learn/mindfulness/index.qmd){.bs-home-explore-link .bs-home-explore-link--research}
+<span class="bs-home-explore-chevron" aria-hidden="true">›</span>](learn/mindfulness/index.qmd){.bs-home-explore-link .bs-home-explore-link--mindfulness}
+
+[<span class="bs-home-explore-icon" aria-hidden="true"></span>
+<span class="bs-home-explore-copy"><span class="bs-home-explore-title">ACT Skills</span><span class="bs-home-explore-description">Make room for experience and take action toward what matters.</span></span>
+<span class="bs-home-explore-chevron" aria-hidden="true">&#8250;</span>](learn/act/index.qmd){.bs-home-explore-link .bs-home-explore-link--act}
 
 [<span class="bs-home-explore-icon" aria-hidden="true"></span>
 <span class="bs-home-explore-copy"><span class="bs-home-explore-title">Glossary</span><span class="bs-home-explore-description">Look up therapy terms used throughout the curriculum.</span></span>

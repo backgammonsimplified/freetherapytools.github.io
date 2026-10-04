@@ -43,6 +43,7 @@ GENERATED_LOOKUP_DATA_PATH = SITE_ROOT / "assets" / "bs-glossary-lookup.json"
 GENERATED_LEARN_SEQUENCE_PATH = SITE_ROOT / "assets" / "bs-learn-sequence.json"
 GENERATED_CBT_CATALOGUE_PATH = SITE_ROOT / "cbt-skills" / "_lesson-catalogue.html"
 GENERATED_CBT_SEQUENCE_PATH = SITE_ROOT / "assets" / "bs-cbt-sequence.json"
+GENERATED_ACT_SEQUENCE_PATH = SITE_ROOT / "assets" / "bs-act-sequence.json"
 GENERATED_MINDFULNESS_CATALOGUE_PATH = (
     LEARN_ROOT / "mindfulness" / "_lesson-index.html"
 )
@@ -91,6 +92,7 @@ TRACKS = (
     "CBT and Managing Anxiety",
     "Interpersonal Effectiveness",
     "Wellness (Actions & Patterns)",
+    "Acceptance and Commitment Therapy",
 )
 
 # Lesson topics may refine a learning track without becoming glossary tracks.
@@ -116,6 +118,13 @@ LEARN_SECTIONS = {
         "home_text": "CBT Skills Home",
         "home_source": "cbt-skills/index.qmd",
         "track_ids": ("cbt-anxiety",),
+    },
+    "act": {
+        "sidebar_id": "act",
+        "title": "ACT Skills",
+        "home_text": "ACT Skills Home",
+        "home_source": "learn/act/index.qmd",
+        "track_ids": ("act",),
     },
     "mindfulness": {
         "sidebar_id": "mindfulness",
@@ -191,6 +200,7 @@ GLOSSARY_CATEGORIES = (
     "CBT and Managing Anxiety",
     "Interpersonal Effectiveness",
     "Wellness",
+    "Acceptance and Commitment Therapy",
 )
 CANONICAL_SLUG_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
@@ -1900,7 +1910,7 @@ def inline_term_pattern(phrase: str) -> re.Pattern[str] | None:
         r"(?<![A-Za-z0-9-])"
         + r"[^A-Za-z0-9]+".join(re.escape(word) for word in words)
         + r"(?![A-Za-z0-9-])",
-        re.IGNORECASE,
+        0 if re.fullmatch(r"[A-Z]{2,6}", phrase) else re.IGNORECASE,
     )
 
 
@@ -2280,6 +2290,7 @@ def generated_outputs(
     dbt_curriculum = curriculum_for_section(curriculum, "dbt")
     cbt_curriculum = curriculum_for_section(curriculum, "cbt")
     mindfulness_curriculum = curriculum_for_section(curriculum, "mindfulness")
+    act_curriculum = curriculum_for_section(curriculum, "act")
     outputs = {
         GENERATED_LESSON_CATALOGUE_PATH: build_lesson_catalogue_html(
             entries, dbt_curriculum
@@ -2300,6 +2311,7 @@ def generated_outputs(
         GENERATED_CBT_SEQUENCE_PATH: json_text(
             build_learn_sequence(cbt_curriculum)
         ),
+        GENERATED_ACT_SEQUENCE_PATH: json_text(build_learn_sequence(act_curriculum)),
         GENERATED_MINDFULNESS_SEQUENCE_PATH: json_text(
             build_learn_sequence(mindfulness_curriculum)
         ),
@@ -2783,6 +2795,7 @@ def check_rendered(output_root: Path) -> dict[str, int]:
         ("dbt", "bs-learn-sequence.json"),
         ("cbt", "bs-cbt-sequence.json"),
         ("mindfulness", "bs-mindfulness-sequence.json"),
+        ("act", "bs-act-sequence.json"),
     ):
         expected = build_learn_sequence(curriculum_for_section(curriculum, section))
         sequence_path = output_root / "assets" / asset

@@ -3,6 +3,840 @@
     {
       "aliases": [],
       "categories": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "category": "Acceptance and Commitment Therapy",
+      "date_added": "2026-10-04",
+      "definition": "In ACT, acceptance means making room for thoughts, feelings, or sensations while choosing how to act. It does not mean approving harm, abandoning boundaries, or giving up on change.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Steven C. Hayes with Spencer Smith",
+          "section": "Chapters 4 and 9",
+          "title": "Get Out of Your Mind and Into Your Life",
+          "type": "book",
+          "url": "https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "psychological-flexibility",
+          "term": "Psychological Flexibility"
+        },
+        {
+          "slug": "willingness",
+          "term": "Willingness"
+        }
+      ],
+      "short_definition": "Allowing present inner experience without making its removal a condition for action.",
+      "slug": "acceptance",
+      "term": "Acceptance"
+    },
+    {
+      "aliases": [
+        {
+          "slug": "act",
+          "term": "ACT"
+        }
+      ],
+      "categories": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "category": "Acceptance and Commitment Therapy",
+      "date_added": "2026-10-04",
+      "definition": "ACT develops ways to notice thoughts and feelings, make room for them when useful, and act in personally meaningful directions. Its aim is greater flexibility, rather than eliminating every uncomfortable thought or feeling.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Steven C. Hayes with Spencer Smith",
+          "section": "Introduction; Chapters 4-13",
+          "title": "Get Out of Your Mind and Into Your Life",
+          "type": "book",
+          "url": "https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "acceptance",
+          "term": "Acceptance"
+        },
+        {
+          "slug": "cognitive-defusion",
+          "term": "Cognitive Defusion"
+        },
+        {
+          "slug": "psychological-flexibility",
+          "term": "Psychological Flexibility"
+        },
+        {
+          "slug": "values",
+          "term": "Values"
+        }
+      ],
+      "short_definition": "An approach that supports flexible, values-guided action alongside difficult inner experiences.",
+      "slug": "acceptance-and-commitment-therapy",
+      "term": "Acceptance and Commitment Therapy"
+    },
+    {
+      "aliases": [
+        {
+          "slug": "automatic-thoughts",
+          "term": "Automatic Thoughts"
+        }
+      ],
+      "categories": [
+        "CBT and Managing Anxiety"
+      ],
+      "category": "CBT and Managing Anxiety",
+      "date_added": "2026-10-04",
+      "definition": "Automatic thoughts are quick interpretations of a situation. Noticing one allows you to examine its accuracy and usefulness instead of treating it as an established fact.",
+      "definition_links": [],
+      "learning_tracks": [
+        "CBT and Managing Anxiety"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "title": "Beck Institute: Cognitive Model",
+          "type": "website",
+          "url": "https://beckinstitute.org/wp-content/uploads/2024/05/Cognitive-Model.pdf"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "cognitive-model",
+          "term": "Cognitive Model"
+        },
+        {
+          "slug": "core-belief",
+          "term": "Core Belief"
+        }
+      ],
+      "short_definition": "A thought or mental image that arises without deliberate effort.",
+      "slug": "automatic-thought",
+      "term": "Automatic Thought"
+    },
+    {
+      "aliases": [
+        {
+          "slug": "behavioral-activation",
+          "term": "Behavioral Activation"
+        }
+      ],
+      "categories": [
+        "CBT and Managing Anxiety"
+      ],
+      "category": "CBT and Managing Anxiety",
+      "date_added": "2026-10-04",
+      "definition": "Behavioural activation works with the cycle of low mood and reduced activity. Choose achievable actions connected to care, connection, enjoyment, or accomplishment, and notice what happens rather than waiting for motivation to arrive first.",
+      "definition_links": [],
+      "learning_tracks": [
+        "CBT and Managing Anxiety"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Dennis Greenberger and Christine A. Padesky",
+          "section": "Chapter 13, pp. 188-218",
+          "title": "Mind Over Mood, Second Edition",
+          "type": "book",
+          "url": "https://www.guilford.com/books/Mind-Over-Mood/Greenberger-Padesky/9781462520428"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "values",
+          "term": "Values"
+        }
+      ],
+      "short_definition": "Planning manageable activities that support engagement with daily life.",
+      "slug": "behavioural-activation",
+      "term": "Behavioural Activation"
+    },
+    {
+      "aliases": [
+        {
+          "slug": "behavioral-experiment",
+          "term": "Behavioral Experiment"
+        },
+        {
+          "slug": "behavioral-experiments",
+          "term": "Behavioral Experiments"
+        },
+        {
+          "slug": "behavioural-experiments",
+          "term": "Behavioural Experiments"
+        }
+      ],
+      "categories": [
+        "CBT and Managing Anxiety"
+      ],
+      "category": "CBT and Managing Anxiety",
+      "date_added": "2026-10-04",
+      "definition": "A behavioural experiment compares what you expect with what actually happens. The result provides evidence to reconsider a belief.",
+      "definition_links": [],
+      "learning_tracks": [
+        "CBT and Managing Anxiety"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "title": "Beck Institute: Cognitive Model",
+          "type": "website",
+          "url": "https://beckinstitute.org/wp-content/uploads/2024/05/Cognitive-Model.pdf"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "automatic-thought",
+          "term": "Automatic Thought"
+        },
+        {
+          "slug": "core-belief",
+          "term": "Core Belief"
+        }
+      ],
+      "short_definition": "A planned activity used to test a prediction.",
+      "slug": "behavioural-experiment",
+      "term": "Behavioural Experiment"
+    },
+    {
+      "aliases": [
+        {
+          "slug": "cbt",
+          "term": "CBT"
+        },
+        {
+          "slug": "cognitive-behavior-therapy",
+          "term": "Cognitive Behavior Therapy"
+        },
+        {
+          "slug": "cognitive-behavioral-therapy",
+          "term": "Cognitive Behavioral Therapy"
+        },
+        {
+          "slug": "cognitive-behaviour-therapy",
+          "term": "Cognitive Behaviour Therapy"
+        }
+      ],
+      "categories": [
+        "CBT and Managing Anxiety"
+      ],
+      "category": "CBT and Managing Anxiety",
+      "date_added": "2026-10-04",
+      "definition": "Cognitive Behavioural Therapy combines cognitive and behavioural approaches. It helps people examine interpretations and try different actions, rather than assuming that a distressing thought must be true.",
+      "definition_links": [],
+      "learning_tracks": [
+        "CBT and Managing Anxiety"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "title": "APA Dictionary of Psychology: cognitive behavior therapy",
+          "type": "online_glossary",
+          "url": "https://dictionary.apa.org/cognitive-behavior-therapy"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "automatic-thought",
+          "term": "Automatic Thought"
+        },
+        {
+          "slug": "cognitive-model",
+          "term": "Cognitive Model"
+        }
+      ],
+      "short_definition": "A therapy that works with patterns in thinking and behaviour.",
+      "slug": "cognitive-behavioural-therapy",
+      "term": "Cognitive Behavioural Therapy"
+    },
+    {
+      "aliases": [
+        {
+          "slug": "defusion",
+          "term": "Defusion"
+        }
+      ],
+      "categories": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "category": "Acceptance and Commitment Therapy",
+      "date_added": "2026-10-04",
+      "definition": "Defusion changes your relationship to thinking. You can notice a prediction or self-judgment and choose your response without having to prove the thought false or force it to stop.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Steven C. Hayes with Spencer Smith",
+          "section": "Chapter 6, pp. 69-86",
+          "title": "Get Out of Your Mind and Into Your Life",
+          "type": "book",
+          "url": "https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "automatic-thought",
+          "term": "Automatic Thought"
+        },
+        {
+          "slug": "self-as-context",
+          "term": "Self-as-Context"
+        }
+      ],
+      "short_definition": "Noticing a thought as a thought rather than automatically obeying it.",
+      "slug": "cognitive-defusion",
+      "term": "Cognitive Defusion"
+    },
+    {
+      "aliases": [],
+      "categories": [
+        "CBT and Managing Anxiety"
+      ],
+      "category": "CBT and Managing Anxiety",
+      "date_added": "2026-10-04",
+      "definition": "The cognitive model connects a situation with its personal meaning and the responses that follow. Beliefs shape those interpretations; examining them can reveal other ways of understanding the situation.",
+      "definition_links": [],
+      "learning_tracks": [
+        "CBT and Managing Anxiety"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "title": "Beck Institute: Cognitive Model",
+          "type": "website",
+          "url": "https://beckinstitute.org/wp-content/uploads/2024/05/Cognitive-Model.pdf"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "automatic-thought",
+          "term": "Automatic Thought"
+        },
+        {
+          "slug": "core-belief",
+          "term": "Core Belief"
+        }
+      ],
+      "short_definition": "An account of how interpretations influence feelings, body responses, and actions.",
+      "slug": "cognitive-model",
+      "term": "Cognitive Model"
+    },
+    {
+      "aliases": [],
+      "categories": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "category": "Acceptance and Commitment Therapy",
+      "date_added": "2026-10-04",
+      "definition": "Committed action turns a valued direction into behaviour. It includes adjusting plans after obstacles and beginning again, rather than demanding perfect persistence with a plan that no longer fits.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Steven C. Hayes with Spencer Smith",
+          "section": "Chapter 13, pp. 177-194",
+          "title": "Get Out of Your Mind and Into Your Life",
+          "type": "book",
+          "url": "https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "values",
+          "term": "Values"
+        },
+        {
+          "slug": "willingness",
+          "term": "Willingness"
+        }
+      ],
+      "short_definition": "Taking and reviewing practical steps guided by your values.",
+      "slug": "committed-action",
+      "term": "Committed Action"
+    },
+    {
+      "aliases": [
+        {
+          "slug": "core-beliefs",
+          "term": "Core Beliefs"
+        }
+      ],
+      "categories": [
+        "CBT and Managing Anxiety"
+      ],
+      "category": "CBT and Managing Anxiety",
+      "date_added": "2026-10-04",
+      "definition": "Core beliefs influence how you interpret experiences. In CBT, identifying and examining an unhelpful belief can support more balanced conclusions.",
+      "definition_links": [],
+      "learning_tracks": [
+        "CBT and Managing Anxiety"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "title": "Beck Institute: Cognitive Model",
+          "type": "website",
+          "url": "https://beckinstitute.org/wp-content/uploads/2024/05/Cognitive-Model.pdf"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "automatic-thought",
+          "term": "Automatic Thought"
+        },
+        {
+          "slug": "cognitive-model",
+          "term": "Cognitive Model"
+        }
+      ],
+      "short_definition": "A broad belief about yourself, other people, or the world.",
+      "slug": "core-belief",
+      "term": "Core Belief"
+    },
+    {
+      "aliases": [
+        {
+          "slug": "dbt",
+          "term": "DBT"
+        },
+        {
+          "slug": "dialectical-behavior-therapy",
+          "term": "Dialectical Behavior Therapy"
+        },
+        {
+          "slug": "dialectical-behavioral-therapy",
+          "term": "Dialectical Behavioral Therapy"
+        },
+        {
+          "slug": "dialectical-behavioural-therapy",
+          "term": "Dialectical Behavioural Therapy"
+        }
+      ],
+      "categories": [
+        "Mindfulness"
+      ],
+      "category": "Mindfulness",
+      "date_added": "2026-10-04",
+      "definition": "Dialectical Behaviour Therapy brings together behavioural approaches and mindfulness. DBT skills training teaches practical ways to manage distress, emotions, attention, and relationships; a skills website is only one educational resource, not a complete DBT treatment programme.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Mindfulness"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "title": "APA Dictionary of Psychology: dialectical behavior therapy",
+          "type": "online_glossary",
+          "url": "https://dictionary.apa.org/dialectical-behavior-therapy"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "mindfulness",
+          "term": "Mindfulness"
+        },
+        {
+          "slug": "wise-mind",
+          "term": "Wise Mind"
+        }
+      ],
+      "short_definition": "A therapy that combines behavioural change methods with mindfulness and acceptance.",
+      "slug": "dialectical-behaviour-therapy",
+      "term": "Dialectical Behaviour Therapy"
+    },
+    {
+      "aliases": [],
+      "categories": [
+        "Mindfulness"
+      ],
+      "category": "Mindfulness",
+      "date_added": "2026-10-04",
+      "definition": "Emotion Mind gives priority to emotional information. Other facts or longer-term goals can become harder to consider.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Mindfulness"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Marsha M. Linehan",
+          "section": "Mindfulness Handout 3: Wise Mind - States of Mind",
+          "title": "DBT Skills Training Handouts and Worksheets, Second Edition",
+          "type": "book",
+          "url": "https://www.guilford.com/add/linehan7_old/lin-p-1.pdf?t=1"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "reasonable-mind",
+          "term": "Reasonable Mind"
+        },
+        {
+          "slug": "wise-mind",
+          "term": "Wise Mind"
+        }
+      ],
+      "short_definition": "A state in which feelings and urges strongly guide your response.",
+      "slug": "emotion-mind",
+      "term": "Emotion Mind"
+    },
+    {
+      "aliases": [],
+      "categories": [
+        "Mindfulness"
+      ],
+      "category": "Mindfulness",
+      "date_added": "2026-10-04",
+      "definition": "HOW Skills describe how to practise a WHAT skill. These qualities can be used together.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Mindfulness"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Marsha M. Linehan",
+          "section": "Mindfulness Handout 5: Taking Hold of Your Mind - How Skills",
+          "title": "DBT Skills Training Handouts and Worksheets, Second Edition",
+          "type": "book",
+          "url": "https://www.guilford.com/add/linehan7_old/lin-p-1.pdf?t=1"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "mindfulness",
+          "term": "Mindfulness"
+        },
+        {
+          "slug": "what-skills",
+          "term": "WHAT Skills"
+        }
+      ],
+      "short_definition": "The qualities Non-Judgmentally, One-Mindfully, and Effectively.",
+      "slug": "how-skills",
+      "term": "HOW Skills"
+    },
+    {
+      "aliases": [],
+      "categories": [
+        "Mindfulness"
+      ],
+      "category": "Mindfulness",
+      "date_added": "2026-10-04",
+      "definition": "Mindfulness means deliberately noticing current experience without immediately judging or pushing it away. It can be practised during everyday activities, not only meditation.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Mindfulness"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Marsha M. Linehan",
+          "section": "Mindfulness Handout 1A: Mindfulness Definitions",
+          "title": "DBT Skills Training Handouts and Worksheets, Second Edition",
+          "type": "book",
+          "url": "https://www.guilford.com/add/linehan7_old/lin-p-1.pdf?t=1"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "how-skills",
+          "term": "HOW Skills"
+        },
+        {
+          "slug": "what-skills",
+          "term": "WHAT Skills"
+        },
+        {
+          "slug": "wise-mind",
+          "term": "Wise Mind"
+        }
+      ],
+      "short_definition": "Awareness of present experience with openness and acceptance.",
+      "slug": "mindfulness",
+      "term": "Mindfulness"
+    },
+    {
+      "aliases": [],
+      "categories": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "category": "Acceptance and Commitment Therapy",
+      "date_added": "2026-10-04",
+      "definition": "Psychological flexibility combines awareness and openness with useful action. It includes changing course when needed instead of letting rigid rules or attempts to avoid every uncomfortable feeling determine your choices.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Steven C. Hayes with Spencer Smith",
+          "section": "Introduction; Chapters 4-13",
+          "title": "Get Out of Your Mind and Into Your Life",
+          "type": "book",
+          "url": "https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "acceptance",
+          "term": "Acceptance"
+        },
+        {
+          "slug": "cognitive-defusion",
+          "term": "Cognitive Defusion"
+        },
+        {
+          "slug": "committed-action",
+          "term": "Committed Action"
+        }
+      ],
+      "short_definition": "The ability to respond to the present situation in ways that serve your values.",
+      "slug": "psychological-flexibility",
+      "term": "Psychological Flexibility"
+    },
+    {
+      "aliases": [],
+      "categories": [
+        "Mindfulness"
+      ],
+      "category": "Mindfulness",
+      "date_added": "2026-10-04",
+      "definition": "Reasonable Mind approaches situations analytically. Used alone, it may overlook feelings, needs, or values.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Mindfulness"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Marsha M. Linehan",
+          "section": "Mindfulness Handout 3: Wise Mind - States of Mind",
+          "title": "DBT Skills Training Handouts and Worksheets, Second Edition",
+          "type": "book",
+          "url": "https://www.guilford.com/add/linehan7_old/lin-p-1.pdf?t=1"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "emotion-mind",
+          "term": "Emotion Mind"
+        },
+        {
+          "slug": "wise-mind",
+          "term": "Wise Mind"
+        }
+      ],
+      "short_definition": "A state that prioritizes facts, logic, and practical tasks.",
+      "slug": "reasonable-mind",
+      "term": "Reasonable Mind"
+    },
+    {
+      "aliases": [
+        {
+          "slug": "observing-self",
+          "term": "Observing Self"
+        }
+      ],
+      "categories": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "category": "Acceptance and Commitment Therapy",
+      "date_added": "2026-10-04",
+      "definition": "In ACT, self-as-context involves noticing experience without reducing your identity to one thought, feeling, role, or story. It does not require becoming detached or losing contact with the present situation.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Steven C. Hayes with Spencer Smith",
+          "section": "Chapter 7, pp. 87-104",
+          "title": "Get Out of Your Mind and Into Your Life",
+          "type": "book",
+          "url": "https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "cognitive-defusion",
+          "term": "Cognitive Defusion"
+        },
+        {
+          "slug": "mindfulness",
+          "term": "Mindfulness"
+        }
+      ],
+      "short_definition": "The perspective from which you notice changing thoughts, feelings, and experiences.",
+      "slug": "self-as-context",
+      "term": "Self-as-Context"
+    },
+    {
+      "aliases": [
+        {
+          "slug": "underlying-assumptions",
+          "term": "Underlying Assumptions"
+        }
+      ],
+      "categories": [
+        "CBT and Managing Anxiety"
+      ],
+      "category": "CBT and Managing Anxiety",
+      "date_added": "2026-10-04",
+      "definition": "An underlying assumption connects a condition with an expected result, such as expecting rejection whenever you disagree. Treating the rule as a testable prediction can reveal where it fits and where it is too rigid.",
+      "definition_links": [],
+      "learning_tracks": [
+        "CBT and Managing Anxiety"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Dennis Greenberger and Christine A. Padesky",
+          "section": "Chapter 11, pp. 132-151",
+          "title": "Mind Over Mood, Second Edition",
+          "type": "book",
+          "url": "https://www.guilford.com/books/Mind-Over-Mood/Greenberger-Padesky/9781462520428"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "behavioural-experiment",
+          "term": "Behavioural Experiment"
+        },
+        {
+          "slug": "core-belief",
+          "term": "Core Belief"
+        }
+      ],
+      "short_definition": "A personal rule or prediction that guides how you respond.",
+      "slug": "underlying-assumption",
+      "term": "Underlying Assumption"
+    },
+    {
+      "aliases": [],
+      "categories": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "category": "Acceptance and Commitment Therapy",
+      "date_added": "2026-10-04",
+      "definition": "Values describe how you want to act, such as with care or curiosity. A goal can be completed; a value can guide many different actions over time.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Steven C. Hayes with Spencer Smith",
+          "section": "Chapters 11-12, pp. 153-176",
+          "title": "Get Out of Your Mind and Into Your Life",
+          "type": "book",
+          "url": "https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "committed-action",
+          "term": "Committed Action"
+        }
+      ],
+      "short_definition": "Chosen qualities you want to bring to your ongoing actions.",
+      "slug": "values",
+      "term": "Values"
+    },
+    {
+      "aliases": [],
+      "categories": [
+        "Mindfulness"
+      ],
+      "category": "Mindfulness",
+      "date_added": "2026-10-04",
+      "definition": "WHAT Skills identify what you do while practising mindfulness. Choose one action to focus on at a time.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Mindfulness"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Marsha M. Linehan",
+          "section": "Mindfulness Handout 4: Taking Hold of Your Mind - What Skills",
+          "title": "DBT Skills Training Handouts and Worksheets, Second Edition",
+          "type": "book",
+          "url": "https://www.guilford.com/add/linehan7_old/lin-p-1.pdf?t=1"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "how-skills",
+          "term": "HOW Skills"
+        },
+        {
+          "slug": "mindfulness",
+          "term": "Mindfulness"
+        }
+      ],
+      "short_definition": "The mindfulness actions Observe, Describe, and Participate.",
+      "slug": "what-skills",
+      "term": "WHAT Skills"
+    },
+    {
+      "aliases": [],
+      "categories": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "category": "Acceptance and Commitment Therapy",
+      "date_added": "2026-10-04",
+      "definition": "Willingness concerns what you are prepared to make room for, not whether you enjoy it. It can support an achievable step toward a value without requiring anxiety or uncertainty to disappear first.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Steven C. Hayes with Spencer Smith",
+          "section": "Chapters 9-10, pp. 121-152",
+          "title": "Get Out of Your Mind and Into Your Life",
+          "type": "book",
+          "url": "https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "acceptance",
+          "term": "Acceptance"
+        },
+        {
+          "slug": "committed-action",
+          "term": "Committed Action"
+        }
+      ],
+      "short_definition": "Readiness to experience discomfort when it accompanies a meaningful action.",
+      "slug": "willingness",
+      "term": "Willingness"
+    },
+    {
+      "aliases": [],
+      "categories": [
         "Mindfulness"
       ],
       "category": "Mindfulness",
@@ -11,7 +845,15 @@
       "definition_links": [],
       "learning_tracks": [],
       "redirect_slugs": [],
-      "references": [],
+      "references": [
+        {
+          "author": "Marsha M. Linehan",
+          "section": "Mindfulness Handout 3: Wise Mind - States of Mind",
+          "title": "DBT Skills Training Handouts and Worksheets, Second Edition",
+          "type": "book",
+          "url": "https://www.guilford.com/add/linehan7_old/lin-p-1.pdf?t=1"
+        }
+      ],
       "related_terms": [],
       "short_definition": "Wise Mind is the integrated perspective that draws on both emotion and reason.",
       "slug": "wise-mind",

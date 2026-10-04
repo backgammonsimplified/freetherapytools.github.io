@@ -176,6 +176,9 @@ class SectionScanCurriculumTests(unittest.TestCase):
                 "Thought Records Part 2",
                 "Understanding Worry",
                 "Safety Behaviours & Exposure",
+                "Assumptions & Core Beliefs",
+                "Working with Anger, Guilt & Shame",
+                "Maintaining Progress",
             ],
         )
 

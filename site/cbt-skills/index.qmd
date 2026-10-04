@@ -1,6 +1,6 @@
 ---
 title: "CBT Skills"
-description: "Learn to identify and change unhelpful thought patterns through six CBT lessons."
+description: "Practise CBT skills for thoughts, behaviour, emotions, and maintaining progress."
 sidebar: cbt
 page-layout: full
 body-classes: bs-learn-index
@@ -18,3 +18,9 @@ CBT skills help you notice links among situations, interpretations, emotions, bo
 3. Develop an action plan to manage unhelpful thought patterns.
 
 {{< include _lesson-catalogue.html >}}
+
+## Put skills into practice
+
+Use the [Thought Record](/tool-finder/thought-record/), [Behavioural Activation planner](/tool-finder/behavioural-activation/), and [Gratitude Journal](/tool-finder/gratitude-journal/) alongside these lessons. The later lessons add original summaries informed by Greenberger and Padesky's *Mind Over Mood*, second edition, with chapter and page references.
+
+For acceptance, defusion, and values-guided action, visit [ACT Skills](/learn/act/).

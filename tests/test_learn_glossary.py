@@ -24,6 +24,7 @@ class LearnGlossaryTests(unittest.TestCase):
                 "emotion-regulation",
                 "mindfulness",
                 "cbt-anxiety",
+                "act",
             ],
         )
 
@@ -60,6 +61,7 @@ class LearnGlossaryTests(unittest.TestCase):
             "dbt": learn_glossary.GENERATED_LEARN_SEQUENCE_PATH,
             "cbt": learn_glossary.GENERATED_CBT_SEQUENCE_PATH,
             "mindfulness": learn_glossary.GENERATED_MINDFULNESS_SEQUENCE_PATH,
+            "act": learn_glossary.GENERATED_ACT_SEQUENCE_PATH,
         }
         for section_id, path in paths.items():
             expected = learn_glossary.build_learn_sequence(
@@ -80,14 +82,16 @@ class LearnGlossaryTests(unittest.TestCase):
     def test_glossary_contains_only_current_therapy_terms(self) -> None:
         source = json.loads(learn_glossary.PUBLIC_DATA_PATH.read_text(encoding="utf-8"))
         entries = learn_glossary.validate_public_data(source)
-        self.assertEqual([entry["slug"] for entry in entries], ["wise-mind"])
-        self.assertEqual(entries[0]["categories"], ["Mindfulness"])
+        self.assertEqual(len(entries), 22)
+        self.assertTrue(all(set(entry["categories"]).issubset(learn_glossary.GLOSSARY_CATEGORIES) for entry in entries))
+        self.assertEqual(next(entry for entry in entries if entry["slug"] == "wise-mind")["categories"], ["Mindfulness"])
 
     def test_glossary_lookup_is_current_and_public_safe(self) -> None:
         lookup = json.loads(
             learn_glossary.GENERATED_LOOKUP_DATA_PATH.read_text(encoding="utf-8")
         )
-        self.assertEqual([entry["slug"] for entry in lookup["entries"]], ["wise-mind"])
+        source = json.loads(learn_glossary.PUBLIC_DATA_PATH.read_text(encoding="utf-8"))
+        self.assertEqual([entry["slug"] for entry in lookup["entries"]], [entry["slug"] for entry in source["entries"]])
         serialized = json.dumps(lookup)
         for forbidden in learn_glossary.FORBIDDEN_KEYS:
             self.assertNotIn(forbidden, serialized)
@@ -97,6 +101,7 @@ class LearnGlossaryTests(unittest.TestCase):
             learn_glossary.GENERATED_LESSON_CATALOGUE_PATH.read_text(encoding="utf-8")
             + learn_glossary.GENERATED_CBT_CATALOGUE_PATH.read_text(encoding="utf-8")
             + learn_glossary.GENERATED_MINDFULNESS_CATALOGUE_PATH.read_text(encoding="utf-8")
+            + (learn_glossary.LEARN_ROOT / "act" / "_lesson-index.html").read_text(encoding="utf-8")
         )
         self.assertEqual(generated.count("data-bs-learn-item"), len(self.lessons))
         self.assertNotIn("Checker Play", generated)
@@ -104,7 +109,7 @@ class LearnGlossaryTests(unittest.TestCase):
 
     def test_generated_navigation_has_all_three_learning_surfaces(self) -> None:
         navigation = learn_glossary.GENERATED_NAVIGATION_PATH.read_text(encoding="utf-8")
-        for sidebar_id in ("learn", "cbt", "mindfulness"):
+        for sidebar_id in ("learn", "cbt", "mindfulness", "act"):
             self.assertIn(f"  - id: {sidebar_id}", navigation)
 
     def test_generic_learn_sidebar_and_scroll_assets_remain(self) -> None:
@@ -120,7 +125,7 @@ class LearnGlossaryTests(unittest.TestCase):
     def test_generated_sources_validate(self) -> None:
         result = learn_glossary.validate_generated()
         self.assertEqual(result["lessons"], len(self.lessons))
-        self.assertEqual(result["canonical_entries"], 1)
+        self.assertEqual(result["canonical_entries"], 22)
         self.assertEqual(result["research_articles"], 0)
 
 

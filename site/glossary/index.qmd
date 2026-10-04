@@ -38,6 +38,8 @@ execute:
 </section>
 ```
 
+Short explanations of terms used in these lessons. Each entry includes references for further reading. Definitions are concise summaries in our own words.
+
 {{< include _entries.html >}}
 
 ```{=html}

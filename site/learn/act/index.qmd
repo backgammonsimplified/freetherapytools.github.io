@@ -1,0 +1,26 @@
+---
+title: "ACT Skills"
+description: "Practise acceptance, defusion, present-moment awareness, and values-guided action."
+sidebar: act
+learn-track-index: act
+learn-track-order: 8
+page-layout: full
+body-classes: "bs-learn-article bs-learn-track-index"
+toc: false
+term-lookup: false
+lesson-taxonomy: false
+---
+
+Acceptance and Commitment Therapy (ACT) helps you develop more freedom in how you respond to thoughts and feelings while taking action toward what matters. You do not have to win an argument with every thought or remove every uncomfortable feeling before participating in your life.
+
+These introductory lessons connect six related processes: acceptance, defusion, awareness of the present, the observing perspective, values, and committed action. They offer original practice prompts and links to tools already on this site.
+
+{{< include _lesson-index.html >}}
+
+## How ACT and CBT fit together
+
+A CBT thought record can help you examine whether an interpretation fits the evidence. ACT defusion asks how you relate to a thought and whether following it helps in this situation. These are different questions; neither requires pretending that a real problem is only in your head. See [CBT Skills](/cbt-skills/) for the cognitive and behavioural curriculum.
+
+## References
+
+The first lessons draw on Steven C. Hayes with Spencer Smith, [*Get Out of Your Mind and Into Your Life*](https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/) (2005). Each lesson identifies its source chapters. The Association for Contextual Behavioral Science also explains [the six core ACT processes](https://contextualscience.org/six_core_processes_act).

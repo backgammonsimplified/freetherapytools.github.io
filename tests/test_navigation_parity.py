@@ -41,11 +41,13 @@ class NavigationParityTests(unittest.TestCase):
             "DBT": RENDERED / "learn" / "distress-tolerance" / "tipp.html",
             "CBT": RENDERED / "learn" / "cbt-anxiety" / "thinking-traps.html",
             "Mindfulness": RENDERED / "learn" / "mindfulness" / "what-skills.html",
+            "ACT": RENDERED / "learn" / "act" / "acceptance-willingness.html",
         }
         expected_tracks = {
             "DBT": ("Distress Tolerance", "/learn/distress-tolerance/"),
             "CBT": ("CBT Skills", "/learn/cbt-anxiety/"),
             "Mindfulness": ("Mindfulness", "/learn/mindfulness/"),
+            "ACT": ("ACT Skills", "/learn/act/"),
         }
         for curriculum, page in pages.items():
             self.assertTrue(page.is_file(), f"missing rendered {curriculum} fixture")
@@ -186,6 +188,7 @@ class NavigationParityTests(unittest.TestCase):
             "/assets/bs-cbt-sequence.json",
             "/assets/bs-mindfulness-sequence.json",
             "/assets/bs-review-sequence.json",
+            "/assets/bs-act-sequence.json",
         ):
             self.assertIn(route, self.scroll)
         self.assertNotIn("pushState", self.scroll)

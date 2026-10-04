@@ -25,17 +25,19 @@ class CanonicalGlossaryJsonTests(unittest.TestCase):
         self.assertIn("load_contract_json", implementation)
         self.assertNotIn("parse_markdown", implementation)
 
-    def test_current_therapy_entry_is_projected_without_rewriting(self) -> None:
-        self.assertEqual(set(self.entries), {"wise-mind"})
-        self.assertEqual(self.report["canonical_entries"], 1)
-        self.assertEqual(self.report["published_entries"], 1)
-        self.assertEqual(len(self.data["entries"]), 1)
-        generated = self.data["entries"][0]
-        canonical = self.entries["wise-mind"]
-        self.assertEqual(generated["term"], canonical["term"])
-        self.assertEqual(generated["short_definition"], canonical["short_definition"])
-        self.assertEqual(generated["definition"], canonical["long_definition"])
-        self.assertEqual(generated["categories"], canonical["categories"])
+    def test_current_therapy_entries_are_projected_without_rewriting(self) -> None:
+        self.assertEqual(self.report["canonical_entries"], len(self.entries))
+        self.assertEqual(self.report["published_entries"], len(self.entries))
+        self.assertEqual(len(self.data["entries"]), len(self.entries))
+        self.assertTrue({"wise-mind", "cognitive-behavioural-therapy", "cognitive-defusion"}.issubset(self.entries))
+        for generated in self.data["entries"]:
+            canonical = self.entries[generated["slug"]]
+            self.assertEqual(generated["term"], canonical["term"])
+            self.assertEqual(generated["short_definition"], canonical["short_definition"])
+            self.assertEqual(generated["definition"], canonical["long_definition"])
+            self.assertEqual(generated["categories"], canonical["categories"])
+            self.assertEqual(generated["references"], canonical["references"])
+            self.assertTrue(generated["references"], generated["slug"])
 
     def test_duplicate_raw_json_keys_fail_before_normal_parsing(self) -> None:
         with self.assertRaisesRegex(source.ValidationError, "Duplicate raw JSON key"):

@@ -1,0 +1,60 @@
+---
+title: "Working with Anger, Guilt & Shame"
+description: "Separate events from interpretations, weigh responsibility, and choose a useful response."
+sidebar: cbt
+learn-track: cbt-anxiety
+learn-order: 8
+categories:
+  - Beginner
+tags:
+  - CBT and Managing Anxiety
+terms:
+  - automatic-thought
+  - core-belief
+highlighted-terms:
+  - automatic-thought
+  - core-belief
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+execute:
+  enabled: false
+---
+
+Anger, guilt, and shame can each carry information without providing a complete account of what happened. CBT helps you separate the event, your interpretation, your share of responsibility, and what you can do next.
+
+## When anger is taking over
+
+Notice the early changes that matter for you: tension, a faster speaking pace, rehearsing an argument, or an urge to send a message immediately. Create enough space to choose your response. A planned pause works better when you explain it and agree when to return, rather than using silence as punishment.
+
+After the intensity settles, examine the interpretation. What was observable? What have you assumed about the other person's intentions? A different explanation does not require you to excuse harmful behaviour or abandon a boundary.
+
+Try [STOP](/tool-finder/stop/) for a pause, [Check the Facts](../emotion-regulation/check-the-facts.qmd) to examine an interpretation, and [DEAR MAN](/tool-finder/dear-man/) to prepare a clear request or boundary.
+
+## Guilt: what is yours to repair?
+
+Guilt often concerns an action that seems inconsistent with your standards. Consider the actual effect of the action, the information available at the time, and the choices you realistically had.
+
+Responsibility can be shared among several contributing circumstances. List those contributions before deciding that an outcome was entirely your fault. The aim is fair accountability, not proving that you had no responsibility.
+
+If you did cause harm, identify a proportionate repair: acknowledge the impact, replace something, correct information, or change a repeated behaviour. You cannot require forgiveness as the outcome of an apology.
+
+## Shame: an event is not your whole identity
+
+Shame can turn a particular difficulty into a global conclusion about who you are. Compare a description of the event with the identity judgment added to it. "I missed a commitment" offers a problem you can address; "I am worthless" leaves little room for learning or repair.
+
+Consider discussing the experience with someone trustworthy. Sharing is a choice: you do not owe private details to someone who is unsafe. [Self-compassion practice](../mindfulness/loving-kindness-self-compassion.qmd) can support accountability without repeated self-attack.
+
+## Try it: decide your next response
+
+Choose an ordinary recent situation and make three notes:
+
+1. What happened, including what you know and what you are guessing.
+2. What response fits your actual responsibility: repair, a boundary, clarification, support, or letting go of an unfair accusation.
+3. One action you can take without attacking yourself or someone else.
+
+Use a [Thought Record](/tool-finder/thought-record/) if separating the event from its meaning would help.
+
+## Reference
+
+Original Free Therapy Tools summary and practice prompts informed by Dennis Greenberger and Christine A. Padesky, [*Mind Over Mood*, second edition](https://www.guilford.com/books/Mind-Over-Mood/Greenberger-Padesky/9781462520428), Chapter 15, printed pp. 252-279. This page does not reproduce the book's worksheets or mood measures.

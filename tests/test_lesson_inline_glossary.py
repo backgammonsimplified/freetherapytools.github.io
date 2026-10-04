@@ -84,7 +84,7 @@ Wise Mind in prose. Wise Mind appears again.
 
     def test_real_lesson_uses_current_canonical_term(self) -> None:
         lessons = learn_glossary.discover_lessons()
-        highlighted = [lesson for lesson in lessons if lesson.get("highlighted_terms")]
+        highlighted = [lesson for lesson in lessons if "wise-mind" in lesson.get("highlighted_terms", [])]
         self.assertEqual(len(highlighted), 1)
         self.assertEqual(highlighted[0]["highlighted_terms"], ["wise-mind"])
 

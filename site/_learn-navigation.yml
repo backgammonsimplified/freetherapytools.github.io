@@ -228,6 +228,28 @@ website:
               href: learn/cbt-anxiety/understanding-worry.qmd
             - text: "6. Safety Behaviours & Exposure"
               href: learn/cbt-anxiety/safety-behaviours-exposure.qmd
+            - text: "7. Assumptions & Core Beliefs"
+              href: learn/cbt-anxiety/assumptions-core-beliefs.qmd
+            - text: "8. Working with Anger, Guilt & Shame"
+              href: learn/cbt-anxiety/anger-guilt-shame.qmd
+            - text: "9. Maintaining Progress"
+              href: learn/cbt-anxiety/maintaining-progress.qmd
+    - id: act
+      title: "ACT Skills"
+      style: docked
+      collapse-level: 2
+      contents:
+        - text: "ACT Skills Home"
+          href: learn/act/index.qmd
+        - section: "ACT Skills"
+          href: learn/act/index.qmd
+          contents:
+            - text: "1. Making Room for Experience"
+              href: learn/act/acceptance-willingness.qmd
+            - text: "2. Thoughts & the Observing Perspective"
+              href: learn/act/defusion-observing-self.qmd
+            - text: "3. Values & Committed Action"
+              href: learn/act/values-committed-action.qmd
     - id: mindfulness
       title: "Mindfulness"
       style: docked

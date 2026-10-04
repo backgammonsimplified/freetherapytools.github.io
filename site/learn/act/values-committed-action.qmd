@@ -1,0 +1,55 @@
+---
+title: "Values & Committed Action"
+description: "Choose a meaningful direction, take a manageable step, and respond flexibly to obstacles."
+sidebar: act
+learn-track: act
+learn-order: 3
+categories:
+  - Beginner
+tags:
+  - Acceptance and Commitment Therapy
+terms:
+  - values
+  - committed-action
+  - willingness
+highlighted-terms:
+  - values
+  - committed-action
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+execute:
+  enabled: false
+---
+
+**Values** describe qualities you want to bring to your actions. Curiosity, care, fairness, or reliability can guide many choices. A goal is an outcome or task you can complete; a value can keep guiding you after that goal is finished.
+
+## Choose a direction that belongs to you
+
+Consider an area of life you want to engage with more fully. What quality would you like to express there? Notice the difference between a direction you choose and a demand you feel you must satisfy to earn approval.
+
+For example, being caring does not require always saying yes. A caring action can include a clear limit that protects your capacity to stay involved.
+
+Use [Values & Valued Action](/tool-finder/values/) to explore directions that matter to you.
+
+## Make the next step concrete
+
+**Committed action** means putting a value into practice and learning from what happens. Choose a step small enough to fit your current circumstances. Name when and where you can take it, and consider an easier version for a difficult day.
+
+A person who values connection might send one thoughtful message. Someone who values learning might spend ten minutes exploring a question. Neither action needs to solve an entire area of life.
+
+## Include obstacles in the plan
+
+Some obstacles are practical: limited time, money, health, access, or safety. Address these rather than interpreting every barrier as unwillingness. Other obstacles are inner experiences, such as embarrassment or a familiar prediction of failure. Acceptance and defusion may help you take a workable step alongside them.
+
+If a plan repeatedly fails, change the plan. Commitment to a value does not require rigid commitment to one method.
+
+## Try it: a small commitment
+
+Make a short note covering your chosen direction, the next action, and a likely obstacle. Add a fallback action that still expresses the value. Afterward, review what happened and what you want to adjust.
+
+Use the [SMART Goal Builder](/tool-finder/goal-builder/) to specify the action and [Values Review](/tool-finder/values-review/) to revisit it. These tools support saving and reopening your notes.
+
+## Reference
+
+Original Free Therapy Tools summary and practice prompts informed by Steven C. Hayes with Spencer Smith, [*Get Out of Your Mind and Into Your Life*](https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/) (2005), Chapters 11-13, printed pp. 153-194. The book's values exercises and scoring forms are not reproduced here.

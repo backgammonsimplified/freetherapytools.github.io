@@ -42,3 +42,9 @@
 
 <div class="tool-finder-grid" data-tool-finder-cards="Wellness (Actions &amp; Patterns)" aria-live="polite"></div>
 :::
+
+::: {.tool-finder-topic data-tool-finder-topic="Acceptance and Commitment Therapy"}
+## Acceptance and Commitment Therapy {#acceptance-and-commitment-therapy}
+
+<div class="tool-finder-grid" data-tool-finder-cards="Acceptance and Commitment Therapy" aria-live="polite"></div>
+:::
