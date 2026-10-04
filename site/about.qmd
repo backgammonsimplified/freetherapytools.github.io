@@ -69,7 +69,7 @@ If you or someone else may be in immediate danger, use appropriate local emergen
 
 ## Privacy
 
-Interactive answers stay in your browser unless you explicitly save or export a copy. Free Therapy Tools does not put personal worksheet text into page URLs. Some tools can open an external service, such as a prefilled Google Calendar page, only after you choose that action.
+We do not save your worksheet data on our servers. Your answers stay on your device, in your browser or in a file you download.
 
 ## Audio and source materials
 
