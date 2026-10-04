@@ -13,6 +13,7 @@ project:
   - python ../scripts/site_base_paths.py
   resources:
     - assets/logo.svg
+    - "assets/about/*.jpg"
     - "assets/icons/**"
     - "assets/social/generated/*.png"
     - assets/bs-glossary.js

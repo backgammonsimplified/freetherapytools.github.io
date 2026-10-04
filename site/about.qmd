@@ -17,6 +17,13 @@ Free Therapy Tools is an open-source collection of practical lessons, worksheets
 
 ## Clinical reviewer
 
+:::: {.bs-about-person}
+
+::: {.bs-about-person-photo}
+<img src="assets/about/alexandra-chin.jpg" alt="Alexandra (Alli) Chin" width="800" height="800" loading="lazy" decoding="async">
+:::
+
+::: {.bs-about-person-bio}
 ### Alexandra (Alli) Chin, MSW, RSW
 
 **Mental Health Therapist - Registered Social Worker**
@@ -27,8 +34,19 @@ Her experience includes social work at CarePoint Health, counselling at McMaster
 
 [Alli's professional profile](https://www.linkedin.com/in/alexandrabchin/)
 
+:::
+
+::::
+
 ## Educational framework and development
 
+:::: {.bs-about-person .bs-about-person--support}
+
+::: {.bs-about-person-photo}
+<img src="assets/about/andrew-andrade.jpg" alt="Andrew Andrade" width="400" height="400" loading="lazy" decoding="async">
+:::
+
+::: {.bs-about-person-bio}
 ### Andrew Andrade, B.Ed., OCT
 
 **Educator and developer**
@@ -36,6 +54,10 @@ Her experience includes social work at CarePoint Health, counselling at McMaster
 Andrew created the open educational framework shared through [andrewandrade.ca](https://andrewandrade.ca/) and [Tech Edu Resources](https://andrewandrade.ca/tech-edu-resources/), and is extending it to make more knowledge freely available, reusable, and practical. He supports the educational design and technical development of Free Therapy Tools.
 
 His teacher education at Lakehead University, including child psychology, informs his interest in mindfulness, emotional awareness, and helping students navigate challenges and connect with appropriate support. His contribution here is educational, drawing on his role as an Ontario Certified Teacher.
+
+:::
+
+::::
 
 ## What this site is for
 

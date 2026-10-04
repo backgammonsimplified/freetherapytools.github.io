@@ -288,6 +288,40 @@ a:hover {
   text-align: left;
 }
 
+/* Contributor portraits stay with their own bios and stack on narrow screens. */
+body.bs-about-page .bs-about-person {
+  display: grid;
+  grid-template-columns: minmax(0, 200px) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+  margin-block: 1.25rem 2rem;
+}
+body.bs-about-page .bs-about-person--support {
+  grid-template-columns: minmax(0, 144px) minmax(0, 1fr);
+}
+body.bs-about-page .bs-about-person-photo img {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 0.65rem;
+}
+body.bs-about-page .bs-about-person-bio {
+  min-width: 0;
+}
+body.bs-about-page .bs-about-person-bio > :first-child {
+  margin-top: 0;
+}
+@media (max-width: 639.98px) {
+  body.bs-about-page .bs-about-person {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+  body.bs-about-page .bs-about-person--support .bs-about-person-photo img {
+    max-width: 144px;
+  }
+}
+
 /* About-only eyebrow. Other editorial pages receive the layout without this label. */
 body.bs-about-page #title-block-header::before {
   content: "ABOUT  ::  FTT";
