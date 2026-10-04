@@ -10,12 +10,15 @@ tags:
   - Mindfulness
 terms:
   - what-skills
+  - describe
 body-classes: bs-learn-article
 page-layout: article
 toc: true
 toc-depth: 3
 execute:
   enabled: false
+highlighted-terms:
+  - describe
 ---
 
 Describe is the second WHAT skill. It puts words to experience while keeping observation separate from interpretation, assumption, and judgment.

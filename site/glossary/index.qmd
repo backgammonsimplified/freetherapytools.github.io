@@ -38,7 +38,7 @@ execute:
 </section>
 ```
 
-Short explanations of terms used in these lessons. Each entry includes references for further reading. Definitions are concise summaries in our own words.
+Short explanations of terms used in these lessons. Each entry includes references for further reading. Definitions are concise summaries in our own words. DBT entries draw on Marsha M. Linehan's skills handouts, with handout and printed-page references for the 2015 second edition. Use the category filter to explore each skill area.
 
 {{< include _entries.html >}}
 

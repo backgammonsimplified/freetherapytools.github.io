@@ -10,6 +10,9 @@ tags:
   - Interpersonal Effectiveness
 terms:
   - priorities
+  - objectives-effectiveness
+  - relationship-effectiveness
+  - self-respect-effectiveness
 body-classes: bs-learn-article
 page-layout: article
 toc: true

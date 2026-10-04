@@ -10,12 +10,18 @@ tags:
   - Distress Tolerance
 terms:
   - tipp
+  - temperature
+  - intense-exercise
+  - paced-breathing
+  - progressive-muscle-relaxation
 body-classes: bs-learn-article
 page-layout: article
 toc: true
 toc-depth: 3
 execute:
   enabled: false
+highlighted-terms:
+  - tipp
 ---
 
 TIPP is a set of body-based distress-tolerance skills for moments when emotional arousal is so high that it is hard to think clearly, use more reflective skills, or choose what to do next. The immediate goal is not to solve the whole problem. The goal is to reduce the physical intensity enough to regain some choice. **Sometimes not making things worse is enough.** [1]

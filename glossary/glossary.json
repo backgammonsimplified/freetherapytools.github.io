@@ -1,4 +1,36 @@
 {
+  "abc-please": {
+    "term": "ABC PLEASE",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "A DBT framework for strengthening everyday emotional resilience.",
+    "long_definition": "ABC PLEASE combines positive experiences, growing competence, rehearsing difficult situations, and caring for physical health. It supports emotion regulation over time rather than serving only as a crisis response.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "accumulate-positive-emotions",
+      "build-mastery",
+      "cope-ahead",
+      "please"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 14, p. 247",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
   "acceptance": {
     "term": "Acceptance",
     "aliases": [],
@@ -63,6 +95,134 @@
       }
     ]
   },
+  "accepts": {
+    "term": "ACCEPTS",
+    "aliases": [
+      "Wise Mind ACCEPTS"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "A DBT set of distraction options for getting through a period of intense distress.",
+    "long_definition": "ACCEPTS offers different ways to shift attention temporarily, such as a task, helping someone, or another mental focus. The purpose is to reduce immediate risk and return to the issue when more able to respond.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "crisis-survival",
+      "self-soothe",
+      "improve"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 7, p. 333",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "accumulate-positive-emotions": {
+    "term": "Accumulate Positive Emotions",
+    "aliases": [
+      "Accumulating Positive Emotions"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Building opportunities for positive experience now and a more meaningful life over time.",
+    "long_definition": "Short-term practice includes accessible enjoyable activities and noticing them while they happen. Longer-term practice involves values, goals, and achievable steps. It does not require pretending that painful circumstances are positive.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "abc-please",
+      "values",
+      "behavioural-activation"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handouts 15 and 17, pp. 248, 252",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "action-urge": {
+    "term": "Action Urge",
+    "aliases": [
+      "Action Urges"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "The impulse to act in a particular way that accompanies an emotion.",
+    "long_definition": "An urge may involve approaching, withdrawing, confronting, or another response. Feeling the urge does not require acting on it. Facts, safety, and your goals help determine what response is useful.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "opposite-action",
+      "emotion-functions"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 3, p. 210; Handout 5, p. 213",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "anger": {
+    "term": "Anger",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "An emotion often connected with perceived threat, unfairness, or an obstructed goal.",
+    "long_definition": "Anger can energise action and signal that something matters. The feeling does not by itself prove wrongdoing or require aggression; facts and effectiveness help guide how to respond.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "action-urge",
+      "check-the-facts"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 6, p. 214",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
   "automatic-thought": {
     "term": "Automatic Thought",
     "aliases": [
@@ -90,6 +250,42 @@
         "type": "website",
         "title": "Beck Institute: Cognitive Model",
         "url": "https://beckinstitute.org/wp-content/uploads/2024/05/Cognitive-Model.pdf"
+      }
+    ]
+  },
+  "behaviour-chain": {
+    "term": "Behaviour Chain Analysis",
+    "aliases": [
+      "Behavior Chain",
+      "Behavior Chain Analysis",
+      "Chain Analysis"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "A close look at the sequence leading to a behaviour and what follows it.",
+    "long_definition": "A chain analysis connects the situation, thoughts, feelings, body responses, actions, and consequences surrounding a specific behaviour. It helps locate points for a different response and identify repair or prevention needs.",
+    "categories": [
+      "Wellness"
+    ],
+    "tracks": [
+      "Wellness (Actions & Patterns)"
+    ],
+    "related_terms": [
+      "prompting-event",
+      "vulnerability-factors",
+      "consequences",
+      "missing-links"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "General Handouts 6-7a, pp. 19-22",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
       }
     ]
   },
@@ -153,6 +349,222 @@
         "type": "website",
         "title": "Beck Institute: Cognitive Model",
         "url": "https://beckinstitute.org/wp-content/uploads/2024/05/Cognitive-Model.pdf"
+      }
+    ]
+  },
+  "being-mind": {
+    "term": "Being Mind",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "A mode of attention that is curious about experience without needing to achieve something.",
+    "long_definition": "Being mind makes space to notice the present as it is. It can complement planning and problem solving, rather than requiring you to give up responsibilities or goals.",
+    "categories": [
+      "Mindfulness"
+    ],
+    "tracks": [
+      "Mindfulness"
+    ],
+    "related_terms": [
+      "doing-mind",
+      "wise-mind"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Mindfulness Handout 9, p. 71",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "biosocial-theory": {
+    "term": "Biosocial Theory",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "A DBT account of how biology and social responses can interact to shape emotional difficulties.",
+    "long_definition": "Emotional sensitivity and difficulties regulating responses can develop through ongoing interaction with the environment. The model looks at these influences together, rather than treating distress as a character flaw or assigning one person all the blame.",
+    "categories": [
+      "Wellness"
+    ],
+    "tracks": [
+      "Wellness (Actions & Patterns)"
+    ],
+    "related_terms": [
+      "emotional-vulnerability",
+      "invalidation"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "General Handout 5, pp. 14-15",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "body-scan": {
+    "term": "Body Scan",
+    "aliases": [
+      "Body Scan Meditation"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Moving attention through areas of the body to notice present sensations.",
+    "long_definition": "A body scan is an awareness practice, not a test of relaxation. Notice sensations or their absence with curiosity. You can adapt or pause the practice if attending inward becomes unhelpful.",
+    "categories": [
+      "Mindfulness"
+    ],
+    "tracks": [
+      "Mindfulness"
+    ],
+    "related_terms": [
+      "observe",
+      "mindfulness"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Mindfulness Handout 1a, p. 46; Distress Tolerance Handout 8a, p. 335",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "build-mastery": {
+    "term": "Build Mastery",
+    "aliases": [
+      "Building Mastery"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Developing a sense of capability through manageable challenges and practice.",
+    "long_definition": "Choose tasks that stretch your abilities without setting you up for repeated failure. Adjust difficulty as you learn. Mastery grows through participation and progress, not only through flawless results.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "abc-please",
+      "shaping",
+      "cope-ahead"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 19, p. 256",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "burning-bridges": {
+    "term": "Burning Bridges and Building New Ones",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Reducing routes back to an addictive behaviour while creating alternative responses to cravings.",
+    "long_definition": "The DBT skill combines changing access and cues with competing mental images, sensory experiences, or other responses. It is a recovery-planning concept, not a general instruction to cut off relationships.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "clear-mind",
+      "urge-surfing"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 20, p. 362",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "check-the-facts": {
+    "term": "Check the Facts",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Examining whether an emotional interpretation fits the available evidence.",
+    "long_definition": "Separate observations from assumptions, consider other explanations, and examine the threat you anticipate. This skill also asks whether the emotion's intensity fits the situation; it does not mean dismissing the feeling.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "describe",
+      "opposite-action",
+      "problem-solving"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 8, p. 228",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "clear-mind": {
+    "term": "Clear Mind",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "A recovery stance that recognises progress while staying aware of vulnerability to relapse.",
+    "long_definition": "Clear mind combines engagement in recovery with realistic attention to cues and urges. It avoids both being driven by the addictive behaviour and assuming that current success removes all future risk.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "dialectical-abstinence",
+      "urge-surfing"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 18, p. 359",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
       }
     ]
   },
@@ -279,6 +691,98 @@
       }
     ]
   },
+  "community-reinforcement": {
+    "term": "Community Reinforcement",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Making recovery more rewarding through supportive people, activities, and surroundings.",
+    "long_definition": "The DBT skill focuses on building sources of connection and satisfaction that support life without the addictive behaviour. It recognises that the environment matters, rather than relying on determination alone.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "reinforcement",
+      "dialectical-abstinence"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 19, p. 361",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "consequences": {
+    "term": "Consequences",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "The immediate and later effects of a behaviour.",
+    "long_definition": "A consequence can affect you, other people, or the situation. Short-term relief may help explain why an action repeats even when its later effects are costly. Consequences are not limited to punishment.",
+    "categories": [
+      "Wellness"
+    ],
+    "tracks": [
+      "Wellness (Actions & Patterns)"
+    ],
+    "related_terms": [
+      "behaviour-chain",
+      "reinforcement"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "General Handout 7a, p. 22",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "cope-ahead": {
+    "term": "Cope Ahead",
+    "aliases": [
+      "Coping Ahead"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Rehearsing how you will use skills in a foreseeable difficult situation.",
+    "long_definition": "Identify the likely challenge and practise imagining yourself responding with a specific plan, including obstacles. Cope ahead develops readiness; it is more than repeatedly imagining everything that could go wrong.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "abc-please",
+      "problem-solving"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 19, p. 256",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
   "core-belief": {
     "term": "Core Belief",
     "aliases": [
@@ -309,6 +813,169 @@
       }
     ]
   },
+  "crisis-survival": {
+    "term": "Crisis Survival",
+    "aliases": [
+      "Crisis Survival Skills"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Short-term skills for intense distress when impulsive action could worsen the situation.",
+    "long_definition": "The immediate aim is to get through a difficult period with less harm and more ability to choose. Crisis survival skills are not intended to replace ongoing problem solving or emergency help when needed.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "distress-tolerance",
+      "stop",
+      "tipp"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 3, p. 326",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "dear-man": {
+    "term": "DEAR MAN",
+    "aliases": [
+      "DEARMAN"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "A DBT framework for making a clear request or saying no while staying focused.",
+    "long_definition": "DEAR MAN combines describing the situation, expressing your position, asking clearly, and explaining useful consequences with focused, confident, flexible communication. It supports objectives effectiveness without guaranteeing that another person will agree.",
+    "categories": [
+      "Interpersonal Effectiveness"
+    ],
+    "tracks": [
+      "Interpersonal Effectiveness"
+    ],
+    "related_terms": [
+      "objectives-effectiveness",
+      "give",
+      "fast"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Interpersonal Effectiveness Handout 5, pp. 125-126",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "describe": {
+    "term": "Describe",
+    "aliases": [
+      "Describing"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Putting observable experience into words while separating facts from interpretations.",
+    "long_definition": "Describe what you notice, including an inner experience as a thought or feeling. Saying that you notice a fear of rejection is different from claiming to know that someone will reject you.",
+    "categories": [
+      "Mindfulness"
+    ],
+    "tracks": [
+      "Mindfulness"
+    ],
+    "related_terms": [
+      "what-skills",
+      "observe",
+      "check-the-facts"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Mindfulness Handout 4, p. 53",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "describe-emotions": {
+    "term": "Emotion Model",
+    "aliases": [
+      "Describing Emotions",
+      "Model for Describing Emotions"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "A way to map how an emotional response develops and affects what happens next.",
+    "long_definition": "The model connects vulnerabilities, an event, interpretations, bodily changes, awareness, urges, expressions, and aftereffects. These parts influence one another, so there may be several places to intervene.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "prompting-event",
+      "action-urge",
+      "secondary-emotion"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 5, p. 213",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "dialectical-abstinence": {
+    "term": "Dialectical Abstinence",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Combining a commitment to stop an addictive behaviour with a plan to limit harm and recover after a lapse.",
+    "long_definition": "The approach holds a clear change goal alongside realistic preparation for difficulty. A lapse calls for renewed support and a return to the plan, rather than an all-or-nothing conclusion that further effort is pointless.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "clear-mind",
+      "cope-ahead"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 17, p. 357",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
   "dialectical-behaviour-therapy": {
     "term": "Dialectical Behaviour Therapy",
     "aliases": [
@@ -321,10 +988,16 @@
     "short_definition": "A therapy that combines behavioural change methods with mindfulness and acceptance.",
     "long_definition": "Dialectical Behaviour Therapy brings together behavioural approaches and mindfulness. DBT skills training teaches practical ways to manage distress, emotions, attention, and relationships; a skills website is only one educational resource, not a complete DBT treatment programme.",
     "categories": [
-      "Mindfulness"
+      "Distress Tolerance",
+      "Mindfulness",
+      "Emotional Regulation",
+      "Interpersonal Effectiveness"
     ],
     "tracks": [
-      "Mindfulness"
+      "Distress Tolerance",
+      "Mindfulness",
+      "Emotional Regulation",
+      "Interpersonal Effectiveness"
     ],
     "related_terms": [
       "mindfulness",
@@ -339,6 +1012,233 @@
         "type": "online_glossary",
         "title": "APA Dictionary of Psychology: dialectical behavior therapy",
         "url": "https://dictionary.apa.org/dialectical-behavior-therapy"
+      },
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "General Handouts 1 and 5, pp. 9, 14-15",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "dialectics": {
+    "term": "Dialectics",
+    "aliases": [
+      "Dialectical Thinking"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Looking for multiple connected truths while recognising change and mutual influence.",
+    "long_definition": "A dialectical approach questions rigid either-or conclusions. Acceptance of a present difficulty can coexist with efforts to change it. The aim is to develop a more complete understanding, not to declare every position equally accurate.",
+    "categories": [
+      "Interpersonal Effectiveness"
+    ],
+    "tracks": [
+      "Interpersonal Effectiveness"
+    ],
+    "related_terms": [
+      "walking-the-middle-path",
+      "dialectical-behaviour-therapy"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Interpersonal Effectiveness Handouts 15-16, pp. 150-151",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "dime-game": {
+    "term": "DIME Game",
+    "aliases": [
+      "The DIME Game"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "A structured way to consider how firmly to ask for something or decline it.",
+    "long_definition": "The DIME Game weighs context such as rights, capacity, priorities, timing, and the relationship. It supports judgment about intensity rather than creating an obligation to ask, agree, or refuse.",
+    "categories": [
+      "Interpersonal Effectiveness"
+    ],
+    "tracks": [
+      "Interpersonal Effectiveness"
+    ],
+    "related_terms": [
+      "priorities",
+      "dear-man"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Interpersonal Effectiveness Handout 8, pp. 131-133; Worksheet 6, pp. 176-177",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "disgust": {
+    "term": "Disgust",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "An emotion that can involve revulsion and an urge to distance yourself from something.",
+    "long_definition": "Disgust may arise around perceived contamination, violation, or other aversive experiences. Learned interpretations also influence it, so feeling disgust does not establish that a person or situation is harmful.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "action-urge",
+      "check-the-facts"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 6, p. 215",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "distress-tolerance": {
+    "term": "Distress Tolerance",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Skills for getting through painful experiences and responding to realities that cannot immediately be changed.",
+    "long_definition": "Distress tolerance includes short-term crisis skills and practices of acceptance. It can create room for a safer next choice, while problem solving and longer-term changes may still be needed.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "crisis-survival",
+      "radical-acceptance",
+      "emotion-regulation"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 1, p. 321",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "doing-mind": {
+    "term": "Doing Mind",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "A mode of attention organised around tasks, solutions, and goals.",
+    "long_definition": "Doing mind helps you plan and act. When it dominates, every experience can become a problem to fix. DBT explores balancing purposeful action with openness to the present.",
+    "categories": [
+      "Mindfulness"
+    ],
+    "tracks": [
+      "Mindfulness"
+    ],
+    "related_terms": [
+      "being-mind",
+      "wise-mind"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Mindfulness Handout 9, p. 71",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "effectively": {
+    "term": "Effectively",
+    "aliases": [
+      "Effectiveness"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Choosing actions that work toward your goals in the situation that actually exists.",
+    "long_definition": "Effectiveness asks what is likely to help, taking circumstances and consequences into account. It can mean loosening the need to win an argument while still protecting your values and boundaries.",
+    "categories": [
+      "Mindfulness"
+    ],
+    "tracks": [
+      "Mindfulness"
+    ],
+    "related_terms": [
+      "how-skills",
+      "wise-mind",
+      "self-respect-effectiveness"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Mindfulness Handout 5, p. 60",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "emotion-functions": {
+    "term": "Functions of Emotions",
+    "aliases": [
+      "What Emotions Do"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "The ways emotions prepare action and communicate information to ourselves and others.",
+    "long_definition": "Emotions can highlight needs or threats and influence how other people respond. They are useful signals to examine, but their presence or strength does not by itself establish the facts of a situation.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "action-urge",
+      "check-the-facts"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 3, p. 210",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
       }
     ]
   },
@@ -365,10 +1265,319 @@
     "references": [
       {
         "type": "book",
-        "title": "DBT Skills Training Handouts and Worksheets, Second Edition",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
         "author": "Marsha M. Linehan",
-        "section": "Mindfulness Handout 3: Wise Mind - States of Mind",
-        "url": "https://www.guilford.com/add/linehan7_old/lin-p-1.pdf?t=1"
+        "section": "Mindfulness Handout 3, p. 50",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "emotion-regulation": {
+    "term": "Emotion Regulation",
+    "aliases": [
+      "Emotional Regulation"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Skills for understanding emotions and influencing how you respond to them.",
+    "long_definition": "Emotion regulation includes identifying feelings, reducing vulnerability, and choosing useful responses. The goal is not to eliminate emotions; feelings can provide information even when their intensity or urges need attention.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "check-the-facts",
+      "opposite-action",
+      "abc-please"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 1, p. 205",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "emotional-vulnerability": {
+    "term": "Emotional Vulnerability",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "A tendency or current condition that makes strong emotional reactions more likely.",
+    "long_definition": "Some people react quickly or intensely and take longer to settle. Stress, illness, sleep disruption, and other circumstances can also increase vulnerability. Understanding these factors helps guide support and skills practice.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "biosocial-theory",
+      "vulnerability-factors",
+      "please"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 4, p. 211; General Handout 5, pp. 14-15",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "envy": {
+    "term": "Envy",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "An emotion arising when someone else has something important that you want and lack.",
+    "long_definition": "Envy can draw attention to an unmet wish, opportunity, or need. It differs from jealousy about losing something already valued, and it need not determine how you treat the other person.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "jealousy",
+      "values"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 6, p. 216",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "extinction": {
+    "term": "Extinction",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "The weakening of a learned behaviour when its maintaining reinforcement stops.",
+    "long_definition": "A response may initially increase or vary before it decreases. Extinction does not teach a replacement skill, and behaviour can return. The concept does not justify ignoring distress or withholding essential care.",
+    "categories": [
+      "Interpersonal Effectiveness"
+    ],
+    "tracks": [
+      "Interpersonal Effectiveness"
+    ],
+    "related_terms": [
+      "reinforcement",
+      "shaping"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Interpersonal Effectiveness Handout 21, p. 162",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "fast": {
+    "term": "FAST",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "A DBT reminder for protecting self-respect during an interaction.",
+    "long_definition": "FAST emphasises fairness, avoiding unnecessary apologies, staying connected to values, and honesty. Avoiding over-apology does not mean refusing to acknowledge harm or make a warranted apology.",
+    "categories": [
+      "Interpersonal Effectiveness"
+    ],
+    "tracks": [
+      "Interpersonal Effectiveness"
+    ],
+    "related_terms": [
+      "self-respect-effectiveness",
+      "values",
+      "dear-man"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Interpersonal Effectiveness Handout 7, p. 130",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "fear": {
+    "term": "Fear",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "An emotion organised around perceived danger or threat.",
+    "long_definition": "Fear can prepare protection, escape, or caution. Assess the situation before deciding what to do; an alarm can be important without every feared outcome being certain.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "check-the-facts",
+      "action-urge"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 6, p. 217",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "give": {
+    "term": "GIVE",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "A DBT reminder to approach an interaction with care for the relationship.",
+    "long_definition": "GIVE brings together gentleness, interest, validation, and an approachable manner. These qualities can support a difficult conversation while leaving room for boundaries and disagreement.",
+    "categories": [
+      "Interpersonal Effectiveness"
+    ],
+    "tracks": [
+      "Interpersonal Effectiveness"
+    ],
+    "related_terms": [
+      "relationship-effectiveness",
+      "validation",
+      "dear-man"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Interpersonal Effectiveness Handout 6, p. 128",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "guilt": {
+    "term": "Guilt",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "An emotion connected with believing you have violated a value or caused harm.",
+    "long_definition": "Guilt can motivate repair when it fits the facts. Feeling responsible does not always mean you are responsible; consider what happened, what was within your control, and what proportionate action could help.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "shame",
+      "check-the-facts",
+      "values"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 6, p. 223",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "half-smiling": {
+    "term": "Half-Smiling",
+    "aliases": [
+      "Half Smile"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Using a relaxed face and a slight smile as a practice of bodily openness.",
+    "long_definition": "The expression is gentle rather than a forced performance of happiness. Half-smiling is explored as support for acceptance, not as proof that you are happy with what happened.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "willing-hands",
+      "radical-acceptance"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 14, p. 347",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "happiness": {
+    "term": "Happiness",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "A family of positive emotional experiences, including enjoyment, contentment, and joy.",
+    "long_definition": "Happiness may accompany connection, achievement, relief, or a pleasant experience. Its intensity varies; quieter satisfaction counts too. Noticing a positive moment does not erase other feelings or difficulties.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "accumulate-positive-emotions",
+      "mindfulness-emotions"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 6, p. 218",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
       }
     ]
   },
@@ -395,10 +1604,228 @@
     "references": [
       {
         "type": "book",
-        "title": "DBT Skills Training Handouts and Worksheets, Second Edition",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
         "author": "Marsha M. Linehan",
-        "section": "Mindfulness Handout 5: Taking Hold of Your Mind - How Skills",
-        "url": "https://www.guilford.com/add/linehan7_old/lin-p-1.pdf?t=1"
+        "section": "Mindfulness Handout 5, p. 60",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "improve": {
+    "term": "IMPROVE",
+    "aliases": [
+      "IMPROVE the Moment"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "A DBT collection of ways to make a difficult moment more bearable.",
+    "long_definition": "IMPROVE draws on imagination, meaning, spiritual support if relevant, relaxation, present focus, a brief break, and encouragement. Choose what fits; using the skill does not require liking or denying the situation.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "crisis-survival",
+      "one-mindfully",
+      "self-soothe"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 9, p. 336",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "intense-exercise": {
+    "term": "Intense Exercise",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "The TIPP option of brief vigorous movement to help manage high arousal.",
+    "long_definition": "Movement is selected to suit the person's body, health, and current fitness. The skill is not a requirement to exhaust yourself or exercise through pain, injury, or medical restrictions.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "tipp",
+      "emotion-regulation"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 6, p. 329",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "interpersonal-effectiveness": {
+    "term": "Interpersonal Effectiveness",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Skills for pursuing interpersonal goals while considering relationships and self-respect.",
+    "long_definition": "Different situations call for different priorities. DBT helps you clarify the outcome you want, the relationship you want to maintain, and the values you want to uphold while communicating.",
+    "categories": [
+      "Interpersonal Effectiveness"
+    ],
+    "tracks": [
+      "Interpersonal Effectiveness"
+    ],
+    "related_terms": [
+      "objectives-effectiveness",
+      "relationship-effectiveness",
+      "self-respect-effectiveness"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Interpersonal Effectiveness Handouts 1 and 4, pp. 117, 124",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "invalidation": {
+    "term": "Invalidation",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "A response that rejects, dismisses, or misreads an experience or claim.",
+    "long_definition": "Invalidation can be painful, especially when an understandable private experience is dismissed. A factual correction can also feel invalidating; checking what is accurate helps distinguish useful feedback from an unfair dismissal.",
+    "categories": [
+      "Interpersonal Effectiveness"
+    ],
+    "tracks": [
+      "Interpersonal Effectiveness"
+    ],
+    "related_terms": [
+      "validation",
+      "self-validation",
+      "biosocial-theory"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Interpersonal Effectiveness Handout 19, pp. 158-159; General Handout 5, p. 15",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "jealousy": {
+    "term": "Jealousy",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "An emotion connected with a perceived threat to a valued relationship or something you fear losing.",
+    "long_definition": "Jealousy can bring urges to hold on, compete, or seek reassurance. Checking assumptions and communicating directly can help distinguish an actual threat from an anticipated one.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "envy",
+      "check-the-facts",
+      "interpersonal-effectiveness"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 6, p. 219",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "love": {
+    "term": "Love",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "An emotional experience of affection, attachment, or caring connection.",
+    "long_definition": "Love can motivate closeness, generosity, and time together. The feeling alone does not show whether a relationship is safe or mutually supportive; behaviour and circumstances also matter.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "relationship-effectiveness",
+      "check-the-facts"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 6, p. 220",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "loving-kindness": {
+    "term": "Loving Kindness",
+    "aliases": [
+      "Loving-Kindness Practice"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "A practice of deliberately directing goodwill toward yourself or others.",
+    "long_definition": "Loving kindness uses attention and kind intentions to cultivate compassion. It need not produce a particular feeling immediately, and wishing someone well does not require approving their actions or resuming contact.",
+    "categories": [
+      "Mindfulness"
+    ],
+    "tracks": [
+      "Mindfulness"
+    ],
+    "related_terms": [
+      "mindfulness",
+      "self-validation"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Mindfulness Handout 8, p. 70",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
       }
     ]
   },
@@ -426,10 +1853,575 @@
     "references": [
       {
         "type": "book",
-        "title": "DBT Skills Training Handouts and Worksheets, Second Edition",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
         "author": "Marsha M. Linehan",
-        "section": "Mindfulness Handout 1A: Mindfulness Definitions",
-        "url": "https://www.guilford.com/add/linehan7_old/lin-p-1.pdf?t=1"
+        "section": "Mindfulness Handout 1a, p. 46",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "mindfulness-emotions": {
+    "term": "Mindfulness of Current Emotions",
+    "aliases": [
+      "Mindfulness of Emotions"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Noticing an emotion as a changing experience without automatically following its urge.",
+    "long_definition": "Observe the feeling and its bodily features without deliberately feeding it or forcing it away. An emotion is something you experience, not your whole identity, and you can choose how to respond.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "action-urge",
+      "observe",
+      "emotion-regulation"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 22, p. 264",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "mindfulness-thoughts": {
+    "term": "Mindfulness of Current Thoughts",
+    "aliases": [
+      "Mindfulness of Thoughts"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Watching thoughts arise and pass without treating them as instructions or facts.",
+    "long_definition": "This practice approaches thinking with curiosity rather than suppression or immediate analysis. Recognising a thought as a mental event can create room to decide whether acting on it is useful.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "observe",
+      "cognitive-defusion"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 15, p. 350",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "missing-links": {
+    "term": "Missing-Links Analysis",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "An inquiry into why an intended or useful action did not happen.",
+    "long_definition": "This analysis looks for barriers such as unclear expectations, not remembering, low willingness, or practical obstacles. The purpose is to choose a workable support for next time, rather than to conclude that someone did not care.",
+    "categories": [
+      "Wellness"
+    ],
+    "tracks": [
+      "Wellness (Actions & Patterns)"
+    ],
+    "related_terms": [
+      "behaviour-chain",
+      "willingness",
+      "problem-solving"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "General Handout 8, p. 23",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "negative-reinforcement": {
+    "term": "Negative Reinforcement",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "An increase in behaviour because it removes or reduces something unpleasant.",
+    "long_definition": "Relief can make an action more likely to repeat. For example, avoiding a task may be reinforced when anxiety briefly falls. Negative reinforcement increases behaviour; it is not another name for punishment.",
+    "categories": [
+      "Interpersonal Effectiveness"
+    ],
+    "tracks": [
+      "Interpersonal Effectiveness"
+    ],
+    "related_terms": [
+      "reinforcement",
+      "positive-reinforcement"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Interpersonal Effectiveness Handout 20, p. 161",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "nonjudgmentally": {
+    "term": "Nonjudgmentally",
+    "aliases": [
+      "Nonjudgmentalness"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Noticing facts and reactions without adding global verdicts of good or bad.",
+    "long_definition": "A nonjudgmental stance can still recognise danger, harm, preferences, and consequences. If a judgment appears, acknowledge it and return to a more specific description without criticising yourself for judging.",
+    "categories": [
+      "Mindfulness"
+    ],
+    "tracks": [
+      "Mindfulness"
+    ],
+    "related_terms": [
+      "how-skills",
+      "describe",
+      "validation"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Mindfulness Handout 5, p. 60",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "objectives-effectiveness": {
+    "term": "Objectives Effectiveness",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Working toward a specific practical result in an interaction.",
+    "long_definition": "The result may involve asking for help, declining a request, resolving a disagreement, or having a concern heard. A clear objective helps you choose how to communicate and assess what happened.",
+    "categories": [
+      "Interpersonal Effectiveness"
+    ],
+    "tracks": [
+      "Interpersonal Effectiveness"
+    ],
+    "related_terms": [
+      "dear-man",
+      "priorities"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Interpersonal Effectiveness Handout 4, p. 124",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "observe": {
+    "term": "Observe",
+    "aliases": [
+      "Observing"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Noticing present experience before putting it into words or trying to change it.",
+    "long_definition": "Observing can involve sensations, sounds, thoughts, or emotions. When attention wanders, noticing that and returning is part of the practice. It does not require an empty mind.",
+    "categories": [
+      "Mindfulness"
+    ],
+    "tracks": [
+      "Mindfulness"
+    ],
+    "related_terms": [
+      "what-skills",
+      "describe",
+      "participate"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Mindfulness Handout 4, p. 53",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "one-mindfully": {
+    "term": "One-Mindfully",
+    "aliases": [
+      "One-Mindfulness"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Giving attention to one present activity and returning when distracted.",
+    "long_definition": "The activity may be a task, a conversation, or deliberate planning. One-mindfulness concerns how you direct attention; wandering and returning do not mean the practice has failed.",
+    "categories": [
+      "Mindfulness"
+    ],
+    "tracks": [
+      "Mindfulness"
+    ],
+    "related_terms": [
+      "how-skills",
+      "participate"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Mindfulness Handout 5, p. 60",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "opposite-action": {
+    "term": "Opposite Action",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Choosing behaviour opposite to an emotional urge when the urge does not fit the facts or acting on it is ineffective.",
+    "long_definition": "After considering the situation and safety, change the response that would otherwise maintain the emotion. Opposite action is not a rule to ignore accurate danger signals or suppress every uncomfortable feeling.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "action-urge",
+      "check-the-facts",
+      "problem-solving"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handouts 9-10, pp. 230-231",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "paced-breathing": {
+    "term": "Paced Breathing",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Deliberately using a slower, steady breathing rhythm to support regulation.",
+    "long_definition": "In DBT, breathing is slowed gently, often with a longer out-breath. The pace should remain comfortable rather than forced; adjust or pause if the practice causes dizziness or discomfort.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "tipp",
+      "progressive-muscle-relaxation"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 6, p. 329",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "participate": {
+    "term": "Participate",
+    "aliases": [
+      "Participating"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Joining fully in the activity or experience taking place now.",
+    "long_definition": "Participation shifts attention from watching and evaluating yourself toward engagement. It can happen in conversation, play, work, or another ordinary activity; it does not require performing perfectly.",
+    "categories": [
+      "Mindfulness"
+    ],
+    "tracks": [
+      "Mindfulness"
+    ],
+    "related_terms": [
+      "what-skills",
+      "one-mindfully"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Mindfulness Handout 4, p. 53",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "please": {
+    "term": "PLEASE",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "A DBT reminder to support emotional stability by attending to physical health.",
+    "long_definition": "PLEASE covers care for illness, regular nourishment, the effects of mood-altering substances, sleep, and suitable movement. Adapt these areas to your health needs and treatment plan rather than treating them as a rigid prescription.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "abc-please",
+      "emotional-vulnerability",
+      "sleep-hygiene"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 20, p. 257",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "positive-reinforcement": {
+    "term": "Positive Reinforcement",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "An increase in behaviour because something rewarding follows it.",
+    "long_definition": "The word positive means that something is added, not that the behaviour is morally good. Recognition after practising a skill may be reinforcing if it makes future practice more likely.",
+    "categories": [
+      "Interpersonal Effectiveness"
+    ],
+    "tracks": [
+      "Interpersonal Effectiveness"
+    ],
+    "related_terms": [
+      "reinforcement",
+      "negative-reinforcement"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Interpersonal Effectiveness Handout 20, p. 161",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "priorities": {
+    "term": "Interpersonal Priorities",
+    "aliases": [
+      "Clarifying Priorities"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Deciding how much to emphasise the outcome, the relationship, and self-respect.",
+    "long_definition": "These goals may support each other or pull in different directions. Naming what matters most in this interaction helps you choose a response deliberately and recognise the tradeoffs.",
+    "categories": [
+      "Interpersonal Effectiveness"
+    ],
+    "tracks": [
+      "Interpersonal Effectiveness"
+    ],
+    "related_terms": [
+      "objectives-effectiveness",
+      "relationship-effectiveness",
+      "self-respect-effectiveness"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Interpersonal Effectiveness Handout 4, p. 124",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "problem-solving": {
+    "term": "Problem Solving",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Working on a changeable situation through a specific goal, possible actions, and review.",
+    "long_definition": "Clarify the problem using the facts, consider options, try a feasible response, and learn from its effects. This addresses circumstances contributing to distress rather than only trying to alter the feeling.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "check-the-facts",
+      "opposite-action"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 12, p. 241",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "progressive-muscle-relaxation": {
+    "term": "Progressive Muscle Relaxation",
+    "aliases": [
+      "PMR"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "A relaxation practice that notices the contrast between muscle tension and release.",
+    "long_definition": "The DBT version pairs muscle release with the out-breath and a relaxation cue. This site uses the visible name Progressive Muscle Relaxation; Linehan's handout calls this paired muscle relaxation. Avoid painful tensing and adapt for physical limitations.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "tipp",
+      "paced-breathing"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handouts 6 and 6b, pp. 329, 331",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "prompting-event": {
+    "term": "Prompting Event",
+    "aliases": [
+      "Triggering Event"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "The event selected as the starting point for an emotional or behavioural sequence.",
+    "long_definition": "Describe what happened as specifically as possible, then separate it from the meaning you gave it. The prompting event is one part of a chain; earlier vulnerabilities and later interpretations also matter.",
+    "categories": [
+      "Wellness"
+    ],
+    "tracks": [
+      "Wellness (Actions & Patterns)"
+    ],
+    "related_terms": [
+      "behaviour-chain",
+      "check-the-facts"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "General Handout 7a, p. 21",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "pros-cons": {
+    "term": "Pros and Cons",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Comparing the likely benefits and costs of acting on an urge and choosing another response.",
+    "long_definition": "Look at both immediate and longer-term effects. Preparing the comparison before distress peaks can make it easier to remember your reasons for a safer or more effective choice.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "crisis-survival",
+      "consequences"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 5, p. 328",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
       }
     ]
   },
@@ -464,6 +2456,37 @@
       }
     ]
   },
+  "radical-acceptance": {
+    "term": "Radical Acceptance",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Acknowledging the facts of reality as they are, including painful facts you do not approve of.",
+    "long_definition": "Radical acceptance reduces the added struggle of insisting that an existing reality must not be so. It can coexist with grief, boundaries, protection, and efforts to change what can be changed.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "turning-the-mind",
+      "willingness",
+      "acceptance"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handouts 11-11a, pp. 342-343",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
   "reasonable-mind": {
     "term": "Reasonable Mind",
     "aliases": [],
@@ -487,10 +2510,134 @@
     "references": [
       {
         "type": "book",
-        "title": "DBT Skills Training Handouts and Worksheets, Second Edition",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
         "author": "Marsha M. Linehan",
-        "section": "Mindfulness Handout 3: Wise Mind - States of Mind",
-        "url": "https://www.guilford.com/add/linehan7_old/lin-p-1.pdf?t=1"
+        "section": "Mindfulness Handout 3, p. 50",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "reinforcement": {
+    "term": "Reinforcement",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "A consequence that makes a behaviour more likely to recur.",
+    "long_definition": "Reinforcement is identified by its effect on future behaviour. Something intended as a reward is not necessarily a reinforcer for that person. Both gaining something welcome and escaping something unpleasant can reinforce an action.",
+    "categories": [
+      "Interpersonal Effectiveness"
+    ],
+    "tracks": [
+      "Interpersonal Effectiveness"
+    ],
+    "related_terms": [
+      "positive-reinforcement",
+      "negative-reinforcement",
+      "shaping"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Interpersonal Effectiveness Handout 20, p. 161",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "relationship-effectiveness": {
+    "term": "Relationship Effectiveness",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Communicating in ways that support a relationship you want to maintain.",
+    "long_definition": "This priority considers the longer-term connection as well as the immediate issue. Listening, respect, and validation can support it without requiring agreement with every request.",
+    "categories": [
+      "Interpersonal Effectiveness"
+    ],
+    "tracks": [
+      "Interpersonal Effectiveness"
+    ],
+    "related_terms": [
+      "give",
+      "validation",
+      "priorities"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Interpersonal Effectiveness Handouts 4 and 6, pp. 124, 128",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "sadness": {
+    "term": "Sadness",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "An emotion often associated with loss, separation, disappointment, or unmet hopes.",
+    "long_definition": "Sadness may involve lower energy, withdrawal, or a need for comfort and connection. Naming it helps distinguish the feeling from assumptions about your worth or future. Sadness is not by itself a diagnosis of depression.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "mindfulness-emotions",
+      "self-validation"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 6, p. 221",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "secondary-emotion": {
+    "term": "Secondary Emotion",
+    "aliases": [
+      "Secondary Emotions"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "An emotional response that develops in reaction to another emotional experience.",
+    "long_definition": "For example, someone may feel shame about feeling afraid. Distinguishing the initial feeling from reactions to it can clarify what needs validation, a different interpretation, or another skill.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "describe-emotions",
+      "self-validation"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 5, p. 213",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
       }
     ]
   },
@@ -526,6 +2673,318 @@
       }
     ]
   },
+  "self-respect-effectiveness": {
+    "term": "Self-Respect Effectiveness",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Acting in an interaction in ways that preserve your integrity and self-respect.",
+    "long_definition": "Consider how to be fair to yourself and others, truthful, and consistent with your values. Keeping self-respect can matter even when you do not obtain the response you hoped for.",
+    "categories": [
+      "Interpersonal Effectiveness"
+    ],
+    "tracks": [
+      "Interpersonal Effectiveness"
+    ],
+    "related_terms": [
+      "fast",
+      "values",
+      "priorities"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Interpersonal Effectiveness Handouts 4 and 7, pp. 124, 130",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "self-soothe": {
+    "term": "Self-Soothe",
+    "aliases": [
+      "Self-Soothing",
+      "Self-Soothing with the Senses"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Using comforting sensory experiences to support yourself through distress.",
+    "long_definition": "Choose sights, sounds, textures, tastes, or scents that are safe and personally soothing. Different people find different sensations helpful; comfort is not something you have to earn.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "distress-tolerance",
+      "accepts",
+      "body-scan"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 8, p. 334",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "self-validation": {
+    "term": "Self-Validation",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Recognising your own experience with the same care and accuracy you would offer another person.",
+    "long_definition": "Self-validation acknowledges feelings, needs, and relevant circumstances while leaving room to correct mistakes. It supports self-respect without requiring the conclusion that every interpretation or action was justified.",
+    "categories": [
+      "Interpersonal Effectiveness"
+    ],
+    "tracks": [
+      "Interpersonal Effectiveness"
+    ],
+    "related_terms": [
+      "validation",
+      "check-the-facts"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Interpersonal Effectiveness Handout 19, pp. 158-159",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "shame": {
+    "term": "Shame",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "An emotion linked to feeling exposed, unacceptable, or at risk of rejection.",
+    "long_definition": "Shame often brings an urge to hide or withdraw. It can be shaped by invalidation or harsh standards and does not establish that you are defective. Examine the facts and seek a response that protects dignity.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "guilt",
+      "self-validation",
+      "check-the-facts"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 6, p. 222",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "shaping": {
+    "term": "Shaping",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Building a behaviour by reinforcing achievable steps toward it.",
+    "long_definition": "An initial step is supported before expectations gradually move closer to the larger goal. This approach makes learning possible when the complete behaviour is not yet reliable.",
+    "categories": [
+      "Interpersonal Effectiveness"
+    ],
+    "tracks": [
+      "Interpersonal Effectiveness"
+    ],
+    "related_terms": [
+      "reinforcement",
+      "build-mastery"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Interpersonal Effectiveness Handout 20, p. 161",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "sleep-hygiene": {
+    "term": "Sleep Hygiene",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Habits and environmental conditions that support rest and sleep.",
+    "long_definition": "Regular routines and a suitable sleep environment are parts of this DBT skill area. Sleep difficulties have many possible causes; habits can support care without guaranteeing sleep or replacing assessment when problems persist.",
+    "categories": [
+      "Emotional Regulation"
+    ],
+    "tracks": [
+      "Emotional Regulation"
+    ],
+    "related_terms": [
+      "please",
+      "vulnerability-factors"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handout 20b, p. 259",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "stop": {
+    "term": "STOP",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "A DBT pause skill for interrupting an impulsive response.",
+    "long_definition": "STOP prompts you to pause, gain some distance, notice what is happening, and choose your next action deliberately. It helps create space between an urge and a response.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "crisis-survival",
+      "wise-mind"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 4, p. 327",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "temperature": {
+    "term": "Temperature Skill",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "The temperature component of TIPP, using facial cooling to influence arousal.",
+    "long_definition": "DBT describes facial cooling as a way to engage a physiological settling response. Cold exposure can affect heart rate and has medical precautions; consult the full guidance before trying it rather than using a glossary definition as instructions.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "tipp",
+      "paced-breathing"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handouts 6-6a, pp. 329-330",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "tipp": {
+    "term": "TIPP",
+    "aliases": [
+      "TIP",
+      "TIP Skills",
+      "TIPP Skills"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Body-focused DBT skills that can help reduce intense emotional arousal.",
+    "long_definition": "TIPP groups temperature, intense exercise, paced breathing, and muscle relaxation. Linehan calls the group TIP. Choose a method suited to your health and circumstances; these skills have physical precautions and are not all suitable for everyone.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "temperature",
+      "intense-exercise",
+      "paced-breathing",
+      "progressive-muscle-relaxation"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 6, p. 329",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "turning-the-mind": {
+    "term": "Turning the Mind",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Renewing the choice to move toward acceptance when you notice resistance.",
+    "long_definition": "Choosing acceptance is not the same as already feeling accepting. Turning the mind is a repeated orientation toward reality that may be needed many times in the same difficult situation.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "radical-acceptance",
+      "willingness"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 12, p. 345",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
   "underlying-assumption": {
     "term": "Underlying Assumption",
     "aliases": [
@@ -558,16 +3017,82 @@
       }
     ]
   },
+  "urge-surfing": {
+    "term": "Urge Surfing",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Noticing the rise and fall of an urge without automatically acting on it.",
+    "long_definition": "Attend to an urge as an experience that can change over time. The aim is to allow room for choice, not to guarantee that the urge disappears quickly. Additional support may still be needed.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "action-urge",
+      "mindfulness",
+      "clear-mind"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 20, p. 362",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "validation": {
+    "term": "Validation",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Acknowledging what is understandable or accurate in someone's experience.",
+    "long_definition": "Validation can recognise a feeling in light of a person's circumstances without endorsing an inaccurate belief or harmful action. Careful listening and checking your understanding matter more than assuming you already know.",
+    "categories": [
+      "Interpersonal Effectiveness"
+    ],
+    "tracks": [
+      "Interpersonal Effectiveness"
+    ],
+    "related_terms": [
+      "self-validation",
+      "invalidation",
+      "give"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Interpersonal Effectiveness Handouts 6a and 17-18, pp. 129, 155-156",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
   "values": {
     "term": "Values",
     "aliases": [],
     "redirect_slugs": [],
     "short_definition": "Chosen qualities you want to bring to your ongoing actions.",
-    "long_definition": "Values describe how you want to act, such as with care or curiosity. A goal can be completed; a value can guide many different actions over time.",
+    "long_definition": "Values describe how you want to act, such as with care or curiosity. A goal can be completed; a value can guide many different actions over time. DBT also uses values to guide longer-term goals and the actions that build a meaningful life.",
     "categories": [
+      "Goal Setting",
+      "Emotional Regulation",
       "Acceptance and Commitment Therapy"
     ],
     "tracks": [
+      "Goal Setting",
+      "Emotional Regulation",
       "Acceptance and Commitment Therapy"
     ],
     "related_terms": [
@@ -584,6 +3109,77 @@
         "author": "Steven C. Hayes with Spencer Smith",
         "section": "Chapters 11-12, pp. 153-176",
         "url": "https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/"
+      },
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Emotion Regulation Handouts 17-18, pp. 252-255",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "vulnerability-factors": {
+    "term": "Vulnerability Factors",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Conditions that make a difficult reaction more likely before an event occurs.",
+    "long_definition": "Illness, exhaustion, accumulated stress, and other circumstances may lower available coping capacity. Identifying these factors suggests places to add care or support; it does not make a harmful response inevitable.",
+    "categories": [
+      "Wellness"
+    ],
+    "tracks": [
+      "Wellness (Actions & Patterns)"
+    ],
+    "related_terms": [
+      "emotional-vulnerability",
+      "please",
+      "behaviour-chain"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "General Handout 7a, p. 21",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "walking-the-middle-path": {
+    "term": "Walking the Middle Path",
+    "aliases": [
+      "Middle Path"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "Finding a response that holds useful truths from apparently opposing positions.",
+    "long_definition": "The middle path brings acceptance and change into the same response. It is not automatically a halfway compromise: the aim is a fuller understanding that leads to effective action.",
+    "categories": [
+      "Mindfulness"
+    ],
+    "tracks": [
+      "Mindfulness"
+    ],
+    "related_terms": [
+      "dialectics",
+      "wise-mind",
+      "radical-acceptance"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Mindfulness Handout 10, p. 74",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
       }
     ]
   },
@@ -610,10 +3206,72 @@
     "references": [
       {
         "type": "book",
-        "title": "DBT Skills Training Handouts and Worksheets, Second Edition",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
         "author": "Marsha M. Linehan",
-        "section": "Mindfulness Handout 4: Taking Hold of Your Mind - What Skills",
-        "url": "https://www.guilford.com/add/linehan7_old/lin-p-1.pdf?t=1"
+        "section": "Mindfulness Handout 4, p. 53",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "willfulness": {
+    "term": "Willfulness",
+    "aliases": [
+      "Wilfulness"
+    ],
+    "redirect_slugs": [],
+    "short_definition": "A rigid stance that resists what the situation requires or insists on controlling it.",
+    "long_definition": "Willfulness can appear as refusing to act, giving up, or trying to force everything to go your way. In DBT it names a changeable response, not a bad identity. Notice it without adding shame.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "willingness",
+      "turning-the-mind"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 13, p. 346",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "willing-hands": {
+    "term": "Willing Hands",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "A relaxed, open-hand posture used to support willingness.",
+    "long_definition": "The practice explores how body posture and emotional stance influence each other. Opening the hands can accompany a choice to meet the moment without requiring agreement, passivity, or surrendering a boundary.",
+    "categories": [
+      "Distress Tolerance"
+    ],
+    "tracks": [
+      "Distress Tolerance"
+    ],
+    "related_terms": [
+      "half-smiling",
+      "willingness"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 14, p. 347",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
       }
     ]
   },
@@ -621,17 +3279,21 @@
     "term": "Willingness",
     "aliases": [],
     "redirect_slugs": [],
-    "short_definition": "Readiness to experience discomfort when it accompanies a meaningful action.",
-    "long_definition": "Willingness concerns what you are prepared to make room for, not whether you enjoy it. It can support an achievable step toward a value without requiring anxiety or uncertainty to disappear first.",
+    "short_definition": "Readiness to engage with experience and choose a useful response despite discomfort.",
+    "long_definition": "In DBT, willingness means participating in the situation and doing what is needed, guided by Wise Mind rather than rigid resistance. In ACT, it includes making room for discomfort in the service of values. Neither meaning requires obedience, approval of harm, or abandoning boundaries.",
     "categories": [
+      "Distress Tolerance",
       "Acceptance and Commitment Therapy"
     ],
     "tracks": [
+      "Distress Tolerance",
       "Acceptance and Commitment Therapy"
     ],
     "related_terms": [
-      "acceptance",
-      "committed-action"
+      "wise-mind",
+      "willfulness",
+      "radical-acceptance",
+      "values"
     ],
     "inline_terms": {},
     "status": "published",
@@ -644,6 +3306,13 @@
         "author": "Steven C. Hayes with Spencer Smith",
         "section": "Chapters 9-10, pp. 121-152",
         "url": "https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/"
+      },
+      {
+        "type": "book",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
+        "author": "Marsha M. Linehan",
+        "section": "Distress Tolerance Handout 13, p. 346",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
       }
     ]
   },
@@ -665,10 +3334,10 @@
     "references": [
       {
         "type": "book",
-        "title": "DBT Skills Training Handouts and Worksheets, Second Edition",
+        "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
         "author": "Marsha M. Linehan",
-        "section": "Mindfulness Handout 3: Wise Mind - States of Mind",
-        "url": "https://www.guilford.com/add/linehan7_old/lin-p-1.pdf?t=1"
+        "section": "Mindfulness Handout 3, p. 50",
+        "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
       }
     ]
   }

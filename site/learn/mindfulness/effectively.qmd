@@ -10,6 +10,7 @@ tags:
   - Mindfulness
 terms:
   - how-skills
+  - effectively
 body-classes: bs-learn-article
 page-layout: article
 toc: true

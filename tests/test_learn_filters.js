@@ -65,8 +65,9 @@ const lookupData = JSON.parse(
     "utf8"
   )
 );
-assert.equal(lookupData.entries.length, 22);
-for (const [query, slug] of [["ACT", "acceptance-and-commitment-therapy"], ["cbt", "cognitive-behavioural-therapy"], ["DBT", "dialectical-behaviour-therapy"], ["defusion", "cognitive-defusion"], ["Behavioral Activation", "behavioural-activation"]]) {
+const canonicalGlossary = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "glossary", "glossary.json"), "utf8"));
+assert.equal(lookupData.entries.length, Object.keys(canonicalGlossary).length);
+for (const [query, slug] of [["TIP", "tipp"], ["DEARMAN", "dear-man"], ["Behavior Chain", "behaviour-chain"], ["PMR", "progressive-muscle-relaxation"], ["Self-Soothe", "self-soothe"], ["ACT", "acceptance-and-commitment-therapy"], ["cbt", "cognitive-behavioural-therapy"], ["DBT", "dialectical-behaviour-therapy"], ["defusion", "cognitive-defusion"], ["Behavioral Activation", "behavioural-activation"]]) {
   assert.equal(learn.bestLookupEntry(lookupData.entries, query).slug, slug);
 }
 assert.equal(learn.bestLookupEntry(lookupData.entries, "Wise Mind").slug, "wise-mind");

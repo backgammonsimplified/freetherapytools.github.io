@@ -44,8 +44,9 @@
     const status = element.querySelector(".bs-match-review-status");
     const rejected = Boolean(state.incorrect_matches[element.dataset.matchId]);
     element.dataset.matchReviewState = rejected ? "incorrect" : "unflagged";
-    button.setAttribute("aria-pressed", rejected ? "true" : "false");
-    status.textContent = rejected ? "Marked incorrect" : "";
+    // Publication filtering can retain a resource card without review controls.
+    if (button) button.setAttribute("aria-pressed", rejected ? "true" : "false");
+    if (status) status.textContent = rejected ? "Marked incorrect" : "";
   }
 
   function paintAll() {

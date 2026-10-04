@@ -16,6 +16,8 @@ toc: true
 toc-depth: 3
 execute:
   enabled: false
+highlighted-terms:
+  - check-the-facts
 ---
 
 Check the Facts asks whether an emotion, its intensity, and its duration fit the available evidence.

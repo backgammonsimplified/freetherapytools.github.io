@@ -14,6 +14,8 @@ toc: true
 toc-depth: 3
 execute:
   enabled: false
+highlighted-terms:
+  - dear-man
 ---
 
 DEAR MAN is an interpersonal-effectiveness skill for situations where your main priority is **getting an objective met**: making a request, saying no, asking for a change, or solving a practical problem while staying clear and respectful.

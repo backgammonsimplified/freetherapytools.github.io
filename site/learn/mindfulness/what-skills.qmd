@@ -10,6 +10,9 @@ tags:
   - Mindfulness
 terms:
   - what-skills
+  - observe
+  - describe
+  - participate
 body-classes: bs-learn-article
 page-layout: article
 toc: true

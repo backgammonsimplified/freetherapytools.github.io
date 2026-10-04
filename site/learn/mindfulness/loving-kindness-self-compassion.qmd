@@ -10,6 +10,8 @@ tags:
   - Mindfulness
 terms:
   - self-compassion
+  - loving-kindness
+  - self-validation
 body-classes: bs-learn-article
 page-layout: article
 toc: true

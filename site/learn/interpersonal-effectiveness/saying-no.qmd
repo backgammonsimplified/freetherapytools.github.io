@@ -10,6 +10,8 @@ tags:
   - Interpersonal Effectiveness
 terms:
   - saying-no
+  - dear-man
+  - self-respect-effectiveness
 body-classes: bs-learn-article
 page-layout: article
 toc: true

@@ -10,12 +10,15 @@ tags:
   - Interpersonal Effectiveness
 terms:
   - give
+  - validation
 body-classes: bs-learn-article
 page-layout: article
 toc: true
 toc-depth: 3
 execute:
   enabled: false
+highlighted-terms:
+  - give
 ---
 
 GIVE focuses on how you relate to the other person during an interaction.

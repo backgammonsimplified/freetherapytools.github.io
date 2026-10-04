@@ -10,6 +10,7 @@ tags:
   - Mindfulness
 terms:
   - how-skills
+  - one-mindfully
 body-classes: "bs-learn-article one-mindfully-page"
 page-layout: article
 toc: true

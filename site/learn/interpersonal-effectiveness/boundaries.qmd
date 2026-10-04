@@ -10,6 +10,8 @@ tags:
   - Interpersonal Effectiveness
 terms:
   - boundaries
+  - interpersonal-effectiveness
+  - self-respect-effectiveness
 body-classes: bs-learn-article
 page-layout: article
 toc: true

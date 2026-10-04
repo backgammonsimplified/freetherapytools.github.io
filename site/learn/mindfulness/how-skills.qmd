@@ -10,6 +10,9 @@ tags:
   - Mindfulness
 terms:
   - how-skills
+  - nonjudgmentally
+  - one-mindfully
+  - effectively
 body-classes: bs-learn-article
 page-layout: article
 toc: true

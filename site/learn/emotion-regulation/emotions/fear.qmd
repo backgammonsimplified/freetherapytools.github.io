@@ -10,6 +10,7 @@ tags:
   - Emotional Regulation
 terms:
   - describe-emotions
+  - fear
 body-classes: bs-learn-article
 page-layout: article
 toc: true

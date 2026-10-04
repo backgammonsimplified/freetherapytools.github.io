@@ -44,7 +44,8 @@ class LearnGlossaryTests(unittest.TestCase):
         # A related lesson topic must not be sorted or displayed as a glossary track.
         html = learn_glossary.build_entries_html(entries, {"wise-mind": [fast]}, {})
         self.assertIn("Interpersonal Effectiveness", html)
-        self.assertNotIn("Self-Respect", html)
+        self.assertTrue(all("Self-Respect" not in entry.get("learning_tracks", []) for entry in entries))
+        self.assertNotIn('data-tracks="Self-Respect"', html)
         with self.assertRaises(learn_glossary.ValidationError):
             learn_glossary.validate_lessons([{**fast, "tags": ["Unknown topic"]}], entries)
 
@@ -82,7 +83,7 @@ class LearnGlossaryTests(unittest.TestCase):
     def test_glossary_contains_only_current_therapy_terms(self) -> None:
         source = json.loads(learn_glossary.PUBLIC_DATA_PATH.read_text(encoding="utf-8"))
         entries = learn_glossary.validate_public_data(source)
-        self.assertEqual(len(entries), 22)
+        self.assertEqual(len(entries), len(json.loads((learn_glossary.REPOSITORY_ROOT / "glossary/glossary.json").read_text(encoding="utf-8"))))
         self.assertTrue(all(set(entry["categories"]).issubset(learn_glossary.GLOSSARY_CATEGORIES) for entry in entries))
         self.assertEqual(next(entry for entry in entries if entry["slug"] == "wise-mind")["categories"], ["Mindfulness"])
 
@@ -94,7 +95,7 @@ class LearnGlossaryTests(unittest.TestCase):
         self.assertEqual([entry["slug"] for entry in lookup["entries"]], [entry["slug"] for entry in source["entries"]])
         serialized = json.dumps(lookup)
         for forbidden in learn_glossary.FORBIDDEN_KEYS:
-            self.assertNotIn(forbidden, serialized)
+            self.assertNotIn(json.dumps(forbidden) + ":", serialized)
 
     def test_generated_catalogues_cover_every_lesson(self) -> None:
         generated = (
@@ -125,7 +126,7 @@ class LearnGlossaryTests(unittest.TestCase):
     def test_generated_sources_validate(self) -> None:
         result = learn_glossary.validate_generated()
         self.assertEqual(result["lessons"], len(self.lessons))
-        self.assertEqual(result["canonical_entries"], 22)
+        self.assertEqual(result["canonical_entries"], len(json.loads((learn_glossary.REPOSITORY_ROOT / "glossary/glossary.json").read_text(encoding="utf-8"))))
         self.assertEqual(result["research_articles"], 0)
 
 

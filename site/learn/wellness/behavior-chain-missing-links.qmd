@@ -9,7 +9,10 @@ categories:
 tags:
   - Wellness (Actions & Patterns)
 terms:
-  - behavior-chain
+  - behaviour-chain
+  - missing-links
+  - prompting-event
+  - vulnerability-factors
 body-classes: bs-learn-article
 page-layout: article
 toc: true

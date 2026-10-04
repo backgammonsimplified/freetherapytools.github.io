@@ -11,12 +11,15 @@ tags:
   - Self-Respect
 terms:
   - fast
+  - self-respect-effectiveness
 body-classes: bs-learn-article
 page-layout: article
 toc: true
 toc-depth: 3
 execute:
   enabled: false
+highlighted-terms:
+  - fast
 ---
 
 DEAR + FAST builds on the same DEAR MAN script used to make a request, set a boundary, or say no. **DEAR MAN helps you organize what you want to communicate; FAST helps you protect your self-respect while you communicate it.** The goal is not to win every interaction or make the other person agree. It is to speak clearly, act in line with your values, and leave the interaction knowing that you treated both yourself and the other person with respect.

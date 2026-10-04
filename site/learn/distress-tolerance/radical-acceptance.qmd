@@ -10,6 +10,8 @@ tags:
   - Distress Tolerance
 terms:
   - radical-acceptance
+  - turning-the-mind
+  - willingness
 body-classes: bs-learn-article
 page-layout: article
 toc: true

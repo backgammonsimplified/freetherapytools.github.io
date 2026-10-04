@@ -10,6 +10,8 @@ tags:
   - Mindfulness
 terms:
   - being-mind
+  - doing-mind
+  - walking-the-middle-path
 body-classes: bs-learn-article
 page-layout: article
 toc: true

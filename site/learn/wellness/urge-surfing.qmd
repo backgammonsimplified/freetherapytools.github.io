@@ -11,6 +11,7 @@ tags:
   - Wellness (Actions & Patterns)
 terms:
   - coping
+  - urge-surfing
 body-classes: bs-learn-article
 page-layout: article
 toc: true

@@ -16,6 +16,8 @@ toc: true
 toc-depth: 3
 execute:
   enabled: false
+highlighted-terms:
+  - opposite-action
 ---
 
 ## Opposite Action {#opposite-action}
