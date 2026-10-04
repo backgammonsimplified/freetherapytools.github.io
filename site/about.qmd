@@ -1,6 +1,6 @@
 ---
 title: "About Free Therapy Tools"
-description: "About the educational skills, privacy approach, and development status of Free Therapy Tools."
+description: "Meet the clinical reviewer and educator behind Free Therapy Tools, and learn about its educational purpose and privacy approach."
 page-layout: full
 toc: true
 format:
@@ -9,15 +9,39 @@ format:
     body-classes: bs-about-page
 ---
 
-Free Therapy Tools is an open-source collection of practical lessons, worksheets, and browser-based tools for learning and practising DBT, CBT, mindfulness, goal-setting, emotional-regulation, distress-tolerance, interpersonal-effectiveness, and wellness skills.
+Free Therapy Tools is an open-source collection of practical lessons, worksheets, and browser-based tools for learning and practising DBT, CBT, ACT, mindfulness, goal-setting, emotional-regulation, distress-tolerance, interpersonal-effectiveness, and wellness skills.
 
 ::: {.callout-note title="Development preview"}
 **Free Therapy Tools is under active development.** Content and interactions may change as the project is reviewed and improved.
 :::
 
+## Clinical reviewer
+
+### Alexandra (Alli) Chin, MSW, RSW
+
+**Mental Health Therapist - Registered Social Worker**
+
+Alli is the clinical reviewer for Free Therapy Tools. Her clinical practice centres on evidence-based approaches, individual wellness goals, and collaboration across health professions. Her interests include stress management and polyvagal theory, perinatal mental health, chronic disease management, and reducing barriers to care.
+
+Her experience includes social work at CarePoint Health, counselling at McMaster University's Student Wellness Centre, and mental health therapy at Queen Square Family Health Team. She holds a Master of Social Work from the University of Toronto, with a focus on Mental Health and Health and a Collaborative Specialization in Women's Health, and a Bachelor of Science in Health Studies from the University of Waterloo. Her research background includes maternal experiences of labour and the early postpartum period, and weight stigma and psychological health.
+
+[Alli's professional profile](https://www.linkedin.com/in/alexandrabchin/)
+
+## Educational framework and development
+
+### Andrew Andrade, B.Ed., OCT
+
+**Educator and developer**
+
+Andrew created the open educational framework shared through [andrewandrade.ca](https://andrewandrade.ca/) and [Tech Edu Resources](https://andrewandrade.ca/tech-edu-resources/), and is extending it to make more knowledge freely available, reusable, and practical. He supports the educational design and technical development of Free Therapy Tools.
+
+His teacher education at Lakehead University, including child psychology, informs his interest in mindfulness, emotional awareness, and helping students navigate challenges and connect with appropriate support. His contribution here is educational, drawing on his role as an Ontario Certified Teacher.
+
 ## What this site is for
 
-Use the [Tool Finder](tool-finder/index.qmd) to find a focused exercise, or browse [Learn](learn/index.qmd) for the surrounding skill and context. The tools are designed for education, reflection, and practice. They do not diagnose conditions or replace care from a qualified professional.
+Use the [Tool Finder](tool-finder/index.qmd) to find a focused exercise, or browse [Learn](learn/index.qmd) for the surrounding skill and context. The tools are designed for education, reflection, and practice. They do not diagnose conditions or replace care from a qualified professional. Using this site does not establish a therapeutic relationship with its contributors.
+
+For educators, mindfulness and reflection can support attention, emotional awareness, and readiness to learn. The [Ontario College of Teachers advisory on supporting students' mental health](https://www.oct.ca/en-ca/for-members/professional-advisories/supporting-students-mental-health) describes a role of noticing concerns, listening, maintaining professional boundaries, and connecting students with appropriate help. These resources are educational aids, not classroom therapy or a basis for diagnosing students.
 
 If you or someone else may be in immediate danger, use appropriate local emergency or crisis services rather than relying on this website.
 
