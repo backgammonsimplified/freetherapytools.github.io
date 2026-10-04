@@ -18,6 +18,7 @@ project:
     - assets/bs-glossary.js
     - assets/bs-learn.js
     - assets/site-path.js
+    - assets/learn-layout-stability.js
     - assets/d3-values-force.min.js
     - assets/therapy-force-graph.js
     - assets/therapy-calendar.js
@@ -89,7 +90,7 @@ website:
       - text: CBT Skills
         href: cbt-skills/index.qmd
       - text: Mindfulness
-        href: mindfulness/index.qmd
+        href: learn/mindfulness/index.qmd
     right:
       - href: glossary/index.qmd
         text: Glossary

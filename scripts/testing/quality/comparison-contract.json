@@ -237,7 +237,7 @@
     {"id": "cbt-index", "route": "/cbt-skills/"},
     {"id": "cbt-lesson", "route": "/learn/cbt-anxiety/thinking-traps.html"},
     {"id": "cbt-worry-lesson", "route": "/learn/cbt-anxiety/understanding-worry.html"},
-    {"id": "mindfulness-index", "route": "/mindfulness/"},
+    {"id": "mindfulness-index", "route": "/learn/mindfulness/"},
     {"id": "mindfulness-observe-lesson", "route": "/learn/mindfulness/what-skills.html"},
     {"id": "values-app", "route": "/tool-finder/values/"},
     {"id": "emotion-explorer-app", "route": "/tool-finder/emotions/"},

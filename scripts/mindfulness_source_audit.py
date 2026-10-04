@@ -147,7 +147,9 @@ def legacy_records() -> list[dict[str, object]]:
                 "assigned_learn_href": None if excluded else href,
                 "assigned_source_qmd": None if excluded else f"site/learn/mindfulness/{qmd}",
                 "pdf_href": None if excluded else pdf, "pdf_linked": not excluded,
-                "adapted_text_present": not excluded, "interactive_tool_id": None if excluded else tool,
+                "adapted_text_present": not excluded,
+                "displayed_on_lesson": not excluded and qmd not in SUMMARY_ONLY_LESSONS,
+                "interactive_tool_id": None if excluded else tool,
                 "interactive_tool_linked": bool(tool) and not excluded, "excluded": excluded,
                 "exclusion_reason": "Blank reverse/structural page; no educational content." if excluded else None,
             })
@@ -172,6 +174,9 @@ def exact_match_for_page(page: int) -> dict[str, object] | None:
                 "clean_asset": f"/resources/clean/mindfulness/{slug}-clean.pdf",
             }
     return None
+
+
+SUMMARY_ONLY_LESSONS = {"mindfulness-foundations.qmd", "one-mindfully.qmd"}
 
 
 def program_records() -> list[dict[str, object]]:
@@ -217,6 +222,7 @@ def program_records() -> list[dict[str, object]]:
             "original_source_public_asset": original,
             "clean_printable_public_asset": match["clean_asset"] if match else None,
             "adapted_text_present": not excluded,
+            "displayed_on_lesson": not excluded and qmd not in SUMMARY_ONLY_LESSONS,
             "third_party_redistribution_unconfirmed": page in RIGHTS_UNCONFIRMED_PAGES,
             "status": status,
             "excluded": excluded,
@@ -234,6 +240,7 @@ def exact_matches() -> list[dict[str, object]]:
         "original_source_public_asset": f"/resources/mindfulness/program-source/{slug}-original.pdf",
         "clean_printable_public_asset": f"/resources/clean/mindfulness/{slug}-clean.pdf",
         "exact_match": True,
+        "displayed_on_lesson": next(row["displayed_on_lesson"] for row in program_records() if row["program_source_page"] == program_pages[0]),
         "verified_by": ["handout_or_worksheet_number", "exact_title", "internal_wording", "visual_layout"],
     } for handout, program_pages, book_pages, slug in MATCHES]
 
@@ -292,7 +299,11 @@ def validate(data: dict[str, object]) -> None:
             original = row["original_source_public_asset"]
             assert (SITE / clean.lstrip("/")).is_file()
             text = qmd.read_text(encoding="utf-8")
-            assert text.index(original) < text.index(clean)
+            if row["displayed_on_lesson"]:
+                assert text.index(original) < text.index(clean)
+            else:
+                assert original not in text and clean not in text
+                assert "{#source-note}" in text
         if row["third_party_redistribution_unconfirmed"] and not row["dbt_match"]:
             assert row["original_source_public_asset"] is None
 

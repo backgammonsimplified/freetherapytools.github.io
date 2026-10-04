@@ -44,7 +44,7 @@ GENERATED_LEARN_SEQUENCE_PATH = SITE_ROOT / "assets" / "bs-learn-sequence.json"
 GENERATED_CBT_CATALOGUE_PATH = SITE_ROOT / "cbt-skills" / "_lesson-catalogue.html"
 GENERATED_CBT_SEQUENCE_PATH = SITE_ROOT / "assets" / "bs-cbt-sequence.json"
 GENERATED_MINDFULNESS_CATALOGUE_PATH = (
-    SITE_ROOT / "mindfulness" / "_lesson-catalogue.html"
+    LEARN_ROOT / "mindfulness" / "_lesson-index.html"
 )
 GENERATED_MINDFULNESS_SEQUENCE_PATH = (
     SITE_ROOT / "assets" / "bs-mindfulness-sequence.json"
@@ -67,7 +67,7 @@ RENDERED_CORE_PATHS = (
     "learn/distress-tolerance/index.html",
     "learn/distress-tolerance/stop-crisis-survival.html",
     "cbt-skills/index.html",
-    "mindfulness/index.html",
+    "learn/mindfulness/index.html",
 )
 RSS_FOOTER_REPRESENTATIVE_PATHS = (
     "index.html",
@@ -121,7 +121,7 @@ LEARN_SECTIONS = {
         "sidebar_id": "mindfulness",
         "title": "Mindfulness",
         "home_text": "Mindfulness Home",
-        "home_source": "mindfulness/index.qmd",
+        "home_source": "learn/mindfulness/index.qmd",
         "track_ids": ("mindfulness",),
     },
 }
@@ -2286,9 +2286,6 @@ def generated_outputs(
         ),
         GENERATED_CBT_CATALOGUE_PATH: build_lesson_catalogue_html(
             entries, cbt_curriculum, selected_track_id="cbt-anxiety"
-        ),
-        GENERATED_MINDFULNESS_CATALOGUE_PATH: build_lesson_catalogue_html(
-            entries, mindfulness_curriculum, selected_track_id="mindfulness"
         ),
         GENERATED_NAVIGATION_PATH: build_navigation_yaml(curriculum),
         GENERATED_ENTRIES_PATH: build_entries_html(

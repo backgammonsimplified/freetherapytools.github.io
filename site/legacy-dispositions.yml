@@ -6,6 +6,7 @@ legacy-dispositions:
       disposition: legacy
       canonical: false
   routes:
+    - {source: "/mindfulness/", target: "/learn/mindfulness/", disposition: redirect, mechanism: static-client-redirect, canonical: false, indexing: "noindex, follow"}
     - source: "/learn/glossary/"
       target: "/glossary/"
       disposition: redirect

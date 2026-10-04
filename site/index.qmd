@@ -40,7 +40,7 @@ Clear lessons, handouts, worksheets, and exercises for DBT, CBT, and mindfulness
 
 [<span class="bs-home-explore-icon" aria-hidden="true"></span>
 <span class="bs-home-explore-copy"><span class="bs-home-explore-title">Mindfulness</span><span class="bs-home-explore-description">Twelve lessons for awareness, participation, compassion, grounding, and states of mind.</span></span>
-<span class="bs-home-explore-chevron" aria-hidden="true">›</span>](mindfulness/index.qmd){.bs-home-explore-link .bs-home-explore-link--research}
+<span class="bs-home-explore-chevron" aria-hidden="true">›</span>](learn/mindfulness/index.qmd){.bs-home-explore-link .bs-home-explore-link--research}
 
 [<span class="bs-home-explore-icon" aria-hidden="true"></span>
 <span class="bs-home-explore-copy"><span class="bs-home-explore-title">Glossary</span><span class="bs-home-explore-description">Look up therapy terms used throughout the curriculum.</span></span>

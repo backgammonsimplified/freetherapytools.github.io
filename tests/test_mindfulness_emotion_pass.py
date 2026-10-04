@@ -40,7 +40,7 @@ class MindfulnessEmotionPassTests(unittest.TestCase):
         self.assertTrue(page_103["excluded"])
         self.assertIn("Interpersonal Effectiveness", page_103["exclusion_reason"])
 
-    def test_all_known_exact_matches_have_original_then_clean_public_assets(self) -> None:
+    def test_exact_matches_preserve_provenance_and_summary_only_lessons(self) -> None:
         expected = {
             "Mindfulness Handout 1A", "Mindfulness Handout 3", "Mindfulness Handout 3A",
             "Mindfulness Handout 4A", "Mindfulness Handout 4B", "Mindfulness Handout 4C",
@@ -66,7 +66,14 @@ class MindfulnessEmotionPassTests(unittest.TestCase):
                 and record.get("assigned_source_qmd")
             )
             text = lesson.read_text(encoding="utf-8")
-            self.assertLess(text.index(item["original_source_public_asset"]), text.index(item["clean_printable_public_asset"]))
+            if lesson.name in {"mindfulness-foundations.qmd", "one-mindfully.qmd"}:
+                self.assertFalse(item["displayed_on_lesson"])
+                self.assertNotIn(item["original_source_public_asset"], text)
+                self.assertNotIn(item["clean_printable_public_asset"], text)
+                self.assertIn("{#source-note}", text)
+            else:
+                self.assertTrue(item["displayed_on_lesson"])
+                self.assertLess(text.index(item["original_source_public_asset"]), text.index(item["clean_printable_public_asset"]))
 
     def test_private_source_is_not_published_or_referenced_by_production_pages(self) -> None:
         self.assertFalse(any(path.name.lower() == "3-mindfulness.pdf" for path in SITE.rglob("*.pdf")))

@@ -114,7 +114,7 @@
     {
       "id": "mindfulness-index",
       "name": "Mindfulness index",
-      "route": "/mindfulness/",
+      "route": "/learn/mindfulness/",
       "kind": "learn-index",
       "required_markers": ["data-bs-learn-filters", "data-bs-learn-list"]
     },

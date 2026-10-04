@@ -283,8 +283,14 @@ class QmdResourceExtractionTests(unittest.TestCase):
         )
         for record in mindfulness_audit["exact_matches"]:
             first_page = record["program_source_pages"][0]
-            self.assertIn(f'linehan-book:mindfulness-program-p{first_page:03d}', lessons)
-        self.assertEqual(match_count, review_control_count + len(mindfulness_audit["exact_matches"]))
+            marker = f"linehan-book:mindfulness-program-p{first_page:03d}"
+            if first_page in {8, 9, 12, 51}:
+                self.assertFalse(record["displayed_on_lesson"])
+                self.assertNotIn(marker, lessons)
+            else:
+                self.assertTrue(record["displayed_on_lesson"])
+                self.assertIn(marker, lessons)
+        self.assertEqual(match_count, review_control_count + sum(row["displayed_on_lesson"] for row in mindfulness_audit["exact_matches"]))
 
 
 if __name__ == "__main__":
