@@ -622,7 +622,9 @@ def resource_markdown(
     if (php_match and php_match.get("php_match_status") == "high"
             and php_match.get("review_state") != "rejected"):
         block += "\n" + alternative_resource_markdown(
-            title=title, label="Higher-Resolution Copy", pdf=php_match["high_res_asset"],
+            title=title,
+            label="Printable Handout" if php_match.get("review_state") == "accepted" else "Higher-Resolution Copy",
+            pdf=php_match["high_res_asset"],
             preview=php_match["high_res_preview"], match_id=php_match["match_id"],
             source_id=identifier, match_source="php-high-res",
         )

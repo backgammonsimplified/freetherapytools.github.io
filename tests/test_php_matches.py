@@ -39,7 +39,13 @@ class PhpMatchInventoryTests(unittest.TestCase):
         for row in high:
             self.assertEqual("high", row["php_confidence"])
             self.assertEqual("true", row["publicly_displayed"])
-            self.assertEqual("pending", row["review_state"])
+            expected_state = (
+                "accepted" if row["source_id"] in {
+                    "interpersonal-effectiveness-p003",
+                    "interpersonal-effectiveness-p004",
+                } else "pending"
+            )
+            self.assertEqual(expected_state, row["review_state"])
             self.assertTrue(row["match_id"].startswith(f"php-high-res:{row['source_id']}:php-p"))
             for field in ("high_res_asset", "high_res_preview"):
                 asset = SITE / row[field].lstrip("/")

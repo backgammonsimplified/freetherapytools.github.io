@@ -179,6 +179,10 @@ def build_matches(cache: Path) -> list[dict[str, str]]:
 
     source_rows = {row["id"]: row for row in load_rows(SOURCE_INVENTORY) if row["publish"] == "true"}
     book_rows = load_rows(BOOK_MATCHES)
+    previous_reviews = (
+        {row["source_id"]: row for row in load_rows(PHP_MATCHES)}
+        if PHP_MATCHES.is_file() else {}
+    )
     targets = [row for row in book_rows if row["confidence"] != "high"]
     routes = lesson_routes()
     php_features = [image_features(path) for path in php_pages]
@@ -203,6 +207,13 @@ def build_matches(cache: Path) -> list[dict[str, str]]:
         preview = f"/resources/high-res/php/{internal_id}.jpg" if status != "none" else ""
         pdf_asset = f"/resources/high-res/php/{internal_id}.pdf" if status == "high" else ""
         match_id = f"php-high-res:{source_id}:{internal_id}" if status == "high" else ""
+        previous = previous_reviews.get(source_id, {})
+        reviewed_state = (
+            previous.get("review_state", "")
+            if previous.get("match_id") == match_id and status == "high"
+            and previous.get("review_state") in {"accepted", "rejected"}
+            else ""
+        )
         evidence = (
             f"Orientation-aware visual score {best_score:.4f}; second-best physical page "
             f"{second_page} scored {second_score:.4f}; uniqueness margin {margin:.4f}."
@@ -236,9 +247,10 @@ def build_matches(cache: Path) -> list[dict[str, str]]:
             "high_res_preview": preview,
             "match_id": match_id,
             "match_source": "php-high-res" if status == "high" else "",
-            "publicly_displayed": "true" if status == "high" else "false",
-            "review_state": "pending" if status == "high" else ("possible" if status == "candidate" else "unmatched"),
+            "publicly_displayed": "true" if status == "high" and reviewed_state != "rejected" else "false",
+            "review_state": reviewed_state or ("pending" if status == "high" else ("possible" if status == "candidate" else "unmatched")),
             "notes": (
+                previous.get("notes", "") if reviewed_state else
                 "Higher-resolution comparison is displayed below the current copy."
                 if status == "high" else
                 "Possible match is not displayed on the lesson page."

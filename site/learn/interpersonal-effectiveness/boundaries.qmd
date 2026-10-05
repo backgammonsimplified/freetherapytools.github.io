@@ -49,16 +49,12 @@ A boundary identifies where your responsibilities, choices, feelings, body, time
 :::: {.bs-practice-resource #resource-interpersonal-effectiveness-p003 data-source-id="interpersonal-effectiveness-p003"}
 **Understanding Boundaries**
 
-[![Understanding Boundaries](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p003.jpg){.img-fluid fig-alt="Understanding Boundaries"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p003.jpg)
-
-[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p003.jpg)
-
 ::: {.bs-resource-match data-match-id="php-high-res:interpersonal-effectiveness-p003:php-p0085" data-source-id="interpersonal-effectiveness-p003" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0085.pdf"}
-**Higher-Resolution Copy**
+**Printable Handout**
 
-[![Higher-Resolution Copy: Understanding Boundaries](/resources/high-res/php/php-p0085.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Understanding Boundaries"}](/resources/high-res/php/php-p0085.pdf)
+[![Printable Handout: Understanding Boundaries](/resources/high-res/php/php-p0085.jpg){.img-fluid fig-alt="Printable Handout: Understanding Boundaries"}](/resources/high-res/php/php-p0085.pdf)
 
-[Open Higher-Resolution Copy](/resources/high-res/php/php-p0085.pdf)
+[Open Printable Handout](/resources/high-res/php/php-p0085.pdf)
 
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
@@ -78,16 +74,12 @@ This handout's educational content is integrated into the anchored skill section
 :::: {.bs-practice-resource #resource-interpersonal-effectiveness-p004 data-source-id="interpersonal-effectiveness-p004"}
 **Identifying Your Boundaries**
 
-[![Identifying Your Boundaries](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p004.jpg){.img-fluid fig-alt="Identifying Your Boundaries"}](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p004.jpg)
-
-[Download / View Handout](/resources/interpersonal-effectiveness/interpersonal-effectiveness-p004.jpg)
-
 ::: {.bs-resource-match data-match-id="php-high-res:interpersonal-effectiveness-p004:php-p0086" data-source-id="interpersonal-effectiveness-p004" data-match-source="php-high-res" data-candidate-asset="/resources/high-res/php/php-p0086.pdf"}
-**Higher-Resolution Copy**
+**Printable Handout**
 
-[![Higher-Resolution Copy: Identifying Your Boundaries](/resources/high-res/php/php-p0086.jpg){.img-fluid fig-alt="Higher-Resolution Copy: Identifying Your Boundaries"}](/resources/high-res/php/php-p0086.pdf)
+[![Printable Handout: Identifying Your Boundaries](/resources/high-res/php/php-p0086.jpg){.img-fluid fig-alt="Printable Handout: Identifying Your Boundaries"}](/resources/high-res/php/php-p0086.pdf)
 
-[Open Higher-Resolution Copy](/resources/high-res/php/php-p0086.pdf)
+[Open Printable Handout](/resources/high-res/php/php-p0086.pdf)
 
 <button type="button" class="btn btn-sm btn-outline-danger bs-match-review-control" hidden>Incorrect match</button>
 <span class="bs-match-review-status" aria-live="polite"></span>
