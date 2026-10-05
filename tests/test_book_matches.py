@@ -25,6 +25,9 @@ class BookMatchTests(unittest.TestCase):
     def test_high_matches_have_existing_clean_assets_and_provenance(self):
         high = [row for row in self.rows if row["confidence"] == "high"]
         self.assertGreater(len(high), 50)
+        accepted_priorities = {
+            f"interpersonal-effectiveness-p{page:03d}" for page in range(9, 16)
+        }
         for row in high:
             self.assertEqual(row["match_status"], "matched")
             self.assertTrue(row["book_pdf_page"].isdigit())
@@ -34,7 +37,8 @@ class BookMatchTests(unittest.TestCase):
             self.assertEqual(f"linehan-book:{row['source_id']}", row["match_id"])
             self.assertEqual("linehan-book", row["match_source"])
             self.assertEqual("true", row["publicly_displayed"])
-            self.assertEqual("pending", row["review_state"])
+            expected_state = "accepted" if row["source_id"] in accepted_priorities else "pending"
+            self.assertEqual(expected_state, row["review_state"])
             asset = SITE / row["clean_asset"].lstrip("/")
             self.assertTrue(asset.is_file(), asset)
             self.assertTrue(asset.with_suffix(".jpg").is_file(), asset.with_suffix(".jpg"))

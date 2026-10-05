@@ -174,6 +174,10 @@ def asset_paths(module: str, number: str, title: str) -> tuple[Path, Path]:
 
 def build_rows() -> list[dict[str, str]]:
     inventory = list(csv.DictReader(INVENTORY.open(encoding="utf-8-sig")))
+    previous_reviews: dict[str, dict[str, str]] = {}
+    if MATCHES.is_file():
+        with MATCHES.open(encoding="utf-8-sig") as handle:
+            previous_reviews = {row["source_id"]: row for row in csv.DictReader(handle)}
     rows: list[dict[str, str]] = []
     for source in inventory:
         if source["publish"].lower() != "true":
@@ -229,6 +233,12 @@ def build_rows() -> list[dict[str, str]]:
                 row["match_evidence"] = "Conceptually related page found, but printed title or page sequence is not an exact one-to-one match."
                 row["review_state"] = "possible"
                 row["notes"] = "Review needed; candidate is not published."
+        previous = previous_reviews.get(source_id, {})
+        if (row["confidence"] == "high" and previous.get("match_id") == row["match_id"]
+                and previous.get("review_state") in {"accepted", "rejected"}):
+            row["review_state"] = previous["review_state"]
+            row["publicly_displayed"] = "false" if row["review_state"] == "rejected" else "true"
+            row["notes"] = previous.get("notes", "")
         rows.append(row)
     return rows
 

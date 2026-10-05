@@ -615,7 +615,9 @@ def resource_markdown(
         clean_pdf = match["clean_asset"]
         clean_preview = clean_pdf.removesuffix(".pdf") + ".jpg"
         block += "\n" + alternative_resource_markdown(
-            title=title, label="Clean Printable Copy", pdf=clean_pdf,
+            title=title,
+            label="Printable Handout" if match.get("review_state") == "accepted" else "Clean Printable Copy",
+            pdf=clean_pdf,
             preview=clean_preview, match_id=match["match_id"], source_id=identifier,
             match_source="linehan-book",
         )
