@@ -32,6 +32,8 @@ project:
     - "assets/cbt/**"
     - "resources/free-therapy-tools/cbt/**"
     - assets/resource-paraphrases.js
+    - assets/learn-ai-guide.js
+    - assets/learn-ai-guide.css
     - assets/resource-review-app.js
     - assets/resource-review-app.css
     - assets/resource-paraphrases.css
@@ -118,6 +120,7 @@ format:
       - assets/skill-apps.css
       - assets/skill-progress.css
       - assets/resource-paraphrases.css
+      - assets/learn-ai-guide.css
     include-after-body:
       - includes/bs-scripts.html
     include-in-header:

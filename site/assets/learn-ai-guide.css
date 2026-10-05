@@ -1,0 +1,57 @@
+.learn-ai-guide {
+  margin: 1.5rem 0 2rem;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid #d6cfc6;
+  border-radius: 0.8rem;
+  background: #f9f6f1;
+  scroll-margin-top: 5rem;
+}
+
+.learn-ai-guide[open] { padding-bottom: 1.25rem; }
+.learn-ai-guide-title { cursor: pointer; font-size: 1.25rem; font-weight: 700; }
+.learn-ai-guide-title:hover { text-decoration: underline; }
+.learn-ai-guide > p:first-of-type { margin-top: 1rem; }
+
+.learn-ai-guide-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: 0.8rem;
+}
+
+.learn-ai-guide-control label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.learn-ai-guide-control select,
+.learn-ai-guide-preview textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+.learn-ai-guide-preview { margin-top: 1rem; }
+.learn-ai-guide-preview textarea { margin-top: 0.7rem; line-height: 1.45; }
+
+.learn-ai-guide-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.learn-ai-guide-actions button,
+.learn-ai-guide-actions a {
+  display: inline-block;
+  padding: 0.55rem 0.85rem;
+  border-radius: 0.4rem;
+}
+
+.learn-ai-guide-actions a { border: 1px solid currentColor; }
+.learn-ai-guide-status { flex-basis: 100%; }
+.learn-ai-guide-privacy { margin: 1rem 0 0; font-size: 0.9em; }
+.learn-ai-guide-sheet-link { display: inline-block; margin-top: 0.55rem; }
