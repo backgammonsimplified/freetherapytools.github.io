@@ -1,0 +1,40 @@
+"use strict";
+const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const progress = require("../site/assets/skill-progress.js");
+const apps = require("../site/assets/skill-practice-apps.js");
+const tools = ["act-unhooking", "act-making-room", "act-present-moment", "behavioural-experiment", "belief-explorer", "maintaining-progress"];
+const catalogue = JSON.parse(fs.readFileSync("site/data/tool-finder/catalogue.json", "utf8"));
+(async () => {
+  for (const toolId of tools) {
+    const definition = apps.FORM_DEFINITIONS[toolId];
+    const config = { toolId, toolTitle: definition.title, route: progress.TOOL_ROUTES[toolId], schemaVersion: 1, validateState: (state) => apps.guidedStateValid(definition, state) };
+    const state = { fields: Object.fromEntries(definition.fields.map(([key]) => [key, "Synthetic " + key + "\nSecond line <tag> & text"])), summaryBuilt: true };
+    assert.ok(config.validateState(state), toolId);
+    const summary = apps.guidedSummary(definition, state);
+    const record = progress.makeRecord(config, state);
+    const saved = progress.serializeMarkdown(record, summary);
+    const reopened = progress.validateForTool(progress.parseProgress(saved).record, config);
+    assert.deepEqual(reopened.state, state, toolId + " preserves every answer on reopen");
+    assert.match(summary, /## Source/);
+    for (const value of Object.values(state.fields)) assert.ok(summary.includes(value));
+    assert.equal(config.validateState({ ...state, fields: { ...state.fields, unknown: "x" } }), false);
+    assert.equal(config.validateState({ ...state, fields: {} }), false);
+    assert.equal(config.validateState({ ...state, summaryBuilt: "true" }), false);
+    const first = definition.fields[0][0];
+    assert.equal(config.validateState({ ...state, fields: { ...state.fields, [first]: {} } }), false);
+    const other = tools.find((id) => id !== toolId);
+    assert.equal(progress.validateForTool({ ...record, tool_id: other }, config).code, "wrong-tool");
+    const bytes = new Uint8Array(await progress.makeDocx(definition.title, summary).arrayBuffer());
+    assert.deepEqual([...bytes.slice(0, 4)], [80, 75, 3, 4]);
+    const docx = new TextDecoder().decode(bytes);
+    assert.ok(docx.includes("Synthetic " + first), "DOCX includes answers");
+    assert.ok(docx.includes("&lt;tag&gt;"), "DOCX safely escapes worksheet text");
+    assert.equal(catalogue.entries.filter((x) => x.id === toolId).length, 1, "each tool has one catalogue entry");
+    const entry = catalogue.entries.find((x) => x.id === toolId);
+    assert.equal(entry.kind, "tool");
+    assert.equal(entry.tool_href, config.route);
+    assert.ok(fs.existsSync("site" + config.route + "index.qmd"));
+  }
+  console.log("Six ACT/CBT tools: Markdown round-trip, schema rejection, DOCX answers, and catalogue routes passed.");
+})().catch((error) => { console.error(error); process.exitCode = 1; });

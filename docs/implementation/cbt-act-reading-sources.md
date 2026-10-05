@@ -75,3 +75,49 @@ Relaxation. Its definition explains the DBT pairing with the out-breath and a
 relaxation cue, and identifies the original handout's different title.
 Lesson metadata connects these entries to relevant existing teaching pages.
 No new copies of the book or its handouts are included.
+
+## Interactive ACT and CBT expansion
+
+The next October 4 update adds six independent interactive exercises. The shared
+practice-app and progress infrastructure supplies browser-local drafts, Markdown
+save/reopen, DOCX export, and browser print/PDF. These are original prompts and
+worked examples informed by the sources below, not copies or lightly reworded
+versions of the authors' worksheets.
+
+| Tool | Source |
+| --- | --- |
+| Unhooking from Thoughts | Harris, The Happiness Trap, supplied 33-chapter edition, Chapters 4-6 |
+| Making Room for Feelings | Harris, Chapters 10-14 and 31 |
+| Present-Moment Practice | Harris, Chapters 17-20 |
+| Behavioural Experiment Planner | Greenberger and Padesky, Mind Over Mood, second edition (2016), Chapter 11, printed pp. 132-151 |
+| Assumptions & Core Beliefs Explorer | Mind Over Mood, Chapters 11-12, printed pp. 132-187 |
+| Maintaining Progress Plan | Mind Over Mood, Chapter 16, printed pp. 280-291 |
+
+The supplied Happiness Trap file has 174 PDF pages and a 33-chapter table of
+contents. Its digital pagination is not used as printed page numbering. References
+use chapters and identify the supplied edition; they do not imply the expanded
+second edition has the same chapter numbers. No claims of use of The Art of
+Happiness are made. The ACT Workbook for Depression and Shame remains inventoried
+only.
+
+The three existing ACT lessons gain tool connections and Harris references.
+Returning to the Present is a fourth lesson. Values and goal-planning guidance
+connect values to practical barriers, willingness, and flexible action. Values
+Review adds an unhooking reflection; Thought Record adds a next-step field;
+Behavioural Activation adds before, after, and learning fields. Old saved files
+remain valid, with added fields initialized empty.
+
+Ten original glossary definitions are added (116 total), including cognitive
+fusion, experiential avoidance, workability, present-moment awareness, attentional
+flexibility, balanced thought, hot thought, evidence gathering, activity monitoring,
+and maintenance planning. Existing ACT entries gain appropriate Harris references.
+
+The Mind Over Mood skills checklist (pp. 282-285) was used to check coverage:
+the cognitive model, emotions, thought records, activity planning, avoidance,
+exposure, relaxation, gratitude, assertiveness, and values already have resources.
+This update addresses experiments, beliefs, maintenance, and follow-up reflections.
+It is not a complete conversion of the book: diagnostic inventories and the
+remaining specialist worksheets were not recreated.
+
+Source attribution is separate from clinical review. These additions do not carry
+a claim that Alexandra Chin has reviewed or approved this specific version.

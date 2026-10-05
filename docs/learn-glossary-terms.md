@@ -12,8 +12,11 @@ Use only these canonical slugs in Learn and Research `terms` metadata. Every ter
 | ACCEPTS | `accepts` | `/glossary/#accepts` |
 | Accumulate Positive Emotions | `accumulate-positive-emotions` | `/glossary/#accumulate-positive-emotions` |
 | Action Urge | `action-urge` | `/glossary/#action-urge` |
+| Activity Monitoring | `activity-monitoring` | `/glossary/#activity-monitoring` |
 | Anger | `anger` | `/glossary/#anger` |
+| Attentional Flexibility | `attentional-flexibility` | `/glossary/#attentional-flexibility` |
 | Automatic Thought | `automatic-thought` | `/glossary/#automatic-thought` |
+| Balanced Thought | `balanced-thought` | `/glossary/#balanced-thought` |
 | Behaviour Chain Analysis | `behaviour-chain` | `/glossary/#behaviour-chain` |
 | Behavioural Activation | `behavioural-activation` | `/glossary/#behavioural-activation` |
 | Behavioural Experiment | `behavioural-experiment` | `/glossary/#behavioural-experiment` |
@@ -26,6 +29,7 @@ Use only these canonical slugs in Learn and Research `terms` metadata. Every ter
 | Clear Mind | `clear-mind` | `/glossary/#clear-mind` |
 | Cognitive Behavioural Therapy | `cognitive-behavioural-therapy` | `/glossary/#cognitive-behavioural-therapy` |
 | Cognitive Defusion | `cognitive-defusion` | `/glossary/#cognitive-defusion` |
+| Cognitive Fusion | `cognitive-fusion` | `/glossary/#cognitive-fusion` |
 | Cognitive Model | `cognitive-model` | `/glossary/#cognitive-model` |
 | Committed Action | `committed-action` | `/glossary/#committed-action` |
 | Community Reinforcement | `community-reinforcement` | `/glossary/#community-reinforcement` |
@@ -48,6 +52,8 @@ Use only these canonical slugs in Learn and Research `terms` metadata. Every ter
 | Emotion Regulation | `emotion-regulation` | `/glossary/#emotion-regulation` |
 | Emotional Vulnerability | `emotional-vulnerability` | `/glossary/#emotional-vulnerability` |
 | Envy | `envy` | `/glossary/#envy` |
+| Evidence Gathering | `evidence-gathering` | `/glossary/#evidence-gathering` |
+| Experiential Avoidance | `experiential-avoidance` | `/glossary/#experiential-avoidance` |
 | Extinction | `extinction` | `/glossary/#extinction` |
 | FAST | `fast` | `/glossary/#fast` |
 | Fear | `fear` | `/glossary/#fear` |
@@ -56,6 +62,7 @@ Use only these canonical slugs in Learn and Research `terms` metadata. Every ter
 | Guilt | `guilt` | `/glossary/#guilt` |
 | Half-Smiling | `half-smiling` | `/glossary/#half-smiling` |
 | Happiness | `happiness` | `/glossary/#happiness` |
+| Hot Thought | `hot-thought` | `/glossary/#hot-thought` |
 | HOW Skills | `how-skills` | `/glossary/#how-skills` |
 | IMPROVE | `improve` | `/glossary/#improve` |
 | Intense Exercise | `intense-exercise` | `/glossary/#intense-exercise` |
@@ -65,6 +72,7 @@ Use only these canonical slugs in Learn and Research `terms` metadata. Every ter
 | Jealousy | `jealousy` | `/glossary/#jealousy` |
 | Love | `love` | `/glossary/#love` |
 | Loving Kindness | `loving-kindness` | `/glossary/#loving-kindness` |
+| Maintenance Planning | `maintenance-planning` | `/glossary/#maintenance-planning` |
 | Mindfulness | `mindfulness` | `/glossary/#mindfulness` |
 | Mindfulness of Current Emotions | `mindfulness-emotions` | `/glossary/#mindfulness-emotions` |
 | Mindfulness of Current Thoughts | `mindfulness-thoughts` | `/glossary/#mindfulness-thoughts` |
@@ -79,6 +87,7 @@ Use only these canonical slugs in Learn and Research `terms` metadata. Every ter
 | Participate | `participate` | `/glossary/#participate` |
 | PLEASE | `please` | `/glossary/#please` |
 | Positive Reinforcement | `positive-reinforcement` | `/glossary/#positive-reinforcement` |
+| Present-Moment Awareness | `present-moment-awareness` | `/glossary/#present-moment-awareness` |
 | Problem Solving | `problem-solving` | `/glossary/#problem-solving` |
 | Progressive Muscle Relaxation | `progressive-muscle-relaxation` | `/glossary/#progressive-muscle-relaxation` |
 | Prompting Event | `prompting-event` | `/glossary/#prompting-event` |
@@ -112,3 +121,4 @@ Use only these canonical slugs in Learn and Research `terms` metadata. Every ter
 | Willing Hands | `willing-hands` | `/glossary/#willing-hands` |
 | Willingness | `willingness` | `/glossary/#willingness` |
 | Wise Mind | `wise-mind` | `/glossary/#wise-mind` |
+| Workability | `workability` | `/glossary/#workability` |

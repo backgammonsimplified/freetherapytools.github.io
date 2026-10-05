@@ -1,0 +1,53 @@
+---
+title: "Returning to the Present"
+description: "Practise flexible attention and connect with what you can do in this moment."
+sidebar: act
+learn-track: act
+learn-order: 3
+categories:
+  - Beginner
+tags:
+  - Acceptance and Commitment Therapy
+terms:
+  - present-moment-awareness
+  - attentional-flexibility
+  - psychological-flexibility
+highlighted-terms:
+  - present-moment-awareness
+  - attentional-flexibility
+body-classes: bs-learn-article
+page-layout: article
+toc: true
+execute:
+  enabled: false
+---
+
+Planning and remembering are useful. They can also absorb so much attention that we miss a conversation, a task, or something our surroundings are telling us. ACT invites us to notice where our attention has gone and choose where to place it next.
+
+## Attention can return
+
+**Present-moment awareness** means contacting what is happening now, including your environment and your own experience. It does not require a blank mind, perfect concentration, or calm feelings.
+
+**Attentional flexibility** is the ability to shift or broaden attention when the situation calls for it. You can notice a worry and also notice the person speaking. Returning after a distraction is part of practice, rather than evidence that you failed.
+
+## Choose a point of contact
+
+Try a short practice in an ordinary setting. Choose a point of contact you can comfortably notice: a colour in the room, a nearby sound, or the support of your seat. There is no required sense, posture, breathing pattern, or count.
+
+Notice a few details. When attention goes elsewhere, acknowledge that and return if doing so is useful. Then take one step in the activity you chose: read a sentence, listen, or put an item away.
+
+Use the [Present-Moment Practice tool](/tool-finder/act-present-moment/) to note what works for you. If you need a more immediate orientation exercise, the existing [Grounding tool](/tool-finder/grounding/) is another option.
+
+## Bring attention into daily life
+
+Before answering an email, pause to read what the person actually wrote. During a meal, notice one feature you usually overlook. During a conversation, return to the speaker's next sentence without trying to reconstruct everything you missed.
+
+These are opportunities to participate more fully, not tests of mindfulness. You can practise with an enjoyable activity as well as a difficult moment.
+
+## Adapt the practice
+
+Keep your eyes open if that helps. External sights or sounds may work better than attending to breathing or sensations. Pause if practice increases distress or disconnection, and choose an activity or support that helps you feel oriented. Paying attention does not replace responding to a real safety concern.
+
+## Reference
+
+Original Free Therapy Tools explanation and prompts informed by Russ Harris, [*The Happiness Trap*](https://thehappinesstrap.com/), supplied 33-chapter edition, Chapters 17-20. Chapter numbering differs in the expanded second edition. The [Association for Contextual Behavioral Science](https://contextualscience.org/six_core_processes_act) also describes contact with the present as one of ACT's six related processes.

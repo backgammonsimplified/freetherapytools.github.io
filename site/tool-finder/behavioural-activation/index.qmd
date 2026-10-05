@@ -13,3 +13,9 @@ The activity suggestions reuse the 225-item source library from Emotion Regulati
 ::: {#behavioural-activation-app .skill-app data-practice-app="behavioural-activation"}
 Loading Behavioural Activation Planner…
 :::
+
+## Learn from the activity
+
+Note what you expect before trying an activity, then record what happened. Consider connection, enjoyment, or accomplishment as well as mood. Rest and necessary care can belong in the plan. Look for patterns across attempts rather than treating one difficult day as a failed test.
+
+Additional reflections informed by Greenberger and Padesky, [*Mind Over Mood*, second edition (2016)](https://www.mindovermood.com/), Chapter 13.

@@ -9,6 +9,7 @@ categories:
 tags:
   - Acceptance and Commitment Therapy
 terms:
+  - cognitive-fusion
   - cognitive-defusion
   - self-as-context
   - mindfulness
@@ -53,6 +54,17 @@ A [Thought Record](/tool-finder/thought-record/) asks you to examine an interpre
 
 Continue with [Mindfulness of Thoughts](../mindfulness/mindfulness-of-thoughts.qmd) for everyday noticing, or move to [Values & Committed Action](values-committed-action.qmd) to choose what to do next.
 
+## Turn noticing into practice
+
+Use [Unhooking from Thoughts](/tool-finder/act-unhooking/) to identify a recurring thought, notice what happens when you follow it automatically, and choose a useful action.
+
+A thought can contain accurate information and still dominate your attention in an unhelpful way. You can consider its information without letting it decide every action. For example, remembering a previous mistake may help you prepare; repeatedly replaying it may keep you from starting.
+
+Defusion does not require agreeing that a thought is false or replacing it with a positive one. If you want to investigate a specific prediction, use the [Behavioural Experiment Planner](/tool-finder/behavioural-experiment/). If attention is scattered, try [Returning to the Present](present-moment-awareness.qmd).
+
 ## Reference
 
 Original Free Therapy Tools summary and practice prompts informed by Steven C. Hayes with Spencer Smith, [*Get Out of Your Mind and Into Your Life*](https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/) (2005), Chapters 5-8, especially printed pp. 69-104. This page uses original examples rather than reproducing the book's exercises.
+
+
+Also informed by Russ Harris, [*The Happiness Trap*](https://thehappinesstrap.com/), supplied 33-chapter edition, Chapters 4-7 and 22-23. Chapter references refer to the supplied edition, not the expanded second edition.

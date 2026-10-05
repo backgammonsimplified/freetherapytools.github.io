@@ -20,6 +20,269 @@
   };
 
   const FORM_DEFINITIONS = {
+  "act-unhooking": {
+    "title": "Unhooking from Thoughts",
+    "intro": "Notice a thought without making it the rule for your next action.",
+    "fields": [
+      [
+        "context",
+        "Where am I getting stuck, and what matters in this situation?"
+      ],
+      [
+        "thought",
+        "What words or image keep grabbing my attention?"
+      ],
+      [
+        "effect",
+        "When I follow this thought automatically, what do I do or avoid?"
+      ],
+      [
+        "distance",
+        "How could I describe this as a mental event, such as a prediction, memory, or judgment?"
+      ],
+      [
+        "action",
+        "What small action would express what matters, even if the thought stays?"
+      ],
+      [
+        "review",
+        "After trying it: what changed in my choices? What would I adjust?"
+      ]
+    ],
+    "links": [
+      {
+        "label": "Learn this skill",
+        "href": "/learn/act/defusion-observing-self.html"
+      },
+      {
+        "label": "Values & Valued Action",
+        "href": "/tool-finder/values/"
+      }
+    ],
+    "reference": "Russ Harris, The Happiness Trap (supplied 33-chapter edition), Chapters 4-6. https://thehappinesstrap.com/"
+  },
+  "act-making-room": {
+    "title": "Making Room for Feelings",
+    "intro": "Allow a manageable feeling while choosing a useful next step.",
+    "fields": [
+      [
+        "context",
+        "What is happening, and which feeling is present?"
+      ],
+      [
+        "notice",
+        "What do I notice about this feeling? Words are enough; body focus is optional."
+      ],
+      [
+        "need",
+        "Is there a practical need, boundary, or safety concern to address?"
+      ],
+      [
+        "room",
+        "What would allowing a little space for this feeling look like for me right now?"
+      ],
+      [
+        "action",
+        "What small action matters enough to take alongside this feeling?"
+      ],
+      [
+        "review",
+        "What was workable? What support or adjustment would help next time?"
+      ]
+    ],
+    "links": [
+      {
+        "label": "Learn this skill",
+        "href": "/learn/act/acceptance-willingness.html"
+      },
+      {
+        "label": "Values & Valued Action",
+        "href": "/tool-finder/values/"
+      }
+    ],
+    "reference": "Russ Harris, The Happiness Trap (supplied 33-chapter edition), Chapters 10-14 and 31. https://thehappinesstrap.com/"
+  },
+  "act-present-moment": {
+    "title": "Present-Moment Practice",
+    "intro": "Reconnect with your surroundings and return attention to a chosen activity.",
+    "fields": [
+      [
+        "place",
+        "Where am I, and what activity would I like to return to?"
+      ],
+      [
+        "anchor",
+        "Choose an accessible point of contact: an object, a sound, or support from a chair. What is it?"
+      ],
+      [
+        "notice",
+        "What details can I notice without needing to rate or change them?"
+      ],
+      [
+        "return",
+        "If attention wandered, what helped me return gently?"
+      ],
+      [
+        "action",
+        "What is one concrete thing I can do next in this setting?"
+      ],
+      [
+        "review",
+        "What made this practice useful or difficult? What would I adapt?"
+      ]
+    ],
+    "links": [
+      {
+        "label": "Learn this skill",
+        "href": "/learn/act/present-moment-awareness.html"
+      },
+      {
+        "label": "Values & Valued Action",
+        "href": "/tool-finder/values/"
+      }
+    ],
+    "reference": "Russ Harris, The Happiness Trap (supplied 33-chapter edition), Chapters 17-20. https://thehappinesstrap.com/"
+  },
+  "behavioural-experiment": {
+    "title": "Behavioural Experiment Planner",
+    "intro": "Try a small, reasonably safe action to learn about a specific prediction.",
+    "fields": [
+      [
+        "prediction",
+        "What do I predict will happen in this particular situation?"
+      ],
+      [
+        "alternative",
+        "What other outcome is plausible? How confident am I in each possibility?"
+      ],
+      [
+        "test",
+        "What small action or observation could help me compare these possibilities?"
+      ],
+      [
+        "evidence",
+        "What observable result would support, weaken, or leave my prediction uncertain?"
+      ],
+      [
+        "support",
+        "What boundaries, practical supports, and stopping point make this reasonable?"
+      ],
+      [
+        "plan",
+        "When and where will I try it? What could interfere with a fair test?"
+      ],
+      [
+        "result",
+        "Afterward: what actually happened? Separate observations from interpretations."
+      ],
+      [
+        "learning",
+        "What did I learn, including any uncertainty? What would I repeat or change?"
+      ]
+    ],
+    "links": [
+      {
+        "label": "Learn this skill",
+        "href": "/learn/cbt-anxiety/assumptions-core-beliefs.html"
+      },
+      {
+        "label": "Thought Record",
+        "href": "/tool-finder/thought-record/"
+      }
+    ],
+    "reference": "Dennis Greenberger and Christine A. Padesky, Mind Over Mood, second edition (2016), Chapter 11, printed pp. 132-151. https://www.mindovermood.com/"
+  },
+  "belief-explorer": {
+    "title": "Assumptions & Core Beliefs Explorer",
+    "intro": "Explore a recurring personal rule and develop a fairer, more flexible perspective.",
+    "fields": [
+      [
+        "situation",
+        "Which recent situation brought up a familiar reaction?"
+      ],
+      [
+        "rule",
+        "What expectation or personal rule seems to be operating here?"
+      ],
+      [
+        "meaning",
+        "What broader conclusion about myself, other people, or the world might sit behind it? Skip this if it feels too much."
+      ],
+      [
+        "impact",
+        "When does this rule help, and when does it restrict my choices?"
+      ],
+      [
+        "evidence",
+        "What specific experiences fit this belief? What experiences or context make it less absolute?"
+      ],
+      [
+        "perspective",
+        "What more flexible statement could include the whole picture?"
+      ],
+      [
+        "practice",
+        "What small action could help me practise that perspective? What would I look for afterward?"
+      ]
+    ],
+    "links": [
+      {
+        "label": "Learn this skill",
+        "href": "/learn/cbt-anxiety/assumptions-core-beliefs.html"
+      },
+      {
+        "label": "Thought Record",
+        "href": "/tool-finder/thought-record/"
+      }
+    ],
+    "reference": "Dennis Greenberger and Christine A. Padesky, Mind Over Mood, second edition (2016), Chapters 11-12, printed pp. 132-187. https://www.mindovermood.com/"
+  },
+  "maintaining-progress": {
+    "title": "Maintaining Progress Plan",
+    "intro": "Keep useful practices available and make it easier to respond when life becomes harder.",
+    "fields": [
+      [
+        "working",
+        "Which practices or supports have helped, and in what situations?"
+      ],
+      [
+        "routine",
+        "What small routine will help me keep using one of them?"
+      ],
+      [
+        "changes",
+        "What upcoming changes or pressures deserve some preparation?"
+      ],
+      [
+        "signals",
+        "What changes in my habits, thoughts, feelings, or connections tell me I need extra care?"
+      ],
+      [
+        "response",
+        "If I notice those changes, what is my first manageable response?"
+      ],
+      [
+        "support",
+        "Who or what can help? When would I contact them rather than managing alone?"
+      ],
+      [
+        "review",
+        "When will I review this plan, and what would tell me it needs changing?"
+      ]
+    ],
+    "links": [
+      {
+        "label": "Learn this skill",
+        "href": "/learn/cbt-anxiety/maintaining-progress.html"
+      },
+      {
+        "label": "Thought Record",
+        "href": "/tool-finder/thought-record/"
+      }
+    ],
+    "reference": "Dennis Greenberger and Christine A. Padesky, Mind Over Mood, second edition (2016), Chapter 16, printed pp. 280-291. https://www.mindovermood.com/"
+  }
+,
     "missing-links": {
       title: "Missing Links",
       intro: "Explore why an intended effective behaviour did not happen.",
@@ -52,7 +315,7 @@
         ["measurable", "Measurable — How will I know it happened?"], ["achievable", "Achievable — What makes this within reach?"],
         ["relevant", "Relevant / Realistic — Why does it matter, and does it fit current circumstances?"],
         ["time", "Time-Oriented — By when, or at what time and place?"], ["smallest", "Can we simplify the goal?"],
-        ["barrier", "What could get in the way?"], ["support", "What could support follow-through?"],
+        ["barrier", "What could get in the way?"], ["support", "What could support follow-through? Include practical help, a way to unhook from a thought, or room for a feeling."],
       ], links: LINKS.goals,
     },
     "behavioural-activation": {
@@ -63,6 +326,9 @@
         ["connection", "Could it offer pleasure, mastery, self-care, or values connection?"],
         ["when", "When and where?"], ["barrier", "What may get in the way?"],
         ["help", "What could help?"], ["smallest", "What is the smallest version?"],
+        ["before", "Before the activity: what do I expect, and how do I feel?"],
+        ["after", "Afterward: what did I notice about mood, enjoyment, connection, or accomplishment?"],
+        ["learning", "What does this suggest for the next activity or a smaller version?"],
       ], links: LINKS.activation,
     },
     "values-review": {
@@ -75,6 +341,7 @@
         ["drifted", "Where did my time or effort drift away from what mattered?"],
         ["attention", "Which value or life domain needs more attention?"],
         ["discomfort", "What discomfort did I make room for while acting on my values?"],
+        ["unhooking", "Which thought pulled me off course, and what helped me respond more flexibly?"],
         ["continue", "What do I want to continue?"],
         ["change", "What do I want to change?"],
         ["next", "What is my smallest value-aligned next action?"],
@@ -240,7 +507,7 @@ I will edit the ideas myself.`;
   }
 
   function linksMarkup(links) {
-    return `<div class="skill-app-result-links">${links.map((link) => `<a class="skill-app-link-button secondary" href="${escapeHtml(Site.path(link.href))}">${escapeHtml(link.label)}</a>`).join("")}</div>`;
+    return `<div class="skill-app-result-links">${links.map((link) => `<a class="skill-app-link-button secondary" href="${escapeHtml(Site.path(link.href))}" target="_blank" rel="noopener">${escapeHtml(link.label)}</a>`).join("")}</div>`;
   }
 
   function stringsOnly(object, keys) {
@@ -573,6 +840,19 @@ I will edit the ideas myself.`;
     if (Progress) Progress.registerTool({ schemaVersion: 1, root, ...config });
   }
 
+  function guidedStateValid(definition, next) {
+    if (!Progress.isPlainObject(next) || !Object.keys(next).every((key) => ["fields", "summaryBuilt"].includes(key)) || !Progress.isPlainObject(next.fields) || typeof next.summaryBuilt !== "boolean") return false;
+    const keys = definition.fields.map(([key]) => key);
+    const allowed = [...keys, ...(definition.legacyKeys || [])];
+    return Object.entries(next.fields).every(([key, value]) => allowed.includes(key) && typeof value === "string")
+      && keys.every((key) => typeof next.fields[key] === "string");
+  }
+
+  function guidedSummary(definition, next) {
+    const summary = Progress.nonEmptySections(definition.title, definition.fields.map(([key, label]) => [label, next.fields[key]]));
+    return definition.reference ? summary + "\n\n## Source\n\nOriginal educational prompts informed by " + definition.reference : summary;
+  }
+
   function initGuidedForm(root, definition) {
     const fieldMarkup = ([key, label, type = "textarea", options = []]) => {
       const id = `practice-${key}`;
@@ -593,6 +873,7 @@ I will edit the ideas myself.`;
       summary.innerHTML = `<h3>Editable planning summary</h3><dl class="skill-app-summary">${definition.fields.map(([key, label]) => `<dt>${escapeHtml(label.split(" — ")[0])}</dt><dd>${escapeHtml(values.get(key) || "Not answered")}</dd>`).join("")}</dl>`;
       summary.focus();
     });
+    form.addEventListener("input", () => { if (summaryBuilt) { summaryBuilt = false; root.querySelector("[data-guided-summary]").replaceChildren(); } });
     root.querySelector("[data-clear-form]").addEventListener("click", () => { form.reset(); summaryBuilt = false; root.querySelector("[data-guided-summary]").innerHTML = ""; form.querySelector("textarea, select, input")?.focus(); });
     const toolId = root.dataset.practiceApp;
     register(root, {
@@ -606,12 +887,8 @@ I will edit the ideas myself.`;
         if (summaryBuilt) form.requestSubmit();
         else root.querySelector("[data-guided-summary]").replaceChildren();
       },
-      validateState: (next) => {
-        if (!Progress.isPlainObject(next) || !Object.keys(next).every((key) => ["fields", "summaryBuilt"].includes(key)) || !Progress.isPlainObject(next.fields) || typeof next.summaryBuilt !== "boolean") return false;
-        const allowedKeys = [...keys, ...(definition.legacyKeys || [])];
-        return Object.keys(next.fields).every((key) => allowedKeys.includes(key) && typeof next.fields[key] === "string") && keys.every((key) => typeof next.fields[key] === "string");
-      },
-      getReadableSummary: (next) => Progress.nonEmptySections(definition.title, definition.fields.map(([key, label]) => [label, next.fields[key]])),
+      validateState: (next) => guidedStateValid(definition, next),
+      getReadableSummary: (next) => guidedSummary(definition, next),
     });
   }
 
@@ -671,7 +948,7 @@ I will edit the ideas myself.`;
         ["relevant", "Relevant / Realistic — Why does it matter, and does it fit current circumstances?"],
         ["time", "Time-Oriented — What timing, rhythm, or review point matters?"],
         ["smallest", "Can we simplify the goal?", "What is a smaller thing we could do and still feel satisfied?"],
-        ["barrier", "What could get in the way?", "What could prevent us from completing the goal, and what can we do to reduce or avoid that obstacle?"],
+        ["barrier", "What could get in the way?", "What could prevent us from completing the goal, and what can we do to reduce or avoid that obstacle? Separate practical barriers from thoughts or feelings you could make room for."],
         ["support", "What could support follow-through?"],
       ];
       const recurring = state.calendar.scheduleType === "recurring";
@@ -906,7 +1183,7 @@ I will edit the ideas myself.`;
     let state = { fields: Object.fromEntries(keys.map((key) => [key, ""])), summaryBuilt: false, selected: null, custom: "", calendar: SharedCalendar.initialState({ durationMinutes: "30" }) };
     function render() {
       const activity = state.custom.trim() || state.fields.action;
-      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Behavioural Activation Planner</h2><p>Choose one small, realistic activity or write your own. A feeling does not have to change before action begins.</p></header><section class="skill-app-panel"><h3>Activity suggestions</h3><div class="activation-suggestion-grid">${suggestions.map((event) => `<button type="button" class="secondary" data-activation-event="${event.id}" aria-pressed="${state.selected === event.id}">${escapeHtml(event.title)}</button>`).join("")}</div><label for="activation-custom">Custom activity</label><input id="activation-custom" value="${escapeHtml(state.custom)}"><label for="activation-harder">What has become harder to do?</label><textarea id="activation-harder" data-activation-field="harder">${escapeHtml(state.fields.harder)}</textarea><label for="activation-action">Chosen small action</label><textarea id="activation-action" data-activation-field="action">${escapeHtml(state.fields.action)}</textarea>${[["connection","Could it offer pleasure, mastery, self-care, or values connection?"],["barrier","What may get in the way?"],["help","What could help?"],["smallest","What is the smallest version?"]].map(([key,label]) => `<label for="activation-${key}">${escapeHtml(label)}</label><textarea id="activation-${key}" data-activation-field="${key}">${escapeHtml(state.fields[key])}</textarea>`).join("")}<div data-activation-calendar ${activity ? "" : "hidden"}></div>${linksMarkup(LINKS.activation)}</section><footer class="skill-app-footer"></footer></div>`;
+      root.innerHTML = `<div class="skill-app-shell"><header class="skill-app-header"><h2>Behavioural Activation Planner</h2><p>Choose one small, realistic activity or write your own. A feeling does not have to change before action begins.</p></header><section class="skill-app-panel"><h3>Activity suggestions</h3><div class="activation-suggestion-grid">${suggestions.map((event) => `<button type="button" class="secondary" data-activation-event="${event.id}" aria-pressed="${state.selected === event.id}">${escapeHtml(event.title)}</button>`).join("")}</div><label for="activation-custom">Custom activity</label><input id="activation-custom" value="${escapeHtml(state.custom)}"><label for="activation-harder">What has become harder to do?</label><textarea id="activation-harder" data-activation-field="harder">${escapeHtml(state.fields.harder)}</textarea><label for="activation-action">Chosen small action</label><textarea id="activation-action" data-activation-field="action">${escapeHtml(state.fields.action)}</textarea>${[["connection","Could it offer pleasure, mastery, self-care, or values connection?"],["barrier","What may get in the way?"],["help","What could help?"],["smallest","What is the smallest version?"],[ "before","Before the activity: what do I expect, and how do I feel?" ],["after","Afterward: what did I notice about mood, enjoyment, connection, or accomplishment?"],["learning","What does this suggest for my next activity?"]].map(([key,label]) => `<label for="activation-${key}">${escapeHtml(label)}</label><textarea id="activation-${key}" data-activation-field="${key}">${escapeHtml(state.fields[key])}</textarea>`).join("")}<div data-activation-calendar ${activity ? "" : "hidden"}></div>${linksMarkup(LINKS.activation)}</section><footer class="skill-app-footer"></footer></div>`;
       root.querySelectorAll("[data-activation-event]").forEach((button) => button.addEventListener("click", () => { const event = suggestions.find((item) => String(item.id) === button.dataset.activationEvent); state.selected = event.id; state.custom = ""; state.fields.action = event.title; render(); }));
       root.querySelector("#activation-custom")?.addEventListener("change", (event) => { state.custom = event.target.value; if (state.custom.trim()) { state.selected = null; state.fields.action = state.custom.trim(); } render(); });
       root.querySelectorAll("[data-activation-field]").forEach((field) => field.addEventListener("input", () => { state.fields[field.dataset.activationField] = field.value; }));
@@ -914,7 +1191,7 @@ I will edit the ideas myself.`;
     }
     function normalize(next) { return { fields: { ...Object.fromEntries(keys.map((key) => [key, ""])), ...(next?.fields || {}) }, summaryBuilt: Boolean(next?.summaryBuilt), selected: next?.selected ?? null, custom: next?.custom || "", calendar: SharedCalendar.normalizeState(next?.calendar) }; }
     render();
-    register(root, { toolId: "behavioural-activation", toolTitle: "Behavioural Activation Planner", route: Progress.TOOL_ROUTES["behavioural-activation"], showDraftPrompt: false, getState: () => state, setState: (next) => { state = normalize(next); render(); }, validateState: (next) => Progress.isPlainObject(next) && Progress.isPlainObject(next.fields) && keys.every((key) => typeof next.fields[key] === "string") && typeof next.summaryBuilt === "boolean" && (next.selected === undefined || next.selected === null || Number.isInteger(next.selected) || typeof next.selected === "string") && (next.custom === undefined || typeof next.custom === "string") && (next.calendar === undefined || Progress.isPlainObject(next.calendar)), getReadableSummary: (next) => { const current = normalize(next); return Progress.nonEmptySections("Behavioural Activation Planner", [["Activity", current.fields.action], ["What Became Harder", current.fields.harder], ["Purpose", current.fields.connection], ["Barrier", current.fields.barrier], ["Support", current.fields.help], ["Smallest Version", current.fields.smallest], ["Calendar", SharedCalendar.calendarCommitmentValid(current.calendar) ? `${current.calendar.date} at ${SharedCalendar.calendarTimeSlots(current.calendar).join(", ")}` : ""]]); } });
+    register(root, { toolId: "behavioural-activation", toolTitle: "Behavioural Activation Planner", route: Progress.TOOL_ROUTES["behavioural-activation"], showDraftPrompt: false, getState: () => state, setState: (next) => { state = normalize(next); render(); }, validateState: (next) => Progress.isPlainObject(next) && Progress.isPlainObject(next.fields) && keys.every((key) => typeof next.fields[key] === "string" || (["before", "after", "learning"].includes(key) && next.fields[key] === undefined)) && typeof next.summaryBuilt === "boolean" && (next.selected === undefined || next.selected === null || Number.isInteger(next.selected) || typeof next.selected === "string") && (next.custom === undefined || typeof next.custom === "string") && (next.calendar === undefined || Progress.isPlainObject(next.calendar)), getReadableSummary: (next) => { const current = normalize(next); return Progress.nonEmptySections("Behavioural Activation Planner", [["Activity", current.fields.action], ["What Became Harder", current.fields.harder], ["Purpose", current.fields.connection], ["Barrier", current.fields.barrier], ["Support", current.fields.help], ["Smallest Version", current.fields.smallest], ["Before the activity", current.fields.before], ["After the activity", current.fields.after], ["Learning", current.fields.learning], ["Calendar", SharedCalendar.calendarCommitmentValid(current.calendar) ? `${current.calendar.date} at ${SharedCalendar.calendarTimeSlots(current.calendar).join(", ")}` : ""]]); } });
   }
 
   function initValuesReview(root) {
@@ -928,7 +1205,7 @@ I will edit the ideas myself.`;
     }
     function normalize(next) { return { fields: { ...Object.fromEntries(keys.map((key) => [key, ""])), ...(next?.fields || {}) }, summaryBuilt: Boolean(next?.summaryBuilt), calendar: SharedCalendar.normalizeState(next?.calendar || { scheduleType: next?.fields?.period === "monthly" ? "recurring" : "recurring", frequency: next?.fields?.period || "weekly", date: next?.fields?.reviewDate || "" }) }; }
     render();
-    register(root, { toolId: "values-review", toolTitle: "Values Review", route: Progress.TOOL_ROUTES["values-review"], getState: () => state, setState: (next) => { state = normalize(next); render(); }, validateState: (next) => Progress.isPlainObject(next) && Progress.isPlainObject(next.fields) && keys.every((key) => typeof next.fields[key] === "string") && typeof next.summaryBuilt === "boolean" && (next.calendar === undefined || Progress.isPlainObject(next.calendar)), getReadableSummary: (next) => { const current = normalize(next); return Progress.nonEmptySections("Values Review", [...definition.fields.map(([key,label]) => [label, current.fields[key]]), ["Next Review", SharedCalendar.calendarCommitmentValid(current.calendar) ? `${current.calendar.date} at ${SharedCalendar.calendarTimeSlots(current.calendar).join(", ")}` : current.fields.reviewDate]]); } });
+    register(root, { toolId: "values-review", toolTitle: "Values Review", route: Progress.TOOL_ROUTES["values-review"], getState: () => state, setState: (next) => { state = normalize(next); render(); }, validateState: (next) => Progress.isPlainObject(next) && Progress.isPlainObject(next.fields) && keys.every((key) => typeof next.fields[key] === "string" || (key === "unhooking" && next.fields[key] === undefined)) && typeof next.summaryBuilt === "boolean" && (next.calendar === undefined || Progress.isPlainObject(next.calendar)), getReadableSummary: (next) => { const current = normalize(next); return Progress.nonEmptySections("Values Review", [...definition.fields.map(([key,label]) => [label, current.fields[key]]), ["Next Review", SharedCalendar.calendarCommitmentValid(current.calendar) ? `${current.calendar.date} at ${SharedCalendar.calendarTimeSlots(current.calendar).join(", ")}` : current.fields.reviewDate]]); } });
   }
 
   function start() {
@@ -945,7 +1222,7 @@ I will edit the ideas myself.`;
   }
 
   if (typeof module !== "undefined" && module.exports) module.exports = {
-    FORM_DEFINITIONS, DEAR_DEFINITIONS, normalizeDearState, dearStateValid, dearSummary, combineDear, DEAR_PROMPT, WEEKDAYS, calendarDateFromOffset, calendarWindow, calendarTimeSlots, recurrenceStartDate, calendarCommitmentValid,
+    guidedStateValid, guidedSummary, FORM_DEFINITIONS, DEAR_DEFINITIONS, normalizeDearState, dearStateValid, dearSummary, combineDear, DEAR_PROMPT, WEEKDAYS, calendarDateFromOffset, calendarWindow, calendarTimeSlots, recurrenceStartDate, calendarCommitmentValid,
     recurrenceRule, zonedDateTimeToDate, calendarHelpText, escapeIcsText, buildIcsEvent, buildGoogleCalendarUrl,
     buildGoogleCalendarUrls, goalBuilderPrefill, normalizeGoalState, goalGtdMarkdown, goalTitle,
   };

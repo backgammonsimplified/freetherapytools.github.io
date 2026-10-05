@@ -13,3 +13,11 @@ execute:
 :::
 
 <noscript>This tool requires JavaScript. The complete educational process is also available in [Values & Valued Action](/learn/goal-setting/values-valued-action.html).</noscript>
+
+## Put your values into practice
+
+A value describes how you want to act; it is not a feeling you must achieve first. After choosing a direction, identify one small action and what may make it difficult. Address practical barriers, and consider whether you can make room for an uncomfortable thought or feeling.
+
+[Unhooking from Thoughts](/tool-finder/act-unhooking/){target="_blank" rel="noopener"} and [Making Room for Feelings](/tool-finder/act-making-room/){target="_blank" rel="noopener"} can help with inner obstacles. Use [Values Review](/tool-finder/values-review/){target="_blank" rel="noopener"} to learn from what happens.
+
+Additional ACT guidance informed by Russ Harris, [*The Happiness Trap*](https://thehappinesstrap.com/), supplied 33-chapter edition, Chapters 24-28 and 31.

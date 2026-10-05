@@ -162,7 +162,15 @@ TOOL_FINDER_GROUPS = {
         ("Change an Emotion", "tool-finder/change-emotion/index.qmd"),
         ("Pleasant Event Planner", "tool-finder/pleasant-event/index.qmd"),
     ),
+    "Acceptance and Commitment Therapy": (
+        ("Unhooking from Thoughts", "tool-finder/act-unhooking/index.qmd"),
+        ("Making Room for Feelings", "tool-finder/act-making-room/index.qmd"),
+        ("Present-Moment Practice", "tool-finder/act-present-moment/index.qmd"),
+    ),
     "CBT and Managing Anxiety": (
+        ("Behavioural Experiment Planner", "tool-finder/behavioural-experiment/index.qmd"),
+        ("Assumptions & Core Beliefs Explorer", "tool-finder/belief-explorer/index.qmd"),
+        ("Maintaining Progress Plan", "tool-finder/maintaining-progress/index.qmd"),
         ("Box Breathing", "tool-finder/box-breathing/index.qmd"),
         ("Case Map", "tool-finder/case-map/index.qmd"),
         ("Avoidance & Approach Planner", "tool-finder/avoidance/index.qmd"),

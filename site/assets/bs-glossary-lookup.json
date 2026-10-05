@@ -50,8 +50,12 @@
       "term": "ABC PLEASE"
     },
     {
-      "alias_slugs": [],
-      "aliases": [],
+      "alias_slugs": [
+        "expansion"
+      ],
+      "aliases": [
+        "expansion"
+      ],
       "categories": [
         "Acceptance and Commitment Therapy"
       ],
@@ -68,6 +72,13 @@
           "title": "Get Out of Your Mind and Into Your Life",
           "type": "book",
           "url": "https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/"
+        },
+        {
+          "author": "Russ Harris",
+          "section": "Chapters 10-14",
+          "title": "The Happiness Trap (supplied 33-chapter edition)",
+          "type": "book",
+          "url": "https://thehappinesstrap.com/"
         }
       ],
       "related_lessons": [
@@ -285,6 +296,43 @@
       "alias_slugs": [],
       "aliases": [],
       "categories": [
+        "CBT and Managing Anxiety"
+      ],
+      "definition": "Brief observations before and after an activity can reveal patterns involving enjoyment, connection, or accomplishment. They help guide adjustments rather than grading productivity or requiring immediate mood improvement.",
+      "definition_links": [],
+      "learning_tracks": [
+        "CBT and Managing Anxiety"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Dennis Greenberger and Christine A. Padesky",
+          "section": "Chapter 13",
+          "title": "Mind Over Mood, Second Edition (2016)",
+          "type": "book",
+          "url": "https://www.mindovermood.com/"
+        }
+      ],
+      "related_lessons": [
+        {
+          "route": "/learn/cbt-anxiety/maintaining-progress.html",
+          "title": "Maintaining Progress"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "behavioural-activation",
+          "term": "Behavioural Activation"
+        }
+      ],
+      "short_definition": "Noticing connections between everyday activities, mood, and engagement.",
+      "slug": "activity-monitoring",
+      "term": "Activity Monitoring"
+    },
+    {
+      "alias_slugs": [],
+      "aliases": [],
+      "categories": [
         "Emotional Regulation"
       ],
       "definition": "Anger can energise action and signal that something matters. The feeling does not by itself prove wrongdoing or require aggression; facts and effectiveness help guide how to respond.",
@@ -321,6 +369,43 @@
       "short_definition": "An emotion often connected with perceived threat, unfairness, or an obstructed goal.",
       "slug": "anger",
       "term": "Anger"
+    },
+    {
+      "alias_slugs": [],
+      "aliases": [],
+      "categories": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "definition": "Rather than holding attention perfectly on one object, this skill allows you to notice distraction and reorient. The chosen focus can be external and adapted to your sensory needs.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Russ Harris",
+          "section": "Chapters 17-20",
+          "title": "The Happiness Trap (supplied 33-chapter edition)",
+          "type": "book",
+          "url": "https://thehappinesstrap.com/"
+        }
+      ],
+      "related_lessons": [
+        {
+          "route": "/learn/act/present-moment-awareness.html",
+          "title": "Returning to the Present"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "present-moment-awareness",
+          "term": "Present-Moment Awareness"
+        }
+      ],
+      "short_definition": "Shifting, broadening, or returning attention as the situation requires.",
+      "slug": "attentional-flexibility",
+      "term": "Attentional Flexibility"
     },
     {
       "alias_slugs": [
@@ -364,6 +449,51 @@
       "short_definition": "A thought or mental image that arises without deliberate effort.",
       "slug": "automatic-thought",
       "term": "Automatic Thought"
+    },
+    {
+      "alias_slugs": [
+        "balanced-alternative"
+      ],
+      "aliases": [
+        "balanced alternative"
+      ],
+      "categories": [
+        "CBT and Managing Anxiety"
+      ],
+      "definition": "A balanced thought can acknowledge a real difficulty and possible ways to respond. It is not necessarily positive, and its usefulness does not depend on removing an emotion immediately.",
+      "definition_links": [],
+      "learning_tracks": [
+        "CBT and Managing Anxiety"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Dennis Greenberger and Christine A. Padesky",
+          "section": "Chapters 8-10",
+          "title": "Mind Over Mood, Second Edition (2016)",
+          "type": "book",
+          "url": "https://www.mindovermood.com/"
+        }
+      ],
+      "related_lessons": [
+        {
+          "route": "/learn/cbt-anxiety/thought-records-part-2.html",
+          "title": "Thought Records Part 2"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "automatic-thought",
+          "term": "Automatic Thought"
+        },
+        {
+          "slug": "cognitive-behavioural-therapy",
+          "term": "Cognitive Behavioural Therapy"
+        }
+      ],
+      "short_definition": "An interpretation that takes relevant evidence and uncertainty into account.",
+      "slug": "balanced-thought",
+      "term": "Balanced Thought"
     },
     {
       "alias_slugs": [
@@ -852,10 +982,12 @@
     },
     {
       "alias_slugs": [
-        "defusion"
+        "defusion",
+        "unhooking"
       ],
       "aliases": [
-        "Defusion"
+        "Defusion",
+        "unhooking"
       ],
       "categories": [
         "Acceptance and Commitment Therapy"
@@ -873,6 +1005,13 @@
           "title": "Get Out of Your Mind and Into Your Life",
           "type": "book",
           "url": "https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/"
+        },
+        {
+          "author": "Russ Harris",
+          "section": "Chapters 4-6",
+          "title": "The Happiness Trap (supplied 33-chapter edition)",
+          "type": "book",
+          "url": "https://thehappinesstrap.com/"
         }
       ],
       "related_lessons": [
@@ -894,6 +1033,43 @@
       "short_definition": "Noticing a thought as a thought rather than automatically obeying it.",
       "slug": "cognitive-defusion",
       "term": "Cognitive Defusion"
+    },
+    {
+      "alias_slugs": [],
+      "aliases": [],
+      "categories": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "definition": "Fusion describes moments when thoughts strongly organise behaviour and other available information receives less attention. Defusion creates room to consider a thought without automatically following it.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Russ Harris",
+          "section": "Chapters 4-6",
+          "title": "The Happiness Trap (supplied 33-chapter edition)",
+          "type": "book",
+          "url": "https://thehappinesstrap.com/"
+        }
+      ],
+      "related_lessons": [
+        {
+          "route": "/learn/act/defusion-observing-self.html",
+          "title": "Thoughts & the Observing Perspective"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "cognitive-defusion",
+          "term": "Cognitive Defusion"
+        }
+      ],
+      "short_definition": "Treating a thought as an instruction or unquestioned account of reality.",
+      "slug": "cognitive-fusion",
+      "term": "Cognitive Fusion"
     },
     {
       "alias_slugs": [],
@@ -948,6 +1124,13 @@
           "title": "Get Out of Your Mind and Into Your Life",
           "type": "book",
           "url": "https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/"
+        },
+        {
+          "author": "Russ Harris",
+          "section": "Chapters 27-32",
+          "title": "The Happiness Trap (supplied 33-chapter edition)",
+          "type": "book",
+          "url": "https://thehappinesstrap.com/"
         }
       ],
       "related_lessons": [
@@ -1898,6 +2081,88 @@
       "alias_slugs": [],
       "aliases": [],
       "categories": [
+        "CBT and Managing Anxiety"
+      ],
+      "definition": "Useful evidence separates what happened from what you inferred. Include information that fits and information that complicates a belief; a single ambiguous observation may not settle the question.",
+      "definition_links": [],
+      "learning_tracks": [
+        "CBT and Managing Anxiety"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Dennis Greenberger and Christine A. Padesky",
+          "section": "Chapters 8 and 10-12",
+          "title": "Mind Over Mood, Second Edition (2016)",
+          "type": "book",
+          "url": "https://www.mindovermood.com/"
+        }
+      ],
+      "related_lessons": [
+        {
+          "route": "/learn/cbt-anxiety/assumptions-core-beliefs.html",
+          "title": "Assumptions & Core Beliefs"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "behavioural-experiment",
+          "term": "Behavioural Experiment"
+        },
+        {
+          "slug": "balanced-thought",
+          "term": "Balanced Thought"
+        }
+      ],
+      "short_definition": "Collecting concrete observations to evaluate or refine an interpretation.",
+      "slug": "evidence-gathering",
+      "term": "Evidence Gathering"
+    },
+    {
+      "alias_slugs": [],
+      "aliases": [],
+      "categories": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "definition": "Avoiding a thought, feeling, memory, or sensation is not always a problem. In ACT, the concern is a rigid pattern that narrows life or prevents useful action even when the strategy has lasting costs.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Russ Harris",
+          "section": "Chapters 2-3",
+          "title": "The Happiness Trap (supplied 33-chapter edition)",
+          "type": "book",
+          "url": "https://thehappinesstrap.com/"
+        }
+      ],
+      "related_lessons": [
+        {
+          "route": "/learn/act/acceptance-willingness.html",
+          "title": "Making Room for Experience"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "acceptance",
+          "term": "Acceptance"
+        },
+        {
+          "slug": "psychological-flexibility",
+          "term": "Psychological Flexibility"
+        }
+      ],
+      "short_definition": "Attempts to escape inner experiences that can become costly or restrictive.",
+      "slug": "experiential-avoidance",
+      "term": "Experiential Avoidance"
+    },
+    {
+      "alias_slugs": [],
+      "aliases": [],
+      "categories": [
         "Interpersonal Effectiveness"
       ],
       "definition": "A response may initially increase or vary before it decreases. Extinction does not teach a replacement skill, and behaviour can return. The concept does not justify ignoring distress or withholding essential care.",
@@ -2231,6 +2496,47 @@
       "short_definition": "A family of positive emotional experiences, including enjoyment, contentment, and joy.",
       "slug": "happiness",
       "term": "Happiness"
+    },
+    {
+      "alias_slugs": [],
+      "aliases": [],
+      "categories": [
+        "CBT and Managing Anxiety"
+      ],
+      "definition": "Identifying a hot thought helps focus a thought record on the interpretation that matters emotionally. The most upsetting thought is not automatically the most accurate one.",
+      "definition_links": [],
+      "learning_tracks": [
+        "CBT and Managing Anxiety"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Dennis Greenberger and Christine A. Padesky",
+          "section": "Chapters 6-7",
+          "title": "Mind Over Mood, Second Edition (2016)",
+          "type": "book",
+          "url": "https://www.mindovermood.com/"
+        }
+      ],
+      "related_lessons": [
+        {
+          "route": "/learn/cbt-anxiety/thought-records-part-2.html",
+          "title": "Thought Records Part 2"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "automatic-thought",
+          "term": "Automatic Thought"
+        },
+        {
+          "slug": "balanced-thought",
+          "term": "Balanced Thought"
+        }
+      ],
+      "short_definition": "A thought or meaning closely connected to a strong emotional response in a situation.",
+      "slug": "hot-thought",
+      "term": "Hot Thought"
     },
     {
       "alias_slugs": [],
@@ -2635,6 +2941,47 @@
       "short_definition": "A practice of deliberately directing goodwill toward yourself or others.",
       "slug": "loving-kindness",
       "term": "Loving Kindness"
+    },
+    {
+      "alias_slugs": [
+        "maintaining-progress"
+      ],
+      "aliases": [
+        "maintaining progress"
+      ],
+      "categories": [
+        "CBT and Managing Anxiety"
+      ],
+      "definition": "A personal plan can identify routines, changes to notice, manageable responses, sources of support, and a review point. It supports continued practice and does not replace a crisis or treatment plan.",
+      "definition_links": [],
+      "learning_tracks": [
+        "CBT and Managing Anxiety"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Dennis Greenberger and Christine A. Padesky",
+          "section": "Chapter 16, printed pp. 280-291",
+          "title": "Mind Over Mood, Second Edition (2016)",
+          "type": "book",
+          "url": "https://www.mindovermood.com/"
+        }
+      ],
+      "related_lessons": [
+        {
+          "route": "/learn/cbt-anxiety/maintaining-progress.html",
+          "title": "Maintaining Progress"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "behavioural-activation",
+          "term": "Behavioural Activation"
+        }
+      ],
+      "short_definition": "Preparing to keep useful skills available and respond to setbacks.",
+      "slug": "maintenance-planning",
+      "term": "Maintenance Planning"
     },
     {
       "alias_slugs": [],
@@ -3276,6 +3623,47 @@
       "alias_slugs": [],
       "aliases": [],
       "categories": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "definition": "Attention can include the environment, sensations, thoughts, or feelings. Being present does not require stopping thought or feeling calm; it supports choosing how to engage with what is happening.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Russ Harris",
+          "section": "Chapters 17-20",
+          "title": "The Happiness Trap (supplied 33-chapter edition)",
+          "type": "book",
+          "url": "https://thehappinesstrap.com/"
+        }
+      ],
+      "related_lessons": [
+        {
+          "route": "/learn/act/present-moment-awareness.html",
+          "title": "Returning to the Present"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "attentional-flexibility",
+          "term": "Attentional Flexibility"
+        },
+        {
+          "slug": "mindfulness",
+          "term": "Mindfulness"
+        }
+      ],
+      "short_definition": "Noticing current experience and surroundings with enough openness to respond.",
+      "slug": "present-moment-awareness",
+      "term": "Present-Moment Awareness"
+    },
+    {
+      "alias_slugs": [],
+      "aliases": [],
+      "categories": [
         "Emotional Regulation"
       ],
       "definition": "Clarify the problem using the facts, consider options, try a feasible response, and learn from its effects. This addresses circumstances contributing to distress rather than only trying to alter the feeling.",
@@ -3464,6 +3852,10 @@
         {
           "route": "/learn/act/acceptance-willingness.html",
           "title": "Making Room for Experience"
+        },
+        {
+          "route": "/learn/act/present-moment-awareness.html",
+          "title": "Returning to the Present"
         }
       ],
       "related_terms": [
@@ -4397,6 +4789,13 @@
           "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
           "type": "book",
           "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+        },
+        {
+          "author": "Russ Harris",
+          "section": "Chapters 24-26",
+          "title": "The Happiness Trap (supplied 33-chapter edition)",
+          "type": "book",
+          "url": "https://thehappinesstrap.com/"
         }
       ],
       "related_lessons": [
@@ -4670,6 +5069,13 @@
           "title": "DBT Skills Training Handouts and Worksheets, Second Edition (2015)",
           "type": "book",
           "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+        },
+        {
+          "author": "Russ Harris",
+          "section": "Chapter 31",
+          "title": "The Happiness Trap (supplied 33-chapter edition)",
+          "type": "book",
+          "url": "https://thehappinesstrap.com/"
         }
       ],
       "related_lessons": [
@@ -4737,6 +5143,47 @@
       "short_definition": "Wise Mind is the integrated perspective that draws on both emotion and reason.",
       "slug": "wise-mind",
       "term": "Wise Mind"
+    },
+    {
+      "alias_slugs": [],
+      "aliases": [],
+      "categories": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "definition": "A workability check considers immediate effects and longer-term consequences. It asks whether a strategy helps you participate in what matters, rather than judging it only by whether it reduces discomfort.",
+      "definition_links": [],
+      "learning_tracks": [
+        "Acceptance and Commitment Therapy"
+      ],
+      "redirect_slugs": [],
+      "references": [
+        {
+          "author": "Russ Harris",
+          "section": "Chapters 2 and 6",
+          "title": "The Happiness Trap (supplied 33-chapter edition)",
+          "type": "book",
+          "url": "https://thehappinesstrap.com/"
+        }
+      ],
+      "related_lessons": [
+        {
+          "route": "/learn/act/acceptance-willingness.html",
+          "title": "Making Room for Experience"
+        }
+      ],
+      "related_terms": [
+        {
+          "slug": "values",
+          "term": "Values"
+        },
+        {
+          "slug": "psychological-flexibility",
+          "term": "Psychological Flexibility"
+        }
+      ],
+      "short_definition": "How well a response serves a chosen direction in its actual context.",
+      "slug": "workability",
+      "term": "Workability"
     }
   ]
 }

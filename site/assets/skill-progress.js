@@ -7,6 +7,13 @@
   const MAX_FILE_SIZE = 2 * 1024 * 1024;
   const Site = global.TherapySite || { path: (value) => value };
   const TOOL_ROUTES = Object.freeze({
+    "act-unhooking": "/tool-finder/act-unhooking/",
+    "act-making-room": "/tool-finder/act-making-room/",
+    "act-present-moment": "/tool-finder/act-present-moment/",
+    "behavioural-experiment": "/tool-finder/behavioural-experiment/",
+    "belief-explorer": "/tool-finder/belief-explorer/",
+    "maintaining-progress": "/tool-finder/maintaining-progress/",
+
     values: "/tool-finder/values/",
     thermometer: "/tool-finder/thermometer/",
     "emotion-explorer": "/tool-finder/emotions/",

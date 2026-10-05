@@ -13,7 +13,7 @@ lesson-taxonomy: false
 
 Acceptance and Commitment Therapy (ACT) helps you develop more freedom in how you respond to thoughts and feelings while taking action toward what matters. You do not have to win an argument with every thought or remove every uncomfortable feeling before participating in your life.
 
-These introductory lessons connect six related processes: acceptance, defusion, awareness of the present, the observing perspective, values, and committed action. They offer original practice prompts and links to tools already on this site.
+These introductory lessons connect six related processes: acceptance, defusion, awareness of the present, the observing perspective, values, and committed action. They offer original practice prompts and interactive tools for unhooking, making room for feelings, and returning to the present, alongside the existing Values and planning tools.
 
 {{< include _lesson-index.html >}}
 
@@ -24,3 +24,5 @@ A CBT thought record can help you examine whether an interpretation fits the evi
 ## References
 
 The first lessons draw on Steven C. Hayes with Spencer Smith, [*Get Out of Your Mind and Into Your Life*](https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/) (2005). Each lesson identifies its source chapters. The Association for Contextual Behavioral Science also explains [the six core ACT processes](https://contextualscience.org/six_core_processes_act).
+
+The expanded lessons and tools also draw on Russ Harris, [*The Happiness Trap*](https://thehappinesstrap.com/), supplied 33-chapter edition. References identify the chapters used; this edition differs from the expanded second edition.

@@ -9,6 +9,8 @@ categories:
 tags:
   - CBT and Managing Anxiety
 terms:
+  - balanced-thought
+  - hot-thought
   - thought-record
 body-classes: bs-learn-article
 page-layout: article

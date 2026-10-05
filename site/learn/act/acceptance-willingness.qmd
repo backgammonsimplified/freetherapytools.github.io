@@ -9,6 +9,8 @@ categories:
 tags:
   - Acceptance and Commitment Therapy
 terms:
+  - experiential-avoidance
+  - workability
   - acceptance-and-commitment-therapy
   - acceptance
   - willingness
@@ -56,6 +58,17 @@ You can pause or adapt the exercise. If turning inward increases distress or dis
 
 Look for flexibility: noticing earlier, reducing an unhelpful struggle, or taking a meaningful step. Immediate calm is not the only useful outcome. For moments of overwhelming distress, the [Skill Thermometer](/tool-finder/thermometer/) and [Distress Tolerance curriculum](../distress-tolerance/index.qmd) offer other ways to choose a next step.
 
+## Practise making room, then choose
+
+The [Making Room for Feelings tool](/tool-finder/act-making-room/) connects noticing an emotion with responding to the situation. It includes a check for practical needs and boundaries before inviting a small action.
+
+For example, feeling disappointed about a change of plan can coexist with asking for a different arrangement. If the feeling remains, that does not make the practice unsuccessful. Ask whether you had more freedom to choose your response.
+
+Harris calls the process of allowing room for feelings *expansion*. It describes a change in your relationship to the feeling; you do not need to imagine your body literally expanding or use the exercise to force relaxation.
+
 ## Reference
 
 Original Free Therapy Tools summary and practice prompts informed by Steven C. Hayes with Spencer Smith, [*Get Out of Your Mind and Into Your Life*](https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/) (2005), Chapters 3-4 and 9-10. The authors' exercises and metaphors are not reproduced here.
+
+
+Also informed by Russ Harris, [*The Happiness Trap*](https://thehappinesstrap.com/), supplied 33-chapter edition, Chapters 10-14 and 31. Chapter references refer to the supplied edition, not the expanded second edition.

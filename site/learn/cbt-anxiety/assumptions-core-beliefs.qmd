@@ -9,6 +9,7 @@ categories:
 tags:
   - CBT and Managing Anxiety
 terms:
+  - evidence-gathering
   - underlying-assumption
   - core-belief
   - behavioural-experiment
@@ -55,6 +56,14 @@ Write a short note with four parts:
 - What you observed and what remains uncertain.
 
 Review the evidence without grading yourself. An experiment that surprises you, or needs redesigning, can still be useful.
+
+## Two tools for different questions
+
+Use the [Assumptions & Core Beliefs Explorer](/tool-finder/belief-explorer/) when you want to understand a recurring rule and develop a more flexible perspective. You can stay with a recent, manageable situation instead of tracing the rule through painful memories.
+
+Use the [Behavioural Experiment Planner](/tool-finder/behavioural-experiment/) when you have a prediction you can investigate. It separates the prediction, a plausible alternative, the observations you will look for, and what actually happened. Decide in advance what would count as ambiguous evidence, too.
+
+An experiment is not an examination you must pass. If the result supports part of your concern, consider practical problem solving, a boundary, or support. Avoid treating one person's response as a verdict on your worth.
 
 ## Reference
 

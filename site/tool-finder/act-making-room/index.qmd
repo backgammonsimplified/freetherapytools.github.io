@@ -1,0 +1,25 @@
+---
+title: "Making Room for Feelings"
+description: "Allow a manageable feeling while choosing a useful next step."
+sidebar: tool-finder
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+Begin with mild discomfort. You can pause, keep your eyes open, or orient to the room. Acceptance of a feeling does not require accepting harm or remaining in danger.
+
+::: {#act-making-room-app .skill-app data-practice-app="act-making-room"}
+Loading Making Room for Feelings...
+:::
+
+::: {.callout-tip collapse="true" title="A worked example"}
+Sam feels disappointed after a cancelled visit. They let themselves acknowledge that disappointment and send a kind message to arrange another time, without first requiring the disappointment to go away.
+:::
+
+## Source and further learning
+
+Original Free Therapy Tools prompts informed by Russ Harris, [*The Happiness Trap*](https://thehappinesstrap.com/) (supplied 33-chapter edition), Chapters 10-14 and 31. This is an independent educational exercise, not a reproduction of the book's worksheets.
+
+[Learn this skill](/learn/act/acceptance-willingness.html){target="_blank" rel="noopener"} | [Browse Tool Finder](/tool-finder/){target="_blank" rel="noopener"}

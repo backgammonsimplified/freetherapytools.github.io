@@ -9,6 +9,8 @@ categories:
 tags:
   - CBT and Managing Anxiety
 terms:
+  - maintenance-planning
+  - activity-monitoring
   - behavioural-activation
   - values
 highlighted-terms:
@@ -52,6 +54,12 @@ Persistent or worsening symptoms, or difficulty managing daily life, are reasons
 Imagine an ordinary setback and rehearse the first step. If the plan depends on high energy, perfect motivation, or several hours of free time, simplify it. Keep it somewhere you can find it, and adjust it as you learn what helps.
 
 The [SMART Goal Builder](/tool-finder/goal-builder/) can turn a practice into a specific next action. Keep reviewing what is workable; progress does not need to look the same every week.
+
+## Keep a plan you can reopen
+
+The [Maintaining Progress Plan](/tool-finder/maintaining-progress/) brings together useful routines, early warning signs, a first response, and support. Save a copy you can find easily and revisit it when circumstances change.
+
+The [Behavioural Activation Planner](/tool-finder/behavioural-activation/) also has before-and-after reflections. Compare what you expected with what you noticed, including enjoyment, connection, or accomplishment. A useful activity need not improve your mood immediately; review patterns over time and adapt the task to your capacity.
 
 ## Reference
 

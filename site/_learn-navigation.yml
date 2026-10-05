@@ -42,8 +42,22 @@ website:
               href: tool-finder/change-emotion/index.qmd
             - text: "Pleasant Event Planner"
               href: tool-finder/pleasant-event/index.qmd
+        - section: "Acceptance and Commitment Therapy"
+          contents:
+            - text: "Unhooking from Thoughts"
+              href: tool-finder/act-unhooking/index.qmd
+            - text: "Making Room for Feelings"
+              href: tool-finder/act-making-room/index.qmd
+            - text: "Present-Moment Practice"
+              href: tool-finder/act-present-moment/index.qmd
         - section: "CBT and Managing Anxiety"
           contents:
+            - text: "Behavioural Experiment Planner"
+              href: tool-finder/behavioural-experiment/index.qmd
+            - text: "Assumptions & Core Beliefs Explorer"
+              href: tool-finder/belief-explorer/index.qmd
+            - text: "Maintaining Progress Plan"
+              href: tool-finder/maintaining-progress/index.qmd
             - text: "Box Breathing"
               href: tool-finder/box-breathing/index.qmd
             - text: "Case Map"
@@ -248,7 +262,9 @@ website:
               href: learn/act/acceptance-willingness.qmd
             - text: "2. Thoughts & the Observing Perspective"
               href: learn/act/defusion-observing-self.qmd
-            - text: "3. Values & Committed Action"
+            - text: "3. Returning to the Present"
+              href: learn/act/present-moment-awareness.qmd
+            - text: "4. Values & Committed Action"
               href: learn/act/values-committed-action.qmd
     - id: mindfulness
       title: "Mindfulness"

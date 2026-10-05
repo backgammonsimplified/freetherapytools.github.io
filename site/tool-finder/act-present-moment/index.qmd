@@ -1,0 +1,25 @@
+---
+title: "Present-Moment Practice"
+description: "Reconnect with your surroundings and return attention to a chosen activity."
+sidebar: tool-finder
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+Choose a sense or point of contact that works for you. Breathing exercises, closed eyes, and inward body focus are optional. If this feels unsettling, pause and choose external orientation or support.
+
+::: {#act-present-moment-app .skill-app data-practice-app="act-present-moment"}
+Loading Present-Moment Practice...
+:::
+
+::: {.callout-tip collapse="true" title="A worked example"}
+While waiting for an online class, Priya notices the edge of her desk and the sound of a fan. When planning thoughts interrupt, she returns to the desk, then opens her class notes. She does not have to empty her mind.
+:::
+
+## Source and further learning
+
+Original Free Therapy Tools prompts informed by Russ Harris, [*The Happiness Trap*](https://thehappinesstrap.com/) (supplied 33-chapter edition), Chapters 17-20. This is an independent educational exercise, not a reproduction of the book's worksheets.
+
+[Learn this skill](/learn/act/present-moment-awareness.html){target="_blank" rel="noopener"} | [Browse Tool Finder](/tool-finder/){target="_blank" rel="noopener"}

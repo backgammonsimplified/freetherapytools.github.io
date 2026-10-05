@@ -3,7 +3,7 @@ title: "Values & Committed Action"
 description: "Choose a meaningful direction, take a manageable step, and respond flexibly to obstacles."
 sidebar: act
 learn-track: act
-learn-order: 3
+learn-order: 4
 categories:
   - Beginner
 tags:
@@ -50,6 +50,17 @@ Make a short note covering your chosen direction, the next action, and a likely 
 
 Use the [SMART Goal Builder](/tool-finder/goal-builder/) to specify the action and [Values Review](/tool-finder/values-review/) to revisit it. These tools support saving and reopening your notes.
 
+## Review the action, not just the feeling
+
+A useful review asks what you did, what you learned, and whether the action expressed your chosen direction. Feeling nervous afterward does not by itself mean the action was wrong. Equally, commitment does not mean repeating a plan that is unsafe or unsuitable.
+
+The [Values Review tool](/tool-finder/values-review/) now includes a reflection on thoughts that pulled you off course and what helped you respond flexibly. Use [Unhooking from Thoughts](/tool-finder/act-unhooking/) or [Making Room for Feelings](/tool-finder/act-making-room/) when an inner obstacle needs attention.
+
+For a busy week, caring might mean arranging a short call rather than a long visit. The action changes with your circumstances; the quality you want to express can remain.
+
 ## Reference
 
 Original Free Therapy Tools summary and practice prompts informed by Steven C. Hayes with Spencer Smith, [*Get Out of Your Mind and Into Your Life*](https://www.newharbinger.com/9781572244252/get-out-of-your-mind-and-into-your-life/) (2005), Chapters 11-13, printed pp. 153-194. The book's values exercises and scoring forms are not reproduced here.
+
+
+Also informed by Russ Harris, [*The Happiness Trap*](https://thehappinesstrap.com/), supplied 33-chapter edition, Chapters 24-28 and 30-32. Chapter references refer to the supplied edition, not the expanded second edition.

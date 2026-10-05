@@ -31,8 +31,8 @@ class TherapyCurriculumTests(unittest.TestCase):
                 "ACT Skills",
             ],
         )
-        self.assertEqual(len(lessons), 64)
-        expected_counts = {"dbt": 40, "cbt": 9, "mindfulness": 12, "act": 3}
+        self.assertEqual(len(lessons), 65)
+        expected_counts = {"dbt": 40, "cbt": 9, "mindfulness": 12, "act": 4}
         for section_id, expected_count in expected_counts.items():
             section = learn_glossary.curriculum_for_section(curriculum, section_id)
             sequence = learn_glossary.build_learn_sequence(section)
@@ -142,7 +142,7 @@ class TherapyCurriculumTests(unittest.TestCase):
             "bs-learn-sequence.json": 40,
             "bs-cbt-sequence.json": 9,
             "bs-mindfulness-sequence.json": 12,
-            "bs-act-sequence.json": 3,
+            "bs-act-sequence.json": 4,
         }
         for filename, count in expected.items():
             sequence = yaml.safe_load(

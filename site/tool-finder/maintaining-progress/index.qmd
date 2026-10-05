@@ -1,0 +1,25 @@
+---
+title: "Maintaining Progress Plan"
+description: "Keep useful practices available and make it easier to respond when life becomes harder."
+sidebar: tool-finder
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+Setbacks do not erase previous learning. This is an everyday maintenance plan, not a crisis or treatment plan. If you need urgent help, use local emergency or crisis support.
+
+::: {#maintaining-progress-app .skill-app data-practice-app="maintaining-progress"}
+Loading Maintaining Progress Plan...
+:::
+
+::: {.callout-tip collapse="true" title="A worked example"}
+Jordan notices that busy weeks lead to missed meals and cancelled plans. Their first response is one easy meal and a message to a trusted friend. They put a reminder in their calendar to review whether this is enough support.
+:::
+
+## Source and further learning
+
+Original Free Therapy Tools prompts informed by Dennis Greenberger and Christine A. Padesky, [*Mind Over Mood*](https://www.mindovermood.com/), second edition (2016), Chapter 16, printed pp. 280-291. This is an independent educational exercise, not a reproduction of the book's worksheets.
+
+[Learn this skill](/learn/cbt-anxiety/maintaining-progress.html){target="_blank" rel="noopener"} | [Browse Tool Finder](/tool-finder/){target="_blank" rel="noopener"}
