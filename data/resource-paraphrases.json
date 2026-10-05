@@ -21723,8 +21723,8 @@
         "best_text_source": "searchable-dbt-book",
         "extraction_method": "direct_pdf_text",
         "text_status": "source-extraction-review-needed",
-        "source_hash": "6443215f5b9a23cb510aa6fb66a244e48852d50f97a280832a8f93a4095cdc7d",
-        "original_text": "#### Text Version\n\n*Interpersonal Effectiveness Handout 2*\n\nYou Don’t Have tHE Interpersonal Skills You Need\n\n##### You Don’t Know What You Want\n\nYou have the skills, but can’t decide what you really want from the other person. You can’t figure out how to balance your needs versus the other person’s needs: Asking for too much versus not asking for anything. Saying no to everything versus giving in to everything. Your Emotions arE Getting In tHE WaY You have the skills, but emotions (anger, pride, contempt, fear, shame, guilt) control what you do.\n\n##### You Forget Your Long-Term Goals For Short-Term Goals\n\nYou put your immediate urges and wants ahead of your long-term goals. The future vanishes from your mind.\n\n##### Other People arE Getting In Your WaY\n\nYou have the skills but other people get in the way. Other people are more powerful than you. Other people may be threatened or may not like you if you get what you want. Other people may not do what you want unless you sacrifice your self- respect, at least a little. Your Thoughts anD Beliefs arE Getting In tHE WaY Worries about negative consequences if you ask for what you want or say no to someone’s request get in the way of acting effectively. Beliefs that you don’t deserve what you want stop you in your tracks. Beliefs that others don’t deserve what they want make you ineffective."
+        "source_hash": "51b11229ea1174acfaef3800b690ee5bc4e735f6f627e29b6d8cc4eefacc73af",
+        "original_text": "#### Digital checklist\n\nUse the [obstacles checklist](#priority-obstacles) to notice whether the goal is unclear, strong feelings or short-term urges are affecting your response, the other person's capacity matters, or the context calls for more care. Add your own detail in the writing field. A checked item is a question to explore, not a verdict."
       },
       "blocks": [
         {
@@ -21735,22 +21735,12 @@
         {
           "id": "interpersonal-effectiveness-p009-b02",
           "type": "heading",
-          "text": "You Don’t Know What You Want"
+          "text": "Digital checklist"
         },
         {
           "id": "interpersonal-effectiveness-p009-b03",
-          "type": "heading",
-          "text": "You Forget Your Long-Term Goals For Short-Term Goals"
-        },
-        {
-          "id": "interpersonal-effectiveness-p009-b04",
           "type": "paragraph",
-          "text": "You Forget Your Long-Term in plain terms, Goals For Short-Term Goals in plain terms, You put your immediate urges as well as wants ahead of your long-term goals."
-        },
-        {
-          "id": "interpersonal-effectiveness-p009-b05",
-          "type": "heading",
-          "text": "Other People arE Getting In Your WaY"
+          "text": "Strong feelings or short-term in plain terms, urges are affecting your response. This connects with the point that digital checklist apply the obstacles checklist to in plain terms, notice whether the goal is unclear."
         }
       ],
       "fields": [],
@@ -21774,15 +21764,13 @@
         "source_prompt_count": 0,
         "paraphrased_prompt_count": 0,
         "interactive_field_count": 0,
-        "source_heading_count": 3,
-        "paraphrase_heading_count": 3,
-        "similarity_score": 0.0218,
-        "longest_shared_ngram": 8,
-        "similarity_flag": true,
+        "source_heading_count": 1,
+        "paraphrase_heading_count": 1,
+        "similarity_score": 0.2253,
+        "longest_shared_ngram": 0,
+        "similarity_flag": false,
         "completeness_flag": false,
-        "flags": [
-          "similarity"
-        ]
+        "flags": []
       },
       "export": {
         "template_version": "compact-reference-guide-v1",
@@ -21811,8 +21799,8 @@
         "best_text_source": "searchable-dbt-book",
         "extraction_method": "direct_pdf_text",
         "text_status": "source-extraction-review-needed",
-        "source_hash": "7771c9757135e30564decda744dec1b9a12179eb69aa84aab35bca1b64b077dc",
-        "original_text": "#### Text Version\n\ninterpersonal effectiveness Handout 2a (I. E. Worksheet 2) myths in the Way of objectives effectiveness  1. I don’t deserve to get what I want or need.\n\n2. If I make a request, this will show that I am a very weak person.  3. I have to know whether a person is going to say yes before I make a request.\n\n 4. If I ask for something or say no, I can’t stand it if someone gets upset with me.  5. If they say no, it will kill me.  6. Making requests is a really pushy (bad, self- centered, selfish, etc.) thing to do.  7. Saying no to a request is always a selfish thing to do.  8. I should be willing to sacrifice my own needs for others.\n\n9. I must be really inadequate if I can’t fix this myself. 10. Obviously, the problem is just in my head. If I would just think differently I wouldn’t have to bother everybody else.\n\n11. If I don’t have what I want or need, it doesn’t make any difference; I don’t care really. 12. Skillfulness is a sign of weakness.\n\n##### Other myth\n\n##### Other myth\n\nmyths in the Way of relationship and Self- respect effectiveness 13. I shouldn’t have to ask (say no); they should know what I want (and do it). 14. They should have known that their behavior would hurt my feelings; I shouldn’t have to tell them. 15. I shouldn’t have to negotiate or work at getting what I want. 16. Other people should be willing to do more for my needs. 17. Other people should like, approve of, and support me. 18. They don’t deserve my being skillful or treating them well. 19. Getting what I want when I want it is most important. 20. I shouldn’t be fair, kind, courteous, or respectful if others are not so toward me. 21. Revenge will feel so good; it will be worth any negative consequences. 22. Only wimps have values. 23. Everybody lies. 24. Getting what I want is more important than how I get it; the ends really do justify the means.\n\n##### Other myth\n\n##### Other myth"
+        "source_hash": "c7984de7e758ba02d36e1a3b7ac7c84b038a874653e365fe72c2d22a1dbb64c2",
+        "original_text": "#### Digital checklist\n\nUse the [assumptions checklist](#priority-assumptions) to identify beliefs that might narrow your choices. Select only the statements that fit this interaction, then put one thought into your own words before examining it."
       },
       "blocks": [
         {
@@ -21823,7 +21811,12 @@
         {
           "id": "interpersonal-effectiveness-p010-b02",
           "type": "heading",
-          "text": "Other myth"
+          "text": "Digital checklist"
+        },
+        {
+          "id": "interpersonal-effectiveness-p010-b03",
+          "type": "paragraph",
+          "text": "Digital checklist apply the assumptions checklist to in plain terms, identify beliefs that might narrow your choices."
         }
       ],
       "fields": [],
@@ -21849,13 +21842,11 @@
         "interactive_field_count": 0,
         "source_heading_count": 1,
         "paraphrase_heading_count": 1,
-        "similarity_score": 0.0875,
+        "similarity_score": 0.3668,
         "longest_shared_ngram": 0,
         "similarity_flag": false,
-        "completeness_flag": true,
-        "flags": [
-          "suspiciously-short"
-        ]
+        "completeness_flag": false,
+        "flags": []
       },
       "export": {
         "template_version": "compact-reference-guide-v1",
@@ -21870,10 +21861,10 @@
       "title": "Challenging Myths: Objectives Effectiveness",
       "section": "Interpersonal Effectiveness",
       "lesson_route": "/learn/interpersonal-effectiveness/clarifying-priorities.html",
-      "classification": "mixed",
+      "classification": "interactive",
       "has_input": true,
       "input_types": [
-        "date"
+        "table"
       ],
       "status": "review-needed",
       "source": {
@@ -21886,8 +21877,8 @@
         "best_text_source": "searchable-dbt-book",
         "extraction_method": "direct_pdf_text",
         "text_status": "source-extraction-review-needed",
-        "source_hash": "c9cca0f1fa45426f18aa93a3c2d3b640e251f985b7b69b68f1e0b6b1e8f130df",
-        "original_text": "#### Text Version\n\ninterpersonal effectiveness Worksheet 2 (I. E. Handout 2a) (p. 1 of 2) challenging myths in the Way of obtaining objectives challenging myths in the Way of objectives effectiveness\n\n##### Due Date: Name: Week Starting\n\nFor each myth, write down a challenge that makes sense to you.\n\n1. I don’t deserve to get what I want or need.\n\n##### Challenge\n\n2. If I make a request, this will show that I’m a very weak person.\n\n##### Challenge\n\n3. I have to know whether a person is going to say yes before I make a request.\n\n##### Challenge\n\n4. If I ask for something or say no, I can’t stand it if someone gets upset with me.\n\n##### Challenge\n\n5. If they say no, it will kill me.\n\n##### Challenge\n\n6. Making requests is a really pushy (bad, self- centered, selfish, etc.) thing to do.\n\n##### Challenge\n\n7. Saying no to a request is always a selfish thing to do.\n\n##### Challenge\n\n8. I should be willing to sacrifice my own needs for others.\n\n##### Challenge\n\n9. I must be really inadequate if I can’t fix this myself.\n\n##### Challenge\n\n10. Obviously, the problem is just in my head. If I would just think differently, I wouldn’t have to bother everybody else.\n\n##### Challenge\n\n11. If I don’t have what I want or need, it doesn’t make any difference; I don’t care, really.\n\n##### Challenge\n\n12. Skillfulness is a sign of weakness.\n\n##### Challenge\n\n##### Other myth\n\n##### Challenge\n\n##### Other myth\n\n##### Challenge\n\n*continued on next page*"
+        "source_hash": "e6181ff1da4d1639108cc5220fe33c09cc25b4734ee1d87b89843b0e5a3bede7",
+        "original_text": "#### Digital thought challenge\n\nThe [assumptions and thought-challenge section](#priority-assumptions) gives you space to select a familiar pattern, write one thought in your own words, consider supporting and complicating facts, and draft a fairer response. You do not need to challenge every thought at once."
       },
       "blocks": [
         {
@@ -21898,41 +21889,32 @@
         {
           "id": "interpersonal-effectiveness-p011-b02",
           "type": "heading",
-          "text": "Due Date: Name: Week Starting"
+          "text": "Digital thought challenge"
         },
         {
           "id": "interpersonal-effectiveness-p011-b03",
           "type": "paragraph",
-          "text": "1 of 2) challenging in plain terms, myths in the Way in plain terms, of obtaining objectives challenging in plain terms, myths in the Way in plain terms, of objectives effectiveness Due in plain terms, Date: Name: Week Starting in plain terms, For each myth, write down a..."
+          "text": "Write one thought in your own words. This connects with the point that digital thought challenge The assumptions as well as thought-challenge section gives you in plain terms, space to select a familiar pattern."
         },
         {
           "id": "interpersonal-effectiveness-p011-b04",
-          "type": "heading",
-          "text": "Challenge"
-        },
-        {
-          "id": "interpersonal-effectiveness-p011-b05",
-          "type": "paragraph",
-          "text": "1 of 2) challenging in plain terms, myths in the Way in plain terms, of obtaining objectives challenging in plain terms, myths in the Way in plain terms, of objectives effectiveness Due in plain terms, Date: Name: Week Starting in plain terms, For each myth, write down a..."
-        },
-        {
-          "id": "interpersonal-effectiveness-p011-b06",
-          "type": "heading",
-          "text": "Other myth"
-        },
-        {
-          "id": "interpersonal-effectiveness-p011-b07",
           "type": "note",
           "text": "The interactive draft contains 1 response area. Check each prompt against the printable source before approval."
         }
       ],
       "fields": [
         {
-          "id": "interpersonal-effectiveness-p011-q01",
-          "type": "date",
-          "label": "Make a note about: Due Date: Name: Week Starting",
+          "id": "interpersonal-effectiveness-p011-table01",
+          "type": "table",
+          "label": "In your own words, what would you like to record while working through Challenging Myths: Objectives Effectiveness?",
           "help": "",
-          "required": false
+          "required": false,
+          "columns": [
+            "Item",
+            "My response",
+            "Notes"
+          ],
+          "rows": 5
         }
       ],
       "guidance": {
@@ -21944,17 +21926,18 @@
         ],
         "questions": [
           {
-            "field_id": "interpersonal-effectiveness-p011-q01",
-            "prompt": "Make a note about: Due Date: Name: Week Starting",
+            "field_id": "interpersonal-effectiveness-p011-table01",
+            "prompt": "In your own words, what would you like to record while working through Challenging Myths: Objectives Effectiveness?",
             "probes": [
               "What part of this feels most important to put in your own words?"
             ]
           }
         ],
         "summary_sections": [
+          "What helped or did not help",
           "Questions I may want to discuss"
         ],
-        "classification": "mixed"
+        "classification": "interactive"
       },
       "review": {
         "generated": true,
@@ -21969,9 +21952,9 @@
         "source_prompt_count": 0,
         "paraphrased_prompt_count": 1,
         "interactive_field_count": 1,
-        "source_heading_count": 3,
-        "paraphrase_heading_count": 3,
-        "similarity_score": 0.0198,
+        "source_heading_count": 1,
+        "paraphrase_heading_count": 1,
+        "similarity_score": 0.0253,
         "longest_shared_ngram": 0,
         "similarity_flag": false,
         "completeness_flag": false,
@@ -21990,7 +21973,7 @@
       "title": "Challenging Myths: Relationship and Self-Respect",
       "section": "Interpersonal Effectiveness",
       "lesson_route": "/learn/interpersonal-effectiveness/clarifying-priorities.html",
-      "classification": "mixed",
+      "classification": "interactive",
       "has_input": true,
       "input_types": [
         "table"
@@ -22006,8 +21989,8 @@
         "best_text_source": "searchable-dbt-book",
         "extraction_method": "direct_pdf_text",
         "text_status": "source-extraction-review-needed",
-        "source_hash": "9b2d9c78e84c0f0ede42737e2aeacb31ae24fd33e61bbb6b0be89bf123f70d2d",
-        "original_text": "#### Text Version\n\ninterpersonal effectiveness Worksheet 2 (p. 2 of 2) challenging myths in the Way of relationship and Self- respect effectiveness For each myth, write down a challenge that makes sense to you. 13. I shouldn’t have to ask (say no); they should know what I want (and do it).\n\n##### Challenge\n\n14. They should have known that their behavior would hurt my feelings; I shouldn’t have to tell them.\n\n##### Challenge\n\n15. I shouldn’t have to negotiate or work at getting what I want.\n\n##### Challenge\n\n16. Other people should be willing to do more for my needs.\n\n##### Challenge\n\n17. Other people should like, approve of, and support me.\n\n##### Challenge\n\n18. They don’t deserve my being skillful or treating them well.\n\n##### Challenge\n\n19. Getting what I want when I want it is most important.\n\n##### Challenge\n\n20. I shouldn’t be fair, kind, courteous, or respectful if others are not so toward me.\n\n##### Challenge\n\n21. Revenge will feel so good; it will be worth any negative consequences.\n\n##### Challenge\n\n22. Only wimps have values.\n\n##### Challenge\n\n23. Everybody lies.\n\n##### Challenge\n\n24. Getting what I want or need is more important than how I get it; the ends really do justify the means.\n\n##### Challenge\n\n##### Other myth\n\n##### Challenge\n\n##### Other myth\n\n##### Challenge"
+        "source_hash": "4c77d08d9fa9fe61789ba42300bd90a39d4ebdb4515e874dd095817713af6382",
+        "original_text": "#### Digital thought challenge\n\nUse the same [thought-challenge section](#priority-assumptions) for beliefs about the relationship or self-respect. Consider whether another explanation fits and whether your planned response honours both your values and the other person's perspective."
       },
       "blocks": [
         {
@@ -22018,25 +22001,15 @@
         {
           "id": "interpersonal-effectiveness-p012-b02",
           "type": "heading",
-          "text": "Challenge"
+          "text": "Digital thought challenge"
         },
         {
           "id": "interpersonal-effectiveness-p012-b03",
           "type": "paragraph",
-          "text": "Write down a challenge in plain terms, that makes sense to you. This connects with the point that 2 of 2) challenging in plain terms, myths in the Way of relationship as well as Self- respect effectiveness For each myth."
+          "text": "Digital thought challenge apply the same thought-challenge section in plain terms, for beliefs about the relationship or self-respect."
         },
         {
           "id": "interpersonal-effectiveness-p012-b04",
-          "type": "heading",
-          "text": "Other myth"
-        },
-        {
-          "id": "interpersonal-effectiveness-p012-b05",
-          "type": "paragraph",
-          "text": "Other people should be in plain terms, willing to do more for my needs."
-        },
-        {
-          "id": "interpersonal-effectiveness-p012-b06",
           "type": "note",
           "text": "The interactive draft contains 1 response area. Check each prompt against the printable source before approval."
         }
@@ -22075,7 +22048,7 @@
         "summary_sections": [
           "Questions I may want to discuss"
         ],
-        "classification": "mixed"
+        "classification": "interactive"
       },
       "review": {
         "generated": true,
@@ -22090,13 +22063,15 @@
         "source_prompt_count": 0,
         "paraphrased_prompt_count": 1,
         "interactive_field_count": 1,
-        "source_heading_count": 2,
-        "paraphrase_heading_count": 2,
-        "similarity_score": 0.0221,
-        "longest_shared_ngram": 0,
-        "similarity_flag": false,
+        "source_heading_count": 1,
+        "paraphrase_heading_count": 1,
+        "similarity_score": 0.0258,
+        "longest_shared_ngram": 8,
+        "similarity_flag": true,
         "completeness_flag": false,
-        "flags": []
+        "flags": [
+          "similarity"
+        ]
       },
       "export": {
         "template_version": "compact-reference-guide-v1",
@@ -22125,8 +22100,8 @@
         "best_text_source": "searchable-dbt-book",
         "extraction_method": "direct_pdf_text",
         "text_status": "source-extraction-review-needed",
-        "source_hash": "0035acffa69ccb3b0312b74fbcb7590d3029438ea146fe7bdcc9ffbd40fafa8a",
-        "original_text": "#### Text Version\n\ninterpersonal effectiveness Handout 3\n\n##### overview\n\n##### Clarifying Priorities\n\n##### How important is\n\n**Getting what you want/obtaining your goal?**\n\n**Keeping the relationship?**\n\n**Maintaining your self- respect?**\n\n##### Objectives Effectiveness: Dear man\n\nBe effective in asserting your rights and wishes.\n\n##### Relationship Effectiveness: Give\n\nAct in such a way that you maintain positive relationships and that others feel good about themselves and about you.\n\n##### Self- Respect Effectiveness: Fast\n\nAct in such a way that you keep your self- respect.\n\n##### Factors To Consider\n\nDecide how firm or intense you want to be in asking for something or saying no."
+        "source_hash": "e9ae010ec1d5ad3719799f3de6eabdba631cf342bcf2f9b093ff9ac21155613c",
+        "original_text": "#### Digital overview\n\nThe [three-goal planner](#priority-goals) lets you name an objective, a relationship goal, and a self-respect goal. Rank them if useful, then choose a next step. DEAR MAN, GIVE, and FAST are linked beside the planner so you can explore the skill that fits your first priority."
       },
       "blocks": [
         {
@@ -22137,47 +22112,12 @@
         {
           "id": "interpersonal-effectiveness-p013-b02",
           "type": "heading",
-          "text": "At a glance"
+          "text": "Digital At a glance"
         },
         {
           "id": "interpersonal-effectiveness-p013-b03",
-          "type": "heading",
-          "text": "Clarifying Priorities"
-        },
-        {
-          "id": "interpersonal-effectiveness-p013-b04",
-          "type": "heading",
-          "text": "How important is"
-        },
-        {
-          "id": "interpersonal-effectiveness-p013-b05",
-          "type": "heading",
-          "text": "Objectives Effectiveness: Dear man"
-        },
-        {
-          "id": "interpersonal-effectiveness-p013-b06",
           "type": "paragraph",
-          "text": "Objectives Effectiveness: Dear man in plain terms, Be effective in asserting your rights as well as wishes."
-        },
-        {
-          "id": "interpersonal-effectiveness-p013-b07",
-          "type": "heading",
-          "text": "Relationship Effectiveness: Give"
-        },
-        {
-          "id": "interpersonal-effectiveness-p013-b08",
-          "type": "paragraph",
-          "text": "Objectives Effectiveness: Dear man in plain terms, Be effective in asserting your rights as well as wishes."
-        },
-        {
-          "id": "interpersonal-effectiveness-p013-b09",
-          "type": "heading",
-          "text": "Self- Respect Effectiveness: Fast"
-        },
-        {
-          "id": "interpersonal-effectiveness-p013-b10",
-          "type": "paragraph",
-          "text": "Objectives Effectiveness: Dear man in plain terms, Be effective in asserting your rights as well as wishes."
+          "text": "A relationship goal. This connects with the point that digital overview The three-goal in plain terms, planner lets you name an objective."
         }
       ],
       "fields": [],
@@ -22198,18 +22138,16 @@
         "reviewed_source_hash": null
       },
       "qa": {
-        "source_prompt_count": 4,
+        "source_prompt_count": 0,
         "paraphrased_prompt_count": 0,
         "interactive_field_count": 0,
-        "source_heading_count": 7,
-        "paraphrase_heading_count": 6,
-        "similarity_score": 0.1222,
+        "source_heading_count": 1,
+        "paraphrase_heading_count": 1,
+        "similarity_score": 0.0716,
         "longest_shared_ngram": 0,
         "similarity_flag": false,
-        "completeness_flag": true,
-        "flags": [
-          "prompt-field-mismatch"
-        ]
+        "completeness_flag": false,
+        "flags": []
       },
       "export": {
         "template_version": "compact-reference-guide-v1",
@@ -22238,8 +22176,8 @@
         "best_text_source": "searchable-dbt-book",
         "extraction_method": "direct_pdf_text",
         "text_status": "lesson-native-context",
-        "source_hash": "9a2fa3647bf54c9c2782d53909740e18f41f6d6b5764fd317890f5a4c2882462",
-        "original_text": "Before acting, decide which goal matters most: getting an objective, preserving the relationship, or protecting self-respect.\n\n## Clarifying Goals {#clarifying-goals}\n\n### Objectives Effectiveness\n\nWhat result do you want from the interaction? Identify the concrete request, refusal, change, information, or solution you are seeking.\n\n### Relationship Effectiveness\n\nHow do you want the other person to feel about you and the relationship after the interaction? Consider both the present exchange and the longer-term relationship.\n\n### Self-Respect Effectiveness\n\nHow do you want to feel about yourself afterward? Identify the values and limits you want your behaviour to reflect.\n\n## Clarifying Priorities {#clarifying-priorities}\n\nRate or rank the three goals before choosing a strategy. The highest priority guides which skill to emphasize:\n\n- Use **DEAR MAN** to support the objective.\n- Use **GIVE** to support the relationship.\n- Use **FAST** to support self-respect.\n\nThe priorities can change with context. Safety, power differences, timing, capability, and the importance of the relationship all affect what is effective."
+        "source_hash": "03ea72c8cba841fad013409cd99b875bfe5d741b9d33cbb720346a5cbbec7954",
+        "original_text": "Before acting, decide which goal matters most: getting an objective, preserving the relationship, or protecting self-respect.\n\n## Clarifying Goals {#clarifying-goals}\n\n### Objectives Effectiveness\n\nWhat result do you want from the interaction? Identify the concrete request, refusal, change, information, or solution you are seeking.\n\n### Relationship Effectiveness\n\nHow do you want the other person to feel about you and the relationship after the interaction? Consider both the present exchange and the longer-term relationship.\n\n### Self-Respect Effectiveness\n\nHow do you want to feel about yourself afterward? Identify the values and limits you want your behaviour to reflect.\n\n## Clarifying Priorities {#clarifying-priorities}\n\nRate or rank the three goals before choosing a strategy. The highest priority guides which skill to emphasize:\n\n- Use **DEAR MAN** to support the objective.\n- Use **GIVE** to support the relationship.\n- Use **FAST** to support self-respect.\n\nThe priorities can change with context. Safety, power differences, timing, capability, and the importance of the relationship all affect what is effective.\n\n## Try the Priorities Practice Form {#clarifying-priorities-practice}\n\nUse the checklists to notice obstacles and assumptions, then write and rank your three goals. The prompts are original Free Therapy Tools wording informed by the DBT handouts below; they are not a transcription of the printed worksheets. You can leave any item blank. Your entries stay in this browser on your device unless you download a copy.\n\n```{=html}\n<link rel=\"stylesheet\" href=\"/assets/interpersonal-priorities.css\">\n<div id=\"interpersonal-priorities-app\" class=\"skill-app\" data-priorities-app>Loading the priorities practice form...</div>\n<script src=\"/assets/interpersonal-priorities.js\" defer></script>\n```"
       },
       "blocks": [
         {
@@ -22319,9 +22257,9 @@
         "source_prompt_count": 4,
         "paraphrased_prompt_count": 0,
         "interactive_field_count": 0,
-        "source_heading_count": 5,
+        "source_heading_count": 6,
         "paraphrase_heading_count": 5,
-        "similarity_score": 0.0554,
+        "similarity_score": 0.0424,
         "longest_shared_ngram": 0,
         "similarity_flag": false,
         "completeness_flag": true,
@@ -22342,7 +22280,7 @@
       "title": "Clarifying Priorities in Interpersonal Situations",
       "section": "Interpersonal Effectiveness",
       "lesson_route": "/learn/interpersonal-effectiveness/clarifying-priorities.html",
-      "classification": "interactive",
+      "classification": "mixed",
       "has_input": true,
       "input_types": [
         "planning",
@@ -22359,8 +22297,8 @@
         "best_text_source": "searchable-dbt-book",
         "extraction_method": "direct_pdf_text",
         "text_status": "lesson-native-context",
-        "source_hash": "9a2fa3647bf54c9c2782d53909740e18f41f6d6b5764fd317890f5a4c2882462",
-        "original_text": "Before acting, decide which goal matters most: getting an objective, preserving the relationship, or protecting self-respect.\n\n## Clarifying Goals {#clarifying-goals}\n\n### Objectives Effectiveness\n\nWhat result do you want from the interaction? Identify the concrete request, refusal, change, information, or solution you are seeking.\n\n### Relationship Effectiveness\n\nHow do you want the other person to feel about you and the relationship after the interaction? Consider both the present exchange and the longer-term relationship.\n\n### Self-Respect Effectiveness\n\nHow do you want to feel about yourself afterward? Identify the values and limits you want your behaviour to reflect.\n\n## Clarifying Priorities {#clarifying-priorities}\n\nRate or rank the three goals before choosing a strategy. The highest priority guides which skill to emphasize:\n\n- Use **DEAR MAN** to support the objective.\n- Use **GIVE** to support the relationship.\n- Use **FAST** to support self-respect.\n\nThe priorities can change with context. Safety, power differences, timing, capability, and the importance of the relationship all affect what is effective."
+        "source_hash": "03ea72c8cba841fad013409cd99b875bfe5d741b9d33cbb720346a5cbbec7954",
+        "original_text": "Before acting, decide which goal matters most: getting an objective, preserving the relationship, or protecting self-respect.\n\n## Clarifying Goals {#clarifying-goals}\n\n### Objectives Effectiveness\n\nWhat result do you want from the interaction? Identify the concrete request, refusal, change, information, or solution you are seeking.\n\n### Relationship Effectiveness\n\nHow do you want the other person to feel about you and the relationship after the interaction? Consider both the present exchange and the longer-term relationship.\n\n### Self-Respect Effectiveness\n\nHow do you want to feel about yourself afterward? Identify the values and limits you want your behaviour to reflect.\n\n## Clarifying Priorities {#clarifying-priorities}\n\nRate or rank the three goals before choosing a strategy. The highest priority guides which skill to emphasize:\n\n- Use **DEAR MAN** to support the objective.\n- Use **GIVE** to support the relationship.\n- Use **FAST** to support self-respect.\n\nThe priorities can change with context. Safety, power differences, timing, capability, and the importance of the relationship all affect what is effective.\n\n## Try the Priorities Practice Form {#clarifying-priorities-practice}\n\nUse the checklists to notice obstacles and assumptions, then write and rank your three goals. The prompts are original Free Therapy Tools wording informed by the DBT handouts below; they are not a transcription of the printed worksheets. You can leave any item blank. Your entries stay in this browser on your device unless you download a copy.\n\n```{=html}\n<link rel=\"stylesheet\" href=\"/assets/interpersonal-priorities.css\">\n<div id=\"interpersonal-priorities-app\" class=\"skill-app\" data-priorities-app>Loading the priorities practice form...</div>\n<script src=\"/assets/interpersonal-priorities.js\" defer></script>\n```"
       },
       "blocks": [
         {
@@ -22498,7 +22436,7 @@
           "Next step I want to consider",
           "Questions I may want to discuss"
         ],
-        "classification": "interactive"
+        "classification": "mixed"
       },
       "review": {
         "generated": true,
@@ -22513,9 +22451,9 @@
         "source_prompt_count": 4,
         "paraphrased_prompt_count": 4,
         "interactive_field_count": 4,
-        "source_heading_count": 5,
+        "source_heading_count": 6,
         "paraphrase_heading_count": 5,
-        "similarity_score": 0.0506,
+        "similarity_score": 0.0406,
         "longest_shared_ngram": 0,
         "similarity_flag": false,
         "completeness_flag": false,

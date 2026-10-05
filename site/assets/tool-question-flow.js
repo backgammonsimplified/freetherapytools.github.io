@@ -27,6 +27,7 @@
     "urge-surfing",
     "pros-and-cons",
     "interpersonal-troubleshooting",
+    "interpersonal-priorities",
     "exposure",
     "safety-behaviours",
     "behaviour-chain",

@@ -7,8 +7,8 @@ This durable report summarizes the generated draft corpus. Draft and review-need
 - Published target count: **266**
 - Excluded source pages: **65**
 - Informational: **174**
-- Interactive: **68**
-- Mixed informational + interactive: **24**
+- Interactive: **69**
+- Mixed informational + interactive: **23**
 - Total interactive/fillable resources: **92**
 - Total structured fields: **360**
 
@@ -19,7 +19,7 @@ This durable report summarizes the generated draft corpus. Draft and review-need
 - Approved/published: **0**
 - Source extraction uncertain: **196**
 - Similarity flags: **81**
-- Completeness flags: **79**
+- Completeness flags: **77**
 
 ## Generated systems
 
@@ -30,13 +30,13 @@ This durable report summarizes the generated draft corpus. Draft and review-need
 
 ## Field types
 
-- `date`: 12
+- `date`: 11
 - `multi-select`: 8
 - `planning`: 32
 - `rating-scale`: 9
 - `reflection`: 177
 - `repeating-rows`: 12
-- `table`: 39
+- `table`: 40
 - `text`: 42
 - `textarea`: 25
 - `time`: 4

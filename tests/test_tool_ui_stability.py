@@ -72,7 +72,7 @@ class ToolUiStabilityTests(unittest.TestCase):
         self.assertIn('skill-progress-bar.css?v=20260908-persistent-bar-6-shell-aligned', SCRIPTS)
         self.assertIn('skill-progress-bar.js?v=20260908-persistent-bar-7-save-guidance', SCRIPTS)
         self.assertIn('tool-question-flow.css?v=20260907-progressive-reveal-6-geometry', SCRIPTS)
-        self.assertIn('tool-question-flow.js?v=20260907-progressive-reveal-5-next', SCRIPTS)
+        self.assertIn('tool-question-flow.js?v=20261005-priorities-form', SCRIPTS)
 
 
 if __name__ == "__main__":

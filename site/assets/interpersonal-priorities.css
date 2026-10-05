@@ -1,0 +1,20 @@
+#interpersonal-priorities-app .skill-app-fieldset + .skill-app-fieldset {
+  margin-top: 1.25rem;
+}
+
+#interpersonal-priorities-app .skill-app-fieldset {
+  min-width: 0;
+  scroll-margin-top: 5rem;
+}
+
+#interpersonal-priorities-app [data-priority-hint] {
+  padding: 0.75rem 1rem;
+  border-left: 4px solid #6f4e37;
+  background: #f4efe9;
+}
+
+#interpersonal-priorities-app .skill-app-footer .skill-app-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
