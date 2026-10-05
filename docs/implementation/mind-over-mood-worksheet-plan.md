@@ -6,6 +6,12 @@ all **60 numbered worksheets**. The IDs let editors compare the plan with the
 book; the short topic labels below are editorial descriptions, not transcriptions
 of the publisher's worksheets.
 
+## Implementation update
+
+The four proposed tools are now implemented as original, browser-local exercises: [Activity & Mood Log](../../site/tool-finder/activity-mood-log/index.qmd), [Core Belief Evidence Log](../../site/tool-finder/core-belief-evidence-log/index.qmd), [Anger Response Review](../../site/tool-finder/anger-response-review/index.qmd), and [Responsibility & Repair Planner](../../site/tool-finder/responsibility-repair/index.qmd). Existing goal, thought-record, gratitude, activation, beliefs, exposure, grounding, and maintenance experiences have targeted prompts or links. The inventories remain source references, without improvised scoring. The coverage table below retains the audit labels from before implementation so the rationale for each change stays visible.
+
+Clinical-review status is separate from book attribution; these new prompts are not presented as individually approved by the reviewer.
+
 ## Scope and decisions
 
 Build an original CBT curriculum using the current Thought Record, Five Factor

@@ -54,6 +54,12 @@ Write a fair interpretation that includes all the evidence. Ask how you or a bes
 
 Rate each emotion again from 0 to 100. The goal is not to force a lower number; it is to notice what changes after considering a fuller account.
 
+## An original worked example
+
+Sam proposes an idea at a meeting. A colleague asks to discuss the timing. Sam notices anxiety and interprets the question as rejection. The request to discuss timing is observable; rejection is an interpretation. Sam recalls that colleagues have questioned timing even when they liked an idea. A balanced thought might be that they need a different schedule and Sam does not yet know whether they reject the idea. Sam asks what timing would work and later records the answer as new evidence, even if anxiety remains.
+
+Try the [Thought Record](/tool-finder/thought-record/) for your own manageable example.
+
 <!-- section-scan-resources:start -->
 
 ## Handouts & Worksheets {#handouts-worksheets}

@@ -12,3 +12,7 @@ lesson-taxonomy: false
 ---
 
 {{< include _lesson-index.html >}}
+
+## About the book's mood inventories
+
+*Mind Over Mood* also contains depression and anxiety inventories with their own scoring instructions. Free Therapy Tools does not recreate those measures or interpret a score. If you own the book, use the [publisher's worksheet index](https://mindovermood.com/worksheets/) with its instructions, and discuss concerning results with a qualified professional. Our [Activity & Mood Log](/tool-finder/activity-mood-log/) is for personal observation, not diagnosis.

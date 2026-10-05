@@ -10,6 +10,8 @@
   // removes their repeated app-level heading/intro; it does not restructure
   // their controls.
   const PROGRESSIVE_EXCLUSIONS = new Set([
+    "activity-mood-log",
+    "core-belief-evidence-log",
     "box-breathing",
     "grounding",
     "stop",

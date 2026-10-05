@@ -21,7 +21,7 @@ class ToolFinderPassTests(unittest.TestCase):
             route = f"/tool-finder/{page.parent.name}/"
             self.assertIn(route, {entry.get("tool_href") for entry in self.entries})
             # New tools have no historical Skill Finder route to redirect.
-            if page.parent.name not in {"stop", "sleep-hygiene", "stages-of-change", "urge-surfing", "dear-give", "dear-fast", "avoidance", "safety-behaviours", "tipp", "window-of-tolerance", "act-unhooking", "act-making-room", "act-present-moment", "behavioural-experiment", "belief-explorer", "maintaining-progress"}:
+            if page.parent.name not in {"stop", "sleep-hygiene", "stages-of-change", "urge-surfing", "dear-give", "dear-fast", "avoidance", "safety-behaviours", "tipp", "window-of-tolerance", "act-unhooking", "act-making-room", "act-present-moment", "behavioural-experiment", "belief-explorer", "maintaining-progress", "activity-mood-log", "core-belief-evidence-log", "anger-response-review", "responsibility-repair"}:
                 self.assertIn(route.replace("/tool-finder/", "/skill-finder/"), legacy)
         self.assertTrue((SITE / "learn/distress-tolerance/stop-crisis-survival.qmd").exists())
         self.assertNotIn('/learn/cube/', legacy)

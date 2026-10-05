@@ -1,0 +1,25 @@
+---
+title: "Activity & Mood Log"
+description: "Notice patterns in activities, feelings, and engagement across ordinary days."
+sidebar: tool-finder
+page-layout: full
+toc: false
+execute:
+  enabled: false
+---
+
+A single entry can be about an activity, a mood, or both. Optional intensity is your own description, not a clinical score. You can add entries over time and revisit the pattern without grading yourself.
+
+::: {#activity-mood-log-app .skill-app data-mom-app="activity-mood-log"}
+Loading Activity & Mood Log...
+:::
+
+::: {.callout-tip collapse="true" title="An original example"}
+Jo notes that a short walk did not immediately change their sadness but did help them feel connected to the neighbourhood. They keep both observations in the log, then look for patterns across several days.
+:::
+
+## Source and further learning
+
+Original Free Therapy Tools prompts informed by Dennis Greenberger and Christine A. Padesky, [*Mind Over Mood*, second edition](https://mindovermood.com/worksheets/) (2016), Chapter 13, printed pp. 201-218; Chapter 15, printed pp. 252-254. This is an independent educational exercise, not the publisher's worksheet.
+
+[Learn this skill](/learn/cbt-anxiety/maintaining-progress.html){target="_blank" rel="noopener"} | [Browse Tool Finder](/tool-finder/){target="_blank" rel="noopener"}

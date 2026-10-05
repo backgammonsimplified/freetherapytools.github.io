@@ -10,6 +10,8 @@ execute:
 
 The repository's [Grounding curriculum](/learn/mindfulness/grounding.html) focuses on immediate sensory information, the body, and the current environment. It does not prescribe a numbered sensory count, so this tool does not invent one.
 
+Grounding can create room to notice the present before choosing a next step. You can pause or stop if a prompt is uncomfortable. Afterward, note in your own words whether it helped you orient; an immediate mood change is not required.
+
 ::: {#grounding-app .skill-app data-quick-app="grounding"}
 Loading Grounding…
 :::

@@ -10,6 +10,8 @@ execute:
 
 The source curriculum names Gratitude Journaling as a general skill. This focused Therapy Skill Kit exercise keeps the practice small and does not imply that gratitude should erase difficult experiences.
 
+An entry can include what you noticed and, if you want, a small way to express appreciation or kindness. There is no requirement to share it with anyone. The optional prompt is informed by Greenberger and Padesky, [*Mind Over Mood*, second edition](https://mindovermood.com/worksheets/) (2016), Chapter 13.
+
 ::: {#gratitude-journal-app .skill-app data-quick-app="gratitude-journal"}
 Loading Gratitude Journal…
 :::

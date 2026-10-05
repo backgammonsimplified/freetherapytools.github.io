@@ -8,6 +8,8 @@ toc: false
 
 Only add steps that are objectively safe and appropriate. This planner is not guidance to approach danger, ignore health needs, or violate consent or legal boundaries.
 
+Before a step, note what you predict and what would count as a fair observation. Afterward, record what actually happened, including uncertainty and any safety behaviour that shaped the result. Repeat or adjust only within safe limits. The [Core Belief Evidence Log](/tool-finder/core-belief-evidence-log/) can help compare observations across days.
+
 ::: {#exposure-app .skill-app data-practice-app="exposure"}
 Loading Fear Ladder / Graded Exposure…
 :::

@@ -15,11 +15,121 @@
     dear: [{ label: "Learn DEAR MAN", href: "/learn/interpersonal-effectiveness/dear-man.html" }],
     ask: [{ label: "Learn How to Ask & Say No", href: "/learn/interpersonal-effectiveness/saying-no.html" }],
     goals: [{ label: "Values", href: "/tool-finder/values/" }, { label: "Behavioural Activation", href: "/tool-finder/behavioural-activation/" }, { label: "Build Mastery", href: "/learn/emotion-regulation/positive-emotions-mastery-cope-ahead.html#build-mastery" }, { label: "Pleasant Event Planner", href: "/tool-finder/pleasant-event/" }],
-    activation: [{ label: "Pleasant Event Planner", href: "/tool-finder/pleasant-event/" }, { label: "Values", href: "/tool-finder/values/" }, { label: "SMART Goal Builder", href: "/tool-finder/goal-builder/" }, { label: "Learn Behavioural Activation", href: "/learn/wellness/behavioral-activation.html" }],
-    review: [{ label: "Values & Valued Action", href: "/tool-finder/values/" }, { label: "SMART Goal Builder", href: "/tool-finder/goal-builder/" }],
+    activation: [{ label: "Pleasant Event Planner", href: "/tool-finder/pleasant-event/" }, { label: "Values", href: "/tool-finder/values/" }, { label: "SMART Goal Builder", href: "/tool-finder/goal-builder/" }, { label: "Activity & Mood Log", href: "/tool-finder/activity-mood-log/" }, { label: "Learn Behavioural Activation", href: "/learn/wellness/behavioral-activation.html" }],
+    review: [{ label: "Values & Valued Action", href: "/tool-finder/values/" }, { label: "SMART Goal Builder", href: "/tool-finder/goal-builder/" }, { label: "Activity & Mood Log", href: "/tool-finder/activity-mood-log/" }],
   };
 
   const FORM_DEFINITIONS = {
+  "anger-response-review": {
+    "title": "Anger Response Review",
+    "intro": "Notice early cues, choose a fair response, and learn from what happened.",
+    "fields": [
+      [
+        "situation",
+        "What happened? Name only what you observed."
+      ],
+      [
+        "early",
+        "What were your early anger cues in thoughts, body, voice, or actions?"
+      ],
+      [
+        "interpretation",
+        "What did you think it meant? What remains uncertain?"
+      ],
+      [
+        "concern",
+        "Which need, value, boundary, or practical problem deserves attention?"
+      ],
+      [
+        "pause",
+        "What pause or grounding step could give you room to choose?"
+      ],
+      [
+        "response",
+        "What would a clear, proportionate response sound or look like?"
+      ],
+      [
+        "after",
+        "Afterward: what happened, and what effect did your response have?"
+      ],
+      [
+        "learning",
+        "What would you keep or change next time?"
+      ]
+    ],
+    "links": [
+      {
+        "label": "Learn anger, guilt & shame",
+        "href": "/learn/cbt-anxiety/anger-guilt-shame.html"
+      },
+      {
+        "label": "STOP",
+        "href": "/tool-finder/stop/"
+      },
+      {
+        "label": "DEAR MAN",
+        "href": "/tool-finder/dear-man/"
+      }
+    ],
+    "reference": "Dennis Greenberger and Christine A. Padesky, Mind Over Mood, second edition (2016), Chapter 15, printed pp. 252-267."
+  },
+  "responsibility-repair": {
+    "title": "Responsibility & Repair Planner",
+    "intro": "Consider your actual share of an event and decide whether a safe, proportionate repair would help.",
+    "fields": [
+      [
+        "situation",
+        "What happened? Which facts are known, and which are uncertain?"
+      ],
+      [
+        "impact",
+        "What actual effect did the event have? Avoid assuming you know every consequence."
+      ],
+      [
+        "mypart",
+        "Which choices were realistically within your control at the time?"
+      ],
+      [
+        "others",
+        "What choices by others or surrounding circumstances contributed?"
+      ],
+      [
+        "degree",
+        "If responsibility is not all-or-nothing, how would you describe your share in words?"
+      ],
+      [
+        "boundary",
+        "Would contacting anyone or taking action be safe and appropriate? What boundaries matter?"
+      ],
+      [
+        "repair",
+        "Is there a proportionate repair to consider, such as correcting information or changing a behaviour?"
+      ],
+      [
+        "support",
+        "Would a trusted person or professional help you think this through fairly?"
+      ],
+      [
+        "private",
+        "Optional private reflection: what would accountability without repeated self-attack mean here?"
+      ],
+      [
+        "next",
+        "What is the next step, including choosing not to contact someone?"
+      ]
+    ],
+    "links": [
+      {
+        "label": "Learn anger, guilt & shame",
+        "href": "/learn/cbt-anxiety/anger-guilt-shame.html"
+      },
+      {
+        "label": "Thought Record",
+        "href": "/tool-finder/thought-record/"
+      }
+    ],
+    "reference": "Dennis Greenberger and Christine A. Padesky, Mind Over Mood, second edition (2016), Chapter 15, printed pp. 267-279."
+  },
   "act-unhooking": {
     "title": "Unhooking from Thoughts",
     "intro": "Notice a thought without making it the rule for your next action.",
@@ -188,6 +298,8 @@
       {
         "label": "Thought Record",
         "href": "/tool-finder/thought-record/"
+      },
+      {"label": "Core Belief Evidence Log", "href": "/tool-finder/core-belief-evidence-log/"
       }
     ],
     "reference": "Dennis Greenberger and Christine A. Padesky, Mind Over Mood, second edition (2016), Chapter 11, printed pp. 132-151. https://www.mindovermood.com/"
@@ -233,12 +345,15 @@
       {
         "label": "Thought Record",
         "href": "/tool-finder/thought-record/"
+      },
+      {"label": "Core Belief Evidence Log", "href": "/tool-finder/core-belief-evidence-log/"
       }
     ],
     "reference": "Dennis Greenberger and Christine A. Padesky, Mind Over Mood, second edition (2016), Chapters 11-12, printed pp. 132-187. https://www.mindovermood.com/"
   },
   "maintaining-progress": {
     "title": "Maintaining Progress Plan",
+    "optionalFields": ["skillsReview"],
     "intro": "Keep useful practices available and make it easier to respond when life becomes harder.",
     "fields": [
       [
@@ -268,6 +383,10 @@
       [
         "review",
         "When will I review this plan, and what would tell me it needs changing?"
+      ],
+      [
+        "skillsReview",
+        "Which skills do I want to keep, adapt, or ask for help practising?"
       ]
     ],
     "links": [
@@ -278,6 +397,8 @@
       {
         "label": "Thought Record",
         "href": "/tool-finder/thought-record/"
+      },
+      {"label": "Activity & Mood Log", "href": "/tool-finder/activity-mood-log/"
       }
     ],
     "reference": "Dennis Greenberger and Christine A. Padesky, Mind Over Mood, second edition (2016), Chapter 16, printed pp. 280-291. https://www.mindovermood.com/"
@@ -516,7 +637,7 @@ I will edit the ideas myself.`;
       && keys.every((key) => typeof object[key] === "string");
   }
 
-  const GOAL_FIELD_KEYS = ["direction", "specific", "measurable", "achievable", "relevant", "time", "smallest", "barrier", "support"];
+  const GOAL_FIELD_KEYS = ["direction", "specific", "measurable", "achievable", "relevant", "time", "smallest", "barrier", "support", "expectedBenefit", "effortCost", "successSignals"];
 
   function pad(number) { return String(number).padStart(2, "0"); }
 
@@ -803,14 +924,14 @@ I will edit the ideas myself.`;
   }
 
   function goalDescription(state) {
-    return [state.context.mission && `Mission: ${state.context.mission}`, state.context.what && `What: ${state.context.what}`, ...GOAL_FIELD_KEYS.map((key) => state.fields[key] && `${key[0].toUpperCase()}${key.slice(1)}: ${state.fields[key]}`)].filter(Boolean).join("\n");
+    return [state.context.mission && `Mission: ${state.context.mission}`, state.context.what && `What: ${state.context.what}`, ...GOAL_FIELD_KEYS.filter((key) => !["expectedBenefit", "effortCost", "successSignals"].includes(key)).map((key) => state.fields[key] && `${key[0].toUpperCase()}${key.slice(1)}: ${state.fields[key]}`)].filter(Boolean).join("\n");
   }
 
   function goalReadableSummary(state) {
     const sections = [
       ["Life Domain", state.context.domain], ["Values", state.context.values.join(", ")], ["Mission", state.context.mission], ["What", state.context.what], ["How", state.context.how],
       ["Direction or Value", state.fields.direction], ["Specific", state.fields.specific], ["Measurable", state.fields.measurable], ["Achievable", state.fields.achievable],
-      ["Relevant / Realistic", state.fields.relevant], ["Time-Oriented", state.fields.time], ["Target Date", state.targetDate], ["Simplified Goal", state.fields.smallest], ["Possible Barrier", state.fields.barrier], ["Support", state.fields.support],
+      ["Relevant / Realistic", state.fields.relevant], ["Time-Oriented", state.fields.time], ["Target Date", state.targetDate], ["Simplified Goal", state.fields.smallest], ["Possible Barrier", state.fields.barrier], ["Support", state.fields.support], ["Expected Benefit", state.fields.expectedBenefit], ["Effort and Trade-offs", state.fields.effortCost], ["Signs of Benefit", state.fields.successSignals],
       ["Calendar Commitment", state.calendar.enabled && calendarCommitmentValid(state.calendar) ? (state.calendar.scheduleType === "recurring" ? `Recurring ${state.calendar.frequency} from ${state.calendar.date} at ${calendarTimeSlots(state.calendar).join(", ")} for ${state.calendar.durationMinutes} minutes` : `${state.calendar.date} at ${state.calendar.startTime} for ${state.calendar.durationMinutes} minutes`) : ""],
     ];
     if (Progress?.nonEmptySections) return Progress.nonEmptySections(goalTitle(state), sections);
@@ -845,7 +966,7 @@ I will edit the ideas myself.`;
     const keys = definition.fields.map(([key]) => key);
     const allowed = [...keys, ...(definition.legacyKeys || [])];
     return Object.entries(next.fields).every(([key, value]) => allowed.includes(key) && typeof value === "string")
-      && keys.every((key) => typeof next.fields[key] === "string");
+      && keys.every((key) => definition.optionalFields?.includes(key) || typeof next.fields[key] === "string");
   }
 
   function guidedSummary(definition, next) {
@@ -895,8 +1016,8 @@ I will edit the ideas myself.`;
   function goalStateValid(next) {
     if (!Progress?.isPlainObject(next) || !Progress.isPlainObject(next.fields) || typeof next.summaryBuilt !== "boolean") return false;
     if (!Progress.isPlainObject(next.fields) || !Object.keys(next.fields).every((key) => GOAL_FIELD_KEYS.includes(key))
-      || GOAL_FIELD_KEYS.filter((key) => key !== "barrier").some((key) => typeof next.fields[key] !== "string")
-      || (next.fields.barrier !== undefined && typeof next.fields.barrier !== "string")) return false;
+      || GOAL_FIELD_KEYS.filter((key) => !["barrier", "expectedBenefit", "effortCost", "successSignals"].includes(key)).some((key) => typeof next.fields[key] !== "string")
+      || ["barrier", "expectedBenefit", "effortCost", "successSignals"].some((key) => next.fields[key] !== undefined && typeof next.fields[key] !== "string")) return false;
     const keys = Object.keys(next);
     if (keys.every((key) => ["fields", "summaryBuilt"].includes(key))) return true;
     if (!keys.every((key) => ["fields", "summaryBuilt", "context", "targetDate", "calendar", "gtd"].includes(key))) return false;
@@ -950,6 +1071,9 @@ I will edit the ideas myself.`;
         ["smallest", "Can we simplify the goal?", "What is a smaller thing we could do and still feel satisfied?"],
         ["barrier", "What could get in the way?", "What could prevent us from completing the goal, and what can we do to reduce or avoid that obstacle? Separate practical barriers from thoughts or feelings you could make room for."],
         ["support", "What could support follow-through?"],
+        ["expectedBenefit", "What might improve if I work on this goal?"],
+        ["effortCost", "What time, energy, or trade-offs will this goal ask of me?"],
+        ["successSignals", "Beyond finishing it, what signs would show this goal helps?"],
       ];
       const recurring = state.calendar.scheduleType === "recurring";
       const repeatUnit = state.calendar.frequency === "daily" ? "day(s)" : state.calendar.frequency === "monthly" ? "month(s)" : "week(s)";

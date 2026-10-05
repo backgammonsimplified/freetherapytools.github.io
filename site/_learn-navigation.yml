@@ -52,6 +52,14 @@ website:
               href: tool-finder/act-present-moment/index.qmd
         - section: "CBT and Managing Anxiety"
           contents:
+            - text: "Activity & Mood Log"
+              href: tool-finder/activity-mood-log/index.qmd
+            - text: "Core Belief Evidence Log"
+              href: tool-finder/core-belief-evidence-log/index.qmd
+            - text: "Anger Response Review"
+              href: tool-finder/anger-response-review/index.qmd
+            - text: "Responsibility & Repair Planner"
+              href: tool-finder/responsibility-repair/index.qmd
             - text: "Behavioural Experiment Planner"
               href: tool-finder/behavioural-experiment/index.qmd
             - text: "Assumptions & Core Beliefs Explorer"

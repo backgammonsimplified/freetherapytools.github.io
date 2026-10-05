@@ -18,6 +18,10 @@ Loading Thought Record…
 
 ## From reflection to a next step
 
-Use specific observations in the evidence sections. A balanced thought can acknowledge a real problem, uncertainty, and your options. The new next-step field lets you note practical action or information still needed. Re-rate feelings without requiring them to improve.
+Separate observable facts from the meaning you gave them. If you form a more balanced thought, note what later experience supports, complicates, or leaves it uncertain. For a recurring broad belief, use the [Core Belief Evidence Log](/tool-finder/core-belief-evidence-log/).
+
+
+
+Use specific observations in the evidence sections. A balanced thought can acknowledge a real problem, uncertainty, and your options. The next-step field lets you note practical action or information still needed. If the problem calls for a concrete plan, try the [SMART Goal Builder](/tool-finder/goal-builder/). Re-rate feelings without requiring them to improve.
 
 This guidance and next-step reflection are informed by Greenberger and Padesky, [*Mind Over Mood*, second edition (2016)](https://www.mindovermood.com/), Chapters 6-10. The existing Thought Record progression is retained.

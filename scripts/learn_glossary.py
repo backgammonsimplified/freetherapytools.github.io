@@ -168,6 +168,10 @@ TOOL_FINDER_GROUPS = {
         ("Present-Moment Practice", "tool-finder/act-present-moment/index.qmd"),
     ),
     "CBT and Managing Anxiety": (
+        ("Activity & Mood Log", "tool-finder/activity-mood-log/index.qmd"),
+        ("Core Belief Evidence Log", "tool-finder/core-belief-evidence-log/index.qmd"),
+        ("Anger Response Review", "tool-finder/anger-response-review/index.qmd"),
+        ("Responsibility & Repair Planner", "tool-finder/responsibility-repair/index.qmd"),
         ("Behavioural Experiment Planner", "tool-finder/behavioural-experiment/index.qmd"),
         ("Assumptions & Core Beliefs Explorer", "tool-finder/belief-explorer/index.qmd"),
         ("Maintaining Progress Plan", "tool-finder/maintaining-progress/index.qmd"),

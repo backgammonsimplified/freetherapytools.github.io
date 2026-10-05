@@ -18,6 +18,8 @@ Loading Behavioural Experiment Planner...
 Alex predicts that asking for clarification will annoy a colleague. They ask one clear question during an agreed check-in and note the actual reply. One brief answer may be ambiguous; it is information, not a verdict on Alex's worth.
 :::
 
+Keep a [Core Belief Evidence Log](/tool-finder/core-belief-evidence-log/) if you want to compare an experiment with other observations over time.
+
 ## Source and further learning
 
 Original Free Therapy Tools prompts informed by Dennis Greenberger and Christine A. Padesky, [*Mind Over Mood*](https://www.mindovermood.com/), second edition (2016), Chapter 11, printed pp. 132-151. This is an independent educational exercise, not a reproduction of the book's worksheets.

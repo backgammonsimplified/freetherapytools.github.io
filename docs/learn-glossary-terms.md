@@ -12,6 +12,7 @@ Use only these canonical slugs in Learn and Research `terms` metadata. Every ter
 | ACCEPTS | `accepts` | `/glossary/#accepts` |
 | Accumulate Positive Emotions | `accumulate-positive-emotions` | `/glossary/#accumulate-positive-emotions` |
 | Action Urge | `action-urge` | `/glossary/#action-urge` |
+| Activity and Mood Log | `activity-and-mood-log` | `/glossary/#activity-and-mood-log` |
 | Activity Monitoring | `activity-monitoring` | `/glossary/#activity-monitoring` |
 | Anger | `anger` | `/glossary/#anger` |
 | Attentional Flexibility | `attentional-flexibility` | `/glossary/#attentional-flexibility` |
@@ -97,6 +98,7 @@ Use only these canonical slugs in Learn and Research `terms` metadata. Every ter
 | Reasonable Mind | `reasonable-mind` | `/glossary/#reasonable-mind` |
 | Reinforcement | `reinforcement` | `/glossary/#reinforcement` |
 | Relationship Effectiveness | `relationship-effectiveness` | `/glossary/#relationship-effectiveness` |
+| Repair | `repair` | `/glossary/#repair` |
 | Sadness | `sadness` | `/glossary/#sadness` |
 | Secondary Emotion | `secondary-emotion` | `/glossary/#secondary-emotion` |
 | Self-as-Context | `self-as-context` | `/glossary/#self-as-context` |
@@ -105,6 +107,7 @@ Use only these canonical slugs in Learn and Research `terms` metadata. Every ter
 | Self-Validation | `self-validation` | `/glossary/#self-validation` |
 | Shame | `shame` | `/glossary/#shame` |
 | Shaping | `shaping` | `/glossary/#shaping` |
+| Shared Responsibility | `shared-responsibility` | `/glossary/#shared-responsibility` |
 | Sleep Hygiene | `sleep-hygiene` | `/glossary/#sleep-hygiene` |
 | STOP | `stop` | `/glossary/#stop` |
 | Temperature Skill | `temperature` | `/glossary/#temperature` |

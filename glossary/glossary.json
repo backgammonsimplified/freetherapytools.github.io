@@ -202,6 +202,36 @@
       }
     ]
   },
+  "activity-and-mood-log": {
+    "term": "Activity and Mood Log",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "A dated record of activities, feelings, and observations for spotting patterns over time.",
+    "long_definition": "An activity and mood log can include what you did, felt, and noticed afterward. Compare several entries before deciding what helps. Enjoyment, connection, accomplishment, and rest may matter even when mood does not change immediately.",
+    "categories": [
+      "CBT and Managing Anxiety"
+    ],
+    "tracks": [
+      "CBT and Managing Anxiety"
+    ],
+    "related_terms": [
+      "activity-monitoring",
+      "behavioural-activation"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "Mind Over Mood, Second Edition (2016)",
+        "author": "Dennis Greenberger and Christine A. Padesky",
+        "url": "https://mindovermood.com/worksheets/",
+        "section": "Chapters 13 and 15"
+      }
+    ]
+  },
   "activity-monitoring": {
     "term": "Activity Monitoring",
     "aliases": [],
@@ -2873,6 +2903,36 @@
       }
     ]
   },
+  "repair": {
+    "term": "Repair",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "A proportionate action addressing a specific mistake or harm when safe and appropriate.",
+    "long_definition": "Repair might mean acknowledging an impact, correcting information, replacing something, or changing a repeated behaviour. It cannot guarantee forgiveness. Contacting someone may be unsafe or unnecessary; support and boundaries matter.",
+    "categories": [
+      "CBT and Managing Anxiety"
+    ],
+    "tracks": [
+      "CBT and Managing Anxiety"
+    ],
+    "related_terms": [
+      "shared-responsibility",
+      "guilt"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "Mind Over Mood, Second Edition (2016)",
+        "author": "Dennis Greenberger and Christine A. Padesky",
+        "url": "https://mindovermood.com/worksheets/",
+        "section": "Chapter 15"
+      }
+    ]
+  },
   "sadness": {
     "term": "Sadness",
     "aliases": [],
@@ -3120,6 +3180,35 @@
         "author": "Marsha M. Linehan",
         "section": "Interpersonal Effectiveness Handout 20, p. 161",
         "url": "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781572307810"
+      }
+    ]
+  },
+  "shared-responsibility": {
+    "term": "Shared Responsibility",
+    "aliases": [],
+    "redirect_slugs": [],
+    "short_definition": "Considering the contributions of choices, other people, and circumstances to an outcome.",
+    "long_definition": "When something goes wrong, responsibility may be distributed among several causes. Naming what was within your control supports fair accountability; it does not erase harm or make you responsible for other people's choices.",
+    "categories": [
+      "CBT and Managing Anxiety"
+    ],
+    "tracks": [
+      "CBT and Managing Anxiety"
+    ],
+    "related_terms": [
+      "guilt"
+    ],
+    "inline_terms": {},
+    "status": "published",
+    "added": "2026-10-04",
+    "updated": "2026-10-04",
+    "references": [
+      {
+        "type": "book",
+        "title": "Mind Over Mood, Second Edition (2016)",
+        "author": "Dennis Greenberger and Christine A. Padesky",
+        "url": "https://mindovermood.com/worksheets/",
+        "section": "Chapter 15"
       }
     ]
   },

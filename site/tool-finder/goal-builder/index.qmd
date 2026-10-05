@@ -8,6 +8,8 @@ toc: false
 
 Use the terminology that best fits your current Goal Setting material: relevant and realistic both invite a Wise Mind check about meaning and feasibility.
 
+Before setting a goal, consider what you hope to gain, what effort it may cost, and which signs would tell you the step is worthwhile. Afterward, use the [Activity & Mood Log](/tool-finder/activity-mood-log/) to notice what actually happens.
+
 ::: {#goal-builder-app .skill-app data-practice-app="goal-builder"}
 Loading SMART Goal Builder…
 :::
